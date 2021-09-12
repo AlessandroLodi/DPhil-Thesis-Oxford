@@ -119,6 +119,7 @@
 \usepackage{amssymb}
 \usepackage{textcomp}
 \usepackage{siunitx}
+\usepackage[version=4]{mhchem}
 
 \usepackage{longtable} 
 	% Allows tables to span multiple pages (this package must be called before hyperref)

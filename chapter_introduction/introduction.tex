@@ -1,0 +1,118 @@
+\chapter{\label{ch:introduction}Introduction}
+
+\minitoc
+
+\section{Motivation}\label{intro:sec:motivation}
+
+Motivation
+
+\co{Graphene Nanoribbons offers nice platform for testing theories and addressing technological questions}
+
+\section{Carbon-based Field Effect Transistor}
+
+Detail here the carbon nanotube journey.
+
+\begin{table}[]
+    \centering
+    \small
+    
+    \begin{tabular}{ccccccccc}
+    \toprule
+    
+    \textit{Device} & $I_\text{on}/I_\text{off}$ & $SS$ & $g_\text{mt}$ & $L_\text{ch}$ & $f_T$~[$f_\text{max}$]~ & Ref. \\
+    \textit{type}   & & (mV/dec) & (\si{\micro\siemens\per\centi\metre}) & (nm) & (GHz) & \\
+    \midrule
+    \multirow{9}*{Bottom gate}    & 10$^4$ & 94       & $\sim40$  & 9                       &  --- & \cite{Franklin2012} \\
+                                  & 10$^5$ & $\sim85$ & 40        & 15                      & --- & \cite{Franklin2010} \\
+                                  & 10$^5$ & $\sim85$ & 20        & 20                      & --- & \cite{Franklin2010} \\
+                                  & $10^5$ & 60       &  20       & 200                     & ---   & \cite{weitz2007high}\\
+                                  & 10$^5$ & $\sim63$ & ---       & 200                     & --- & \cite{Lin2005} \\
+                                  & 10$^4$ & 80       & 50        & 240                     & --- & \cite{Javey2004}\\
+                                  & ---    & ---      &  143      & 800                     & [1]   & \cite{chimot2007gigahertz} \\
+                                  & 10$^4$ & ---      & ---       & 1,500                   & 1.5 -- 3.0 & \cite{schroter2016cntfet} \\
+                                  & ---    & 70       & 12$^\dag$ & 2,000\footnotemark[1]   & --- & \cite{javey2002high} \\
+                                  & $10^8$ & ---      & ---       & $< 10,000\footnotemark$ & --- & \cite{Derenskyi2014} \\
+                                  & ---    & ---      &  -~500    & ---                     & 30  & \cite{le2007intrinsic} \\
+                                  
+    \midrule
+    \multirow{3}*{Top gate}     & $10^6$ & --- & 20\footnotemark[2] &  80       &  ---           & \cite{javey2005high} \\
+                                & 2      & --- & $\sim50$           &  100      &  25            & \cite{che2013t} \\
+                                & 50     & --- & 310                &  100      &  $\sim70$ [80] & \cite{cao2016radio} \\
+                                & ---    & --- & 0.3                &  210      &  ---           & \cite{Nihey2002} \\
+                                & $10^5$ & --- & 33.5               &  85,000   &  ---           & \cite{Lau2013} \\
+    
+    \bottomrule
+    \end{tabular}
+    \caption{\label{tab:CNFET} Figures of merit for a few CNFET reported in literature. $S$: subthreshold swing; $g_\text{m}$: intrinsic transconductances; $L_{ch}$: channel length; $\mu$: carriers mobility}
+    
+    \begin{tabbing}
+    $^\dag$Normalized by the tube width.\\
+    $^{\mathrm{1}}$ Referred to the gated length of a nanotube. \\
+    $^{\mathrm{2}}$ For the n-type transistor, whereas 10 \si{\micro\siemens} were measured for the p-type. \\
+    
+    \end{tabbing}
+    
+    \end{table}
+    
+    
+    
+    \begin{table}[]
+    
+    \centering
+    \small
+    \begin{tabular}{ccccccccc}
+    \toprule
+    
+    \textit{Device} & $I_\text{on}$ & $I_\text{off}$ & $I_\text{on}/I_\text{off}$ & $g_\text{mt}$ & $SS$ & \\
+    \textit{type} & (A) & (A) &  & (\si{\micro\siemens}) & (mV/dec) &  \\
+    \midrule
+    Conventional       & 1.41$*10^{-5}$ & 4.06$*10^{-10}$ & 3.4$*10^{4}$  & 29    & 99.6   \\
+    \midrule
+    Partial S/D-doped  & 1.50$*10^{-5}$ & 2.33$*10^{-8}$  & 6.4$*10^{2}$  & 63.6  & 93.1   \\
+    \midrule
+    Schottky-Barrier   & 3.26$*10^{-6}$ & 2.31$*10^{-8}$  & 1.41$*10^{2}$ & 19.6  & 109.8   \\
+    \midrule
+    Tunnel             & 5.53$*10^{-6}$ & 1.16$*10^{-8}$  & 4.76$*10^{2}$ & 13    & 107.9    \\
+    
+    \bottomrule
+    \end{tabular}
+    \caption{Comparative simulation for the four major type of CNFETs as reported in \cite{singh2015comparative}. These results are obtained by setting $V_\text{sd} = 0.5$ V.}
+    
+    \end{table}
+    \newpage
+
+
+
+\section{Graphene Nanoribbons}
+
+\co{gnr were first studied by physicist, lather by chemist}
+The scientific interest for graphene nanoribbons started in the physics community. Although this may appear irrelevant at the first glance, we will see that this actually had an impact over the last twenty years of progress in the field.
+The physics community was looking for a way to open a bandgap in graphene. As mentioned in Sec.~\ref{intro:sec:motivation}, graphene is a semi-metal, therefore unsuitable for all those semiconducting applications where the conduction paths for the charge carriers are well defined. 
+
+The first class of methods for synthesising graphene nanoribbons are methods that involve cutting or producing rectangular shapes from the graphene lattice through macroscopic methods. 
+For this reason, they are also known as \textit{top-down} approaches. Although they have seen an improvements in recent years, common drawbacks for this class of methods are a random distribution in the widths, a non-atomical control of the edge structures, and non-negligible 
+impurity concentrations left after the process.
+
+\co{ebl and etched gnrs present randomly distributed widths}
+Kim and co-workers synthesized GNRs by employing the electron-beam lithography and etching technique~\cite{RN345}.
+The widths of GNRs obtained by this technique were scattered over a broad range, and most of the edges were extremely rough.
+An 8 nm GNR FET showed a dramatically improved on/off ratio of about 160.
+
+
+\co{cutting graphene with nanoparticles leads to a random distribution of the widths}
+
+Nanocutting of graphene is another promising method of GNR synthesis. In 2008, Strachan et al. used thermally activated Fe nanoparticles as chemical scissors to cut graphene sheet along a specific crystallographic direction~\cite{RN345,RN346}. Later, Ni and other catalysts were employed as well 
+The carbon-carbon bond breaking is driven by the combustion reaction \ce{Ni + C_{\text{graphene}} + 2H2 ^ -> Ni/Fe + CH4 ^} catalysed by the nanoparticles, thus producing hydrocarbon compounds. One of the reason that have discouraged these synthetic way is the random width distribution obtained: this is likely 
+to be a consequence of the change in direction when nanoparticles encounter defects or edges.
+
+
+
+\begin{mccorrection}
+It will be interesting to discuss the $E_{\text{g}} \propto 1/W$ relation
+as the model used for describing gnr is the particle in the box, but in the toy model (particle in a box) 
+as a relation of the kind $E_{\text{g}} \propto 1/W^2$.
+\end{mccorrection}
+
+\section{Delocalised $\pi$-electron Systems}
+
+Porphyrin

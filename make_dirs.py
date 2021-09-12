@@ -24,8 +24,6 @@ def main():
     for folder in chapter_folders:
         os.makedirs(os.path.join(folder, 'figures'))
 
-    
-
 
 if __name__ == '__main__':
     main()

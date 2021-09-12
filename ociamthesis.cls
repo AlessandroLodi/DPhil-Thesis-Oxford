@@ -72,7 +72,7 @@
 % CRESTS
 %
 
-\def\crest{{\includegraphics{figures/beltcrest.pdf}}}
+\def\crest{{\includegraphics{title/beltcrest.pdf}}}
 
 
 %

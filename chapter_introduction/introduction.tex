@@ -6,6 +6,138 @@
 
 Motivation
 
+\section{Graphene}\label{intro:sec:graphene}
+
+\subsection{crystal structure}
+Graphene has a hexagonal structure where the carbon atoms are hybridised $sp^2$, as detailed by the Pauling theory on chemical bonds. Based on the experimental evidence collected in the last 20 years, the model
+that seems to best describe the proprierties of graphene is the band-structure Wallace model, which dates back in 1947, and describes graphene as a semimetal with a linear dispersion of the electronic excitations.
+In the International Table of Crystallography, graphene is included in the symmorphic space group \#191, with symmetry $D^1_6h$ ($P6/mmm$).
+The triangular lattice is obtained by considering two atoms per unit cell having the respective lattice vectors:
+
+The carbon atoms in graphene form a two-dimensional hexagonal crystal with two atoms per unit cell, as shown \mccorrect{in figure}. 
+\begin{equation}\label{eq:graphene_lattice_vectors}
+    \vect{a}{_1} = \frac{a}{2}(3, \sqrt{3}),~ 
+    \vect{a}{_2} = \frac{a}{2}(3, -\sqrt{3}),
+\end{equation}
+
+with $a\approx1.42$ \si{\angstrom} be the carbon-carbon bond length. 
+Each atom belonging to one sublattice, called sublattice A, has three first neighbours belonging to the other sublattice, called sublattice B. With respect to one atom chosen from sublattice A as origin, 
+the position of these first three neighbours in real space are given by: 
+
+\begin{equation}\label{eq:graphene_first_neighbours}
+    \vect{\delta}{_1} = \frac{a}{2}(1, \sqrt{3}),~ 
+    \vect{\delta}{_2} = \frac{a}{2}(1, -\sqrt{3}),~
+    \vect{\delta}{_3} = -a(1,0),
+\end{equation}
+
+The reciprocal-lattice vectors are then given
+
+\begin{equation}\label{eq:graphene_reciprocal_vectors}
+    \vect{b}{_1} = \frac{2\pi}{3a}(1, \sqrt{3}),~ 
+    \vect{b}{_2} = \frac{2\pi}{3a}(1, -\sqrt{3}),
+\end{equation}
+
+In order to define the vertices of the Brillouin zone one has to apply the Bragg condition:
+
+\begin{equation}\label{eq:Bragg}
+    2\vect{k}\cdot\vect{G} = 0
+\end{equation}
+
+where 
+
+\begin{equation}
+    \vect{G} = n\vect{b}_1 + m\vect{b}_2,
+\end{equation}
+
+The first amongst these are:
+
+\begin{align*}
+    n &= \pm 1,  & m&=0,      & \vect{G}&=\pm\vect{b}_1, \\
+    n &= 0,      & m&=\pm 1,  & \vect{G}&=\pm\vect{b}_2, \\
+    n &= \pm 1,  & m&=\pm 1,  & \vect{G}&=\pm(\vect{b}_1+\vect{b}_2), 
+\end{align*}
+
+and all these vectors have the same modulus $\abs{\vect{G}} = \frac{4\pi}{3a}$. By applying Bragg's condition in the first of the three cases we get:
+
+\begin{equation}
+    \sqrt{3}k_{x} + k_{y} = \mp~\frac{4\pi}{3a},
+\end{equation}
+
+which gets satisfied by the points:
+
+\begin{equation}\label{eq:K_point_components}
+    K \equiv\mp~\frac{2\pi}{3a}\qty(\frac{1}{\sqrt{3}}, 1)
+\end{equation}
+
+For the second case one gets:
+
+\begin{equation}
+    \mp(\sqrt{3}k_{x} - k_{y}) = \frac{4\pi}{3a},
+\end{equation}
+
+which gives the points:
+
+\begin{equation}
+    K' \equiv\pm~\frac{2\pi}{3a}\qty(\frac{1}{\sqrt{3}}, -1)
+\end{equation}
+
+The third and last case gives the point:
+
+\begin{equation}
+    M \equiv\pm\qty(0, \pm~\frac{2\pi}{3a})
+\end{equation}
+
+
+\subsection{band dispersion}
+The electronic structure of graphene can be model with a tigh-binding hamiltonian. 
+Following the second quantization formalism ($\hbar = 1$ units), the hamiltonian can be written as:
+
+\begin{equation}
+    H = -t\sum_{\langle ij\rangle,~\sigma}\qty(a^\dagger_{\sigma,i}b_{\sigma,j} + \text{H.c.}) - t' \sum_{\langle\langle ij\rangle\rangle,\sigma}\qty(a^\dagger_{\sigma,i}a_{\sigma,j}+b^\dagger_{\sigma,i}b_{\sigma,j}+ \text{H.c.}),
+\end{equation}
+The notation $\langle ij\rangle$ means that the sum runs over pairs of electrons which are nearest neighbour; similarly, the notation $\langle\langle ij\rangle\rangle$ specify a summation over the next nearest neighbours; 
+the operators $a^\dagger_{i,\sigma}$ ($a_{i,\sigma}$) and $b^\dagger_{i,\sigma}$ ($b_{i,\sigma}$) creates (annihilates) an electron with spin $\sigma$ ($\sigma=~\uparrow,\downarrow$) for atoms on sublattice A and B, respectively. 
+The value of $t$ which reproduces best experimental result is $t\approx2.8$ \si{\electronvolt} and quantify the nearest-neighbour hopping energy; similarly, $t'$ denotes the next nearest-neighbour hopping energy. The dispersion energy computed from this model reads:
+
+\begin{equation}\label{intro:sec:graphene:eq:energy_bands}
+    E_{\pm}(\vect{k}) = \epsilon_\text{p} - t'f(\vect{k}) \pm t\sqrt{3 + f(\vect{k})},
+\end{equation}
+
+with $f(\vect{k})$ defined as:
+\begin{equation}\label{intro:sec:graphene:eq:energy_bands_fk}
+    f(\vect{k})=2\cos\qty(\sqrt{3}k_ya) + 4\cos\qty(\frac{\sqrt{3}}{2}k_ya)\cos\qty(\frac{3}{2}k_xa).
+\end{equation}
+
+Therefore, it is possible to identify an upper ($\pi*$) band associated with the plus sign and a lower ($\pi$) band described by the minus sign; these are symmetric with respect to the single-particle zero energy.
+The experimental estimate reported for next nearest-neighbour hopping energy is $t'\approx0.1$\si{\electronvolt} thus the asymmetry introduced is small. It is worthwhile to notice that the function $3 + f(\vect{k})$
+
+If the system is not doped, there is one electron per carbon atom, so two electrons per cell: it follows that the lower band is full and the upper band is empty the upper one is empty. The system is therefore a semi-metal.
+The peculiarities of the dispersion in graphene become apparent when analysing their trend near the point \vect{K} and \vect{K'}. 
+By taking the positive components for the \vect{K} as define in Eq.~\ref{eq:K_point_components} and expanding the 
+Eq.~\ref{intro:sec:graphene:eq:energy_bands} as $\vect{k} = \vect{K} + \vect{q}$, with $\abs{(\vect{q})}\ll\abs{(\vect{K})}$, one gets:
+\begin{equation}
+    E_{\pm}(\vect{q}) = \epsilon_p \pm \frac{3at}{2}\abs{\vect{q}}
+\end{equation}
+which is linear in \vect{q}. For intrinsic graphene, at $T = 0 $K $E_F = \epsilon_p$. The Fermi velocity is defined by the usuale relation $v_F = \frac{1}{\hbar}\qty(\dv{E}{\vect{k}})$, 
+and in graphene $v_F\simeq1\times 10^6$\si{\metre\per\second}.  
+
+A difference arises in the density of the states, when we limit ourselves to consider those near the Fermi energy. 
+In the case of a two-dimensional electron gas, it is constant. On the contrary for graphene, the density of states per unite cell is:
+
+\begin{equation}\label{eq:grafene:density_of_states}
+    \rho(E)=\frac{2A_\text{cell}}{\pi}\frac{\abs{E}}{v_F^2}
+\end{equation}
+
+If the graphene is charge-neautral, the DOS has two Van Hove singularities at $\omega_\text{VH} = \pm~1$\si{\electronvolt} \cite{bena2005quasiparticle}. This behaviour is in stark constrat with the DOS 
+of carbon nanotubes and clean graphene nanoribbons, as they show $1/\sqrt{E}$ singularities due to the 1D nature, which imposes a quantization perpendicular to the ribbon or tube longitudinal direction. 
+
+\subsection{thermal conductivity}
+
+
+\subsection{graphene as electrode material}
+
+
+
 \co{Graphene Nanoribbons offers nice platform for testing theories and addressing technological questions}
 
 \section{Carbon-based Field Effect Transistor}

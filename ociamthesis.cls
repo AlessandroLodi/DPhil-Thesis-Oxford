@@ -116,9 +116,12 @@
 \usepackage{microtype}
 \usepackage{nicefrac}
 \usepackage{amsmath}
+\usepackage{physics}
+\usepackage{mathtools}
 \usepackage{amssymb}
 \usepackage{textcomp}
 \usepackage{siunitx}
+\usepackage{bm}
 \usepackage[version=4]{mhchem}
 
 \usepackage{longtable} 

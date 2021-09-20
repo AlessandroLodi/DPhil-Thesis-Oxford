@@ -14,18 +14,18 @@ that seems to best describe the proprierties of graphene is the band-structure W
 In the International Table of Crystallography, graphene is included in the symmorphic space group \#191, with symmetry $D^1_6h$ ($P6/mmm$).
 The triangular lattice is obtained by considering two atoms per unit cell having the respective lattice vectors:
 
-The carbon atoms in graphene form a two-dimensional hexagonal crystal with two atoms per unit cell, as shown \mccorrect{in figure}. 
+The carbon atoms in graphene form a two-dimensional hexagonal crystal with two atoms per unit cell, as shown \mccorrect{in figure}.
 \begin{equation}\label{eq:graphene_lattice_vectors}
-    \vect{a}{_1} = \frac{a}{2}(3, \sqrt{3}),~ 
+    \vect{a}{_1} = \frac{a}{2}(3, \sqrt{3}),~
     \vect{a}{_2} = \frac{a}{2}(3, -\sqrt{3}),
 \end{equation}
 
-with $a\approx1.42$ \si{\angstrom} be the carbon-carbon bond length. 
-Each atom belonging to one sublattice, called sublattice A, has three first neighbours belonging to the other sublattice, called sublattice B. With respect to one atom chosen from sublattice A as origin, 
-the position of these first three neighbours in real space are given by: 
+with $a\approx1.42$ \si{\angstrom} be the carbon-carbon bond length.
+Each atom belonging to one sublattice, called sublattice A, has three first neighbours belonging to the other sublattice, called sublattice B. With respect to one atom chosen from sublattice A as origin,
+the position of these first three neighbours in real space are given by:
 
 \begin{equation}\label{eq:graphene_first_neighbours}
-    \vect{\delta}{_1} = \frac{a}{2}(1, \sqrt{3}),~ 
+    \vect{\delta}{_1} = \frac{a}{2}(1, \sqrt{3}),~
     \vect{\delta}{_2} = \frac{a}{2}(1, -\sqrt{3}),~
     \vect{\delta}{_3} = -a(1,0),
 \end{equation}
@@ -33,7 +33,7 @@ the position of these first three neighbours in real space are given by:
 The reciprocal-lattice vectors are then given
 
 \begin{equation}\label{eq:graphene_reciprocal_vectors}
-    \vect{b}{_1} = \frac{2\pi}{3a}(1, \sqrt{3}),~ 
+    \vect{b}{_1} = \frac{2\pi}{3a}(1, \sqrt{3}),~
     \vect{b}{_2} = \frac{2\pi}{3a}(1, -\sqrt{3}),
 \end{equation}
 
@@ -43,7 +43,7 @@ In order to define the vertices of the Brillouin zone one has to apply the Bragg
     2\vect{k}\cdot\vect{G} = 0
 \end{equation}
 
-where 
+where
 
 \begin{equation}
     \vect{G} = n\vect{b}_1 + m\vect{b}_2,
@@ -52,9 +52,9 @@ where
 The first amongst these are:
 
 \begin{align*}
-    n &= \pm 1,  & m&=0,      & \vect{G}&=\pm\vect{b}_1, \\
-    n &= 0,      & m&=\pm 1,  & \vect{G}&=\pm\vect{b}_2, \\
-    n &= \pm 1,  & m&=\pm 1,  & \vect{G}&=\pm(\vect{b}_1+\vect{b}_2), 
+    n & = \pm 1, & m & =0,     & \vect{G} & =\pm\vect{b}_1,              \\
+    n & = 0,     & m & =\pm 1, & \vect{G} & =\pm\vect{b}_2,              \\
+    n & = \pm 1, & m & =\pm 1, & \vect{G} & =\pm(\vect{b}_1+\vect{b}_2),
 \end{align*}
 
 and all these vectors have the same modulus $\abs{\vect{G}} = \frac{4\pi}{3a}$. By applying Bragg's condition in the first of the three cases we get:
@@ -89,14 +89,14 @@ The third and last case gives the point:
 
 
 \subsection{band dispersion}
-The electronic structure of graphene can be model with a tigh-binding hamiltonian. 
+The electronic structure of graphene can be model with a tigh-binding hamiltonian.
 Following the second quantization formalism ($\hbar = 1$ units), the hamiltonian can be written as:
 
 \begin{equation}
     H = -t\sum_{\langle ij\rangle,~\sigma}\qty(a^\dagger_{\sigma,i}b_{\sigma,j} + \text{H.c.}) - t' \sum_{\langle\langle ij\rangle\rangle,\sigma}\qty(a^\dagger_{\sigma,i}a_{\sigma,j}+b^\dagger_{\sigma,i}b_{\sigma,j}+ \text{H.c.}),
 \end{equation}
-The notation $\langle ij\rangle$ means that the sum runs over pairs of electrons which are nearest neighbour; similarly, the notation $\langle\langle ij\rangle\rangle$ specify a summation over the next nearest neighbours; 
-the operators $a^\dagger_{i,\sigma}$ ($a_{i,\sigma}$) and $b^\dagger_{i,\sigma}$ ($b_{i,\sigma}$) creates (annihilates) an electron with spin $\sigma$ ($\sigma=~\uparrow,\downarrow$) for atoms on sublattice A and B, respectively. 
+The notation $\langle ij\rangle$ means that the sum runs over pairs of electrons which are nearest neighbour; similarly, the notation $\langle\langle ij\rangle\rangle$ specify a summation over the next nearest neighbours;
+the operators $a^\dagger_{i,\sigma}$ ($a_{i,\sigma}$) and $b^\dagger_{i,\sigma}$ ($b_{i,\sigma}$) creates (annihilates) an electron with spin $\sigma$ ($\sigma=~\uparrow,\downarrow$) for atoms on sublattice A and B, respectively.
 The value of $t$ which reproduces best experimental result is $t\approx2.8$ \si{\electronvolt} and quantify the nearest-neighbour hopping energy; similarly, $t'$ denotes the next nearest-neighbour hopping energy. The dispersion energy computed from this model reads:
 
 \begin{equation}\label{intro:sec:graphene:eq:energy_bands}
@@ -112,106 +112,181 @@ Therefore, it is possible to identify an upper ($\pi*$) band associated with the
 The experimental estimate reported for next nearest-neighbour hopping energy is $t'\approx0.1$\si{\electronvolt} thus the asymmetry introduced is small. It is worthwhile to notice that the function $3 + f(\vect{k})$
 
 If the system is not doped, there is one electron per carbon atom, so two electrons per cell: it follows that the lower band is full and the upper band is empty the upper one is empty. The system is therefore a semi-metal.
-The peculiarities of the dispersion in graphene become apparent when analysing their trend near the point \vect{K} and \vect{K'}. 
-By taking the positive components for the \vect{K} as define in Eq.~\ref{eq:K_point_components} and expanding the 
+The peculiarities of the dispersion in graphene become apparent when analysing their trend near the point \vect{K} and \vect{K'}.
+By taking the positive components for the \vect{K} as define in Eq.~\ref{eq:K_point_components} and expanding the
 Eq.~\ref{intro:sec:graphene:eq:energy_bands} as $\vect{k} = \vect{K} + \vect{q}$, with $\abs{(\vect{q})}\ll\abs{(\vect{K})}$, one gets:
 \begin{equation}
     E_{\pm}(\vect{q}) = \epsilon_p \pm \frac{3at}{2}\abs{\vect{q}}
 \end{equation}
-which is linear in \vect{q}. For intrinsic graphene, at $T = 0 $K $E_F = \epsilon_p$. The Fermi velocity is defined by the usuale relation $v_F = \frac{1}{\hbar}\qty(\dv{E}{\vect{k}})$, 
-and in graphene $v_F\simeq1\times 10^6$\si{\metre\per\second}.  
+which is linear in \vect{q}. For intrinsic graphene, at $T = 0 $K $E_F = \epsilon_p$. The Fermi velocity is defined by the usuale relation $v_F = \frac{1}{\hbar}\qty(\dv{E}{\vect{k}})$,
+and in graphene $v_F\simeq1\times 10^6$\si{\metre\per\second}.
 
-A difference arises in the density of the states, when we limit ourselves to consider those near the Fermi energy. 
+A difference arises in the density of the states, when we limit ourselves to consider those near the Fermi energy.
 In the case of a two-dimensional electron gas, it is constant. On the contrary for graphene, the density of states per unite cell is:
 
 \begin{equation}\label{eq:grafene:density_of_states}
     \rho(E)=\frac{2A_\text{cell}}{\pi}\frac{\abs{E}}{v_F^2}
 \end{equation}
 
-If the graphene is charge-neautral, the DOS has two Van Hove singularities at $\omega_\text{VH} = \pm~1$\si{\electronvolt} \cite{bena2005quasiparticle}. This behaviour is in stark constrat with the DOS 
-of carbon nanotubes and clean graphene nanoribbons, as they show $1/\sqrt{E}$ singularities due to the 1D nature, which imposes a quantization perpendicular to the ribbon or tube longitudinal direction. 
+If the graphene is charge-neautral, the DOS has two Van Hove singularities at $\omega_\text{VH} = \pm~1$\si{\electronvolt} \cite{bena2005quasiparticle}. This behaviour is in stark constrat with the DOS
+of carbon nanotubes and clean graphene nanoribbons, as they show $1/\sqrt{E}$ singularities due to the 1D nature, which imposes a quantization perpendicular to the ribbon or tube longitudinal direction.
 
 \subsection{thermal conductivity}
+
+Thermal Properties of graphene
 
 
 \subsection{graphene as electrode material}
 
+can be used as electrode material
+
+\subsection{Graphene Transistors}
+
+The first graphene field-effect transistor (GFET) was the one reported by the Manchester group in 2004 where a scotch-taped exfoliated flake of graphene was deposited on top of 300 nm of \ce{SiO2} acting as a back-gate \cite{novoselov2004electric}. 
+The resulting output characteristics displayed were characteristics of an ambipolar device, with linear relation between the current and the drain-source voltage, without any saturation regime reached for the charge carrier \cite{lin2008operation} (Fig. \ref{fig:schwierz_lin_2}): this behaviour agrees with the semi-metal nature of graphene 
+and indicates that transistor functionality was exclusively limited by inevitable contact resistances \cite{thiele2010modeling}. 
+As for any transistor, the charge carriers can be varied by sweeping the gate voltage, which distinguishable branches of the gate-transfer characteristic; the charge neutrality point (Dirac point) is where they touch each other. Large positive gate voltages promote an electron accumulation in the channel (n-type channel), and large negative gate voltages lead to a p-type channel \cite{avouris2010graphene, castroneto2009}.
+
+% \begin{table}[]
+%     \centering
+%     \begin{tabular}{lllllll}
+%     \cline{2-7}
+%     \hline
+%         & Graphene        & Si   & Ge   & GaAs  & InAs   & InP   \\ \vspace{.1in}\cline{2-7} 
+%     $\mu$ (\si{\square\centi\metre\per\volt\per\second}) @ 300 K            & 200,000         & 1400 & 3900 & 4600  & 16,000 & 2800  \\
+%     E$_\text{g}$ (eV)                           & 0               & 1.12 & 0.66 & 1.42  & 0.36   & 1.35  \\
+%     $v_\text{sat}$ ($10^7$ \si{\centi\metre\per\second})      & \textgreater{}5 & 1    & 0.6  & 2.2   & 4.0    & 2.2   \\
+%     DOS ($m^*/m_0$) & 0               & 1.08 & 0.56 & 0.067 & 0.023  & 0.077 \\
+%     $\epsilon_r$                   & 2.4             & 11.9 & 16.0 & 13.1  & 14.6   & 12.4  \\
+%     $\kappa$ (\si{\watt\per\metre\per\kelvin})                   & 5000            & 150  & 60.2 & 46    & 27     & 68    \\
+%     Lattice constant (\si{\angstrom})                               & 2.46            & 5.43 & 5.65 & 5.65  & 6.06   & 5.87 \\ \hline
+%     \end{tabular}
+%     \caption {Comparison of some properties of graphene with those of a few other semiconductors commonly used in fabricating field-effect devices.}
+%     \label{tab:graphene_vs_semiconductor}\\
+% \end{table}
 
 
-\co{Graphene Nanoribbons offers nice platform for testing theories and addressing technological questions}
+\begin{table}
+    \centering
+    \begin{tabular}{r*{7}{c}}
+      \toprule
+      & \multicolumn{3}{c}{Direct Gap} & \multicolumn{2}{c}{Indirect Gap} \\
+      \cmidrule(lr){2-4} \cmidrule(lr){5-6}
+                                                         & InP       & Si   & Ge   & GaAs  & InAs  &  Graphene    \\
+      \midrule
+    Lattice constant (\si{\angstrom})                    & 5.87     & 5.43 & 5.65 & 5.65  & 6.06   & 2.46           \\
+    $E_g$ (eV)                                           & 1.35     & 1.12 & 0.66 & 1.42  & 0.36   & 0               \\
+    $\mu$ (cm$^2$V$^-1$s$^-1$) at 300 K                  & 2800     & 1400 & 3900 & 4600  & 16,000 & 200,000         \\
+    $v_\text{sat}$ ($10^7$ \si{\centi\metre\per\second}) & 2.2      & 1    & 0.6  & 2.2   & 4.0    & \textgreater{}5 \\
+    DOS ($m^*/m_0$)                                      & 0.077    & 1.08 & 0.56 & 0.067 & 0.023  & 0               \\
+    $\epsilon_r$                                         & 12.4     & 11.9 & 16.0 & 13.1  & 14.6   & 2.4             \\
+    $\kappa$ (\si{\watt\per\metre\per\kelvin})           & 68       & 150  & 60.2 & 46    & 27     & 5000            \\
+      \bottomrule
+    \end{tabular}
+    \caption{Here is a caption}\label{tlc}
+  \end{table}
+
+Hysteresis between the forward and reverse sweeps have been reported depending on the sweeping rate and range \cite{wang2010hysteresis}, and attributed mainly to charge trapping in silanol groups (Si--OH), mediated and assisted by surface-bound \ce{H2O} molecules \cite{joshi2010intrinsic}.  
+Despite the usefulness for its proof-of-concept purposes, back-gate devices suffered from parasitic capacitances, making impossible further integration with other components.
+Alternatives geometries have since then been explored, in order to increase the carriers mobility, to decrease contact resistances and parasitic capacitances, and to avoid Schottky barriers formation between the graphene and the semiconductor. 
+Top-gate devices have been the first to chronologically appear in the literature. 
+Back then in 2007, Lemme and co workeres used a stack of \ce{SiO2} (20 nm), Ti (10 nm), and Au (100 nm) as top gate for modulating the current inside a large-area graphene channel transistor obtained by the exfoliation method \cite{lemme2007graphene}. 
+Whilst the gate characteristics exhibit a similar trend of the characteristics (the top gate reduces the back-gate current modulation, lowering the drain current by one order of magnitude) and the hysteresis, weak current saturation at high drain-source bias have been reported \cite{moon2009epitaxial}. 
+This effect seem due to a partial charge pinning at the contacts at high back-gate voltages \cite{di2011charge} and carrier drift velocity eventually saturating due to optical-phonon scattering \cite{meric2008current}. Top-gated graphene MOSFET with CVD \cite{kedzierski2009graphene} and epitaxial graphene have been also made \cite{kedzierski2008epitaxial, lin2010100}; \ce{SiO2}, \ce{Al2O3}, and \ce{HfO2} have been used as top-gate dielectric. 
+
+However, despite the improvements obtained with a top gate, most graphene MOSFETs with large-area (gapless) graphene channels show on–off switching ratios of less than 10 at room temperature \cite{schwierz2010graphene}, much too little for complex logic circuits. 
+
+In 2012, Mehr et al.\ proposed a vertical arrangement of emitter (E), base (B), and collector (C) (like in a vacuum triode) where the graphene plays the base role and electrons travel vertically rather than transversely as in a GFET (Fig. \ref{fig:mehr2012_vertical}. When the device is in the ON state, the electrons tunnel with a Fowler-Nordheim tunnelling mechanism  ($I\propto(V_\text{sd}/d)^2~\exp{-\alpha~d/V_\text{sd}}$) through the emitter--base insulator (of thickness $d$), the base electrode (graphene), and the base--collector insulator. Vertical FETs based on hBN--graphene \cite{britnell2012field} and \ce{WeS2}--graphene \cite{georgiou2013vertical} heterostructures with ON/OFF ratios about $10^4$ have been reported.
+
+Solution methods have also been addressed, by which graphene is dropcasted on top of the wafer, and then spin-coated \cite{liu2010simple}. The main difficulties arise when attempting to quantify the structure and the quality of the deposited graphene, and not many methods can guarantee a good dispersion in organic solvents \cite{sun2011graphene}. Simpler ways to obtain graphene oxide in solution have been reported \cite{van2016effect}, but once deposited, graphene oxide needs to be reduced for obtaining pure graphene -- low mobility values (up to, at best, 1000 \si{\square\centi\metre\per\volt\per\second} \cite{cresti2008charge}) caused by defects during the fabrication steps have discouraged further investigations along this direction.
+
+Yet in spite of the very different physics and resulting DC electrical behavior, it has been shown that graphene FETs behave very much like their semiconductor counterparts when they are operated at high frequency, under alternating-current (AC) conditions. This comparison is made by measuring each system’s frequency response, its output signal strength when it is given a particular input signal: features such as ballistic transport, linear current-voltage characteristics, high transconductance, and very high ($> 10^8$ \si{\ampere\per\square\centi\metre}) sustainable currents are all ideal features for analog/RF applications, which do note need to be switched off \cite{meric2008rf, meric2008current}. 
+
+The primary means of estimating frequency response is through the cutoff frequency: it is a fundamental property indicating how quickly a signal can travel from the gate to the drain of the device. The frequency response depends inversely on the length of the gate, and proportionally to the transconductance, which is loosely proportional to mobility. Thus, to make faster devices, we can either reduce the gate length or use higher mobility materials \cite{schwierz2010graphene, schwierz2010graphene}. 
+
+The first graphene MOSFET with a cutoff frequency $f_T$ in the gigahertz range has been reported in late 2008 \cite{meric2008rf}. In 2009, graphene MOSFETs with 350-nm gates and a cutoff frequency of 50 GHz have been presented \cite{lin2009development}; in early 2010, a graphene MOSFET with a 240-nm gate showing an $f_T$ of 100 GHz has been reported \cite{lin2010100}, soon followed by a 144-nm gate graphene MOSFET with $f_T$ ¼ 300 GHz later that year \cite{liao2010high}. Finally, in 2012, a graphene MOSFET with a 40-nm-long gate showing 350-GHz $f_T$ \cite{wu2012state} and a 67-nm gate graphene MOSFET with an $f_T$ of 427 GHz have been reported \cite{cheng2012high}. Graphene RF MOSFETs have successfully been realized using exfoliated (e.g., \cite{liao2010high} and \cite{lin2009development}), epitaxial (e.g., \cite{lin2010100} and \cite{moon2009epitaxial}), and CVD (\cite{wu2011high}) graphene.
+
+Fig. \ref{fig:schwierz2013graphene} shows the cutoff frequency of the best graphene MOSFETs reported, together with the $f_T$ performance of competing RF FET types. The record $f_T$ data of the competing FETs are 688 GHz for a 40-nm GaAs mHEMT\cite{kim2011f} and 644 GHz for a 30-nm InP HEMT \cite{kim201030}, 485 GHz for a 29-nm Si MOSFET \cite{lee2007record}, 152 GHz for a 100-nm GaAs pHEMT \cite{nguyen1989characterization}, and 153 GHz for a 100-nm carbon nanotube (CNT) MOSFET \cite{steiner2012high}. Worthwhile to mention also the results obtained by Han et al. \cite{han2014graphene} in 2014, when they implemented a high-performance three-stage graphene integrated circuit using Si fabrication steps and CVD graphene: the reported performance for $f_T$ and $f_\text{max}$ were ranging from 8 to 10 GHz and from 8.5 to 13.5 GHz.
 
 \section{Carbon-based Field Effect Transistor}
+
+A great deal of attention from the scientific community has been dedicated -- since the late 90s -- to \glspl{CNT} \cite{dresselhaus2000carbon}. 
+This crystalline form of carbon is a rolled up sheet of graphene and comes in two major flavours, namely \gls{SW} and \gls{MW}. 
+With typical diameter ranging from 1 to 100 nm, these hollow cylindrical structures display an electronic band gap which depends on the chirality and the diameter of the nanotube \cite{wong2011carbon}.
+
+The chiral vector is the direction along which the graphene sheet is rolled up and becomes the circumference of the nanotube: it must be a linear combination of the basis vectors with integers coefficients ($m$, $n$). Based on the values of $m$ and $n$, \glspl{CNT} can be metallic ($m = n$), quasi-metallic ($m - n$ is a multiple of 3, with $m\cdot n \neq 0$ and $m \neq n$), and semiconducting for the majority of the remaining cases -- exceptions due to the curvature (spin--orbit couplings) in small-diameter tubes are also known \cite{laird2015quantum}.
+
 
 Detail here the carbon nanotube journey.
 
 \begin{table}[]
     \centering
     \small
-    
+
     \begin{tabular}{ccccccccc}
-    \toprule
-    
-    \textit{Device} & $I_\text{on}/I_\text{off}$ & $SS$ & $g_\text{mt}$ & $L_\text{ch}$ & $f_T$~[$f_\text{max}$]~ & Ref. \\
-    \textit{type}   & & (mV/dec) & (\si{\micro\siemens\per\centi\metre}) & (nm) & (GHz) & \\
-    \midrule
-    \multirow{9}*{Bottom gate}    & 10$^4$ & 94       & $\sim40$  & 9                       &  --- & \cite{Franklin2012} \\
-                                  & 10$^5$ & $\sim85$ & 40        & 15                      & --- & \cite{Franklin2010} \\
-                                  & 10$^5$ & $\sim85$ & 20        & 20                      & --- & \cite{Franklin2010} \\
-                                  & $10^5$ & 60       &  20       & 200                     & ---   & \cite{weitz2007high}\\
-                                  & 10$^5$ & $\sim63$ & ---       & 200                     & --- & \cite{Lin2005} \\
-                                  & 10$^4$ & 80       & 50        & 240                     & --- & \cite{Javey2004}\\
-                                  & ---    & ---      &  143      & 800                     & [1]   & \cite{chimot2007gigahertz} \\
-                                  & 10$^4$ & ---      & ---       & 1,500                   & 1.5 -- 3.0 & \cite{schroter2016cntfet} \\
-                                  & ---    & 70       & 12$^\dag$ & 2,000\footnotemark[1]   & --- & \cite{javey2002high} \\
-                                  & $10^8$ & ---      & ---       & $< 10,000\footnotemark$ & --- & \cite{Derenskyi2014} \\
-                                  & ---    & ---      &  -~500    & ---                     & 30  & \cite{le2007intrinsic} \\
-                                  
-    \midrule
-    \multirow{3}*{Top gate}     & $10^6$ & --- & 20\footnotemark[2] &  80       &  ---           & \cite{javey2005high} \\
-                                & 2      & --- & $\sim50$           &  100      &  25            & \cite{che2013t} \\
-                                & 50     & --- & 310                &  100      &  $\sim70$ [80] & \cite{cao2016radio} \\
-                                & ---    & --- & 0.3                &  210      &  ---           & \cite{Nihey2002} \\
-                                & $10^5$ & --- & 33.5               &  85,000   &  ---           & \cite{Lau2013} \\
-    
-    \bottomrule
+        \toprule
+
+        \textit{Device}            & $I_\text{on}/I_\text{off}$ & $SS$     & $g_\text{mt}$                         & $L_\text{ch}$           & $f_T$~[$f_\text{max}$]~ & Ref.                       \\
+        \textit{type}              &                            & (mV/dec) & (\si{\micro\siemens\per\centi\metre}) & (nm)                    & (GHz)                   &                            \\
+        \midrule
+        \multirow{9}*{Bottom gate} & 10$^4$                     & 94       & $\sim40$                              & 9                       & ---                     & \cite{Franklin2012}        \\
+                                   & 10$^5$                     & $\sim85$ & 40                                    & 15                      & ---                     & \cite{Franklin2010}        \\
+                                   & 10$^5$                     & $\sim85$ & 20                                    & 20                      & ---                     & \cite{Franklin2010}        \\
+                                   & $10^5$                     & 60       & 20                                    & 200                     & ---                     & \cite{weitz2007high}       \\
+                                   & 10$^5$                     & $\sim63$ & ---                                   & 200                     & ---                     & \cite{Lin2005}             \\
+                                   & 10$^4$                     & 80       & 50                                    & 240                     & ---                     & \cite{Javey2004}           \\
+                                   & ---                        & ---      & 143                                   & 800                     & [1]                     & \cite{chimot2007gigahertz} \\
+                                   & 10$^4$                     & ---      & ---                                   & 1,500                   & 1.5 -- 3.0              & \cite{schroter2016cntfet}  \\
+                                   & ---                        & 70       & 12$^\dag$                             & 2,000\footnotemark[1]   & ---                     & \cite{javey2002high}       \\
+                                   & $10^8$                     & ---      & ---                                   & $< 10,000\footnotemark$ & ---                     & \cite{Derenskyi2014}       \\
+                                   & ---                        & ---      & -~500                                 & ---                     & 30                      & \cite{le2007intrinsic}     \\
+
+        \midrule
+        \multirow{3}*{Top gate}    & $10^6$                     & ---      & 20\footnotemark[2]                    & 80                      & ---                     & \cite{javey2005high}       \\
+                                   & 2                          & ---      & $\sim50$                              & 100                     & 25                      & \cite{che2013t}            \\
+                                   & 50                         & ---      & 310                                   & 100                     & $\sim70$ [80]           & \cite{cao2016radio}        \\
+                                   & ---                        & ---      & 0.3                                   & 210                     & ---                     & \cite{Nihey2002}           \\
+                                   & $10^5$                     & ---      & 33.5                                  & 85,000                  & ---                     & \cite{Lau2013}             \\
+
+        \bottomrule
     \end{tabular}
     \caption{\label{tab:CNFET} Figures of merit for a few CNFET reported in literature. $S$: subthreshold swing; $g_\text{m}$: intrinsic transconductances; $L_{ch}$: channel length; $\mu$: carriers mobility}
-    
+
     \begin{tabbing}
-    $^\dag$Normalized by the tube width.\\
-    $^{\mathrm{1}}$ Referred to the gated length of a nanotube. \\
-    $^{\mathrm{2}}$ For the n-type transistor, whereas 10 \si{\micro\siemens} were measured for the p-type. \\
-    
+        $^\dag$Normalized by the tube width.\\
+        $^{\mathrm{1}}$ Referred to the gated length of a nanotube. \\
+        $^{\mathrm{2}}$ For the n-type transistor, whereas 10 \si{\micro\siemens} were measured for the p-type. \\
+
     \end{tabbing}
-    
-    \end{table}
-    
-    
-    
-    \begin{table}[]
-    
+
+\end{table}
+
+
+
+\begin{table}[]
+
     \centering
     \small
     \begin{tabular}{ccccccccc}
-    \toprule
-    
-    \textit{Device} & $I_\text{on}$ & $I_\text{off}$ & $I_\text{on}/I_\text{off}$ & $g_\text{mt}$ & $SS$ & \\
-    \textit{type} & (A) & (A) &  & (\si{\micro\siemens}) & (mV/dec) &  \\
-    \midrule
-    Conventional       & 1.41$*10^{-5}$ & 4.06$*10^{-10}$ & 3.4$*10^{4}$  & 29    & 99.6   \\
-    \midrule
-    Partial S/D-doped  & 1.50$*10^{-5}$ & 2.33$*10^{-8}$  & 6.4$*10^{2}$  & 63.6  & 93.1   \\
-    \midrule
-    Schottky-Barrier   & 3.26$*10^{-6}$ & 2.31$*10^{-8}$  & 1.41$*10^{2}$ & 19.6  & 109.8   \\
-    \midrule
-    Tunnel             & 5.53$*10^{-6}$ & 1.16$*10^{-8}$  & 4.76$*10^{2}$ & 13    & 107.9    \\
-    
-    \bottomrule
+        \toprule
+
+        \textit{Device}   & $I_\text{on}$  & $I_\text{off}$  & $I_\text{on}/I_\text{off}$ & $g_\text{mt}$         & $SS$     & \\
+        \textit{type}     & (A)            & (A)             &                            & (\si{\micro\siemens}) & (mV/dec) & \\
+        \midrule
+        Conventional      & 1.41$*10^{-5}$ & 4.06$*10^{-10}$ & 3.4$*10^{4}$               & 29                    & 99.6       \\
+        \midrule
+        Partial S/D-doped & 1.50$*10^{-5}$ & 2.33$*10^{-8}$  & 6.4$*10^{2}$               & 63.6                  & 93.1       \\
+        \midrule
+        Schottky-Barrier  & 3.26$*10^{-6}$ & 2.31$*10^{-8}$  & 1.41$*10^{2}$              & 19.6                  & 109.8      \\
+        \midrule
+        Tunnel            & 5.53$*10^{-6}$ & 1.16$*10^{-8}$  & 4.76$*10^{2}$              & 13                    & 107.9      \\
+
+        \bottomrule
     \end{tabular}
     \caption{Comparative simulation for the four major type of CNFETs as reported in \cite{singh2015comparative}. These results are obtained by setting $V_\text{sd} = 0.5$ V.}
-    
-    \end{table}
-    \newpage
+
+\end{table}
+\newpage
 
 
 
@@ -219,10 +294,10 @@ Detail here the carbon nanotube journey.
 
 \co{gnr were first studied by physicist, lather by chemist}
 The scientific interest for graphene nanoribbons started in the physics community. Although this may appear irrelevant at the first glance, we will see that this actually had an impact over the last twenty years of progress in the field.
-The physics community was looking for a way to open a bandgap in graphene. As mentioned in Sec.~\ref{intro:sec:motivation}, graphene is a semi-metal, therefore unsuitable for all those semiconducting applications where the conduction paths for the charge carriers are well defined. 
+The physics community was looking for a way to open a bandgap in graphene. As mentioned in Sec.~\ref{intro:sec:motivation}, graphene is a semi-metal, therefore unsuitable for all those semiconducting applications where the conduction paths for the charge carriers are well defined.
 
-The first class of methods for synthesising graphene nanoribbons are methods that involve cutting or producing rectangular shapes from the graphene lattice through macroscopic methods. 
-For this reason, they are also known as \textit{top-down} approaches. Although they have seen an improvements in recent years, common drawbacks for this class of methods are a random distribution in the widths, a non-atomical control of the edge structures, and non-negligible 
+The first class of methods for synthesising graphene nanoribbons are methods that involve cutting or producing rectangular shapes from the graphene lattice through macroscopic methods.
+For this reason, they are also known as \textit{top-down} approaches. Although they have seen an improvements in recent years, common drawbacks for this class of methods are a random distribution in the widths, a non-atomical control of the edge structures, and non-negligible
 impurity concentrations left after the process.
 
 \co{ebl and etched gnrs present randomly distributed widths}
@@ -233,16 +308,16 @@ An 8 nm GNR FET showed a dramatically improved on/off ratio of about 160.
 
 \co{cutting graphene with nanoparticles leads to a random distribution of the widths}
 
-Nanocutting of graphene is another promising method of GNR synthesis. In 2008, Strachan et al. used thermally activated Fe nanoparticles as chemical scissors to cut graphene sheet along a specific crystallographic direction~\cite{RN345,RN346}. Later, Ni and other catalysts were employed as well 
-The carbon-carbon bond breaking is driven by the combustion reaction \ce{Ni + C_{\text{graphene}} + 2H2 ^ -> Ni/Fe + CH4 ^} catalysed by the nanoparticles, thus producing hydrocarbon compounds. One of the reason that have discouraged these synthetic way is the random width distribution obtained: this is likely 
+Nanocutting of graphene is another promising method of GNR synthesis. In 2008, Strachan et al. used thermally activated Fe nanoparticles as chemical scissors to cut graphene sheet along a specific crystallographic direction~\cite{RN345,RN346}. Later, Ni and other catalysts were employed as well
+The carbon-carbon bond breaking is driven by the combustion reaction \ce{Ni + C_{\text{graphene}} + 2H2 ^ -> Ni/Fe + CH4 ^} catalysed by the nanoparticles, thus producing hydrocarbon compounds. One of the reason that have discouraged these synthetic way is the random width distribution obtained: this is likely
 to be a consequence of the change in direction when nanoparticles encounter defects or edges.
 
 
 
 \begin{mccorrection}
-It will be interesting to discuss the $E_{\text{g}} \propto 1/W$ relation
-as the model used for describing gnr is the particle in the box, but in the toy model (particle in a box) 
-as a relation of the kind $E_{\text{g}} \propto 1/W^2$.
+    It will be interesting to discuss the $E_{\text{g}} \propto 1/W$ relation
+    as the model used for describing gnr is the particle in the box, but in the toy model (particle in a box)
+    as a relation of the kind $E_{\text{g}} \propto 1/W^2$.
 \end{mccorrection}
 
 \section{Delocalised $\pi$-electron Systems}

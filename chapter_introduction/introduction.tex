@@ -142,9 +142,9 @@ can be used as electrode material
 
 \subsection{Graphene Transistors}
 
-The first graphene field-effect transistor (GFET) was the one reported by the Manchester group in 2004 where a scotch-taped exfoliated flake of graphene was deposited on top of 300 nm of \ce{SiO2} acting as a back-gate \cite{novoselov2004electric}. 
-The resulting output characteristics displayed were characteristics of an ambipolar device, with linear relation between the current and the drain-source voltage, without any saturation regime reached for the charge carrier \cite{lin2008operation} (Fig. \ref{fig:schwierz_lin_2}): this behaviour agrees with the semi-metal nature of graphene 
-and indicates that transistor functionality was exclusively limited by inevitable contact resistances \cite{thiele2010modeling}. 
+The first graphene field-effect transistor (GFET) was the one reported by the Manchester group in 2004 where a scotch-taped exfoliated flake of graphene was deposited on top of 300 nm of \ce{SiO2} acting as a back-gate \cite{novoselov2004electric}.
+The resulting output characteristics displayed were characteristics of an ambipolar device, with linear relation between the current and the drain-source voltage, without any saturation regime reached for the charge carrier \cite{lin2008operation} (Fig. \ref{fig:schwierz_lin_2}): this behaviour agrees with the semi-metal nature of graphene
+and indicates that transistor functionality was exclusively limited by inevitable contact resistances \cite{thiele2010modeling}.
 As for any transistor, the charge carriers can be varied by sweeping the gate voltage, which distinguishable branches of the gate-transfer characteristic; the charge neutrality point (Dirac point) is where they touch each other. Large positive gate voltages promote an electron accumulation in the channel (n-type channel), and large negative gate voltages lead to a p-type channel \cite{avouris2010graphene, castroneto2009}.
 
 % \begin{table}[]
@@ -169,35 +169,35 @@ As for any transistor, the charge carriers can be varied by sweeping the gate vo
 \begin{table}
     \centering
     \begin{tabular}{r*{7}{c}}
-      \toprule
-      & \multicolumn{3}{c}{Direct Gap} & \multicolumn{2}{c}{Indirect Gap}\T\B\\
-      \cmidrule(lr){2-4} \cmidrule(lr){5-6}
-                                                         & InP       & Si   & Ge   & GaAs  & InAs  &  Graphene    \T\B\\
-      \midrule
-    $a_\text{lattice}$ (\si{\angstrom})                  & 5.87     & 5.43 & 5.65 & 5.65  & 6.06   & 2.46           \T\\
-    $E_g$ (eV)                                           & 1.35     & 1.12 & 0.66 & 1.42  & 0.36   & 0               \T\\
-    $\mu$ (cm$^2$V$^{-1}$s$^{-1}$) at 300 K                  & 2800     & 1400 & 3900 & 4600  & 16,000 & 200,000         \T\\
-    $v_\text{sat}$ ($10^7$ \si{\centi\metre\per\second}) & 2.2      & 1    & 0.6  & 2.2   & 4.0    & \textgreater{}5 \T\\
-    DOS ($m^*/m_0$)                                      & 0.077    & 1.08 & 0.56 & 0.067 & 0.023  & 0               \T\\
-    $\epsilon_r$                                         & 12.4     & 11.9 & 16.0 & 13.1  & 14.6   & 2.4             \T\\
-    $\kappa$ (\si{\watt\per\metre\per\kelvin})           & 68       & 150  & 60.2 & 46    & 27     & 5000            \T\\
-      \bottomrule
+        \toprule
+                                                             & \multicolumn{3}{c}{Direct Gap} & \multicolumn{2}{c}{Indirect Gap}\T\B                                              \\
+        \cmidrule(lr){2-4} \cmidrule(lr){5-6}
+                                                             & InP                            & Si                                   & Ge   & GaAs  & InAs   & Graphene    \T\B   \\
+        \midrule
+        $a_\text{lattice}$ (\si{\angstrom})                  & 5.87                           & 5.43                                 & 5.65 & 5.65  & 6.06   & 2.46           \T  \\
+        $E_g$ (eV)                                           & 1.35                           & 1.12                                 & 0.66 & 1.42  & 0.36   & 0               \T \\
+        $\mu$ (cm$^2$V$^{-1}$s$^{-1}$) at 300 K              & 2800                           & 1400                                 & 3900 & 4600  & 16,000 & 200,000         \T \\
+        $v_\text{sat}$ ($10^7$ \si{\centi\metre\per\second}) & 2.2                            & 1                                    & 0.6  & 2.2   & 4.0    & \textgreater{}5 \T \\
+        DOS ($m^*/m_0$)                                      & 0.077                          & 1.08                                 & 0.56 & 0.067 & 0.023  & 0               \T \\
+        $\epsilon_r$                                         & 12.4                           & 11.9                                 & 16.0 & 13.1  & 14.6   & 2.4             \T \\
+        $\kappa$ (\si{\watt\per\metre\per\kelvin})           & 68                             & 150                                  & 60.2 & 46    & 27     & 5000            \T \\
+        \bottomrule
     \end{tabular}
     \caption{Differences between the main semiconductors used in modern digital electronics and graphene.}\label{tlc}
-  \end{table}
+\end{table}
 
-Hysteresis between the forward and reverse sweeps have been reported depending on the sweeping rate and range \cite{wang2010hysteresis}, and attributed mainly to charge trapping in silanol groups (Si--OH), mediated and assisted by surface-bound \ce{H2O} molecules \cite{joshi2010intrinsic}.  
+Hysteresis between the forward and reverse sweeps have been reported depending on the sweeping rate and range \cite{wang2010hysteresis}, and attributed mainly to charge trapping in silanol groups (Si--OH), mediated and assisted by surface-bound \ce{H2O} molecules \cite{joshi2010intrinsic}.
 Despite the usefulness for its proof-of-concept purposes, back-gate devices suffered from parasitic capacitances, making impossible further integration with other components.
-Alternatives geometries have since then been explored, in order to increase the carriers mobility, to decrease contact resistances and parasitic capacitances, and to avoid Schottky barriers formation between the graphene and the semiconductor. 
-Top-gate devices have been the first to chronologically appear in the literature. 
-Back then in 2007, Lemme and co workeres used a stack of \ce{SiO2} (20 nm), Ti (10 nm), and Au (100 nm) as top gate for modulating the current inside a large-area graphene channel transistor obtained by the exfoliation method \cite{lemme2007graphene}. 
-Whilst the gate characteristics exhibit a similar trend of the characteristics (the top gate reduces the back-gate current modulation, lowering the drain current by one order of magnitude) and the hysteresis, weak current saturation at high drain-source bias have been reported \cite{moon2009epitaxial}. 
-This effect seem due to a partial charge pinning at the contacts at high back-gate voltages \cite{di2011charge} and carrier drift velocity eventually saturating due to optical-phonon scattering \cite{meric2008current}. Top-gated graphene MOSFET with CVD and epitaxial graphene have been also made \cite{kedzierski2008epitaxial, lin2010100}; \ce{SiO2}, \ce{Al2O3}, and \ce{HfO2} have been used as top-gate dielectric. 
+Alternatives geometries have since then been explored, in order to increase the carriers mobility, to decrease contact resistances and parasitic capacitances, and to avoid Schottky barriers formation between the graphene and the semiconductor.
+Top-gate devices have been the first to chronologically appear in the literature.
+Back then in 2007, Lemme and co workeres used a stack of \ce{SiO2} (20 nm), Ti (10 nm), and Au (100 nm) as top gate for modulating the current inside a large-area graphene channel transistor obtained by the exfoliation method \cite{lemme2007graphene}.
+Whilst the gate characteristics exhibit a similar trend of the characteristics (the top gate reduces the back-gate current modulation, lowering the drain current by one order of magnitude) and the hysteresis, weak current saturation at high drain-source bias have been reported \cite{moon2009epitaxial}.
+This effect seem due to a partial charge pinning at the contacts at high back-gate voltages \cite{di2011charge} and carrier drift velocity eventually saturating due to optical-phonon scattering \cite{meric2008current}. Top-gated graphene MOSFET with CVD and epitaxial graphene have been also made \cite{kedzierski2008epitaxial, lin2010100}; \ce{SiO2}, \ce{Al2O3}, and \ce{HfO2} have been used as top-gate dielectric.
 
-However, despite the improvements obtained with a top gate, most graphene MOSFETs with large-area (gapless) graphene channels show on–off switching ratios of less than 10 at room temperature \cite{schwierz2010graphene}, much too little for complex logic circuits. 
+However, despite the improvements obtained with a top gate, most graphene MOSFETs with large-area (gapless) graphene channels show on–off switching ratios of less than 10 at room temperature \cite{schwierz2010graphene}, much too little for complex logic circuits.
 
-In 2012, Mehr et al.\ proposed a vertical arrangement of emitter, base, and collector similar to the original vacuum triode, where graphene plays the base role and electrons travel vertically rather than transversely. 
-When the device is in the ON state, the electrons tunnel with a Fowler-Nordheim tunnelling mechanism:  
+In 2012, Mehr et al.\ proposed a vertical arrangement of emitter, base, and collector similar to the original vacuum triode, where graphene plays the base role and electrons travel vertically rather than transversely.
+When the device is in the ON state, the electrons tunnel with a Fowler-Nordheim tunnelling mechanism:
 
 \begin{equation}
     I\propto(V_\text{sd}/d)^2~\exp{-\frac{\alpha~d}{V_{sd}}},
@@ -205,12 +205,12 @@ When the device is in the ON state, the electrons tunnel with a Fowler-Nordheim 
 
 through the emitter--base layer (of thickness $d$); ON/OFF ratios of the order of $10^4$ have been demonstrated using graphene between two h-BN layers \cite{britnell2012field} and using \ce{WeS2}--graphene \cite{georgiou2013vertical} heterostructures.
 
-Solution methods have also been explored, in which graphene is dropcasted on top of a semiconducting wafer, and then spin-coated \cite{liu2010simple}. 
-The main difficulties arise when attempting to quantify the structure and the quality of the deposited graphene, and not many methods can guarantee a good dispersion in organic solvents \cite{sun2011graphene}. 
+Solution methods have also been explored, in which graphene is dropcasted on top of a semiconducting wafer, and then spin-coated \cite{liu2010simple}.
+The main difficulties arise when attempting to quantify the structure and the quality of the deposited graphene, and not many methods can guarantee a good dispersion in organic solvents \cite{sun2011graphene}.
 Simpler ways to obtain graphene oxide in solution have been reported \cite{van2016effect}, but once deposited, graphene oxide needs to be reduced for obtaining pure graphene -- low mobility values (up to, at best, 1000 \si{\square\centi\metre\per\volt\per\second}) caused by defects during the fabrication steps have discouraged further investigations along this direction.
 
-Yet in spite of the very different dc behavior compared to the most used semiconductors in digital electroncis, graphene FETs have reported good performance in terms of high-frequency applications. This comparison is made by measuring each system’s frequency response, its output signal strength when it is given a particular input signal: features such as ballistic transport, linear current-voltage characteristics, high transconductance, and very high ($> 10^8$ \si{\ampere\per\square\centi\metre}) sustainable currents are all ideal features for analog/RF applications \cite{meric2008rf, meric2008current}. 
-The primary means of estimating frequency response is through the cutoff frequency: it is a fundamental property indicating how quickly a signal can travel from the gate to the drain of the device. The frequency response depends inversely on the length of the gate, and proportionally to the transconductance, which is loosely proportional to mobility. Thus, to make faster devices, we can either reduce the gate length or use higher mobility materials \cite{schwierz2010graphene, schwierz2010graphene}. 
+Yet in spite of the very different dc behavior compared to the most used semiconductors in digital electroncis, graphene FETs have reported good performance in terms of high-frequency applications. This comparison is made by measuring each system’s frequency response, its output signal strength when it is given a particular input signal: features such as ballistic transport, linear current-voltage characteristics, high transconductance, and very high ($> 10^8$ \si{\ampere\per\square\centi\metre}) sustainable currents are all ideal features for analog/RF applications \cite{meric2008rf, meric2008current}.
+The primary means of estimating frequency response is through the cutoff frequency: it is a fundamental property indicating how quickly a signal can travel from the gate to the drain of the device. The frequency response depends inversely on the length of the gate, and proportionally to the transconductance, which is loosely proportional to mobility. Thus, to make faster devices, we can either reduce the gate length or use higher mobility materials \cite{schwierz2010graphene, schwierz2010graphene}.
 
 
 The first graphene MOSFET with a cutoff frequency $f_T$ in the gigahertz range has been reported in late 2008 \cite{meric2008rf}. In 2009, graphene MOSFETs with 350-nm gates and a cutoff frequency of 50 GHz have been presented \cite{lin2009development}; in early 2010, a graphene MOSFET with a 240-nm gate showing an $f_T$ of 100 GHz has been reported \cite{lin2010100}, soon followed by a 144-nm gate graphene MOSFET with $f_T$ ¼ 300 GHz later that year \cite{liao2010high}. Finally, in 2012, a graphene MOSFET with a 40-nm-long gate showing 350-GHz $f_T$ \cite{wu2012state} and a 67-nm gate graphene MOSFET with an $f_T$ of 427 GHz have been reported \cite{cheng2012high}. Graphene RF MOSFETs have successfully been realized using exfoliated (e.g., \cite{liao2010high} and \cite{lin2009development}), epitaxial (e.g., \cite{lin2010100} and \cite{moon2009epitaxial}), and CVD (\cite{wu2011high}) graphene.
@@ -220,14 +220,43 @@ The first graphene MOSFET with a cutoff frequency $f_T$ in the gigahertz range h
 
 \section{Carbon-based Field Effect Transistor}
 
-A great deal of attention from the scientific community has been dedicated -- since the late 90s -- to \glspl{CNT} \cite{dresselhaus2000carbon}. 
-This crystalline form of carbon is a rolled up sheet of graphene and comes in two major flavours, namely \gls{SW} and \gls{MW}. 
-With typical diameter ranging from 1 to 100 nm, these hollow cylindrical structures display an electronic band gap which depends on the chirality and the diameter of the nanotube \cite{wong2011carbon}.
+\subsection{crystal structure}
 
-The chiral vector is the direction along which the graphene sheet is rolled up and becomes the circumference of the nanotube: it must be a linear combination of the basis vectors with integers coefficients ($m$, $n$). Based on the values of $m$ and $n$, \glspl{CNT} can be metallic ($m = n$), quasi-metallic ($m - n$ is a multiple of 3, with $m\cdot n \neq 0$ and $m \neq n$), and semiconducting for the majority of the remaining cases -- exceptions due to the curvature (spin--orbit couplings) in small-diameter tubes are also known \cite{laird2015quantum}.
+This crystalline form of carbon can be considered as a rolled up sheet of graphene and comes in two major flavours: \gls{SW} and \gls{MW}.
+\Glspl{CNT} display an electronic band gap which depends on the chirality and the diameter of the nanotube \cite{dresselhaus2000carbon}.
+Having defined two unit vectors in the real space, $\vect{a_1}$ and $\vect{a_2}$, a \gls{CNT} can be described by the linear combination of these with integers coefficients ($m$, $n$). Based on the values of $m$ and $n$, \glspl{CNT} can be metallic , quasi-metallic ($m - n$ is a multiple of 3, with $m\cdot n \neq 0$ and $m \neq n$), 
+and semiconducting for the majority of the remaining cases -- exceptions due to the curvature (spin--orbit couplings) in small-diameter tubes are also known \cite{laird2015quantum}.
+Thus, a quantization of the electronic states in the circumferential direction is resulted when the nanotube diameter $d_\text{CNT}$ is between 0.8 and 2.5 nm. Each of these substates is called subband
+and are determined by the periodic boundary condition. Having defined a circumferential wave vector $\vect{k_c}$ such that $\vect{k_c}\cdot\vect{c} = k_c\abs{c} = k_c\pi d_\text{CNT} = 2\pi\nu$, for $\nu$ integer, it is possible from this relation to draw parallel lines in the first Brillouin zone of graphene.
+If the subband intersect one of the $\vect{K}$ points, than the resulting nanotube will have no energy gap and thus exhibit metallic properties (this condition is realised by having $m = n$ for the coefficients of the chiral vector).
+If none of the subbands pass through $\vect{K}$ then the resulting \gls{CNT} will be semiconducting, having a $E_g$ proportional to the smallest distance between a $\vect{K}$ point and the subband lines:
 
+\begin{equation}
+    E_g = 2\qty(\pdv{E}{k})\frac{k_c}{3}=\frac{2}{3}\hbar v_F\frac{2\pi}{\abs{c}} = \frac{4}{3}\hbar v_F\frac{1}{d_\text{CNT}}\approx\frac{0.7}{d_\text{CNT}}
+\end{equation} 
 
-Detail here the carbon nanotube journey.
+where $v_F = 8\times10^5$ \si{\meter\per\second} is the Fermi velocity, $E_g$ is expressed in eV, and $d_\text{CNT}$ is expressed in nm.
+
+\subsection{Carbon Nanotube Field-Effect Transistors}
+
+\subsubsection{General Operation}
+
+The modulation of a \gls{CNT} channel by a gate-induced field was realised in the 1998 by the group of Cees Dekkar. These early \glspl{FET} were fabricated 
+by using doped silicon substrate as a gate to modulate the energy bands, separated from the nanotube by thermally-grown \ce{SiO2} oxide acting as dielectric. 
+For contacting the nanotube, metal conctats were employed. 
+
+Since then, a great variaty of \gls{CNTFET} structures and geometries have been demonstrated, and can be essentially classified in devices with or without a spacer.
+where the spacer length $L_\text{spr}$ is the distance between the gated channel and the source/drain metal conctacts.
+Given that the nanotubes are intrinsically semiconducting, in spacer-less devices charge carriers are not induced in the channel by the gate-field but are injected from the contacts: the role of the gate is to 
+lower the thermal barrier in the channel, thus allowing a tunnelling through the \gls{SB} at the source. In this scenario, a critical role for the \gls{CNTFET} performance is played by the metal work function $\phi^\text{M}$.
+
+\glspl{CNTFET} with spacers, on the other hand, are less limited by the injection at the junction source--\gls{CNT}, as they are regulated by the modulating effect played by in the channel as in conventional. Since the carrier barrier 
+injection at the drain is large, device with spacers have been proved to be more resistant to ambipolar conduction. In Table \ref{tab:CNFET} an overview of gated-spacer (top and bottom) devices is reported.
+
+\subsubsection{Contacts}
+
+Many metals have been studied for contacting \glspl{CNT}. Interestingly, it has been demonstrated that Pd ($\phi^{Pd}=5.22--5.60$)
+builds an almost ideal $p$-channel contact to the valence band of \glspl{CNT}.
 
 \begin{table}[]
     \centering

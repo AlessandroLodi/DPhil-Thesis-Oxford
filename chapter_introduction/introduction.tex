@@ -135,52 +135,55 @@ of carbon nanotubes and clean graphene nanoribbons, as they show $1/\sqrt{E}$ si
 
 Thermal Properties of graphene
 
-
 \subsection{graphene as electrode material}
 
 can be used as electrode material
 
 \subsection{Graphene Transistors}
 
-The first graphene field-effect transistor (GFET) was the one reported by the Manchester group in 2004 where a scotch-taped exfoliated flake of graphene was deposited on top of 300 nm of \ce{SiO2} acting as a back-gate \cite{novoselov2004electric}.
-The resulting output characteristics displayed were characteristics of an ambipolar device, with linear relation between the current and the drain-source voltage, without any saturation regime reached for the charge carrier \cite{lin2008operation} (Fig. \ref{fig:schwierz_lin_2}): this behaviour agrees with the semi-metal nature of graphene
-and indicates that transistor functionality was exclusively limited by inevitable contact resistances \cite{thiele2010modeling}.
-As for any transistor, the charge carriers can be varied by sweeping the gate voltage, which distinguishable branches of the gate-transfer characteristic; the charge neutrality point (Dirac point) is where they touch each other. Large positive gate voltages promote an electron accumulation in the channel (n-type channel), and large negative gate voltages lead to a p-type channel \cite{avouris2010graphene, castroneto2009}.
+For transistor applications, a material needs a highly conductive on-state and an off-state where the source-drain current $I_\textrm{sd}$ does not flow. For RFs applications, on the other hand, the full speed operation is obtained by operating in the (drain) current saturation regime. 
+Both applications requires a sizeable bandgap. 
+Furthermore, the IC scaling trend is often juxtaposed to chip-level issues such as power densities (currently on the order of 1000 W/cm$^2$), heat generation, and chip temperatures reaching levels that will prevent reliable operations.    
 
-% \begin{table}[]
-%     \centering
-%     \begin{tabular}{lllllll}
-%     \cline{2-7}
-%     \hline
-%         & Graphene        & Si   & Ge   & GaAs  & InAs   & InP   \\ \vspace{.1in}\cline{2-7} 
-%     $\mu$ (\si{\square\centi\metre\per\volt\per\second}) @ 300 K            & 200,000         & 1400 & 3900 & 4600  & 16,000 & 2800  \\
-%     E$_\text{g}$ (eV)                           & 0               & 1.12 & 0.66 & 1.42  & 0.36   & 1.35  \\
-%     $v_\text{sat}$ ($10^7$ \si{\centi\metre\per\second})      & \textgreater{}5 & 1    & 0.6  & 2.2   & 4.0    & 2.2   \\
-%     DOS ($m^*/m_0$) & 0               & 1.08 & 0.56 & 0.067 & 0.023  & 0.077 \\
-%     $\epsilon_r$                   & 2.4             & 11.9 & 16.0 & 13.1  & 14.6   & 12.4  \\
-%     $\kappa$ (\si{\watt\per\metre\per\kelvin})                   & 5000            & 150  & 60.2 & 46    & 27     & 68    \\
-%     Lattice constant (\si{\angstrom})                               & 2.46            & 5.43 & 5.65 & 5.65  & 6.06   & 5.87 \\ \hline
-%     \end{tabular}
-%     \caption {Comparison of some properties of graphene with those of a few other semiconductors commonly used in fabricating field-effect devices.}
-%     \label{tab:graphene_vs_semiconductor}\\
-% \end{table}
+In CMOS logic, the charge carriers are accellerated by the electric field $\mathcal{E}_\textrm{sd}$ between source and drain, thus undergoing five possible sources of scattering: electron--electron scattering, electron--phonon (lattice vibrations), 
+material interfaces, imperfections or impurity atoms. The first two are more fundamentals, while the last three are material-related. The most dominant mechanism through which charge carriers lose net energy is by
+scattering with phonons, consequently heating up the lattice via Joule heating. For RF applications, on the other hand, heat is produced by the operational frequency at which the carriers operate. 
+Thus, two further requirements are needed: on one hand a good thermal conductivity, but also small heat transfer with the substrate. Clearly trade-offs are here necessary.
+
+The 2020 International Roadmap for Devices and Systems - which has replaced since 2017 the International Roadmap for Semiconductors - dedicates ample attention to graphene in its report \textit{Beyond CMOS}, 
+in which technologies and semiconductor materials to complement and replace Si are considered. Most of the early excitements in using graphene as channel material in a standard FET technology 
+were almost entirely sparked by exclusively considering the outstanding mobility values reported throughout the years. 
+
+The first data were the one obtained in 2004, where graphene on SiO$_2$ displayed an electron mobility $\mu_e\approx10,000$ cm$^{2}$V$^{-1}$s$^{-1}$ \cite{novoselov2004electric}. 
+Later in 2008 \cite{bolotin2008ultrahigh} and 2013 \cite{wang2013one}, higher mobility values were reported: $\approx120,000$ cm$^{2}$V$^{-1}$s$^{-1}$ at 240 K and $\approx1,000,000$ cm$^{2}$V$^{-1}$s$^{-1}$ at 4 K. The reason for these higher values was attributed to the use of suspended graphene rather
+onto substrate, where surface effects inevitably affect the carrier dynamics. At the same time, results ($\approx120,000$ cm$^{2}$V$^{-1}$s$^{-1}$) obtained at room temperature with graphene onto a single-layer of hexagonal boron nitride (hBN) \cite{dean2010boron} and sandwiched between two hBN layer \cite{wang2013one} have suggested 
+that this flat and inert materials can be act as a excellent passivation film for graphene devices.
+
+One of the figure of merit often taken into account for addressing logic applications for a materials is the ratio between the on-state current and the off-state current. The so called on-off ratio $I_\text{on}/I_\text{off}$ has to be in the range 10${^4}$--10${^7}$. While the $I_\text{on}$ is not directly related to the bandgap $E_g$, it is possible to link the value of $I_\text{off}$ with the $E_g$.
+
+In an metal--semiconductor junction (M/S), the current is built by the majority of the carriers, these being electrons or holes for $n$-type or $p$-type semiconductors. Most of the graphene--semiconductor junctions formed during experiments have typical dopant concentration $N\leq10^{17}$ cm$^{-3}$. The $I-V$ characteristics of M/S junctions with such dopant concentrations are well reproduced by the thermoionic emission theory. If we then exclude other possible conduction mechanisms (standard and thermoionic field emission, generation/recombination, diffusion of electron, injection of holes and leakage current), the $I_\text{off}$ becomes proportional to the barrier the electrons have to overcome from the semiconductor to the metal, namely
+\begin{equation}
+    I_\text{off}\propto\exp{(e\beta\phi_B)}.
+\end{equation}
+
+where $e$ is the electron charge, $\phi_B$ is the Schottky barrier height, and $\beta=k_BT$. In we assume that the work function of graphene and the metal are the same, then $\phi_B = E_g/2$, where $E_g$ is the bandgap energy!!!!!! MA DE CHEEEE, leggiti Di bartolomeo perche non ce stai a capire un cazzo vecchio mio. Qua stai dicendo che c'e' un bandgap quando hai da una parte grapehen e dall'altra un metallo, devi dire da dove viene fuori sto gap.
 
 
 \begin{table}
     \centering
     \begin{tabular}{r*{7}{c}}
         \toprule
-                                                             & \multicolumn{3}{c}{Direct Gap} & \multicolumn{2}{c}{Indirect Gap}\T\B                                              \\
+                                                               & \multicolumn{3}{c}{Direct Gap} & \multicolumn{2}{c}{Indirect Gap}\T\B                                              \\
         \cmidrule(lr){2-4} \cmidrule(lr){5-6}
-                                                             & InP                            & Si                                   & Ge   & GaAs  & InAs   & Graphene    \T\B   \\
+                                                               & InP                            & Si                                   & Ge   & GaAs  & InAs   & Graphene    \T\B   \\
         \midrule
         $a_\textrm{lattice}$ (\si{\angstrom})                  & 5.87                           & 5.43                                 & 5.65 & 5.65  & 6.06   & 2.46           \T  \\
-        $E_g$ (eV)                                           & 1.35                           & 1.12                                 & 0.66 & 1.42  & 0.36   & 0               \T \\
-        $\mu$ (cm$^2$V$^{-1}$s$^{-1}$) at 300 K              & 2800                           & 1400                                 & 3900 & 4600  & 16,000 & 200,000         \T \\
+        $E_g$ (eV)                                             & 1.35                           & 1.12                                 & 0.66 & 1.42  & 0.36   & 0               \T \\
+        $\mu$ (cm$^2$V$^{-1}$s$^{-1}$) at 300 K                & 2800                           & 1400                                 & 3900 & 4600  & 16,000 & 200,000         \T \\
         $v_\textrm{sat}$ ($10^7$ \si{\centi\metre\per\second}) & 2.2                            & 1                                    & 0.6  & 2.2   & 4.0    & \textgreater{}5 \T \\
-        DOS ($m^*/m_0$)                                      & 0.077                          & 1.08                                 & 0.56 & 0.067 & 0.023  & 0               \T \\
-        $\epsilon_r$                                         & 12.4                           & 11.9                                 & 16.0 & 13.1  & 14.6   & 2.4             \T \\
-        $\kappa$ (\si{\watt\per\metre\per\kelvin})           & 68                             & 150                                  & 60.2 & 46    & 27     & 5000            \T \\
+        DOS ($m^*/m_0$)                                        & 0.077                          & 1.08                                 & 0.56 & 0.067 & 0.023  & 0               \T \\
+        $\epsilon_r$                                           & 12.4                           & 11.9                                 & 16.0 & 13.1  & 14.6   & 2.4             \T \\
+        $\kappa$ (\si{\watt\per\metre\per\kelvin})             & 68                             & 150                                  & 60.2 & 46    & 27     & 5000            \T \\
         \bottomrule
     \end{tabular}
     \caption{Differences between the main semiconductors used in modern digital electronics and graphene.}\label{tlc}
@@ -224,7 +227,7 @@ The first graphene MOSFET with a cutoff frequency $f_T$ in the gigahertz range h
 
 This crystalline form of carbon can be considered as a rolled up sheet of graphene and comes in two major flavours: \gls{SW} and \gls{MW}.
 \Glspl{CNT} display an electronic band gap which depends on the chirality and the diameter of the nanotube \cite{dresselhaus2000carbon}.
-Having defined two unit vectors in the real space, $\vect{a_1}$ and $\vect{a_2}$, a \gls{CNT} can be described by the linear combination of these with integers coefficients ($m$, $n$). Based on the values of $m$ and $n$, \glspl{CNT} can be metallic , quasi-metallic ($m - n$ is a multiple of 3, with $m\cdot n \neq 0$ and $m \neq n$), 
+Having defined two unit vectors in the real space, $\vect{a_1}$ and $\vect{a_2}$, a \gls{CNT} can be described by the linear combination of these with integers coefficients ($m$, $n$). Based on the values of $m$ and $n$, \glspl{CNT} can be metallic , quasi-metallic ($m - n$ is a multiple of 3, with $m\cdot n \neq 0$ and $m \neq n$),
 and semiconducting for the majority of the remaining cases -- exceptions due to the curvature (spin--orbit couplings) in small-diameter tubes are also known \cite{laird2015quantum}.
 Thus, a quantization of the electronic states in the circumferential direction is resulted when the nanotube diameter $d_\textrm{CNT}$ is between 0.8 and 2.5 nm. Each of these substates is called subband
 and are determined by the periodic boundary condition. Having defined a circumferential wave vector $\vect{k_c}$ such that $\vect{k_c}\cdot\vect{c} = k_c\abs{c} = k_c\pi d_\textrm{CNT} = 2\pi\nu$, for $\nu$ integer, it is possible from this relation to draw parallel lines in the first Brillouin zone of graphene.
@@ -233,7 +236,7 @@ If none of the subbands pass through $\vect{K}$ then the resulting \gls{CNT} wil
 
 \begin{equation}
     E_g = 2\qty(\pdv{E}{k})\frac{k_c}{3}=\frac{2}{3}\hbar v_F\frac{2\pi}{\abs{c}} = \frac{4}{3}\hbar v_F\frac{1}{d_\textrm{CNT}}\approx\frac{0.7}{d_\textrm{CNT}}
-\end{equation} 
+\end{equation}
 
 where $v_F = 8\times10^5$ \si{\meter\per\second} is the Fermi velocity, $E_g$ is expressed in eV, and $d_\textrm{CNT}$ is expressed in nm.
 
@@ -241,21 +244,21 @@ where $v_F = 8\times10^5$ \si{\meter\per\second} is the Fermi velocity, $E_g$ is
 
 \subsubsection{General Operation}
 
-The modulation of a \gls{CNT} channel by a gate-induced field was realised in the 1998 by the group of Cees Dekkar. These early \glspl{FET} were fabricated 
-by using doped silicon substrate as a gate to modulate the energy bands, separated from the nanotube by thermally-grown \ce{SiO2} oxide acting as dielectric. 
-For contacting the nanotube, metal conctats were employed. 
+The modulation of a \gls{CNT} channel by a gate-induced field was realised in the 1998 by the group of Cees Dekkar. These early \glspl{FET} were fabricated
+by using doped silicon substrate as a gate to modulate the energy bands, separated from the nanotube by thermally-grown \ce{SiO2} oxide acting as dielectric.
+For contacting the nanotube, metal conctats were employed.
 
 Since then, a great variaty of \gls{CNTFET} structures and geometries have been demonstrated, and can be essentially classified in devices with or without a spacer.
 where the spacer length $L_\textrm{spr}$ is the distance between the gated channel and the source/drain metal conctacts.
-Given that the nanotubes are intrinsically semiconducting, in spacer-less devices charge carriers are not induced in the channel by the gate-field but are injected from the contacts: the role of the gate is to 
+Given that the nanotubes are intrinsically semiconducting, in spacer-less devices charge carriers are not induced in the channel by the gate-field but are injected from the contacts: the role of the gate is to
 lower the thermal barrier in the channel, thus allowing a tunnelling through the \gls{SB} at the source. In this scenario, a critical role for the \gls{CNTFET} performance is played by the metal work function $\phi^\textrm{M}$.
 
-\glspl{CNTFET} with spacers, on the other hand, are less limited by the injection at the junction source--\gls{CNT}, as they are regulated by the modulating effect played by in the channel as in conventional. Since the carrier barrier 
+\glspl{CNTFET} with spacers, on the other hand, are less limited by the injection at the junction source--\gls{CNT}, as they are regulated by the modulating effect played by in the channel as in conventional. Since the carrier barrier
 injection at the drain is large, device with spacers have been proved to be more resistant to ambipolar conduction. In Table \ref{tab:CNFET} an overview of gated-spacer (top and bottom) devices is reported.
 
 \subsubsection{Contacts}
 
-One of the principal issues when study the interface metal--{CNT} is the role played by carbon and metal atoms at the interface. 
+One of the principal issues when study the interface metal--{CNT} is the role played by carbon and metal atoms at the interface.
 Solid-state semiconductors have dagling bonds at the surface, leading to Fermi level pinning, meaning that the variation of the band bending is independent of the work function of the metal, even when this is large.
 Since the ideal structure of \glspl{CNT} has no open bonds, no pinning of the metal Fermi level to mid-gap states occurs, thus legitimating the study of different work functions for maximising performance and tuning polarity.
 Many metals have been studied for contacting \glspl{CNT}. Interestingly, it has been demonstrated that Pd ($\phi^\textrm{Pd}=5.22--5.60$)
@@ -269,27 +272,27 @@ builds an almost ideal $p$-channel contact to the valence band of \glspl{CNT}. D
     \begin{tabular}{ccccccccc}
         \toprule
 
-        \textit{Device}            & $I_\textrm{on}/I_\textrm{off}$ & $SS$     & $g_\textrm{mt}$                         & $L_\textrm{ch}$           & $f_T$~[$f_\textrm{max}$]~ & Ref.                       \\
-        \textit{type}              &                            & (mV/dec) & (\si{\micro\siemens\per\centi\metre}) & (nm)                    & (GHz)                   &                            \\
+        \textit{Device}            & $I_\textrm{on}/I_\textrm{off}$ & $SS$     & $g_\textrm{mt}$                       & $L_\textrm{ch}$         & $f_T$~[$f_\textrm{max}$]~ & Ref.                       \\
+        \textit{type}              &                                & (mV/dec) & (\si{\micro\siemens\per\centi\metre}) & (nm)                    & (GHz)                     &                            \\
         \midrule
-        \multirow{9}*{Bottom gate} & 10$^4$                     & 94       & $\sim40$                              & 9                       & ---                     & \cite{Franklin2012}        \\
-                                   & 10$^5$                     & $\sim85$ & 40                                    & 15                      & ---                     & \cite{Franklin2010}        \\
-                                   & 10$^5$                     & $\sim85$ & 20                                    & 20                      & ---                     & \cite{Franklin2010}        \\
-                                   & $10^5$                     & 60       & 20                                    & 200                     & ---                     & \cite{weitz2007high}       \\
-                                   & 10$^5$                     & $\sim63$ & ---                                   & 200                     & ---                     & \cite{Lin2005}             \\
-                                   & 10$^4$                     & 80       & 50                                    & 240                     & ---                     & \cite{Javey2004}           \\
-                                   & ---                        & ---      & 143                                   & 800                     & [1]                     & \cite{chimot2007gigahertz} \\
-                                   & 10$^4$                     & ---      & ---                                   & 1,500                   & 1.5 -- 3.0              & \cite{schroter2016cntfet}  \\
-                                   & ---                        & 70       & 12$^\dag$                             & 2,000\footnotemark[1]   & ---                     & \cite{javey2002high}       \\
-                                   & $10^8$                     & ---      & ---                                   & $< 10,000\footnotemark$ & ---                     & \cite{Derenskyi2014}       \\
-                                   & ---                        & ---      & -~500                                 & ---                     & 30                      & \cite{le2007intrinsic}     \\
+        \multirow{9}*{Bottom gate} & 10$^4$                         & 94       & $\sim40$                              & 9                       & ---                       & \cite{Franklin2012}        \\
+                                   & 10$^5$                         & $\sim85$ & 40                                    & 15                      & ---                       & \cite{Franklin2010}        \\
+                                   & 10$^5$                         & $\sim85$ & 20                                    & 20                      & ---                       & \cite{Franklin2010}        \\
+                                   & $10^5$                         & 60       & 20                                    & 200                     & ---                       & \cite{weitz2007high}       \\
+                                   & 10$^5$                         & $\sim63$ & ---                                   & 200                     & ---                       & \cite{Lin2005}             \\
+                                   & 10$^4$                         & 80       & 50                                    & 240                     & ---                       & \cite{Javey2004}           \\
+                                   & ---                            & ---      & 143                                   & 800                     & [1]                       & \cite{chimot2007gigahertz} \\
+                                   & 10$^4$                         & ---      & ---                                   & 1,500                   & 1.5 -- 3.0                & \cite{schroter2016cntfet}  \\
+                                   & ---                            & 70       & 12$^\dag$                             & 2,000\footnotemark[1]   & ---                       & \cite{javey2002high}       \\
+                                   & $10^8$                         & ---      & ---                                   & $< 10,000\footnotemark$ & ---                       & \cite{Derenskyi2014}       \\
+                                   & ---                            & ---      & -~500                                 & ---                     & 30                        & \cite{le2007intrinsic}     \\
 
         \midrule
-        \multirow{3}*{Top gate}    & $10^6$                     & ---      & 20\footnotemark[2]                    & 80                      & ---                     & \cite{javey2005high}       \\
-                                   & 2                          & ---      & $\sim50$                              & 100                     & 25                      & \cite{che2013t}            \\
-                                   & 50                         & ---      & 310                                   & 100                     & $\sim70$ [80]           & \cite{cao2016radio}        \\
-                                   & ---                        & ---      & 0.3                                   & 210                     & ---                     & \cite{Nihey2002}           \\
-                                   & $10^5$                     & ---      & 33.5                                  & 85,000                  & ---                     & \cite{Lau2013}             \\
+        \multirow{3}*{Top gate}    & $10^6$                         & ---      & 20\footnotemark[2]                    & 80                      & ---                       & \cite{javey2005high}       \\
+                                   & 2                              & ---      & $\sim50$                              & 100                     & 25                        & \cite{che2013t}            \\
+                                   & 50                             & ---      & 310                                   & 100                     & $\sim70$ [80]             & \cite{cao2016radio}        \\
+                                   & ---                            & ---      & 0.3                                   & 210                     & ---                       & \cite{Nihey2002}           \\
+                                   & $10^5$                         & ---      & 33.5                                  & 85,000                  & ---                       & \cite{Lau2013}             \\
 
         \bottomrule
     \end{tabular}
@@ -313,16 +316,16 @@ builds an almost ideal $p$-channel contact to the valence band of \glspl{CNT}. D
     \begin{tabular}{ccccccccc}
         \toprule
 
-        \textit{Device}   & $I_\textrm{on}$  & $I_\textrm{off}$  & $I_\textrm{on}/I_\textrm{off}$ & $g_\textrm{mt}$         & $SS$     & \\
-        \textit{type}     & (A)            & (A)             &                            & (\si{\micro\siemens}) & (mV/dec) & \\
+        \textit{Device}   & $I_\textrm{on}$ & $I_\textrm{off}$ & $I_\textrm{on}/I_\textrm{off}$ & $g_\textrm{mt}$       & $SS$     & \\
+        \textit{type}     & (A)             & (A)              &                                & (\si{\micro\siemens}) & (mV/dec) & \\
         \midrule
-        Conventional      & 1.41$*10^{-5}$ & 4.06$*10^{-10}$ & 3.4$*10^{4}$               & 29                    & 99.6       \\
+        Conventional      & 1.41$*10^{-5}$  & 4.06$*10^{-10}$  & 3.4$*10^{4}$                   & 29                    & 99.6       \\
         \midrule
-        Partial S/D-doped & 1.50$*10^{-5}$ & 2.33$*10^{-8}$  & 6.4$*10^{2}$               & 63.6                  & 93.1       \\
+        Partial S/D-doped & 1.50$*10^{-5}$  & 2.33$*10^{-8}$   & 6.4$*10^{2}$                   & 63.6                  & 93.1       \\
         \midrule
-        Schottky-Barrier  & 3.26$*10^{-6}$ & 2.31$*10^{-8}$  & 1.41$*10^{2}$              & 19.6                  & 109.8      \\
+        Schottky-Barrier  & 3.26$*10^{-6}$  & 2.31$*10^{-8}$   & 1.41$*10^{2}$                  & 19.6                  & 109.8      \\
         \midrule
-        Tunnel            & 5.53$*10^{-6}$ & 1.16$*10^{-8}$  & 4.76$*10^{2}$              & 13                    & 107.9      \\
+        Tunnel            & 5.53$*10^{-6}$  & 1.16$*10^{-8}$   & 4.76$*10^{2}$                  & 13                    & 107.9      \\
 
         \bottomrule
     \end{tabular}
@@ -336,27 +339,27 @@ builds an almost ideal $p$-channel contact to the valence band of \glspl{CNT}. D
 In a $n$-type \glspl{CNTFET} the injection of electrons is favoured over the holes. Given that $\phi^\textrm{CNT}\approx 4.7$ eV and with an average $E_g\approx 0.6$ eV, it is possible to configure n-type channel with nanotube
 by either doping the spacer region or by using a metal with lower work function. One of the main drawbakcs of doping is the challenge to keep it under control: instability in air, low consistency, variability to temperature variations,
 are amongst the most frequent sceanrios. The other issue in working with low work fuction metals as contacts is the high tendency to oxidize. A simple and effective workaround to this is to use high work function metals to cap the contact metals,
-passivating the contact surface tendency to destabilise in air. One example of high performance n-type device was obtained by using Y contacts, achieving an \gls{SS} of 73 mV/dec, mobility of 5100 \si{\cm\square\per\V\per\second}, and \gls{DIBL} of 105 \si{\mV\per\V} \cite{ding2009contacted}. 
+passivating the contact surface tendency to destabilise in air. One example of high performance n-type device was obtained by using Y contacts, achieving an \gls{SS} of 73 mV/dec, mobility of 5100 \si{\cm\square\per\V\per\second}, and \gls{DIBL} of 105 \si{\mV\per\V} \cite{ding2009contacted}.
 
 \subsubsection{Scaling}
 While Si technology was for long time questioned whether it could work below 10-nm of channel length, recent impressive techological developements from the industry have proved not only its feasibility
 but also a widestream commercial application (currently modern laptop employ the 5-nm technology). Nevertheless, the interest in Si scalability has been always a crucial starting point for exploring different technologies and materials
-capable of overcoming short-channel effects (threshold voltage roll-off, off-state leakage current, channel length modulation are just a few of the problematics). 
+capable of overcoming short-channel effects (threshold voltage roll-off, off-state leakage current, channel length modulation are just a few of the problematics).
 
 In carbon nanotubes transistors a crucial and important -- but somehow overlooked difference -- is the difference between the two critical lengths for scaling, which are the contact length ($L_\textrm{c}$) and the channel length ($L_\textrm{ch}$).
-Aggressive scaling for the channel length generally leads to lose control of the band bending through the gate: intuitively, by shrinking the channel length the electric field generated by the source contact will be felt more and more 
+Aggressive scaling for the channel length generally leads to lose control of the band bending through the gate: intuitively, by shrinking the channel length the electric field generated by the source contact will be felt more and more
 by the charge carriers. The argument here is that carbon nanotubes offer, however, a good enough platform for such scaling given by the ultrathin hollow structure (recall an effective wall thickness about $d_\textrm{CNT}\approx0.68$ \si{\angstrom}). On the other hand, this could be a double edge-sword.
 The effetive carrier mass in nanotubes is $m^*_\textrm{CNT} = (0.228 \pm 0.129)m_0$ \cite{marulanda2008carrier}, thus potentially leading to tunnelling current from source to drain: this effect can be appreciate by an increase in the \gls{SS} and the OFF current.
 
-One of the first few systematic study on channel length scaling effects was conducted by Franklin \textit{et al.}. in 2010 through a series 
-of measurements on nanotubes with relatively small diameters (1.1 nm $<$ d$_\textrm{CNT}$ $<$ 1.3 nm) by using local bottom gates covered 
-with 2 nm \gls{EOT} of \ce{HfO2} \cite{franklin2010length}. A consistent trend was observed when the channel length was scaled down more than two orders of magnitude (from 3 \si{\micro\metre} to 15 nm), 
-both in the values of $V_\textrm{th}$ and $SS$ ($-0.5\pm0.2$ V and 90 mV/dec, respectively). 
-The authors reported also encouraing figures on the transconductance $g_m$. 
+One of the first few systematic study on channel length scaling effects was conducted by Franklin \textit{et al.}. in 2010 through a series
+of measurements on nanotubes with relatively small diameters (1.1 nm $<$ d$_\textrm{CNT}$ $<$ 1.3 nm) by using local bottom gates covered
+with 2 nm \gls{EOT} of \ce{HfO2} \cite{franklin2010length}. A consistent trend was observed when the channel length was scaled down more than two orders of magnitude (from 3 \si{\micro\metre} to 15 nm),
+both in the values of $V_\textrm{th}$ and $SS$ ($-0.5\pm0.2$ V and 90 mV/dec, respectively).
+The authors reported also encouraing figures on the transconductance $g_m$.
 
-In a standard \gls{MOSFET}, the transconductance is the change in the drain 
-current divided by the amount varied in the gate/source voltage $V_\textrm{gs}$ when the drain/source voltage ($V_\textrm{ds}$) is kept constant. 
-Typical values of $g_m$ for a small-signal field effect transistor are between 1 and 30 \si{\milli\siemens\per\micro\metre}. 
+In a standard \gls{MOSFET}, the transconductance is the change in the drain
+current divided by the amount varied in the gate/source voltage $V_\textrm{gs}$ when the drain/source voltage ($V_\textrm{ds}$) is kept constant.
+Typical values of $g_m$ for a small-signal field effect transistor are between 1 and 30 \si{\milli\siemens\per\micro\metre}.
 In a n-channel (nMOS) FET with threshold voltage $V_\textrm{th}$, the drain current at a certain $V_\textrm{gs}$ in saturation mode (so when $V_\textrm{th} > V_\textrm{gs} - V_\textrm{sd}$) is given by:
 
 \begin{equation}
@@ -376,22 +379,22 @@ and elegantly links the drain current with a voltage: in fact, by rearranging Eq
     I_\textrm{sd} = \frac{1}{2}k_n V_\textrm{ov}^2 \implies V_\textrm{ov} = \sqrt{\frac{2I_\textrm{sd}}{k_n}}
 \end{equation}
 
-The usefulness for this equation is that the relation expressed in terms of overdrive voltage rather thant threshold voltage holds both in the $n$ and in the $p$ case. 
-Some reference numbers: $V_\textrm{ov}$ is tipically set at about 70–200 mV for the 65 nm technology node 
+The usefulness for this equation is that the relation expressed in terms of overdrive voltage rather thant threshold voltage holds both in the $n$ and in the $p$ case.
+Some reference numbers: $V_\textrm{ov}$ is tipically set at about 70–200 mV for the 65 nm technology node
 (with $I_\textrm{sd} = 1.13$ \si{\milli\ampere\per\micro\metre} of width) with value of $g_\textrm{m}\approx 11-32$ \si{\milli\siemens\per\micro\metre}.
-In their work, Franklin \textit{et al.} achieved transconductance peak up to 40 
-\si{\micro\siemens\per\micro\metre} for a \gls{CNTFET} with 15 nm of channel length, 
-corresponding to values of $g_\textrm{m}$ between approximately 91 -- 110 \si{\micro\siemens\per\micro\metre}, 
+In their work, Franklin \textit{et al.} achieved transconductance peak up to 40
+\si{\micro\siemens\per\micro\metre} for a \gls{CNTFET} with 15 nm of channel length,
+corresponding to values of $g_\textrm{m}$ between approximately 91 -- 110 \si{\micro\siemens\per\micro\metre},
 thus meeting the requirements for being compatible with the Si technology.
 
-The first \gls{CNTFET} in which $L_\textrm{ch}$ was scaled below 10 nm came two years later, again by Franklin \textit{et al.} \cite{Franklin2012}. 
-By using a CNT with d$_\textrm{CNT}$ $\approx$ 1.3 nm $\pm$ 0.2 nm and $E_g$ $\approx$ 0.62 eV $\pm$ 0.1 eV contacted through local bottom gates, they manage to scale down the $L_\text{ch} = 9$ nm  
-The \gls{EOT} was reduced to $\approx$ 0.65 nm to achieve a better electrostatic coupling with the nanotube. 
+The first \gls{CNTFET} in which $L_\textrm{ch}$ was scaled below 10 nm came two years later, again by Franklin \textit{et al.} \cite{Franklin2012}.
+By using a CNT with d$_\textrm{CNT}$ $\approx$ 1.3 nm $\pm$ 0.2 nm and $E_g$ $\approx$ 0.62 eV $\pm$ 0.1 eV contacted through local bottom gates, they manage to scale down the $L_\text{ch} = 9$ nm
+The \gls{EOT} was reduced to $\approx$ 0.65 nm to achieve a better electrostatic coupling with the nanotube.
 
-The authors reported an increase on the minimum current as $L_\textrm{ch}$ decreseas from 320 nm to 9 nm, attributed to a back-injection of the 
-carriers into the conduction band from the drain, while the on-current approached the ballistic value for $L_\textrm{ch}\leq 41$ nm \cite{franklin2010length}. 
-Impressive switching behaviour, with \gls{SS} about 94 mV/dec, was measured, thus far outperforming any silicon-based of that time. 
-based on previous results \cite{franklin2010length}, the authors claimed the possibility of lowering the $SS$ and the off-current at minimal cost to I$\textrm{on}$ by reducing the diameter of the nanotubes. 
+The authors reported an increase on the minimum current as $L_\textrm{ch}$ decreseas from 320 nm to 9 nm, attributed to a back-injection of the
+carriers into the conduction band from the drain, while the on-current approached the ballistic value for $L_\textrm{ch}\leq 41$ nm \cite{franklin2010length}.
+Impressive switching behaviour, with \gls{SS} about 94 mV/dec, was measured, thus far outperforming any silicon-based of that time.
+based on previous results \cite{franklin2010length}, the authors claimed the possibility of lowering the $SS$ and the off-current at minimal cost to I$\textrm{on}$ by reducing the diameter of the nanotubes.
 
 
 

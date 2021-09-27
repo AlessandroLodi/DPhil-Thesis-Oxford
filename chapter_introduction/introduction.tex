@@ -93,7 +93,7 @@ The electronic structure of graphene can be model with a tigh-binding hamiltonia
 Following the second quantization formalism ($\hbar = 1$ units), the hamiltonian can be written as:
 
 \begin{equation}\label{eq:graphene_hamiltonian}
-    H = -t\sum_{\langle ij\rangle,~\sigma}\qty(a^\dagger_{\sigma,i}b_{\sigma,j} + \textrm{H.c.}) - t' \sum_{\langle\langle ij\rangle\rangle,\sigma}\qty(a^\dagger_{\sigma,i}a_{\sigma,j}+b^\dagger_{\sigma,i}b_{\sigma,j}+ \textrm{H.c.}),
+    \mathcal{H}_\textrm{TB} = -t\sum_{\langle ij\rangle,~\sigma}\qty(a^\dagger_{\sigma,i}b_{\sigma,j} + \textrm{H.c.}) - t' \sum_{\langle\langle ij\rangle\rangle,\sigma}\qty(a^\dagger_{\sigma,i}a_{\sigma,j}+b^\dagger_{\sigma,i}b_{\sigma,j}+ \textrm{H.c.}),
 \end{equation}
 The notation $\langle ij\rangle$ means that the sum runs over pairs of electrons which are nearest neighbour; similarly, the notation $\langle\langle ij\rangle\rangle$ specify a summation over the next nearest neighbours;
 the operators $a^\dagger_{i,\sigma}$ ($a_{i,\sigma}$) and $b^\dagger_{i,\sigma}$ ($b_{i,\sigma}$) creates (annihilates) an electron with spin $\sigma$ ($\sigma=~\uparrow,\downarrow$) for atoms on sublattice A and B, respectively.
@@ -131,13 +131,9 @@ In the case of a two-dimensional electron gas, it is constant. On the contrary f
 If the graphene is charge-neautral, the DOS has two Van Hove singularities at $\omega_\textrm{VH} = \pm~1$\si{\electronvolt} \cite{bena2005quasiparticle}. This behaviour is in stark constrat with the DOS
 of carbon nanotubes and clean graphene nanoribbons, as they show $1/\sqrt{E}$ singularities due to the 1D nature, which imposes a quantization perpendicular to the ribbon or tube longitudinal direction.
 
-\subsection{thermal conductivity}
+% \subsection{thermal conductivity}
 
-Thermal Properties of graphene
-
-\subsection{graphene as electrode material}
-
-can be used as electrode material
+% Thermal Properties of graphene
 
 \subsection{Graphene Transistors}
 
@@ -145,7 +141,7 @@ For transistor applications, a material needs a highly conductive on-state and a
 Both applications requires a sizeable band gap. 
 Furthermore, the IC scaling trend is often juxtaposed to chip-level issues such as power densities (currently on the order of 1000 W/cm$^2$), heat generation, and chip temperatures reaching levels that will prevent reliable operations.    
 
-In CMOS logic, the charge carriers are accellerated by the electric field $\mathcal{E}_\textrm{sd}$ between source and drain, thus undergoing five possible sources of scattering: electron--electron scattering, electron--phonon (lattice vibrations), 
+In CMOS logic, the charge carriers are accellerated by the electric field $\CMcal{E}_\textrm{sd}$ between source and drain, thus undergoing five possible sources of scattering: electron--electron scattering, electron--phonon (lattice vibrations), 
 material interfaces, imperfections or impurity atoms. The first two are more fundamentals, while the last three are material-related. The most dominant mechanism through which charge carriers lose net energy is by
 scattering with phonons, consequently heating up the lattice via Joule heating. For RF applications, on the other hand, heat is produced by the operational frequency at which the carriers operate. 
 Thus, two further requirements are needed: on one hand a good thermal conductivity, but also small heat transfer with the substrate. Clearly trade-offs are here necessary.
@@ -401,6 +397,21 @@ based on previous results \cite{franklin2010length}, the authors claimed the pos
 
 \section{Graphene Nanoribbons}
 
+\subsubsection{band structure}
+Historically, a first classification of graphene nanoribbons was derived by grouping the edge structures into Armchair-GNRs (AGNRs) and Zigzag-GNRs (ZGNRs).  
+Following the success of chemical routes in producing GNRS, various kind of edges have come to light, e.g., cove, fjord, chiral, and all these can be regarded as combination of AGNRs and ZGNRs \mccorrect{Figure}. 
+
+Initial bandgap estimations through DFT calculations reported values between 2.5 and 0.5 eV. 
+The inclusion of electronic correlation, however, becomes crucial for ultra-narrov ($< 5$ nm) ribbon \cite{son2006energy, yang2007quasiparticle} and more accurate estimates derived by the group of Steven Louie based on the \textit{GW} approximation reported a wider range of energy gaps from 5.5 to 1 eV. 
+These calculations have shown that, as rule of thumb, AGNRs can be both semiconducting and metallic, while ZGNRs should be regarded as quasi-metallic, with energy gaps lying within 0.1 - 0.7 eV. Indeed, for this kind of ribbon the application of an electric field in the transverse direction of induces a spin-polarisation of the edge states is believed to be responsible for semiconducting properties of ZGNRs 
+The simplest model for describing the energy levels for a graphene nanoribbon is the particle in the box model, where the energy should scale quadratically $E_g \propto 1/L^2$ with the ribbon extension. Experimentally, however, the band gap for AGNRs scales with the inverse of the width $E_g \propto 1/W$ \cite{son2006energy}: by considering all the interatomic carbon-carbon distances the same, it is possible to work out an averaged formula which reports the band gap varying as $E_g = 0.8 / W$, \cite{xu2016recent}. More accurate simulations have shown, however, that peripheral carbon—carbon bond lengths usually tend to be larger compared to the ribbon core ones \cite{wang2007tuning}. It is predicted that the band gap will be similar to Ge or InN when the width is reduced to 2 and 3 nm, and will be similar to Si or GaAs when it is further reduced to 1-2 nm \cite{barone2006electronic}.
+\subsubsection{AGNR}
+For AGNRs, the bandgap varies significantly for different m values. AGNRs exhibit metallic behavior when $m=3p+2$, where p is an integer number, and they become semiconductors when $m=3p$ or $3p+1$. These relations have been obtained through in silico experiments, both using the tight-biding method and DFT . Figure 3 presents the isosurface plots of Highest Occupied Molecular Orbital (HOMO) and Lowest Unoccupied Molecular Orbital (LUMO) of AGNRs with m=7,8,9 respectively. Interestingly, the HOMO and LUMO orbitals are localized at the terminal of the ribbon along the length direction when m=7(3p+1). 
+\subsubsection{ZGNR}
+The band structure of ZGNRs is more interesting. Tight binding estimations have shown that if spin DOFs are excluded, the conduction band and valence band touches at the fermi level, forming a flat band. This flat band leads to a large localization of the density of states at the edges of ZGNRs, the so called \textit{edge states}, which displays an exponential decay $\rho(\epsilon\sim\epsilon^{-\vect{r}})$, with an exponent depending of the distance from centre of the ribbon; the weight of these states become negligible when the width in is the order of \si{\micro\metre}. 
+The formation of band gap is observed when the spin is considered. In particular, the ground state of ZGNRs has parallel (ferromagnetic, $\uparrow\uparrow$, FM) spin alignment along one edge, whilst two edges have antiparallel (antiferromagnetic, $\downarrow\downarrow$, AFM) configuration. Given that the AFM state is semiconducting while the FM is metallic, it would theoretically be possible to change the metallic state of a zigzag ribbon by applying a magnetic field in the direction transverse to that of the ribbon's extension.
+
+
 \co{gnr were first studied by physicist, lather by chemist}
 The scientific interest for graphene nanoribbons started in the physics community. Although this may appear irrelevant at the first glance, we will see that this actually had an impact over the last twenty years of progress in the field.
 The physics community was looking for a way to open a band gap in graphene. As mentioned in Sec.~\ref{intro:sec:motivation}, graphene is a semi-metal, therefore unsuitable for all those semiconducting applications where the conduction paths for the charge carriers are well defined.
@@ -421,11 +432,74 @@ Nanocutting of graphene is another promising method of GNR synthesis. In 2008, S
 The carbon-carbon bond breaking is driven by the combustion reaction \ce{Ni + C_{\textrm{graphene}} + 2H2 ^ -> Ni/Fe + CH4 ^} catalysed by the nanoparticles, thus producing hydrocarbon compounds. One of the reason that have discouraged these synthetic way is the random width distribution obtained: this is likely
 to be a consequence of the change in direction when nanoparticles encounter defects or edges.
 
+\subsubsection{edge states}
+Band gap opening and magnetic ordering are two main features of ZGNRs when the electron-electron correlations and the spin DOFs are considered. 
+Steven Louie's group extended the computation also to chiral edges, elucidating the inherent role of spin-polarized magnetic edge states in these kind of ribbons. 
+\cite{yazyev2011theory}. They employed a mean-field Hubbard model to calculate the band structure, 
+assuming the magnitude for the on-site Coulomb repulsion being comparable to the hopping integral $U/t \sim 1$. 
+The Hubbard hamiltonian using the second quantisation formalism resembles Eq.~\ref{eq:graphene_hamiltonian} and can be expressed as:
 
-The Hubbard hamiltonian expressed using the second quantisation formalism resembles the Eq.~\ref{eq:graphene_hamiltonian}.
-\begin{equation}\label{eq:chiral_gnr_hubbard_hamiltonian}
+\begin{equation}\label{eq:gnr_chiral_hubbard_hamiltonian}
 \begin{split}
-    H = &- t\sum_{\langle ij\rangle,~\sigma}\qty(a^\dagger_{\sigma,i}a_{\sigma,j} + \textrm{H.c.}) \\ 
-    &+ U\sum_{i}\qty(n_{i\uparrow}\langle n_{i\downarrow}\rangle + \langle n_{i\uparrow}\rangle n_{i\downarrow} - \langle n_{i\uparrow}\rangle \langle n_{i\downarrow}\rangle)
+    \mathcal{H}_{\textrm{MF}} = &- t\sum_{\langle ij\rangle,~\sigma}\qty(a^\dagger_{\sigma,i}a_{\sigma,j} + \textrm{H.c.}) \\ 
+    &+ U\sum_{i}\qty(n_{i\uparrow}\langle n_{i\downarrow}\rangle + \langle n_{i\uparrow}\rangle n_{i\downarrow} - \langle n_{i\uparrow}\rangle \langle n_{i\downarrow}\rangle),
 \end{split}
 \end{equation}
+
+except for the second term, which is given by the summation of spin-polarised density $n_{i\sigma} = a^\dagger_{i\sigma}a_{i\sigma}$ and their expectation values.
+The hamiltonian in Eq.~\ref{eq:gnr_chiral_hubbard_hamiltonian} respects the electron-hole symmetry, meaning that the density of states is symmetric respect to the $E_F$. 
+The solution of the model displays interesting features: two pairs of peaks split ($\Delta_0$ and $\Delta_1$) in the density of states are observed, one associated with the electronic band gap, and one associated with the maximum energy splitting. 
+The authors claim that the first peak split arises due to an AFM correlation between opposite edges, while $\Delta_1$ is a consequence of a ferromagnetic order due to strong localised state along a single edge. 
+Within this description, it is legit to link the behaviour of chiral GNRs with the one of spin-polarised ZGNRs; thus the total energy difference between ferromagnetic and antiferromagnetic couplings should be in the order of tens of meV per edge atom 
+and should decrease as the width of the ribbon increases, eventually becoming negligible when the ribbon width is significantly larger 
+than the decay length of the spin polarized \cite{lee2005magnetic}. Both features are in fact recovered from the solution of Eq.~\ref{eq:gnr_chiral_hubbard_hamiltonian}.
+
+
+
+
+% \subsubsection{applications}
+% \begin{table}[]
+%     \centering
+%     \small
+    
+%     \begin{tabular}{cccccc}
+%     \toprule
+%     \textit{Methods} & Edge & Width & $E_g$ & $I_\text{off}/I_\text{off}$  & Ref. \\
+%     \textit{type} & & (nm) & (meV) &  & \\
+%     \midrule
+%     \multirow{7}*{Top-down} 
+%                             & ---   & 5      & 145 & 47; $10^5$~(5.4 K)     & \cite{sun2015lateral} \\
+%                             & ---   & 5      & 489.4 $\pm$ 19.0 & $> 10^4$ & \cite{chen2017oriented} \\
+%                             & ---   & 15     & 120 $\pm$ 23 & --- & \cite{chen2017oriented} \\
+%                             & Mixed & 10     & 140 & $10^5$~(4 K)           & \cite{hwang2015graphene} \\
+%                             & ---   & 12     & 100 & 10; $10^6$~(4 K)       & \cite{hwang2012transport} \\
+%                             & ---   & sub-10 & 200 & ---                    & \cite{hwang2019room}$^\ddag$\\
+%                             & --- & 10 -- 20 & 10 -- 15 & 4.5; 10~(20 K) & \cite{jiao2010facile} \\
+%                             & ---   & 100 -- 4000 & 18 -- 1 & 20 -- 3.5     & \cite{bang2018effect} \\
+                            
+                            
+    
+%     \midrule
+%     \multirow{13}*{Bottom-Up} & cove & 0.69 -- 1.13 & 1880 & --- & \cite{narita2014synthesis} \\
+%                              & AGNR & 0.95   & 2100     & $10^5$ &  \cite{llinas2017short}$^\dag$ \\
+%                              & chevron & 1.73  & 3100 $\pm$ 400 & --- & \cite{linden2012electronic} \\
+%                              & --- & $\sim$ 2 & --- & $> 10^6$ & \cite{wang2008room} \\
+%                              & AGNR & 6-atom & 1690 $\pm$ 100  & ---      &  \cite{merino2017width} \\
+%                              & AGNR & 7-atom & 2370     & ---      &  \cite{ohtomo2018graphene} \\
+%                              & AGNR & 7-atom & 2500 $\pm$ 100    & ---      &  \cite{chen2013tuning} \\
+%                              & AGNR & 9-atom & 1690 $\pm$ 70     & ---      &  \cite{merino2017width} \\
+%                              & AGNR & 12-atom & 1130 $\pm$ 50     & ---      &  \cite{merino2017width} \\
+%                              & AGNR & 13-atom & 1600 $\pm$ 400 & --- & \cite{chen2013tuning} \\
+%                              & AGNR & 15-atom & 1030 $\pm$ 40     & ---      &  \cite{merino2017width} \\
+%                              & AGNR & 5 -- 9 & $\leq$ 400 & $10^5$ (9 nm); $10^6$ (5 nm) & \cite{li2008chemically} \\
+%                              & ZGNR & 6 & 1400 & --- & \cite{endo2015graphene} \\
+                              
+%     \midrule
+%     \multirow{3}*{Epitaxial} & ---    & 900 & --- & --- & \cite{sun2015lateral} \\
+%                              & AGNR   & 2 -- 40   & $> 500$ &  --- &\cite{palacio2014atomic, hicks2013wide} \\
+%                              &  ---   & $\sim$ 40  & --- & 10; $> 25$~(4 K) & \cite{sprinkle2010scalable} \\
+    
+%     \bottomrule
+    
+%     \end{tabular}
+%     \caption{\label{tab:GNR}Major Comparison amongst some CNFETs reported in the Literature. If not specified, the values for various $I_\text{off}/I_\text{off}$ ratios are reported at RT. Two useful complementary table to this one can be found in Ref. \cite{celis2016graphene} and \cite{ma2013recent}.}

@@ -92,7 +92,7 @@ The third and last case gives the point:
 The electronic structure of graphene can be model with a tigh-binding hamiltonian.
 Following the second quantization formalism ($\hbar = 1$ units), the hamiltonian can be written as:
 
-\begin{equation}
+\begin{equation}\label{eq:graphene_hamiltonian}
     H = -t\sum_{\langle ij\rangle,~\sigma}\qty(a^\dagger_{\sigma,i}b_{\sigma,j} + \textrm{H.c.}) - t' \sum_{\langle\langle ij\rangle\rangle,\sigma}\qty(a^\dagger_{\sigma,i}a_{\sigma,j}+b^\dagger_{\sigma,i}b_{\sigma,j}+ \textrm{H.c.}),
 \end{equation}
 The notation $\langle ij\rangle$ means that the sum runs over pairs of electrons which are nearest neighbour; similarly, the notation $\langle\langle ij\rangle\rangle$ specify a summation over the next nearest neighbours;
@@ -142,7 +142,7 @@ can be used as electrode material
 \subsection{Graphene Transistors}
 
 For transistor applications, a material needs a highly conductive on-state and an off-state where the source-drain current $I_\textrm{sd}$ does not flow. For RFs applications, on the other hand, the full speed operation is obtained by operating in the (drain) current saturation regime. 
-Both applications requires a sizeable bandgap. 
+Both applications requires a sizeable band gap. 
 Furthermore, the IC scaling trend is often juxtaposed to chip-level issues such as power densities (currently on the order of 1000 W/cm$^2$), heat generation, and chip temperatures reaching levels that will prevent reliable operations.    
 
 In CMOS logic, the charge carriers are accellerated by the electric field $\mathcal{E}_\textrm{sd}$ between source and drain, thus undergoing five possible sources of scattering: electron--electron scattering, electron--phonon (lattice vibrations), 
@@ -159,14 +159,14 @@ Later in 2008 \cite{bolotin2008ultrahigh} and 2013 \cite{wang2013one}, higher mo
 onto substrate, where surface effects inevitably affect the carrier dynamics. At the same time, results ($\approx120,000$ cm$^{2}$V$^{-1}$s$^{-1}$) obtained at room temperature with graphene onto a single-layer of hexagonal boron nitride (hBN) \cite{dean2010boron} and sandwiched between two hBN layer \cite{wang2013one} have suggested 
 that this flat and inert materials can be act as a excellent passivation film for graphene devices.
 
-One of the figure of merit often taken into account for addressing logic applications for a materials is the ratio between the on-state current and the off-state current. The so called on-off ratio $I_\text{on}/I_\text{off}$ has to be in the range 10${^4}$--10${^7}$. While the $I_\text{on}$ is not directly related to the bandgap $E_g$, it is possible to link the value of $I_\text{off}$ with the $E_g$.
+One of the figure of merit often taken into account for addressing logic applications for a materials is the ratio between the on-state current and the off-state current. The so called on-off ratio $I_\text{on}/I_\text{off}$ has to be in the range 10${^4}$--10${^7}$. While the $I_\text{on}$ is not directly related to the band gap $E_g$, it is possible to link the value of $I_\text{off}$ with the $E_g$.
 
 In an metal--semiconductor junction (M/S), the current is built by the majority of the carriers, these being electrons or holes for $n$-type or $p$-type semiconductors. Most of the graphene--semiconductor junctions formed during experiments have typical dopant concentration $N\leq10^{17}$ cm$^{-3}$. The $I-V$ characteristics of M/S junctions with such dopant concentrations are well reproduced by the thermoionic emission theory. If we then exclude other possible conduction mechanisms (standard and thermoionic field emission, generation/recombination, diffusion of electron, injection of holes and leakage current), the $I_\text{off}$ becomes proportional to the barrier the electrons have to overcome from the semiconductor to the metal, namely
 \begin{equation}
     I_\text{off}\propto\exp{(e\beta\phi_B)}.
 \end{equation}
 
-where $e$ is the electron charge, $\phi_B$ is the Schottky barrier height, and $\beta=k_BT$. In we assume that the work function of graphene and the metal are the same, then $\phi_B = E_g/2$, where $E_g$ is the bandgap energy!!!!!! MA DE CHEEEE, leggiti Di bartolomeo perche non ce stai a capire un cazzo vecchio mio. Qua stai dicendo che c'e' un bandgap quando hai da una parte grapehen e dall'altra un metallo, devi dire da dove viene fuori sto gap.
+where $e$ is the electron charge, $\phi_B$ is the Schottky barrier height, and $\beta=k_BT$. In we assume that the work function of graphene and the metal are the same, then $\phi_B = E_g/2$, where $E_g$ is the band gap energy originating from the difference of the work function of grahene and the metal.
 
 
 \begin{table}
@@ -403,7 +403,7 @@ based on previous results \cite{franklin2010length}, the authors claimed the pos
 
 \co{gnr were first studied by physicist, lather by chemist}
 The scientific interest for graphene nanoribbons started in the physics community. Although this may appear irrelevant at the first glance, we will see that this actually had an impact over the last twenty years of progress in the field.
-The physics community was looking for a way to open a bandgap in graphene. As mentioned in Sec.~\ref{intro:sec:motivation}, graphene is a semi-metal, therefore unsuitable for all those semiconducting applications where the conduction paths for the charge carriers are well defined.
+The physics community was looking for a way to open a band gap in graphene. As mentioned in Sec.~\ref{intro:sec:motivation}, graphene is a semi-metal, therefore unsuitable for all those semiconducting applications where the conduction paths for the charge carriers are well defined.
 
 The first class of methods for synthesising graphene nanoribbons are methods that involve cutting or producing rectangular shapes from the graphene lattice through macroscopic methods.
 For this reason, they are also known as \textit{top-down} approaches. Although they have seen an improvements in recent years, common drawbacks for this class of methods are a random distribution in the widths, a non-atomical control of the edge structures, and non-negligible
@@ -422,13 +422,10 @@ The carbon-carbon bond breaking is driven by the combustion reaction \ce{Ni + C_
 to be a consequence of the change in direction when nanoparticles encounter defects or edges.
 
 
-
-\begin{mccorrection}
-    It will be interesting to discuss the $E_{\text{g}} \propto 1/W$ relation
-    as the model used for describing gnr is the particle in the box, but in the toy model (particle in a box)
-    as a relation of the kind $E_{\text{g}} \propto 1/W^2$.
-\end{mccorrection}
-
-\section{Delocalised $\pi$-electron Systems}
-
-Porphyrin
+The Hubbard hamiltonian expressed using the second quantisation formalism resembles the Eq.~\ref{eq:graphene_hamiltonian}.
+\begin{equation}\label{eq:chiral_gnr_hubbard_hamiltonian}
+\begin{split}
+    H = &- t\sum_{\langle ij\rangle,~\sigma}\qty(a^\dagger_{\sigma,i}a_{\sigma,j} + \textrm{H.c.}) \\ 
+    &+ U\sum_{i}\qty(n_{i\uparrow}\langle n_{i\downarrow}\rangle + \langle n_{i\uparrow}\rangle n_{i\downarrow} - \langle n_{i\uparrow}\rangle \langle n_{i\downarrow}\rangle)
+\end{split}
+\end{equation}

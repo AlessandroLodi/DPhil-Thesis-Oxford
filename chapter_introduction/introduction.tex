@@ -147,8 +147,9 @@ scattering with phonons, consequently heating up the lattice via Joule heating. 
 Thus, two further requirements are needed: on one hand a good thermal conductivity, but also small heat transfer with the substrate. Clearly trade-offs are here necessary.
 
 The 2020 International Roadmap for Devices and Systems - which has replaced since 2017 the International Roadmap for Semiconductors - dedicates ample attention to graphene in its report \textit{Beyond CMOS}, 
-in which technologies and semiconductor materials to complement and replace Si are considered. Most of the early excitements in using graphene as channel material in a standard FET technology 
-were almost entirely sparked by exclusively considering the outstanding mobility values reported throughout the years. 
+in which technologies and semiconductor materials to complement and replace Si are considered. The race to scale the channel in a \gls{FET} still motivates a significant effort on introducing high-mobility channel materials,
+since the carrier mobility is an appropriate parameter to address carrier transport even in nanometer \glspl{FET} \cite{schwierz2010nanometer}.
+In fact, most of the early excitements in using graphene as channel material in a standard FET technology were sparked by considering the outstanding mobility values reported since its discovery. 
 
 The first data were the one obtained in 2004, where graphene on SiO$_2$ displayed an electron mobility $\mu_e\approx10,000$ cm$^{2}$V$^{-1}$s$^{-1}$ \cite{novoselov2004electric}. 
 Later in 2008 \cite{bolotin2008ultrahigh} and 2013 \cite{wang2013one}, higher mobility values were reported: $\approx120,000$ cm$^{2}$V$^{-1}$s$^{-1}$ at 240 K and $\approx1,000,000$ cm$^{2}$V$^{-1}$s$^{-1}$ at 4 K. The reason for these higher values was attributed to the use of suspended graphene rather
@@ -167,10 +168,12 @@ where $e$ is the electron charge, $\phi_B$ is the Schottky barrier height, and $
 If we assume that the work function of graphene and the metal are the same, then $\phi_B = E_g/2$, where $E_g$ is the band gap energy originating from the difference of the work function of grahene and the metal; thus, the on--off ratio can be estimated from the useful proportionality \cite{kim2011role}:
 
 \begin{equation}
-    \frac{I_\textrm{on}}{I_\textrm{off}}\propto\exp{\frac{E_g}{2k_BT}}.
+    \frac{I_\textrm{on}}{I_\textrm{off}}\propto\exp{\frac{E_g}{2k_BT}},
 \end{equation}
 
-While for high frequency applications the on--off ratio is of minor importance, several references in literature report suitable values for the bandgap between 300 to 500 meV \cite{schwierz2010graphene, reddy2011graphene}. 
+where the thermal energy $k_BT$ and the bandgap are both expressed in meV. 
+While for high frequency applications the on--off ratio is of minor importance, several references in literature report suitable values for CMOS bandgap should fall in a range between 300 and 500 meV \cite{schwierz2010graphene, reddy2011graphene}.
+
 
 \begin{table}
     \centering
@@ -198,9 +201,9 @@ Alternatives geometries have since then been explored, in order to increase the 
 Top-gate devices have been the first to chronologically appear in the literature.
 Back then in 2007, Lemme and co workeres used a stack of \ce{SiO2} (20 nm), Ti (10 nm), and Au (100 nm) as top gate for modulating the current inside a large-area graphene channel transistor obtained by the exfoliation method \cite{lemme2007graphene}.
 Whilst the gate characteristics exhibit a similar trend of the characteristics (the top gate reduces the back-gate current modulation, lowering the drain current by one order of magnitude) and the hysteresis, weak current saturation at high drain-source bias have been reported \cite{moon2009epitaxial}.
-This effect seem due to a partial charge pinning at the contacts at high back-gate voltages \cite{di2011charge} and carrier drift velocity eventually saturating due to optical-phonon scattering \cite{meric2008current}. Top-gated graphene MOSFET with CVD and epitaxial graphene have been also made \cite{kedzierski2008epitaxial, lin2010100}; \ce{SiO2}, \ce{Al2O3}, and \ce{HfO2} have been used as top-gate dielectric.
+This effect seem due to a partial charge pinning at the contacts at high back-gate voltages \cite{di2011charge} and carrier drift velocity eventually saturating due to optical-phonon scattering \cite{meric2008current}. Top-gated graphene \glspl{MOSFET} with CVD and epitaxial graphene have been also made \cite{kedzierski2008epitaxial, lin2010100}; \ce{SiO2}, \ce{Al2O3}, and \ce{HfO2} have been  used as top-gate dielectric.
 
-However, despite the improvements obtained with a top gate, most graphene MOSFETs with large-area (gapless) graphene channels show on–off switching ratios of less than 10 at room temperature \cite{schwierz2010graphene}, much too little for complex logic circuits.
+However, despite the improvements obtained with a top gate, most graphene \gls{MOSFET} with large-area graphene channels show on–off switching ratios of less than 10 at room temperature \cite{schwierz2010graphene}, much too little for complex logic circuits.
 
 In 2012, Mehr \textit{et al.}.\ proposed a vertical arrangement of emitter, base, and collector similar to the original vacuum triode, where graphene plays the base role and electrons travel vertically rather than transversely.
 When the device is in the ON state, the electrons tunnel with a Fowler-Nordheim tunnelling mechanism:
@@ -218,10 +221,23 @@ Simpler ways to obtain graphene oxide in solution have been reported \cite{van20
 Yet in spite of the very different dc behavior compared to the most used semiconductors in digital electroncis, graphene FETs have reported good performance in terms of high-frequency applications. This comparison is made by measuring each system’s frequency response, its output signal strength when it is given a particular input signal: features such as ballistic transport, linear current-voltage characteristics, high transconductance, and very high ($> 10^8$ \si{\ampere\per\square\centi\metre}) sustainable currents are all ideal features for analog/RF applications \cite{meric2008rf, meric2008current}.
 
 The primary means of estimating frequency response is through the evaluation of two transistor charactersitic frequencies, namely cutoff $f_\textrm{T}$ and maximum of oscillations $f_\textrm{max}$. The former indicates how quickly a signal can travel from the gate to the drain of the device, and it is usually determined when the small-signal current gain drops to unity, while the latter is measured when the power gain decreseas to unity \cite{schwierz2010graphene}. 
-The frequency response depends inversely on gate length and proportionally to the transconductance, which is loosely proportional to mobility. Thus, reducing the gate length and using higher mobility materials are valid approaches to increase the device operational speed \cite{schwierz2013graphene}.
+The frequency response depends inversely on gate length and proportionally to the transconductance, which is loosely proportional to mobility. Thus, reducing the gate length and using higher mobility materials are valid approaches to increase the device operational speed \cite{schwierz2013graphene}.In this context, many research groups have successfully demonstrated RF capabilities with gapless graphene channels \glspl{MOSFET}.
 
-The first graphene MOSFET with a cutoff frequency $f_T$ in the gigahertz range has been reported in late 2008 \cite{meric2008rf}. In 2009, graphene MOSFETs with 350-nm gates and a cutoff frequency of 50 GHz have been presented \cite{lin2009development}; in early 2010, a graphene MOSFET with a 240-nm gate showing an $f_T$ of 100 GHz has been reported \cite{lin2010100}, soon followed by a 144-nm gate graphene MOSFET with $f_T$ ¼ 300 GHz later that year \cite{liao2010high}. Finally, in 2012, a graphene MOSFET with a 40-nm-long gate showing 350-GHz $f_T$ \cite{wu2012state} and a 67-nm gate graphene MOSFET with an $f_T$ of 427 GHz have been reported \cite{cheng2012high}. Graphene RF MOSFETs have successfully been realized using exfoliated (e.g., \cite{liao2010high} and \cite{lin2009development}), epitaxial (e.g., \cite{lin2010100} and \cite{moon2009epitaxial}), and CVD (\cite{wu2011high}) graphene.
-\mccorrect{Fig.} \ref{fig:schwierz2013graphene} shows the cutoff frequency of the best graphene MOSFETs reported, together with the $f_T$ performance of competing RF FET types. The record $f_T$ data of the competing FETs are 688 GHz for a 40-nm GaAs mHEMT\cite{kim2011f} and 644 GHz for a 30-nm InP HEMT \cite{kim201030}, 485 GHz for a 29-nm Si MOSFET \cite{lee2007record}, and 153 GHz for a 100-nm carbon nanotube MOSFET \cite{steiner2012high}. Worthwhile to mention also the results obtained by Han \textit{et al.}. \cite{han2014graphene} in 2014, when they implemented a high-performance three-stage graphene integrated circuit using Si fabrication steps and CVD graphene: the reported performance for $f_T$ and $f_\textrm{max}$ were ranging from 8 to 10 GHz and from 8.5 to 13.5 GHz.
+The first device with cutoff frequency $f_\textrm{T}$ in the GHz range was reported in late 2008, and was farbicated by exfoliated graphene deposited on top of high-resistivity \ce{Si} substrate, with 30-nm-thick top-gate \ce{HfO2} dielectric and 500 nm of gate length \cite{meric2008rf}. 
+Despite a measured $f_\textrm{T}\approx 14.7$ GHz, it was argued that large contact resistances and gate length were the main responsible of poor perfomance $f_\textrm{max} < 1$ GHz. 
+
+The following year, Pd/Au contacts and 12-nm-thick \ce{Al2O3} were employed in a 350-nm-gate \cite{lin2009development}. While the cutoff frequency improved up to $f_\textrm{T}\approx 50$ GHz, little gains in terms of $f_\textrm{max}$ were obtained of only 2 GHz. In general, limited performance in $f_\textrm{max}$
+represents a major issue as for most RF applications $f_\textrm{T}$ is less important than $f_\textrm{max}$.   
+
+It was only after two years that an increase of one order of magnitude both in the cutoff and the maximum frequency of oscillation was demosntrated \cite{lin2010100}. The device was realised with epitaxially-grown on silicon carbide (\ce{SiC}) graphene \gls{MOSFET} having 240 nm of gate length, with Ti/Pd/Au for contacts and 10-nm-thick \ce{HfO2} of insulating layer on top gates. Highest frequency as well as $f_\textrm{T}\approx 100$ GHz and $f_\textrm{max}\approx 14$ GHz were measured,
+exceeding any device then present. 
+These perfomance were soon followed later that year by a 144-nm-length gate device with $f_T \approx 300$ GHz using mechanically exfoliated graphene and \ce{Co2Si}–\ce{Al2O3} nanowire as self-aligned top-gates \cite{liao2010high}.  
+Finally, in 2012, a graphene MOSFET with a 40-nm-long gate showing 350-GHz $f_T$ \cite{wu2012state} and a 67-nm gate graphene MOSFET with an $f_T$ of 427 GHz have been reported \cite{cheng2012high}. 
+Graphene RF MOSFETs have successfully been realized using exfoliated (e.g., \cite{liao2010high} and \cite{lin2009development}), epitaxial (e.g., \cite{lin2010100} and \cite{moon2009epitaxial}), and CVD (\cite{wu2011high}) graphene.
+\mccorrect{Fig.} shows the cutoff frequency of the best graphene MOSFETs reported, together with the $f_T$ performance of competing RF FET types. 
+The record $f_T$ data of the competing FETs are 688 GHz for a 40-nm GaAs mHEMT\cite{kim2011f} and 644 GHz for a 30-nm InP HEMT \cite{kim201030}, 485 GHz for a 29-nm Si MOSFET \cite{lee2007record}, and 153 GHz for a 100-nm carbon nanotube MOSFET \cite{steiner2012high}. 
+Worthwhile to mention also the results obtained by Han \textit{et al.}. \cite{han2014graphene} in 2014, when they implemented a high-performance three-stage graphene integrated circuit using Si fabrication steps and CVD graphene: 
+the reported performance for $f_T$ and $f_\textrm{max}$ were ranging from 8 to 10 GHz and from 8.5 to 13.5 GHz.
 
 
 

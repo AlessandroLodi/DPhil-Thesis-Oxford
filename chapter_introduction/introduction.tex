@@ -158,12 +158,19 @@ that this flat and inert materials can be act as a excellent passivation film fo
 One of the figure of merit often taken into account for addressing logic applications for a materials is the ratio between the on-state current and the off-state current. The so called on-off ratio $I_\text{on}/I_\text{off}$ has to be in the range 10${^4}$--10${^7}$. While the $I_\text{on}$ is not directly related to the band gap $E_g$, it is possible to link the value of $I_\text{off}$ with the $E_g$.
 
 In an metal--semiconductor junction (M/S), the current is built by the majority of the carriers, these being electrons or holes for $n$-type or $p$-type semiconductors. Most of the graphene--semiconductor junctions formed during experiments have typical dopant concentration $N\leq10^{17}$ cm$^{-3}$. The $I-V$ characteristics of M/S junctions with such dopant concentrations are well reproduced by the thermoionic emission theory. If we then exclude other possible conduction mechanisms (standard and thermoionic field emission, generation/recombination, diffusion of electron, injection of holes and leakage current), the $I_\text{off}$ becomes proportional to the barrier the electrons have to overcome from the semiconductor to the metal, namely
+
 \begin{equation}
-    I_\text{off}\propto\exp{(e\beta\phi_B)}.
+    I_\textrm{off}\propto\exp{(e\beta\phi_B)}.
 \end{equation}
 
-where $e$ is the electron charge, $\phi_B$ is the Schottky barrier height, and $\beta=k_BT$. In we assume that the work function of graphene and the metal are the same, then $\phi_B = E_g/2$, where $E_g$ is the band gap energy originating from the difference of the work function of grahene and the metal.
+where $e$ is the electron charge, $\phi_B$ is the Schottky barrier height, and $\beta=k_BT$. 
+If we assume that the work function of graphene and the metal are the same, then $\phi_B = E_g/2$, where $E_g$ is the band gap energy originating from the difference of the work function of grahene and the metal; thus, the on--off ratio can be estimated from the useful proportionality \cite{kim2011role}:
 
+\begin{equation}
+    \frac{I_\textrm{on}}{I_\textrm{off}}\propto\exp{\frac{E_g}{2k_BT}}.
+\end{equation}
+
+While for high frequency applications the on--off ratio is of minor importance, several references in literature report suitable values for the bandgap between 300 to 500 meV \cite{schwierz2010graphene, reddy2011graphene}. 
 
 \begin{table}
     \centering
@@ -209,8 +216,9 @@ The main difficulties arise when attempting to quantify the structure and the qu
 Simpler ways to obtain graphene oxide in solution have been reported \cite{van2016effect}, but once deposited, graphene oxide needs to be reduced for obtaining pure graphene -- low mobility values (up to, at best, 1000 \si{\square\centi\metre\per\volt\per\second}) caused by defects during the fabrication steps have discouraged further investigations along this direction.
 
 Yet in spite of the very different dc behavior compared to the most used semiconductors in digital electroncis, graphene FETs have reported good performance in terms of high-frequency applications. This comparison is made by measuring each system’s frequency response, its output signal strength when it is given a particular input signal: features such as ballistic transport, linear current-voltage characteristics, high transconductance, and very high ($> 10^8$ \si{\ampere\per\square\centi\metre}) sustainable currents are all ideal features for analog/RF applications \cite{meric2008rf, meric2008current}.
-The primary means of estimating frequency response is through the cutoff frequency: it is a fundamental property indicating how quickly a signal can travel from the gate to the drain of the device. The frequency response depends inversely on the length of the gate, and proportionally to the transconductance, which is loosely proportional to mobility. Thus, to make faster devices, we can either reduce the gate length or use higher mobility materials \cite{schwierz2010graphene, schwierz2010graphene}.
 
+The primary means of estimating frequency response is through the evaluation of two transistor charactersitic frequencies, namely cutoff $f_\textrm{T}$ and maximum of oscillations $f_\textrm{max}$. The former indicates how quickly a signal can travel from the gate to the drain of the device, and it is usually determined when the small-signal current gain drops to unity, while the latter is measured when the power gain decreseas to unity \cite{schwierz2010graphene}. 
+The frequency response depends inversely on gate length and proportionally to the transconductance, which is loosely proportional to mobility. Thus, reducing the gate length and using higher mobility materials are valid approaches to increase the device operational speed \cite{schwierz2013graphene}.
 
 The first graphene MOSFET with a cutoff frequency $f_T$ in the gigahertz range has been reported in late 2008 \cite{meric2008rf}. In 2009, graphene MOSFETs with 350-nm gates and a cutoff frequency of 50 GHz have been presented \cite{lin2009development}; in early 2010, a graphene MOSFET with a 240-nm gate showing an $f_T$ of 100 GHz has been reported \cite{lin2010100}, soon followed by a 144-nm gate graphene MOSFET with $f_T$ ¼ 300 GHz later that year \cite{liao2010high}. Finally, in 2012, a graphene MOSFET with a 40-nm-long gate showing 350-GHz $f_T$ \cite{wu2012state} and a 67-nm gate graphene MOSFET with an $f_T$ of 427 GHz have been reported \cite{cheng2012high}. Graphene RF MOSFETs have successfully been realized using exfoliated (e.g., \cite{liao2010high} and \cite{lin2009development}), epitaxial (e.g., \cite{lin2010100} and \cite{moon2009epitaxial}), and CVD (\cite{wu2011high}) graphene.
 \mccorrect{Fig.} \ref{fig:schwierz2013graphene} shows the cutoff frequency of the best graphene MOSFETs reported, together with the $f_T$ performance of competing RF FET types. The record $f_T$ data of the competing FETs are 688 GHz for a 40-nm GaAs mHEMT\cite{kim2011f} and 644 GHz for a 30-nm InP HEMT \cite{kim201030}, 485 GHz for a 29-nm Si MOSFET \cite{lee2007record}, and 153 GHz for a 100-nm carbon nanotube MOSFET \cite{steiner2012high}. Worthwhile to mention also the results obtained by Han \textit{et al.}. \cite{han2014graphene} in 2014, when they implemented a high-performance three-stage graphene integrated circuit using Si fabrication steps and CVD graphene: the reported performance for $f_T$ and $f_\textrm{max}$ were ranging from 8 to 10 GHz and from 8.5 to 13.5 GHz.
@@ -414,7 +422,7 @@ The formation of band gap is observed when the spin is considered. In particular
 
 \co{gnr were first studied by physicist, lather by chemist}
 The scientific interest for graphene nanoribbons started in the physics community. Although this may appear irrelevant at the first glance, we will see that this actually had an impact over the last twenty years of progress in the field.
-The physics community was looking for a way to open a band gap in graphene. As mentioned in Sec.~\ref{intro:sec:motivation}, graphene is a semi-metal, therefore unsuitable for all those semiconducting applications where the conduction paths for the charge carriers are well defined.
+The physics community was looking for a way to open a band gap in graphene. As mentioned in Sec.~\ref{intro:sec:motivation}, large-area graphene is a semimetal, therefore unsuitable for \gls{CMOS} logic and problematic for RF.
 
 The first class of methods for synthesising graphene nanoribbons are methods that involve cutting or producing rectangular shapes from the graphene lattice through macroscopic methods.
 For this reason, they are also known as \textit{top-down} approaches. Although they have seen an improvements in recent years, common drawbacks for this class of methods are a random distribution in the widths, a non-atomical control of the edge structures, and non-negligible

@@ -221,7 +221,7 @@ Simpler ways to obtain graphene oxide in solution have been reported \cite{van20
 Yet in spite of the very different dc behavior compared to the most used semiconductors in digital electroncis, graphene FETs have reported good performance in terms of high-frequency applications. This comparison is made by measuring each system’s frequency response, its output signal strength when it is given a particular input signal: features such as ballistic transport, linear current-voltage characteristics, high transconductance, and very high ($> 10^8$ \si{\ampere\per\square\centi\metre}) sustainable currents are all ideal features for analog/RF applications \cite{meric2008rf, meric2008current}.
 
 The primary means of estimating frequency response is through the evaluation of two transistor charactersitic frequencies, namely cutoff $f_\textrm{T}$ and maximum of oscillations $f_\textrm{max}$. The former indicates how quickly a signal can travel from the gate to the drain of the device, and it is usually determined when the small-signal current gain drops to unity, while the latter is measured when the power gain decreseas to unity \cite{schwierz2010graphene}. 
-The frequency response depends inversely on gate length and proportionally to the transconductance, which is loosely proportional to mobility. Thus, reducing the gate length and using higher mobility materials are valid approaches to increase the device operational speed \cite{schwierz2013graphene}.In this context, many research groups have successfully demonstrated RF capabilities with gapless graphene channels \glspl{MOSFET}.
+The frequency response depends inversely on gate length and proportionally to the transconductance, which is loosely proportional to mobility. Thus, reducing the gate length and using higher mobility materials are valid approaches to increase the device operational speed \cite{schwierz2013graphene}. In this context, many research groups have successfully demonstrated RF capabilities with gapless graphene channels \glspl{MOSFET}.
 
 The first device with cutoff frequency $f_\textrm{T}$ in the GHz range was reported in late 2008, and was farbicated by exfoliated graphene deposited on top of high-resistivity \ce{Si} substrate, with 30-nm-thick top-gate \ce{HfO2} dielectric and 500 nm of gate length \cite{meric2008rf}. 
 Despite a measured $f_\textrm{T}\approx 14.7$ GHz, it was argued that large contact resistances and gate length were the main responsible of poor perfomance $f_\textrm{max} < 1$ GHz. 
@@ -233,15 +233,19 @@ It was only after two years that an increase of one order of magnitude both in t
 exceeding any device then present. The authors also argued that since $f_\textrm{max}$ is strongly correlated to device layout and parasitic resistances originating from the metallic contacts, viable ways to improve this parameter would be a partial passivation of the metal contacts and a multi-finger gate layout 
 
 These perfomance were soon followed later that year by a 144-nm-length gate device with $f_T \approx 300$ GHz using mechanically exfoliated graphene and \ce{Co2Si}–\ce{Al2O3} nanowire as self-aligned multi top-gates \cite{liao2010high}. This result was also corrobated by comparing it with the projected
-value using the relation that links dc transconductance and gate capacitance with the cutoff frequency when total input parasitic capacitance is negligible, namely $f_\textrm{T} = g_\textrm{m}/(2\pi C_\textrm{g})$ \cite{sze2021physics}. Unfortantely, the authors did not report the power $G^{1/2}_\textrm{max}$ but only the current $\abs{h_{21}}$ gain, thus is not clear 
-whether this technology had moved forward in terms of $f_\textrm{max}$.
+value using the relation that links dc transconductance and gate capacitance with the cutoff frequency when total input parasitic capacitance is negligible, namely $f_\textrm{T} = g_\textrm{m}/(2\pi C_\textrm{g})$ \cite{sze2021physics}. The authors did not report the power $G^{1/2}_\textrm{max}$ but only the current $\abs{h_{21}}$ gain, thus hampering an evaluation of $f_textrm{max}$,
+but in 2012 a similar proposal was advanced by Cheng \textit{et al.}, where Au/Ti/\ce{Al2O3} gate stacks were employed in self-aligned transistors \cite{cheng2012high}. Despite the improvements reported ($f_\textrm{T}\approx 427$ GHz for a channel length of 67 nm) respect to CVD graphene transistors with comparable channel length, $f_\textrm{max}$ decresead down to 8 GHz when the length was shrunk down to 46 nm, showing the 
+key role played by gate and parasitic resistances at high frequency.
 
-Finally, in 2012, a graphene MOSFET with a 40-nm-long gate showing 350-GHz $f_T$ \cite{wu2012state} and a 67-nm gate graphene MOSFET with an $f_T$ of 427 GHz have been reported \cite{cheng2012high}. 
-Graphene RF MOSFETs have successfully been realized using exfoliated (e.g., \cite{liao2010high} and \cite{lin2009development}), epitaxial (e.g., \cite{lin2010100} and \cite{moon2009epitaxial}), and CVD (\cite{wu2011high}) graphene.
-\mccorrect{Fig.} shows the cutoff frequency of the best graphene MOSFETs reported, together with the $f_T$ performance of competing RF FET types. 
-The record $f_T$ data of the competing FETs are 688 GHz for a 40-nm GaAs mHEMT\cite{kim2011f} and 644 GHz for a 30-nm InP HEMT \cite{kim201030}, 485 GHz for a 29-nm Si MOSFET \cite{lee2007record}, and 153 GHz for a 100-nm carbon nanotube MOSFET \cite{steiner2012high}. 
-Worthwhile to mention also the results obtained by Han \textit{et al.}. \cite{han2014graphene} in 2014, when they implemented a high-performance three-stage graphene integrated circuit using Si fabrication steps and CVD graphene: 
-the reported performance for $f_T$ and $f_\textrm{max}$ were ranging from 8 to 10 GHz and from 8.5 to 13.5 GHz.
+To further improve the power gain, works on the saturation behavior of short channel graphene transistor were also conducted by IBM in 2012, by using CVD graphene grown on a Cu foil and then transferred on diamond-like and SiC substrates \cite{wu2012state}. These are appealing because high-quality
+wafers are available, thus making a scale up of graphene arrays relatively straightforward. Since the work function of graphene is $\phi^\textrm{g} = 4.5$ eV and $\phi^\textrm{4H-\ce{SiC}} = 3.7$ eV, this means that $\Delta\phi^\textrm{g--4H-SiC} = 0.8$ eV, thus $n$-doping graphene \cite{sonde2009electrical}. 
+Very cleverly, the authors then used plasma-enhanced CVD silicon nitride as an intrisic p-type gate dielectric, counterbalancing the n-doped graphene channels. Encouraing performance at high speed were not only measured in good cutoff frequencies ($f_\textrm{T}\approx 350$ GHz), but also in a factor of 2 improvement
+of $f_\textrm{max}$ ($\approx 40$ GHz).
+To the best of my knowledge, the current graphene transistor power gain record of about 70 GHz was obtained in 2013 by using (000-1) carbon-terminated surface of SiC instead of the (0001) Si one, indicating the contact resistance $R_\textrm{c}$ between Pd/Au contacts and graphene as key responsible for the high $f_\textrm{max}$. 
+
+While these results have aligned graphene MOSFET with the main solid-state competitors -- such as GaAS pHEMT, InP HEMT and Si MOSFET -- in terms of $f_\textrm{T}$, the perfomance is terms of $f_\textrm{max}$ are off by about one \cite{tan1990InGaAs, post2006RF} or two orders of magnitude \cite{lai2007sub}.
+
+
 
 
 
@@ -362,7 +366,7 @@ builds an almost ideal $p$-channel contact to the valence band of \glspl{CNT}. D
 \subsubsection{$n$-Type CNTFETs}
 In a $n$-type \glspl{CNTFET} the injection of electrons is favoured over the holes. Given that $\phi^\textrm{CNT}\approx 4.7$ eV and with an average $E_g\approx 0.6$ eV, it is possible to configure n-type channel with nanotube
 by either doping the spacer region or by using a metal with lower work function. One of the main drawbakcs of doping is the challenge to keep it under control: instability in air, low consistency, variability to temperature variations,
-are amongst the most frequent sceanrios. The other issue in working with low work fuction metals as contacts is the high tendency to oxidize. A simple and effective workaround to this is to use high work function metals to cap the contact metals,
+are amongst the most frequent sceanrios. The other issue in working with low work function metals as contacts is the high tendency to oxidize. A simple and effective workaround to this is to use high work function metals to cap the contact metals,
 passivating the contact surface tendency to destabilise in air. One example of high performance n-type device was obtained by using Y contacts, achieving an \gls{SS} of 73 mV/dec, mobility of 5100 \si{\cm\square\per\V\per\second}, and \gls{DIBL} of 105 \si{\mV\per\V} \cite{ding2009contacted}.
 
 \subsubsection{Scaling}
@@ -379,7 +383,7 @@ One of the first few systematic study on channel length scaling effects was cond
 of measurements on nanotubes with relatively small diameters (1.1 nm $<$ d$_\textrm{CNT}$ $<$ 1.3 nm) by using local bottom gates covered
 with 2 nm \gls{EOT} of \ce{HfO2} \cite{franklin2010length}. A consistent trend was observed when the channel length was scaled down more than two orders of magnitude (from 3 \si{\micro\metre} to 15 nm),
 both in the values of $V_\textrm{th}$ and $SS$ ($-0.5\pm0.2$ V and 90 mV/dec, respectively).
-The authors reported also encouraing figures on the transconductance $g_m$.
+The authors reported also encouraging figures on the transconductance $g_m$.
 
 In a standard \gls{MOSFET}, the transconductance is the change in the drain
 current divided by the amount varied in the gate/source voltage $V_\textrm{gs}$ when the drain/source voltage ($V_\textrm{ds}$) is kept constant.

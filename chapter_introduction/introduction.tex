@@ -432,7 +432,8 @@ or in some combination of metal-/carbon-dependent interfacial charging propertie
 The bonding leads to changes in the local density of states that produce specific alteration of the surface properties. They considered metal surfaces (such as Ni and Ti) inducing a chemical reaction with the carbon structure (chemisorption), elements such as Pd, Pt, Cr and Sc which interact weakly with the nanotube band structure leaving it unchanged, and surfaces which interact strongly through metallization and/or hybridisation of the $\pi$ orbitals of the nanotube (Cu, Au, and Rh). 
 
 Low-ohmic contact scaling trends were found when using weakly and intermediate interacting metallic surfaces, while they envisioned optimal contact length scaling with metals such as Cu and Rh. 
-While Rh contacts would be unaffordable at large scale due to manufacturing costs, it is also well know that Cu present ill-defined native oxide issues when used under ambient conditions, hampering good electrical connections with external probes. 
+While Rh contacts would be unaffordable at large scale due to manufacturing costs, it is well know that Cu present ill-defined native oxide issues when used under ambient conditions, causing scattering at their surfaces and grain boundaries, thus hampering good electrical contacts with external probes.
+Recently, it has been advanced graphene as interlayer between the metal contact and the nanotube: the idea would be to have a work function closer to the nanotube one in order to avoid the level pinning effects due to gap states and interface contaminations.
 
 
 
@@ -443,7 +444,8 @@ Amongst the wide variety of carbon alternatives explored in the last two decades
 As in the case of \glspl{CNT}, confining large-area graphene carries into narrow stripes leads to a quasi-1D system exhibiting a tunable bandgap determined not only by the ribbon width $w_\textrm{GNR}$, but also by the edge structure \cite{son2006energy, Li2008}. 
 Logic applications, as mentioned in Sec.~\ref{intro:sec:graphene}, require two well-defined voltage states, which in turn they depend on the current flowing through the semiconducting channel; by considering $E_g$ within the 300 -- 500 meV range, the figure (place the bandgap \mccorrect{figure} here) gives an indication circa suitable ribbon widths, which would lie within the sub-5 nm regime \cite{geng2017graphene}.
 
-First prototype of a field-effect transistor realised with a very narrow graphene nanoribbon as the channel material was realised in 2008 in the Dai's group, \cite{wang2008room}, using global Si/SiO$_2$ backgate and obtaining comparable performance with those of \glspl{CNTFET}. In particular, with widths $w_\textrm{GNR}\approx$ \SI[multi-part-units = single]{2.0(5)}{\nano\metre} and lengths of $l_\textrm{GNR}\approx 236$ nm, they were able to obtained impressive transistor performance such as $I_\textrm{on}\approx$ 2000 \si{\micro\ampere\per\micro\metre}, $I_\textrm{on}/I_\textrm{off}\approx 10^6$, $SS = 210$ mV/dec, $g_\textrm{m} = 900$ \si{\micro\siemens\per\micro\metre}. 
+First prototype of a field-effect transistor realised with very narrow graphene nanoribbon as channel material was realised in 2008 by the Dai's group, \cite{wang2008room}, using sonochemistry methods and global Si/SiO$_2$ backgate. 
+In particular, with widths $w_\textrm{GNR}\approx$ \SI[multi-part-units = single]{2.0(5)}{\nano\metre} and lengths of $l_\textrm{GNR}\approx 236$ nm, they were able to obtained impressive transistor performance such as $I_\textrm{on}\approx$ 2000 \si{\micro\ampere\per\micro\metre}, $I_\textrm{on}/I_\textrm{off}\approx 10^6$, $SS = 210$ mV/dec, $g_\textrm{m} = 900$ \si{\micro\siemens\per\micro\metre}. 
 This pioneer work sparked an exciting \glspl{GNRFET} research (see table \mccorrect{place table GNRFET}) 
 
 
@@ -511,7 +513,6 @@ than the decay length of the spin polarized \cite{lee2005magnetic}. Both feature
 % \begin{table}[]
 %     \centering
 %     \small
-    
 %     \begin{tabular}{cccccc}
 %     \toprule
 %     \textit{Methods} & Edge & Width & $E_g$ & $I_\text{off}/I_\text{off}$  & Ref. \\
@@ -530,7 +531,7 @@ than the decay length of the spin polarized \cite{lee2005magnetic}. Both feature
                             
     
 %     \midrule
-%     \multirow{13}*{Bottom-Up} & cove & 0.69 -- 1.13 & 1880 & --- & \cite{narita2014synthesis} \\
+%     \multirow{13}*{Bottom-Up}& cove & 0.69 -- 1.13 & 1880 & --- & \cite{narita2014synthesis} \\
 %                              & AGNR & 0.95   & 2100     & $10^5$ &  \cite{llinas2017short}$^\dag$ \\
 %                              & chevron & 1.73  & 3100 $\pm$ 400 & --- & \cite{linden2012electronic} \\
 %                              & --- & $\sim$ 2 & --- & $> 10^6$ & \cite{wang2008room} \\
@@ -553,3 +554,43 @@ than the decay length of the spin polarized \cite{lee2005magnetic}. Both feature
     
 %     \end{tabular}
 %     \caption{\label{tab:GNR}Major Comparison amongst some CNFETs reported in the Literature. If not specified, the values for various $I_\text{off}/I_\text{off}$ ratios are reported at RT. Two useful complementary table to this one can be found in Ref. \cite{celis2016graphene} and \cite{ma2013recent}.}
+
+\begin{table}
+    \centering
+    \begin{tabular}{c*{6}{c}}
+        \toprule
+        &\multicolumn{3}{c}{Structural Parameter} & \multicolumn{2}{c}{Device Parameter}\T\B\\
+        \cmidrule(lr){2-4} \cmidrule(lr){5-6}
+        \textit{Fabrication}  & Edge & Width  & $E_g$ & $I_\textrm{on}/I_\textrm{off}$ & Mobility \T\\
+        \textit{Approach} & Structure & (nm) & (meV) & & (cm$^{2}$V$^{-1}$s$^{-1}$) \\
+        \midrule
+        Top-Down                    & ---       & 5                 & 145              & 47; $10^5$~(5.4 K) \supercite{sun2015lateral}   & --- \Tsmall\\
+                                    & ---       & 5                 & 489.4 $\pm$ 19.0 & $> 10^4$ (290 K)\supercite{chen2017oriented}           & --- \Tsmall\\
+                                    & ---       & 15                & 120 $\pm$ 23     & --- \supercite{chen2017oriented}                & --- \Tsmall\\
+                                    & Mixed     & 10                & 140              & $10^5$~(4 K) \supercite{hwang2015graphene}      & --- \Tsmall\\
+                                    & ---       & 12                & 100              & 10; $10^6$~(4 K) \supercite{hwang2012transport} & --- \Tsmall\\
+                                    & ---       & sub-10            & 200              & --- \supercite{hwang2019room}$^\ddag$           & --- \Tsmall\\
+                                    & ---       & 10 -- 20          & 10 -- 15         & 4.5; 10~(20 K) \supercite{jiao2010facile}       & --- \Tsmall\\
+                                    & ---       & 100 -- 400        & 18 -- 1          & 20 -- 3.5 \supercite{bang2018effect}            & --- \T\\
+        Bottom-up                   & Cove      & 0.69 -- 1.13      & 1880             & ---                            &      \T\\
+                                    & AGNR      & 0.95              & 2100             & $10^5$                         &      \Tsmall\\
+                                    & Chevron   & 1.73              & 3100 $\pm$ 400   & ---                            &      \Tsmall\\
+                                    & ---       & $\approx$ 2       & ---              & $> 10^6$                       &      \Tsmall\\
+                                    & AGNR      & 0.63              & 1690 $\pm$ 100   & ---                            &      \Tsmall\\
+                                    & AGNR      & 0.74              & 2370             & ---                            &      \Tsmall\\
+                                    & AGNR      & 0.74              & 2500 $\pm$ 100   & ---                            &      \Tsmall\\
+                                    & AGNR      & 0.95              & 1690 $\pm$ 70    & ---                            &      \Tsmall\\
+                                    & AGNR      & 1.27              & 1130 $\pm$ 50    & ---                            &      \Tsmall\\
+                                    & AGNR      & 1.37              & 1600 $\pm$ 400   & ---                            &      \Tsmall\\
+                                    & AGNR      & 1.58              & 1030 $\pm$ 40    & ---                            &      \Tsmall\\
+                                    & AGNR      & 5 -- 9            & $\leq$ 400       & $10^5$ (9 nm); $10^6$ (5 nm)   &      \Tsmall\\
+                                    & ZGNR      & 6                 & 1400             & ---                            &      \Tsmall\\
+        Epitaxial                   & ---       & 900               & ---              & ---                            &           \T\\
+                                    & AGNR      & 2 -- 40           & $> 500$          & ---                            &           \Tsmall\\
+                                    &  ---      & $\approx$ 40      & ---              & 10; $> 25$~(4 K)               &           \Tsmall\\
+        
+        
+        \bottomrule
+    \end{tabular}
+    \caption{Differences between the main semiconductors used in modern digital electronics and graphene.}\label{tlc}
+\end{table}

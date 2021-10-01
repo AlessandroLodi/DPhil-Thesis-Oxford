@@ -426,11 +426,26 @@ based on previous results \cite{franklin2010length}, the authors claimed the pos
 MOSFET devices, when shrunk down to the nanoscale, need to consider not only $L_\textrm{ch}$ but also the lenght of the nanotube with the source and drain, $L_\textrm{c}$. The first study to address the impact of contact scaling
 in \glspl{CNTFET} revealed the $L_\textrm{c}$ to be inversely dependent on the channel length. Initial theoretical attempts to describe this trend using dipole theories were started following the results obtained by the group of Hongjie Dai, where they
 showed it is possible to recover a perfect ohmic contact -- thus accessing the ballistic transport regime -- even with a semiconducting nanotube, which were at tha time notorious of suffering several Schottky barriers effects (tunnelling and thermoionic emission).
-Electrodic surfaces such as Sc(110), Al(110), and Pd(111) were considered.
+
+Further investigations using more sophisticated techiniques such as \gls{DFT} coupled with the \gls{NEGF} were employed to consider not only different contact geometries, but mostly to clarify the role in the chemical bonds formed between the metal to carbon structures, 
+or in some combination of metal-/carbon-dependent interfacial charging properties. In particular, Cuniberti and coworkes addressed the chemisorption problem of carbon nanotubes with different electrodic surfaces. Chemisorption consists of the creation of a chemical bond between the atom deposited on a substrate (adatome) and its surface. 
+The bonding leads to changes in the local density of states that produce specific alteration of the surface properties. They considered metal surfaces (such as Ni and Ti) inducing a chemical reaction with the carbon structure (chemisorption), elements such as Pd, Pt, Cr and Sc which interact weakly with the nanotube band structure leaving it unchanged, and surfaces which interact strongly through metallization and/or hybridisation of the $\pi$ orbitals of the nanotube (Cu, Au, and Rh). 
+
+Low-ohmic contact scaling trends were found when using weakly and intermediate interacting metallic surfaces, while they envisioned optimal contact length scaling with metals such as Cu and Rh. 
+While Rh contacts would be unaffordable at large scale due to manufacturing costs, it is also well know that Cu present ill-defined native oxide issues when used under ambient conditions, hampering good electrical connections with external probes. 
 
 
 
 \section{Graphene Nanoribbons}
+
+Amongst the wide variety of carbon alternatives explored in the last two decades, \glspl{GNR} have certainly acquired a lot of interests. Amongst the perks, chemical synthesis of \glspl{GNR} is now cost effective, they have comparable electrical performance (small effective mass, high charge mobility, and high saturation velocity) compared with the \glspl{CNT}, without the need to separate metallic from semiconducting \glspl{GNR}, and they can be easily tailored through chemical synthesis \cite{cai2010atomically, schwab2012structurally}.
+
+As in the case of \glspl{CNT}, confining large-area graphene carries into narrow stripes leads to a quasi-1D system exhibiting a tunable bandgap determined not only by the ribbon width $w_\textrm{GNR}$, but also by the edge structure \cite{son2006energy, Li2008}. 
+Logic applications, as mentioned in Sec.~\ref{intro:sec:graphene}, require two well-defined voltage states, which in turn they depend on the current flowing through the semiconducting channel; by considering $E_g$ within the 300 -- 500 meV range, the figure (place the bandgap \mccorrect{figure} here) gives an indication circa suitable ribbon widths, which would lie within the sub-5 nm regime \cite{geng2017graphene}.
+
+First prototype of a field-effect transistor realised with a very narrow graphene nanoribbon as the channel material was realised in 2008 in the Dai's group, \cite{wang2008room}, using global Si/SiO$_2$ backgate and obtaining comparable performance with those of \glspl{CNTFET}. In particular, with widths $w_\textrm{GNR}\approx$ \SI[multi-part-units = single]{2.0(5)}{\nano\metre} and lengths of $l_\textrm{GNR}\approx 236$ nm, they were able to obtained impressive transistor performance such as $I_\textrm{on}\approx$ 2000 \si{\micro\ampere\per\micro\metre}, $I_\textrm{on}/I_\textrm{off}\approx 10^6$, $SS = 210$ mV/dec, $g_\textrm{m} = 900$ \si{\micro\siemens\per\micro\metre}. 
+This pioneer work sparked an exciting \glspl{GNRFET} research (see table \mccorrect{place table GNRFET}) 
+
 
 \subsubsection{band structure}
 Historically, a first classification of graphene nanoribbons was derived by grouping the edge structures into Armchair-GNRs (AGNRs) and Zigzag-GNRs (ZGNRs).  

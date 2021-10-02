@@ -128,6 +128,15 @@ In the case of a two-dimensional electron gas, it is constant. On the contrary f
     \rho(E)=\frac{2A_\textrm{cell}}{\pi}\frac{\abs{E}}{v_F^2}
 \end{equation}
 
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.95\textwidth]{chapter_introduction/figures/graphene_DOS.png}
+    \caption{Graphene density of states plotted over a wide range of nearest neighbor hopping parameter \emph t, showing pronounced van Hove singularities for $\epsilon\sim \pm t$ \cite{castroneto2009}. The dashed rectangle indicates the almost linear low energy DOS normally spanned in back-gated transport measurements.\label{density} } 
+    \label{fig:graphene:dos}
+\end{center}
+\end{figure}
+
 If the graphene is charge-neautral, the DOS has two Van Hove singularities at $\omega_\textrm{VH} = \pm~1$\si{\electronvolt} \cite{bena2005quasiparticle}. This behaviour is in stark constrat with the DOS
 of carbon nanotubes and clean graphene nanoribbons, as they show $1/\sqrt{E}$ singularities due to the 1D nature, which imposes a quantization perpendicular to the ribbon or tube longitudinal direction.
 
@@ -151,7 +160,29 @@ in which technologies and semiconductor materials to complement and replace Si a
 since the carrier mobility is an appropriate parameter to address carrier transport even in nanometer \glspl{FET} \cite{schwierz2010nanometer}.
 In fact, most of the early excitements in using graphene as channel material in a standard FET technology were sparked by considering the outstanding mobility values reported since its discovery. 
 
-The first data were the one obtained in 2004, where graphene on SiO$_2$ displayed an electron mobility $\mu_e\approx10,000$ cm$^{2}$V$^{-1}$s$^{-1}$ \cite{novoselov2004electric}. 
+At 290 K, the intrinsic mobility $\mu_e^{\textrm{in}}$ of graphene is exceptionally high. The first data were the one obtained in 2004, where graphene on SiO$_2$ displayed an electron mobility $\mu_e^\textrm{in}\approx10,000$ cm$^{2}$V$^{-1}$s$^{-1}$ \cite{novoselov2004electric}. 
+It spans $\mu^{\text{in}}\sim 3000 - 12000$ cm$^2$ V$^{-1}$s$^{-1}$ in the concentration range $n\sim1 - 0.1 \times 10^{12}$ cm$^{-2}$. 
+Employing Einstein's relation, the scattering time of about:
+
+\begin{equation}
+\tau=\frac{\hbar\sigma(\pi/n)^{1/2}}{e^2 v_{\text F}}\sim 2\text{ns}
+\end{equation}
+a mean free path on the range:
+
+\begin{equation}
+l=v_{\text F}\tau\sim \text{55-75nm}
+\end{equation}
+
+at room temperature. 
+
+
+The mobility is limited by different factors such as scattering by charged impurities or defects and electron-phonon scattering. In very clean and suspended samples (where the underling SiO$_2$ substrate has been etched away) the mean free path $l$ increases by almost two order of magnitude, becoming comparabe to the device size, an indication that the ballistic transport regime is reached %\cite{Bolotin2008, du2008andrei}.
+
+The slope of the v\emph{-shaped} transfer curve gives the low-field \emph{field effect mobility}\footnote{to not be confused with the \emph{intrinsic} Drude mobility $\mu^{\text{in}}=\sigma/ne$ or the Hall mobility $\mu_e^H=-\sigma_e R_H$.} \cite{Meric2008} $\mu^{\text{FE}} = (1/C_{\text{gate}})(\partial \sigma/\partial V_{\text{gs}})$ 
+that is constant over a quite wide range of $n$ (yielding in this case $\mu^{\text{FE}}_{\text h}\sim1900$ cm$^2$ V$^{-1}$ s$^{-1}$ and $\mu^{\text{FE}}_{\text e}\sim1800$ cm$^2$ V$^{-1}$ s$^{-1}$ for the low $n$ region). 
+
+
+. 
 Later in 2008 \cite{bolotin2008ultrahigh} and 2013 \cite{wang2013one}, higher mobility values were reported: $\approx120,000$ cm$^{2}$V$^{-1}$s$^{-1}$ at 240 K and $\approx1,000,000$ cm$^{2}$V$^{-1}$s$^{-1}$ at 4 K. The reason for these higher values was attributed to the use of suspended graphene rather
 onto substrate, where surface effects inevitably affect the carrier dynamics. At the same time, results ($\approx120,000$ cm$^{2}$V$^{-1}$s$^{-1}$) obtained at room temperature with graphene onto a single-layer of hexagonal boron nitride (hBN) \cite{dean2010boron} and sandwiched between two hBN layer \cite{wang2013one} have suggested 
 that this flat and inert materials can be act as a excellent passivation film for graphene devices.
@@ -444,9 +475,7 @@ Amongst the wide variety of carbon alternatives explored in the last two decades
 As in the case of \glspl{CNT}, confining large-area graphene carries into narrow stripes leads to a quasi-1D system exhibiting a tunable bandgap determined not only by the ribbon width $w_\textrm{GNR}$, but also by the edge structure \cite{son2006energy, Li2008}. 
 Logic applications, as mentioned in Sec.~\ref{intro:sec:graphene}, require two well-defined voltage states, which in turn they depend on the current flowing through the semiconducting channel; by considering $E_g$ within the 300 -- 500 meV range, the figure (place the bandgap \mccorrect{figure} here) gives an indication circa suitable ribbon widths, which would lie within the sub-5 nm regime \cite{geng2017graphene}.
 
-First prototype of a field-effect transistor realised with very narrow graphene nanoribbon as channel material was realised in 2008 by the Dai's group, \cite{wang2008room}, using sonochemistry methods and global Si/SiO$_2$ backgate. 
-In particular, with widths $w_\textrm{GNR}\approx$ \SI[multi-part-units = single]{2.0(5)}{\nano\metre} and lengths of $l_\textrm{GNR}\approx 236$ nm, they were able to obtained impressive transistor performance such as $I_\textrm{on}\approx$ 2000 \si{\micro\ampere\per\micro\metre}, $I_\textrm{on}/I_\textrm{off}\approx 10^6$, $SS = 210$ mV/dec, $g_\textrm{m} = 900$ \si{\micro\siemens\per\micro\metre}. 
-This pioneer work sparked an exciting \glspl{GNRFET} research (see table \mccorrect{place table GNRFET}) 
+
 
 
 \subsubsection{band structure}
@@ -455,6 +484,20 @@ Following the success of chemical routes in producing GNRS, various kind of edge
 
 Initial bandgap estimations through DFT calculations reported values between 2.5 and 0.5 eV. 
 The inclusion of electronic correlation, however, becomes crucial for ultra-narrov ($< 5$ nm) ribbon \cite{son2006energy, yang2007quasiparticle} and more accurate estimates derived by the group of Steven Louie based on the \textit{GW} approximation reported a wider range of energy gaps from 5.5 to 1 eV. 
+
+
+\begin{figure}
+    \begin{center}
+    \includegraphics[width=0.95\textwidth]{chapter_introduction/figures/bandgap_GNRwidth.pdf}
+    \centering{}
+    \caption{Majorana T-junction.
+    Band gap versus nanoribbon width from experiments \cite{Han2007, Kim2009, Li2008, Chen2007, } and theoretical calculations \cite{Yang2007, Evaldsson2008}. 
+    The following abbreviation are used: ac for \textit{armchair}, zz for \textit{zigzag}. Figure adapted and extended from \cite{schwierz2013graphene}
+    \label{fig:intro:gnr-bandgap_schwierz}}
+    \end{center}
+\end{figure}
+
+
 These calculations have shown that, as rule of thumb, AGNRs can be both semiconducting and metallic, while ZGNRs should be regarded as quasi-metallic, with energy gaps lying within 0.1 - 0.7 eV. Indeed, for this kind of ribbon the application of an electric field in the transverse direction of induces a spin-polarisation of the edge states is believed to be responsible for semiconducting properties of ZGNRs 
 The simplest model for describing the energy levels for a graphene nanoribbon is the particle in the box model, where the energy should scale quadratically $E_g \propto 1/L^2$ with the ribbon extension. Experimentally, however, the band gap for AGNRs scales with the inverse of the width $E_g \propto 1/W$ \cite{son2006energy}: by considering all the interatomic carbon-carbon distances the same, it is possible to work out an averaged formula which reports the band gap varying as $E_g = 0.8 / W$, \cite{xu2016recent}. More accurate simulations have shown, however, that peripheral carbon—carbon bond lengths usually tend to be larger compared to the ribbon core ones \cite{wang2007tuning}. It is predicted that the band gap will be similar to Ge or InN when the width is reduced to 2 and 3 nm, and will be similar to Si or GaAs when it is further reduced to 1-2 nm \cite{barone2006electronic}.
 \subsubsection{AGNR}
@@ -505,6 +548,42 @@ The authors claim that the first peak split arises due to an AFM correlation bet
 Within this description, it is legit to link the behaviour of chiral GNRs with the one of spin-polarised ZGNRs; thus the total energy difference between ferromagnetic and antiferromagnetic couplings should be in the order of tens of meV per edge atom 
 and should decrease as the width of the ribbon increases, eventually becoming negligible when the ribbon width is significantly larger 
 than the decay length of the spin polarized \cite{lee2005magnetic}. Both features are in fact recovered from the solution of Eq.~\ref{eq:gnr_chiral_hubbard_hamiltonian}.
+
+\subsubsection{GNRFET}
+
+\begin{figure}
+    \centering
+    \begin{minipage}{0.40\linewidth}
+    \begin{subfigure}{\textwidth}
+        \includegraphics[width=0.9\textwidth]{chapter_introduction/figures/han2007_bandgap_width.pdf}
+        \label{fig:han2007_EgvsW}
+    \end{subfigure}
+    \begin{subfigure}{\textwidth}
+        \includegraphics[width=0.85\textwidth]{chapter_introduction/figures/han2007_inverse_bandgap_width.pdf}
+        \label{fig:han2007_Eg_1vsW}
+    \end{subfigure}
+    \end{minipage}
+    \hfil
+    \begin{minipage}{0.59\linewidth}
+    \begin{subfigure}{\textwidth}
+        \includegraphics[width=0.9\textwidth]{chapter_introduction/figures/han2007_conductance_width.pdf}
+        \label{fig:han2007_GvsW}
+    \end{subfigure}
+    \end{minipage}
+    \caption{\textbf{(a)} $E_g$ vs $W$ for four (P1–P4) of the parallel devices and two (D1, D2) with varying orientation. The inset shows $E_g$ vs relative angle $\theta$ for the device D1 and D2. 
+    \textbf{(b)} $E_g^{-1}$ vs $W$. \textbf{(c)} Conductance vs width of parallel GNRs measured at a gate voltage V - V$_g$ = 50 V. Squares are values measure at 300 K whereas triangle corresponds to 1.6 K. The insets show the conductivity (upper) and the inactive GNR width (lower) obtained from the slope and $x$ intercept of the linear fit at varying temperatures. 
+    Adapted from \cite{Han2007}.}
+    \vspace{0.5cm}
+\end{figure}
+
+
+
+
+First prototype of a field-effect transistor realised with very narrow graphene nanoribbon as channel material was realised in 2008 by the Dai's group, \cite{wang2008room}, using sonochemistry methods and global Si/SiO$_2$ backgate. 
+In particular, with widths $w_\textrm{GNR}\approx$ \SI[multi-part-units = single]{2.0(5)}{\nano\metre} and lengths of $l_\textrm{GNR}\approx 236$ nm, they were able to obtained impressive transistor performance such as $I_\textrm{on}\approx$ 2000 \si{\micro\ampere\per\micro\metre}, $I_\textrm{on}/I_\textrm{off}\approx 10^6$, $SS = 210$ mV/dec, $g_\textrm{m} = 900$ \si{\micro\siemens\per\micro\metre}. 
+This pioneer work sparked an exciting \glspl{GNRFET} research (see table \mccorrect{place table GNRFET}).
+
+
 
 
 \begin{table}

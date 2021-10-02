@@ -167,7 +167,7 @@ In an metal--semiconductor junction (M/S), the current is built by the majority 
 where $e$ is the electron charge, $\phi_B$ is the Schottky barrier height, and $\beta=k_BT$. 
 If we assume that the work function of graphene and the metal are the same, then $\phi_B = E_g/2$, where $E_g$ is the band gap energy originating from the difference of the work function of grahene and the metal; thus, the on--off ratio can be estimated from the useful proportionality \cite{kim2011role}:
 
-\begin{equation}
+\begin{equation}\label{eq:bandgap_current_ratio}
     \frac{I_\textrm{on}}{I_\textrm{off}}\propto\exp{\frac{E_g}{2k_BT}},
 \end{equation}
 
@@ -507,54 +507,6 @@ and should decrease as the width of the ribbon increases, eventually becoming ne
 than the decay length of the spin polarized \cite{lee2005magnetic}. Both features are in fact recovered from the solution of Eq.~\ref{eq:gnr_chiral_hubbard_hamiltonian}.
 
 
-
-
-% \subsubsection{applications}
-% \begin{table}[]
-%     \centering
-%     \small
-%     \begin{tabular}{cccccc}
-%     \toprule
-%     \textit{Methods} & Edge & Width & $E_g$ & $I_\text{off}/I_\text{off}$  & Ref. \\
-%     \textit{type} & & (nm) & (meV) &  & \\
-%     \midrule
-%     \multirow{7}*{Top-down} 
-%                             & ---   & 5      & 145 & 47; $10^5$~(5.4 K)     & \cite{sun2015lateral} \\
-%                             & ---   & 5      & 489.4 $\pm$ 19.0 & $> 10^4$ & \cite{chen2017oriented} \\
-%                             & ---   & 15     & 120 $\pm$ 23 & --- & \cite{chen2017oriented} \\
-%                             & Mixed & 10     & 140 & $10^5$~(4 K)           & \cite{hwang2015graphene} \\
-%                             & ---   & 12     & 100 & 10; $10^6$~(4 K)       & \cite{hwang2012transport} \\
-%                             & ---   & sub-10 & 200 & ---                    & \cite{hwang2019room}$^\ddag$\\
-%                             & --- & 10 -- 20 & 10 -- 15 & 4.5; 10~(20 K) & \cite{jiao2010facile} \\
-%                             & ---   & 100 -- 4000 & 18 -- 1 & 20 -- 3.5     & \cite{bang2018effect} \\
-                            
-                            
-    
-%     \midrule
-%     \multirow{13}*{Bottom-Up}& cove & 0.69 -- 1.13 & 1880 & --- & \cite{narita2014synthesis} \\
-%                              & AGNR & 0.95   & 2100     & $10^5$ &  \cite{llinas2017short}$^\dag$ \\
-%                              & chevron & 1.73  & 3100 $\pm$ 400 & --- & \cite{linden2012electronic} \\
-%                              & --- & $\sim$ 2 & --- & $> 10^6$ & \cite{wang2008room} \\
-%                              & AGNR & 6-atom & 1690 $\pm$ 100  & ---      &  \cite{merino2017width} \\
-%                              & AGNR & 7-atom & 2370     & ---      &  \cite{ohtomo2018graphene} \\
-%                              & AGNR & 7-atom & 2500 $\pm$ 100    & ---      &  \cite{chen2013tuning} \\
-%                              & AGNR & 9-atom & 1690 $\pm$ 70     & ---      &  \cite{merino2017width} \\
-%                              & AGNR & 12-atom & 1130 $\pm$ 50     & ---      &  \cite{merino2017width} \\
-%                              & AGNR & 13-atom & 1600 $\pm$ 400 & --- & \cite{chen2013tuning} \\
-%                              & AGNR & 15-atom & 1030 $\pm$ 40     & ---      &  \cite{merino2017width} \\
-%                              & AGNR & 5 -- 9 & $\leq$ 400 & $10^5$ (9 nm); $10^6$ (5 nm) & \cite{li2008chemically} \\
-%                              & ZGNR & 6 & 1400 & --- & \cite{endo2015graphene} \\
-                              
-%     \midrule
-%     \multirow{3}*{Epitaxial} & ---    & 900 & --- & --- & \cite{sun2015lateral} \\
-%                              & AGNR   & 2 -- 40   & $> 500$ &  --- &\cite{palacio2014atomic, hicks2013wide} \\
-%                              &  ---   & $\sim$ 40  & --- & 10; $> 25$~(4 K) & \cite{sprinkle2010scalable} \\
-    
-%     \bottomrule
-    
-%     \end{tabular}
-%     \caption{\label{tab:GNR}Major Comparison amongst some CNFETs reported in the Literature. If not specified, the values for various $I_\text{off}/I_\text{off}$ ratios are reported at RT. Two useful complementary table to this one can be found in Ref. \cite{celis2016graphene} and \cite{ma2013recent}.}
-
 \begin{table}
     \centering
     \begin{tabular}{c*{6}{c}}
@@ -571,26 +523,35 @@ than the decay length of the spin polarized \cite{lee2005magnetic}. Both feature
                                     & ---       & 12                & 100              & 10; $10^6$~(4 K) \supercite{hwang2012transport} & --- \Tsmall\\
                                     & ---       & sub-10            & 200              & --- \supercite{hwang2019room}$^\ddag$           & --- \Tsmall\\
                                     & ---       & 10 -- 20          & 10 -- 15         & 4.5; 10~(20 K) \supercite{jiao2010facile}       & --- \Tsmall\\
+                                    & Closed    & 2.8               & 494              & $10^5$                                          & 2443$_{\mu_h}$ \Tsmall\\
+                                    & Closed\supercite{chen2021sub} & 9.9              & 891/[w$_\textrm{gnr}-1.0$]     & $<10^2$        & 3776$_{\mu_h}$ \Tsmall\\
                                     & ---       & 100 -- 400        & 18 -- 1          & 20 -- 3.5 \supercite{bang2018effect}            & --- \T\\
-        Bottom-up                   & Cove      & 0.69 -- 1.13      & 1880             & ---                            &      \T\\
-                                    & AGNR      & 0.95              & 2100             & $10^5$                         &      \Tsmall\\
+        Bottom-up                   & Cove      & 0.69 -- 1.13      & 1880             & $>^\dag10^{10}$                &      \T\\
+                                    & AGNR      & 0.95              & 2100             & $^\dag10^5$                    &      \Tsmall\\
                                     & Chevron   & 1.73              & 3100 $\pm$ 400   & ---                            &      \Tsmall\\
-                                    & ---       & $\approx$ 2       & ---              & $> 10^6$                       &      \Tsmall\\
-                                    & AGNR      & 0.63              & 1690 $\pm$ 100   & ---                            &      \Tsmall\\
-                                    & AGNR      & 0.74              & 2370             & ---                            &      \Tsmall\\
-                                    & AGNR      & 0.74              & 2500 $\pm$ 100   & ---                            &      \Tsmall\\
+                                    & ---       & 2                 & ---              & $> 10^6$                       &      \Tsmall\\
+                                    & AGNR      & 0.63              & 1690 $\pm$ 100   & $> ^\dag10^10$                 &      \Tsmall\\
                                     & AGNR      & 0.95              & 1690 $\pm$ 70    & ---                            &      \Tsmall\\
-                                    & AGNR      & 1.27              & 1130 $\pm$ 50    & ---                            &      \Tsmall\\
+                                    & AGNR      & 1.27              & 1130 $\pm$ 50    & $^\dag10^9$                    &      \Tsmall\\
                                     & AGNR      & 1.37              & 1600 $\pm$ 400   & ---                            &      \Tsmall\\
-                                    & AGNR      & 1.58              & 1030 $\pm$ 40    & ---                            &      \Tsmall\\
-                                    & AGNR      & 5 -- 9            & $\leq$ 400       & $10^5$ (9 nm); $10^6$ (5 nm)   &      \Tsmall\\
+                                    & AGNR      & 1.58              & 1030 $\pm$ 40    & $^\dag10^8$                    &      \Tsmall\\
+                                    & AGNR      & 5 -- 9            & $\leq$ 400       & $10^5--10^6$                   &      \Tsmall\\
                                     & ZGNR      & 6                 & 1400             & ---                            &      \Tsmall\\
         Epitaxial                   & ---       & 900               & ---              & ---                            &           \T\\
                                     & AGNR      & 2 -- 40           & $> 500$          & ---                            &           \Tsmall\\
-                                    &  ---      & $\approx$ 40      & ---              & 10; $> 25$~(4 K)               &           \Tsmall\\
+                                    &  ---      & 40                & ---              & 10; $> 25$~(4 K)               &           \Tsmall\\
         
         
         \bottomrule
     \end{tabular}
-    \caption{Differences between the main semiconductors used in modern digital electronics and graphene.}\label{tlc}
+    \caption{\label{tab:tlc} Differences between the main semiconductors used in modern digital electronics and graphene.}
+
+    % \begin{tabbing}
+    %     $^\dag$ Estimates calculated by assuming thermal carrier emission $I_\textrm{on}/I_\textrm{off}\propto \exp{E_g/2*k_B*T}$.\\
+    %     $^^\ddag$ Tunnelling FET, 40 \si{\micro\ampere}/10 \si{\nano\metre} at $V_\textrm{sd} = 0.2$ V \\
+    %     $^{\mathrm{2}}$ For the n-type transistor, whereas 10 \si{\micro\siemens} were measured for the p-type. \\
+    % \end{tabbing}
+
+    
 \end{table}
+

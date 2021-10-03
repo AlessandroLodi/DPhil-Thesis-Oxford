@@ -180,9 +180,7 @@ The mobility is limited by different factors such as scattering by charged impur
 
 The slope of the v\emph{-shaped} transfer curve gives the low-field \emph{field effect mobility}\footnote{to not be confused with the \emph{intrinsic} Drude mobility $\mu^{\text{in}}=\sigma/ne$ or the Hall mobility $\mu_e^H=-\sigma_e R_H$.} \cite{Meric2008} $\mu^{\text{FE}} = (1/C_{\text{gate}})(\partial \sigma/\partial V_{\text{gs}})$ 
 that is constant over a quite wide range of $n$ (yielding in this case $\mu^{\text{FE}}_{\text h}\sim1900$ cm$^2$ V$^{-1}$ s$^{-1}$ and $\mu^{\text{FE}}_{\text e}\sim1800$ cm$^2$ V$^{-1}$ s$^{-1}$ for the low $n$ region). 
-
-
-. 
+ 
 Later in 2008 \cite{bolotin2008ultrahigh} and 2013 \cite{wang2013one}, higher mobility values were reported: $\approx120,000$ cm$^{2}$V$^{-1}$s$^{-1}$ at 240 K and $\approx1,000,000$ cm$^{2}$V$^{-1}$s$^{-1}$ at 4 K. The reason for these higher values was attributed to the use of suspended graphene rather
 onto substrate, where surface effects inevitably affect the carrier dynamics. At the same time, results ($\approx120,000$ cm$^{2}$V$^{-1}$s$^{-1}$) obtained at room temperature with graphene onto a single-layer of hexagonal boron nitride (hBN) \cite{dean2010boron} and sandwiched between two hBN layer \cite{wang2013one} have suggested 
 that this flat and inert materials can be act as a excellent passivation film for graphene devices.
@@ -587,7 +585,8 @@ This pioneer work sparked an exciting \glspl{GNRFET} research (see table \mccorr
 
 
 \begin{table}
-    \centering
+    %\centering
+    \noindent\makebox[\textwidth]{%
     \begin{tabular}{c*{6}{c}}
         \toprule
         &\multicolumn{3}{c}{Structural Parameter} & \multicolumn{2}{c}{Device Parameter}\T\B\\
@@ -624,7 +623,7 @@ This pioneer work sparked an exciting \glspl{GNRFET} research (see table \mccorr
         \bottomrule
     \end{tabular}
     \caption{\label{tab:tlc} Differences between the main semiconductors used in modern digital electronics and graphene.}
-
+    }
     % \begin{tabbing}
     %     $^\dag$ Estimates calculated by assuming thermal carrier emission $I_\textrm{on}/I_\textrm{off}\propto \exp{E_g/2*k_B*T}$.\\
     %     $^^\ddag$ Tunnelling FET, 40 \si{\micro\ampere}/10 \si{\nano\metre} at $V_\textrm{sd} = 0.2$ V \\

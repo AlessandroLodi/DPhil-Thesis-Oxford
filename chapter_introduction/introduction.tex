@@ -160,26 +160,14 @@ in which technologies and semiconductor materials to complement and replace Si a
 since the carrier mobility is an appropriate parameter to address carrier transport even in nanometer \glspl{FET} \cite{schwierz2010nanometer}.
 In fact, most of the early excitements in using graphene as channel material in a standard FET technology were sparked by considering the outstanding mobility values reported since its discovery. 
 
-At 290 K, the intrinsic mobility $\mu_e^{\textrm{in}}$ of graphene is exceptionally high. The first data were the one obtained in 2004, where graphene on SiO$_2$ displayed an electron mobility $\mu_e^\textrm{in}\approx10,000$ cm$^{2}$V$^{-1}$s$^{-1}$ \cite{novoselov2004electric}. 
-It spans $\mu^{\text{in}}\sim 3000 - 12000$ cm$^2$ V$^{-1}$s$^{-1}$ in the concentration range $n\sim1 - 0.1 \times 10^{12}$ cm$^{-2}$. 
-Employing Einstein's relation, the scattering time of about:
-
-\begin{equation}
-\tau=\frac{\hbar\sigma(\pi/n)^{1/2}}{e^2 v_{\text F}}\sim 2\text{ns}
-\end{equation}
-a mean free path on the range:
-
-\begin{equation}
-l=v_{\text F}\tau\sim \text{55-75nm}
-\end{equation}
-
-at room temperature. 
-
+At 290 K, the intrinsic mobility $\mu_e^{\textrm{in}}$ of graphene is exceptionally high. The first data were the one obtained in 2004 on large-area graphene, showing an electron mobility $\mu_e^\textrm{in}\approx10,000$ cm$^{2}$V$^{-1}$s$^{-1}$ \cite{novoselov2004electric}. 
+Further studies have demonstrated mobilities spanning between $\mu^{\text{in}}\sim 3000 - 12000$ cm$^2$ V$^{-1}$s$^{-1}$ for carrier concentrations $n\approx1 - 0.1 \times 10^{12}$ cm$^{-2}$, with 
+low-field field-effect mobility\footnote{This differs from the Drude ($\mu_{\textrm{Drude}}=\sigma/ne$) and Hall ($\mu_\textrm{Hall}=-\sigma_e R_H$) mobilities.} ($\mu = (1/C_{\textrm{g}})(\partial \sigma/\partial V_{\textrm{gs}})$) 
+that is constant over a quite wide range of $n$ (yielding in this case $\mu_h\approx1900$ cm$^2$ V$^{-1}$ s$^{-1}$ and $\mu_e\approx1800$ cm$^2$ V$^{-1}$ s$^{-1}$ for the low $n$ region) \cite{Meric2008}.
 
 The mobility is limited by different factors such as scattering by charged impurities or defects and electron-phonon scattering. In very clean and suspended samples (where the underling SiO$_2$ substrate has been etched away) the mean free path $l$ increases by almost two order of magnitude, becoming comparabe to the device size, an indication that the ballistic transport regime is reached %\cite{Bolotin2008, du2008andrei}.
 
-The slope of the v\emph{-shaped} transfer curve gives the low-field \emph{field effect mobility}\footnote{to not be confused with the \emph{intrinsic} Drude mobility $\mu^{\text{in}}=\sigma/ne$ or the Hall mobility $\mu_e^H=-\sigma_e R_H$.} \cite{Meric2008} $\mu^{\text{FE}} = (1/C_{\text{gate}})(\partial \sigma/\partial V_{\text{gs}})$ 
-that is constant over a quite wide range of $n$ (yielding in this case $\mu^{\text{FE}}_{\text h}\sim1900$ cm$^2$ V$^{-1}$ s$^{-1}$ and $\mu^{\text{FE}}_{\text e}\sim1800$ cm$^2$ V$^{-1}$ s$^{-1}$ for the low $n$ region). 
+
  
 Later in 2008 \cite{bolotin2008ultrahigh} and 2013 \cite{wang2013one}, higher mobility values were reported: $\approx120,000$ cm$^{2}$V$^{-1}$s$^{-1}$ at 240 K and $\approx1,000,000$ cm$^{2}$V$^{-1}$s$^{-1}$ at 4 K. The reason for these higher values was attributed to the use of suspended graphene rather
 onto substrate, where surface effects inevitably affect the carrier dynamics. At the same time, results ($\approx120,000$ cm$^{2}$V$^{-1}$s$^{-1}$) obtained at room temperature with graphene onto a single-layer of hexagonal boron nitride (hBN) \cite{dean2010boron} and sandwiched between two hBN layer \cite{wang2013one} have suggested 
@@ -621,7 +609,7 @@ This pioneer work sparked an exciting \glspl{GNRFET} research (see table \mccorr
         \bottomrule
     \end{tabular}
     %}
-    \caption{\label{tab:gnr_fet} Comparison amongst different \gls{FET} realised with graphene nanoribbon as conducting channel.}
+    \caption{\label{tab:gnr_fet} Comparison amongst different \gls{FET} realised with graphene nanoribbon as conducting channel. Top and bottom.}
     
     % \begin{tabbing}
     %     $^\dag$ Estimates calculated by assuming thermal carrier emission $I_\textrm{on}/I_\textrm{off}\propto \exp{E_g/2*k_B*T}$.\\

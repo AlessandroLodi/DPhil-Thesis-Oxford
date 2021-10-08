@@ -99,6 +99,12 @@
 \fancyhead[RE]{\emph{\rightmark}} 
 \fancyhead[RO,LE]{\emph{\thepage}}
 
+% Using symbols instead numbers as footnotes: use this table for selecting various options
+% 1   asterisk        *   2   dagger      †   3   double dagger       ‡
+% 4   section symbol  §   5   paragraph   ¶   6   parallel lines      ‖
+% 7   two asterisks   **  8   two daggers ††  9   two double daggers  ‡‡
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
 \fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\emph{\thepage}}}
 
 % JEM fix header on cleared pages for openright

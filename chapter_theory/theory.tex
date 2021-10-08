@@ -2,34 +2,64 @@
 
 \minitoc
 
-In this thesis experimental studies of quantum transport in carbon nanostructures have been carried out.
+The lateral confinement of the carriers makes \glspl{GNR} a quasi-1D system. The \textit{quasi} referes to the fact that the electron is confined across two directions. 
+This fact became true not just until recently with the advent of bottom-up techiniques, which are capable synthesising atomically-precise \gls{GNR} with width below 5 nm.
 
-More generally, quantum transport phenomena occur on a mesoscopic scale, that is, when dealing with condensed phase systems, in particular (but not exclusively) those of micro-nano dimensions, 
+
+In general, quantum transport phenomena takes place on a mesoscopic scale, that is, when dealing with condensed phase systems, in particular (but not exclusively) those of micro-nano dimensions, 
 for which behaviours not present in macroscopic bodies are observed.
+The different behaviour of mesoscopic phases compared to macroscopic ones liesin the wavelength nature of electrons. 
+When the size of the sample $L$ (which can be different for the three directions in space, $L_x, L_y, L_z$) becomes small compared with the characteristic lengths
+for the motion of electrons, then the conductivity depends on the size $L$.
 
-The different behaviour of mesoscopic phases compared to macroscopic ones lies in the wavelength nature of electrons. This can be well understood by considering the different length scales which take
-place in transport phenomena. These includes the size of the system $L$ (which can be different for the three directions in space, $L_x, L_y, L_z$), the Fermi wavelength $\lambda_F = h / \sqrt{2m_eE_F} = 2\pi/k_F$, and the coherence length $L_\phi$, which 
+There are three kinds of relevant characteristic lengths: the Fermi wavelength $\lambda_F = h / \sqrt{2m_eE_F} = 2\pi/k_F$, and the coherence length $L_\phi$, which 
 is the spatial distance that an electron travels before the phase of its wave function changes of $2\pi$. 
 
 Additionally, two characteristic lengths associated with the mean distance traveled after elastic ($l_\textrm{el}$) and inelastic ($l_\textrm{in}$) collisions are also introduced; for inelastic collision, it is convenient to consider the mean distance before losing an amount of energy $k_BT$.      
 
 For a metal with carrier concentrations $n \sim 10^{23}$ cm$^{-3}$, $l = 1 - 10$ nm, $\lambda_F = 0.5$ nm, and $L_\phi = 0.5$ \si{\micro\metre}, where $l$ is the mean free path and includes both elastic and inelastic events.
-In comparison, for carrier concentrations $n \sim 10^{11}$ cm$^{-2}$, graphene displays $l = 50$ nm$-3$\footnote{For suspended graphene, $l (\textrm{4 K}) \approx 100$ nm, while Mayorov et al. reported values up to 3 \si{\micro\metre} at 290 K for graphene sandwiched between two hBN crystals \cite{mayorov2011micrometer}}  \si{\micro\metre}, $\lambda_F = 2\sqrt{\pi/n}$ nm, and $L_\phi = 0.5$ \si{\micro\metre} \cite{torres2013introduction}.
-
-
-
-
-% A solid sample can be considered macroscopic if its properties are independent of the size of the sample. If we proceed, however, to measure the electric current in nanoscale metallic samples, 
-% we reach a dimension below which the properties become dependent on the sample. Similar behaviour occurs in general when a solid body is divided into parts of mesoscopic size. 
-% In the mesoscopic regime on two samples of the same size and chemical composition, therefore apparently identical, different properties can be measured, that is different values of the same physical quantity, such as
-% values of the same physical quantity, such as electric current or thermal conduction.
-% These variations from sample to sample are called mesoscopic fluctuations. This implies that the definition of these properties is only possible by means of an ensemble average. In a macroscopic solid this average is not necessary.
-% In mesoscopic physics particular interest has been directed to the properties of electric transport, in particular to the conduction in direct current in linear regime in micro-nano-sized devices.
+In comparison, for carrier concentrations $n \sim 10^{11}$ cm$^{-2}$, graphene displays $l = 50$ nm$-3$\footnote[2]{For suspended graphene, $l (\textrm{4 K}) \approx 100$ nm, while Mayorov et al. $l \approx 3$ \si{\micro\metre} at 290 K for graphene sandwiched between two hBN crystals \cite{mayorov2011micrometer}.} 
+\si{\micro\metre}, $\lambda_F = 2\sqrt{\pi/n}$ nm, and $L_\phi = 0.5$ \si{\micro\metre} \cite{torres2013introduction}, while \gls{MW}-\glspl{CNT} $n \sim 10^{11}$ cm$^{-2}$, $l = 1$ \si{\micro\metre}, $\lambda_F = 0.74$ nm, and $L_\phi = 100$ nm \cite{stojetz2005effect}.
 
 
 \section{Charge Transport In Zero-Dimensional Objects}
 
-quantum dots transport physics
+\co{Transport Spectroscopy in Quantum Dot}
+
+\Glspl{QD} defined through lithography can be seen as a metallic island filled with
+electrons, coupled to one or multiple source, drain and gate electrodes (\mccorrect{Figure}). 
+While source and drain are coupled both capacitively thorugh the island thanks to tunnel junctions, the gate (or multiple
+gates) is just capacitatively coupled.
+
+One way to describe this system is through the constant interaction model, which allows to derive important electrical transport
+information within the \textit{orthodox} Coulomb framework. The assumptions made within this model are the following: all Coulomb interactions, 
+both between electrons on the dot and between the dot and the leads, are described by a single constant capacitance $C$ given by the total sum of the 
+single individual capacitance between the dot and the terminals: 
+
+\begin{equation}\label{ch:theory:eq:capacitance_interaction_model}
+        C_\textrm{tot} = \sum_{i=1}^\textrm{terminals} C_i,
+\end{equation}
+
+where $i$ runs over all the terminals coupled to the central island. The second important assumption is that the total hamiltonian can be modelled as a sum of single-particle hamiltonians; 
+thus, the total energy can be expressed as a sum of single-particle energies $E_i$ corresponding to individual, non-interacting energy levels.
+
+Under these assumptions, the total dot energy given for a quantum dot in a three-terminal device with $N$ electrons becomes:
+
+\begin{equation}\label{ch:theory:eq:total_dot_energy}
+    U(N) = \sum_{i}^NE_i + \frac{[e(N-N_0) + C_\mathrm{S}V_\mathrm{S} + C_\mathrm{D}V_\mathrm{D} + C_\mathrm{G}V_\mathrm{G}]^{2}}{2C_\textrm{tot}},
+\end{equation}
+
+where $eN_0$ is the charge present on the dot at zero bias and zero gate voltage due to positive background charges in the substrate.
+Central quantity to evaluate whether the current can flow through the dot is its the chemical potential, which is the minimum energy required to add an extra electron
+to the dot, and can be expressed as:
+
+\begin{align}
+    \mu_\textrm{dot}(N) &= E_\textrm{dot}(N) - E_\mathrm{dot}(N-1), \notag\\
+                        &= \left(N-N_{0}-\frac{1}{2}\right) E_{\mathrm{C}}-\frac{E_{\mathrm{C}}}{e}\left(C_{\mathrm{S}} V_{\mathrm{S}}+C_{\mathrm{D}} V_{\mathrm{D}}+C_{\mathrm{G}} V_{\mathrm{G}}\right)+E_{N},
+\end{align}
+
+where $E_\mathrm{C} = e^2/C_\textrm{tot}$ is the charging energy
+
 
 \section{Charge Transport in One-Dimensional Objects}
 

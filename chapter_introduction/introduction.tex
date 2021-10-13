@@ -472,11 +472,11 @@ The inclusion of electronic correlation, however, becomes crucial for ultra-narr
 
 \begin{figure}
     \begin{center}
-    \includegraphics[width=0.95\textwidth]{chapter_introduction/figures/bandgap_GNRwidth.pdf}
+    \includegraphics[width=0.95\textwidth]{chapter_introduction/figures/bandgap_width_gnr_2.pdf}
     \centering{}
     \caption{
     Band gap versus nanoribbon width from experiments \cite{Han2007, Kim2009, Li2008, Chen2007, } and theoretical calculations \cite{Yang2007, Evaldsson2008}. 
-    The following abbreviation are used: ac for \textit{armchair}, zz for \textit{zigzag}. Figure adapted and extended from \cite{schwierz2013graphene}
+    The following abbreviation are used: ac for \textit{armchair}, zz for \textit{zigzag}. Figure adapted and extended from \cite{schwierz2013graphene}.
     \label{fig:intro:gnr-bandgap_schwierz}}
     \end{center}
 \end{figure}
@@ -538,37 +538,29 @@ The Hubbard hamiltonian using the second quantisation formalism resembles Eq.~\r
 except for the second term, which is given by the summation of spin-polarised density $n_{i\sigma} = a^\dagger_{i\sigma}a_{i\sigma}$ and their expectation values.
 The hamiltonian in Eq.~\ref{eq:gnr_chiral_hubbard_hamiltonian} respects the electron-hole symmetry, meaning that the density of states is symmetric respect to the $E_F$. 
 The solution of the model displays interesting features: two pairs of peaks split ($\Delta_0$ and $\Delta_1$) in the density of states are observed, one associated with the electronic band gap, and one associated with the maximum energy splitting. 
+
+
+\begin{figure}
+    \begin{center}
+    \includegraphics[width=0.95\textwidth]{chapter_introduction/figures/han2007_just_twp.pdf}
+    \centering{}
+    \caption{\label{fig:han2007_EgvsW}
+        \textbf{(a)} $E_g$ vs $W$ for four (P1–P4) of the parallel devices and two (D1, D2) with varying orientation. The inset shows $E_g$ vs relative angle $\theta$ for the device D1 and D2. 
+        \textbf{(b)} $E_g^{-1}$ vs $W$. 
+        \textbf{(c)} Conductance vs width of parallel GNRs measured at a gate voltage V - V$_g$ = 50 V. Squares are values measure at 300 K whereas triangle corresponds to 1.6 K. 
+        The insets show the conductivity (upper) and the inactive GNR width (lower) obtained from the slope and $x$ intercept of the linear fit at varying temperatures. 
+        Adapted from \cite{Han2007}.}
+    \end{center}
+\end{figure}
+
+
+
 The authors claim that the first peak split arises due to an AFM correlation between opposite edges, while $\Delta_1$ is a consequence of a ferromagnetic order due to strong localised state along a single edge. 
 Within this description, it is legit to link the behaviour of chiral GNRs with the one of spin-polarised ZGNRs; thus the total energy difference between ferromagnetic and antiferromagnetic couplings should be in the order of tens of meV per edge atom 
 and should decrease as the width of the ribbon increases, eventually becoming negligible when the ribbon width is significantly larger 
 than the decay length of the spin polarized \cite{lee2005magnetic}. Both features are in fact recovered from the solution of Eq.~\ref{eq:gnr_chiral_hubbard_hamiltonian}.
 
 \subsubsection{GNRFET}
-
-\begin{figure}
-    \centering
-    \begin{minipage}{0.40\linewidth}
-    \begin{subfigure}{\textwidth}
-        \includegraphics[width=0.9\textwidth]{chapter_introduction/figures/han2007_bandgap_width.pdf}
-        \label{fig:han2007_EgvsW}
-    \end{subfigure}
-    \begin{subfigure}{\textwidth}
-        \includegraphics[width=0.85\textwidth]{chapter_introduction/figures/han2007_inverse_bandgap_width.pdf}
-        \label{fig:han2007_Eg_1vsW}
-    \end{subfigure}
-    \end{minipage}
-    \hfil
-    \begin{minipage}{0.59\linewidth}
-    \begin{subfigure}{\textwidth}
-        \includegraphics[width=0.9\textwidth]{chapter_introduction/figures/han2007_conductance_width.pdf}
-        \label{fig:han2007_GvsW}
-    \end{subfigure}
-    \end{minipage}
-    \caption{\textbf{(a)} $E_g$ vs $W$ for four (P1–P4) of the parallel devices and two (D1, D2) with varying orientation. The inset shows $E_g$ vs relative angle $\theta$ for the device D1 and D2. 
-    \textbf{(b)} $E_g^{-1}$ vs $W$. \textbf{(c)} Conductance vs width of parallel GNRs measured at a gate voltage V - V$_g$ = 50 V. Squares are values measure at 300 K whereas triangle corresponds to 1.6 K. The insets show the conductivity (upper) and the inactive GNR width (lower) obtained from the slope and $x$ intercept of the linear fit at varying temperatures. 
-    Adapted from \cite{Han2007}.}
-    \vspace{0.5cm}
-\end{figure}
 
 
 
@@ -580,7 +572,7 @@ This pioneer work sparked an exciting \glspl{GNRFET} research (see table \mccorr
 
 \FloatBarrier
 \begin{table}
-    %\noindent\makebox[\textwidth]{%
+    \noindent\makebox[\textwidth]{%
     \begin{tabular}{c*{6}{c}}
         \toprule
         &\multicolumn{3}{c}{Structural Parameter} & \multicolumn{2}{c}{Device Parameter}\T\B\\
@@ -616,7 +608,7 @@ This pioneer work sparked an exciting \glspl{GNRFET} research (see table \mccorr
         
         \bottomrule
     \end{tabular}
-    %}
+    }
     \caption{\label{tab:gnr_fet} Comparison amongst different \gls{FET} realised with graphene nanoribbon as conducting channel. Top and bottom.}
     
     % \begin{tabbing}

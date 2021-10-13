@@ -84,8 +84,8 @@
      showgrid="false"
      inkscape:document-rotation="0"
      inkscape:zoom="0.25"
-     inkscape:cx="1876.2271"
-     inkscape:cy="1786.5255"
+     inkscape:cx="2275.7695"
+     inkscape:cy="1389.7832"
      inkscape:window-x="85"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -98,155 +98,162 @@
      inkscape:label="Image"
      id="g10"
      transform="translate(676.70819,-128.10209)">
-    <g
-       id="g1246"
-       transform="translate(-142)">
-      <path
-         style="fill:none;stroke:#000000;stroke-width:10.1561;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="M 2903.6936,1274.4445 V 979.46025"
-         id="path891-8-2-3-0-1" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:9.98391;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 2898.6128,982 h 285.065"
-         id="path891-8-2-3-0-1-1" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 2899.6936,1274.4445 h 285.9842"
-         id="path891-8-2-3-0-1-1-7" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="M 2903.6936,1560.4287 V 1274.4445"
-         id="path891-8-2-3-0-1-6" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:10.0347;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 2898.6992,1562 h 287.973"
-         id="path891-8-2-3-0-1-1-5" />
-      <circle
-         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:14.0438;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="path968-6"
-         cx="3285.0481"
-         cy="979.46027"
-         r="104.1115" />
-      <text
-         xml:space="preserve"
-         style="font-size:48px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal'"
-         x="3208.9688"
-         y="994"
-         id="text980-8-1-5"><tspan
-           sodipodi:role="line"
-           x="3208.9688"
-           y="994"
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:48px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
-           id="tspan861-1-0">I<tspan
-   style="font-size:65%;baseline-shift:sub"
-   id="tspan873-7-7">th</tspan>(2<tspan
-   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:48px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
-   id="tspan867-7-4">ω</tspan><tspan
+    <path
+       style="fill:none;stroke:#000000;stroke-width:10.1561;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 2761.6936,1274.4445 V 979.46025"
+       id="path891-8-2-3-0-1" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:9.98391;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 2688.6128,886 h 285.065"
+       id="path891-8-2-3-0-1-1" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 2757.6936,1274.4445 h 285.9842"
+       id="path891-8-2-3-0-1-1-7" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 2761.6936,1560.4287 V 1274.4445"
+       id="path891-8-2-3-0-1-6" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:10.0347;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 2756.6992,1562 h 287.973"
+       id="path891-8-2-3-0-1-1-5" />
+    <circle
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:21.3172;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path968-6"
+       cx="3131.3015"
+       cy="897.01685"
+       r="158.03143" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:122.339px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1.83508;"
+       x="3131.4211"
+       y="426.59366"
+       id="text980-8-1-5"
+       transform="scale(0.96230609,1.0391704)"><tspan
+         sodipodi:role="line"
+         x="3131.4211"
+         y="426.59366"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:133.333px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1.83508"
+         id="tspan861-1-0"> I<tspan
+   style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:133.333px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;baseline-shift:sub;stroke-width:1.83508"
+   id="tspan873-7-7">th</tspan></tspan><tspan
+         sodipodi:role="line"
+         x="3131.4211"
+         y="593.25989"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:133.333px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1.83508"
+         id="tspan967">(2<tspan
+   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:133.333px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+   id="tspan971">ω</tspan><tspan
    id="tspan1157-3"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.2px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;baseline-shift:sub">1</tspan>)</tspan></text>
-      <circle
-         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:14.0438;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="path968-6-3"
-         cx="3285.0481"
-         cy="1274.4445"
-         r="104.1115" />
-      <circle
-         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:14.0438;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="path968-6-10"
-         cx="3297"
-         cy="1560.4287"
-         r="104.1115" />
-      <text
-         xml:space="preserve"
-         style="font-size:48px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal'"
-         x="3220.946"
-         y="1286.4445"
-         id="text980-8-1-5-4"><tspan
-           sodipodi:role="line"
-           x="3220.946"
-           y="1286.4445"
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:48px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
-           id="tspan861-1-0-2">I<tspan
-   style="font-size:65%;baseline-shift:sub"
-   id="tspan873-7-7-8">ac</tspan>(<tspan
-   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:48px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
-   id="tspan867-7-4-4">ω</tspan><tspan
+   style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:133.333px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;baseline-shift:sub;stroke-width:1.83508">1</tspan>)</tspan></text>
+    <circle
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:21.3172;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path968-6-3"
+       cx="3159.3015"
+       cy="1372.775"
+       r="158.03143" />
+    <circle
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:21.3172;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path968-6-10"
+       cx="3177.4434"
+       cy="1806.8721"
+       r="158.03143" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:133.333px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1.38259;"
+       x="3084.1704"
+       y="1345.5392"
+       id="text980-8-1-5-4"><tspan
+         sodipodi:role="line"
+         x="3084.1704"
+         y="1345.5392"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:133.333px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1.38259"
+         id="tspan861-1-0-2">I<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:133.333px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;baseline-shift:sub;stroke-width:1.38259"
+   id="tspan873-7-7-8">ac</tspan></tspan><tspan
+         sodipodi:role="line"
+         x="3084.1704"
+         y="1512.2058"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:133.333px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1.38259"
+         id="tspan963">(<tspan
+   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:133.333px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+   id="tspan973">ω</tspan><tspan
    id="tspan1157-3-9"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.2px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;baseline-shift:sub">2</tspan>)</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:48px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal'"
-         x="3272.5442"
-         y="1574"
-         id="text980-8-1-5-4-7"><tspan
-           sodipodi:role="line"
-           x="3272.5442"
-           y="1574"
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:48px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
-           id="tspan861-1-0-2-4">I<tspan
-   style="font-size:65%;baseline-shift:sub"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:133.333px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;baseline-shift:sub;stroke-width:1.38259">2</tspan>)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:133.333px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1.67089;"
+       x="3096.2993"
+       y="1833.5525"
+       id="text980-8-1-5-4-7"><tspan
+         sodipodi:role="line"
+         x="3096.2993"
+         y="1833.5525"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:133.33333333px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1.67089;"
+         id="tspan861-1-0-2-4">I<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:133.33333333px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;baseline-shift:sub;stroke-width:1.67089;"
    id="tspan873-7-7-8-1">dc</tspan></tspan></text>
-      <path
-         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 3689,1557.6022 v 84.435"
-         id="path940-1-8" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:10.0347;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 3405.5135,1562 h 287.973"
-         id="path891-8-2-3-0-1-1-5-5" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:9.39551;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 3688.779,1271.4128 v 74.5355"
-         id="path940-1-8-1" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:10.352;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 3387.0135,1274.4445 h 306.473"
-         id="path891-8-2-3-0-1-1-5-5-1" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:9.76026;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 3688.5625,978.42792 v 80.43498"
-         id="path940-1-8-1-8" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:10.2927;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 3390.5135,982 h 302.973"
-         id="path891-8-2-3-0-1-1-5-5-1-6" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 3647,1645.8887 h 84"
-         id="path940-1-9-0-4" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 3654,1661.231 h 70"
-         id="path940-1-9-2-3-2" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 3667,1676.5731 h 44"
-         id="path940-1-9-2-7-1-4" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 3646.779,1350.7599 h 84"
-         id="path940-1-9-0-4-0" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 3653.779,1366.1022 h 70"
-         id="path940-1-9-2-3-2-1" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 3666.779,1381.4443 h 44"
-         id="path940-1-9-2-7-1-4-4" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 3646.5625,1062.5257 h 84"
-         id="path940-1-9-0-4-0-4" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 3653.5625,1077.868 h 70"
-         id="path940-1-9-2-3-2-1-4" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 3666.5625,1093.2101 h 44"
-         id="path940-1-9-2-7-1-4-4-0" />
-    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 3547,1557.6022 v 84.435"
+       id="path940-1-8" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:10.0347;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 3263.5135,1562 h 287.973"
+       id="path891-8-2-3-0-1-1-5-5" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:9.39551;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 3546.779,1271.4128 v 74.5355"
+       id="path940-1-8-1" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:10.352;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 3245.0135,1274.4445 h 306.473"
+       id="path891-8-2-3-0-1-1-5-5-1" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:9.76026;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 3546.5625,978.42792 v 80.43498"
+       id="path940-1-8-1-8" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:10.2927;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 3304.5135,882 h 302.973"
+       id="path891-8-2-3-0-1-1-5-5-1-6" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 3505,1645.8887 h 84"
+       id="path940-1-9-0-4" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 3512,1661.231 h 70"
+       id="path940-1-9-2-3-2" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 3525,1676.5731 h 44"
+       id="path940-1-9-2-7-1-4" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 3504.779,1350.7599 h 84"
+       id="path940-1-9-0-4-0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 3511.779,1366.1022 h 70"
+       id="path940-1-9-2-3-2-1" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 3524.779,1381.4443 h 44"
+       id="path940-1-9-2-7-1-4-4" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 3504.5625,1062.5257 h 84"
+       id="path940-1-9-0-4-0-4" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 3511.5625,1077.868 h 70"
+       id="path940-1-9-2-3-2-1-4" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 3524.5625,1093.2101 h 44"
+       id="path940-1-9-2-7-1-4-4-0" />
     <image
        width="2560"
        height="1920"
@@ -292,7 +299,7 @@
        r="74.1334" />
     <text
        xml:space="preserve"
-       style="font-size:48px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal'"
+       style="font-size:133.333px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;"
        x="1161.1796"
        y="2459.2102"
        id="text980"><tspan
@@ -300,8 +307,8 @@
          id="tspan978"
          x="1161.1796"
          y="2459.2102"
-         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:48px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">V<tspan
-   style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:48px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;baseline-shift:sub"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:133.33333333px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;">V<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:133.33333333px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;baseline-shift:sub;"
    id="tspan982">g</tspan></tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -325,22 +332,22 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-size:50.6667px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal'"
-       x="244.04091"
-       y="2465.1641"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:133.333px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+       x="-7.9590912"
+       y="2793.1641"
        id="text980-8"><tspan
          sodipodi:role="line"
-         x="244.04091"
-         y="2465.1641"
-         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:50.6667px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+         x="-7.9590912"
+         y="2793.1641"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:133.333px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
          id="tspan861">V<tspan
-   style="font-size:50.6667px;baseline-shift:sub"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:133.333px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;baseline-shift:sub"
    id="tspan871">dc</tspan> + V<tspan
-   style="font-size:50.6667px;baseline-shift:sub"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:133.333px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;baseline-shift:sub"
    id="tspan873">ac</tspan> (<tspan
-   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:50.6667px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:133.333px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
    id="tspan1067">ω</tspan><tspan
-   style="font-size:65%;baseline-shift:sub"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:133.333px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;baseline-shift:sub"
    id="tspan1069">2</tspan>)</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -413,29 +420,21 @@
        r="94.825165" />
     <text
        xml:space="preserve"
-       style="font-size:48px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal'"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:133.333px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;"
        x="-512.48138"
        y="1310.4304"
        id="text980-8-1"><tspan
          sodipodi:role="line"
          x="-512.48138"
          y="1310.4304"
-         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:48px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:133.333px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
          id="tspan861-1">I<tspan
-   style="font-size:65%;baseline-shift:sub"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:133.333px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;baseline-shift:sub"
    id="tspan873-7">h</tspan>(<tspan
-   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:48px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:133.333px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
    id="tspan867-7">ω</tspan><tspan
    id="tspan1157"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.2px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;baseline-shift:sub">1</tspan>)</tspan></text>
-    <ellipse
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path962-8-7-1"
-       cx="2055.2209"
-       cy="1589.5955"
-       rx="11.979891"
-       ry="11.577566"
-       transform="matrix(0,1,1,0,0,0)" />
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:133.333px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;baseline-shift:sub">1</tspan>)</tspan></text>
     <ellipse
        style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path962-8-7-4-3"
@@ -488,24 +487,12 @@
          id="path940-1-9-2-7-4" />
     </g>
     <path
-       style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 1589.5955,2068.2214 v 116.0112"
-       id="path940-5-5-8-5" />
-    <g
-       id="g1261"
-       transform="translate(0,-201.3569)">
-      <path
-         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 1547.5955,2389.1168 h 84"
-         id="path940-1-9-0" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 1554.5955,2404.4591 h 70"
-         id="path940-1-9-2-3" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 1567.5955,2419.8012 h 44"
-         id="path940-1-9-2-7-1" />
-    </g>
+       style="fill:none;stroke:#000000;stroke-width:10.0647;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -454.45013,2060.3091 v 407.1658"
+       id="path940-5-6" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:8.24854;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M -459.49992,2463.8829 H 231.77751"
+       id="path940-5-5-0-7-5" />
   </g>
 </svg>

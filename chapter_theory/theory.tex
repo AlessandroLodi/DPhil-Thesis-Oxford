@@ -61,9 +61,17 @@ to the dot, and can be expressed as:
 where $E_\mathrm{C} = e^2/C_\textrm{tot}$ is the charging energy.
 
 
-\section{Charge Transport in One-Dimensional Objects}
+\section{The Different Coupling Regimes}
 
-nanowires transport physics
+The weak coupling regime is defined in the limit where $\Gamma\ll \E_C$, $E_\textrm{add}(N)$, $k_BT$ and is dominated by Coulomb blockade. The effect shows most clearly in a charge stability diagram, which is obtained by measuring the gate and bias dependence of the current and then plotting it in a two-dimensional map \mccorrect{Figure}. The Coulomb blockade manifests as diamond shaped regions of very low current, so
+called Coulomb diamonds, in which transport is blocked. In these regions the energy cost to add an electron onto the QD exceeds the available energy and therefore no current can flow through the QD \mccorrect{Figure}.
+
+The blockade areas are separated by regions of high current, the Sequential Electron Tunnelling (SET) zones, where current flow through the QD is allowed via sequential electron tunnelling. Each Coulomb diamond corresponds to a certain number of electrons N occupying the QD where the number of electrons changes sequentially between neighbouring diamonds. When looking closely at the SET regions, often lines running parallel to the edges
+of the Coulomb diamonds can be observed. These originate from orbital excited states, spin states or vibrational states, which will be discussed later. These states are able to contribute to the current flow through the QD if their energy levels are reached by applying a higher bias voltage \mccorrect{}. Such excited or vibrational states can yield information about the QD’s energy spectrum and are especially helpful when attempting to identify specific molecules as each molecule has a distinctive vibrational fingerprint. 
+
+Furthermore, the height of the Coulomb diamond in the stability diagram is equal to the addition energy of the QD or molecule \mccorrect{Figure}.
+While it is possible to readily read out the addition energy and the energy of excited states, it is very challenging or almost impossible to infer the charge state of the QD, that is the number of electrons on the dot, from the stability diagram. Since the QD
+is part of the device and therefore a larger system, the neutral charge state can be deceiving when only considering the dot itself. Assuming the QD is at no applied bias and no gate voltage and therefore seemingly in the neutral charge state, it might still be partially charged due to interactions with the junction or background charges in the substrate (see also Eq.~\ref{ch:theory:eq:total_dot_energy}).
 
 \section{Thermoelectric Phenomena in Zero-Dimensional Structures}
 
@@ -86,4 +94,26 @@ outside a given radius from the atom they are associated with and so the radius 
 
 This section is needed to explain formally the results from transiesta and TBtrans calculations
 
+
+\section{Room Temperature DC Measurements}
+
+Describe here the probe station setup
+
+\section{Dipstick DC Measurements}
+
+Describe here the dipstick used for both liquid N$_2$ and liquid He
+
+\section{Cryogenic DC Measurements}
+
+Describe here the delft box. Describe how the delft box modular structure enables to adapt two and multi-terminal DC measurements
+
+\section{Cryogenic AC Measurements}
+
+Describe here the delft box + lock-in setup and why it is so complicated to set it usepackage
+
+\section{Thermoelectric Measurements}
+
+Describe here the setup used for the thermoelectric devices and why it needs a dedicated section
+Describe also here from a setup point of view which complications have raised during the setup (direct lines instead of dc lines,
+the need to use nano-D connectors and to design the a new pcb board).
 

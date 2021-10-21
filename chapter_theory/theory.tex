@@ -61,17 +61,58 @@ to the dot, and can be expressed as:
 where $E_\mathrm{C} = e^2/C_\textrm{tot}$ is the charging energy.
 
 
-\section{The Different Coupling Regimes}
+\section{Molecule--Lead Couplings}
 
-The weak coupling regime is defined in the limit where $\Gamma\ll \E_C$, $E_\textrm{add}(N)$, $k_BT$ and is dominated by Coulomb blockade. The effect shows most clearly in a charge stability diagram, which is obtained by measuring the gate and bias dependence of the current and then plotting it in a two-dimensional map \mccorrect{Figure}. The Coulomb blockade manifests as diamond shaped regions of very low current, so
-called Coulomb diamonds, in which transport is blocked. In these regions the energy cost to add an electron onto the QD exceeds the available energy and therefore no current can flow through the QD \mccorrect{Figure}.
+\subsection{Weak Limit}
 
-The blockade areas are separated by regions of high current, the Sequential Electron Tunnelling (SET) zones, where current flow through the QD is allowed via sequential electron tunnelling. Each Coulomb diamond corresponds to a certain number of electrons N occupying the QD where the number of electrons changes sequentially between neighbouring diamonds. When looking closely at the SET regions, often lines running parallel to the edges
-of the Coulomb diamonds can be observed. These originate from orbital excited states, spin states or vibrational states, which will be discussed later. These states are able to contribute to the current flow through the QD if their energy levels are reached by applying a higher bias voltage \mccorrect{}. Such excited or vibrational states can yield information about the QD’s energy spectrum and are especially helpful when attempting to identify specific molecules as each molecule has a distinctive vibrational fingerprint. 
+The weak coupling regime is defined in the limit where $\Gamma\ll\E_C, E_\textrm{add}(N), k_BT$, and is dominated by Coulomb blockade. The effect shows most clearly in a charge stability diagram, which is obtained by measuring the gate and bias dependence of the current and then plotting it in a two-dimensional map \mccorrect{Figure}. The Coulomb blockade manifests as diamond shaped regions of very low current, so
+called Coulomb diamonds, in which transport is blocked. In these regions the energy cost to add an electron onto the \gls{QD} exceeds the available energy and therefore no current can flow through the \gls{QD} \mccorrect{Figure}.
 
-Furthermore, the height of the Coulomb diamond in the stability diagram is equal to the addition energy of the QD or molecule \mccorrect{Figure}.
-While it is possible to readily read out the addition energy and the energy of excited states, it is very challenging or almost impossible to infer the charge state of the QD, that is the number of electrons on the dot, from the stability diagram. Since the QD
-is part of the device and therefore a larger system, the neutral charge state can be deceiving when only considering the dot itself. Assuming the QD is at no applied bias and no gate voltage and therefore seemingly in the neutral charge state, it might still be partially charged due to interactions with the junction or background charges in the substrate (see also Eq.~\ref{ch:theory:eq:total_dot_energy}).
+The blockade areas are separated by regions of high current, the Sequential Electron Tunnelling (SET) zones, where current flow through the \gls{QD} is allowed via sequential electron tunnelling. Each Coulomb diamond corresponds to a certain number of electrons N occupying the \gls{QD} where the number of electrons changes sequentially between neighbouring diamonds. When looking closely at the SET regions, often lines running parallel to the edges
+of the Coulomb diamonds can be observed. These originate from orbital excited states, spin states or vibrational states, which will be discussed later. These states are able to contribute to the current flow through the \gls{QD} if their energy levels are reached by applying a higher bias voltage \mccorrect{Figure}. Such excited or vibrational states can yield information about the \gls{QD}’s energy spectrum and are especially helpful when attempting to identify specific molecules as each molecule has a distinctive vibrational fingerprint. 
+
+Furthermore, the height of the Coulomb diamond in the stability diagram is equal to the addition energy of the \gls{QD} or molecule \mccorrect{Figure}.
+While it is possible to readily read out the addition energy and the energy of excited states, it is very challenging or almost impossible to infer the charge state of the \gls{QD}, that is the number of electrons on the dot, from the stability diagram. Since the \gls{QD}
+is part of the device and therefore a larger system, the neutral charge state can be deceiving when only considering the dot itself. Assuming the \gls{QD} is at no applied bias and no gate voltage and therefore seemingly in the neutral charge state, it might still be partially charged due to interactions with the junction or background charges in the substrate (cf. Eq.~\ref{ch:theory:eq:total_dot_energy}).
+
+One can correlate the stability diagram or a gate sweep measuring the conductance or current through the quantum dot to the different level alignments of the contacts and the dot orbitals \mccorrect{Figure}. When the electrochemical potential of the source and drain is aligned with an energy level of the dot, transport through it is allowed and results in a current peak in the gate trace. The corresponding transport mechanism is called resonant tunnelling. While the levels are aligned the number of electrons on the dot fluctuates between $N$ or $N+1$ as electrons hop on and off the dot. In between the peaks the electrochemical potentials are not aligned, so there is no resonant tunnelling due to Coulomb blockade, and the number of electrons on the dot is fixed. Additionally, various capacitances between the \gls{QD} and the contacts as well as
+the gate lever arm (or gate coupling parameter) can be extracted from the slopes of the diamonds as the negative slope and positive slope are equal to $-\abs{e}C_\mathrm{G}/(C - C_\mathrm{S})$ and $\abs{e}C_\mathrm{G}/C_\mathrm{S}$, respectively. Since the gate lever arm is given by $\alpha = C_\mathrm{G}/C$ one can thereby quantify the strength of the gate coupling.
+
+\subsection{Intermediate Limit}
+Lastly, the intermediate coupling regime has attributes of both limits, it still exhibits
+a noticeable Coulomb blockade, but also shows transport within the zero current region.
+The two most noticeable new transport channels available in this regime are elastic and inelastic cotunnelling: these higher-order transport
+mechanisms involve the simultaneous tunnelling of two electrons (\mccorrect{Figure}). Initially, the \gls{QD} is in a state with an unoccupied excited state still below the electrochemical potential of the leads, in contrast to resonant tunnelling where the excited state is between the source and drain electrochemical potential. When the electron tunnels out of the \gls{QD} onto the drain, the \gls{QD} is left in a virtual state and there are two possibilities for the orbit to be refilled. First, the new electron simultaneously tunnelling in from the source lead occupies the ground state again, therefore leaving the \gls{QD} in exactly the same configuration as before. This is called elastic cotunnelling (maybe \mccorrect{Figure?}). If the new electron, however, tunnels into the excited state, the \gls{QD} has changed its energy and the process is called inelastic cotunnelling (\mccorrect{Figure?}). The electron can subsequently relax into the ground state, rendering the \gls{QD} again in the initial configuration. Importantly, for inelastic cotunnelling to take place, a bias larger than the excitation energy of the dot has to be applied and since the \gls{QD} excitation is created at the expense of the bias applied, electron energy is conserved. Overall, both elastic and inelastic cotunnelling lead to conduction in the blocked Coulomb diamond region.
+
+\subsection{Strong Limit}
+In the strong coupling limit $\Gamma\gg\E_C, E_\textrm{add}(N), k_BT$ In this regime quantum dot and lead's states hybridise, the Coulomb blockade is smeared out by quantum fluctuations of the electric charge, and the main transport mechanism is now played by elastic coherent tunnelling. In this limit, the conductance can be approximated as $G\approx\frac{2e^2}{h}\mathcal{T}(E)$, where $\mathcal{T}(E)$ is the transmission probability for all the conduction channels thorugh the quantum dot evaluated at the Fermi energy. In the case of a single, well-isolated energy level, it is possible to recover the Breit--Wigner model for a single resonance.
+
+
+\subsection{Landauer Theory}
+In order to make predictions about the electronic and thermoelectric properties of QDs, a good model for electronic transport in mesoscopic to molecular-scale devices is necessary. In the limit of predominantly SET and assuming coherent transport, extending the Landauer formalism (originally a model for electrical conduction) towards thermoelectric effects has proven successful and is widely used. The Landauer formalism is a concept formulated in 1947 by Rolf Landauer that models conduction as transmission. The basic assumption is that two electron reservoirs are connected by a scatterer (QD island for the transport measurements presented here) through which electron transport is possible. The transport is then determined by the probability of electrons moving from one reservoir to the other
+through the scatterer. This probability is always between 0 and 1, which means there
+is an upper limit on conductance.
+
+Employing the Landauer approach, the current through such a structure can be
+written as:
+\begin{equation}
+    I = \frac{2e}{h} \int\limits_{-\infty}^{+\infty}\mathcal{T}(\epsilon)[f_\textrm{L}(E) - f_\textrm{R}(E)]\text{d}\epsilon,
+\end{equation}
+where $\mathcal{T}$ is the transmission probability of an electron with single-particle energy $\epsilon$ to move across the source and drain leads. The Fermi-Dirac statistics
+$f_\textrm{FD}(\epsilon, T) = \frac{1}{1+e^{\epsilon_i - \mu/k_BT}} $ details the average number of fermions (electrons in our case) in a single-particle state $i$ with energy $\epsilon_i$ in thermodynamic equilibrium at temperature $T$. Therefore, it is used to quantify how many electrons from the source leads have a certain energy to be able to cross the molecular junction: this event, as everything in quantum mechanics, is detailed by the amplitude of the transmission probability $\mathcal{T}(\epsilon)$. 
+
+By multiplying this probability with the elementary charge $e$ gives the current for one energy level with a factor of two added due to spin degeneracy. After adding all of these possible transport channels together, which is done by taking the integral over all energies, and accounting for
+dimension normalization via the Planck constant $h$ it is possible to calculate the total current $I$ across the junction.
+
+The electrical conductance is then retrieved by taking the derivative of the current:
+
+\begin{align}
+    G   &= -\frac{2e}{h} \int\limits_{-\infty}^{+\infty}\mathcal{T}(\epsilon)\pdv{f(T, \epsilon)}{\epsilon}\text{d}\epsilon,\nonumber\\
+        &= - G_0 \int\limits_{-\infty}^{+\infty}\mathcal{T}(\epsilon)\pdv{f(T, \epsilon)}{\epsilon}\text{d}\epsilon,
+\end{align}
+
+As we will see in more detail later (cf. Sec.~\ref{sc:NEGF}), it is possible to compute the set of real eigenvalues for the transmission thorugh different approaches with varying degrees of complexity. One of them, which it has been used in cf. Ch.~\ref{ch:fet}, calcultes the product between the tunnel couplings and Green function terms. Other and more sophisticated approaches can be found in literature \cite{cuevas2010molecular}.
+
 
 \section{Thermoelectric Phenomena in Zero-Dimensional Structures}
 
@@ -90,7 +131,7 @@ used for computing the electronic properties: when the functions are stricly loc
 outside a given radius from the atom they are associated with and so the radius is a key quality determined parameter for the basis set
 
 
-\section{Non-Equilibrium Green Function Theory}
+\section{\label{sc:NEGF}Non-Equilibrium Green Function Theory}
 
 This section is needed to explain formally the results from transiesta and TBtrans calculations
 

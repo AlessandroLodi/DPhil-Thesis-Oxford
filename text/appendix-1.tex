@@ -1,26 +1,53 @@
-\begin{savequote}[8cm]
-\textlatin{Cor animalium, fundamentum e\longs t vitæ, princeps omnium, Microco\longs mi Sol, a quo omnis vegetatio dependet, vigor omnis \& robur emanat.}
+% \begin{savequote}[8cm]
+% \textlatin{Cor animalium, fundamentum e\longs t vitæ, princeps omnium, Microco\longs mi Sol, a quo omnis vegetatio dependet, vigor omnis \& robur emanat.}
 
-The heart of animals is the foundation of their life, the sovereign of everything within them, the sun of their microcosm, that upon which all growth depends, from which all power proceeds.
-  \qauthor{--- William Harvey \cite{harvey_exercitatio_1628}}
-\end{savequote}
+% The heart of animals is the foundation of their life, the sovereign of everything within them, the sun of their microcosm, that upon which all growth depends, from which all power proceeds.
+%   \qauthor{--- William Harvey \cite{harvey_exercitatio_1628}}
+% \end{savequote}
 
-\chapter{\label{app:1-cardiophys}Review of Cardiac Physiology and Electrophysiology}
+\chapter{\label{app:1-sommerfeld}Sommerfeld Expansion}
 
 \minitoc
 
-Appendices are just like chapters.  Their sections and subsections get numbered and included in the table of contents; figures and equations and tables added up, etc.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et dui sem. Aliquam dictum et ante ut semper. Donec sollicitudin sed quam at aliquet. Sed maximus diam elementum justo auctor, eget volutpat elit eleifend. Curabitur hendrerit ligula in erat feugiat, at rutrum risus suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer risus nulla, facilisis eget lacinia a, pretium mattis metus. Vestibulum aliquam varius ligula nec consectetur. Maecenas ac ipsum odio. Cras ac elit consequat, eleifend ipsum sodales, euismod nunc. Nam vitae tempor enim, sit amet eleifend nisi. Etiam at erat vel neque consequat.
+Let us consider the following integral:
+\begin{equation}\label{app-1:eq:sommerfeld_integral}
+  I=\int\limits_{-\infty}^{\infty} h(E) f_{0}(E) \text{d} E,
+\end{equation}
+where $h(E)$ is a regular function, that it is continous and differentiable
+at any order with respect to $E$, and it is null for $E\longrightarrow -\infty$, whereas:
+$$
+f_0(E) = \frac{1}{1+e^{ E - \mu/k_BT}},
+$$
+is the Fermi-Dirac distribution.
 
-\section{Anatomy}
+
+\section{Low-temperature Limit}
 \label{sec:anatomy}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan cursus neque. Pellentesque eget tempor turpis, quis malesuada dui. Proin egestas, sapien sit amet feugiat vulputate, nunc nibh mollis nunc, nec auctor turpis purus sed metus. Aenean consequat leo congue volutpat euismod. Vestibulum et vulputate nisl, at ultrices ligula. Cras pulvinar lacinia ipsum at bibendum. In ac augue ut ante mollis molestie in a arcu.
+We demonstrate that, at low temperatures, it is possible to obtain an analytical expression for the integral Eq.~\ref{app-1:eq:sommerfeld_integral} which reads:
 
-Etiam vitae quam sollicitudin, luctus tortor eu, efficitur nunc. Vestibulum maximus, ante quis consequat sagittis, augue velit luctus odio, in scelerisque arcu magna id diam. Proin et mauris congue magna auctor pretium id sit amet felis. Maecenas sit amet lorem ipsum. Proin a risus diam. Integer tempus eget est condimentum faucibus. Suspendisse sem metus, consequat vel ante eget, porttitor maximus dui. Nunc dapibus tincidunt enim, non aliquam diam vehicula sed. Proin vel felis ut quam porta tempor. Vestibulum elit mi, dictum eget augue non, volutpat imperdiet eros. Praesent ac egestas neque, et vehicula felis.
+\begin{equation}
+  I=\int\limits_{-\infty}^{\mu} h(E) \text{d}E+\frac{\pi^{2}}{6}\left(k_{B} T\right)^{2}\left[h^{\prime}(E)\right]_{\mu}+\frac{7 \pi^{4}}{360}\left(k_{B} T\right)^{4}\left[h^{\prime \prime \prime}(E)\right]_{\mu}+\ldots
+\end{equation}
 
-Pellentesque malesuada volutpat justo, id eleifend leo pharetra at. Pellentesque feugiat rutrum lobortis. Curabitur hendrerit erat porta massa tincidunt rutrum. Donec tincidunt facilisis luctus. Aliquam dapibus sodales consectetur. Suspendisse lacinia, ipsum sit amet elementum fermentum, nulla urna mattis erat, eu porta metus ipsum vel purus. Fusce eget sem nisl. Pellentesque dapibus, urna vitae tristique aliquam, purus leo gravida nunc, id faucibus ipsum magna aliquet ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sem lacus, rutrum eget efficitur sed, aliquam vel augue. Aliquam ut eros vitae sem cursus ultrices ut ornare urna. Nullam tempor porta enim, in pellentesque arcu commodo quis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur maximus orci purus, ut molestie turpis pellentesque ut.
+Let us define:
 
-Donec lacinia tristique ultricies. Proin dignissim risus ut dolor pulvinar mollis. Proin ac turpis vitae nibh finibus ullamcorper viverra quis felis. Mauris pellentesque neque diam, id feugiat diam vestibulum vitae. In suscipit dui eu libero ultrices, et sagittis nunc blandit. Aliquam at aliquet ex. Nullam molestie pulvinar ex vitae interdum. Praesent purus nunc, gravida id est consectetur, convallis elementum nulla. Praesent ex dolor, maximus eu facilisis at, viverra eget nulla. Donec ullamcorper ante nisi. Sed volutpat diam eros. Nullam egestas neque non tortor aliquet, sed pretium velit tincidunt. Aenean condimentum, est ac vestibulum mattis, quam augue congue augue, mattis ultrices nibh libero non ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+$$
+g(E) = \int\limits_{-\infty}^{E}h(E)\text{d}E,
+$$
+
+Through an integration per parts, Eq.~\ref{app-1:eq:sommerfeld_integral}
+becomes:
+
+\begin{align}
+  I &=\int_{-\infty}^{\infty} h(E) f_{0}(E) \text{d} E=\left[g(E) f_{0}(E)\right]_{-\infty}^{\infty}-\int_{-\infty}^{\infty} g(E) \frac{\partial f_{0}(E)}{\partial E} \text{d} E, \nonumber\\
+  &=\int_{-\infty}^{\infty} g(E)\left(-\frac{\partial f_{0}(E)}{\partial E}\right) \text{d}E,
+\end{align}
+
+being the first term null as $g(E) = 0 $ for $E\longrightarrow -\infty$ and $f_0 = 0$ for $E\longrightarrow\infty$. At low temperatures the function $-\pdv{f_0}{E}$ has appreciable values only near $\mu$. It is possible to devolop a series expansion of $g(E)$ around $\mu$:
+\begin{equation}
+g(E)=g(\mu)+\sum_{n=1}^{\infty}\left[\frac{(E-\mu)^{n}}{n !}\right]\left[\frac{d^{n} g(E)}{d E^{n}}\right]_{\mu}
+\end{equation}
 
 Aenean volutpat eros tortor, non convallis sapien blandit et. Maecenas faucibus nulla a magna posuere commodo. Nullam laoreet ante a turpis laoreet malesuada. Phasellus in varius sem. Vestibulum sagittis nibh sed tincidunt blandit. Donec aliquam accumsan odio sit amet lacinia. Integer in tellus diam. Vivamus varius massa leo, vitae ullamcorper metus pulvinar sed. Maecenas nec lorem ornare, elementum est quis, gravida massa. Suspendisse volutpat odio ex, ac ultrices leo ultrices vel. Sed sed convallis ipsum. Pellentesque euismod a nulla sed rhoncus. Sed vehicula urna vitae mi aliquet, non sodales lacus ullamcorper. Duis mattis justo turpis, id tempus est tempus eu. Curabitur vitae hendrerit ligula.
 

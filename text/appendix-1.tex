@@ -33,7 +33,7 @@ We demonstrate that, at low temperatures, it is possible to obtain an analytical
 Let us define:
 
 $$
-g(E) = \int\limits_{-\infty}^{E}h(E)\text{d}E,
+g(E) = \int\limits_{-\infty}^{E}h(E)\text{d}E.
 $$
 
 Through an integration per parts, Eq.~\ref{app-1:eq:sommerfeld_integral}
@@ -49,15 +49,36 @@ being the first term null as $g(E) = 0 $ for $E\longrightarrow -\infty$ and $f_0
 g(E)=g(\mu)+\sum_{n=1}^{\infty}\left[\frac{(E-\mu)^{n}}{n !}\right]\left[\frac{d^{n} g(E)}{d E^{n}}\right]_{\mu}
 \end{equation}
 
-Aenean volutpat eros tortor, non convallis sapien blandit et. Maecenas faucibus nulla a magna posuere commodo. Nullam laoreet ante a turpis laoreet malesuada. Phasellus in varius sem. Vestibulum sagittis nibh sed tincidunt blandit. Donec aliquam accumsan odio sit amet lacinia. Integer in tellus diam. Vivamus varius massa leo, vitae ullamcorper metus pulvinar sed. Maecenas nec lorem ornare, elementum est quis, gravida massa. Suspendisse volutpat odio ex, ac ultrices leo ultrices vel. Sed sed convallis ipsum. Pellentesque euismod a nulla sed rhoncus. Sed vehicula urna vitae mi aliquet, non sodales lacus ullamcorper. Duis mattis justo turpis, id tempus est tempus eu. Curabitur vitae hendrerit ligula.
+This allow us to write the integral Eq.~\ref{app-1:eq:sommerfeld} as:
 
-Curabitur non pretium enim, in commodo ligula. Etiam commodo eget ligula a lacinia. Vestibulum laoreet ante tellus, vel congue sapien ornare in. Donec venenatis cursus velit vitae pulvinar. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse in metus lectus. Pellentesque gravida dolor eget finibus imperdiet. Duis id molestie tortor. Mauris laoreet faucibus facilisis. Aliquam vitae dictum massa, sit amet dignissim lacus.
+\begin{align}
+I &=g(\mu)+\sum_{n=1}^{\infty} \int_{-\infty}^{\infty} \frac{(E-\mu)^{n}}{n !}\left[\frac{d^{n} g(E)}{d E^{n}}\right]_{\mu}\left(-\frac{\partial f_{0}(E)}{\partial E}\right) d E \nonumber,\\
+&=g(\mu)+\sum_{n=1}^{\infty} \int_{-\infty}^{\infty} \frac{(E-\mu)^{2 n}}{(2 n) !}\left[\frac{d^{2 n-1} g(E)}{d E^{2 n-1}}\right]_{\mu}\left(-\frac{\partial f_{0}(E)}{\partial E}\right) d E.
+\end{align}
 
-Fusce eleifend tellus id ex consequat maximus. Donec ultrices ex ut turpis ornare, non molestie mi placerat. Nulla sit amet auctor nunc, sit amet euismod elit. Phasellus risus tellus, condimentum a metus et, venenatis tristique urna. Cras mattis felis eget ipsum fermentum egestas. Ut augue odio, venenatis id convallis vel, congue quis augue. Maecenas sed maximus est, posuere aliquet tortor. Ut condimentum egestas nisi eu porttitor. Ut mi turpis, posuere id lorem vel, elementum tempor arcu.
+where we killed the odd terms in the series as these are integrals of odd functions (note that $\pdv{f_0(E)}{E}$ is an even function with respect to E)
 
-Morbi nisl arcu, venenatis non metus ac, ullamcorper scelerisque justo. Nulla et accumsan lorem. Mauris aliquet dui sit amet libero aliquet, in ornare metus porttitor. Integer ultricies urna eu consequat ultrices. Maecenas a justo id purus ultricies posuere sed et quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eleifend risus quis aliquet gravida. Nullam ac erat porta est bibendum dictum in a dolor. Nam eget turpis viverra, vulputate lectus eget, mattis ligula. Nam at tellus eget dui lobortis sodales et ut augue. In vestibulum diam eget mi cursus, ut tincidunt nulla pellentesque.
+By using the change of variable $x = \frac{E-\mu}{k_BT}$, the integral can be written as:
 
-Aliquam erat volutpat. Sed ultrices massa id ex mattis bibendum. Nunc augue magna, ornare at aliquet gravida, vehicula sed lorem. Quisque lobortis ipsum eu posuere eleifend. Duis bibendum cursus viverra. Nam venenatis elit leo, vitae feugiat quam aliquet sed. Cras velit est, tempus ac lorem sed, pharetra lobortis ipsum. Donec suscipit gravida interdum. Nunc non finibus est. Nullam turpis elit, tempus non ante.
+\begin{align}
+  I&=g(\mu)+\sum_{n=1}^{\infty} c_{2 n}\left(k_{B} T\right)^{2 n}\left[\frac{d^{2 n-1} h(E)}{d E^{2 n-1}}\right]_{\mu} \\
+  c_{2 n}&=\frac{1}{(2 n) !} \int_{-\infty}^{\infty} x^{2 n}\left[-\frac{d}{d x} \frac{1}{e^{x}+1}\right] d x,
+\end{align}
+
+Computing the coefficients is done throught the integration per parts: by using the following relation:
+\begin{equation}
+\int\limits_{0}^{\infty} x^{n-1} \frac{1}{e^{x+1}} d x=\left(1-2^{1-n}\right) \Gamma(n) \zeta(n),
+\end{equation}
+it is possible to work out a closed form for the coefficients, namely:
+
+\begin{align} 
+  c_{2 n} &=\frac{1}{(2 n) !}\left[-\left[x^{2 n} \frac{1}{e^{x}+1}\right]_{-\infty}^{\infty}+2 n \int_{-\infty}^{\infty} x^{2 n-1} \frac{1}{e^{x}+1} d x\right]\nonumber\\ &=\frac{1}{(2 n) !}\left[0+4 n\left(1-2^{1-2 n}\right) \Gamma(2 n) \zeta(2 n)\right] 
+\end{align}
+
+and we obtain
+$$
+\Gamma(n+1)=n ! \quad \zeta(2)=\frac{1 \pi^{2}}{6} \quad \zeta(4)=\frac{\pi^{4}}{90}
+$$
 
 \section{Mechanical Cycle}
 

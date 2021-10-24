@@ -30,6 +30,7 @@ We demonstrate that, at low temperatures, it is possible to obtain an analytical
   I=\int\limits_{-\infty}^{\mu} h(E) \text{d}E+\frac{\pi^{2}}{6}\left(k_{B} T\right)^{2}\left[h^{\prime}(E)\right]_{\mu}+\frac{7 \pi^{4}}{360}\left(k_{B} T\right)^{4}\left[h^{\prime \prime \prime}(E)\right]_{\mu}+\ldots
 \end{equation}
 
+For low-temperature here I mean those which satisfy the condition $T \ll T_F$, where $T_F = E_F/k_B$ is the Fermi temperature for an electron gas. 
 Let us define:
 
 $$
@@ -62,7 +63,7 @@ By using the change of variable $x = \frac{E-\mu}{k_BT}$, the integral can be wr
 
 \begin{align}
   I&=g(\mu)+\sum_{n=1}^{\infty} c_{2 n}\left(k_{B} T\right)^{2 n}\left[\frac{d^{2 n-1} h(E)}{d E^{2 n-1}}\right]_{\mu} \\
-  c_{2 n}&=\frac{1}{(2 n) !} \int_{-\infty}^{\infty} x^{2 n}\left[-\frac{d}{d x} \frac{1}{e^{x}+1}\right] d x,
+  c_{2 n}&=\frac{1}{(2 n) !} \int_{-\infty}^{\infty} x^{2 n}\left[-\frac{d}{d x} \frac{1}{e^{x}+1}\right] d x \label{app-1:eq:coefficients_sommerfeld},
 \end{align}
 
 Computing the coefficients is done throught the integration per parts: by using the following relation:

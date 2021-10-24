@@ -101,6 +101,27 @@ written as:
 where $\mathcal{T}$ is the transmission probability of an electron with single-particle energy $\epsilon$ to move across the source and drain leads. The Fermi-Dirac statistics
 $f_\textrm{FD}(\epsilon, T) = \frac{1}{1+e^{\epsilon_i - \mu/k_BT}} $ details the average number of fermions (electrons in our case) in a single-particle state $i$ with energy $\epsilon_i$ in thermodynamic equilibrium at temperature $T$. Therefore, it is used to quantify how many electrons from the source leads have a certain energy to be able to cross the molecular junction: this event, as everything in quantum mechanics, is detailed by the amplitude of the transmission probability $\mathcal{T}(\epsilon)$. 
 
+One can calculate the number of electrons in a crystal by multiplying the density of
+states $N(\epsilon)$ with the FD distribution and summing up this product for all energies:
+\begin{equation}
+    n = \int\limits_0^{\infty}f_\textrm{FD}(\epsilon)N(\epsilon)\text{d}\epsilon,
+\end{equation}
+
+The density of states $N(\epsilon)$ denotes the number of electron states per unit of energy and volume and differs for different materials.
+In such a system the chemical potential is defined as the amount of energy needed
+to add an additional electron to the system and naturally this quantity has an
+inherent temperature dependence as the energy of the system changes with $T$. An
+approximation for the chemical potential as a function of temperature and energy
+has been developed using the Sommerfeld expansion (cf. Appendix~\ref{app:1-sommerfeld}): since we are interested in low-temperature properties, we will consider only terms up to the second order of Eq.~\ref{app-1:eq:coefficients_sommerfeld}:
+\begin{equation}
+    \mu \approx \epsilon_{F}-\left.\frac{\pi^{2}}{6}\left(k_{B} T\right)^{2} \frac{1}{N\left(\epsilon_{F}\right)} \frac{\partial N(\epsilon)}{\partial \epsilon}\right|_{\epsilon=\epsilon_{F}}
+\end{equation}
+As is evident from this equation, the chemical potential decreases as the temperature
+rises, resulting in a potential gradient whenever a temperature gradient is applied.
+Any difference in T will therefore lead to a flow of electrons as the cost of adding
+another electron to the hot side would be lower than adding it to the cold side. This
+results in the build-up of a thermoelectric voltage in an open circuit.
+
 By multiplying this probability with the elementary charge $e$ gives the current for one energy level with a factor of two added due to spin degeneracy. After adding all of these possible transport channels together, which is done by taking the integral over all energies, and accounting for
 dimension normalization via the Planck constant $h$ it is possible to calculate the total current $I$ across the junction.
 
@@ -112,6 +133,8 @@ The electrical conductance is then retrieved by taking the derivative of the cur
 \end{align}
 
 As we will see in more detail later (cf. Sec.~\ref{sc:NEGF}), it is possible to compute the set of real eigenvalues for the transmission thorugh different approaches with varying degrees of complexity. One of them, which it has been used in cf. Ch.~\ref{ch:fet}, calcultes the product between the tunnel couplings and Green function terms. Other and more sophisticated approaches can be found in literature \cite{cuevas2010molecular}.
+
+
 
 
 \section{Thermoelectric Phenomena in Zero-Dimensional Structures}

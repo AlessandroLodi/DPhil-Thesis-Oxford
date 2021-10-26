@@ -88,7 +88,7 @@ mechanisms involve the simultaneous tunnelling of two electrons (\mccorrect{Figu
 In the strong coupling limit $\Gamma\gg\E_C, E_\textrm{add}(N), k_BT$ In this regime quantum dot and lead's states hybridise, the Coulomb blockade is smeared out by quantum fluctuations of the electric charge, and the main transport mechanism is now played by elastic coherent tunnelling. In this limit, the conductance can be approximated as $G\approx\frac{2e^2}{h}\mathcal{T}(E)$, where $\mathcal{T}(E)$ is the transmission probability for all the conduction channels thorugh the quantum dot evaluated at the Fermi energy. In the case of a single, well-isolated energy level, it is possible to recover the Breit--Wigner model for a single resonance.
 
 
-\subsection{Landauer Theory}
+\subsection{Landauer Theory}\label{ch:theory:sec:landauer_theory}
 In order to make predictions about the electronic and thermoelectric properties of QDs, a good model for electronic transport in mesoscopic to molecular-scale devices is necessary. In the limit of predominantly SET and assuming coherent transport, extending the Landauer formalism (originally a model for electrical conduction) towards thermoelectric effects has proven successful and is widely used. The Landauer formalism is a concept formulated in 1947 by Rolf Landauer that models conduction as transmission. The basic assumption is that two electron reservoirs are connected by a scatterer (QD island for the transport measurements presented here) through which electron transport is possible. The transport is then determined by the probability of electrons moving from one reservoir to the other
 through the scatterer. This probability is always between 0 and 1, which means there
 is an upper limit on conductance.
@@ -118,7 +118,7 @@ has been developed using the Sommerfeld expansion (cf. Appendix~\ref{app:1-somme
 \end{equation}
 As is evident from this equation, the chemical potential decreases as the temperature
 rises, resulting in a potential gradient whenever a temperature gradient is applied.
-Any difference in T will therefore lead to a flow of electrons as the cost of adding
+Any difference in $T$ will therefore lead to a flow of electrons as the cost of adding
 another electron to the hot side would be lower than adding it to the cold side. This
 results in the build-up of a thermoelectric voltage in an open circuit.
 
@@ -135,12 +135,18 @@ The electrical conductance is then retrieved by taking the derivative of the cur
 As we will see in more detail later (cf. Sec.~\ref{sc:NEGF}), it is possible to compute the set of real eigenvalues for the transmission thorugh different approaches with varying degrees of complexity. One of them, which it has been used in cf. Ch.~\ref{ch:fet}, calcultes the product between the tunnel couplings and Green function terms. Other and more sophisticated approaches can be found in literature \cite{cuevas2010molecular}.
 
 
-
-
 \section{Thermoelectric Phenomena in Zero-Dimensional Structures}
 
-What are the necessary changes that one has to take into account
-when dealing also with other extensive variable such as a temperature gradient
+In this section we will focus on those electrical phenomena arising when a thermal gradient is present between two junctions. As it is well know, macroscopically, the thermoelectric power that arises when two different materials are welded together in two points (junctions) is proportional to the temperature drop establishing when one of the junction is heated up at temperature $T_1 > T_2$; i.e.:
+\begin{equation}\label{ch2:eq:seeback_coeff}
+    \Delta V = S\Delta T
+\end{equation}
+where $\Delta V $ denotes the electrical potential drop and $S$ is the proportionality factor called Seebeck coefficient. For reasons that will become clear later, it is prefferred to define the as the negative voltage difference $\Delta V$ induced per unit temperature change $\Delta T$, namely $S = - \lim_{\Delta T\to 0} \frac{\Delta V}{\Delta T}$. 
+
+There are two approaches used to model the electronic distribution in a solid when external paramaters such as heat and/or non-uniform fields are applied. The Boltzmann approach infers the dynamics of a diluted gas of semi-classical particles: in the semiclassical description of transport, the electron ensamble is described by a probability distribution function $f(\vec{r}, \vec{k}, t)$, which details the number of electrons that a certain time $t$ are within a volume $\text{d}\vec{r}$ with wave vector within the interval $\text{d}\vec{k}$. In the case where quantum effects play a role in transport, that is if the potential of the structure varies sharply with respect to the particle average thermal wavelength, the Boltzmann approach is no longer valid. 
+
+The second applicable framework is the Landauer theory (cf. Sec.~\ref{ch:theory:sec:landauer_theory}) which is used for low temperature thermoelectric calculations in mesoscopic structures \mccorrect{cite Cuevas}. The Landauer formalism has the advantage of assuming a constant mean-free path, rather than a constant relaxation time of the electrons as the Boltzmann approach does, which
+is more useful in experiments. In addition, the Landauer approach is valid in the ballistic and quasi-ballistic regime.
 
 \section{Density Functional Theory}
 

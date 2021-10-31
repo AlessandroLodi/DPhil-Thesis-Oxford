@@ -137,7 +137,7 @@ As we will see in more detail later (cf. Sec.~\ref{sc:NEGF}), it is possible to 
 
 \section{Thermoelectric Phenomena in Zero-Dimensional Structures}
 
-In this section we will focus on those electrical phenomena arising when a thermal gradient is present between two junctions. As it is well know, macroscopically, the thermoelectric power that arises when two different materials are welded together in two points (junctions) is proportional to the temperature drop establishing when one of the junction is heated up at temperature $T_1 > T_2$; i.e.:
+In this section we will focus on those electrical phenomena arising when a thermal gradient is present between two junctions \cite{behnia2015fundamentals}. As it is well know, macroscopically, the thermoelectric power that arises when two different materials are welded together in two points (junctions) is proportional to the temperature drop establishing when one of the junction is heated up at temperature $T_1 > T_2$; i.e.:
 \begin{equation}\label{ch2:eq:seeback_coeff}
     \Delta V = S\Delta T
 \end{equation}
@@ -147,6 +147,32 @@ There are two approaches used to model the electronic distribution in a solid wh
 
 The second applicable framework is the Landauer theory (cf. Sec.~\ref{ch:theory:sec:landauer_theory}) which is used for low temperature thermoelectric calculations in mesoscopic structures \mccorrect{cite Cuevas}. The Landauer formalism has the advantage of assuming a constant mean-free path, rather than a constant relaxation time of the electrons as the Boltzmann approach does, which
 is more useful in experiments. In addition, the Landauer approach is valid in the ballistic and quasi-ballistic regime.
+
+It is possible to formulate a similar expression for the flow of heat $Q$ from one reservoir to the other by multiplying the particle transmission with the particle
+energy ($\epsilon - \mu$):
+\begin{equation}
+    I = \frac{2}{h} \int\limits_{-\infty}^{+\infty}(\epsilon - \mu)\mathcal{T}(\epsilon)f(\epsilon, T))\text{d}\epsilon.
+\end{equation}
+If the electrical or thermal gradient are treated within a linear approximation, such that $\Delta T = T_0 - T$ and $e\Delta V = \mu_0 - \mu$, the Fermi-Dirac distrubtion can be rewritten in a Taylor series and stopping and the first order of the expansion:
+\begin{equation}
+    f(T, \epsilon)=f^{0}-\frac{\partial f}{\partial \epsilon}\left[e \Delta V-\frac{\epsilon-\mu}{k_{B} T} \Delta T\right]
+\end{equation}
+Thus, the total amount of current flowing within the device is given from the thermoelectric current due to the thermal gradient $\Delta T$ applied to the junction and the electric current due to bias applied between source and drain:
+\begin{align}
+    I &= G\Delta V - L\Delta T,\label{eq:current_voltage_temperature}\\
+    Q &= LT\Delta V - K\Delta T. 
+\end{align}
+Here $G$, $L$, and $K$ denotes the electric, the thermoelectric and the thermoconductance, resepctively. The relation expressed in Eq.~\ref{eq:current_voltage_temperature} is particularly convenient, as through the Wiedemann-Franz law it is possible to retrieve the Seebeck coefficient. For an open circuit we will then have:
+\begin{align}
+    I &= 0 = G\Delta V - L\Delta T,\nonumber\\
+    \sigma\Delta V&= \alpha\Delta T,\nonumber\\
+    \frac{\Delta V}{\Delta T} &= \frac{\alpha}{\sigma}
+\end{align} 
+where we called with $\sigma$ the conductivity. This relation allows us to identify the Seebeck coefficient as:
+\begin{equation}
+    S = - \frac{\Delta V}{\Delta T} = \frac{\sigma}{\alpha}.
+\end{equation}
+
 
 \section{Density Functional Theory}
 

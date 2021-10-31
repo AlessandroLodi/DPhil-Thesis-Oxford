@@ -132,7 +132,7 @@ Eq.~\ref{intro:sec:graphene:eq:energy_bands} as $\vect{k} = \vect{K} + \vect{q}$
     E_{\pm}(\vect{q}) = \epsilon_p \pm \frac{3at}{2}\abs{\vect{q}}
 \end{equation}
 which is linear in \vect{q}. For intrinsic graphene, at $T = 0 $K $E_F = \epsilon_p$. The Fermi velocity is defined by the usuale relation $v_F = \frac{1}{\hbar}\qty(\dv{E}{\vect{k}})$,
-and in graphene $v_F\simeq1\times 10^6$\si{\metre\per\second}.
+and in graphene $v_F\simeq1\times 10^6~\textrm{ms}^{-1}$ $= 0.66~\textrm{eV}\times\textrm{nm}\times\hbar^{-1}$.
 
 A difference arises in the density of the states, when we limit ourselves to consider those near the Fermi energy.
 In the case of a two-dimensional electron gas, it is constant. On the contrary for graphene, the density of states per unite cell is:
@@ -152,6 +152,16 @@ In the case of a two-dimensional electron gas, it is constant. On the contrary f
 
 If the graphene is charge-neautral, the DOS has two Van Hove singularities at $\omega_\textrm{VH} = \pm~1$\si{\electronvolt} \cite{bena2005quasiparticle}. This behaviour is in stark constrat with the DOS
 of carbon nanotubes and clean graphene nanoribbons, as they show $1/\sqrt{E}$ singularities due to the 1D nature, which imposes a quantization perpendicular to the ribbon or tube longitudinal direction.
+
+Using the Einstein-Smoluchowski relation within the semiclassical description, from the DOS it is possible to model the (semiclassical) conductivity as:
+\begin{equation}
+    \sigma_{\mathrm{sc}}=e^{2} \rho(E) v(E) \ell_{\mathrm{el}}
+\end{equation} 
+and from this one can calculate the charge mobility, which, at zero temperature, reads: 
+\begin{equation}
+    \mu(E)=\sigma_{\mathrm{sc}}(E) / e n(E)
+\end{equation}
+w is the semiclassical conductivity deduced from the Einstein formula, with $\rho(E)$ the DOS, $(E)$ the charge density at energy $E, \ell_{\mathrm{el}}$ the elastic mean free path, and $e$ the elementary charge. The charge mobility is often used as a figure to assess the graphene strucure quality. Close to the Dirac points, the measured experimental conductivities are mostly found to range within $\approx 2-5 e^{2}/ h$, although the charge mobility can vary due to doping from the contacts and/or the substrate by almost one order of magnitude (Jiang et al. 2007;Oezyilmaz et al. 2007; Zhang et al. 2006).
 
 % \subsection{thermal conductivity}
 
@@ -180,8 +190,6 @@ that is constant over a quite wide range of $n$ (yielding in this case $\mu_h\ap
 
 The mobility is limited by different factors such as scattering by charged impurities or defects and electron-phonon scattering. In very clean and suspended samples (where the underling SiO$_2$ substrate has been etched away) the mean free path $l$ increases by almost two order of magnitude, becoming comparabe to the device size, an indication that the ballistic transport regime is reached %\cite{Bolotin2008, du2008andrei}.
 
-
- 
 Later in 2008 \cite{bolotin2008ultrahigh} and 2013 \cite{wang2013one}, higher mobility values were reported: $\approx120,000$ cm$^{2}$V$^{-1}$s$^{-1}$ at 240 K and $\approx1,000,000$ cm$^{2}$V$^{-1}$s$^{-1}$ at 4 K. The reason for these higher values was attributed to the use of suspended graphene rather
 onto substrate, where surface effects inevitably affect the carrier dynamics. At the same time, results ($\approx120,000$ cm$^{2}$V$^{-1}$s$^{-1}$) obtained at room temperature with graphene onto a single-layer of hexagonal boron nitride (hBN) \cite{dean2010boron} and sandwiched between two hBN layer \cite{wang2013one} have suggested 
 that this flat and inert materials can be act as a excellent passivation film for graphene devices.
@@ -552,7 +560,6 @@ except for the second term, which is given by the summation of spin-polarised de
 The hamiltonian in Eq.~\ref{eq:gnr_chiral_hubbard_hamiltonian} respects the electron-hole symmetry, meaning that the density of states is symmetric respect to the $E_F$. 
 The solution of the model displays interesting features: two pairs of peaks split ($\Delta_0$ and $\Delta_1$) in the density of states are observed, one associated with the electronic band gap, and one associated with the maximum energy splitting. 
 
-
 \begin{figure}
     \begin{center}
     \includegraphics[width=0.95\textwidth]{chapter_introduction/figures/han2007_just_twp.pdf}
@@ -566,8 +573,6 @@ The solution of the model displays interesting features: two pairs of peaks spli
     \end{center}
 \end{figure}
 
-
-
 The authors claim that the first peak split arises due to an AFM correlation between opposite edges, while $\Delta_1$ is a consequence of a ferromagnetic order due to strong localised state along a single edge. 
 Within this description, it is legit to link the behaviour of chiral GNRs with the one of spin-polarised ZGNRs; thus the total energy difference between ferromagnetic and antiferromagnetic couplings should be in the order of tens of meV per edge atom 
 and should decrease as the width of the ribbon increases, eventually becoming negligible when the ribbon width is significantly larger 
@@ -575,11 +580,33 @@ than the decay length of the spin polarized \cite{lee2005magnetic}. Both feature
 
 \subsubsection{GNRFET}
 
+The dispersion relation E(\vect{k}) for a sub-10-nm-wide semiconducting \gls{GNR} can be legitemately expressed by imposing a lateral confinement of the wave vectors in one direction \cite{wang2008room}:
+\begin{equation}
+    E(\vect{k}) = \frac{3ta}{s}\abs{\vect{k}} = \frac{3ta}{2}\sqrt{k_\parallel^2 + k_\perp^2})
+\end{equation}
+where $t$ is the nearest neighbour hopping parameter, $a$ is the C-C bonding length, where $k_\parallel$ and $k_\perp$ are the components of the wave vector $\vect{k}$ along the transport and the confinement directions, respectively. The resulting carrier kinetic energy in case of no mid-gap states is thus $E_k = E(k) - E_g$, with $E_g = 3ta\abs{k_\perp}/2$.
 
+In order to quantify the mean free path for the carriers, Wang \text{et al.} \cite{wang2008room} considered the total mean free path given from the contribution of edge, defect, and (flexural) phonons:
+\begin{equation}
+    \frac{1}{\ell} = \frac{1}{\ell_\textrm{edge}} + \frac{1}{\ell_\textrm{phonon}} + \frac{1}{\ell_\textrm{defect}}
+\end{equation}
+Without loss in generality, a simple estimation of the probability a backscattering event due to the edges should lower the mean free path as \cite{wang2008room}:
+\begin{equation}\label{ch1:eq:mfp_edge}
+    \ell_\textrm{edge} = \frac{k_\parallel w_\textrm{gnr}}{P k_\perp}
+\end{equation} 
+For ribbons with widths below 20 nm and exluding interaction effects, the energy gap should scale inversely with the ribbon width \cite{stampfer2008tunable}, namely:
+\begin{equation}\label{ch1:eq:bandgap_width}
+E_g\approx\hbar v_F/w_\textrm{gnr}
+\end{equation}
+and by plugging this and the dispersion relation $E_k$ into Eq.~\ref{ch1:eq:mfp_edge}, it is possible to work out a dependence of the edge mean free path with the total ribbon width:
+\begin{equation}
+    \ell_\textrm{edge} = \frac{w}{P}\sqrt{\qty(1 + \frac{E_k}{E_g})^2 - 1}
+\end{equation}
 
+In one of the first \glspl{GNRFET} prototype realised with ultra-narrow ribbons as channel material, the Dai's group reported impressive performance such as $I_\textrm{on}\approx$ 2000 \si{\micro\ampere\per\micro\metre}, $I_\textrm{on}/I_\textrm{off}\approx 10^6$, $SS = 210$ mV/dec, and $g_\textrm{m} = 900$ \si{\micro\siemens\per\micro\metre}. Those \glspl{GNR} were synthesised using sonochemistry methods, achieving widths down to $w_\textrm{GNR}\approx$ \SI[multi-part-units = single]{2.0(5)}{\nano\metre} and lengths of about $l_\textrm{GNR}\approx 236$.
 
-First prototype of a field-effect transistor realised with very narrow graphene nanoribbon as channel material was realised in 2008 by the Dai's group, \cite{wang2008room}, using sonochemistry methods and global Si/SiO$_2$ backgate. 
-In particular, with widths $w_\textrm{GNR}\approx$ \SI[multi-part-units = single]{2.0(5)}{\nano\metre} and lengths of $l_\textrm{GNR}\approx 236$ nm, they were able to obtained impressive transistor performance such as $I_\textrm{on}\approx$ 2000 \si{\micro\ampere\per\micro\metre}, $I_\textrm{on}/I_\textrm{off}\approx 10^6$, $SS = 210$ mV/dec, $g_\textrm{m} = 900$ \si{\micro\siemens\per\micro\metre}. 
+using sonochemistry methods and global Si/SiO$_2$ backgate. 
+In particular,  nm, they were able to obtained impressive transistor performance such as . 
 This pioneer work sparked an exciting \glspl{GNRFET} research (see table \mccorrect{place table GNRFET}).
 
 
@@ -633,3 +660,23 @@ This pioneer work sparked an exciting \glspl{GNRFET} research (see table \mccorr
     
 \end{table}
 \FloatBarrier
+
+
+While it has been advanced in the past the possibility to obtain graphene nanoribbons from nanotubes \mccorrect{cite work on unzipped CNT}, it is relatively recent the proposal of using high-pressure conditions and thermal treatments to produce ultranarrow (sub-10-nm-wide) \glspl{GNR} from \glspl{CNT}, resulting in average lengths in the order of $\mu$m range. 
+
+The p-type on-state conductivity of the ribbon channel (w$_\textrm{gnr}\approx 2.8$ nm) when placed in a MOSFET geometry is: 
+\begin{equation}
+    \sigma = G_\textrm{sd}L_\textrm{ch}/w_\textrm{gnr} = 7.42~\text{mS}    
+\end{equation}
+and $I_\textrm{on}/I_\textrm{off} \approx 10^5$. Using Eq.~\ref{eq:bandgap_current_ratio}, the authors reports a $E_g \approx 494$ meV. A further comparison was carried out by comparing the mobilities values obtained for while increasing up to 10 nm the GNRs width 
+
+ Hole field-effect mobility was calculated using the classic MOSFET model through the relation:
+\begin{equation}
+    \mu = g_\textrm{m}L/(C_\textrm{gs}V_\textrm{sd})    
+\end{equation}  
+and estimating the gate capacitance with an electrostatic 3D model. 
+
+Interesting enough, the hole mobilities values (2,443 cm$^{2}$V$^{-1}$s$^{-1}$ for the 2.8 wide and 3.776 cm$^{2}$V$^{-1}$s$^{-1}$ for the 10 nm wide) are amongst the best values obtained so far. The role of strained bulbs and non-spherical cross section at the two edges is not clarified yet and thus could reproduce unpredictable effects due to uncontrolled scattering mechanism. 
+
+
+% For a semiconducting GNR the dispersion E($\vect{k}$) relation of a semiconducting GNR can be approximately expressed as with an expression similar to the graphene relation: for sub-10 nm it is considered legit to assume a lateral confinement of the wave vectors in two directions, thus the energy dispersion relation can be written as 

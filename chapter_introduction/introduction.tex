@@ -474,7 +474,6 @@ While Rh contacts would be unaffordable at large scale due to manufacturing cost
 Recently, it has been advanced graphene as interlayer between the metal contact and the nanotube: the idea would be to have a work function closer to the nanotube one in order to avoid the level pinning effects due to gap states and interface contaminations.
 
 
-
 \section{Graphene Nanoribbons}
 
 Amongst the wide variety of carbon alternatives explored in the last two decades, \glspl{GNR} have certainly acquired a lot of interests. Amongst the perks, chemical synthesis of \glspl{GNR} is now cost effective, they have comparable electrical performance (small effective mass, high charge mobility, and high saturation velocity) compared with the \glspl{CNT}, without the need to separate metallic from semiconducting \glspl{GNR}, and they can be easily tailored through chemical synthesis \cite{cai2010atomically, schwab2012structurally}.
@@ -579,36 +578,34 @@ and should decrease as the width of the ribbon increases, eventually becoming ne
 than the decay length of the spin polarized \cite{lee2005magnetic}. Both features are in fact recovered from the solution of Eq.~\ref{eq:gnr_chiral_hubbard_hamiltonian}.
 
 \subsubsection{GNRFET}
-
-The dispersion relation E(\vect{k}) for a sub-10-nm-wide semiconducting \gls{GNR} can be legitemately expressed by imposing a lateral confinement of the wave vectors in one direction \cite{wang2008room}:
+In one of their first \glspl{GNRFET} prototype, the Dai's group synthesised ultra-narrow \glspl{GNR} using sonochemistry methods, achieving widths down to $w_\textrm{GNR}\approx$ \SI[multi-part-units = single]{2.0(5)}{\nano\metre} and lengths of about $l_\textrm{GNR}\approx 236$ \cite{wang2008room}. For that kind of semiconducting ribbons -- i.e. $w_\textrm{GNR} \leq 10$ nm -- the wave vector in the dispersion relation E(\vect{k}) can be broken down into a component along the transport direction $k_\parallel$ and other $k_\perp$ along the confinement direction:
 \begin{equation}
     E(\vect{k}) = \frac{3ta}{s}\abs{\vect{k}} = \frac{3ta}{2}\sqrt{k_\parallel^2 + k_\perp^2})
 \end{equation}
-where $t$ is the nearest neighbour hopping parameter, $a$ is the C-C bonding length, where $k_\parallel$ and $k_\perp$ are the components of the wave vector $\vect{k}$ along the transport and the confinement directions, respectively. The resulting carrier kinetic energy in case of no mid-gap states is thus $E_k = E(k) - E_g$, with $E_g = 3ta\abs{k_\perp}/2$.
+where $t$ is the nearest neighbour hopping parameter and $a$ is the carbon-carbon bonding length. The resulting carrier kinetic energy in case of no mid-gap states is then $E_k = E(k) - E_g$, with $E_g = 3ta\abs{k_\perp}/2$.
 
-In order to quantify the mean free path for the carriers, Wang \text{et al.} \cite{wang2008room} considered the total mean free path given from the contribution of edge, defect, and (flexural) phonons:
+Although a few impressive transistor key figures, such as $I_\textrm{on}\approx$ 2000 \si{\micro\ampere\per\micro\metre}, $I_\textrm{on}/I_\textrm{off}\approx 10^6$, $SS = 210$ mV/dec, and $g_\textrm{m} = 900$ \si{\micro\siemens\per\micro\metre} were reported, degraded carrier mobility  within the $\approx$ 50--200 cm$^{2}$V$^{-1}$s$^{-1}$ range were also seen for narrower \glspl{GNR}.  The reason for this unexpected result is double-fold. Firstly, it is well estabilished the tendecy in  solid-state (conventional) semiconductors of decreasing mobilities for increasing bandgaps. Secondly, it
+has been attributed that carrier transport in \glspl{GNR} is dominated by edge effects.
+
+In order to quantify the contribution from the edges to the total carrier mean free path $\ell$, Wang \textit{et al.} prososed a phenomenological model where edges, defects, and phonons are considered independent \cite{wang2008room}:
 \begin{equation}
     \frac{1}{\ell} = \frac{1}{\ell_\textrm{edge}} + \frac{1}{\ell_\textrm{phonon}} + \frac{1}{\ell_\textrm{defect}}
 \end{equation}
-Without loss in generality, a simple estimation of the probability a backscattering event due to the edges should lower the mean free path as \cite{wang2008room}:
+Without loss in generality, the probability of a scattering event occurring should be inversely proportional to the free mean path:
 \begin{equation}\label{ch1:eq:mfp_edge}
     \ell_\textrm{edge} = \frac{k_\parallel w_\textrm{gnr}}{P k_\perp}
 \end{equation} 
-For ribbons with widths below 20 nm and exluding interaction effects, the energy gap should scale inversely with the ribbon width \cite{stampfer2008tunable}, namely:
+Since for ribbons having widths below 20 nm - and exluding interaction effects - the energy gap should scale inversely with the ribbon width \cite{stampfer2008tunable}:
 \begin{equation}\label{ch1:eq:bandgap_width}
-E_g\approx\hbar v_F/w_\textrm{gnr}
+E_g\approx\frac{\hbar v_F}{w_\textrm{gnr}}
 \end{equation}
-and by plugging this and the dispersion relation $E_k$ into Eq.~\ref{ch1:eq:mfp_edge}, it is possible to work out a dependence of the edge mean free path with the total ribbon width:
+it is possible to work out a dependence of the edge mean free path with the total ribbon width by plugging Eq.~\ref{ch1:eq:bandgap_width} and the dispersion relation $E_k$ into Eq.~\ref{ch1:eq:mfp_edge}:
 \begin{equation}\label{ch1:eq:mfp_edge_backscattering}
     \ell_\textrm{edge} = \frac{w}{P}\sqrt{\qty(1 + \frac{E_k}{E_g})^2 - 1}
 \end{equation}
-Eq.~\ref{ch1:eq:mfp_edge_backscattering} suggests that an increase of width and/or an improvement of the edge quality should lead to an increase of the mean free path. These considerations were  confirmed experimentally, as higher mobilities were measured for sub-10 nm ribbons with increasing widths \cite{wang2008room}.
+Eq.~\ref{ch1:eq:mfp_edge_backscattering} suggests that an increase of width and/or an improvement of the edge quality should lead to an increase of the mean free path. These considerations were confirmed experimentally, as higher mobilities were reported for sub-10 nm ribbons with increasing widths \cite{wang2008room, geng2017graphene}. 
 
-One consequence of this behaviour is that lower off state leakage and higher on state current density respect to Pd-contacted CNTFETs were measured, for devices compared based on the same on/on ratios \cite{wang2008room}.
-
-In one of the first \glspl{GNRFET} prototype realised with ultra-narrow ribbons as channel material, the Dai's group reported impressive performance such as $I_\textrm{on}\approx$ 2000 \si{\micro\ampere\per\micro\metre}, $I_\textrm{on}/I_\textrm{off}\approx 10^6$, $SS = 210$ mV/dec, and $g_\textrm{m} = 900$ \si{\micro\siemens\per\micro\metre}. Those \glspl{GNR} were synthesised using sonochemistry methods, achieving widths down to $w_\textrm{GNR}\approx$ \SI[multi-part-units = single]{2.0(5)}{\nano\metre} and lengths of about $l_\textrm{GNR}\approx 236$.
-
-
+% One consequence of this behaviour is that lower off state leakage and higher on state current density respect to Pd-contacted CNTFETs were measured, for devices compared based on the same on/on ratios \cite{wang2008room}.
 
 \FloatBarrier
 \begin{table}
@@ -661,22 +658,25 @@ In one of the first \glspl{GNRFET} prototype realised with ultra-narrow ribbons 
 \end{table}
 \FloatBarrier
 
-
 While it has been advanced in the past the possibility to obtain graphene nanoribbons from nanotubes \mccorrect{cite work on unzipped CNT}, it is relatively recent the proposal of using high-pressure conditions and thermal treatments to produce ultranarrow (sub-10-nm-wide) \glspl{GNR} from \glspl{CNT}, resulting in average lengths in the order of $\mu$m range. 
 
 The p-type on-state conductivity of the ribbon channel (w$_\textrm{gnr}\approx 2.8$ nm) when placed in a MOSFET geometry is: 
 \begin{equation}
-    \sigma = G_\textrm{sd}L_\textrm{ch}/w_\textrm{gnr} = 7.42~\text{mS}    
+    \sigma = \frac{G_\textrm{sd}L_\textrm{ch}}{w_\textrm{gnr}} = 7.42~\text{mS}    
 \end{equation}
-and $I_\textrm{on}/I_\textrm{off} \approx 10^5$. Using Eq.~\ref{eq:bandgap_current_ratio}, the authors reports a $E_g \approx 494$ meV. A further comparison was carried out by comparing the mobilities values obtained for while increasing up to 10 nm the GNRs width 
-
- Hole field-effect mobility was calculated using the classic MOSFET model through the relation:
+and $I_\textrm{on}/I_\textrm{off} \approx 10^5$. Using Eq.~\ref{eq:bandgap_current_ratio}, the authors reports a $E_g \approx 494$ meV. A further comparison was carried out by comparing the mobilities values obtained for while increasing up to 10 nm the GNRs width. Hole field-effect mobility was calculated using the classic MOSFET model through the relation:
 \begin{equation}
-    \mu = g_\textrm{m}L/(C_\textrm{gs}V_\textrm{sd})    
+    \mu = \frac{g_\textrm{m}L_\textrm{ch}}{C_\textrm{gs}V_\mathrm{sd}} 
 \end{equation}  
 and estimating the gate capacitance with an electrostatic 3D model. 
 
-Interesting enough, the hole mobilities values (2,443 cm$^{2}$V$^{-1}$s$^{-1}$ for the 2.8 wide and 3.776 cm$^{2}$V$^{-1}$s$^{-1}$ for the 10 nm wide) are amongst the best values obtained so far. The role of strained bulbs and non-spherical cross section at the two edges is not clarified yet and thus could reproduce unpredictable effects due to uncontrolled scattering mechanism. 
+Interesting enough, the hole mobilities values (2,443 cm$^{2}$V$^{-1}$s$^{-1}$ for the 2.8 nm wide and 3.776 cm$^{2}$V$^{-1}$s$^{-1}$ for the 10 nm wide) are amongst the best values obtained so far. The role of strained bulbs and non-spherical cross section at the two edges is not clarified yet and thus could reproduce unpredictable effects due to uncontrolled scattering mechanism. 
 
+\subsubsection{TFET}
+One of the main problems in scaling down the CMOS technology is heat dissipation. As the carriers are thermally injected, it is difficult to scale down $V_\textrm{sd}$ whilst increasing the switching (operational) speed and the keeping a low off-state power dissipation; thus, since $P_\textrm{off} = RI_\textrm{off}^2$, this boils down to hold a low off-state current. Furthermore, the mechanism of charge carrier transfer by thermal means places a limit to the subthreshold slope figure, which for a \gls{MOSFET} is limited to $2.3 k_BT/q = 60$ mv/dec at room temperature \cite{sze2021physics}. 
 
-% For a semiconducting GNR the dispersion E($\vect{k}$) relation of a semiconducting GNR can be approximately expressed as with an expression similar to the graphene relation: for sub-10 nm it is considered legit to assume a lateral confinement of the wave vectors in two directions, thus the energy dispersion relation can be written as 
+Interesting alternatives arise when instead of focusing on the maximum output on state current the on/off ratio is increased by lowering the off state current. If the source-carrier injection happens through an interband tunnelling mechanism instead of a thermal injection, the tunnelling transmission probability becomes temperature independent (Zener tunnelling). 
+
+A proposal from \cite{hamman2018sub} reports band-to-band tunneling (BTBT) in a sub-10 nm GNR controlled through a triple top gate transistor. In their device, the outer gates are used to define the $p$ and $n$ doped regions while the middle gate modulates the channel current. Width and bandgap estimated with Eq.~\ref{ch1:eq:bandgap_width} of about 9.4 nm and 70 meV were reported.
+% % Single layer chemical vapor deposition grown graphene sample is coated high-resolution negative tone ebeam resist, hydrogen silsesquioxane (HSQ), and patterned to form an etch mask defining the nanoribbon with a length of 500 nm. 
+% The narrow GNR was achieved by the reactive ion etching (RIE) technique, where oxygen plasma is used to etch away the unprotected CVD graphene, leaving the GNR protected underneath the HSQ etching mask. GNR width and the effective GNR width estimated around 9.4 nm and $E_g\approx 70$ meV. 

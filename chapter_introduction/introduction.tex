@@ -2,31 +2,39 @@
 
 \minitoc
 
-In this chapter, I seek to give the motivation and context for this thesis: the investigation of molecular synthesised \glspl{GNR} for use in nanoelectronics. To this end, I will provide a brief introduction of the major all-carbon alternatives already investigated. The chapter is structured as to present first the solid-state crystal properties, and how these lead to unique and different dispersion relations across graphene, \glspl{CNT}, and \gls{GNR}. Secondly, the most relevant applications and limitations are outlined. 
+In this chapter, I seek to give the motivation and context for this thesis: the investigation of molecular synthesised \glspl{GNR} for use in nanoelectronics. To this end, I will provide a brief introduction of the major all-carbon alternatives already investigated. The chapter is structured as to present first the solid-state crystal properties, and how these lead to unique and different dispersion relations across graphene, \glspl{CNT}, and \glspl{GNR}. Secondly, the most pertinent applications--and limitations--in modern electrons are outlined. 
 
 \section{Motivation}\label{intro:sec:motivation}
 
 The widespread shortage of semiconductors begun in the late 2020 has called both major chipmakers and the scientific community to think more deeply and actively to beyond-silicon replacements.
 For largely over three decades, the main research-driven factor in the transistor industry has been the \gls{CMOS} density scaling; now it is leaving the floor to pursuit short-channel-effects robust materials and which are capable of being integrated in silicon production pipelines.
-According to Bloomberg, the basic costs of building a semiconductor factory are around 15 with profit requirements in the order of 3 to sustain market competition and avoid becoming obsolete \cite{king2021}. These figures are also supported by an analysis done last year by the Boston Consulting Group, which places the investments in R\&D (22\% of annual semiconductors sales) and capital expenditure (26\%) as the highest across all industries.
+
+According to Bloomberg, the basic costs of building a semiconductor factory are around 15 with profit requirements in the order of 3 to sustain market competition and avoid becoming obsolete \cite{king2021}. These figures are also supported by an analysis done last year by the Boston Consulting Group, which places the investments in R\&D (22\% of annual semiconductors sales) and capital expenditure (26\%) as the highest across all industries \cite{veras2021}.
 
 \co{Evidence 3 for the argument carbon electronics could be a valid alternative to Si}
-\subsubsection{graphene in silicon pipelines}
-The large market position and capitalisaiton of chip makers industry have induced the proposals of integrating graphene in the semiconductor manufacturing cycle. Typically these are split between front- and back-end lines: while the former use temperature as high as 1000 K for activating the dopant process, back-end lines require milder temperatures (approximately 450 K), thus offering possible graphene integration solutions. \Gls{CVD} through plasma enhanced techinques has permitted the direct growth of graphene on silicon. The amorphous nature of Si and the presence of defects, however, are major sources of poor perfomance due to defects induced in the graphene layer. This circumstances could be mitigated by sputtering Cu particles onto the surface on top of the substrate, followed by graphene growth and metal removal. The last step can be problematic, as removing Cu catalyst requires etchants and high temperatures not compatible with back-end lines.
+The large market position and capitalisaiton of the major chip makers have persuaded the proposals of integrating graphene in the semiconductor manufacturing cycle. Typically these are split between front- and back-end lines: while the former use temperature as high as 1000 K for activating the dopant process, back-end lines require milder temperatures--approximately 450 K--thus offering the possibility of successfully intergate graphene into the fabrication pipelines. While \gls{CVD} through plasma enhanced techinques has permitted the direct growth of graphene on silicon, the amorphous nature of Si and the presence of defects in the substrates reduce the graphene layer quality. 
 
-Decoupling the growth process from the final substrate offers a valid alternative: graphene is \gls{CVD}-grown of Cu or Pt substrate and then transer graphene onto the target surface. Whilst suitable mobility values in the order of 10,000 cm$^{2}$V$^{-1}$s$^{-1}$ have been proved, this process has two major hurdles. Firstly, 
+One possible solution to mitigate these issues would be to directly grown graphene onto the Si substrate. In order to do so, it is required that first the substrate is sputterend with a catalyst, which typically comes in form of Cu particles sputtered in vacuum. The critical step, in this case, is the removal of the metal substrate, as it often requires the use of etchants and high-temperatures, which are unsuitable for back-end lines processing.
+
+Decoupling the growth process from the final substrate offers a second and, often, more valid  alternative compared to the direct growth. Graphene is first \gls{CVD}-grown on Cu or Pt substrate, and then transferred onto the target surface. 
+\mccorrect{Describe few transferring method, such as bubble assisted, wet, dry, support-free}
+Whilst suitable mobility values in the order of 10,000 cm$^{2}$V$^{-1}$s$^{-1}$ have been proved, this process has two major hurdles. Firstly, 
 wafer-scale transferring techniques use polymers to handle graphene. Generally these are all high-molecular-weight polymers, such as PMMA, which are also flexible, to limit the surface tensions on graphene that could cause ripples and folds. Secondly,  
 delaminating the metal substrate leaves contaminants in the graphene layer, causing unwanted doping effects. 
 
+While these production and integration approaches are relatively new compared to the traditional silicon electronics, commercial monolayer graphene is nowadays produced by several companies and start-ups, with prices ranging from 15\$/cm$^2$ (Grolltex) to 195.58\$/cm$^2$ (2D semiconductors).
+%71.12 for Graphene supermarket, 81.28 for acs materials, 111.76 for graphenea.    
+
+
 \section{Graphene}\label{intro:sec:graphene}
 
-\subsection{crystal structure}
+\subsection{Crystal Structure}
 Graphene has a hexagonal structure where the carbon atoms are hybridised $sp^2$, as detailed by the Pauling theory on chemical bonds. Based on the experimental evidence collected in the last 20 years, the model
 that seems to best describe the proprierties of graphene is the band-structure Wallace model, which dates back in 1947, and describes graphene as a semimetal with a linear dispersion of the electronic excitations.
 In the International Table of Crystallography, graphene is included in the symmorphic space group \#191, with symmetry $D^1_6h$ ($P6/mmm$).
 The triangular lattice is obtained by considering two atoms per unit cell having the respective lattice vectors:
 
-The carbon atoms in graphene form a two-dimensional hexagonal crystal with two atoms per unit cell, as shown \mccorrect{in figure}.
+The carbon atoms in graphene form a two-dimensional hexagonal crystal with two atoms per unit cell, as shown in Fig.~\ref{fig:graphene_lattice}:
 \begin{equation}\label{eq:graphene_lattice_vectors}
     \vect{a}{_1} = \frac{a}{2}(3, \sqrt{3}),~
     \vect{a}{_2} = \frac{a}{2}(3, -\sqrt{3}),
@@ -100,7 +108,7 @@ The third and last case gives the point:
 \end{equation}
 
 
-\subsection{band dispersion}
+\subsection{Band Structure}
 The electronic structure of graphene can be model with a tigh-binding hamiltonian.
 Following the second quantization formalism ($\hbar = 1$ units), the hamiltonian can be written as:
 
@@ -123,17 +131,10 @@ with $f(\vect{k})$ defined as:
 \begin{figure}
 \begin{center}
 \includegraphics[width=0.95\columnwidth]{chapter_introduction/figures/graphene_lattice.pdf}
-\caption{\label{fig:fig2}
-(a) Numerical simulations of $dI/dV$ as a function of $V$ and $B$, including the Zeeman and the orbital (Lorentz) effect of the magnetic field.
-(b) Same as (a), but including Zeeman and SOI instead of the orbital effect, reproducing the anisotropy in Fig.~\ref{fig:fig1}(e).
-(c) Same as (b), but including the Zeeman, SOI and orbital effect.
-The parameters used in (a)-(c) are $\mu$ $=$ 5.6 meV and $\Delta V_G$ $=$ -8 meV.
-(a) Graphene lattice resulted from two non-equivalent carbon atoms A and B (yellow and purple dots) and the honeycomb lattice symmetry, where the translational vectors $\vect{a}{_1},\vect{a}{_2}$ have been highlighted with green arrows
-(b) The first Brillouin zone of graphene with vertices $K$ (orange) and $K'$ (green). The reciprocal-lattice vectors are here marked in red.  
-(c) Energy dispersion (in units of
-t) in the lattice. The Dirac cones (zoom in) are located at the K and K0 points. Adapted
-from 
-}
+\caption{\label{fig:graphene_lattice}
+(a) Honeycomb lattice of graphene. Two non-equivalent carbon atoms A and B in the primitive cells (direct space) are denoted in yellow and purple. The set of possible translations are showed by the lattice vectors $\vect{a}{_1},\vect{a}{_2}$ (green arrows).
+(b) The first Brillouin zone of graphene with vertices \vect{K} (orange) and \vect{K'} (green), and reciprocal-lattice vectors drawn in red.  
+(c) Graphene energy dispersion resulted from Eq.~\ref{eq:graphene_hamiltonian} (in units of nearest neighbor hopping parameter \emph t). The magnification shows one of the Dirac cones, which are located at the \vect{K} and \vect{K'} points, emphasising the linear dispersion relation. Adapted from \cite{castroneto2009}.}
 \end{center}
 \end{figure}
 
@@ -157,7 +158,8 @@ In the case of a two-dimensional electron gas, it is constant. On the contrary f
     \rho(E)=\frac{2A_\textrm{cell}}{\pi}\frac{\abs{E}}{v_F^2}
 \end{equation}
 
-
+If the graphene is charge-neautral, the DOS has two Van Hove singularities at $\rho(\omega_\textrm{VH}) = \pm 1$ \si{\electronvolt} \cite{bena2005quasiparticle}. This behaviour is in stark constrat with the DOS
+of carbon nanotubes and clean graphene nanoribbons, as they show $1/\sqrt{E}$ singularities due to the 1D nature, which imposes a quantization perpendicular to the ribbon or tube longitudinal direction.
 \begin{figure}
 \begin{center}
     \includegraphics[width=0.95\textwidth]{chapter_introduction/figures/graphene_DOS.png}
@@ -165,10 +167,6 @@ In the case of a two-dimensional electron gas, it is constant. On the contrary f
     \label{fig:graphene:dos}
 \end{center}
 \end{figure}
-
-If the graphene is charge-neautral, the DOS has two Van Hove singularities at $\rho(\omega_\textrm{VH}) = \pm 1$ \si{\electronvolt} \cite{bena2005quasiparticle}. This behaviour is in stark constrat with the DOS
-of carbon nanotubes and clean graphene nanoribbons, as they show $1/\sqrt{E}$ singularities due to the 1D nature, which imposes a quantization perpendicular to the ribbon or tube longitudinal direction.
-
 Using the Einstein-Smoluchowski relation $D = k_BT/\eta = \mu k_BT$ which links an average friction coeafficient $\eta$ experienced by a flow of semiclassical charge carriers diffusing in a media with coeafficient $D$, it is possible to compute the semiclassical conductivity from the DOS as:
 \begin{equation}\label{ch1:eq:semiclassical_conductivity}
     \sigma_{\textrm{sc}}=e^{2} \rho(E) v(E) \ell_{\mathrm{el}}
@@ -227,7 +225,6 @@ If we assume that the work function of graphene and the metal are the same, then
 
 where the thermal energy $k_BT$ and the bandgap are both expressed in meV. 
 While for high frequency applications the on--off ratio is of minor importance, several references in literature report suitable values for CMOS bandgap should fall in a range between 300 and 500 meV \cite{schwierz2010graphene, reddy2011graphene}.
-
 
 \begin{table}
     \centering
@@ -300,10 +297,9 @@ To the best of my knowledge, the current graphene transistor power gain record o
 While these results have aligned graphene MOSFET with the main solid-state competitors -- such as GaAS pHEMT, InP HEMT and Si MOSFET -- in terms of $f_\textrm{T}$, the perfomance is terms of $f_\textrm{max}$ are off by about one \cite{tan1990InGaAs, post2006RF} or two orders of magnitude \cite{lai2007sub}. In literature, one of the often cited fundamental reason
 for this behaviour is the poor drain saturation current in graphene, which ultimately depends on the missing bandgap of the channel. Graphene-derived materials such as nanoribbons and carbon nanotubes MOSFET could then, given their intrisic semiconducting nature, represent a possible solution to this problem.
 
+\section{Carbon-Nanotube}
 
-\section{Carbon-based Field Effect Transistor}
-
-\subsection{crystal structure}
+\subsection{Crystal and Band Structure}
 
 This crystalline form of carbon can be considered as a rolled up sheet of graphene and comes in two major flavours: \gls{SW} and \gls{MW}.
 \Glspl{CNT} display an electronic band gap which depends on the chirality and the diameter of the nanotube \cite{dresselhaus2000carbon}.
@@ -344,7 +340,6 @@ Since the ideal structure of \glspl{CNT} has no open bonds, no pinning of the me
 Many metals have been studied for contacting \glspl{CNT}. Interestingly, it has been demonstrated that Pd ($\phi^\textrm{Pd}=5.22--5.60$)
 builds an almost ideal $p$-channel contact to the valence band of \glspl{CNT}. Despite having a larger workfunction ($\phi^\textrm{Pt}\approx5.65$ eV) than Pd, Pt provides very poor contacts due to the physical wetting of the metal on the nanotube.
 
-
 \begin{table}[]
     \centering
     \small
@@ -384,13 +379,9 @@ builds an almost ideal $p$-channel contact to the valence band of \glspl{CNT}. D
         $^{\mathrm{2}}$ For the n-type transistor, whereas 10 \si{\micro\siemens} were measured for the p-type. \\
 
     \end{tabbing}
-
 \end{table}
 
-
-
 \begin{table}[]
-
     \centering
     \small
     \begin{tabular}{ccccccccc}
@@ -405,7 +396,6 @@ builds an almost ideal $p$-channel contact to the valence band of \glspl{CNT}. D
         \bottomrule
     \end{tabular}
     \caption{Comparative simulation for the four major type of CNFETs as reported in \cite{singh2015comparative}. These results are obtained by setting $V_\textrm{sd} = 0.5$ V.}
-
 \end{table}
 \newpage
 
@@ -493,7 +483,7 @@ As in the case of \glspl{CNT}, confining large-area graphene carries into narrow
 Logic applications, as mentioned in Sec.~\ref{intro:sec:graphene}, require two well-defined voltage states, which in turn they depend on the current flowing through the semiconducting channel; by considering $E_g$ within the 300 -- 500 meV range, the figure (place the bandgap \mccorrect{figure} here) gives an indication circa suitable ribbon widths, which would lie within the sub-5 nm regime \cite{geng2017graphene}.
 
 
-\subsubsection{band structure}
+\subsection{Crystal and Band Structure}
 Historically, a first classification of graphene nanoribbons was derived by grouping the edge structures into Armchair-GNRs (AGNRs) and Zigzag-GNRs (ZGNRs).  
 Following the success of chemical routes in producing GNRS, various kind of edges have come to light, e.g., cove, fjord, chiral, and all these can be regarded as combination of AGNRs and ZGNRs \mccorrect{Figure}. 
 
@@ -552,7 +542,7 @@ Nanocutting of graphene is another promising method of GNR synthesis. In 2008, S
 The carbon-carbon bond breaking is driven by the combustion reaction \ce{Ni + C_{\textrm{graphene}} + 2H2 ^ -> Ni/Fe + CH4 ^} catalysed by the nanoparticles, thus producing hydrocarbon compounds. One of the reason that have discouraged these synthetic way is the random width distribution obtained: this is likely
 to be a consequence of the change in direction when nanoparticles encounter defects or edges.
 
-\subsubsection{edge states}
+\subsection{Edge States}
 The nature of the edge states in graphene nanoribbons is an interesting application of topological theories. The re-discover interest that the physics community has given to topological insulators has been motivated by a good variaty of exotic effects theoretically predicated in these materials, such as the manifestation of elusive particles (Majorana fermions) when these are coupled with superconductors and the robustness against decoherence effects when used for quantum computing applications. 
 
 In a seminal work of 2005, C. L. Kane and E. J. Mele developed proved thorugh a perturbative approach that graphene behaves as a quantum spin Hall (QSH) insulator when the spin-orbit interaction is perturtatively included into the graphene hamiltonian. One consequence is that at low temperature, graphene has a band gap in bulk but results gapless in the edge \cite{kane2005quantum}. 
@@ -597,7 +587,7 @@ Additionally, it was demonstrated that the
 edge state has superior coherence even at room temperature in a non-diluted system, which makes
 GNRs very promising for spintronics applications
 
-\subsubsection{GNRFET}
+\subsection{Graphene Nanoribbons Field-Effect Transistors}
 In one of their first \glspl{GNRFET} prototype, the Dai's group synthesised ultra-narrow \glspl{GNR} using sonochemistry methods, achieving widths down to $w_\textrm{GNR}\approx$ \SI[multi-part-units = single]{2.0(5)}{\nano\metre} and lengths of about $l_\textrm{GNR}\approx 236$ \cite{wang2008room}. For that kind of semiconducting ribbons -- i.e. $w_\textrm{GNR} \leq 10$ nm -- the wave vector in the dispersion relation E(\vect{k}) can be broken down into a component along the transport direction $k_\parallel$ and other $k_\perp$ along the confinement direction:
 \begin{equation}
     E(\vect{k}) = \frac{3ta}{s}\abs{\vect{k}} = \frac{3ta}{2}\sqrt{k_\parallel^2 + k_\perp^2})
@@ -692,7 +682,7 @@ and estimating the gate capacitance with an electrostatic 3D model.
 
 Interesting enough, the hole mobilities values (2,443 cm$^{2}$V$^{-1}$s$^{-1}$ for the 2.8 nm wide and 3.776 cm$^{2}$V$^{-1}$s$^{-1}$ for the 10 nm wide) are amongst the best values obtained so far. The role of strained bulbs and non-spherical cross section at the two edges is not clarified yet and thus could reproduce unpredictable effects due to uncontrolled scattering mechanism. 
 
-\subsubsection{TFET}
+\subsubsection{Tunnelling Field-Effect Transistor}
 One of the main problems in scaling down the CMOS technology is heat dissipation. As the carriers are thermally injected, it is difficult to scale down $V_\textrm{sd}$ whilst increasing the switching (operational) speed and the keeping a low off-state power dissipation; thus, since $P_\textrm{off} = RI_\textrm{off}^2$, this boils down to hold a low off-state current. Furthermore, the mechanism of charge carrier transfer by thermal means places a limit to the subthreshold slope figure, which for a \gls{MOSFET} is limited to $2.3 k_BT/q = 60$ mv/dec at room temperature \cite{sze2021physics}. 
 
 Interesting alternatives arise when instead of focusing on the maximum output on state current the on/off ratio is increased by lowering the off state current. If the source-carrier injection happens through an interband tunnelling mechanism instead of a thermal injection, the tunnelling transmission probability becomes temperature independent (Zener tunnelling). 

@@ -668,6 +668,24 @@ Eq.~\ref{ch1:eq:mfp_edge_backscattering} suggests that an increase of width and/
 \end{table}
 \FloatBarrier
 
+\co{Energy Band-gap Engieering}
+Theoretical predictions seemed to suggest a simple, almost straightforward, framework to undestand the energy gap in graphene nanoribbon.  
+In the first experimental evidence, the Kim's group \cite{Han2007} showed that, however, this is not the case.
+The \glspl{GNR} were fabricated by means lithographically, with lengths $L$ in the order of $\mu$m and sub-100-nm widths. 
+Narrow and large ribbons respectively display larger and narrower bangdap comapred to the theoretical predictions, and showed no dependence on the crystallographic orientration of the edges. In several studies \cite{areshkin2007ballistic, martin2009transport, chen2007graphene} published as an attempt to explain these discepancies, a few of them  highlighted the role played by rough edges resulting from litographic patterning in breaking the nanoribbons into a series of quantum dots. In particular, when charge localisations have comparable length to the ribbon widths, disorder effects start to play a role \cite{martin2009transport}. Similarly, charge transfers between the dots could be partly modualted by the electron--electron interactions \cite{ponomarenko2008chaotic}; thus, Coulomb blockade could be an explanation for the larger gaps in for smaller ribbons.
+
+In an attempt to experimentally solve this dilemma, only three years later evidences showed the solution for this dilemma could be explained by a combination of both. Hopping charge transfer mechanism through localised states whose size is comparable to the ribbon width would result in a transport gap rather than a true energy gap. Within a single-particle model \cite{han2010electron}, this could be linked to the transport gap via \cite{castroneto2009}:
+\begin{equation}
+    E_g = \hbar v_F\sqrt{2\pi C_g \Delta V_g/\abs{e}}
+\end{equation} 
+where $Delta V_g$ is the region where the conductance is suppressed, and $C_g$ is the capacitive coupling of the ribbon to the gate. 
+\co{Explain now which are the way to estimate the capactive coupling with the gate}
+
+A strong temperature dependence of the conductance was measured for all the ribbons which widths was below 100 nm, with the narrowest kind ($\approx$25 nm) exhibiting stronger suppression of the conductance minimum $G_\textrm{min}$. For all the the three ribbons, the conductance $G$ scaled linearly with the width, $G = \sigma(W - W_0)/L)$, where $sigma\approx 1.7$ mS is the sheet conductivity and the $(W - W_0)$ is the active transport region.
+Despite the graphene contact to the ribbon, the formation of Schottky barrier at the graphene--metal contact cannot be ruled out \cite{DiBartolomeo2016}.
+
+The physical origin for the gap observed in their studies was clarified only 2 year later \cite{han2010electron}. At thecharge neutrality point, a length-independent transport gap forms whose size is inversely proportional to the width
+
 While it has been advanced in the past the possibility to obtain graphene nanoribbons from nanotubes \mccorrect{cite work on unzipped CNT}, it is relatively recent the proposal of using high-pressure conditions and thermal treatments to produce ultranarrow (sub-10-nm-wide) \glspl{GNR} from \glspl{CNT}, resulting in average lengths in the order of $\mu$m range. 
 
 The p-type on-state conductivity of the ribbon channel (w$_\textrm{gnr}\approx 2.8$ nm) when placed in a MOSFET geometry is: 

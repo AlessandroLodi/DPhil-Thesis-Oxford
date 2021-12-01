@@ -4,22 +4,58 @@
 
 \section{Introduction}\label{gnrset:sec:intro}
 
-A brief intro why single-electron transistors with gnr are interesting
-A brief intro to what we are gonna do/measure in this chapter 
+The electron tunnelling in a molecular or solid-state junction depends on both the bias applied and the temperature. Tipically, two regimes are distinguished. At low temperatures the electrons tunnell across the junction independently of the temperature; thus the conductance does not depend on the temperature. If the temperature is increase, the electrons will be preferentially udnergo through a thermally-activated hopping mechanism, resulting in a dependence of the conductance with the temperature. The origin of thermal excitations and their respective role played on the tunnelling proccess remaines largely unexplored in graphene nanostructures.
+
+Recent experiments on graphene have shown the possibility of using graphene graphenoids (also knows as radicaloids) for quantum information processing~\cite{lombardi2019quantum, lombardi2021synthetic}. The advantage of these systems over molecular counterparts are multiple. Being delocalised molecular structures uniquely based on carbon and hydrogen atoms, the spin-orbit coupling is typically low and isotropic, in the order of a few microvolts. This is one of the factors which determines coherence times in the order of a few tens of microseconds even at temperatures below 100 K. Another robustness factor is that the mechanisms governing the dechorence for the lattice relaxation times are relatively well understood when these molecules are placed in solutions.
+
+A great deal of experimental and theoreitcal efforts have been put into understanding electronic transport in single molecules. The advent of quantum technologies have posed a few guidelines on what the future electronics devices should look like. The setup should be such to work at temperature outside the cryogenics regimes. The scalability of the qubits is required also to be independent to the number of nearest neighbours a single qubit is coupled to. Thirdly, the coherence times should exceed the maximum required time for the slowest fundamental quantum operations.
+
+While it is far from be clear which is the best candidate to fulfill these requirements, several proposal have envisaged graphene nanoribbons for this role. While experimental studies on top-down \glspl{GNR} and theoretical works have been published since the late 2000s, recent progress in bottom-up synthesis of edge-precise ribbons remains largely unexplored.
+
+In the present chapter, I report, to the best of my knowledge, the first  temperature-dependence conductance study for bottom-up (molecular) graphene nanoribbons. I use a range of source-drain bias and gate voltages in a two-terminal back-gated device to study the temperature dependence from cryogenic up to room temperatures of three conduction regimes. The measurements have been carried out in the setup detailed in Ch.~\ref{ch:theory} where an acquisition scheme has been developed to work with a Oxford Instrument dilution refrigerator.
 
 \section{Sample Preparation and Characterisation}\label{gnrset:sec:chara}
 
-How the sample it has been prepared (lot of crossreference with previous chapters)
-Explained why the scarsity of characterisation checks is intrinsically scarse in molecular electronics.
+\Glspl{GNR} were received from the Feng's groups located in Dresden in powders in a sealed vial. Graphene nanostructures powders are notoriously electrostatic and tend to stick along the vials walls. An approximately $1.0 \pm 0.1$ mg of powder was scooped and transffered into a vial with the help of an electrostic gun to ease the remove of residul material on the scoop.
 
+The powder was then dissolved in 10 mL of toluene. Initially attempts to avoid sonications were tried. In the literature it has been reported the damaging role of heavy sonications procedures for tube structure in carbon nanotubes. Although similar effects can take place in graphene nanoribbons, the following qualitative arguments were taken into account for the sample preparation.
+After having mechanically agitated the solution over a week, black aggregates identifies as large oligomers suspended in solution were visible. In order to overcome stacking energies, a mild sonication treatmenet was evalueated to be the best alternative. In talks with our collaborators, it was discussed that a $\approx$1h is required for graphene nanoribbons decorated with aliphatic alkyl chains along the edges. Suprinsingly, these new type of graphene nanroibbons require only 10 minutes at 50 \% of relative sonication power to produce an almost homogenous dispersion visible to the naked eye. These improved solubility properties are further explained and analysed over the next chapters.
+
+In order to reduce further the chance of having medium and small oligomers, the mother solution was further diluted. Since weigth-average molecular weight $M_\textrm{W}$ and polydispersity index (PDI) were not known upon arrival, the dilution protocol was as followed. A mother solution volume of $1.0 \pm 0.2$ mL was transferred on a second vial, were 10 mL of toluene were added, followed by a 5 minutes sonication treatement at 50 \% of relative power (sonicator bath temperature was set at 330 K). The dilution processed was thus repeated four times, thus obtaining different concentrations were obtained, namely from 1:10 up to 1:10000. While the mother solution and the 1:10 diluted one display a Pantone 191 colour, the most diluted ones are completely transparent. UV-vis on the solutions at different concentrations are reported in the next chapter.
+
+Molecular devices were fabricated using well-know fabrication techniques in molecular electronics and as detailed already in Ch.~\ref{ch:fabrication}. Molecular \glspl{GNR} are added on top of graphene electrode where tunnel junctions have been formed by feedback electroburning means by submerging the whole chip in the 1:10000 solution for 30 minutes.
+
+The devices are then measured at room temperature with an automated probe station to check which devices display possible molecular features. The criteria used to drive my decision are similar to the one published in literature \cite{limburg2018anchor}.
+\co{explain the last part for the decision criteria in Bart's paper}
+
+Across several trials, the following claims hold. Firstly, for a completely empty junction the source-drain conductance $G_\textrm{sd}$ is generally almost undetectable in the room temperature setup; when a MGNR bridges the electrodes, the conductance values range within tens and hundrends of nS range. With this fabrication procedure we do not control the orientation of the graphene nanoribbons, but preferential orientations are argued. In particular, intermolecular Van der Waals forces play a crucial role in building strong $\pi^*-\pi$ interactions between the $p_z$ delocalised orbitals of graphene and MGNRs. For having a flat bridging of the nanoribbons on top of the graphene leads these interactions $\Delta E_{\pi-\pi}$ should first be greater than the buckle up energy $\Delta E_\textrm{bundling}$. In the present discussion $\Delta E$(s) are to be understood as Gibbs free energy: the change in notation compared with the thermodynamics literature is employed in order to do not confuse with the Gibbs free energy with the electrical conductance $G$.
+
+% taken from 
+% https://tex.stackexchange.com/questions/10166/how-do-i-position-pairs-of-arrows-in-tikz-to-make-harpoons
+\begin{equation}
+    \label{eq:absorption}
+    \textrm{MGNR}_\textrm{sol} \xrightleftharpoons[k_{-1}]{k_{+1}} \textrm{MGNR}_\textrm{ads}
+\end{equation}
+
+To the object on the right side of Eq.~\ref{eq:absorption} one can, within a broad scope, map an an adsorption energy:
+
+\begin{equation}
+    E_\textrm{ads} = E(\textrm{Graphene} + \textrm{MGNR}) - E_\textrm{graphene} - E_\textrm{MGNR}
+\end{equation}
+
+Althought a deep investigation of these claims is outside the scope of these set of experiments and the difficulties in accessing surface analysis instruments during the Covid-19 pandemic, further surface analysis studies could clarify and even attempt to quantify these energies at play.
+
+This is also one of the reason why I adopted the submerging method over a dropcasting one. In the latter, the diffusion of the graphene nanoribbons towards the graphene leads is entirely governed by a kinetic process. Thus,
+A further support to this claims can be found also in \cite{limburg2018anchor}, where the.
+% Half these junctions display field effect transistor performance (FET), with various levels of doping: while both n and p doping are observable immediately after deposition, all devices progressively shift to p-doping upon exposure to ambient conditions, as for other carbon nanomaterials . Ambipolar FET behaviour allows observing the MGNR gap and both the electron and hole-doped regions (Fig.1f). The conductance values (~10-4 G0, with G0 = 2e2/h ~7.75 x 104 nS) indicate weak graphene/MGNR contacts. The ON-state currents ISD≈1 nA and the subthreshold swing are comparable to those of non-molecular nanoribbons
 
 \section{Electrical Transport Measurements}\label{gnrset:sec:measure}
 
-What type of experiments have been performed and which tricks 
+What type of experiments have been performed and which tricks
 have been used in triton to do so.
 What are the evolution in temperature of the zero-bias, low-bias and high bias conductance.
-Look at the dependence in temperature and explain possible interpretations: 
-why it is not a Luttinger Liquid (the gnr has a bandgap) and what possible phonon modes are responsible 
-at some point for desctructing the 
+Look at the dependence in temperature and explain possible interpretations:
+why it is not a Luttinger Liquid (the gnr has a bandgap) and what possible phonon modes are responsible
+at some point for desctructing the
 
 \section{Summary}\label{gnrset:sec:summary}

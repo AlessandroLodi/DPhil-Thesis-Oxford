@@ -103,12 +103,37 @@ The Alazar card, Triton, and IVVI (Delft box modules) drivers are first initiali
 \begin{figure}
     \begin{center}
         \includegraphics[width=0.95\columnwidth]{chapter_gnrset/figures/all_sd.png}
-        \caption{Temperature dependence evolution of the stability diagram map for a single-electron MGNR. Bias and voltage ranges have been limited to the plotted experimental range in order to preserve the stability of the device even at hight temperature. Degeneracy points are not closing at low temperature, an effect which we attribute to the presence of Franck-Condon blockade phenomena \cite{burzuri2014franck}.}
+        \caption{Temperature dependence evolution of the stability diagram map for a single-electron MGNR. Bias and voltage ranges have been limited to the plotted experimental range in order to preserve the stability of the device even at hight temperature. Degeneracy points do not close at low temperature, an effect which we attribute to the presence of Franck-Condon blockade phenomena \cite{burzuri2014franck}.}
         \label{fig:all_sd}
     \end{center}
 \end{figure}
 
 The results of the measurement protocol are shown in Fig.~\ref{fig:all_sd}. The stability diagram map reveals six Coulomb diamonds regions clearly distinguishable up to, at least, 180 K within the experimental gate voltage range. Regions outside of this range showed a strong leakage current, likely due to the substrate, thus imposing the measurement range between $\SI{-20}{\V}\le V_\textrm{g}\le\SI{+20}{\V}$. Since outside this range the current will be fully dominated by the substrate leakage current, and while formally further charge states could be visible outside this experimental window, it is still correct to assign the region at the left of the leftmost diamond as associated with the neutral state of the graphene nanoribbon; from this, it follows that the diamond located at $V_\textrm{g}\approx\SI{-19}{\V}$ is associated with the charge transition $N \rightarrow N+1$ and the rightmost diamond is associated with the $N+6 \rightarrow N+7$ transition.
+
+The from the spacing between the Coulomb diamonds and their respective heights, is it possible to infer the lever arms associated with the various charge states of the ribbon: $\beta|e| V_{g}=$ $|e| V_{s d}$ and is given by the lever $\operatorname{arm} \beta=1 /\left(\left|\alpha_{+}\right|^{-1}+\left|\alpha_{-}\right|^{-1}\right)$, from the slopes of the diamond edges. For negative slopes $\alpha_{-}=-|e| C_{g} /\left(C-C_{s}\right)$ and for positive slopes $\alpha_{+}=|e| C_{g} / C_{s}$, where the total capacitance to the $\operatorname{dot} C=C_{s}+C_{d}+C_{g}$ is the sum of the capacitances to the source, drain and gate, respectively. We find that $\beta$ differs between 19 and 33 meV/V for different diamonds and seem to peak around $V_{g} = 0$ and decrease nonlinearly and symmetrically on either side of $V_{g} = 0$ V. This Vg dependency may be caused by nonlinear electrostatic saturation effects in the dielectric. The mean value of $\overline{\beta}$ = 24.5 meV/V.
+
+\begin{figure}
+    \begin{center}
+        \includegraphics[width=0.99\columnwidth]{chapter_gnrset/figures/waterfall_complete.pdf}
+        \caption{Temperature dependence of the conductance resonance measured at different bias voltages.
+            \textbf{(a, b)} Resonance levels probed when applied a polarity of 10 mV.}
+        \textbf{(c, d)} Energy levels involved in the tunnelling process at 30 mV.
+        \textbf{(e, f)} Gate traces taken at 0.1 V.
+        Interestingly, the peaks are subject to a shift towards the left for temperature below 100 K, for then being shifted towards the right.
+        \label{fig:waterfall}
+    \end{center}
+\end{figure}
+
+The from the spacing between the Coulomb diamonds and their respective heights, is it possible to infer the lever arms associated with the various charge states of the ribbon: $\beta|e| V_{g}=$ $|e| V_{s d}$ and is given by the lever $\operatorname{arm} \beta=1 /\left(\left|\alpha_{+}\right|^{-1}+\left|\alpha_{-}\right|^{-1}\right)$, from the slopes of the diamond edges. For negative slopes $\alpha_{-}=-|e| C_{g} /\left(C-C_{s}\right)$ and for positive slopes $\alpha_{+}=|e| C_{g} / C_{s}$, where the total capacitance to the $\operatorname{dot} C=C_{s}+C_{d}+C_{g}$ is the sum of the capacitances to the source, drain and gate, respectively. We find that $\beta$ differs between 19 and 33 meV/V for different diamonds and seem to peak around $V_{g} = 0$ and decrease nonlinearly and symmetrically on either side of $V_{g} = 0$ V. This Vg dependency may be caused by nonlinear electrostatic saturation effects in the dielectric. The mean value of $\overline{\beta}$ = 24.5 meV/V.
+
+\begin{figure}
+    \begin{center}
+        \includegraphics[width=\columnwidth]{chapter_gnrset/figures/fit_10mv_tstudent_error.pdf}
+        \caption{Power-law temperature dependence of the maximum conductance measured by applying 10 mv of bias, demonstrating an accordance with the Tomonaga-Luttinger liquid model. Top most frame show the peak height $G_\textrm{max}(T)$ for the conductance peak of the charge transition $N \rightarrow N+1$, following a power-law function with exponent $0.14 \pm 0.10$. Errors are estimated as outlined in the main text.}
+        \label{fig:power_fit_10mv}
+    \end{center}
+\end{figure}
+
 
 
 \section{Summary}\label{gnrset:sec:summary}

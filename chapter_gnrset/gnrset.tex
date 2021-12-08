@@ -68,28 +68,28 @@ Triton heaters are capable to control the temperature precisely from base temper
 While these kind of measurements measure the current flowing through the device (after the voltage to current conversion that occurs inside the Delft box, see Ch.~\ref{ch:theory}), it is generally reccommended to acquire also the conductance. In absence of a lock-in apparatus, a possible workaround is to measure the current at various bias voltages and different gate voltage and differentiate numerically the current to obtain the conductance. In order to stabilise the temperature and remove the thermal link between the mixing chamber and the various refrigerator stages, the pre-cooling loop in then emptied, leaving the sample thermally isolated. The whole procedure was then automated in a python python script measurements, which algorithm is detailed in Alg.~\ref{alg:cap}.
 
 \begin{algorithm}
-    \caption{Measurement Temperature-Dependent}\label{alg:cap}
+    \caption{Temperature-Dependent Measurements}\label{alg:cap}
     \begin{algorithmic}
         \Require Initialise Alazar, Triton and IVVI
         \Ensure Alazar, Triton, and IVVI are global
-        \State Final Temperature $\gets$ 298 K
+        \State Initialise Final Temperature
+        \State Initialise Bias Array
+        \State Initialise Target Temperatures Array
         \State Current Temperature $\gets$ Read Temperature
         \State Temperature Step $\gets$ 3
         \State Temperature Channel $\gets$ 8
         \State Precooled $\gets$ \texttt{False}
-        \State Bias array $\gets$ [10, 20, 30, 40, 100]
-        \State Target Temperatures $\gets$ Array of Temperatures
         \While{Current Temperature $<$ Final Temperature}
         \State Precooled $\gets$ \texttt{True}
         \State T $\gets$ Read Temperature
         \If{T $> 1.5$ }
         \State Temperature Channel $\gets$ 5
         \EndIf
-        \For{length Bias array}
+        \For{length Bias Array}
         \State Run Gate Trace Measurement
         \EndFor
         \State T $\gets$ Read Temperature
-        \If{T is in Target Temperatures}
+        \If{T is in Target Temperatures Array}
         \State Precooled $\gets$ \texttt{False}
         \State Run Stability Diagram
         % \State $N \gets \frac{N}{2}$  \Comment{This is a comment}
@@ -108,9 +108,7 @@ The Alazar card, Triton, and IVVI (Delft box modules) drivers are first initiali
     \end{center}
 \end{figure}
 
-The results of the measurement protocol are shown in Fig.~\ref{fig:all_sd}. The stability diagram map reveals six Coulomb diamonds regions clearly distinguishable up to, at least, 180 K within the experimental gate voltage range. Regions outside of this range showed a strong leakage current, likely due to the substrate, thus imposing the measurement range between $\SI{-20}{\V}\le V_\textrm{g}\le\SI{+20}{\V}$. Since outside this range the current will be fully dominated by the substrate leakage current, and while formally further charge states could be visible outside this experimental window, it is still correct to assign the region at the left of the leftmost diamond as associated with the neutral state of the graphene nanoribbon; from this, it follows that the diamond located at $V_\textrm{g}\approx\SI{-19}{\V}$ is associated with the charge transition $N \rightarrow N+1$ and the rightmost diamond is associated with the $N+6 \rightarrow N+7$ transition.
-
-The from the spacing between the Coulomb diamonds and their respective heights, is it possible to infer the lever arms associated with the various charge states of the ribbon: $\beta|e| V_{g}=$ $|e| V_{s d}$ and is given by the lever $\operatorname{arm} \beta=1 /\left(\left|\alpha_{+}\right|^{-1}+\left|\alpha_{-}\right|^{-1}\right)$, from the slopes of the diamond edges. For negative slopes $\alpha_{-}=-|e| C_{g} /\left(C-C_{s}\right)$ and for positive slopes $\alpha_{+}=|e| C_{g} / C_{s}$, where the total capacitance to the $\operatorname{dot} C=C_{s}+C_{d}+C_{g}$ is the sum of the capacitances to the source, drain and gate, respectively. We find that $\beta$ differs between 19 and 33 meV/V for different diamonds and seem to peak around $V_{g} = 0$ and decrease nonlinearly and symmetrically on either side of $V_{g} = 0$ V. This Vg dependency may be caused by nonlinear electrostatic saturation effects in the dielectric. The mean value of $\overline{\beta}$ = 24.5 meV/V.
+The results of the measurement protocol are shown in Fig.~\ref{fig:all_sd}. The stability diagram map reveals six Coulomb diamonds regions clearly distinguishable up to, at least, 180 K within the experimental gate voltage range. Regions outside of this range resulted in strong leakage current, likely due to substrate breakdown possibly caused after the wirebonding process; therefore, we restricted the measurement range between $\SI{-20}{\V}\le V_\textrm{g}\le\SI{+20}{\V}$. Since outside this range the current will be fully dominated by charges across dioxide substrate, and while formally further charge states could be visible outside the experimental window, it is still correct to assign the region at the left of the leftmost diamond as associated with the neutral state of the graphene nanoribbon; from this, it follows that the diamond located at $V_\textrm{g}\approx\SI{-19}{\V}$ is associated with the charge transition $N \rightarrow N+1$ and the rightmost diamond is associated with the $N+6 \rightarrow N+7$ transition.
 
 \begin{figure}
     \begin{center}
@@ -124,15 +122,29 @@ The from the spacing between the Coulomb diamonds and their respective heights, 
     \end{center}
 \end{figure}
 
-The from the spacing between the Coulomb diamonds and their respective heights, is it possible to infer the lever arms associated with the various charge states of the ribbon: $\beta|e| V_{g}=$ $|e| V_{s d}$ and is given by the lever $\operatorname{arm} \beta=1 /\left(\left|\alpha_{+}\right|^{-1}+\left|\alpha_{-}\right|^{-1}\right)$, from the slopes of the diamond edges. For negative slopes $\alpha_{-}=-|e| C_{g} /\left(C-C_{s}\right)$ and for positive slopes $\alpha_{+}=|e| C_{g} / C_{s}$, where the total capacitance to the $\operatorname{dot} C=C_{s}+C_{d}+C_{g}$ is the sum of the capacitances to the source, drain and gate, respectively. We find that $\beta$ differs between 19 and 33 meV/V for different diamonds and seem to peak around $V_{g} = 0$ and decrease nonlinearly and symmetrically on either side of $V_{g} = 0$ V. This Vg dependency may be caused by nonlinear electrostatic saturation effects in the dielectric. The mean value of $\overline{\beta}$ = 24.5 meV/V.
+From these \glspl{SD} it is not possible to distinguish whether the the charge states are well defined or not, given below 150 K they seem not closing between $\SI{-0.1}{\V}\le V_\textrm{sd}\le\SI{+0.1}{\V}$. High-resolution temperature data taken at 25 mK applying higher bias voltages $\SI{-0.2}{\V}\le V_\textrm{sd}\le\SI{+0.2}{\V}$, however, confirms that diamonds are closing. Therefore, as a result, charge states host well defined charges which can be assigned, as reported in similar studies, to graphene nanoribbons quantum dots \cite{el2020controlled, sols2007coulomb, todd2009quantum}. From 150 K up to room temperature, height and width of current suppressions regions becomes narrower and shorter while preserving the Coulomb blockade regime: this can be explained as a result of the leads' Fermi-Dirac distribution smoothing, which consequently leads to a high number of electrons jumping inside the junction region due to the thermal energy.
+
+
+Fig.~\ref{fig:waterfall} depicts a set of $I-V_\textrm{g}$ curves measured on the same sample at different temperatures at different bias voltages. From low temperature data, it possible to estimate the lever arms associated with the various charge states: these quantify by how much in units of meV it is possible to change the chemical potential of the various molecular/quantum dot levels of  by varying the gate potential by a quantity in units of V, $\beta|e| V_\textrm{g}=$ $|e| V_\textrm{sd}$, with $\beta$ being the lever arm as defined $\beta=1 /\left(\left|\alpha_\textrm{+}\right|^{-1}+\left|\alpha_\textrm{-}\right|^{-1}\right)$, from the slopes of the diamond edges \cite{cuevas2010molecular}; $\alpha_\textrm{-}=-|e| C_\textrm{g} /\left(C-C_\textrm{s}\right)$ and $\alpha_\textrm{+}=|e| C_\textrm{g} / C_\textrm{s}$ are the negative and positive slopes of each diamonds, respectively, and $C_\textrm{s}$ is the total capacitance calcualted according the constant interaction model (see Ch.~\ref{ch:theory}).
+
+We find a non linear increase in $\beta$ for the diamonds at negative gate voltages, peaking at the highest values for the the diamonds at zero gate voltage, for then increasing almost linearly by moving towards more positive gate values, with a mean value of $\overline{\beta}$ = $24.59 \pm 4.39$ meV/V. We attribute this symmetric and non-linear dependency of $V_\textrm{g}$ by electrostatic saturation effects possibly occuring in the dioxide substrate.
 
 \begin{figure}
     \begin{center}
-        \includegraphics[width=\columnwidth]{chapter_gnrset/figures/fit_10mv_tstudent_error.pdf}
+        \includegraphics[width=\textwidth]{chapter_gnrset/figures/power_fit_transitions_tstudent_error.pdf}
         \caption{Power-law temperature dependence of the maximum conductance measured by applying 10 mv of bias, demonstrating an accordance with the Tomonaga-Luttinger liquid model. Top most frame show the peak height $G_\textrm{max}(T)$ for the conductance peak of the charge transition $N \rightarrow N+1$, following a power-law function with exponent $0.14 \pm 0.10$. Errors are estimated as outlined in the main text.}
         \label{fig:power_fit_10mv}
     \end{center}
 \end{figure}
+
+The height of the diamonds reads the bias voltage necessary to add an electron to the ribbon, which defines an addition energy $E_\textrm{add} = e^2/C_\textrm{s} + \Delta E$, where $\Delta E$ is the energy difference between the energy levels. Energy levels are here associated with the quantum states of the ribbon in its quantum dot configuration. Although the length of a \gls{MGNR} is molecularly defined, its quantum dot configuration depends strongly on the coupling with the leads. Therefore, the $\Delta E$ read from a first-principle calculation and the one measured experimentally may differ significantly. An average $\overline{E_\textrm{add}} =  157.43\pm 5.65$ meV was extracted from the heights of all the six suppressed current regions, which is higher than previosuly reported for room-temperature operating single-electron quantum dots in semiconductors \cite{zhuang1998silicon} and carbon nanotubes \cite{postma2001carbon}.
+
+Given the graphene electrodes have low electrostatic screening, the main contribution to the total capacitance is given by the capacitive coupling of the \gls{MGNR} to the back gate, so we can approximate $C_\textrm{s}\approx C_\textrm{g}$. By using reported values in the literature \cite{han2010electron} $C_\textrm{g}\approx \SI{700}{\atto\farad}/\mu\textrm{m}^2$, we estimate \mccorrect{$\Delta E < \SI{100}{\meV}$}
+
+% differs between 19 and 33 meV/V for different diamonds and seem to peak around $V_\textrm{g} = 0$ and decrease nonlinearly and symmetrically on either side of $V_\textrm{g} = 0$ V. This Vg dependency may be caused by nonlinear electrostatic saturation effects in the dielectric. 
+
+
+
 
 
 

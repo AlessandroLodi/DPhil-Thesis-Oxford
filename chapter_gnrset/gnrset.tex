@@ -67,9 +67,9 @@ Triton heaters are capable to control the temperature precisely from base temper
 
 While these kind of measurements measure the current flowing through the device (after the voltage to current conversion that occurs inside the Delft box, see Ch.~\ref{ch:theory}), it is generally reccommended to acquire also the conductance. In absence of a lock-in apparatus, a possible workaround is to measure the current at various bias voltages and different gate voltage and differentiate numerically the current to obtain the conductance. In order to stabilise the temperature and remove the thermal link between the mixing chamber and the various refrigerator stages, the pre-cooling loop in then emptied, leaving the sample thermally isolated. The whole procedure was then automated in a python python script measurements, which algorithm is detailed in Alg.~\ref{alg:cap}.
 
-\begin{algorithm}
-    \caption{Temperature-Dependent Measurements}\label{alg:cap}
-    \begin{algorithmic}
+\begin{algorithm}[H]
+    \caption{Triton High Temperature Measurement}\label{alg:cap}
+    \begin{algorithmic}[1]
         \Require Initialise Alazar, Triton and IVVI
         \Ensure Alazar, Triton, and IVVI are global
         \State Initialise Final Temperature

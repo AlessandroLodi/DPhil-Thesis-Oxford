@@ -20,9 +20,9 @@
 \pdfimageresolution=300
 
 % Allow to write algorithms in pseudocode form
-\usepackage{algorithm}
+\usepackage[chapter]{algorithm}
 \usepackage{algpseudocode}
-
+\renewcommand{\thealgorithm}{\arabic{chapter}.\arabic{algorithm}}
 
 % Allows tables to span multiple pages (this package must be called before hyperref)
 

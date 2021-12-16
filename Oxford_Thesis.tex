@@ -112,6 +112,8 @@
 	\def\Ebrac[#1]{#1}	
 	\makeatother
 
+% https://tex.stackexchange.com/questions/361019/unicode-error-in-inputenc-package
+\DeclareUnicodeCharacter{2212}{-}
 %%%%% THE ACTUAL DOCUMENT STARTS HERE
 \begin{document}
 
@@ -214,6 +216,9 @@
 \flushbottom
 % \include{text/ch1-intro}
 % \include{text/ch2-litreview}
+\message{************* diocane ***************}
+\printinunitsof{in}\prntlen{\textwidth}
+\printinunitsof{in}\prntlen{\textheight}
 \setcounter{mtc}{2}
 \include{chapter_introduction/introduction}
 \include{chapter_theory/theory}

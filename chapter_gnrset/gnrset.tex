@@ -143,9 +143,32 @@ Given the graphene electrodes have low electrostatic screening, the main contrib
 
 % differs between 19 and 33 meV/V for different diamonds and seem to peak around $V_\textrm{g} = 0$ and decrease nonlinearly and symmetrically on either side of $V_\textrm{g} = 0$ V. This Vg dependency may be caused by nonlinear electrostatic saturation effects in the dielectric. 
 
+\begin{figure}[hbtp]
+    \begin{center}
+        \input{chapter_gnrset/figures/all_transitions.pgf}
+        \caption{Power-law temperature dependence of the zero-bias conductance, demonstrating an accordance with the Tomonaga-Luttinger liquid model. Top most frame show the peak height $G_\textrm{max}(T)$ for the conductance peak of the charge transition $N \rightarrow N+1$, following a power-law function with exponent $0.14 \pm 0.10$. Errors are estimated as outlined in the main text.}
+        \label{fig:zbgt_fit}
+    \end{center}
+\end{figure}
 
 
 
+The height of the diamonds reads the bias voltage necessary to add an electron to the ribbon, which defines an addition energy $E_\textrm{add} = e^2/C_\textrm{s} + \Delta E$, where $\Delta E$ is the energy difference between the energy levels. Energy levels are here associated with the quantum states of the ribbon in its quantum dot configuration. Although the length of a \gls{MGNR} is molecularly defined, its quantum dot configuration depends strongly on the coupling with the leads. Therefore, the $\Delta E$ read from a first-principle calculation and the one measured experimentally may differ significantly. An average $\overline{E_\textrm{add}} =  157.43\pm 5.65$ meV was extracted from the heights of all the six suppressed current regions, which is higher than previosuly reported for room-temperature operating single-electron quantum dots in semiconductors \cite{zhuang1998silicon} and carbon nanotubes \cite{postma2001carbon}.
+
+Given the graphene electrodes have low electrostatic screening, the main contribution to the total capacitance is given by the capacitive coupling of the \gls{MGNR} to the back gate, so we can approximate $C_\textrm{s}\approx C_\textrm{g}$. By using reported values in the literature \cite{han2010electron} $C_\textrm{g}\approx \SI{700}{\atto\farad}/\mu\textrm{m}^2$, we estimate.
+
+The height of the diamonds reads the bias voltage necessary to add an electron to the ribbon, which defines an addition energy $E_\textrm{add} = e^2/C_\textrm{s} + \Delta E$, where $\Delta E$ is the energy difference between the energy levels. Energy levels are here associated with the quantum states of the ribbon in its quantum dot configuration. Although the length of a \gls{MGNR} is molecularly defined, its quantum dot configuration depends strongly on the coupling with the leads. Therefore, the $\Delta E$ read from a first-principle calculation and the one measured experimentally may differ significantly. An average $\overline{E_\textrm{add}} =  157.43\pm 5.65$ meV was extracted from the heights of all the six suppressed current regions, which is higher than previosuly reported for room-temperature operating single-electron quantum dots in semiconductors \cite{zhuang1998silicon} and carbon nanotubes \cite{postma2001carbon}.
+
+Given the graphene electrodes have low electrostatic screening, the main contribution to the total capacitance is given by the capacitive coupling of the \gls{MGNR} to the back gate, so we can approximate $C_\textrm{s}\approx C_\textrm{g}$. By using reported values in the literature \cite{han2010electron} $C_\textrm{g}\approx \SI{700}{\atto\farad}/\mu\textrm{m}^2$, we estimate.
+
+
+\begin{figure}
+    \begin{center}
+        \includegraphics[width=\textwidth]{chapter_gnrset/figures/alphas.pdf}
+        \caption{Power-law temperature dependence of the maximum conductance measured by applying 10 mv of bias, demonstrating an accordance with the Tomonaga-Luttinger liquid model. Top most frame show the peak height $G_\textrm{max}(T)$ for the conductance peak of the charge transition $N \rightarrow N+1$, following a power-law function with exponent $0.14 \pm 0.10$. Errors are estimated as outlined in the main text.}
+        \label{fig:alphas}
+    \end{center}
+\end{figure}
 
 
 \section{Summary}\label{gnrset:sec:summary}

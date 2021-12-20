@@ -127,12 +127,12 @@ From these \glspl{SD} it is not possible to distinguish whether the the charge s
 
 Fig.~\ref{fig:waterfall} depicts a set of $I-V_\textrm{g}$ curves measured on the same sample at different temperatures at different bias voltages. From low temperature data, it possible to estimate the lever arms associated with the various charge states: these quantify by how much in units of meV it is possible to change the chemical potential of the various molecular/quantum dot levels of  by varying the gate potential by a quantity in units of V, $\beta|e| V_\textrm{g}=$ $|e| V_\textrm{sd}$, with $\beta$ being the lever arm as defined $\beta=1 /\left(\left|\alpha_\textrm{+}\right|^{-1}+\left|\alpha_\textrm{-}\right|^{-1}\right)$, from the slopes of the diamond edges \cite{cuevas2010molecular}; $\alpha_\textrm{-}=-|e| C_\textrm{g} /\left(C-C_\textrm{s}\right)$ and $\alpha_\textrm{+}=|e| C_\textrm{g} / C_\textrm{s}$ are the negative and positive slopes of each diamonds, respectively, and $C_\textrm{s}$ is the total capacitance calcualted according the constant interaction model (see Ch.~\ref{ch:theory}).
 
-We find a non linear increase in $\beta$ for the diamonds at negative gate voltages, peaking at the highest values for the the diamonds at zero gate voltage, for then increasing almost linearly by moving towards more positive gate values, with a mean value of $\overline{\beta}$ = $24.59 \pm 4.39$ meV/V. We attribute this symmetric and non-linear dependency of $V_\textrm{g}$ by electrostatic saturation effects possibly occuring in the dioxide substrate.
+We find a non linear increase in $\beta$ for the diamonds at negative gate voltages, peaking at the highest values for the the diamonds at zero gate voltage, for then increasing almost linearly by moving towards more positive gate values, with a mean value of $\overline{\beta}$ = $24.59 \pm 4.39$ meV/V. This symmetric and non-linear dependency from $V_\textrm{g}$ could result from electrostatic effects occuring in the dioxide substrate.
 
 \begin{figure}
     \begin{center}
-        \includegraphics[width=\textwidth]{chapter_gnrset/figures/power_fit_transitions_tstudent_error.pdf}
-        \caption{Power-law temperature dependence of the maximum conductance measured by applying 10 mv of bias, demonstrating an accordance with the Tomonaga-Luttinger liquid model. Top most frame show the peak height $G_\textrm{max}(T)$ for the conductance peak of the charge transition $N \rightarrow N+1$, following a power-law function with exponent $0.14 \pm 0.10$. Errors are estimated as outlined in the main text.}
+        \includegraphics[width=\textwidth]{chapter_gnrset/figures/trace_powerfit_10mv.pdf}
+        \caption{Power-law temperature dependence of the maximum conductance measured by applying 10 mv of bias, demonstrating an accordance with the Tomonaga-Luttinger liquid model. Top most frame show the peak height $G_\textrm{max}(T)$ for the conductance peak of the charge transition $N \rightarrow N+1$, following a power-law function with exponent $0.14 \pm 0.10$. Errors are estimated as outlined in the main text. Dashed lines are the 95\% prediction limits calculated as outlined in the main text. Blue bands represents the 95\% confidence interval estimated using the bootstrap method and assuming fitting errors are normally distributed.}
         \label{fig:power_fit_10mv}
     \end{center}
 \end{figure}
@@ -143,13 +143,23 @@ Given the graphene electrodes have low electrostatic screening, the main contrib
 
 % differs between 19 and 33 meV/V for different diamonds and seem to peak around $V_\textrm{g} = 0$ and decrease nonlinearly and symmetrically on either side of $V_\textrm{g} = 0$ V. This Vg dependency may be caused by nonlinear electrostatic saturation effects in the dielectric. 
 
-\begin{figure}[hbtp]
+\begin{figure}
     \begin{center}
-        \input{chapter_gnrset/figures/all_transitions.pgf}
-        \caption{Power-law temperature dependence of the zero-bias conductance, demonstrating an accordance with the Tomonaga-Luttinger liquid model. Top most frame show the peak height $G_\textrm{max}(T)$ for the conductance peak of the charge transition $N \rightarrow N+1$, following a power-law function with exponent $0.14 \pm 0.10$. Errors are estimated as outlined in the main text.}
-        \label{fig:zbgt_fit}
+        \includegraphics[width=\textwidth]{chapter_gnrset/figures/all_transitions.pdf}
+        \caption{Power-law exponents for close to zero-bias conductance resonances plotted against the observable charge transitions, demonstrating an accordance with the Tomonaga-Luttinger liquid model. Darker and lighter blue regions represent the 1$\sigma$ and the 2$\sigma$ error bars, respectively. Plot legend report the main results from the literature as discussed in the main text.}
+        \label{fig:alphas}
     \end{center}
 \end{figure}
+
+
+
+% \begin{figure}[hbtp]
+%     \begin{center}
+%         \input{chapter_gnrset/figures/all_transitions.pdf}
+%         \caption{Power-law temperature dependence of the zero-bias conductance, demonstrating an accordance with the Tomonaga-Luttinger liquid model. Top most frame show the peak height $G_\textrm{max}(T)$ for the conductance peak of the charge transition $N \rightarrow N+1$, following a power-law function with exponent $0.14 \pm 0.10$. Errors are estimated as outlined in the main text.}
+%         \label{fig:zbgt_fit}
+%     \end{center}
+% \end{figure}
 
 
 
@@ -165,7 +175,7 @@ Given the graphene electrodes have low electrostatic screening, the main contrib
 \begin{figure}
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_gnrset/figures/alphas.pdf}
-        \caption{Power-law temperature dependence of the maximum conductance measured by applying 10 mv of bias, demonstrating an accordance with the Tomonaga-Luttinger liquid model. Top most frame show the peak height $G_\textrm{max}(T)$ for the conductance peak of the charge transition $N \rightarrow N+1$, following a power-law function with exponent $0.14 \pm 0.10$. Errors are estimated as outlined in the main text.}
+        \caption{Power-law exponents for close to zero-bias conductance resonances plotted against the observable charge transitions, demonstrating an accordance with the Tomonaga-Luttinger liquid model. Darker and lighter blue regions represent the 1$\sigma$ and the 2$\sigma$ error bars, respectively. Plot legend report the main results from the literature as discussed in the main text.}
         \label{fig:alphas}
     \end{center}
 \end{figure}

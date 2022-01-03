@@ -38,8 +38,8 @@ From a chemical point of view, the adsorption of \glspl{GNR} on the substrate ca
 % taken from 
 % https://tex.stackexchange.com/questions/10166/how-do-i-position-pairs-of-arrows-in-tikz-to-make-harpoons
 \begin{equation}
-    \label{eq:absorption}
-    \textrm{MGNR}_\textrm{(sol)} \xrightleftharpoons[k_{-1}]{k_{+1}} \textrm{MGNR}_\textrm{(ads)}
+  \label{eq:absorption}
+  \textrm{MGNR}_\textrm{(sol)} \xrightleftharpoons[k_{-1}]{k_{+1}} \textrm{MGNR}_\textrm{(ads)}
 \end{equation}
 
 Here $k_1$ and $k_{-1}$ are the adsorption and desorption rate constants, respectively, and, in case of a one-step process, have the same magnitude at the equilibrium. In cases where the adsorption equilibrium is reached very quickly, i.e. $k_1 \gg k_{-1}$, the rate of formation of the adsorbed layer is controlled by mass transfer. Therefore, the process is subject to the conditions applying to mass transfer.
@@ -68,58 +68,58 @@ Triton heaters are capable to control the temperature precisely from base temper
 While these kind of measurements measure the current flowing through the device (after the voltage to current conversion that occurs inside the Delft box, see Ch.~\ref{ch:theory}), it is generally reccommended to acquire also the conductance. In absence of a lock-in apparatus, a possible workaround is to measure the current at various bias voltages and different gate voltage and differentiate numerically the current to obtain the conductance. In order to stabilise the temperature and remove the thermal link between the mixing chamber and the various refrigerator stages, the pre-cooling loop in then emptied, leaving the sample thermally isolated. The whole procedure was then automated in a python python script measurements, which algorithm is detailed in Alg.~\ref{alg:cap}.
 
 \begin{algorithm}[H]
-    \caption{Triton High Temperature Measurement}\label{alg:cap}
-    \begin{algorithmic}[1]
-        \Require Initialise Alazar, Triton and IVVI
-        \Ensure Alazar, Triton, and IVVI are global
-        \State Initialise Final Temperature
-        \State Initialise Bias Array
-        \State Initialise Target Temperatures Array
-        \State Current Temperature $\gets$ Read Temperature
-        \State Temperature Step $\gets$ 3
-        \State Temperature Channel $\gets$ 8
-        \State Precooled $\gets$ \texttt{False}
-        \While{Current Temperature $<$ Final Temperature}
-        \State Precooled $\gets$ \texttt{True}
-        \State T $\gets$ Read Temperature
-        \If{T $> 1.5$ }
-        \State Temperature Channel $\gets$ 5
-        \EndIf
-        \For{length Bias Array}
-        \State Run Gate Trace Measurement
-        \EndFor
-        \State T $\gets$ Read Temperature
-        \If{T is in Target Temperatures Array}
-        \State Precooled $\gets$ \texttt{False}
-        \State Run Stability Diagram
-        % \State $N \gets \frac{N}{2}$  \Comment{This is a comment}
-        \EndIf
-        \EndWhile
-    \end{algorithmic}
+  \caption{Triton High Temperature Measurement}\label{alg:cap}
+  \begin{algorithmic}[1]
+    \Require Initialise Alazar, Triton and IVVI
+    \Ensure Alazar, Triton, and IVVI are global
+    \State Initialise Final Temperature
+    \State Initialise Bias Array
+    \State Initialise Target Temperatures Array
+    \State Current Temperature $\gets$ Read Temperature
+    \State Temperature Step $\gets$ 3
+    \State Temperature Channel $\gets$ 8
+    \State Precooled $\gets$ \texttt{False}
+    \While{Current Temperature $<$ Final Temperature}
+    \State Precooled $\gets$ \texttt{True}
+    \State T $\gets$ Read Temperature
+    \If{T $> 1.5$ }
+    \State Temperature Channel $\gets$ 5
+    \EndIf
+    \For{length Bias Array}
+    \State Run Gate Trace Measurement
+    \EndFor
+    \State T $\gets$ Read Temperature
+    \If{T is in Target Temperatures Array}
+    \State Precooled $\gets$ \texttt{False}
+    \State Run Stability Diagram
+    % \State $N \gets \frac{N}{2}$  \Comment{This is a comment}
+    \EndIf
+    \EndWhile
+  \end{algorithmic}
 \end{algorithm}
 
 The Alazar card, Triton, and IVVI (Delft box modules) drivers are first initialised and assigned to global variables which hold their state throughout the program execution. Then several variables are initialised. The precooled variables is a routine implemented directly on top of Triton drivers which allows to set and get command directly on the instruments. While below 1 K the RuO$_2$ thermoter is used, to reliably read the temperature above this temperature one has to switch to the Cernox thermometer, hence we are setting the temperature channel variable to channel 5 within the while loop in case this conditions applies. The program then acquires gate trace and stability diagram measurements. These are functions which have been implemented and improved from scripts written by a former member of the group, Dr.\ Nicola Dotti.
 
 \begin{figure}
-    \begin{center}
-        \includegraphics[width=0.95\columnwidth]{chapter_gnrset/figures/all_sd.png}
-        \caption{Temperature dependence evolution of the stability diagram map for a single-electron MGNR. Bias and voltage ranges have been limited to the plotted experimental range in order to preserve the stability of the device even at hight temperature. Degeneracy points do not close at low temperature, an effect which we attribute to the presence of Franck-Condon blockade phenomena \cite{burzuri2014franck}.}
-        \label{fig:all_sd}
-    \end{center}
+  \begin{center}
+    \includegraphics[width=0.95\columnwidth]{chapter_gnrset/figures/all_sd.png}
+    \caption{Temperature dependence evolution of the stability diagram map for a single-electron MGNR. Bias and voltage ranges have been limited to the plotted experimental range in order to preserve the stability of the device even at hight temperature. Degeneracy points do not close at low temperature, an effect which we attribute to the presence of Franck-Condon blockade phenomena \cite{burzuri2014franck}.}
+    \label{fig:all_sd}
+  \end{center}
 \end{figure}
 
 The results of the measurement protocol are shown in Fig.~\ref{fig:all_sd}. The stability diagram map reveals six Coulomb diamonds regions clearly distinguishable up to, at least, 180 K within the experimental gate voltage range. Regions outside of this range resulted in strong leakage current, likely due to substrate breakdown possibly caused after the wirebonding process; therefore, we restricted the measurement range between $\SI{-20}{\V}\le V_\textrm{g}\le\SI{+20}{\V}$. Since outside this range the current will be fully dominated by charges across dioxide substrate, and while formally further charge states could be visible outside the experimental window, it is still correct to assign the region at the left of the leftmost diamond as associated with the neutral state of the graphene nanoribbon; from this, it follows that the diamond located at $V_\textrm{g}\approx\SI{-19}{\V}$ is associated with the charge transition $N \rightarrow N+1$ and the rightmost diamond is associated with the $N+6 \rightarrow N+7$ transition.
 
 \begin{figure}
-    \begin{center}
-        \includegraphics[width=0.99\columnwidth]{chapter_gnrset/figures/waterfall_complete.pdf}
-        \caption{Temperature dependence of the conductance resonance measured at different bias voltages.
-            \textbf{(a, b)} Resonance levels probed when applied a polarity of 10 mV.}
-        \textbf{(c, d)} Energy levels involved in the tunnelling process at 30 mV.
-        \textbf{(e, f)} Gate traces taken at 0.1 V.
-        Interestingly, the peaks are subject to a shift towards the left for temperature below 100 K, for then being shifted towards the right.
-        \label{fig:waterfall}
-    \end{center}
+  \begin{center}
+    \includegraphics[width=0.99\columnwidth]{chapter_gnrset/figures/waterfall_complete.pdf}
+    \caption{Temperature dependence of the conductance resonance measured at different bias voltages.
+      \textbf{(a, b)} Resonance levels probed when applied a polarity of 10 mV.}
+    \textbf{(c, d)} Energy levels involved in the tunnelling process at 30 mV.
+    \textbf{(e, f)} Gate traces taken at 0.1 V.
+    Interestingly, the peaks are subject to a shift towards the left for temperature below 100 K, for then being shifted towards the right.
+    \label{fig:waterfall}
+  \end{center}
 \end{figure}
 
 From these \glspl{SD} it is not possible to distinguish whether the the charge states are well defined or not, given below 150 K they seem not closing between $\SI{-0.1}{\V}\le V_\textrm{sd}\le\SI{+0.1}{\V}$. High-resolution temperature data taken at 25 mK applying higher bias voltages $\SI{-0.2}{\V}\le V_\textrm{sd}\le\SI{+0.2}{\V}$, however, confirms that diamonds are closing. Therefore, as a result, charge states host well defined charges which can be assigned, as reported in similar studies, to graphene nanoribbons quantum dots \cite{el2020controlled, sols2007coulomb, todd2009quantum}. From 150 K up to room temperature, height and width of current suppressions regions becomes narrower and shorter while preserving the Coulomb blockade regime: this can be explained as a result of the leads' Fermi-Dirac distribution smoothing, which consequently leads to a high number of electrons jumping inside the junction region due to the thermal energy.
@@ -130,25 +130,34 @@ Fig.~\ref{fig:waterfall} depicts a set of $I-V_\textrm{g}$ curves measured on th
 We find a non linear increase in $\beta$ for the diamonds at negative gate voltages, peaking at the highest values for the the diamonds at zero gate voltage, for then increasing almost linearly by moving towards more positive gate values, with a mean value of $\overline{\beta}$ = $24.59 \pm 4.39$ meV/V. This symmetric and non-linear dependency from $V_\textrm{g}$ could result from electrostatic effects occuring in the dioxide substrate.
 
 \begin{figure}
-    \begin{center}
-        \includegraphics[width=\textwidth]{chapter_gnrset/figures/trace_powerfit_10mv.pdf}
-        \caption{Power-law temperature dependence of the maximum conductance measured by applying 10 mv of bias, demonstrating an accordance with the Tomonaga-Luttinger liquid model. Top most frame show the peak height $G_\textrm{max}(T)$ for the conductance peak of the charge transition $N \rightarrow N+1$, following a power-law function with exponent $0.14 \pm 0.10$. Errors are estimated as outlined in the main text. Dashed lines are the 95\% prediction limits calculated as outlined in the main text. Blue bands represents the 95\% confidence interval estimated using the bootstrap method and assuming fitting errors are normally distributed.}
-        \label{fig:power_fit_10mv}
-    \end{center}
+  \begin{center}
+    \includegraphics[width=\textwidth]{chapter_gnrset/figures/trace_powerfit_10mv.pdf}
+    \caption{Power-law temperature dependence of the maximum conductance measured by applying 10 mv of bias, demonstrating an accordance with the Tomonaga-Luttinger liquid model. Top most frame show the peak height $G_\textrm{max}(T)$ for the conductance peak of the charge transition $N \rightarrow N+1$, following a power-law function with exponent $0.14 \pm 0.10$. Errors are estimated as outlined in the main text. Dashed lines are the 95\% prediction limits calculated as outlined in the main text. Blue bands represents the 95\% confidence interval estimated using the bootstrap method under the assumption that fitting errors are normally distributed.}
+    \label{fig:power_fit_10mv}
+  \end{center}
 \end{figure}
 
 The height of the diamonds reads the bias voltage necessary to add an electron to the ribbon, which defines an addition energy $E_\textrm{add} = e^2/C_\textrm{s} + \Delta E$, where $\Delta E$ is the energy difference between the energy levels. Energy levels are here associated with the quantum states of the ribbon in its quantum dot configuration. Although the length of a \gls{MGNR} is molecularly defined, its quantum dot configuration depends strongly on the coupling with the leads. Therefore, the $\Delta E$ read from a first-principle calculation and the one measured experimentally may differ significantly. An average $\overline{E_\textrm{add}} =  157.43\pm 5.65$ meV was extracted from the heights of all the six suppressed current regions, which is higher than previosuly reported for room-temperature operating single-electron quantum dots in semiconductors \cite{zhuang1998silicon} and carbon nanotubes \cite{postma2001carbon}.
 
-Given the graphene electrodes have low electrostatic screening, the main contribution to the total capacitance is given by the capacitive coupling of the \gls{MGNR} to the back gate, so we can approximate $C_\textrm{s}\approx C_\textrm{g}$. By using reported values in the literature \cite{han2010electron} $C_\textrm{g}\approx \SI{700}{\atto\farad}/\mu\textrm{m}^2$, we estimate \mccorrect{$\Delta E < \SI{100}{\meV}$}
+Given the graphene electrodes have low electrostatic screening, the main contribution to the total capacitance is given by the capacitive coupling of the \gls{MGNR} to the back gate, so we can approximate $C_\textrm{s}\approx C_\textrm{g}$. By using reported values in the literature \cite{han2010electron} $C_\textrm{g}\approx \SI{700}{\atto\farad}/\mu\textrm{m}^2$, we estimate \mccorrect{$\Delta E < \SI{100}{\meV}$}.
 
-% differs between 19 and 33 meV/V for different diamonds and seem to peak around $V_\textrm{g} = 0$ and decrease nonlinearly and symmetrically on either side of $V_\textrm{g} = 0$ V. This Vg dependency may be caused by nonlinear electrostatic saturation effects in the dielectric. 
+The conductance shows a power-law dependence on $T$, as displayed in Fig.~\ref{fig:power_fit_10mv} where $G_\textrm{max}(T)$ is plotted for the distinct transistion charges. The quantities have been transformed into the respective logarithms, such that the parameter estimation for the power-law is transformed into a much simpler linear regression problem.
+
+As the limited sample size restricts the validity of law of large numbers, it is incorrect to estimate the prediction limits and the confidence interval as if we were drawing the experimental data from a Gaussian distribution. Thus, prediction limits are calculated from the model estimates as reported in \cite{friedman2001elements, barlow1993statistics}:
+\begin{equation}
+  S^2_\textrm{pred}(G_\textrm{max}) = \hat\sigma^2\frac{n}{n-2}\qty(1 + \frac{1}{n} + \frac{(G_\textrm{max} - \overline{G_\textrm{max}})}{n~S_{G_\textrm{max}}^2}),
+\end{equation}
+In general the prediction interval will be narrower when the sample size $n$ is large and the value predicted by the model $G_\textrm{max}$ is near the sample mean $\overline{G_\textrm{max}}$.
+The variance here has two main contribution: the true noise variance about the
+regression line ($\sigma^2$), plus the term coming from the uncertainty in where the regression line lies $S_{G_\textrm{max}}^2$.
+
 
 \begin{figure}
-    \begin{center}
-        \includegraphics[width=\textwidth]{chapter_gnrset/figures/all_transitions.pdf}
-        \caption{Power-law exponents for close to zero-bias conductance resonances plotted against the observable charge transitions, demonstrating an accordance with the Tomonaga-Luttinger liquid model. Darker and lighter blue regions represent the 1$\sigma$ and the 2$\sigma$ error bars, respectively. Plot legend report the main results from the literature as discussed in the main text.}
-        \label{fig:alphas}
-    \end{center}
+  \begin{center}
+    \includegraphics[width=\textwidth]{chapter_gnrset/figures/all_transitions.pdf}
+    \caption{Power-law exponents for close to zero-bias conductance resonances plotted against the observable charge transitions, demonstrating an accordance with the Tomonaga-Luttinger liquid model. Darker and lighter blue regions represent the 1$\sigma$ and the 2$\sigma$ error bars, respectively. Plot legend report the main results from the literature as discussed in the main text.}
+    \label{fig:alphas}
+  \end{center}
 \end{figure}
 
 
@@ -173,11 +182,11 @@ Given the graphene electrodes have low electrostatic screening, the main contrib
 
 
 \begin{figure}[hbtp]
-    \begin{center}
-        \includegraphics[width=\textwidth]{chapter_gnrset/figures/alphas.pdf}
-        \caption{Power-law exponents for close to zero-bias conductance resonances plotted against the observable charge transitions, demonstrating an accordance with the Tomonaga-Luttinger liquid model. Darker and lighter blue regions represent the 1$\sigma$ and the 2$\sigma$ error bars, respectively. Plot legend report the main results from the literature as discussed in the main text.}
-        \label{fig:alphas}
-    \end{center}
+  \begin{center}
+    \includegraphics[width=\textwidth]{chapter_gnrset/figures/alphas.pdf}
+    \caption{Power-law exponents for close to zero-bias conductance resonances plotted against the observable charge transitions, demonstrating an accordance with the Tomonaga-Luttinger liquid model. Darker and lighter blue regions represent the 1$\sigma$ and the 2$\sigma$ error bars, respectively. Plot legend report the main results from the literature as discussed in the main text.}
+    \label{fig:alphas}
+  \end{center}
 \end{figure}
 
 % \begin{figure}[hbtp]

@@ -129,7 +129,27 @@ From these \glspl{SD} it is not possible to distinguish whether the the charge s
 
 Fig.~\ref{fig:waterfall} depicts a set of $I-V_\textrm{g}$ curves measured on the same sample at different temperatures at different bias voltages. From low temperature data, it possible to estimate the lever arms associated with the various charge states: these quantify by how much in units of meV it is possible to change the chemical potential of the various molecular/quantum dot levels of  by varying the gate potential by a quantity in units of V, $\beta|e| V_\textrm{g}=$ $|e| V_\textrm{sd}$, with $\beta$ being the lever arm as defined $\beta=1 /\left(\left|\alpha_\textrm{+}\right|^{-1}+\left|\alpha_\textrm{-}\right|^{-1}\right)$, from the slopes of the diamond edges \cite{cuevas2010molecular}; $\alpha_\textrm{-}=-|e| C_\textrm{g} /\left(C-C_\textrm{s}\right)$ and $\alpha_\textrm{+}=|e| C_\textrm{g} / C_\textrm{s}$ are the negative and positive slopes of each diamonds, respectively, and $C_\textrm{s}$ is the total capacitance calcualted according the constant interaction model (see Ch.~\ref{ch:theory}).
 
-We find a non linear increase in $\beta$ for the diamonds at negative gate voltages, peaking at the highest values for the the diamonds at zero gate voltage, for then increasing almost linearly by moving towards more positive gate values, with a mean value of $\overline{\beta}$ = $24.59 \pm 4.39$ meV/V. This symmetric and non-linear dependency from $V_\textrm{g}$ could result from electrostatic effects occuring in the dioxide substrate.
+\begin{table}
+  \caption{\label{tab:lever_arm_Eadd}
+    Lever arms and addition energies extracted from the Coulomb diamonds slopes and heights for the different charge transitions. The addition energies reported here are obtained by averaging the height read and positive and negative polarities.}
+  \[
+    \begin{array}{lccc}
+      \hline \text{Charge Transition} & \text{Lever Arm}~\beta & E_\text{add}         \\
+      \hline
+      N+1                             & 21.1                   & 152\Tsmall           \\
+      N+2                             & 23.2                   & 156                  \\
+      N+3                             & 24.7                   & 160                  \\
+      N+4                             & 28.1                   & 169                  \\
+      N+5                             & 33.1                   & 160                  \\
+      N+6                             & 25.2                   & 149                  \\
+      N+7                             & 22.5                   & 151                  \\
+      \text{Mean}                     & 24.7 \pm 1.5           & 156.7 \pm 2.6\Tsmall \\
+      \hline
+    \end{array}
+  \]
+\end{table}
+
+We find a non linear increase in $\beta$ for the diamonds at negative gate voltages, peaking at the highest values for the the diamonds at zero gate voltage, for then increasing almost linearly by moving towards more positive gate values, with a mean value of $\overline{\beta}$ = $24.7 \pm 1.5$ meV/V. This symmetric and non-linear dependency from $V_\textrm{g}$ could result from electrostatic effects occuring in the dioxide substrate.
 
 \begin{figure}
   \begin{center}
@@ -139,7 +159,7 @@ We find a non linear increase in $\beta$ for the diamonds at negative gate volta
   \end{center}
 \end{figure}
 
-The height of the diamonds reads the bias voltage necessary to add an electron to the ribbon, which defines an addition energy $E_\textrm{add} = e^2/C_\textrm{s} + \Delta E$, where $\Delta E$ is the energy difference between the energy levels. Energy levels are here associated with the quantum states of the ribbon in its quantum dot configuration. Although the length of a \gls{MGNR} is molecularly defined, its quantum dot configuration depends strongly on the coupling with the leads. Therefore, the $\Delta E$ read from a first-principle calculation and the one measured experimentally may differ significantly. An average $\overline{E_\textrm{add}} =  157.43\pm 5.65$ meV was extracted from the heights of all the six suppressed current regions, which is higher than previosuly reported for room-temperature operating single-electron quantum dots in semiconductors \cite{zhuang1998silicon} and carbon nanotubes \cite{postma2001carbon}.
+The height of the diamonds reads the bias voltage necessary to add an electron to the ribbon, which defines an addition energy $E_\textrm{add} = e^2/C_\textrm{s} + \Delta E$, where $\Delta E$ is the energy difference between the energy levels. Energy levels are here associated with the quantum states of the ribbon in its quantum dot configuration. Although the length of a \gls{MGNR} is molecularly defined, its quantum dot configuration depends strongly on the coupling with the leads. Therefore, the $\Delta E$ read from a first-principle calculation and the one measured experimentally may differ significantly. An average $\overline{E_\textrm{add}} =  156.7 \pm 2.6$ meV was extracted from the heights of all the six suppressed current regions, which is higher than previosuly reported for room-temperature operating single-electron quantum dots in semiconductors \cite{zhuang1998silicon} and carbon nanotubes \cite{postma2001carbon}.
 
 Low temperature data allows also to quantify the coupling between the finite \gls{GNR} and the leads. The $\SI{0.025}{K}$ zero-bias gate trace are fitted with a Breit-Wigner model which accounts that the \gls{GNR} resonant states are broadened as exclusively by lifetime broadening \cite{beenakker1991theory}:
 \begin{equation}
@@ -162,27 +182,27 @@ regression line ($\sigma^2$), plus the term coming from the uncertainty in where
 
 \begin{table}
   \caption{\label{tab:integrated_conductance_exponents_10K_to_72K}
-    Power-law exponents calculated from the integrated conductance $G^*$. Siegel estimator \cite{siegel1982robust} was used to calculate the regression parameter as experimental datapoints in graphene tunnelling experiments are not drawn from a Normal distribution (see main text).}
+    Power-law exponents calculated from the integrated conductance $G^*$. Siegel estimator was used to calculate the regression parameter as experimental datapoints in graphene tunnelling experiments are not drawn from a Normal distribution (see main text).}
   \[
     \begin{array}{lccc}
       \hline \text{Charge Transition} & \text{LinReg} & \text{Robust LinReg} \\
       \hline
-      \alpha(N+1)                     & 1.6 \pm 0.28  & 1.3                  \\
-      \alpha(N+2)                     & 1.8 \pm 0.27  & 1.9                  \\
-      \alpha(N+3)                     & 1.7 \pm 0.22  & 1.4                  \\
-      \alpha(N+4)                     & 1.4 \pm 0.35  & 1.0                  \\
-      \alpha(N+5)                     & 1.4 \pm 0.18  & 1.4                  \\
-      \alpha(N+6)                     & 1.6 \pm 0.18  & 1.5                  \\
-      \alpha(N+7)                     & 1.4 \pm 0.33  & 1.1                  \\
-      \overline\alpha                 & 1.5 \pm 0.14  & 1.4                  \\
+      \alpha(N+1)                     & 1.6 \pm 0.3   & 1.3 \Tsmall          \\
+      \alpha(N+2)                     & 1.8 \pm 0.3   & 1.9                  \\
+      \alpha(N+3)                     & 1.7 \pm 0.2   & 1.4                  \\
+      \alpha(N+4)                     & 1.4 \pm 0.4   & 1.0                  \\
+      \alpha(N+5)                     & 1.4 \pm 0.2   & 1.4                  \\
+      \alpha(N+6)                     & 1.6 \pm 0.2   & 1.5                  \\
+      \alpha(N+7)                     & 1.4 \pm 0.3   & 1.1                  \\
+      \overline\alpha                 & 1.6 \pm 0.1   & 1.4 \pm 0.1\Tsmall   \\ % original was 1.5 \pm 0.05 for the first alpha
       \hline
     \end{array}
   \]
 \end{table}
 
-In Tab.~\ref{tab:integrated_conductance_exponents_10K_to_72K} we compared the estimate for the integrated conductance $G^*$ from a standard (weak) linear regression method against an-outlier robust regression kind. The reason is here doublefold, with one components more experimental and one more theoretical/philosophical.
+In Tab.~\ref{tab:integrated_conductance_exponents_10K_to_72K} we compared the estimate for the integrated conductance $G^*$ from a standard (weak) linear regression method against the Siegel Repeated median estimator \cite{siegel1982robust}. The reason why we believe is worth comparing both regression method is doublefold.
 
-First of all the limited number of experimental datapoints and the experimental challenges to stabilise the instrumentation above 30 K makes hampers a large number of datapoints to get acquired. An experimental workaround to this challenge would - of course - involve the usage of an instrumentation apparatus with higher signal-to-noise ratio, such as a lock-in amplifier. At the stage when these measurements were perfomed, our custom-made electronics setup had several technical challenges to overcome in order to correctly read the lock-in signal. Therefore, the best DC available technique it was left was to acquire as a function of gate and bias voltage, and then later numerically differentiate the current $I_\textrm{sd}$.
+The limited number of datapoints and the technical challenges associated with thermalising the mixing chamber at high temperature introduce noise and source of errors. An experimental workaround would involve the usage of an instrumentation apparatus with higher signal-to-noise ratio, such as a lock-in amplifier. At the stage when these measurements were perfomed, our custom-made electronics setup had several technical challenges to overcome in order to correctly read the lock-in signal. Therefore, the best DC technique available was to acquire the numerical differential conductance $G_\textrm{sd}$ by measuring the current for a range of bias and gate voltages.
 
 The second motivation is that, for a tunnelling experimental in graphene nanondevices, experimental evidences are strong that conductance values measured are -- statistically speaking -- not drawn from a simple Normal distribution, but are likely to be drawn from a Dirac Billiard type of statistics \cite{da2019klein, ponomarenko2008chaotic}. In particular, the Hamiltonian of the system is a member of the Wigner-Dyson Ensemble with a Gaussian probability distribution, which must also satisfy the fundamental anti-commutation rules imposed by the chiral symmetry of Dirac quasiparticles (Chiral Ensemble). These considerations have been proved experimentally and have assigned a Dyson index $\beta = 1$\footnote[2]{The Dyson index is, technically speaking, the number of real components for each matrix elements: $\beta = 1$ for real and corresponds to the Gaussian Orthogonal Ensemble, $\beta = 2$ for complex and corresponds to the Gaussian Unitary Ensemble, and $\beta = 4$ for quaternions and corresponds to the Gaussian Simpletic Ensemble.} for tunnelling experimental in graphene quantum dots.
 

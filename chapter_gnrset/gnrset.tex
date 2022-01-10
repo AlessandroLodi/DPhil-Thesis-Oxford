@@ -231,11 +231,6 @@ The height of the diamonds reads the bias voltage necessary to add an electron t
 
 Given the graphene electrodes have low electrostatic screening, the main contribution to the total capacitance is given by the capacitive coupling of the \gls{MGNR} to the back gate, so we can approximate $C_\textrm{s}\approx C_\textrm{g}$. By using reported values in the literature \cite{han2010electron} $C_\textrm{g}\approx \SI{700}{\atto\farad}/\mu\textrm{m}^2$, we estimate.
 
-The height of the diamonds reads the bias voltage necessary to add an electron to the ribbon, which defines an addition energy $E_\textrm{add} = e^2/C_\textrm{s} + \Delta E$, where $\Delta E$ is the energy difference between the energy levels. Energy levels are here associated with the quantum states of the ribbon in its quantum dot configuration. Although the length of a \gls{MGNR} is molecularly defined, its quantum dot configuration depends strongly on the coupling with the leads. Therefore, the $\Delta E$ read from a first-principle calculation and the one measured experimentally may differ significantly. An average $\overline{E_\textrm{add}} =  157.43\pm 5.65$ meV was extracted from the heights of all the six suppressed current regions, which is higher than previosuly reported for room-temperature operating single-electron quantum dots in semiconductors \cite{zhuang1998silicon} and carbon nanotubes \cite{postma2001carbon}.
-
-Given the graphene electrodes have low electrostatic screening, the main contribution to the total capacitance is given by the capacitive coupling of the \gls{MGNR} to the back gate, so we can approximate $C_\textrm{s}\approx C_\textrm{g}$. By using reported values in the literature \cite{han2010electron} $C_\textrm{g}\approx \SI{700}{\atto\farad}/\mu\textrm{m}^2$, we estimate.
-
-
 \begin{figure}[hbtp]
   \begin{center}
     \includegraphics[width=\textwidth]{chapter_gnrset/figures/alphas.pdf}
@@ -243,6 +238,27 @@ Given the graphene electrodes have low electrostatic screening, the main contrib
     \label{fig:alphas}
   \end{center}
 \end{figure}
+
+
+The height of the diamonds reads the bias voltage necessary to add an electron to the ribbon, which defines an addition energy $E_\textrm{add} = e^2/C_\textrm{s} + \Delta E$, where $\Delta E$ is the energy difference between the energy levels. Energy levels are here associated with the quantum states of the ribbon in its quantum dot configuration. Although the length of a \gls{MGNR} is molecularly defined, its quantum dot configuration depends strongly on the coupling with the leads. Therefore, the $\Delta E$ read from a first-principle calculation and the one measured experimentally may differ significantly. An average $\overline{E_\textrm{add}} =  157.43\pm 5.65$ meV was extracted from the heights of all the six suppressed current regions, which is higher than previosuly reported for room-temperature operating single-electron quantum dots in semiconductors \cite{zhuang1998silicon} and carbon nanotubes \cite{postma2001carbon}.
+
+\begin{figure}[hbtp]
+  \begin{center}
+    \includegraphics[width=\textwidth]{chapter_gnrset/figures/zbgt_pk5_fit_all_2.pdf}
+    \caption{Zero-bias conductance as a function of temperature for the charge transition $N+4\rightarrow N+5$. Solid lines: experimental fits to the function $G_\text{max}(T)/\cosh^2[(2\text{arccosh}(\sqrt2)V_\textrm{G})/w(T)]$ \cite{beenakker1991theory, postma2001carbon}. The inset shows the peak width $w$ versus $T$, which displays a linear behavior $w(T) = \SI[separate-uncertainty = true]{1.6(0.4)e-1}{} + T\SI[separate-uncertainty = true]{7.5(1)e-2}{}$. Integrated conductance $G^*$ temperature trends (top-right) and power-law exponents (bottom-right) for the charge transitions. Circles and diamonds are numerical estimates through linear regression and the Siegel estimator. Error bars represent fitting errors.}
+    \label{fig:alphas}
+  \end{center}
+\end{figure}
+
+$\SI[separate-uncertainty = true]{1.6(0.4)e-1}{}$
+$\SI[separate-uncertainty = true]{7.5(1)e-2}{}$
+$\SI[separate-uncertainty = true]{1.6(0.4)e-1} (T)$
+
+
+Given the graphene electrodes have low electrostatic screening, the main contribution to the total capacitance is given by the capacitive coupling of the \gls{MGNR} to the back gate, so we can approximate $C_\textrm{s}\approx C_\textrm{g}$. By using reported values in the literature \cite{han2010electron} $C_\textrm{g}\approx \SI{700}{\atto\farad}/\mu\textrm{m}^2$, we estimate.
+
+
+
 
 
 

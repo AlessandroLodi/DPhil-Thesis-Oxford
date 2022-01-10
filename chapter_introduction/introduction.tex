@@ -340,12 +340,14 @@ Many metals have been studied for contacting \glspl{CNT}. Interestingly, it has 
 builds an almost ideal $p$-channel contact to the valence band of \glspl{CNT}. Despite having a larger workfunction ($\phi^\textrm{Pt}\approx5.65$ eV) than Pd, Pt provides very poor contacts due to the physical wetting of the metal on the nanotube.
 
 \begin{table}[]
+
     \centering
     \small
 
+    \caption{\label{tab:CNFET} Figures of merit for a few CNFET reported in literature. $S$: subthreshold swing; $g_\textrm{m}$: intrinsic transconductances; $L_{ch}$: channel length; $\mu$: carriers mobility}
+
     \begin{tabular}{ccccccccc}
         \toprule
-
         \textit{Device}            & $I_\textrm{on}/I_\textrm{off}$ & $SS$     & $g_\textrm{mt}$                       & $L_\textrm{ch}$         & $f_T$~[$f_\textrm{max}$]~ & Ref.                       \\
         \textit{type}              &                                & (mV/dec) & (\si{\micro\siemens\per\centi\metre}) & (nm)                    & (GHz)                     &                            \\
         \midrule
@@ -370,17 +372,17 @@ builds an almost ideal $p$-channel contact to the valence band of \glspl{CNT}. D
 
         \bottomrule
     \end{tabular}
-    \caption{\label{tab:CNFET} Figures of merit for a few CNFET reported in literature. $S$: subthreshold swing; $g_\textrm{m}$: intrinsic transconductances; $L_{ch}$: channel length; $\mu$: carriers mobility}
 
     \begin{tabbing}
         $^\dag$Normalized by the tube width.\\
         $^{\mathrm{1}}$ Referred to the gated length of a nanotube. \\
         $^{\mathrm{2}}$ For the n-type transistor, whereas 10 \si{\micro\siemens} were measured for the p-type. \\
-
     \end{tabbing}
+
 \end{table}
 
 \begin{table}[]
+    \caption{Comparative simulation for the four major type of CNFETs \cite{singh2015comparative}. These results are obtained by setting $V_\textrm{sd} = 0.5$ V.}
     \centering
     \small
     \begin{tabular}{ccccccccc}
@@ -394,7 +396,6 @@ builds an almost ideal $p$-channel contact to the valence band of \glspl{CNT}. D
         Tunnel            & 5.53$*10^{-6}$  & 1.16$*10^{-8}$   & 4.76$*10^{2}$                  & 13                    & 107.9      \\
         \bottomrule
     \end{tabular}
-    \caption{Comparative simulation for the four major type of CNFETs as reported in \cite{singh2015comparative}. These results are obtained by setting $V_\textrm{sd} = 0.5$ V.}
 \end{table}
 \newpage
 
@@ -479,7 +480,7 @@ Recently, it has been advanced graphene as interlayer between the metal contact 
 Amongst the wide variety of carbon alternatives explored in the last two decades, \glspl{GNR} have certainly acquired a lot of interests. Amongst the perks, chemical synthesis of \glspl{GNR} is now cost effective, they have comparable electrical performance (small effective mass, high charge mobility, and high saturation velocity) compared with the \glspl{CNT}, without the need to separate metallic from semiconducting \glspl{GNR}, and they can be easily tailored through chemical synthesis \cite{cai2010atomically, schwab2012structurally}.
 
 As in the case of \glspl{CNT}, confining large-area graphene carries into narrow stripes leads to a quasi-1D system exhibiting a tunable bandgap determined not only by the ribbon width $w_\textrm{GNR}$, but also by the edge structure \cite{son2006energy, Li2008}.
-Logic applications, as mentioned in Sec.~\ref{intro:sec:graphene}, require two well-defined voltage states, which in turn they depend on the current flowing through the semiconducting channel; by considering $E_g$ within the 300 -- 500 meV range, the figure (place the bandgap \mccorrect{figure} here) gives an indication circa suitable ribbon widths, which would lie within the sub-5 nm regime \cite{geng2017graphene}.
+Logic applications, as mentioned in Sec.~\ref{intro:sec:graphene}, require two well-defined voltage states, which in turn they depend on the current flowing through the semiconducting channel; by considering $E_g$ within the 300 -- 500 meV range, Fig.~\ref{fig:intro:gnr-bandgap_schwierz} provides an estimate for the \gls{GNR} widths, suggesting the sub-5 nm range as appropriate for semiconducting applications \cite{geng2017graphene}.
 
 
 \subsection{Crystal and Band Structure}
@@ -685,7 +686,7 @@ Despite the graphene contact to the ribbon, the formation of Schottky barrier at
 
 The physical origin for the gap observed in their studies was clarified only 2 year later \cite{han2010electron}. At thecharge neutrality point, a length-independent transport gap forms whose size is inversely proportional to the width
 
-While it has been advanced in the past the possibility to obtain graphene nanoribbons from nanotubes \mccorrect{cite work on unzipped CNT}, it is relatively recent the proposal of using high-pressure conditions and thermal treatments to produce ultranarrow (sub-10-nm-wide) \glspl{GNR} from \glspl{CNT}, resulting in average lengths in the order of $\mu$m range.
+While it has been advanced in the past the possibility to obtain graphene nanoribbons from nanotubes, it is relatively recent the proposal of using high-pressure conditions and thermal treatments to produce ultranarrow (sub-10-nm-wide) \glspl{GNR} from \glspl{CNT}, resulting in average lengths in the order of $\mu$m range \cite{chen2021sub}.
 
 The p-type on-state conductivity of the ribbon channel (w$_\textrm{gnr}\approx 2.8$ nm) when placed in a MOSFET geometry is:
 \begin{equation}

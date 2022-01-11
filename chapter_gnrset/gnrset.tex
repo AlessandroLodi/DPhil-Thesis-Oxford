@@ -180,6 +180,92 @@ In general the prediction interval will be narrower when the sample size $n$ is 
 The variance here has two main contribution: the true noise variance about the
 regression line ($\sigma^2$), plus the term coming from the uncertainty in where the regression line lies $S_{G_\textrm{max}}^2$.
 
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=\textwidth]{chapter_gnrset/figures/all_transitions.pdf}
+    \caption{Power-law exponents for close to zero-bias conductance resonances plotted against the observable charge transitions, demonstrating an accordance with the Tomonaga-Luttinger liquid model. Error bars are calculated using the formula $\delta[\log(G_\text{max})] = 0.434~\sigma_{G_\text{max}}/G_\text{max}$, where $\sigma_{G_\text{max}}$ is the error from fitting the data with a power-law model.}
+    \label{fig:all_transitions}
+  \end{center}
+\end{figure}
+
+
+The height of the diamonds reads the bias voltage necessary to add an electron to the ribbon, which defines an addition energy $E_\textrm{add} = e^2/C_\textrm{s} + \Delta E$, where $\Delta E$ is the energy difference between the energy levels. Energy levels are here associated with the quantum states of the ribbon in its quantum dot configuration. Although the length of a \gls{MGNR} is molecularly defined, its quantum dot configuration depends strongly on the coupling with the leads. Therefore, the $\Delta E$ read from a first-principle calculation and the one measured experimentally may differ significantly. An average $\overline{E_\textrm{add}} =  157.43\pm 5.65$ meV was extracted from the heights of all the six suppressed current regions, which is higher than previosuly reported for room-temperature operating single-electron quantum dots in semiconductors \cite{zhuang1998silicon} and carbon nanotubes \cite{postma2001carbon}.
+
+Given the graphene electrodes have low electrostatic screening, the main contribution to the total capacitance is given by the capacitive coupling of the \gls{MGNR} to the back gate, so we can approximate $C_\textrm{s}\approx C_\textrm{g}$. By using reported values in the literature \cite{han2010electron} $C_\textrm{g}\approx \SI{700}{\atto\farad}/\mu\textrm{m}^2$, we estimate.
+
+\begin{figure}[hbtp]
+  \begin{center}
+    \includegraphics[width=\textwidth]{chapter_gnrset/figures/alphas.pdf}
+    \caption{Power-law exponents for close to zero-bias conductance resonances plotted against the observable charge transitions, demonstrating an accordance with the Tomonaga-Luttinger liquid model. Darker and lighter blue regions represent the 1$\sigma$ and the 2$\sigma$ error bars, respectively. Plot legend report the main results from the literature as discussed in the main text.}
+    \label{fig:alphas}
+  \end{center}
+\end{figure}
+
+\begin{table}
+  \caption{\label{tab:conductance_exponents_all}
+    Power-law exponents conductance $G^*$ over a wide range of temperatures. Errors to $\alpha$ have been calculated by evaluating the percent point function (ppf) of a two-sided Students t-distribution.}
+  \[
+    \begin{array}{lcccc}
+      \hline \text{Charge Transition} & \text{GOF} = .7 & \text{GOF} = .3 & \text{GOF} = .1       \\
+      \hline
+      \alpha(N+1)                     & 0.34 \pm 0.11   & 0.34 \pm 0.11   & 0.34 \pm 0.11 \Tsmall \\
+      \alpha(N+2)                     & 0.38 \pm 0.19   & 0.38 \pm 0.19   & 0.38 \pm 0.18         \\
+      \alpha(N+3)                     & 0.29 \pm 0.14   & 0.37 \pm 0.14   & 0.29 \pm 0.21         \\
+      \alpha(N+4)                     & 0.39 \pm 0.15   & 0.39 \pm 0.15   & 0.39 \pm 0.15         \\
+      \alpha(N+5)                     & 0.37 \pm 0.15   & 0.33 \pm 0.15   & 0.36 \pm 0.16         \\
+      \alpha(N+6)                     & 0.33 \pm 0.23   & 0.48 \pm 0.23   & 0.48 \pm 0.23         \\
+      \alpha(N+7)                     & 0.33 \pm 0.23   & 0.25 \pm 0.34   & 0.33 \pm 0.23         \\
+      % \overline\alpha                 & 0.33 \pm 0.1  & 1.4 \pm 0.1\Tsmall \\ 
+      \hline
+    \end{array}
+  \]
+\end{table}
+
+The $G_\text{max}$ associated to the resonances for each charge transition are plotted in Fig.~\ref{fig:all_transitions} and fitted with power-law dependence on $T$ in the 0.025--240 K range; results are summarised in Tab.~\ref{tab:conductance_exponents_all}. By comparing the \gls{GOF} figure resulting from fitting each resonance with a thermally-broaded model \cite{postma2001carbon}, two observations on the methodology are worth of being mentiong. Firstly, for the transitions $N+2\rightarrow N+3, N+4\rightarrow N+5$, and $N+5\rightarrow N+6$ the \gls{GOF} criteria plays a role in determining the overall $\alpha$ exponent. We observe that these peaks are the one subject to shifting along the $V_\textrm{G}$ axis, possibly due to the presence of charges trapped within the dioxide substrate.
+
+Secondly, by increasing the \gls{GOF} criteria, datapoints following a power-law tend accumulate between the 9--185 K region, in agreement to what it has been observed for intramolecular junctions in \gls{SWNT} and \glspl{CNT} ropes \cite{yao1999carbon, bockrath1999luttinger}. Therefore, we choose to focus our analysis in this temperature range as the most appropriate to validate or confute the power-law model.
+
+A further potential bias in identify correctly the fitting parameter $alpha$ seems to be the temperature range. By considering the ($\SI{1}{\kelvin} < T < \SI{210}{\kelvin}$) there is  $\approx 20$ percent point decrese in the values extracted compared to the  $\SI{1}{\kelvin} < T < \SI{80}{\kelvin}$ range. Table.~\ref{tab:conductance_exponents_temp} summarises this observation.
+
+\begin{table}
+  \caption{\label{tab:conductance_exponents_temp}
+    Power-law exponents conductance $G^*$ over a wide range of temperatures. Errors are here standard errors.}
+  \[
+    \begin{array}{lccc}
+      \hline \text{Charge Transition} & 1-210 K       & 1-80 K                & \\
+      \hline
+      \alpha(N+1)                     & 0.43 \pm 0.07 & 0.51 \pm 0.06 \Tsmall   \\
+      \alpha(N+2)                     & 0.60 \pm 0.11 & 0.66 \pm 0.12           \\
+      \alpha(N+3)                     & 0.46 \pm 0.06 & 0.54 \pm 0.03           \\
+      \alpha(N+4)                     & 0.60 \pm 0.12 & 0.86 \pm 0.15           \\
+      \alpha(N+5)                     & 0.57 \pm 0.09 & 0.65 \pm 0.12           \\
+      \alpha(N+6)                     & 0.56 \pm 0.13 & 0.82 \pm 0.07           \\
+      \alpha(N+7)                     & 0.33 \pm 0.08 & 0.45 \pm 0.09           \\
+      \overline\alpha                 & 0.51 \pm 0.04 & 0.64 \pm 0.06\Tsmall    \\
+      \hline
+    \end{array}
+  \]
+\end{table}
+% [0.19, 0.38, 0.1, 0.48, 0.38, 0.22, 0.29], % tstudent_err_alpha_temp_1_80K
+% [0.19, 0.31, 0.17, 0.33, 0.25, 0.36, 0.22], % tstudent_err_alpha_temp_1_210K
+
+
+Experimental points seems to deviate systematically at low ($T < \SI{1}{\kelvin}$) and high ($T < \SI{200}{\kelvin}$) temperatures. The saturation at low temperatures has been also reported in carbon nanotubes \cite{postma2001carbon}. The high variability of the fitting is also confirmed mathematically by looking at the $R^2$, as reported in Tab.~\ref{tab:conductance_exponents_all}. The model, however, seems to better perform for data in the region $\SI{1}{\kelvin} < T < \SI{210}{\kelvin}$. From 1 to $\SI{80}{\kelvin}$, $G_\textrm{max}\propto T^{\SI[separate-uncertainty = true]{6.4(0.6)e-1}{K}}$.
+
+
+\begin{figure}[hbtp]
+  \begin{center}
+    \includegraphics[width=\textwidth]{chapter_gnrset/figures/zbgt_pk5_fit_all_2.pdf}
+    \caption{Zero-bias conductance as a function of temperature for the charge transition $N+4\rightarrow N+5$. Solid lines: experimental fits to the model for the low-energy excitations as a function of temperature $G_\text{max}(T)/\cosh^2[(2\text{arccosh}(\sqrt2)V_\textrm{G})/w(T)]$ \cite{beenakker1991theory, postma2001carbon}. The inset shows the peak width $w$ versus $T$, which displays a linear behavior $w(T) = \SI[separate-uncertainty = true]{1.6(0.4)e-1}{} + T\SI[separate-uncertainty = true]{7.5(1)e-2}{}$. Integrated conductance $G^*$ temperature trends (top-right) and power-law exponents $\alpha$ (bottom-right) for each charge transition. Here circles and thin diamonds are the fitting parameters $\alpha$ estimated through a simple power-law and with the Siegel estimator, respectively. Error bars represent fitting errors.}
+    \label{fig:zbgt_integrated_G_pk5_fit_all}
+  \end{center}
+\end{figure}
+
+In Fig.~\ref{fig:zbgt_integrated_G_pk5_fit_all}A we show the near zero-bias conductance traces for a single charge transition; analogous results were also obtained for the other transitions. The inset of Fig.~\ref{fig:zbgt_integrated_G_pk5_fit_all}A shows that the peak width $w$ follows a linear temperature dependence $w\propto T$ at lo temperatures. Upon raising the temperature, the peak tails start to overlap progressively with adjacent conductance peaks, leading to both larger apparent peak height and width. A simple workaround to overcome these unwanted effects is to integrate the conductance over gate voltage.
+
+In Fig.~\ref{fig:zbgt_integrated_G_pk5_fit_all}B the integrated conductance $G^*$ has been calculated using the composite trapezoidal rule for all the charge transitions. In Tab.~\ref{tab:integrated_conductance_exponents_10K_to_72K} we compare the estimate for the integrated conductance $G^*$ from a standard (weak) linear regression method against the Siegel Repeated median estimator \cite{siegel1982robust}.
+
 \begin{table}
   \caption{\label{tab:integrated_conductance_exponents_10K_to_72K}
     Power-law exponents calculated from the integrated conductance $G^*$. Siegel estimator was used to calculate the regression parameter as experimental datapoints in graphene tunnelling experiments are not drawn from a Normal distribution (see main text).}
@@ -200,62 +286,31 @@ regression line ($\sigma^2$), plus the term coming from the uncertainty in where
   \]
 \end{table}
 
-In Tab.~\ref{tab:integrated_conductance_exponents_10K_to_72K} we compared the estimate for the integrated conductance $G^*$ from a standard (weak) linear regression method against the Siegel Repeated median estimator \cite{siegel1982robust}. The reason why we believe is worth comparing both regression method is doublefold.
-
-The limited number of datapoints and the technical challenges associated with thermalising the mixing chamber at high temperature introduce noise and source of errors. An experimental workaround would involve the usage of an instrumentation apparatus with higher signal-to-noise ratio, such as a lock-in amplifier. At the stage when these measurements were perfomed, our custom-made electronics setup had several technical challenges to overcome in order to correctly read the lock-in signal. Therefore, the best DC technique available was to acquire the numerical differential conductance $G_\textrm{sd}$ by measuring the current for a range of bias and gate voltages.
+The reason why we believe is worth comparing both regression method is doublefold. The limited number of datapoints and the technical challenges associated with thermalising the mixing chamber at high temperature introduce noise and source of errors. An experimental workaround would involve the usage of an instrumentation apparatus with higher \gls{SNR} ratio, such as a lock-in amplifier. At the stage when these measurements were perfomed, our custom-made electronics setup had several technical challenges to overcome in order to correctly read the lock-in signal. Therefore, the best DC technique available was to acquire the numerical differential conductance $G_\textrm{sd}$ by measuring the current for a range of bias and gate voltages.
 
 The second motivation is that, for a tunnelling experimental in graphene nanondevices, experimental evidences are strong that conductance values measured are -- statistically speaking -- not drawn from a simple Normal distribution, but are likely to be drawn from a Dirac Billiard type of statistics \cite{da2019klein, ponomarenko2008chaotic}. In particular, the Hamiltonian of the system is a member of the Wigner-Dyson Ensemble with a Gaussian probability distribution, which must also satisfy the fundamental anti-commutation rules imposed by the chiral symmetry of Dirac quasiparticles (Chiral Ensemble). These considerations have been proved experimentally and have assigned a Dyson index $\beta = 1$\footnote[2]{The Dyson index is, technically speaking, the number of real components for each matrix elements: $\beta = 1$ for real and corresponds to the Gaussian Orthogonal Ensemble, $\beta = 2$ for complex and corresponds to the Gaussian Unitary Ensemble, and $\beta = 4$ for quaternions and corresponds to the Gaussian Simpletic Ensemble.} for tunnelling experimental in graphene quantum dots.
 
+The strong temperature dependence for the conductance $G^* \propto T^{\SI[separate-uncertainty = true]{1.4(0.1)}{}} = T^{1+\SI[separate-uncertainty = true]{0.5(0.01)}{}}$ is very close to values reported in transport experiments for single-electron transistor using carbon nanotubes \cite{postma2001carbon}. We therefore model our experimental results with a single impurity model \cite{thorwart2002correlated}. In this scheme, the graphene nanoribbons act as a island attached through two tunneling barriers to two semi-infinite Luttinger liquids represented by the leads.
 
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=\textwidth]{chapter_gnrset/figures/all_transitions.pdf}
-    \caption{Power-law exponents for close to zero-bias conductance resonances plotted against the observable charge transitions, demonstrating an accordance with the Tomonaga-Luttinger liquid model. Darker and lighter blue regions represent the 1$\sigma$ and the 2$\sigma$ error bars, respectively. Plot legend report the main results from the literature as discussed in the main text.}
-    \label{fig:alphas}
-  \end{center}
-\end{figure}
+The assumptions which limits the validity for this model are the following. In carbon nanotubes a Luttinger island is a reasonable assumptions as for metallic nanotubes the linear dispersion close to the Fermi energy ensures the possibility to observe. Here two scenarios are plausible. The first one is that the effective transport width of our GNR is larger compared to the values claimed by the chemist. This possibility cannot be ruled out, as liquid processability represents an unresolved issue. The presence of aliphatic groups having high steric hindrance attached to the ribbon egdges should, however, limits these effects.
 
+A more plausible explanations could be advanced by considering the junctions formed within the systems. The two tunnelling barriers are formed between the graphene and the GNR. Partial doping of the graphene followed exposure to air before loading the sample could shift the Dirac point far away from the charge neautrality position, thus making the tunnelling barrier energy dependent. This could also explain the experimental trend observed above $\SI[separate-uncertainty = true]{219}{K}$.
 
+In Fig.~\ref{fig:zbgt_integrated_G_pk5_fit_all}C the power-law exponents for $G^*$ are reported, with respective error bars estimated with a two-sided t-Student distribution. Note that, for reasons of space in the graph, the state of charge from which the transition starts has been omitted. Therefore, by denoting $N+2$ we are referring to the charge transition $N+1\rightarrow N+2$
+Interestingly, the graphs shows a double-shoulder shape, with the transistion close to zero gate voltage being the one associated between the $N+4$ charge state. The greatest variability for this transistion has to be attributed to an experimental weak signal.
 
-% \begin{figure}[hbtp]
-%     \begin{center}
-%         \input{chapter_gnrset/figures/all_transitions.pdf}
-%         \caption{Power-law temperature dependence of the zero-bias conductance, demonstrating an accordance with the Tomonaga-Luttinger liquid model. Top most frame show the peak height $G_\textrm{max}(T)$ for the conductance peak of the charge transition $N \rightarrow N+1$, following a power-law function with exponent $0.14 \pm 0.10$. Errors are estimated as outlined in the main text.}
-%         \label{fig:zbgt_fit}
-%     \end{center}
-% \end{figure}
+Although we have not been able to formulate one, we believe that a quantitative modelling could be formulated in order to  reproduce the power-law exponents for the multiple successive charge states. The model, we envisage, should take intoo account the number of distinct molecular levels involved in the charge transport available within the island. Detailed magnetic experiments obtained on the same devices and reported in \cite{sopp2021phd} suggest the fullfillment of the Stoner criterion for these kind of \gls{GNR} when two quasi-degenerate low-energy excitations are available at low bias and the spin correlation energy exceed the energy level spacing.
+
+According to the data reported there, the magnetic ground state splitting associated with the transition $N+2\rightarrow N+3$ is larger in magnitude compared to the other transition, indicating the possibility of having \gls{HS} ground state.
 
 
 
-The height of the diamonds reads the bias voltage necessary to add an electron to the ribbon, which defines an addition energy $E_\textrm{add} = e^2/C_\textrm{s} + \Delta E$, where $\Delta E$ is the energy difference between the energy levels. Energy levels are here associated with the quantum states of the ribbon in its quantum dot configuration. Although the length of a \gls{MGNR} is molecularly defined, its quantum dot configuration depends strongly on the coupling with the leads. Therefore, the $\Delta E$ read from a first-principle calculation and the one measured experimentally may differ significantly. An average $\overline{E_\textrm{add}} =  157.43\pm 5.65$ meV was extracted from the heights of all the six suppressed current regions, which is higher than previosuly reported for room-temperature operating single-electron quantum dots in semiconductors \cite{zhuang1998silicon} and carbon nanotubes \cite{postma2001carbon}.
-
-Given the graphene electrodes have low electrostatic screening, the main contribution to the total capacitance is given by the capacitive coupling of the \gls{MGNR} to the back gate, so we can approximate $C_\textrm{s}\approx C_\textrm{g}$. By using reported values in the literature \cite{han2010electron} $C_\textrm{g}\approx \SI{700}{\atto\farad}/\mu\textrm{m}^2$, we estimate.
-
-\begin{figure}[hbtp]
-  \begin{center}
-    \includegraphics[width=\textwidth]{chapter_gnrset/figures/alphas.pdf}
-    \caption{Power-law exponents for close to zero-bias conductance resonances plotted against the observable charge transitions, demonstrating an accordance with the Tomonaga-Luttinger liquid model. Darker and lighter blue regions represent the 1$\sigma$ and the 2$\sigma$ error bars, respectively. Plot legend report the main results from the literature as discussed in the main text.}
-    \label{fig:alphas}
-  \end{center}
-\end{figure}
-
-
-The height of the diamonds reads the bias voltage necessary to add an electron to the ribbon, which defines an addition energy $E_\textrm{add} = e^2/C_\textrm{s} + \Delta E$, where $\Delta E$ is the energy difference between the energy levels. Energy levels are here associated with the quantum states of the ribbon in its quantum dot configuration. Although the length of a \gls{MGNR} is molecularly defined, its quantum dot configuration depends strongly on the coupling with the leads. Therefore, the $\Delta E$ read from a first-principle calculation and the one measured experimentally may differ significantly. An average $\overline{E_\textrm{add}} =  157.43\pm 5.65$ meV was extracted from the heights of all the six suppressed current regions, which is higher than previosuly reported for room-temperature operating single-electron quantum dots in semiconductors \cite{zhuang1998silicon} and carbon nanotubes \cite{postma2001carbon}.
-
-\begin{figure}[hbtp]
-  \begin{center}
-    \includegraphics[width=\textwidth]{chapter_gnrset/figures/zbgt_pk5_fit_all_2.pdf}
-    \caption{Zero-bias conductance as a function of temperature for the charge transition $N+4\rightarrow N+5$. Solid lines: experimental fits to the model for the low-energy excitations as a function of temperature $G_\text{max}(T)/\cosh^2[(2\text{arccosh}(\sqrt2)V_\textrm{G})/w(T)]$ \cite{beenakker1991theory, postma2001carbon}. The inset shows the peak width $w$ versus $T$, which displays a linear behavior $w(T) = \SI[separate-uncertainty = true]{1.6(0.4)e-1}{} + T\SI[separate-uncertainty = true]{7.5(1)e-2}{}$. Integrated conductance $G^*$ temperature trends (top-right) and power-law exponents $\alpha$ (bottom-right) for each charge transition. Here circles and thin diamonds are the fitting parameters $\alpha$ estimated through a simple power-law and with the Siegel estimator, respectively. Error bars represent fitting errors.}
-    \label{fig:zbgt_pk5_fit_all}
-  \end{center}
-\end{figure}
 
 % $\SI[separate-uncertainty = true]{1.6(0.4)e-1}{}$
 % $\SI[separate-uncertainty = true]{7.5(1)e-2}{}$
 % $\SI[separate-uncertainty = true]{1.6(0.4)e-1} (T)$
 
 
-Given the graphene electrodes have low electrostatic screening, the main contribution to the total capacitance is given by the capacitive coupling of the \gls{MGNR} to the back gate, so we can approximate $C_\textrm{s}\approx C_\textrm{g}$. By using reported values in the literature \cite{han2010electron} $C_\textrm{g}\approx \SI{700}{\atto\farad}/\mu\textrm{m}^2$, we estimate.
 
 
 

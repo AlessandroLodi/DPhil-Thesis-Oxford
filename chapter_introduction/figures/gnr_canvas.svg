@@ -126,8 +126,7 @@
      inkscape:groupmode="layer"
      id="layer1"
      inkscape:label="Layer 1"
-     transform="translate(-3208.4799,-2727.6591)"
-     sodipodi:insensitive="true">
+     transform="translate(-3208.4799,-2727.6591)">
     <rect
        style="opacity:0.511222;fill:#ffffff;fill-opacity:1;stroke:#080305;stroke-width:0.0943236;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect73697"
@@ -140,7 +139,8 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Layer 2"
-     transform="translate(-3208.4799,-2727.6591)">
+     transform="translate(-3208.4799,-2727.6591)"
+     sodipodi:insensitive="true">
     <g
        id="g6558"
        transform="matrix(0.35649107,0,0,0.36065623,3342.4876,3452.4081)">

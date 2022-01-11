@@ -2,24 +2,24 @@
 
 \minitoc
 
-The lateral confinement of the carriers makes \glspl{GNR} a quasi-1D system. The \textit{quasi} referes to the fact that the electron is confined across two directions. 
+The lateral confinement of the carriers makes \glspl{GNR} a quasi-1D system. The \textit{quasi} referes to the fact that the electron is confined across two directions.
 This fact became true not just until recently with the advent of bottom-up techiniques, which are capable synthesising atomically-precise \gls{GNR} with width below 5 nm.
 
 
-In general, quantum transport phenomena takes place on a mesoscopic scale, that is, when dealing with condensed phase systems, in particular (but not exclusively) those of micro-nano dimensions, 
+In general, quantum transport phenomena takes place on a mesoscopic scale, that is, when dealing with condensed phase systems, in particular (but not exclusively) those of micro-nano dimensions,
 for which behaviours not present in macroscopic bodies are observed.
-The different behaviour of mesoscopic phases compared to macroscopic ones liesin the wavelength nature of electrons. 
+The different behaviour of mesoscopic phases compared to macroscopic ones liesin the wavelength nature of electrons.
 When the size of the sample $L$ (which can be different for the three directions in space, $L_x, L_y, L_z$) becomes small compared with the characteristic lengths
 for the motion of electrons, then the conductivity depends on the size $L$.
 
-There are three kinds of relevant characteristic lengths: the Fermi wavelength $\lambda_F = h / \sqrt{2m_eE_F} = 2\pi/k_F$, and the coherence length $L_\phi$, which 
-is the spatial distance that an electron travels before the phase of its wave function changes of $2\pi$. 
+There are three kinds of relevant characteristic lengths: the Fermi wavelength $\lambda_F = h / \sqrt{2m_eE_F} = 2\pi/k_F$, and the coherence length $L_\phi$, which
+is the spatial distance that an electron travels before the phase of its wave function changes of $2\pi$.
 
-Additionally, two characteristic lengths associated with the mean distance traveled after elastic ($l_\textrm{el}$) and inelastic ($l_\textrm{in}$) collisions are also introduced; for inelastic collision, it is convenient to consider the mean distance before losing an amount of energy $k_BT$.      
+Additionally, two characteristic lengths associated with the mean distance traveled after elastic ($l_\textrm{el}$) and inelastic ($l_\textrm{in}$) collisions are also introduced; for inelastic collision, it is convenient to consider the mean distance before losing an amount of energy $k_BT$.
 
 For a metal with carrier concentrations $n \sim 10^{23}$ cm$^{-3}$, $l = 1 - 10$ nm, $\lambda_F = 0.5$ nm, and $L_\phi = 0.5$ \si{\micro\metre}, where $l$ is the mean free path and includes both elastic and inelastic events.
-In comparison, for carrier concentrations $n \sim 10^{11}$ cm$^{-2}$, graphene displays $l = 50$ nm$-3$\footnote[2]{For suspended graphene, $l (\textrm{4 K}) \approx 100$ nm, while Mayorov et al. $l \approx 3$ \si{\micro\metre} at 290 K for graphene sandwiched between two hBN crystals \cite{mayorov2011micrometer}.} 
-\si{\micro\metre}, $\lambda_F = 2\sqrt{\pi/n}$ nm, and $L_\phi = 0.5$ \si{\micro\metre} \cite{torres2013introduction}, while \gls{MW}-\glspl{CNT} $n \sim 10^{11}$ cm$^{-2}$, $l = 1$ \si{\micro\metre}, $\lambda_F = 0.74$ nm, and $L_\phi = 100$ nm \cite{stojetz2005effect}.
+In comparison, for carrier concentrations $n \sim 10^{11}$ cm$^{-2}$, graphene displays $l = 50$ nm$-3$\footnote[2]{For suspended graphene, $l (\textrm{4 K}) \approx 100$ nm, while Mayorov et al. $l \approx 3$ \si{\micro\metre} at 290 K for graphene sandwiched between two hBN crystals \cite{mayorov2011micrometer}.}
+\si{\micro\metre}, $\lambda_F = 2\sqrt{\pi/n}$ nm, and $L_\phi = 0.5$ \si{\micro\metre} \cite{torres2013introduction}, while \gls{MWNT}-\glspl{CNT} $n \sim 10^{11}$ cm$^{-2}$, $l = 1$ \si{\micro\metre}, $\lambda_F = 0.74$ nm, and $L_\phi = 100$ nm \cite{stojetz2005effect}.
 
 
 \section{Charge Transport In Zero-Dimensional Objects}
@@ -27,20 +27,20 @@ In comparison, for carrier concentrations $n \sim 10^{11}$ cm$^{-2}$, graphene d
 \co{Transport Spectroscopy in Quantum Dot}
 
 \Glspl{QD} defined through lithography can be seen as a metallic island filled with
-electrons, coupled to one or multiple source, drain and gate electrodes (\mccorrect{Figure}). 
+electrons, coupled to one or multiple source, drain and gate electrodes (\mccorrect{Figure}).
 While source and drain are coupled both capacitively thorugh the island thanks to tunnel junctions, the gate (or multiple
 gates) is just capacitatively coupled.
 
 One way to describe this system is through the constant interaction model, which allows to derive important electrical transport
-information within the \textit{orthodox} Coulomb framework. The assumptions made within this model are the following: all Coulomb interactions, 
-both between electrons on the dot and between the dot and the leads, are described by a single constant capacitance $C$ given by the total sum of the 
-single individual capacitance between the dot and the terminals: 
+information within the \textit{orthodox} Coulomb framework. The assumptions made within this model are the following: all Coulomb interactions,
+both between electrons on the dot and between the dot and the leads, are described by a single constant capacitance $C$ given by the total sum of the
+single individual capacitance between the dot and the terminals:
 
 \begin{equation}\label{ch:theory:eq:capacitance_interaction_model}
-        C_\textrm{tot} = \sum_{i=1}^\textrm{terminals} C_i,
+    C_\textrm{tot} = \sum_{i=1}^\textrm{terminals} C_i,
 \end{equation}
 
-where $i$ runs over all the terminals coupled to the central island. The second important assumption is that the total hamiltonian can be modelled as a sum of single-particle hamiltonians; 
+where $i$ runs over all the terminals coupled to the central island. The second important assumption is that the total hamiltonian can be modelled as a sum of single-particle hamiltonians;
 thus, the total energy can be expressed as a sum of single-particle energies $E_i$ corresponding to individual, non-interacting energy levels.
 
 Under these assumptions, the total dot energy given for a quantum dot in a three-terminal device with $N$ electrons becomes:
@@ -54,8 +54,8 @@ Central quantity to evaluate whether the current can flow through the dot is its
 to the dot, and can be expressed as:
 
 \begin{align}
-    \mu_\textrm{dot}(N) &= E_\textrm{dot}(N) - E_\mathrm{dot}(N-1), \notag\\
-                        &= \left(N-N_{0}-\frac{1}{2}\right) E_{\mathrm{C}}-\frac{E_{\mathrm{C}}}{e}\left(C_{\mathrm{S}} V_{\mathrm{S}}+C_{\mathrm{D}} V_{\mathrm{D}}+C_{\mathrm{G}} V_{\mathrm{G}}\right)+E_{N},
+    \mu_\textrm{dot}(N) & = E_\textrm{dot}(N) - E_\mathrm{dot}(N-1), \notag                                                                                                                                       \\
+                        & = \left(N-N_{0}-\frac{1}{2}\right) E_{\mathrm{C}}-\frac{E_{\mathrm{C}}}{e}\left(C_{\mathrm{S}} V_{\mathrm{S}}+C_{\mathrm{D}} V_{\mathrm{D}}+C_{\mathrm{G}} V_{\mathrm{G}}\right)+E_{N},
 \end{align}
 
 where $E_\mathrm{C} = e^2/C_\textrm{tot}$ is the charging energy.
@@ -69,7 +69,7 @@ The weak coupling regime is defined in the limit where $\Gamma\ll\E_C, E_\textrm
 called Coulomb diamonds, in which transport is blocked. In these regions the energy cost to add an electron onto the \gls{QD} exceeds the available energy and therefore no current can flow through the \gls{QD} \mccorrect{Figure}.
 
 The blockade areas are separated by regions of high current, the Sequential Electron Tunnelling (SET) zones, where current flow through the \gls{QD} is allowed via sequential electron tunnelling. Each Coulomb diamond corresponds to a certain number of electrons N occupying the \gls{QD} where the number of electrons changes sequentially between neighbouring diamonds. When looking closely at the SET regions, often lines running parallel to the edges
-of the Coulomb diamonds can be observed. These originate from orbital excited states, spin states or vibrational states, which will be discussed later. These states are able to contribute to the current flow through the \gls{QD} if their energy levels are reached by applying a higher bias voltage \mccorrect{Figure}. Such excited or vibrational states can yield information about the \gls{QD}’s energy spectrum and are especially helpful when attempting to identify specific molecules as each molecule has a distinctive vibrational fingerprint. 
+of the Coulomb diamonds can be observed. These originate from orbital excited states, spin states or vibrational states, which will be discussed later. These states are able to contribute to the current flow through the \gls{QD} if their energy levels are reached by applying a higher bias voltage \mccorrect{Figure}. Such excited or vibrational states can yield information about the \gls{QD}’s energy spectrum and are especially helpful when attempting to identify specific molecules as each molecule has a distinctive vibrational fingerprint.
 
 Furthermore, the height of the Coulomb diamond in the stability diagram is equal to the addition energy of the \gls{QD} or molecule \mccorrect{Figure}.
 While it is possible to readily read out the addition energy and the energy of excited states, it is very challenging or almost impossible to infer the charge state of the \gls{QD}, that is the number of electrons on the dot, from the stability diagram. Since the \gls{QD}
@@ -99,7 +99,7 @@ written as:
     I = \frac{2e}{h} \int\limits_{-\infty}^{+\infty}\mathcal{T}(\epsilon)[f_\textrm{L}(E) - f_\textrm{R}(E)]\text{d}\epsilon,
 \end{equation}
 where $\mathcal{T}$ is the transmission probability of an electron with single-particle energy $\epsilon$ to move across the source and drain leads. The Fermi-Dirac statistics
-$f_\textrm{FD}(\epsilon, T) = \frac{1}{1+e^{\epsilon_i - \mu/k_BT}} $ details the average number of fermions (electrons in our case) in a single-particle state $i$ with energy $\epsilon_i$ in thermodynamic equilibrium at temperature $T$. Therefore, it is used to quantify how many electrons from the source leads have a certain energy to be able to cross the molecular junction: this event, as everything in quantum mechanics, is detailed by the amplitude of the transmission probability $\mathcal{T}(\epsilon)$. 
+$f_\textrm{FD}(\epsilon, T) = \frac{1}{1+e^{\epsilon_i - \mu/k_BT}} $ details the average number of fermions (electrons in our case) in a single-particle state $i$ with energy $\epsilon_i$ in thermodynamic equilibrium at temperature $T$. Therefore, it is used to quantify how many electrons from the source leads have a certain energy to be able to cross the molecular junction: this event, as everything in quantum mechanics, is detailed by the amplitude of the transmission probability $\mathcal{T}(\epsilon)$.
 
 One can calculate the number of electrons in a crystal by multiplying the density of
 states $N(\epsilon)$ with the FD distribution and summing up this product for all energies:
@@ -128,8 +128,8 @@ dimension normalization via the Planck constant $h$ it is possible to calculate 
 The electrical conductance is then retrieved by taking the derivative of the current:
 
 \begin{align}
-    G   &= -\frac{2e}{h} \int\limits_{-\infty}^{+\infty}\mathcal{T}(\epsilon)\pdv{f(T, \epsilon)}{\epsilon}\text{d}\epsilon,\nonumber\\
-        &= - G_0 \int\limits_{-\infty}^{+\infty}\mathcal{T}(\epsilon)\pdv{f(T, \epsilon)}{\epsilon}\text{d}\epsilon,
+    G & = -\frac{2e}{h} \int\limits_{-\infty}^{+\infty}\mathcal{T}(\epsilon)\pdv{f(T, \epsilon)}{\epsilon}\text{d}\epsilon,\nonumber \\
+      & = - G_0 \int\limits_{-\infty}^{+\infty}\mathcal{T}(\epsilon)\pdv{f(T, \epsilon)}{\epsilon}\text{d}\epsilon,
 \end{align}
 
 As we will see in more detail later (cf. Sec.~\ref{sc:NEGF}), it is possible to compute the set of real eigenvalues for the transmission thorugh different approaches with varying degrees of complexity. One of them, which it has been used in cf. Ch.~\ref{ch:fet}, calcultes the product between the tunnel couplings and Green function terms. Other and more sophisticated approaches can be found in literature \cite{cuevas2010molecular}.
@@ -141,9 +141,9 @@ In this section we will focus on those electrical phenomena arising when a therm
 \begin{equation}\label{ch2:eq:seeback_coeff}
     \Delta V = S\Delta T
 \end{equation}
-where $\Delta V $ denotes the electrical potential drop and $S$ is the proportionality factor called Seebeck coefficient. For reasons that will become clear later, it is prefferred to define the as the negative voltage difference $\Delta V$ induced per unit temperature change $\Delta T$, namely $S = - \lim_{\Delta T\to 0} \frac{\Delta V}{\Delta T}$. 
+where $\Delta V $ denotes the electrical potential drop and $S$ is the proportionality factor called Seebeck coefficient. For reasons that will become clear later, it is prefferred to define the as the negative voltage difference $\Delta V$ induced per unit temperature change $\Delta T$, namely $S = - \lim_{\Delta T\to 0} \frac{\Delta V}{\Delta T}$.
 
-There are two approaches used to model the electronic distribution in a solid when external paramaters such as heat and/or non-uniform fields are applied. The Boltzmann approach infers the dynamics of a diluted gas of semi-classical particles: in the semiclassical description of transport, the electron ensamble is described by a probability distribution function $f(\vec{r}, \vec{k}, t)$, which details the number of electrons that a certain time $t$ are within a volume $\text{d}\vec{r}$ with wave vector within the interval $\text{d}\vec{k}$. In the case where quantum effects play a role in transport, that is if the potential of the structure varies sharply with respect to the particle average thermal wavelength, the Boltzmann approach is no longer valid. 
+There are two approaches used to model the electronic distribution in a solid when external paramaters such as heat and/or non-uniform fields are applied. The Boltzmann approach infers the dynamics of a diluted gas of semi-classical particles: in the semiclassical description of transport, the electron ensamble is described by a probability distribution function $f(\vec{r}, \vec{k}, t)$, which details the number of electrons that a certain time $t$ are within a volume $\text{d}\vec{r}$ with wave vector within the interval $\text{d}\vec{k}$. In the case where quantum effects play a role in transport, that is if the potential of the structure varies sharply with respect to the particle average thermal wavelength, the Boltzmann approach is no longer valid.
 
 The second applicable framework is the Landauer theory (cf. Sec.~\ref{ch:theory:sec:landauer_theory}) which is used for low temperature thermoelectric calculations in mesoscopic structures \mccorrect{cite Cuevas}. The Landauer formalism has the advantage of assuming a constant mean-free path, rather than a constant relaxation time of the electrons as the Boltzmann approach does, which
 is more useful in experiments. In addition, the Landauer approach is valid in the ballistic and quasi-ballistic regime.
@@ -159,15 +159,15 @@ If the electrical or thermal gradient are treated within a linear approximation,
 \end{equation}
 Thus, the total amount of current flowing within the device is given from the thermoelectric current due to the thermal gradient $\Delta T$ applied to the junction and the electric current due to bias applied between source and drain:
 \begin{align}
-    I &= G\Delta V - L\Delta T,\label{eq:current_voltage_temperature}\\
-    Q &= LT\Delta V - K\Delta T. 
+    I & = G\Delta V - L\Delta T,\label{eq:current_voltage_temperature} \\
+    Q & = LT\Delta V - K\Delta T.
 \end{align}
 Here $G$, $L$, and $K$ denotes the electric, the thermoelectric and the thermoconductance, resepctively. The relation expressed in Eq.~\ref{eq:current_voltage_temperature} is particularly convenient, as through the Wiedemann-Franz law it is possible to retrieve the Seebeck coefficient. For an open circuit we will then have:
 \begin{align}
-    I &= 0 = G\Delta V - L\Delta T,\nonumber\\
-    \sigma\Delta V&= \alpha\Delta T,\nonumber\\
-    \frac{\Delta V}{\Delta T} &= \frac{\alpha}{\sigma}
-\end{align} 
+    I                         & = 0 = G\Delta V - L\Delta T,\nonumber \\
+    \sigma\Delta V            & = \alpha\Delta T,\nonumber            \\
+    \frac{\Delta V}{\Delta T} & = \frac{\alpha}{\sigma}
+\end{align}
 where we called with $\sigma$ the conductivity. This relation allows us to identify the Seebeck coefficient as:
 \begin{equation}
     S = - \frac{\Delta V}{\Delta T} = \frac{\sigma}{\alpha}.
@@ -178,7 +178,7 @@ where we called with $\sigma$ the conductivity. This relation allows us to ident
 
 What are the relevant parameters/quantities that we are interested to calculate ab initio
 Why we opted for a pseudopotential such as SIESTA rather than others (quantum espresso).
-Explain why calculating the isolated gas phase all-electron electronic structure is legit for a 
+Explain why calculating the isolated gas phase all-electron electronic structure is legit for a
 qualitative see how the electron density is distributed over the system.
 
 Remember also to emphasise the difference from stricly and non-stricly localised functions

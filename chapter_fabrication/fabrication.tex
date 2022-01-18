@@ -17,8 +17,24 @@ stages involved in preparing the graphene for transfe
 
 \section{Contacting Graphene Nanoribbons}
 
-Here three methods have been exploited: standard feedback electroburning, gate-dependent electroburning,
-and litographic patterning of graphene nanogap
+\co{Here three methods have been exploited: standard feedback electroburning, gate-dependent electroburning,
+    and litographic patterning of graphene nanogaps}
+
+The process of contacting graphene nanoribbons represents one of the major obstacles a reliable and robust fabrication. Various methodologies have been exploited in the literature. For example, litographic \gls{GNR} can be contacted through standard metal deposition techiniques by covering the substrate with a resist and evaporating metals (Pd, Au). As we have seen in the Ch.\ref{ch:introduction}, contacting bulk graphene with metals will result in Schottky barriers of various nature, which extend largely depends on the level of natural doping of graphene.
+
+Liquid-processable \glspl{GNR} represents a further development in terms of structural integrity and shape. One of the major hurdles, however, is represented by the placement of such structures on top on a \gls{FET} geometry. In order to favour the binding interactions with the leads, we have decided to employ graphene as electrode material.
+
+The problem of depositing graphene nanoribbons on top of graphene nanogaps could be mapped onto a well-know problem in geometric probability called Buffon's needle problem. Originally fomulated in the eighteen century, the Buffon's needle problem calculates what is the probability that by randomly throwing a needle on length $l$ the needle will cross at least a line of grid of parallel lines of width $d > l$ units apart. Several extension of this problem have been followed in the last century.
+
+Even if the problem assumes no interactions active between the needle and the grid, the problem well capture the essence of our experiment. In the limit where the ration betwenn the needle length and the distance between the parallel lines is greater than 1, i.e. $\lambda = l/d > 1$, the probability that the needle intersects at least one line is given by \cite{uspensky1937introduction}:
+\begin{equation}
+    P(\lambda) =
+    \begin{cases}
+        \frac{2\lambda}{\pi}                                                   & \lambda\leq 1 \\
+        \frac{2}{\pi}\qty(\lambda - \sqrt{\lambda^2 - 1} + \sec^{-1}(\lambda)) & \lambda>1     \\
+    \end{cases}
+\end{equation}
+
 
 
 \section{Chip Design}

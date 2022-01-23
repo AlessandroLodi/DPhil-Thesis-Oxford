@@ -181,10 +181,13 @@ The variance here has two main contribution: the true noise variance about the
 regression line ($\sigma^2$), plus the term coming from the uncertainty in where the regression line lies $S_{G_\textrm{max}}^2$.
 
 
-\begin{figure}
+\begin{figure}[hbtp]
   \begin{center}
-    \includegraphics[width=\textwidth]{chapter_gnrset/figures/all_transitions_2.pdf}
-    \caption{Power-law exponents for close to zero-bias conductance resonances plotted against the observable charge transitions, demonstrating an accordance with the Tomonaga-Luttinger liquid model. Error bars are calculated using the formula $\delta[\log(G_\text{max})] = 0.434~\sigma_{G_\text{max}}/G_\text{max}$, where $\sigma_{G_\text{max}}$ is the error from fitting the data with a power-law model.}
+    \includegraphics[width=\textwidth]{chapter_gnrset/figures/zbgt_peak_height_alphas.pdf}
+    \caption{
+      \textbf{(a)} Power-law fits zero-bias peak height $G_\textrm{max}$ as the temperature is increased. Error bands are calculated according to the formula $\delta[\log(G_\text{max})] = 0.434~\sigma_{G_\text{max}}/G_\text{max}$, where $\sigma_{G_\text{max}}$ is the error from fitting the data with a thermally-broaded model for the resonance.
+      \textbf{(b)} Power-law exponents plotted for the various charge
+      transitions, demonstrating a certain degree of accordance with the Tomonaga-Luttinger liquid model. Darker and lighter blue regions draw the 1$\sigma$ and the 2$\sigma$ confidence interval, respectively. Experimental comparison with the literature as discussed in the main text are reported on the right.}
     \label{fig:all_transitions}
   \end{center}
 \end{figure}
@@ -194,13 +197,13 @@ The height of the diamonds reads the bias voltage necessary to add an electron t
 
 Given the graphene electrodes have low electrostatic screening, the main contribution to the total capacitance is given by the capacitive coupling of the \gls{MGNR} to the back gate, so we can approximate $C_\textrm{s}\approx C_\textrm{g}$. By using reported values in the literature \cite{han2010electron} $C_\textrm{g}\approx \SI{700}{\atto\farad}/\mu\textrm{m}^2$, we estimate.
 
-\begin{figure}[hbtp]
-  \begin{center}
-    \includegraphics[width=\textwidth]{chapter_gnrset/figures/alphas.pdf}
-    \caption{Power-law exponents for close to zero-bias conductance resonances plotted against the observable charge transitions, demonstrating an accordance with the Tomonaga-Luttinger liquid model. Darker and lighter blue regions represent the 1$\sigma$ and the 2$\sigma$ error bars, respectively. Plot legend report the main results from the literature as discussed in the main text.}
-    \label{fig:alphas}
-  \end{center}
-\end{figure}
+% \begin{figure}[hbtp]
+%   \begin{center}
+%     \includegraphics[width=\textwidth]{chapter_gnrset/figures/alphas.pdf}
+%     \caption{Power-law exponents for close to zero-bias conductance resonances plotted against the observable charge transitions, demonstrating an accordance with the Tomonaga-Luttinger liquid model. D.}
+%     \label{fig:alphas}
+%   \end{center}
+% \end{figure}
 
 \begin{table}
   \caption{\label{tab:conductance_exponents_all}
@@ -256,7 +259,7 @@ Experimental points seems to deviate systematically at low ($T < \SI{1}{\kelvin}
 
 \begin{figure}[hbtp]
   \begin{center}
-    \includegraphics[width=\textwidth]{chapter_gnrset/figures/zbgt_pk5_fit_all_2.pdf}
+    \includegraphics[width=\textwidth]{chapter_gnrset/figures/zbgt_int_cond_power_law_h.pdf}
     \caption{Zero-bias conductance as a function of temperature for the charge transition $N+4\rightarrow N+5$. Solid lines: experimental fits to the model for the low-energy excitations as a function of temperature $G_\text{max}(T)/\cosh^2[(2\text{arccosh}(\sqrt2)V_\textrm{G})/w(T)]$ \cite{beenakker1991theory, postma2001carbon}. The inset shows the peak width $w$ versus $T$, which displays a linear behavior $w(T) = \SI[separate-uncertainty = true]{1.6(0.4)e-1}{} + T\SI[separate-uncertainty = true]{7.5(1)e-2}{}$. Integrated conductance $G^*$ temperature trends (top-right) and power-law exponents $\alpha$ (bottom-right) for each charge transition. Here circles and thin diamonds are the fitting parameters $\alpha$ estimated through a simple power-law and with the Siegel estimator, respectively. Error bars represent fitting errors.}
     \label{fig:zbgt_integrated_G_pk5_fit_all}
   \end{center}

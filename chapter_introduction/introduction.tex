@@ -11,7 +11,7 @@ Manufacturing costs are, except for the market makers such as Intel, Samsung, an
 
 Historically, the \glspl{IC} research is one of those rare case where private sector and governement fundies have acted almost in symbiosis since the first point-contact transistor prototype engineered at the dawn of the 40s at Bell Labs by Bardeen, Brattain and William Shockley \cite{shockley1984path}. Almost 10 years later, Atalla and Kahng (Bell Labs) invented the \gls{CMOS}. Argubly, it has been the density scaling capability of this technology one of the main research-driven factor. In this scenario, the Moore's law \cite{moore1965moore} it has not only viewed as a reliable method of calculating future number of transistors per integrated circuit, but also as a pace setter of innovation and competition.
 
-The quest for alternative materials for integrated electronics is not only linked to the number of transistors per chip rush. Fig.\ref{fig:moore_law} displays several microprocessor figure of merit trends over the last five decades. The clock frequency is how many clock cycle (how many electrical pulses) a CPU can perform per second and it is measured in Hz. During these electrical pulses the CPU can perform basic tasks such as accessing memory, writing data or grab a new set of instructions to perform. The clock speed (or rate) is architecture dependent so it has to be compared for the same architecture; if not specified, as in the graph, the reference architecture is the x86-32/64.
+The quest for alternative materials for integrated electronics is not only linked to the number of transistors per chip rush. Fig.\ref{fig:intro:moore_law} displays several microprocessor figure of merit trends over the last five decades. The clock frequency is how many clock cycle (how many electrical pulses) a CPU can perform per second and it is measured in Hz. During these electrical pulses the CPU can perform basic tasks such as accessing memory, writing data or grab a new set of instructions to perform. The clock speed (or rate) is architecture dependent so it has to be compared for the same architecture; if not specified, as in the graph, the reference architecture is the x86-32/64.
 
 As the graph shows, the clock speed quantity is correlated with the power dissipated by the processor, typically static power (when the transistor is not switching). \Gls{CMOS} technology is well-known for low static power values for standard supply voltages \qtyrange[range-units = bracket]{3}{5}{\volt}. As the gate oxide thickness decreseas, however, the probability of tunnelling for the charge carriers increases, resulting larger leakage currents and higher disspation powers \cite{taur2021fundamentals}.
 
@@ -19,13 +19,13 @@ As the graph shows, the clock speed quantity is correlated with the power dissip
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_introduction/figures/moore.pdf}
         \caption{The arc of Moore's law over 42 years of microprocessor trend data. While the number of transistors have doubles about every two years, the same cannot be said for other transistors key figures. In particular, clock frequency and power dissipation capabilities have plateaued out since 2003. The released by Intel in 2005 of its first dual-core processor (Pentium D) and the ability to do Hyper-Threading sparked the number of logical cores (capability to carry out two o more processes simultaneously by a single core) per CPU. Since then, the market interest for multithreading over single-thread performance has been one of the driving factors for multiple-cores architectures in modern laptop. Data collected by K.\ Rupp, figure inspired by a talk given by Nvidia.}
-        \label{fig:moore_law}
+        \label{fig:intro:moore_law}
     \end{center}
 \end{figure}
 
 Clock rate and power dissipated trends have flattened out from 2005. The reasons for this are more due to fundamental issues with the \gls{CMOS} technology rather than engineering ones.
 % While a good understanding of the physics of semiconductor nanostructures has made it possible to reduce channel lengths down to the nanometre (IBM has announced that it will market CPUs with 5nm channel lengths in 2021 thanks to finFET technology), the same cannot be said for alternative solutions in clock frequency advancement and power dissipation of a single microprocessor. 
-While fundamental studies are in progress and a definitive solution is far from being reached in the nearby future, in order to keep up with Moore's law the market of CPU have shifted the attention towards architectures capable of parallelising multiple processor instructions. This trend is well illustrated by the parameters of the number of logical cores in Fig.\ref{fig:moore_law}, which has seen an increase since 2005 thanks to the development of processors capable of supporting Hyper-Threading.
+While fundamental studies are in progress and a definitive solution is far from being reached in the nearby future, in order to keep up with Moore's law the market of CPU have shifted the attention towards architectures capable of parallelising multiple processor instructions. This trend is well illustrated by the parameters of the number of logical cores in Fig.\ref{fig:intro:moore_law}, which has seen an increase since 2005 thanks to the development of processors capable of supporting Hyper-Threading.
 
 
 \co{Evidence 3 for the argument carbon electronics could be a valid alternative to Si}
@@ -50,7 +50,7 @@ that seems to best describe the proprierties of graphene is the band-structure W
 In the International Table of Crystallography, graphene is included in the symmorphic space group \#191, with symmetry $D^1_6h$ ($P6/mmm$).
 The triangular lattice is obtained by considering two atoms per unit cell having the respective lattice vectors:
 
-The carbon atoms in graphene form a two-dimensional hexagonal crystal with two atoms per unit cell, as shown in Fig.~\ref{fig:graphene_lattice}:
+The carbon atoms in graphene form a two-dimensional hexagonal crystal with two atoms per unit cell, as shown in Fig.~\ref{fig:intro:graphene_lattice}:
 \begin{equation}\label{eq:graphene_lattice_vectors}
     \vect{a}{_1} = \frac{a}{2}(3, \sqrt{3}),~
     \vect{a}{_2} = \frac{a}{2}(3, -\sqrt{3}),
@@ -146,7 +146,7 @@ with $f(\vect{k})$ defined as:
 \begin{figure}
     \begin{center}
         \includegraphics[width=0.95\columnwidth]{chapter_introduction/figures/graphene_lattice.pdf}
-        \caption{\label{fig:graphene_lattice}
+        \caption{\label{fig:intro:graphene_lattice}
             \textbf{(a)} Honeycomb lattice of graphene. Two non-equivalent carbon atoms A and B in the primitive cells (direct space) are denoted in yellow and purple. The set of possible translations are showed by the lattice vectors $\vect{a}{_1},\vect{a}{_2}$ (green arrows).
             \textbf{(b)} The first Brillouin zone of graphene with vertices \vect{K} (orange) and \vect{K'} (green), and reciprocal-lattice vectors drawn in red.
             \textbf{(c)} Graphene energy dispersion resulted from Eq.~\ref{eq:graphene_hamiltonian} (in units of nearest neighbor hopping parameter \emph t). The magnification shows one of the Dirac cones, which are located at the \vect{K} and \vect{K'} points, emphasising the linear dispersion relation.
@@ -506,7 +506,7 @@ Logic applications, as mentioned in Sec.~\ref{intro:sec:graphene}, require two w
 
 \subsection{Crystal and Band Structure}
 Historically, a first classification of graphene nanoribbons was derived by grouping the edge structures into Armchair-GNRs (AGNRs) and Zigzag-GNRs (ZGNRs).
-Following the success of chemical routes in producing GNRS, various kind of edges have come to light, e.g., cove, fjord, chiral, and all these can be regarded as combination of AGNRs and ZGNRs \mccorrect{Figure}.
+Following the success of chemical routes in producing GNRS, various kind of edges have come to light, e.g., cove, fjord, chiral, and all these can be regarded as combination of AGNRs and ZGNRs (Fig.\ref{fig:intro:gnr-canvas}).
 
 Initial bandgap estimations through DFT calculations reported values between 2.5 and 0.5 eV.
 The inclusion of electronic correlation, however, becomes crucial for ultra-narrov ($< 5$ nm) ribbon \cite{son2006energy, yang2007quasiparticle} and more accurate estimates derived by the group of Steven Louie based on the \textit{GW} approximation reported a wider range of energy gaps from 5.5 to 1 eV.
@@ -589,7 +589,7 @@ The solution of the model displays interesting features: two pairs of peaks spli
     \begin{center}
         \includegraphics[width=0.95\textwidth]{chapter_introduction/figures/han2007_just_twp.pdf}
         \centering{}
-        \caption{\label{fig:han2007_EgvsW}
+        \caption{\label{fig:intro:han2007_EgvsW}
         \textbf{(a)} $E_g$ vs $W$ for four (P1–P4) of the parallel devices and two (D1, D2) with varying orientation. The inset shows $E_g$ vs relative angle $\theta$ for the device D1 and D2.
         \textbf{(b)} $E_g^{-1}$ vs $W$.
         \textbf{(c)} Conductance vs width of parallel GNRs measured at a gate voltage V - V$_g$ = 50 V. Squares are values measure at 300 K whereas triangle corresponds to 1.6 K.

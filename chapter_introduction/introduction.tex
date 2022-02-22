@@ -498,10 +498,11 @@ Recently, it has been advanced graphene as interlayer between the metal contact 
 
 \section{Graphene Nanoribbons}
 
-Amongst the wide variety of carbon alternatives explored in the last two decades, \glspl{GNR} have certainly acquired a lot of interests. Amongst the perks, chemical synthesis of \glspl{GNR} is now cost effective, they have comparable electrical performance (small effective mass, high charge mobility, and high saturation velocity) compared with the \glspl{CNT}, without the need to separate metallic from semiconducting \glspl{GNR}, and they can be easily tailored through chemical synthesis \cite{cai2010atomically, schwab2012structurally}.
+Among carbon alternatives explored, \glspl{GNR} have certainly gained attentions for logic applications. These require two well-defined voltage states (low/high voltage for off/on state) and fast switching behaviour between them. The confinement of large-area graphene carries into 1D channels opens an electronic bandgap, which depends in first instance on the channel width and length \cite{Han2007}. If we consider electronic bandgaps within 0.3 -- 0.5 eV range, suitable ribbon widths below 5 nm are required for \gls{CMOS} techonlogy (Fig.~\ref{fig:intro:gnr-bandgap_schwierz}) \cite{geng2017graphene}.
 
-As in the case of \glspl{CNT}, confining large-area graphene carries into narrow stripes leads to a quasi-1D system exhibiting a tunable bandgap determined not only by the ribbon width $w_\textrm{GNR}$, but also by the edge structure \cite{son2006energy, Li2008}.
-Logic applications, as mentioned in Sec.~\ref{intro:sec:graphene}, require two well-defined voltage states, which in turn they depend on the current flowing through the semiconducting channel; by considering $E_g$ within the 300 -- 500 meV range, Fig.~\ref{fig:intro:gnr-bandgap_schwierz} provides an estimate for the \gls{GNR} widths, suggesting the sub-5 nm range as appropriate for semiconducting applications \cite{geng2017graphene}.
+After the discovery of graphene, \glspl{GNR} were produced using \textit{top-down} approaches, typically by patterning ribbons through lithograpically means with \gls{EBL} \cite{RN345, Han2007}, by longitudinal unzipping of single-walled nanotubes \cite{kosynkin2009longitudinal}, or by cutting graphene sheets with metallic nanoparticles \cite{RN346}. These fabrication methods, however, were often yielding large widths and uncontrolled structural defects \cite{han2010electron, Evaldsson2008}.
+
+Two pioneering works reported independently by Hongjie Dai \cite{Li2008} and Klaus M{\"u}llen \cite{cai2010atomically} sparked the application of chemical strategies by using precisely- engineered molecular precursors. The advantages of these \textit{bottom-up} protocols are several. Firstly, it has been possible to synthesise several-hundreds-nm-long ribbons with widths below 5 nm \cite{narita2015bottom}. Secondly, important nano-and- optoelectronics properties such as electronic bandgap, charge-carrier mobility, and optical absorption have become tunable by either varying \glspl{GNR} chemical structures or by introducing opportune decorations along the ribbon edges \cite{Liu2015, hu2018bandgap}.
 
 
 \subsection{Crystal and Band Structure}
@@ -523,7 +524,6 @@ The inclusion of electronic correlation, however, becomes crucial for ultra-narr
     \end{center}
 \end{figure}
 
-
 These calculations have shown that, as rule of thumb, AGNRs can be both semiconducting and metallic, while ZGNRs should be regarded as quasi-metallic, with energy gaps lying within 0.1 - 0.7 eV. Indeed, for this kind of ribbon the application of an electric field in the transverse direction of induces a spin-polarisation of the edge states is believed to be responsible for semiconducting properties of ZGNRs
 The simplest model for describing the energy levels for a graphene nanoribbon is the particle in the box model, where the energy should scale quadratically $E_g \propto 1/L^2$ with the ribbon extension. Experimentally, however, the band gap for AGNRs scales with the inverse of the width $E_g \propto 1/W$ \cite{son2006energy}: by considering all the interatomic carbon-carbon distances the same, it is possible to work out an averaged formula which reports the band gap varying as $E_g = 0.8 / W$, \cite{xu2016recent}. More accurate simulations have shown, however, that peripheral carbon—carbon bond lengths usually tend to be larger compared to the ribbon core ones \cite{wang2007tuning}. It is predicted that the band gap will be similar to Ge or InN when the width is reduced to 2 and 3 nm, and will be similar to Si or GaAs when it is further reduced to 1-2 nm \cite{barone2006electronic}.
 \subsubsection{AGNR}
@@ -531,7 +531,6 @@ For AGNRs, the bandgap varies significantly for different m values. AGNRs exhibi
 \subsubsection{ZGNR}
 The band structure of ZGNRs is more interesting. Tight binding estimations have shown that if spin DOFs are excluded, the conduction band and valence band touches at the fermi level, forming a flat band. This flat band leads to a large localization of the density of states at the edges of ZGNRs, the so called \textit{edge states}, which displays an exponential decay $\rho(\epsilon\sim\epsilon^{-\vect{r}})$, with an exponent depending of the distance from centre of the ribbon; the weight of these states become negligible when the width in is the order of \si{\micro\metre}.
 The formation of band gap is observed when the spin is considered. In particular, the ground state of ZGNRs has parallel (ferromagnetic, $\uparrow\uparrow$, FM) spin alignment along one edge, whilst two edges have antiparallel (antiferromagnetic, $\downarrow\downarrow$, AFM) configuration. Given that the AFM state is semiconducting while the FM is metallic, it would theoretically be possible to change the metallic state of a zigzag ribbon by applying a magnetic field in the direction transverse to that of the ribbon's extension.
-
 
 \begin{figure}
     \begin{center}
@@ -543,25 +542,6 @@ The formation of band gap is observed when the spin is considered. In particular
     \end{center}
 \end{figure}
 
-\co{gnr were first studied by physicist, lather by chemist}
-The scientific interest for graphene nanoribbons started in the physics community. Although this may appear irrelevant at the first glance, we will see that this actually had an impact over the last twenty years of progress in the field.
-The physics community was looking for a way to open a band gap in graphene. As mentioned in Sec.~\ref{intro:sec:motivation}, large-area graphene is a semimetal, therefore unsuitable for \gls{CMOS} logic and problematic for RF.
-
-The first class of methods for synthesising graphene nanoribbons are methods that involve cutting or producing rectangular shapes from the graphene lattice through macroscopic methods.
-For this reason, they are also known as \textit{top-down} approaches. Although they have seen an improvements in recent years, common drawbacks for this class of methods are a random distribution in the widths, a non-atomical control of the edge structures, and non-negligible
-impurity concentrations left after the process.
-
-\co{ebl and etched gnrs present randomly distributed widths}
-Kim and co-workers synthesized GNRs by employing the electron-beam lithography and etching technique~\cite{RN345}.
-The widths of GNRs obtained by this technique were scattered over a broad range, and most of the edges were extremely rough.
-An 8 nm GNR FET showed a dramatically improved on/off ratio of about 160.
-
-
-\co{cutting graphene with nanoparticles leads to a random distribution of the widths}
-
-Nanocutting of graphene is another promising method of GNR synthesis. In 2008, Strachan \textit{et al.}. used thermally activated Fe nanoparticles as chemical scissors to cut graphene sheet along a specific crystallographic direction~\cite{RN345,RN346}. Later, Ni and other catalysts were employed as well
-The carbon-carbon bond breaking is driven by the combustion reaction \ce{Ni + C_{\textrm{graphene}} + 2H2 ^ -> Ni/Fe + CH4 ^} catalysed by the nanoparticles, thus producing hydrocarbon compounds. One of the reason that have discouraged these synthetic way is the random width distribution obtained: this is likely
-to be a consequence of the change in direction when nanoparticles encounter defects or edges.
 
 \subsection{Edge States}
 The nature of the edge states in graphene nanoribbons is an interesting application of topological theories. The re-discover interest that the physics community has given to topological insulators has been motivated by a good variaty of exotic effects theoretically predicated in these materials, such as the manifestation of elusive particles (Majorana fermions) when these are coupled with superconductors and the robustness against decoherence effects when used for quantum computing applications.

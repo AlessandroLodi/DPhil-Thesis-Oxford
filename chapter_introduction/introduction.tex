@@ -6,7 +6,7 @@ In this chapter, I seek to give the motivation and context for this thesis: can 
 
 \section{Motivation}\label{intro:sec:motivation}
 
-For largely over three decades, silicon has been the indisputable player for producing \gls{IC}. The widespread shortage of semiconductors begun in the late 2020, however, has called both major chipmakers and the scientific community to think more deeply and actively to what beyond-silicon technologies and materials are valid candidates for replacing--or, more realistically, complement--silicon.
+Silicon has been the indisputable player for \gls{IC} production for over three decades. The widespread shortage of semiconductors begun in the late 2020, however, has called both major chipmakers and the scientific community to think more deeply and actively to what beyond-silicon technologies and materials are valid candidates for replacing--or, more realistically, complement--silicon.
 Manufacturing costs are, except for the market makers such as Intel, Samsung, and TSMC, largely unaffordable in the long rong. According to Bloomberg, the basic costs of building a semiconductor factory are around \$15 billion with profit requirements in the order of \$3 billion to sustain market competition and avoid becoming obsolete \cite{king2021}. These figures are also supported by an analysis done last year by the Boston Consulting Group, which places the investments in R\&D (22\% of annual semiconductors sales) and capital expenditure (26\%) as the highest across all industries \cite{veras2021}.
 
 Historically, the \glspl{IC} research is one of those rare case where private sector and governement fundies have acted almost in symbiosis since the first point-contact transistor prototype engineered at the dawn of the 40s at Bell Labs by Bardeen, Brattain and William Shockley \cite{shockley1984path}. Almost 10 years later, Atalla and Kahng (Bell Labs) invented the \gls{CMOS}. Argubly, it has been the density scaling capability of this technology one of the main research-driven factor. In this scenario, the Moore's law \cite{moore1965moore} it has not only viewed as a reliable method of calculating future number of transistors per integrated circuit, but also as a pace setter of innovation and competition.
@@ -506,19 +506,50 @@ Two pioneering works reported independently by Hongjie Dai \cite{Li2008} and Kla
 
 
 \subsection{Crystal and Band Structure}
-Historically, a first classification of graphene nanoribbons was derived by grouping the edge structures into Armchair-GNRs (AGNRs) and Zigzag-GNRs (ZGNRs).
+Armchair (AGNRs) and Zigzag (ZGNRs) ribbons were the first group of \glspl{GNR} to be studied. The difference between AGNRs and ZGNRs rests in a different edge connettivity and has profound consequences on the respective bandstructure.
+
+Through \gls{TB} calculations the group of Steven Louie was one of the first in classifying the electronic properties of AGNRs based on the number of carbon dimer lines across the ribbon width $N$ \cite{son2006energy}. When $N$ is a multiple of 3 of an integer $p$, the resulting ribbons have wide bandgaps which scales inversely with the ribbon width\footnote[2]{The $E_g \propto 1/w_\text{gnr}$ relation holds when $15~\text{nm} \le w_\text{gnr} \le 90~\text{nm}$ \cite{yang2007quasiparticle}} (Tab.~\ref{tab:agnr-tb}). The same happens when $N=3p+1$. In contrast, the ribbon family characterised by $N=3p+2$ were predicted to be metallic \cite{nakada1996edge}.
+
+\begin{table}
+    \caption{\label{tab:agnr-tb}
+        Prediction of AGNRs electronic properties based on TB.}
+    \[
+        \begin{array}{lccc}
+            \hline N & \text{Type}           & E_g~\text{(eV)}                   & \\
+            \hline
+            3p       & \text{Semiconductors} & 0.1-2.5                   \Tsmall   \\
+            3p+1     & \text{Semiconductors} & 0.1-2.5                             \\
+            3p+2     & \text{Metallic}       & 0                                   \\
+            \hline
+        \end{array}
+    \]
+\end{table}
+
+When the width of the ribbon shrinks below 10 nm, however, large electron-electron interactions enhanced by the one-dimensional nature of the system lead to important, non-negligible self-energy correction terms which are have been well captured by many-body theories \cite{yang2007quasiparticle}. An estimate of the consequences of these correction terms are summarised in Tab.\ref{tab:agnr-gw}. These theoretical predictions were confirmed years later by STM studies on surface-synthesised 5-atom wide AGNRs, which reported bangaps around 100 meV \cite{kimouche2015ultra}. While the energy gap scale quadratically with the ribbon length $E_g \propto 1/L^2$, the energy spacing between electronic states that belong to the same band scales inversly with the ribbon length, $E_g \propto 1/L$, as one may expect by model the behaviour of these states with energy states of graphene (linear dispersion).
+
+\begin{table}
+    \caption{\label{tab:agnr-gw}
+        Prediction of AGNRs electronic properties based on the Green's function formalism within the \textit{GW} approximation.}
+    \[
+        \begin{array}{lccc}
+            \hline N & \text{Type}           & E_g~\text{(eV)}           & \\
+            \hline
+            3p       & \text{Semiconductors} & 2.5-5.5           \Tsmall   \\
+            3p+1     & \text{Semiconductors} & 0.1-2.5                     \\
+            3p+2     & \text{Semiconductors} & 1-2                         \\
+            \hline
+        \end{array}
+    \]
+\end{table}
+
 Following the success of chemical routes in producing GNRS, various kind of edges have come to light, e.g., cove, fjord, chiral, and all these can be regarded as combination of AGNRs and ZGNRs (Fig.\ref{fig:intro:gnr-canvas}).
-
-Initial bandgap estimations through DFT calculations reported values between 2.5 and 0.5 eV.
-The inclusion of electronic correlation, however, becomes crucial for ultra-narrov ($< 5$ nm) ribbon \cite{son2006energy, yang2007quasiparticle} and more accurate estimates derived by the group of Steven Louie based on the \textit{GW} approximation reported a wider range of energy gaps from 5.5 to 1 eV.
-
 
 \begin{figure}
     \begin{center}
         \includegraphics[width=0.95\textwidth]{chapter_introduction/figures/bandgap_GNRwidth.pdf}
         \centering{}
         \caption{
-            Band gap versus nanoribbon width from experiments \cite{Han2007, Kim2009, Li2008, Chen2007, } and theoretical calculations \cite{Yang2007, Evaldsson2008}.
+            Band gap versus nanoribbon width from experiments \cite{Han2007, Kim2009, Li2008, Chen2007} and theoretical calculations \cite{Yang2007, Evaldsson2008}.
             The following abbreviation are used: ac for \textit{armchair}, zz for \textit{zigzag}. Figure adapted and extended from \cite{schwierz2013graphene}.
             \label{fig:intro:gnr-bandgap_schwierz}}
     \end{center}
@@ -526,11 +557,6 @@ The inclusion of electronic correlation, however, becomes crucial for ultra-narr
 
 These calculations have shown that, as rule of thumb, AGNRs can be both semiconducting and metallic, while ZGNRs should be regarded as quasi-metallic, with energy gaps lying within 0.1 - 0.7 eV. Indeed, for this kind of ribbon the application of an electric field in the transverse direction of induces a spin-polarisation of the edge states is believed to be responsible for semiconducting properties of ZGNRs
 The simplest model for describing the energy levels for a graphene nanoribbon is the particle in the box model, where the energy should scale quadratically $E_g \propto 1/L^2$ with the ribbon extension. Experimentally, however, the band gap for AGNRs scales with the inverse of the width $E_g \propto 1/W$ \cite{son2006energy}: by considering all the interatomic carbon-carbon distances the same, it is possible to work out an averaged formula which reports the band gap varying as $E_g = 0.8 / W$, \cite{xu2016recent}. More accurate simulations have shown, however, that peripheral carbon—carbon bond lengths usually tend to be larger compared to the ribbon core ones \cite{wang2007tuning}. It is predicted that the band gap will be similar to Ge or InN when the width is reduced to 2 and 3 nm, and will be similar to Si or GaAs when it is further reduced to 1-2 nm \cite{barone2006electronic}.
-\subsubsection{AGNR}
-For AGNRs, the bandgap varies significantly for different m values. AGNRs exhibit metallic behavior when $m=3p+2$, where p is an integer number, and they become semiconductors when $m=3p$ or $3p+1$. These relations have been obtained through in silico experiments, both using the tight-biding method and DFT . Figure 3 presents the isosurface plots of Highest Occupied Molecular Orbital (HOMO) and Lowest Unoccupied Molecular Orbital (LUMO) of AGNRs with m=7,8,9 respectively. Interestingly, the HOMO and LUMO orbitals are localized at the terminal of the ribbon along the length direction when m=7(3p+1).
-\subsubsection{ZGNR}
-The band structure of ZGNRs is more interesting. Tight binding estimations have shown that if spin DOFs are excluded, the conduction band and valence band touches at the fermi level, forming a flat band. This flat band leads to a large localization of the density of states at the edges of ZGNRs, the so called \textit{edge states}, which displays an exponential decay $\rho(\epsilon\sim\epsilon^{-\vect{r}})$, with an exponent depending of the distance from centre of the ribbon; the weight of these states become negligible when the width in is the order of \si{\micro\metre}.
-The formation of band gap is observed when the spin is considered. In particular, the ground state of ZGNRs has parallel (ferromagnetic, $\uparrow\uparrow$, FM) spin alignment along one edge, whilst two edges have antiparallel (antiferromagnetic, $\downarrow\downarrow$, AFM) configuration. Given that the AFM state is semiconducting while the FM is metallic, it would theoretically be possible to change the metallic state of a zigzag ribbon by applying a magnetic field in the direction transverse to that of the ribbon's extension.
 
 \begin{figure}
     \begin{center}
@@ -542,9 +568,23 @@ The formation of band gap is observed when the spin is considered. In particular
     \end{center}
 \end{figure}
 
+The electronic properties of Z\glspl{GNR} differ quali and quantitatively from armchair ribbons. Tight binding estimations have shown that if spin DOFs are excluded, the conduction band and valence band touches at the fermi level, forming a flat band. This flat band leads to a large localization of the density of states at the edges of ZGNRs, the so called \textit{edge states}, which displays an exponential decay $\rho(\epsilon\sim\epsilon^{-\vect{r}})$, with an exponent depending of the distance from centre of the ribbon; the weight of these states become negligible when the width in is the order of \si{\micro\metre}.
+The formation of band gap is observed when the spin is considered. In particular, the ground state of ZGNRs has parallel (ferromagnetic, $\uparrow\uparrow$, FM) spin alignment along one edge, whilst two edges have antiparallel (antiferromagnetic, $\downarrow\downarrow$, AFM) configuration. Given that the AFM state is semiconducting while the FM is metallic, it would theoretically be possible to change the metallic state of a zigzag ribbon by applying a magnetic field in the direction transverse to that of the ribbon's extension.
 
 \subsection{Edge States}
 The nature of the edge states in graphene nanoribbons is an interesting application of topological theories. The re-discover interest that the physics community has given to topological insulators has been motivated by a good variaty of exotic effects theoretically predicated in these materials, such as the manifestation of elusive particles (Majorana fermions) when these are coupled with superconductors and the robustness against decoherence effects when used for quantum computing applications.
+
+\begin{figure}
+    \begin{center}
+        \includegraphics[width=0.95\textwidth]{chapter_introduction/figures/zgnr_bandgap_edge_state_delocalisation.pdf}
+        \centering{}
+        \caption{
+            (a) Contour plot representing the difference between spin-polarised ab-initio DOS of a 12-ZGNR. The high density of $\rho_{\alpha}(r)$ red lines ($\rho_{\beta}(r)$, blue line) to the left backbone edge demonstrates the delocalisation of edge states. Blue (red) line represent
+            (b) Direct bandgap $\Delta^{0}_{z}$ and the energy splitting $\Delta^{1}_{z}$ as a function of $N_z$-ZGNR width $w_z$. For $N_z \ge 8$, the fit is shown as a solid line, whereas dotted lines are guides.
+            (c) 12-ZGNR bandstructure, plotted as a function of the normalised wavevector. Adapted from \cite{son2006energy}.
+            \label{fig:intro:zgnr_bandgap_edge_state_delocalisation}}
+    \end{center}
+\end{figure}
 
 In a seminal work of 2005, C. L. Kane and E. J. Mele developed proved thorugh a perturbative approach that graphene behaves as a quantum spin Hall (QSH) insulator when the spin-orbit interaction is perturtatively included into the graphene hamiltonian. One consequence is that at low temperature, graphene has a band gap in bulk but results gapless in the edge \cite{kane2005quantum}.
 
@@ -567,9 +607,10 @@ The solution of the model displays interesting features: two pairs of peaks spli
 
 \begin{figure}
     \begin{center}
-        \includegraphics[width=0.95\textwidth]{chapter_introduction/figures/han2007_just_twp.pdf}
+        \includegraphics[width=0.95\textwidth]{chapter_introduction/figures/agnr_bandgap_tb_dft.eps}
         \centering{}
         \caption{\label{fig:intro:han2007_EgvsW}
+        \textbf{(a)} Bandgaps $\Delta_a$ for three families of AGNRs as a function of the width
         \textbf{(a)} $E_g$ vs $W$ for four (P1–P4) of the parallel devices and two (D1, D2) with varying orientation. The inset shows $E_g$ vs relative angle $\theta$ for the device D1 and D2.
         \textbf{(b)} $E_g^{-1}$ vs $W$.
         \textbf{(c)} Conductance vs width of parallel GNRs measured at a gate voltage V - V$_g$ = 50 V. Squares are values measure at 300 K whereas triangle corresponds to 1.6 K.

@@ -508,6 +508,14 @@ Two pioneering works reported independently by Hongjie Dai \cite{Li2008} and Kla
 \subsection{Crystal and Band Structure}
 Armchair (AGNRs) and Zigzag (ZGNRs) ribbons were the first group of \glspl{GNR} to be studied. The difference between AGNRs and ZGNRs rests in a different edge connettivity and has profound consequences on the respective bandstructure.
 
+The energy spectrum of a \gls{GNR} with length $L$ and width $w_\text{GNR}$ is given by:
+
+\begin{equation}
+    E_{n,m} = \pm\hbar v_F^*~\sqrt{\qty(\frac{n\pi}{L})^2 + \qty(\frac{m\pi}{w_\text{gnr}})^2}
+    \label{eq:gnr_energy}
+\end{equation}
+
+where $v_F^*$ is the group velocity for energy band indexed by the quantum numbers pair $n,m$ \cite{baringhaus2014exceptional}.
 Through \gls{TB} calculations the group of Steven Louie was one of the first in classifying the electronic properties of AGNRs based on the number of carbon dimer lines across the ribbon width $N$ \cite{son2006energy}. When $N$ is a multiple of 3 of an integer $p$, the resulting ribbons have wide bandgaps which scales inversely with the ribbon width\footnote[2]{The $E_g \propto 1/w_\text{gnr}$ relation holds when $15~\text{nm} \le w_\text{gnr} \le 90~\text{nm}$ \cite{yang2007quasiparticle}} (Tab.~\ref{tab:agnr-tb}). The same happens when $N=3p+1$. In contrast, the ribbon family characterised by $N=3p+2$ were predicted to be metallic \cite{nakada1996edge}.
 
 \begin{table}
@@ -630,9 +638,12 @@ edge state has superior coherence even at room temperature in a non-diluted syst
 GNRs very promising for spintronics applications
 
 \subsection{Graphene Nanoribbons Field-Effect Transistors}
-In one of their first \glspl{GNRFET} prototype, the Dai's group synthesised ultra-narrow \glspl{GNR} using sonochemistry methods, achieving widths down to $w_\textrm{GNR}\approx$ \SI[multi-part-units = single]{2.0(5)}{\nano\metre} and lengths of about $l_\textrm{GNR}\approx 236$ \cite{wang2008room}. For that kind of semiconducting ribbons -- i.e. $w_\textrm{GNR} \leq 10$ nm -- the wave vector in the dispersion relation E(\vect{k}) can be broken down into a component along the transport direction $k_\parallel$ and other $k_\perp$ along the confinement direction:
+One of the first \glspl{GNRFET} prototype was realised by the Dai's group by synthesising \glspl{GNR} through sonochemistry \cite{wang2008room}. Source and drain were fabricated using Pd, which is a metal with a high work function and thus minimizes the Schottky barrier height for thr holes when a \textit{p}-type transistor
+widths down to $w_\textrm{GNR}\approx$ \SI[multi-part-units = single]{2.0(5)}{\nano\metre} and lengths of about $l_\textrm{GNR}\approx 236$.
+
+For narrow ribbons ($w_\textrm{GNR} \leq 10$ nm) it is possible to model the dispersion relation E(\vect{k}) (Eq.\ref{eq:gnr_energy}) as a result of a component along the transport $k_\parallel$ and the confinement $k_\perp$ directions:
 \begin{equation}
-    E(\vect{k}) = \frac{3ta}{s}\abs{\vect{k}} = \frac{3ta}{2}\sqrt{k_\parallel^2 + k_\perp^2})
+    E(\vect{k}) = \frac{3ta}{2}\abs{\vect{k}} = \frac{3ta}{2}\sqrt{k_\parallel^2 + k_\perp^2}
 \end{equation}
 where $t$ is the nearest neighbour hopping parameter and $a$ is the carbon-carbon bonding length. The resulting carrier kinetic energy in case of no mid-gap states is then $E_k = E(k) - E_g$, with $E_g = 3ta\abs{k_\perp}/2$.
 

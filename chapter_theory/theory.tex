@@ -68,6 +68,16 @@ where $E_\mathrm{C} = e^2/C_\textrm{tot}$ is the charging energy.
 The weak coupling regime is defined in the limit where $\Gamma\ll\E_C, E_\textrm{add}(N), k_BT$, and is dominated by Coulomb blockade. The effect shows most clearly in a charge stability diagram, which is obtained by measuring the gate and bias dependence of the current and then plotting it in a two-dimensional map \mccorrect{Figure}. The Coulomb blockade manifests as diamond shaped regions of very low current, so
 called Coulomb diamonds, in which transport is blocked. In these regions the energy cost to add an electron onto the \gls{QD} exceeds the available energy and therefore no current can flow through the \gls{QD} \mccorrect{Figure}.
 
+\begin{figure}[hbtp]
+    \begin{center}
+        \includegraphics[width=\textwidth]{chapter_theory/figures/coulomb_blockade.pdf}
+        \caption{
+            \textbf{(a)} Cartoon structure of a chiral (8, 2), an armchair (5, 5), and zigzag (10, 0) nanotube.
+            \textbf{(b)} Graphene Brillouin zone and allowed k-vectors for the (8, 2) and (10, 0) CNTs. A metallic tube include one of the \vect{K} points among the set of allowed k-vectors, as shown in \textbf{(b)}. It is then possible to linearise the energy in the momentum space for low-excitations (close to the Fermi energy). Conversely, the \vect{K} point is not an allowed vector for semiconducting nanotube, and this leads to an energy gap. Inspired by \cite{torres2014introduction}.}
+        \label{fig:theory:cb}
+    \end{center}
+\end{figure}
+
 The blockade areas are separated by regions of high current, the Sequential Electron Tunnelling (SET) zones, where current flow through the \gls{QD} is allowed via sequential electron tunnelling. Each Coulomb diamond corresponds to a certain number of electrons N occupying the \gls{QD} where the number of electrons changes sequentially between neighbouring diamonds. When looking closely at the SET regions, often lines running parallel to the edges
 of the Coulomb diamonds can be observed. These originate from orbital excited states, spin states or vibrational states, which will be discussed later. These states are able to contribute to the current flow through the \gls{QD} if their energy levels are reached by applying a higher bias voltage \mccorrect{Figure}. Such excited or vibrational states can yield information about the \gls{QD}’s energy spectrum and are especially helpful when attempting to identify specific molecules as each molecule has a distinctive vibrational fingerprint.
 
@@ -186,26 +196,4 @@ where we called with $\sigma$ the conductivity. This relation allows us to ident
 % outside a given radius from the atom they are associated with and so the radius is a key quality determined parameter for the basis set
 
 
-
-\section{Room Temperature DC Measurements}
-
-Describe here the probe station setup
-
-\section{Dipstick DC Measurements}
-
-Describe here the dipstick used for both liquid N$_2$ and liquid He
-
-\section{Cryogenic DC Measurements}
-
-Describe here the delft box. Describe how the delft box modular structure enables to adapt two and multi-terminal DC measurements
-
-\section{Cryogenic AC Measurements}
-
-Describe here the delft box + lock-in setup and why it is so complicated to set it usepackage
-
-\section{Thermoelectric Measurements}
-
-Describe here the setup used for the thermoelectric devices and why it needs a dedicated section
-Describe also here from a setup point of view which complications have raised during the setup (direct lines instead of dc lines,
-the need to use nano-D connectors and to design the a new pcb board).
 

@@ -274,7 +274,7 @@ Back then in 2007, Lemme and co workeres used a stack of \ce{SiO2} (20 nm), Ti (
 Whilst the gate characteristics exhibit a similar trend of the characteristics (the top gate reduces the back-gate current modulation, lowering the drain current by one order of magnitude) and the hysteresis, weak current saturation at high drain-source bias have been reported \cite{moon2009epitaxial}.
 This effect seem due to a partial charge pinning at the contacts at high back-gate voltages \cite{di2011charge} and carrier drift velocity eventually saturating due to optical-phonon scattering \cite{meric2008current}. Top-gated graphene \glspl{MOSFET} with CVD and epitaxial graphene have been also made \cite{kedzierski2008epitaxial, lin2010100}; \ce{SiO2}, \ce{Al2O3}, and \ce{HfO2} have been  used as top-gate dielectric.
 
-However, despite the improvements obtained with a top gate, most graphene \gls{MOSFET} with large-area graphene channels show on–off switching ratios of less than 10 at room temperature \cite{schwierz2010graphene}, much too little for complex logic circuits.
+However, despite the improvements obtained with a top gate, most graphene \gls{MOSFET} with large-area graphene channels show on-off switching ratios of less than 10 at room temperature \cite{schwierz2010graphene}, much too little for complex logic circuits.
 
 In 2012, Mehr \textit{et al}.\ proposed a vertical arrangement of emitter, base, and collector similar to the original vacuum triode, where graphene plays the base role and electrons travel vertically rather than transversely.
 When the device is in the ON state, the electrons tunnel with a Fowler-Nordheim tunnelling mechanism:
@@ -325,6 +325,18 @@ This crystalline form of carbon can be considered as a rolled up sheet of graphe
 \Glspl{CNT} display an electronic band gap which depends on the chirality and the diameter of the nanotube \cite{dresselhaus2000carbon}.
 Having defined two unit vectors in the real space, $\vect{a_1}$ and $\vect{a_2}$, a \gls{CNT} can be described by the linear combination of these with integers coefficients ($m$, $n$). Based on the values of $m$ and $n$, \glspl{CNT} can be metallic , quasi-metallic ($m - n$ is a multiple of 3, with $m\cdot n \neq 0$ and $m \neq n$),
 and semiconducting for the majority of the remaining cases -- exceptions due to the curvature (spin--orbit couplings) in small-diameter tubes are also known \cite{laird2015quantum}.
+
+\begin{figure}[hbtp]
+    \begin{center}
+        \includegraphics[width=\textwidth]{chapter_introduction/figures/cnt_structure.pdf}
+        \caption{
+            \textbf{(a)} Cartoon structure of a chiral (8, 2), an armchair (5, 5), and zigzag (10, 0) nanotube.
+            \textbf{(b)} Graphene Brillouin zone and allowed k-vectors for the (8, 2) and (10, 0) CNTs. A metallic tube include one of the \vect{K} points among the set of allowed k-vectors, as shown in \textbf{(b)}. It is then possible to linearise the energy in the momentum space for low-excitations (close to the Fermi energy). Conversely, the \vect{K} point is not an allowed vector for semiconducting nanotube, and this leads to an energy gap. Inspired by \cite{torres2014introduction}.}
+        \label{fig:intro:cnt_structure}
+    \end{center}
+\end{figure}
+
+
 Thus, a quantization of the electronic states in the circumferential direction is resulted when the nanotube diameter $d_\textrm{CNT}$ is between 0.8 and 2.5 nm. Each of these substates is called subband
 and are determined by the periodic boundary condition. Having defined a circumferential wave vector $\vect{k_c}$ such that $\vect{k_c}\cdot\vect{c} = k_c\abs{c} = k_c\pi d_\textrm{CNT} = 2\pi\nu$, for $\nu$ integer, it is possible from this relation to draw parallel lines in the first Brillouin zone of graphene.
 If the subband intersect one of the $\vect{K}$ points, than the resulting nanotube will have no energy gap and thus exhibit metallic properties (this condition is realised by having $m = n$ for the coefficients of the chiral vector).

@@ -61,44 +61,7 @@ After these considerations and the one exponsed in Ch.~\ref{ch:fabrication}, we 
 % Half these junctions display field effect transistor performance (FET), with various levels of doping: while both n and p doping are observable immediately after deposition, all devices progressively shift to p-doping upon exposure to ambient conditions, as for other carbon nanomaterials . Ambipolar FET behaviour allows observing the MGNR gap and both the electron and hole-doped regions (Fig.1f). The conductance values (~10-4 G0, with G0 = 2e2/h ~7.75 x 104 nS) indicate weak graphene/MGNR contacts. The ON-state currents ISD≈1 nA and the subthreshold swing are comparable to those of non-molecular nanoribbons
 
 \section{Electrical Transport Measurements}\label{gnrset:sec:measure}
-Dilution refrigerators work very well in the cryogenic temperature range and they enable temperature control up to a certain temperatures defined by fridge heaters. In order to scan the entire temperature spectrum range up to room temperature, however, one must ensures that the temperature drift is ideally slower than the time taken to acquire experimental measurements. Since there is no well-defined experimental procedure for doing so, a workaround which leverages Triton system was found and used in this thesis.
-
-Triton heaters are capable to control the temperature precisely from base temperature ($\sim$ 25 mK) up to 30 K. In order to stabilise the temperature above this range, one has to generate a thermal link between the sample and the environment. First the heaters (mixing chamber and still, see Ch.~\ref{ch:theory}) are switched off: this enables main heat sources to be excluded from exchanging thermal energy with the sample inside the mixing chamber. Being the mixing chamber very well thermally isolated, the temperature will start raising very slowly: to give a reference number, $\sim$24h after the heaters were switched off the temperature rose by only 2 K. The pre-cooling loop is then filled with the He3/He4 mixture, creating a thermal link between the various stages within the dilution refrigerator and the mixing chamber. This results in a faster heating rate, but slow enough to allow to take quick measurements such as $I-V_\textrm{SD}$ and $I-V_\textrm{G}$ traces.
-
-While these kind of measurements measure the current flowing through the device (after the voltage to current conversion that occurs inside the Delft box, see Ch.~\ref{ch:theory}), it is generally reccommended to acquire also the conductance. In absence of a lock-in apparatus, a possible workaround is to measure the current at various bias voltages and different gate voltage and differentiate numerically the current to obtain the conductance. In order to stabilise the temperature and remove the thermal link between the mixing chamber and the various refrigerator stages, the pre-cooling loop in then emptied, leaving the sample thermally isolated. The whole procedure was then automated in a python python script measurements, which algorithm is detailed in Alg.~\ref{alg:cap}.
-
-\begin{algorithm}[H]
-  \caption{Triton High Temperature Measurement}\label{alg:cap}
-  \begin{algorithmic}[1]
-    \Require Initialise Alazar, Triton and IVVI
-    \Ensure Alazar, Triton, and IVVI are global
-    \State Initialise Final Temperature
-    \State Initialise Bias Array
-    \State Initialise Target Temperatures Array
-    \State Current Temperature $\gets$ Read Temperature
-    \State Temperature Step $\gets$ 3
-    \State Temperature Channel $\gets$ 8
-    \State Precooled $\gets$ \texttt{False}
-    \While{Current Temperature $<$ Final Temperature}
-    \State Precooled $\gets$ \texttt{True}
-    \State T $\gets$ Read Temperature
-    \If{T $> 1.5$ }
-    \State Temperature Channel $\gets$ 5
-    \EndIf
-    \For{length Bias Array}
-    \State Run Gate Trace Measurement
-    \EndFor
-    \State T $\gets$ Read Temperature
-    \If{T is in Target Temperatures Array}
-    \State Precooled $\gets$ \texttt{False}
-    \State Run Stability Diagram
-    % \State $N \gets \frac{N}{2}$  \Comment{This is a comment}
-    \EndIf
-    \EndWhile
-  \end{algorithmic}
-\end{algorithm}
-
-The Alazar card, Triton, and IVVI (Delft box modules) drivers are first initialised and assigned to global variables which hold their state throughout the program execution. Then several variables are initialised. The precooled variables is a routine implemented directly on top of Triton drivers which allows to set and get command directly on the instruments. While below 1 K the RuO$_2$ thermoter is used, to reliably read the temperature above this temperature one has to switch to the Cernox thermometer, hence we are setting the temperature channel variable to channel 5 within the while loop in case this conditions applies. The program then acquires gate trace and stability diagram measurements. These are functions which have been implemented and improved from scripts written by a former member of the group, Dr.\ Nicola Dotti.
+The results of the measurement protocol are shown in Fig.~\ref{fig:all_sd}. The stability diagram map reveals six Coulomb diamonds regions clearly distinguishable up to, at least, 180 K within the experimental gate voltage range. At sufficiently low energies or temperatures, then, a finite graphene nanoribbons behaves like a quantum dot, similar to what has been observed for carbon nanotubes \cite{bockrath1997single, nygaard2000kondo,buitelaar2002multiwall, postma2001carbon, liang2002shell, guinea2005many}.
 
 \begin{figure}
   \begin{center}
@@ -108,7 +71,7 @@ The Alazar card, Triton, and IVVI (Delft box modules) drivers are first initiali
   \end{center}
 \end{figure}
 
-The results of the measurement protocol are shown in Fig.~\ref{fig:all_sd}. The stability diagram map reveals six Coulomb diamonds regions clearly distinguishable up to, at least, 180 K within the experimental gate voltage range. At sufficiently low energies or temperatures, then, a finite graphene nanoribbons behaves like a quantum dot, similar to what has been observed for carbon nanotubes \cite{bockrath1997single, nygaard2000kondo,buitelaar2002multiwall, postma2001carbon, liang2002shell, guinea2005many}.
+
 
 Gate voltage outside the shown region resulted in strong leakage currents, likely due to substrate breakdown, possibly caused after the wirebonding process. Therefore, we restricted the measurement range between $\SI{-20}{\V}\le V_\textrm{G}\le\SI{+20}{\V}$. Since outside this range the current will be fully dominated by charges across dioxide substrate, and while formally further charge states could be visible outside the experimental window, it is still correct to assign the region at the left of the leftmost diamond as associated with the neutral state of the graphene nanoribbon; from this, it follows that the diamond located at $V_\textrm{G}\approx\SI{-19}{\V}$ is associated with the charge transition $N \rightarrow N+1$ and the rightmost diamond is associated with the $N+6 \rightarrow N+7$ transition.
 

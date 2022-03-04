@@ -7,7 +7,7 @@
    viewBox="0 0 465.38785 139.66733"
    version="1.1"
    id="svg5"
-   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04, custom)"
    sodipodi:docname="spin_filling_sequence.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -24,13 +24,13 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.5190608"
-     inkscape:cx="770.62263"
-     inkscape:cy="409.39327"
-     inkscape:window-width="1920"
-     inkscape:window-height="1009"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:zoom="0.73406282"
+     inkscape:cx="749.25467"
+     inkscape:cy="519.71029"
+     inkscape:window-width="2462"
+     inkscape:window-height="1411"
+     inkscape:window-x="89"
+     inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer2" />
   <defs
@@ -707,46 +707,46 @@
          xml:space="preserve"
          style="font-size:10.5833px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
          x="-199.30627"
-         y="46.383617"
+         y="46.396538"
          id="text84428"><tspan
            sodipodi:role="line"
            id="tspan84426"
            style="stroke-width:0.264583"
            x="-199.30627"
-           y="46.383617">N+1</tspan></text>
+           y="46.396538">N+1</tspan></text>
       <text
          xml:space="preserve"
          style="font-size:10.5833px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
          x="-158.67325"
-         y="46.383617"
+         y="46.463715"
          id="text84428-6"><tspan
            sodipodi:role="line"
            id="tspan84426-3"
            style="stroke-width:0.264583"
            x="-158.67325"
-           y="46.383617">N+2</tspan></text>
+           y="46.463715">N+2</tspan></text>
       <text
          xml:space="preserve"
          style="font-size:10.5833px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
-         x="-73.398277"
-         y="46.704884"
+         x="-63.331017"
+         y="46.383617"
          id="text84428-6-0"><tspan
            sodipodi:role="line"
            id="tspan84426-3-3"
            style="stroke-width:0.264583"
-           x="-73.398277"
-           y="46.704884">N+2</tspan></text>
+           x="-63.331017"
+           y="46.383617">N+4</tspan></text>
       <text
          xml:space="preserve"
          style="font-size:10.5833px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
          x="-111.29706"
-         y="46.223419"
+         y="46.383617"
          id="text86655"><tspan
            sodipodi:role="line"
            id="tspan86653"
            style="stroke-width:0.264583"
            x="-111.29706"
-           y="46.223419">N+3</tspan></text>
+           y="46.383617">N+3</tspan></text>
       <text
          xml:space="preserve"
          style="font-size:10.5833px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
@@ -788,14 +788,14 @@
       <text
          xml:space="preserve"
          style="font-size:10.5833px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
-         x="-14.766061"
-         y="46.223419"
+         x="-15.530663"
+         y="46.30352"
          id="text88797"><tspan
            sodipodi:role="line"
            id="tspan88795"
            style="stroke-width:0.264583"
-           x="-14.766061"
-           y="46.223419">N+5</tspan></text>
+           x="-15.530663"
+           y="46.30352">N+5</tspan></text>
       <text
          xml:space="preserve"
          style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
@@ -1002,13 +1002,13 @@
          xml:space="preserve"
          style="font-size:10.5833px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
          x="44.383495"
-         y="46.223419"
+         y="46.375866"
          id="text124167"><tspan
            sodipodi:role="line"
            id="tspan124165"
            style="stroke-width:0.264583"
            x="44.383495"
-           y="46.223419">N+6</tspan></text>
+           y="46.375866">N+6</tspan></text>
       <text
          xml:space="preserve"
          style="font-size:10.5833px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
@@ -1481,33 +1481,5 @@
         </g>
       </g>
     </g>
-    <g
-       id="g92"
-       transform="matrix(0.35277777,0,0,-0.35277777,-91.070803,66.270157)">
-      <g
-         id="g94"
-         clip-path="url(#clipPath98)">
-        <g
-           id="g100"
-           transform="matrix(463.44,0,0,48.24,74.719801,219.30427)">
-          <image
-             width="1"
-             height="1"
-             style="image-rendering:optimizeSpeed"
-             preserveAspectRatio="none"
-             transform="matrix(1,0,0,-1,0,1)"
-             xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4sAAADJCAYAAAA6stQbAAAABHNCSVQICAgIfAhkiAAACBdJREFUeJzt2T1KQ1EURlG1EfxphNiEByoIkjpjzFiDWAhpE+IcbuHlsdcawVec6uzbp/vD9QZWaH9+nT0Bhu0uj7MnwJDP5/PsCTDsffmZPQGGbJfj7AkwbLN8z54AQ17e3C7r9fDhflmpr9/ZC2DYaednxnrdzR4AAAAAAAAAwP8TiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIEgsBgAAAAAAAAgSiwEAAAAAAACCxGIAAAAAAACAILEYAAAAAAAAIOgPBmAPmc2gtK4AAAAASUVORK5CYII="
-             id="image102" />
-        </g>
-      </g>
-    </g>
-    <rect
-       style="opacity:0.455128;fill:#fca635;fill-opacity:1;stroke:none;stroke-width:0.865"
-       id="rect93849"
-       width="465.38785"
-       height="139.66733"
-       x="-225.73526"
-       y="30.151585"
-       ry="0.17769708" />
   </g>
 </svg>

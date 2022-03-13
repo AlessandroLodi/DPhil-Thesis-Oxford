@@ -106,6 +106,24 @@ Gate voltage outside the shown region resulted in strong leakage currents, likel
 
 From these \glspl{SD} it is not possible to distinguish whether the the charge states are well defined or not, given below 150 K they seem not closing between $\SI{-0.1}{\V}\le V_\textrm{SD}\le\SI{+0.1}{\V}$. High-resolution temperature data taken at 25 mK applying higher bias voltages $\SI{-0.2}{\V}\le V_\textrm{SD}\le\SI{+0.2}{\V}$, however, confirms that diamonds are closing. Therefore, as a result, charge states host well defined charges which can be assigned, as reported in similar studies, to graphene nanoribbons quantum dots~\cite{el2020controlled, sols2007coulomb, todd2009quantum}. From 150 K up to room temperature, height and width of current suppressions regions becomes narrower and shorter while preserving the Coulomb blockade regime: this can be explained as a result of the leads' Fermi-Dirac distribution smoothing, which consequently leads to a high number of electrons jumping inside the junction region due to the thermal energy.
 
+\co{ROOM TEMPERATURE MEASUREMENT DISCUSSION}
+At room temperature, the noise due to thermal flucuations and thermal broadening of the diamonds makes it difficult to detect single-electron charging events. We believe it is however possible to qualitatively asses the presence of single-charge events at room temperature.
+
+% Data rate
+The number of counts, or events, $C_\text{tot}$ is given by the sum of signal $C_\text{S}$ and noise counts $C_\text{N}$. If we assume the two uncertainties associated with $C_\text{tot}$ and $C_\text{N}$ are not correlated this are simply given by $\sqrt{C_\text{tot}}$ and $\sqrt{C_\text{N}}$, respectively. Thus, the relative uncertainty that one has in measuring $C_\text{S}$ is:
+\begin{equation}
+  \sigma_{C_\text{S}} = \frac{\sqrt{C_\text{tot}+C_\text{N}}}{C_\text{tot}-C_\text{N}}
+\end{equation}
+One consequence of this is that while the number of counts increases linearly with the measurement time the relative uncertainty decreases as its inverse square root. In our device, however, longer measurement times result in dominat thermal drift components.
+
+One possible workaround is to acquire data with a lower data rate (faster scan rate). There are two possible options in our setup to achieve the following.
+The first measurement protocol simply lowers the integration time the dac spend on each measurement point. The overall measurement time for a single bias trace is lowered by a this reduction factor. One drawbacks is that usually this is associated with a higher white noise coming from the instrumentation. The second alternative is to reduce the sampling rate of the alazar card. Low temperature measurements have been acquired with a fixed sampling rate of about 100 MS/s. When the number of noise events are high, however, high sampling rates are undesirables as the value of $C_\text{tot}$ is dominated by $C_\text{N}$. Therefore, the sampling rate was reduced by a factor of 100 and multiple stability maps over the experimental accessible gate voltage range were acquired and averaged out.
+
+The result of an averaging five stability diagrams is shown in Fig.~\ref{fig:comparison_low_high}. Low bias current is uniquely resulted from background noise. This noise is averaged out by the by the various scans, thus resulting in an almost zero current as can be appreiacted in the gate trace extraced at 4 mV. Fig.~\ref{fig:comparison_low_high}(b) shows various traces extracted from averaged diagram. Grey boxes have been placed at the gate voltages at which the low temperature hour-glass shaped region were measured at cryogenic temperatures. It is therefore desirable to try to understand whether the portions of signal highlighted by the squares correspond come from $C_\text{S}$ rather than $C_\text{N}$.
+
+% Poisson Distruibution for explaining extracting signal from the background
+The reasoning is as follow. Suppose
+
 \clearpage
 \vspace*{\fill}
 \begin{figure}[htp]
@@ -114,7 +132,7 @@ From these \glspl{SD} it is not possible to distinguish whether the the charge s
   \caption{
     \textbf{(a)} Room temperature stability diagram. Black lines are the countour lines of low tremperatures diamonds superimposed at the same gate voltage. Clearly, thermal broadening plays blurs the diamond shape so they may regarded exclusively as a guide to eyes. Green horizontal lines identify gate trace cuts at different gate voltages. The acquisition scan rate for this diagram was 10 MS/s, which enables detection of fast charging events.
     \textbf{(b)} Traces extracted at different biases. Grey bands overalapped over the individual traces are the Coulomb diamond widths at that respective bias. The number of time one of this band is superimposed with a peak may assign to an actual signal rather than background noise. }
-  \label{fig:all_transitions}
+  \label{fig:comparison_low_high}
 \end{figure}
 \vspace*{\fill}
 \clearpage

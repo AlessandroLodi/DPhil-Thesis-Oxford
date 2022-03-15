@@ -197,9 +197,6 @@ where $v(E)$ is the carrier velocity, $\ell_{\mathrm{el}}$ the elastic mean free
 \end{equation}
 Close to the Dirac points, the experimental conductivities lie within $\approx 2-5 e^{2}/ h$ range, although the charge mobility can vary due to doping from the electrical contancts and/or the substrate by almost one order magnitude~\cite{jiang2007quantum, ozyilmaz2007electronic}.
 
-% \subsection{thermal conductivity}
-
-% Thermal Properties of graphene
 
 \subsection{Graphene Transistors}
 
@@ -510,17 +507,25 @@ Recently, it has been advanced graphene as interlayer between the metal contact 
 
 \section{Graphene Nanoribbons}
 
-Among carbon alternatives explored, \glspl{GNR} have certainly gained attentions for logic applications. These require two well-defined voltage states (low/high voltage for off/on state) and fast switching behaviour between them. The confinement of large-area graphene carries into 1D channels opens an electronic bandgap, which depends in first instance on the channel width and length~\cite{Han2007}. If we consider electronic bandgaps within 0.3 -- 0.5 eV range, suitable ribbon widths below 5 nm are required for \gls{CMOS} techonlogy (Fig.~\ref{fig:intro:gnr-bandgap_schwierz})~\cite{geng2017graphene}.
+Among carbon alternatives, \glspl{GNR} have certainly gained attentions for logic applications. These require two well-defined voltage states (low/high voltage for off/on state) and fast switching behaviour between them. The confinement of large-area graphene carries into 1D channels opens an electronic bandgap, which depends on the channel width and length~\cite{Han2007}. Early theoretical calculations have in fact shown that when the ribbon width approached the widhts around 2-3 nm, the resulting bandgap becomes closer to those of Ge or InN. By further reducing down the width (1-2), this should technically approach bangaps closer to those of Si or GaAs~\cite{barone2006electronic}. As can be appreciated in Fig.~\ref{fig:intro:gnr-bandgap_schwierz} ribbons having widths below 5 nm are considered suitable for bangaps in the 0.3 -- 0.5 eV, which are required for \gls{CMOS} techonlogy~\cite{geng2017graphene}.
 
-After the discovery of graphene, \glspl{GNR} were produced using \textit{top-down} approaches, typically by patterning ribbons through lithograpically means with \gls{EBL}~\cite{RN345, Han2007}, by longitudinal unzipping of single-walled nanotubes~\cite{kosynkin2009longitudinal}, or by cutting graphene sheets with metallic nanoparticles~\cite{RN346}. These fabrication methods, however, were often yielding large widths and uncontrolled structural defects~\cite{han2010electron, Evaldsson2008}.
+\begin{figure}
+    \begin{center}
+        \includegraphics[width=0.95\textwidth]{chapter_introduction/figures/bandgap_GNRwidth.pdf}
+        \centering{}
+        \caption{
+            Band gap versus nanoribbon width from experiments~\cite{Han2007, Kim2009, Li2008, Chen2007} and theoretical calculations~\cite{Yang2007, Evaldsson2008}.
+            The following abbreviation are used: ac for \textit{armchair}, zz for \textit{zigzag}. Figure adapted and extended from~\cite{schwierz2013graphene}.
+            \label{fig:intro:gnr-bandgap_schwierz}}
+    \end{center}
+\end{figure}
 
-Two pioneering works reported independently by Hongjie Dai~\cite{Li2008} and Klaus M{\"u}llen~\cite{cai2010atomically} sparked the application of chemical strategies by using precisely- engineered molecular precursors. The advantages of these \textit{bottom-up} protocols are several. Firstly, it has been possible to synthesise several-hundreds-nm-long ribbons with widths below 5 nm~\cite{narita2015bottom}. Secondly, important nano-and- optoelectronics properties such as electronic bandgap, charge-carrier mobility, and optical absorption have become tunable by either varying \glspl{GNR} chemical structures or by introducing opportune decorations along the ribbon edges~\cite{Liu2015, hu2018bandgap}.
+After the discovery of graphene, \glspl{GNR} were produced using \textit{top-down} approaches, typically by patterning ribbons through lithography means with \gls{EBL}~\cite{RN345, Han2007}, by longitudinal unzipping of single-walled nanotubes~\cite{kosynkin2009longitudinal}, or by cutting graphene sheets with metallic nanoparticles~\cite{RN346}. These fabrication methods, however, were often yielding large widths and uncontrolled structural defects~\cite{han2010electron, Evaldsson2008}.
 
+Two pioneering works reported independently by Hongjie Dai~\cite{Li2008} and Klaus M{\"u}llen~\cite{cai2010atomically} sparked the deployment of chemical strategies by using precisely- engineered molecular precursors. The advantages of these \textit{bottom-up} protocols are severals. Firstly, it has been possible to synthesise several-hundreds-nm-long ribbons with widths below 5 nm~\cite{narita2015bottom}: long ribbons are desirable when interconnection applications are considered. Secondly, important nano-and- optoelectronics properties such as electronic bandgap, charge-carrier mobility, and optical absorption have become tunable by either varying \glspl{GNR} chemical structures or by introducing opportune decorations along the ribbon edges~\cite{Liu2015, hu2018bandgap}. The wide variaty of edge structures synthesised through bottom-up approaches demonstrates the success and the versatility of this fabrication route (Fig.\ref{fig:intro:gnr-canvas}).
 
 \subsection{Crystal and Band Structure}
-Armchair (AGNRs) and Zigzag (ZGNRs) ribbons were the first group of \glspl{GNR} to be studied. The difference between AGNRs and ZGNRs rests in a different edge connettivity and has profound consequences on the respective bandstructure.
-
-The energy spectrum of a \gls{GNR} with length $L$ and width $w_\text{GNR}$ is given by:
+Armchair (AGNRs) and Zigzag (ZGNRs) ribbons were the first group of \glspl{GNR} to be studied. The difference between AGNRs and ZGNRs rests in a different edge connettivity and has profound consequences on the respective bandstructure. In general, the energy spectrum of a \gls{GNR} with length $L$ and width $w_\text{GNR}$ may be written as:
 
 \begin{equation}
     E_{n,m} = \pm\hbar v_F^*~\sqrt{\qty(\frac{n\pi}{L})^2 + \qty(\frac{m\pi}{w_\text{gnr}})^2}
@@ -528,7 +533,7 @@ The energy spectrum of a \gls{GNR} with length $L$ and width $w_\text{GNR}$ is g
 \end{equation}
 
 where $v_F^*$ is the group velocity for energy band indexed by the quantum numbers pair $n,m$~\cite{baringhaus2014exceptional}.
-Through \gls{TB} calculations the group of Steven Louie was one of the first in classifying the electronic properties of AGNRs based on the number of carbon dimer lines across the ribbon width $N$~\cite{son2006energy}. When $N$ is a multiple of 3 of an integer $p$, the resulting ribbons have wide bandgaps which scales inversely with the ribbon width\footnote[2]{The $E_g \propto 1/w_\text{gnr}$ relation holds when $15~\text{nm} \le w_\text{gnr} \le 90~\text{nm}$~\cite{yang2007quasiparticle}} (Tab.~\ref{tab:agnr-tb}). The same happens when $N=3p+1$. In contrast, the ribbon family characterised by $N=3p+2$ were predicted to be metallic~\cite{nakada1996edge}.
+Through \gls{TB} calculations, the group of Steven Louie was one of the first in classifying the electronic properties of AGNRs based on the number of carbon dimer lines across the ribbon width $N$~\cite{son2006energy}. When $N$ is a multiple of 3 of an integer $p$, the resulting ribbons have wide bandgaps which scales inversely with the ribbon width\footnote[2]{The $E_g \propto 1/w_\text{gnr}$ relation holds when $15~\text{nm} \le w_\text{gnr} \le 90~\text{nm}$~\cite{yang2007quasiparticle}} (Tab.~\ref{tab:agnr-tb}). The same happens when $N=3p+1$. In contrast, the ribbon family characterised by $N=3p+2$ were predicted to be metallic~\cite{nakada1996edge}.
 
 \begin{table}
     \caption{\label{tab:agnr-tb}
@@ -545,7 +550,7 @@ Through \gls{TB} calculations the group of Steven Louie was one of the first in 
     \]
 \end{table}
 
-When the width of the ribbon shrinks below 10 nm, however, large electron-electron interactions enhanced by the one-dimensional nature of the system lead to important, non-negligible self-energy correction terms which are have been well captured by many-body theories~\cite{yang2007quasiparticle}. An estimate of the consequences of these correction terms are summarised in Tab.\ref{tab:agnr-gw}. These theoretical predictions were confirmed years later by STM studies on surface-synthesised 5-atom wide AGNRs, which reported bangaps around 100 meV~\cite{kimouche2015ultra}. While the energy gap scale quadratically with the ribbon length $E_g \propto 1/L^2$, the energy spacing between electronic states that belong to the same band scales inversly with the ribbon length, $E_g \propto 1/L$, as one may expect by model the behaviour of these states with energy states of graphene (linear dispersion).
+When the width of the ribbon shrinks below 10 nm, however, large electron-electron interactions enhanced by the one-dimensional nature of the system lead to important, non-negligible self-energy correction terms which have been well captured by many-body theories~\cite{yang2007quasiparticle}. Estimations for these correction terms are summarised in Tab.\ref{tab:agnr-gw}. A few years later, experiemental STM studies on surface-synthesised 5-atom wide AGNRs confirmed these predictions, reporting bangaps around 100 meV~\cite{kimouche2015ultra}. While the energy gap scale quadratically with the ribbon length $E_g \propto 1/L^2$, the energy spacing between electronic states that belong to the same band scales inversly with the ribbon length, $E_g \propto 1/L$, as one may expect by model the behaviour of these states with energy states of graphene having a linear dispersion.
 
 \begin{table}
     \caption{\label{tab:agnr-gw}
@@ -562,21 +567,6 @@ When the width of the ribbon shrinks below 10 nm, however, large electron-electr
     \]
 \end{table}
 
-Following the success of chemical routes in producing GNRS, various kind of edges have come to light, e.g., cove, fjord, chiral, and all these can be regarded as combination of AGNRs and ZGNRs (Fig.\ref{fig:intro:gnr-canvas}).
-
-\begin{figure}
-    \begin{center}
-        \includegraphics[width=0.95\textwidth]{chapter_introduction/figures/bandgap_GNRwidth.pdf}
-        \centering{}
-        \caption{
-            Band gap versus nanoribbon width from experiments~\cite{Han2007, Kim2009, Li2008, Chen2007} and theoretical calculations~\cite{Yang2007, Evaldsson2008}.
-            The following abbreviation are used: ac for \textit{armchair}, zz for \textit{zigzag}. Figure adapted and extended from~\cite{schwierz2013graphene}.
-            \label{fig:intro:gnr-bandgap_schwierz}}
-    \end{center}
-\end{figure}
-
-These calculations have shown that, as rule of thumb, AGNRs can be both semiconducting and metallic, while ZGNRs should be regarded as quasi-metallic, with energy gaps lying within 0.1 - 0.7 eV. Indeed, for this kind of ribbon the application of an electric field in the transverse direction of induces a spin-polarisation of the edge states is believed to be responsible for semiconducting properties of ZGNRs
-The simplest model for describing the energy levels for a graphene nanoribbon is the particle in the box model, where the energy should scale quadratically $E_g \propto 1/L^2$ with the ribbon extension. Experimentally, however, the band gap for AGNRs scales with the inverse of the width $E_g \propto 1/W$~\cite{son2006energy}: by considering all the interatomic carbon-carbon distances the same, it is possible to work out an averaged formula which reports the band gap varying as $E_g = 0.8 / W$,~\cite{xu2016recent}. More accurate simulations have shown, however, that peripheral carbon—carbon bond lengths usually tend to be larger compared to the ribbon core ones~\cite{wang2007tuning}. It is predicted that the band gap will be similar to Ge or InN when the width is reduced to 2 and 3 nm, and will be similar to Si or GaAs when it is further reduced to 1-2 nm~\cite{barone2006electronic}.
 
 \begin{figure}
     \begin{center}
@@ -588,11 +578,23 @@ The simplest model for describing the energy levels for a graphene nanoribbon is
     \end{center}
 \end{figure}
 
-The electronic properties of Z\glspl{GNR} differ quali and quantitatively from armchair ribbons. Tight binding estimations have shown that if spin DOFs are excluded, the conduction band and valence band touches at the fermi level, forming a flat band. This flat band leads to a large localization of the density of states at the edges of ZGNRs, the so called \textit{edge states}, which displays an exponential decay $\rho(\epsilon\sim\epsilon^{-\vect{r}})$, with an exponent depending of the distance from centre of the ribbon; the weight of these states become negligible when the width in is the order of \si{\micro\metre}.
-The formation of band gap is observed when the spin is considered. In particular, the ground state of ZGNRs has parallel (ferromagnetic, $\uparrow\uparrow$, FM) spin alignment along one edge, whilst two edges have antiparallel (antiferromagnetic, $\downarrow\downarrow$, AFM) configuration. Given that the AFM state is semiconducting while the FM is metallic, it would theoretically be possible to change the metallic state of a zigzag ribbon by applying a magnetic field in the direction transverse to that of the ribbon's extension.
+The electronic properties of Z\glspl{GNR} behave qualitatively and quantitatively differently from A\glspl{GNR}. The unit cell of a ZGNR is specified by providing only 2 atoms per unit cell, in contrast to the four one has to provide for A\glspl{GNR}. This gives origin to a $2_1$ screw axis along the width extension direction. The major consequence of having glide planes and screw axes in nonsymmorphic space groups\footnote[3]{Nonsymmorphic groups are space groups which are not uniquely defined by the repetition of a point-group motif by the lattice translations. An example of symmorphic groups are the structure for Te and $\alpha$-quartz.} in the the wave vector group is to cause energy bands to stick together along some of the high symmetry points and axes in the Brillouin zone~\cite{dresselhaus2007group}. This \textit{flat band} region is located at wave vectors $2\pi/3 \le k \le \pi$, and the electronic states in this region have been well understood by looking at the charge distribution maps and assigned to localized states near the zigzag edge~\cite{wakabayashi2010electronic}. In one-dimensional systems these electronic states are called \textit{edge states}, display an exponential decay of the \gls{DOS} with distance from the ribbon centre \vect{r}, $\rho(\epsilon\sim\epsilon^{-\vect{r}})$, and their weight to the total \gls{GNR} wavefunction becomes negligible for widths approaching the \si{\micro\metre} range~\cite{kobayashi2006edge,son2006energy}.
+
+Upon including the spin \gls{DOF}, a band gap opens up when the wave vector matches the ratio between $\pi$ and the unit cell distance $d_z$, i.e. $k = \pi/d_z$ (Fig.~\ref{fig:intro:zgnr_bandgap_edge_state_delocalisation}\textbf{c}). Once again, it was the group of Steven Louie in 2006 that through the usage of spin-polarised ab-initio calculations correctly assigned the ground state to a ferromagnetic configuration ($\uparrow\uparrow$, FM) for spins aligned along one edge, whilst an antiferromagnetic state ($\downarrow\downarrow$, AFM) emerges for spins that belong to two distinct edges~\cite{son2006half}. The property of undergoing the phase transition from an AFM configuration (semiconducting) to an FM state (metallic) has been called \textit{half metallicity} and it should be possible to induce it by applying an trasveral magnetic field across the ribbon extension plane.
 
 \subsection{Edge States}
-The nature of the edge states in graphene nanoribbons is an interesting application of topological theories. The re-discover interest that the physics community has given to topological insulators has been motivated by a good variaty of exotic effects theoretically predicated in these materials, such as the manifestation of elusive particles (Majorana fermions) when these are coupled with superconductors and the robustness against decoherence effects when used for quantum computing applications.
+The elucidation of localised state exotic properties came a few years later and had to include chiral \gls{DOS} for the electronic states at the edges~\cite{yazyev2011theory}. Chirality is a fascinating property arising when the time-reversal symmetry of the charge carriers is broken, and one can distinguish between carrier wavefunctions evolving in time with a clockwise phase from those moving with a counterclockwise phase. Through the usage of a mean-field Hubbard hamiltonian, and assuming the on-site Coulomb repulsion $U$ is comparable to the hopping integral $t$ between two adjacent sites ($U/t \sim 1$), a \gls{GNR} may be modelled with the following hamiltonian:
+
+\begin{equation}\label{eq:gnr_chiral_hubbard_hamiltonian}
+    \begin{split}
+        \mathcal{H}_{\textrm{MF}} = &- t\sum_{\langle ij\rangle,~\sigma}\qty(a^\dagger_{\sigma,i}a_{\sigma,j} + \textrm{H.c.}) \\
+        &+ U\sum_{i}\qty(n_{i\uparrow}\langle n_{i\downarrow}\rangle + \langle n_{i\uparrow}\rangle n_{i\downarrow} - \langle n_{i\uparrow}\rangle \langle n_{i\downarrow}\rangle),
+    \end{split}
+\end{equation}
+
+where the second summation is carried out over the spin-polarised densities $n_{i\sigma} = a^\dagger_{i\sigma}a_{i\sigma}$. This hamiltonian respects the electron-hole symmetry, meaning that the \gls{DOS} is symmetric respect to the Fermi level.
+
+The wavefunction solutions of the corresponding eigenvalue problem described correctly the experimental evidence, predicting two pairs of peaks split in the \gls{DOS} and which were linked to two different magnetic orderings. One peak split connected with the AFM correlation between opposite edges, while the second and larger split due to the FM ordering along one single edge (Fig.~\ref{fig:intro:zgnr_bandgap_edge_state_delocalisation}).
 
 \begin{figure}
     \begin{center}
@@ -606,24 +608,22 @@ The nature of the edge states in graphene nanoribbons is an interesting applicat
     \end{center}
 \end{figure}
 
-In a seminal work of 2005, C. L. Kane and E. J. Mele developed proved thorugh a perturbative approach that graphene behaves as a quantum spin Hall (QSH) insulator when the spin-orbit interaction is perturtatively included into the graphene hamiltonian. One consequence is that at low temperature, graphene has a band gap in bulk but results gapless in the edge~\cite{kane2005quantum}.
+An estimate of the energy difference between the two magnetic orderings was thus found to be in the order of tens of meV per edge atom and to decrease as the ribbon width increases, eventually becoming negligible when the width is significantly larger than the exponential decay length of spin-polarised states~\cite{lee2005magnetic}.
 
-In the zigzag configuration, the inclusion of electron correlations and the spin DOF in DFT calculations has predicted bandgap opening and magnetic orderings~\cite{yazyev2011theory}.
-Steven Louie's group extended the computation also to chiral edges, elucidating the inherent role of spin-polarized magnetic edge states in these kind of ribbons.
-. They employed a mean-field Hubbard model to calculate the band structure,
-assuming the magnitude for the on-site Coulomb repulsion being comparable to the hopping integral $U/t \sim 1$.
-The Hubbard hamiltonian using the second quantisation formalism resembles Eq.~\ref{eq:graphene_hamiltonian} and can be expressed as:
+A further experimental evidence of magnetic orderings localised along the edges was discovered by employing \gls{ESR} techniques, as demonstrated by the work carried out by Slota \textit{et al.} using microwaves (94 GHz) ~\cite{slota2018magnetic}. The peculiarity of their ribbon structure was to carry stable nitroxyl radicals decorations along ribbon's edges acting as spin injectors and enabling the possibility to disentangle the magnetic edge fingerprint from the signal of the radical. Additionally, it was demonstrated that the edge state has superior coherence time compared to most $\pi$-extended organic systems even at room temperature and  in a non-diluted phase (powder), which makes \glspl{GNR} very promising for spintronics applications. Desirable would be therefore to study the tunability of magnetic properties with electrical control single zigzag graphene nanoribbons, for example through the usage of molecular gaps. This has indeed been one of the initial aims for this research thesis.
 
-\begin{equation}\label{eq:gnr_chiral_hubbard_hamiltonian}
-    \begin{split}
-        \mathcal{H}_{\textrm{MF}} = &- t\sum_{\langle ij\rangle,~\sigma}\qty(a^\dagger_{\sigma,i}a_{\sigma,j} + \textrm{H.c.}) \\
-        &+ U\sum_{i}\qty(n_{i\uparrow}\langle n_{i\downarrow}\rangle + \langle n_{i\uparrow}\rangle n_{i\downarrow} - \langle n_{i\uparrow}\rangle \langle n_{i\downarrow}\rangle),
-    \end{split}
+% In their seminal work, C. L. Kane and E. J. Mele developed a perturbative approach on graphene which shows that it behaves as a quantum spin Hall (QSH) insulator when the spin-orbit interaction is included as a perturbation into the hamiltonian. One consequence upon inclusion of \gls{SO} interaction is that for low temperatures the bulk of graphene is gapped, but on a finite system there are always low energy modes on the edges, which they lead to a quantized Hall conductance $\sigma_{xy} = \pm e^2/h$ ~\cite{kane2005quantum}.
+
+
+\subsection{Graphene Nanoribbons Field-Effect Transistors}
+One of the first \glspl{GNRFET} prototype was realised by the Dai's group by synthesising \glspl{GNR} through sonochemistry~\cite{wang2008room}. Source and drain were fabricated using Pd, which is a metal with a high work function and thus minimizes the Schottky barrier height for thr holes when a \textit{p}-type transistor
+widths down to $w_\textrm{GNR}\approx$ \SI[multi-part-units = single]{2.0(5)}{\nano\metre} and lengths of about $l_\textrm{GNR}\approx 236$.
+
+For narrow ribbons ($w_\textrm{GNR} \leq 10$ nm) it is possible to model the dispersion relation E(\vect{k}) (Eq.\ref{eq:gnr_energy}) as a result of a component along the transport $k_\parallel$ and the confinement $k_\perp$ directions:
+\begin{equation}
+    E(\vect{k}) = \frac{3ta}{2}\abs{\vect{k}} = \frac{3ta}{2}\sqrt{k_\parallel^2 + k_\perp^2}
 \end{equation}
-
-except for the second term, which is given by the summation of spin-polarised density $n_{i\sigma} = a^\dagger_{i\sigma}a_{i\sigma}$ and their expectation values.
-The hamiltonian in Eq.~\ref{eq:gnr_chiral_hubbard_hamiltonian} respects the electron-hole symmetry, meaning that the density of states is symmetric respect to the $E_F$.
-The solution of the model displays interesting features: two pairs of peaks split ($\Delta_0$ and $\Delta_1$) in the density of states are observed, one associated with the electronic band gap, and one associated with the maximum energy splitting.
+where $t$ is the nearest neighbour hopping parameter and $a$ is the carbon-carbon bonding length. The resulting carrier kinetic energy in case of no mid-gap states is then $E_k = E(k) - E_g$, with $E_g = 3ta\abs{k_\perp}/2$.
 
 \begin{figure}
     \begin{center}
@@ -639,25 +639,6 @@ The solution of the model displays interesting features: two pairs of peaks spli
     \end{center}
 \end{figure}
 
-The authors claim that the first peak split arises due to an AFM correlation between opposite edges, while $\Delta_1$ is a consequence of a ferromagnetic order due to strong localised state along a single edge.
-Within this description, it is legit to link the behaviour of chiral GNRs with the one of spin-polarised ZGNRs; thus the total energy difference between ferromagnetic and antiferromagnetic couplings should be in the order of tens of meV per edge atom
-and should decrease as the width of the ribbon increases, eventually becoming negligible when the ribbon width is significantly larger
-than the decay length of the spin polarized~\cite{lee2005magnetic}. Both features are in fact recovered from the solution of Eq.~\ref{eq:gnr_chiral_hubbard_hamiltonian}.
-
-The elusive existence of magnetic edge states was eventually confirmed through \gls{ESR} experiments done on cove GNRs having nitroxyl radicals decorating the ribbon's edges~\cite{slota2018magnetic}. The radical's role is to inject spin density in the nanoribbon, enabling the possibility to disentangle the magnetic edge fingerprint from the signal of the radical.
-Additionally, it was demonstrated that the
-edge state has superior coherence even at room temperature in a non-diluted system, which makes
-GNRs very promising for spintronics applications
-
-\subsection{Graphene Nanoribbons Field-Effect Transistors}
-One of the first \glspl{GNRFET} prototype was realised by the Dai's group by synthesising \glspl{GNR} through sonochemistry~\cite{wang2008room}. Source and drain were fabricated using Pd, which is a metal with a high work function and thus minimizes the Schottky barrier height for thr holes when a \textit{p}-type transistor
-widths down to $w_\textrm{GNR}\approx$ \SI[multi-part-units = single]{2.0(5)}{\nano\metre} and lengths of about $l_\textrm{GNR}\approx 236$.
-
-For narrow ribbons ($w_\textrm{GNR} \leq 10$ nm) it is possible to model the dispersion relation E(\vect{k}) (Eq.\ref{eq:gnr_energy}) as a result of a component along the transport $k_\parallel$ and the confinement $k_\perp$ directions:
-\begin{equation}
-    E(\vect{k}) = \frac{3ta}{2}\abs{\vect{k}} = \frac{3ta}{2}\sqrt{k_\parallel^2 + k_\perp^2}
-\end{equation}
-where $t$ is the nearest neighbour hopping parameter and $a$ is the carbon-carbon bonding length. The resulting carrier kinetic energy in case of no mid-gap states is then $E_k = E(k) - E_g$, with $E_g = 3ta\abs{k_\perp}/2$.
 
 Although a few impressive transistor key figures, such as $I_\textrm{on}\approx$ 2000 \si{\micro\ampere\per\micro\metre}, $I_\textrm{on}/I_\textrm{off}\approx 10^6$, $SS = 210$ mV/dec, and $g_\textrm{m} = 900$ \si{\micro\siemens\per\micro\metre} were reported, degraded carrier mobility  within the $\approx$ 50--200 cm$^{2}$V$^{-1}$s$^{-1}$ range were also seen for narrower \glspl{GNR}.  The reason for this unexpected result is double-fold. Firstly, it is well estabilished the tendecy in  solid-state (conventional) semiconductors of decreasing mobilities for increasing bandgaps. Secondly, it
 has been attributed that carrier transport in \glspl{GNR} is dominated by edge effects.

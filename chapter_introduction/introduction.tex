@@ -179,13 +179,6 @@ In the case of a two-dimensional electron gas, it is constant. On the contrary f
 If the graphene is charge-neautral, the DOS has two Van Hove singularities at $\rho(\omega_\textrm{VH}) = \pm 1$ \si{\electronvolt}~\cite{bena2005quasiparticle}. This behaviour is in stark constrat with the DOS
 of carbon nanotubes and clean graphene nanoribbons, as they show $1/\sqrt{E}$ singularities due to the 1D nature, which imposes a quantization perpendicular to the ribbon or tube longitudinal direction.
 
-% \begin{figure}
-%     \begin{center}
-%         \includegraphics[width=0.95\textwidth]{chapter_introduction/figures/graphene_DOS.png}
-%         \caption{Graphene density of states plotted over a wide range of nearest neighbor hopping parameter \emph t, showing pronounced van Hove singularities for $\epsilon\sim \pm t$~\cite{castroneto2009}. The dashed rectangle indicates the almost linear low energy DOS normally spanned in back-gated transport measurements.\label{density} }
-%         \label{fig:graphene:dos}
-%     \end{center}
-% \end{figure}
 
 Using the Einstein-Smoluchowski relation $D = k_BT/\eta = \mu k_BT$ which links an average friction coeafficient $\eta$ experienced by a flow of semiclassical charge carriers diffusing in a media with coeafficient $D$, it is possible to compute the semiclassical conductivity from the DOS as:
 \begin{equation}\label{ch1:eq:semiclassical_conductivity}
@@ -222,7 +215,7 @@ that is constant over a quite wide range of $n$ (yielding in this case $\mu_h\ap
 The mobility is limited by different factors such as scattering by charged impurities or defects and electron-phonon scattering. In very clean and suspended samples (where the underling SiO$_2$ substrate has been etched away) the mean free path $l$ increases by almost two order of magnitude, becoming comparabe to the device size, an indication that the ballistic transport regime is reached %\cite{Bolotin2008, du2008andrei}.
 
 Later in 2008~\cite{bolotin2008ultrahigh} and 2013~\cite{wang2013one}, higher mobility values were reported: $\approx120,000$ cm$^{2}$V$^{-1}$s$^{-1}$ at 240 K and $\approx1,000,000$ cm$^{2}$V$^{-1}$s$^{-1}$ at 4 K. The reason for these higher values was attributed to the use of suspended graphene rather
-onto substrate, where surface effects inevitably affect the carrier dynamics. At the same time, results ($\approx120,000$ cm$^{2}$V$^{-1}$s$^{-1}$) obtained at room temperature with graphene onto a single-layer of hexagonal boron nitride (hBN)~\cite{dean2010boron} and sandwiched between two hBN layer~\cite{wang2013one} have suggested
+onto substrate, where surface effects inevitably affect the carrier dynamics. At the same time, results ($\approx120,000$ cm$^{2}$V$^{-1}$s$^{-1}$) obtained at room temperature with graphene onto a single-layer of hexagonal boron nitride (h-BN)~\cite{dean2010boron} and sandwiched between two hBN layer~\cite{wang2013one} have suggested
 that this flat and inert materials can be act as a excellent passivation film for graphene devices.
 
 One of the figure of merit often taken into account for addressing logic applications for a materials is the ratio between the on-state current and the off-state current. The so called on-off ratio $I_\text{on}/I_\text{off}$ has to be in the range 10${^4}$--10${^7}$. While the $I_\text{on}$ is not directly related to the band gap $E_g$, it is possible to link the value of $I_\text{off}$ with the $E_g$.
@@ -232,6 +225,18 @@ In an metal--semiconductor junction (M/S), the current is built by the majority 
 \begin{equation}
     I_\textrm{off}\propto\exp{(e\beta\phi_B)}.
 \end{equation}
+
+
+\begin{figure}[hbtp]
+    \begin{center}
+        \includegraphics[width=\textwidth]{chapter_introduction/figures/graphene_device.pdf}
+        \caption{
+            \textbf{(a, top)} Architectures of the main graphene MOSFETs. Charge carriers can be modulated in a graphene channel (epitaxial, CVD-grown, or multi-layer) connecting two metal contacts by either back-gate or top-gate. SiC substrate have been used for growing in-situ thermally decomposed graphene, which has found successful radiofrequency applications.
+            \textbf{(a, bottom)} In the recent years, several solutions have envisiosed graphene substrate sandwiched between two layers of hexagonal boron nitride. Having a little lattice mismatch (about 1.5\% \cite{giovannetti2007substrate}) with the graphene lattice, relative dielectric constant $\epsilon_{\text{h-BN}}$ of 3-4 and large bandgap (5.9 eV) it is considered nowadays the best insulating gate layer for graphene. Devices based on h-BN-sandwiched graphene have been testbeds for recent groundbreaking results such as unconvential superconductivity \cite{cao2018unconventional} and Stoner ferromagnetism \cite{seiler2021quantum}.
+            \textbf{(b)} Energy-band diagrams of graphene-semiconductor (G/S) contacts in thermal equilibrium, when a forward \textbf{(c)} and reverse \textbf{(d)} bias is applied. Symbols are associated to physical observables as explained in the main text.}
+        \label{fig:intro:cnt_structure}
+    \end{center}
+\end{figure}
 
 where $e$ is the electron charge, $\phi_B$ is the Schottky barrier height, and $\beta=k_BT$.
 If we assume that the work function of graphene and the metal are the same, then $\phi_B = E_g/2$, where $E_g$ is the band gap energy originating from the difference of the work function of grahene and the metal; thus, the on--off ratio can be estimated from the useful proportionality~\cite{kim2011role}:
@@ -332,7 +337,6 @@ and semiconducting for the majority of the remaining cases -- exceptions due to 
         \label{fig:intro:cnt_structure}
     \end{center}
 \end{figure}
-
 
 Thus, a quantization of the electronic states in the circumferential direction is resulted when the nanotube diameter $d_\textrm{CNT}$ is between 0.8 and 2.5 nm. Each of these substates is called subband
 and are determined by the periodic boundary condition. Having defined a circumferential wave vector $\vect{k_c}$ such that $\vect{k_c}\cdot\vect{c} = k_c\abs{c} = k_c\pi d_\textrm{CNT} = 2\pi\nu$, for $\nu$ integer, it is possible from this relation to draw parallel lines in the first Brillouin zone of graphene.
@@ -445,6 +449,16 @@ In carbon nanotubes transistors a crucial and important -- but somehow overlooke
 Aggressive scaling for the channel length generally leads to lose control of the band bending through the gate: intuitively, by shrinking the channel length the electric field generated by the source contact will be felt more and more
 by the charge carriers. The argument here is that carbon nanotubes offer, however, a good enough platform for such scaling given by the ultrathin hollow structure (recall an effective wall thickness about $d_\textrm{CNT}\approx0.68$ \si{\angstrom}). On the other hand, this could be a double edge-sword.
 The effetive carrier mass in nanotubes is $m^*_\textrm{CNT} = (0.228 \pm 0.129)m_0$~\cite{marulanda2008carrier}, thus potentially leading to tunnelling current from source to drain: this effect can be appreciate by an increase in the \gls{SS} and the OFF current.
+
+\begin{figure}[hbtp]
+    \begin{center}
+        \includegraphics[width=\textwidth]{chapter_introduction/figures/cnt_device.pdf}
+        \caption{
+            \textbf{(a)} Cartoon structure of a chiral (8, 2), an armchair (5, 5), and zigzag (10, 0) nanotube.
+            \textbf{(b)} Graphene Brillouin zone and allowed k-vectors for the (8, 2) and (10, 0) CNTs. A metallic tube include one of the \vect{K} points among the set of allowed k-vectors, as shown in \textbf{(b)}. It is then possible to linearise the energy in the momentum space for low-excitations (close to the Fermi energy). Conversely, the \vect{K} point is not an allowed vector for semiconducting nanotube, and this leads to an energy gap. Inspired by~\cite{torres2014introduction}.}
+        \label{fig:intro:cnt_structure}
+    \end{center}
+\end{figure}
 
 One of the first few systematic study on channel length scaling effects was conducted by Franklin \textit{et al.} in 2010 through a series
 of measurements on nanotubes with relatively small diameters (1.1 nm $<$ d$_\textrm{CNT}$ $<$ 1.3 nm) by using local bottom gates covered

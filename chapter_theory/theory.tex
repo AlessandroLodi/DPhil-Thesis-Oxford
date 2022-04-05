@@ -147,7 +147,9 @@ As we will see in more detail later (cf. Sec.~\ref{sc:NEGF}), it is possible to 
 
 \section{Thermoelectric Phenomena in Zero-Dimensional Structures}
 
-In this section we will focus on those electrical phenomena arising when a thermal gradient is present between two junctions~\cite{behnia2015fundamentals}. As it is well know, macroscopically, the thermoelectric power that arises when two different materials are welded together in two points (junctions) is proportional to the temperature drop establishing when one of the junction is heated up at temperature $T_1 > T_2$; i.e.:
+In this section we will present electrical phenomena arising when a thermal gradient is present between two junctions, even without applying any external bias.
+
+Macroscopically, the thermoelectric power that arises when two different materials are welded together in two points is proportional to the temperature drop resulting when one of the junction is heated up at temperature $T_1 > T_2$; i.e.:
 \begin{equation}\label{ch2:eq:seeback_coeff}
     \Delta V = S\Delta T
 \end{equation}
@@ -155,7 +157,7 @@ where $\Delta V $ denotes the electrical potential drop and $S$ is the proportio
 
 There are two approaches used to model the electronic distribution in a solid when external paramaters such as heat and/or non-uniform fields are applied. The Boltzmann approach infers the dynamics of a diluted gas of semi-classical particles: in the semiclassical description of transport, the electron ensamble is described by a probability distribution function $f(\vec{r}, \vec{k}, t)$, which details the number of electrons that a certain time $t$ are within a volume $\text{d}\vec{r}$ with wave vector within the interval $\text{d}\vec{k}$. In the case where quantum effects play a role in transport, that is if the potential of the structure varies sharply with respect to the particle average thermal wavelength, the Boltzmann approach is no longer valid.
 
-The second applicable framework is the Landauer theory (cf. Sec.~\ref{ch:theory:sec:landauer_theory}) which is used for low temperature thermoelectric calculations in mesoscopic structures \mccorrect{cite Cuevas}. The Landauer formalism has the advantage of assuming a constant mean-free path, rather than a constant relaxation time of the electrons as the Boltzmann approach does, which
+The second applicable framework is the Landauer theory (cf. Sec.~\ref{ch:theory:sec:landauer_theory}) which is used for low temperature thermoelectric calculations in mesoscopic structures \cite{cuevas2010molecular}. The Landauer formalism has the advantage of assuming a constant mean-free path, rather than a constant relaxation time of the electrons as the Boltzmann approach does, which
 is more useful in experiments. In addition, the Landauer approach is valid in the ballistic and quasi-ballistic regime.
 
 It is possible to formulate a similar expression for the flow of heat $Q$ from one reservoir to the other by multiplying the particle transmission with the particle
@@ -182,6 +184,37 @@ where we called with $\sigma$ the conductivity. This relation allows us to ident
 \begin{equation}
     S = - \frac{\Delta V}{\Delta T} = \frac{\sigma}{\alpha}.
 \end{equation}
+
+The thermoelectric conductance might be written as the derivative of the charge conductance following a Sommerfeld expansion:
+
+$$
+    \alpha=\frac{\pi^2 k_\mathrm{B}T}{3e}\frac{\partial\sigma}{\partial\epsilon}|_{\epsilon=\epsilon_{F}}
+$$
+By using this expression it is possible to write the Seeback coefficient as solely a function of the charge conductance; this is the well-known Mott formula (see ~\cite{behnia2015fundamentals} for a complete derivation):
+$$
+    S=-\left.\frac{\pi^{2}k_\mathrm{B} T}{3e}\frac{\partial \ln (\sigma)}{\partial \epsilon}\right|_{\epsilon=\epsilon_{F}} .
+$$
+
+From this equation one can appreciate the dependence of the Seebeck coefficient changes with the carrier transmission close to the Fermi level. By changing the molecular orbitals responsible for the electronic properties, an asymmetry of transmission around the Fermi energy (in the energy window $k_{\mathrm{B}} T$ ) leads to electrons migrating to the cold (warm) side, leading to a negative (positive) Seebeck coefficient.
+
+The main assumptions we have tacitly made in order to derive the Mott equation is the neglection of any sort of interaction between the carriers and the thermal vibrations \cite{dubi2011colloquium}. Moreover, the Eq. is derived within the linear response theory, thus assuming a smooth varying density of states and excluding the presence of many-body effects. There are prominent examples for which the Mott formula breaks down such as low-disorder graphene \cite{ghahari2016enhanced} and quantum dots in the Coulomb blocked region \cite{beenakker1992theory}.
+
+In order to quantify the efficiency of a thermoelectric device the three conductances can be combined in the dimensionless figure of merit:
+$$
+    Z T=\frac{S^{2} T \sigma}{\kappa}
+$$
+It is thus essential to maximize the numerator and minimize the denominator for achieving high figure of merits. All the transport coefficients, however, are intimately connected and particularly $\sigma$ and $S$ are mutually contra-indicated, meaning that it is impossible to increase one without decreasing the other.
+
+To a certain extent these peculiarities can be addressed and tackled in nanostructures and one can in principle make two quantities independent \cite{venkatasubramanian2001thin}. As such, $ZT>1$ \cite{fu2015realizing} and greater than two have been observed in $\mathrm{PbTe}_{0.7} \mathrm{~S}_{0.3}$ and SnSe \cite{wu2014broad}.
+
+The figure of merit $ZT$ is also informative for the heat flow across a device in an open circuit configuration. Since no bias current flows, there is a heat flow equal to $-\kappa \Delta T$, which consists of a purely thermal contribution and an electrical contribution due to electrons moving under the influence of the finite electric field created by the thermal gradient $(E \alpha T)$. The figure of merit $Z T$ sets the relative strength between the heat flow caused by the electric field and the purely thermal conductivity, meaning that if $Z T=1$ these components are equal in strength \cite{behnia2015fundamentals}.
+
+Another figure often used to quantify the usefulness of a thermoelectric material as
+a heater or cooler is the power factor given by
+$$
+    \mathcal{P}=S^{2} \sigma .
+$$
+The power factor is proportional to the maximum achievable output power density of a thermoelectric device in the linear regime and can therefore be seen as more meaningful than the figure of merit for unlimited or cost-free heat sources (such as geothermal heat and waste heat from car engines). In addition, it tends to be much easier to probe than the figure of merit, which necessitates a thermal conductance measurement
 
 \section{The Breakdown of Fermi-Liquid Theory}
 \subsection{The Tomonaga-Luttinger Model}

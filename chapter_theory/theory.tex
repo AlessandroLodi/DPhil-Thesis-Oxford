@@ -18,7 +18,7 @@ is the spatial distance that an electron travels before the phase of its wave fu
 Additionally, two characteristic lengths associated with the mean distance traveled after elastic ($l_\textrm{el}$) and inelastic ($l_\textrm{in}$) collisions are also introduced; for inelastic collision, it is convenient to consider the mean distance before losing an amount of energy $k_BT$.
 
 For a metal with carrier concentrations $n \sim 10^{23}$ cm$^{-3}$, $l = 1 - 10$ nm, $\lambda_F = 0.5$ nm, and $L_\phi = 0.5$ \si{\micro\metre}, where $l$ is the mean free path and includes both elastic and inelastic events.
-In comparison, for carrier concentrations $n \sim 10^{11}$ cm$^{-2}$, graphene displays $l = 50$ nm$-3$\footnote[2]{For suspended graphene, $l (\textrm{4 K}) \approx 100$ nm, while Mayorov et al. $l \approx 3$ \si{\micro\metre} at 290 K for graphene sandwiched between two hBN crystals~\cite{mayorov2011micrometer}.}
+In comparison, for carrier concentrations $n \sim 10^{11}$ cm$^{-2}$, graphene displays $l = 50$ nm$-3$\footnote[2]{For suspended graphene, $l (\textrm{4 K}) \simeq 100$ nm, while Mayorov et al. $l \simeq 3$ \si{\micro\metre} at 290 K for graphene sandwiched between two hBN crystals~\cite{mayorov2011micrometer}.}
 \si{\micro\metre}, $\lambda_F = 2\sqrt{\pi/n}$ nm, and $L_\phi = 0.5$ \si{\micro\metre}~\cite{torres2013introduction}, while \gls{MWNT}-\glspl{CNT} $n \sim 10^{11}$ cm$^{-2}$, $l = 1$ \si{\micro\metre}, $\lambda_F = 0.74$ nm, and $L_\phi = 100$ nm~\cite{stojetz2005effect}.
 
 
@@ -30,6 +30,14 @@ In comparison, for carrier concentrations $n \sim 10^{11}$ cm$^{-2}$, graphene d
 electrons, coupled to one or multiple source, drain and gate electrodes (\mccorrect{Figure}).
 While source and drain are coupled both capacitively thorugh the island thanks to tunnel junctions, the gate (or multiple
 gates) is just capacitatively coupled.
+
+\begin{figure}[hbtp]
+    \begin{center}
+        \includegraphics[width=\textwidth]{chapter_theory/figures/set_schematic.png}
+        \caption{Cartoon schematic for a single-electron transistor based on a quantum dot.}
+        \label{fig:theory:excitation_spectrum}
+    \end{center}
+\end{figure}
 
 One way to describe this system is through the constant interaction model, which allows to derive important electrical transport
 information within the \textit{orthodox} Coulomb framework. The assumptions made within this model are the following: all Coulomb interactions,
@@ -95,7 +103,7 @@ The two most noticeable new transport channels available in this regime are elas
 mechanisms involve the simultaneous tunnelling of two electrons (\mccorrect{Figure}). Initially, the \gls{QD} is in a state with an unoccupied excited state still below the electrochemical potential of the leads, in contrast to resonant tunnelling where the excited state is between the source and drain electrochemical potential. When the electron tunnels out of the \gls{QD} onto the drain, the \gls{QD} is left in a virtual state and there are two possibilities for the orbit to be refilled. First, the new electron simultaneously tunnelling in from the source lead occupies the ground state again, therefore leaving the \gls{QD} in exactly the same configuration as before. This is called elastic cotunnelling (maybe \mccorrect{Figure?}). If the new electron, however, tunnels into the excited state, the \gls{QD} has changed its energy and the process is called inelastic cotunnelling (\mccorrect{Figure?}). The electron can subsequently relax into the ground state, rendering the \gls{QD} again in the initial configuration. Importantly, for inelastic cotunnelling to take place, a bias larger than the excitation energy of the dot has to be applied and since the \gls{QD} excitation is created at the expense of the bias applied, electron energy is conserved. Overall, both elastic and inelastic cotunnelling lead to conduction in the blocked Coulomb diamond region.
 
 \subsection{Strong Limit}
-In the strong coupling limit $\Gamma\gg\E_C, E_\textrm{add}(N), k_BT$ In this regime quantum dot and lead's states hybridise, the Coulomb blockade is smeared out by quantum fluctuations of the electric charge, and the main transport mechanism is now played by elastic coherent tunnelling. In this limit, the conductance can be approximated as $G\approx\frac{2e^2}{h}\mathcal{T}(E)$, where $\mathcal{T}(E)$ is the transmission probability for all the conduction channels thorugh the quantum dot evaluated at the Fermi energy. In the case of a single, well-isolated energy level, it is possible to recover the Breit--Wigner model for a single resonance.
+In the strong coupling limit $\Gamma\gg\E_C, E_\textrm{add}(N), k_BT$ In this regime quantum dot and lead's states hybridise, the Coulomb blockade is smeared out by quantum fluctuations of the electric charge, and the main transport mechanism is now played by elastic coherent tunnelling. In this limit, the conductance can be approximated as $G\simeq\frac{2e^2}{h}\mathcal{T}(E)$, where $\mathcal{T}(E)$ is the transmission probability for all the conduction channels thorugh the quantum dot evaluated at the Fermi energy. In the case of a single, well-isolated energy level, it is possible to recover the Breit--Wigner model for a single resonance.
 
 
 \subsection{Landauer Theory}\label{ch:theory:sec:landauer_theory}
@@ -124,7 +132,7 @@ inherent temperature dependence as the energy of the system changes with $T$. An
 approximation for the chemical potential as a function of temperature and energy
 has been developed using the Sommerfeld expansion (cf. Appendix~\ref{app:1-sommerfeld}): since we are interested in low-temperature properties, we will consider only terms up to the second order of Eq.~\ref{app-1:eq:coefficients_sommerfeld}:
 \begin{equation}
-    \mu \approx \epsilon_{F}-\left.\frac{\pi^{2}}{6}\left(k_{B} T\right)^{2} \frac{1}{N\left(\epsilon_{F}\right)} \frac{\partial N(\epsilon)}{\partial \epsilon}\right|_{\epsilon=\epsilon_{F}}
+    \mu \simeq \epsilon_{F}-\left.\frac{\pi^{2}}{6}\left(k_{B} T\right)^{2} \frac{1}{N\left(\epsilon_{F}\right)} \frac{\partial N(\epsilon)}{\partial \epsilon}\right|_{\epsilon=\epsilon_{F}}
 \end{equation}
 As is evident from this equation, the chemical potential decreases as the temperature
 rises, resulting in a potential gradient whenever a temperature gradient is applied.
@@ -215,6 +223,63 @@ $$
     \mathcal{P}=S^{2} \sigma .
 $$
 The power factor is proportional to the maximum achievable output power density of a thermoelectric device in the linear regime and can therefore be seen as more meaningful than the figure of merit for unlimited or cost-free heat sources (such as geothermal heat and waste heat from car engines). In addition, it tends to be much easier to probe than the figure of merit, which necessitates a thermal conductance measurement
+
+\section{Rate-Equation Model}
+
+The rate equation model starts from a kinetic description of the lean--molecule junction and assume the overall current flowing through the molecule uniquely determine by how fast an electrons tunnels in and out from a weakly coupled molecular level \cite{seldenthuis2008vibrational, esposito2010self}. A promising extension of this framework attempts to quantify the quantum mechanical effects of the vibrational \gls{DOF} on the electron transfer rates. Here we will adopt the description reported in references \cite{thomas2019understanding} and \cite{sowa2018beyond, sowa2020beyond} where the electronic degrees of freedom interact with an unstructured environment modelled by a superohmic bath having an exponential cut-off:
+$$
+    \mathcal{J}(\omega)=\frac{\lambda}{2}\frac{\omega^3}{\omega_\textrm{c}}e^{-\omega/\omega_\textrm{c}}
+$$
+where $\lambda$ is the reorganization energy as defined from the Marcus model for electron transfer in solution and $\omega_\textrm{c}$ is a cut-off frequency.
+
+The current through the junction can be written as:
+$$
+    I=|e| \frac{\gamma_\text{ox}^\text{S} \gamma_{\text {red}}^\text{D}-\gamma_{\text {red}}^\text{S} \gamma_\text{ox}^\text{D}}{\gamma_{\text {red}}^\text{S}+\gamma_{\text {red}}^\text{D}+\gamma_{ox}^\text{S}+\gamma_{ox}^\text{D}},
+$$
+
+\begin{figure}[hbtp]
+    \begin{center}
+        \includegraphics[width=\textwidth]{chapter_theory/figures/single_level_model.pdf}
+        \caption{Schematic for a single-level transport model. The single-particle states having energy $\epsilon_0$ and lifetime $\Gamma$ is the closest to the Fermi level of source $\mu_\textrm{S}$ and drain $\mu_\textrm{D}$, and solely contributes to the total current flowing across the junction. $\Gamma_\textrm{L}$ and $\Gamma_\textrm{R}$ are the tunnelling coupling with the left and right electrode, respectively.}
+        \label{fig:theory:single_level_model}
+    \end{center}
+\end{figure}
+
+
+where $\gamma_{\text{red/ox}}^\text{S/D}$ are the electron-transfer rates at each electrode corresponding to a reduction or an oxidation. If one consider the charge transition from $N$ to the $N+1$ charge state, the electron rates are given as follows:
+
+\begin{align}
+    \gamma_{\text{red}}^\text{S,D} & = 2 \frac{\Gamma_\text{S,D}}{\hbar} \int f_\text{S,D}(\epsilon) ~k_\text{red}(\epsilon) d \epsilon,          \\
+    \gamma_\text{ox}^\text{S,D}    & =\frac{\Gamma_\text{S,D}}{\hbar} \int\left[1-f_\text{S,D}(\epsilon)\right]~k_\text{ox}(\epsilon) d \epsilon,
+\end{align}
+
+where $\Gamma_\text{S,D}$ is the electronic coupling between molecule and the electrodes having Fermi-Dirac distributions $f_\text{S,D}(\epsilon)$.
+
+The density of states for the reduced and oxidized might be written as:
+$$
+    k_{\text{red/ox}}(\epsilon)=\frac{1}{\pi} \operatorname{Re} \int_{0}^{\infty} e^{\sigma i(\epsilon-\epsilon_0) t / \hbar} e^{-t / \tau} B(t) d t,
+$$
+where $\sigma=1(-1)$ for reduction (oxidation) process, $\epsilon_0$ is the molecular energy level, $\tau=2 \hbar /\left(\Gamma_{S}+\Gamma_{D}\right)$ is the lifetime of the molecular electronic state and $B(t)$ is the phononic correlation function in time, $t$ :
+$$
+    B(t)=e^{D_{q}(t)} \cdot e^{D_{\text {bath }}(t)},
+$$
+
+where $\sigma=1(-1)$ for reduction (oxidation) process, $\epsilon_0$ is the molecular energy level, $\tau=2 \hbar /\left(\Gamma_{S}+\Gamma_{D}\right)$ is the lifetime of the molecular electronic state. The term written as $B(t)$ is the phononic correlation function $t$ :
+$$
+    B(t)=e^{D_{q}(t)} \cdot e^{D_{\text {bath}}(t)},
+$$
+Here we have written the phononic correlation function $B(t)$ as the product between a single-mode term and a mean-field contribution given by the environment. The two terms might be expressed as follows \cite{todd1994electron}:
+
+\begin{align}
+    D_{q}(t)         & = \left(\frac{g_{q}}{\omega_{q}}\right)\left[\left(\cos \omega_{q} t-1\right) \cdot \operatorname{coth}\left(\frac{\omega_{q}}{2 k_{B} T}\right)-i \sin \left(\omega_{q} t\right)\right], \\
+    D_\text{bath}(t) & = \int \frac{J(\omega)}{\omega^{2}}\left[(\cos \omega t-1) \cdot \operatorname{coth}\left(\frac{\omega}{2 k_{B} T}\right)-i \sin (\omega t)\right] d\omega,
+\end{align}
+
+where $D_{q}$ is the single-mode contribution and $D_\text{bath}$ is the contribution from the superohmic bath. $g_{q}$ is the electron-vibration coupling strength, $\omega$ is the vibron frequency and the spectral density, $J(\omega)$, of the phonon bath with reorganisation energy, $\lambda$, and cut-off frequency, $\omega_{c}$, is
+
+We use this model in Chapter~\ref{ch:solubility} to reproduce the low temperature transport features of a molecular graphene nanoribbon with a strong electron--vibron coupling.
+
+
 
 \section{The Breakdown of Fermi-Liquid Theory}
 \subsection{The Tomonaga-Luttinger Model}

@@ -4,7 +4,7 @@
 
 \section{Introduction}\label{gnrset:sec:intro}
 
-The electron tunnelling in a molecular or solid-state junction depends on both the bias applied and the temperature. Tipically, two regimes are distinguished. At low temperatures the electrons tunnell across the junction independently of the temperature; thus the conductance does not depend on the temperature. If the temperature is increase, the electrons will be preferentially udnergo through a thermally-activated hopping mechanism, resulting in a dependence of the conductance with the temperature. The origin of thermal excitations and their respective role played on the tunnelling proccess remaines largely unexplored in graphene nanostructures.
+The electron tunnelling in a molecular or solid-state junction depends on both the bias applied and the temperature. Tipically, two regimes are distinguished. At low temperatures the electrons tunnel across the junction independently of the temperature. Upon increasing the temperature electrons will be preferentially hop across various electronic states through thermally-activated mechanism, resulting in a temperature dependence of the overall conductance. The origin of thermal excitations and their respective role played on the tunnelling proccess remaines largely unexplored in graphene nanostructures.
 
 Recent experiments on graphene have shown the possibility of using graphene graphenoids (also knows as radicaloids) for quantum information processing~\cite{lombardi2019quantum, lombardi2021synthetic}. The advantage of these systems over molecular counterparts are multiple. Being delocalised molecular structures uniquely based on carbon and hydrogen atoms, the spin-orbit coupling is typically low and isotropic, in the order of a few microvolts. This is one of the factors which determines coherence times in the order of a few tens of microseconds even at temperatures below 100 K. Another robustness factor is that the mechanisms governing the dechorence for the lattice relaxation times are relatively well understood when these molecules are placed in solutions.
 
@@ -18,6 +18,26 @@ In the present chapter, I report, to the best of my knowledge, the first realisa
 
 \Glspl{GNR} were received from the Feng's groups located in Dresden in powders in a sealed vial. Graphene nanostructures powders are notoriously electrostatic and tend to stick along the vials walls. An approximately $1.0 \pm 0.1$ mg of powder was scooped and transffered into a vial with the help of an electrostic gun to ease the remove of residul material on the scoop.
 
+\co{Why we have used the GNR-AOM ribbon}
+Several reasons have motivated us to use this kind of ribbon. Firstly, there has been a lot of effort on the chemistry side to push the synthesise for liquid-processable \glspl{GNR} capable of yielding good dispersions using common organic solventes such as toluene, THF, etc \cite{niu2019synthetic}. The synthesis produces edges prevalently functionalized with bulky three-dimensional side-groups (malimide) that have a diameter of $\simeq$\SI{0.5}{\nano\metre} so they are larger than the typical distance between $\pi$-stacked graphitic layers ($\simeq$\SI{0.3}{\nano\metre}). Moreover the edges carry optically-active anthracene groups which may be used to monitor the dispersion quality with fluorescent spectroscopy.
+
+Secondly, the ribbon's aromatic backbone is $\simeq$\SI{1.1}{\nano\metre} wide. This might be an advantage essentially for two reasons. The first is that the band alignement with the graphene leads should be improved \cite{Bennett2013}. The other reason is the associated bandgap of $Eg \simeq $\SI{1.4}{\electronvolt} will be associated with a reduced effective mass, thus reducing the contribution to the overall conductance from \gls{SB} \cite{tung2014physics}.
+
+\begin{figure}[hbtp]
+  \begin{center}
+    \includegraphics[width=\textwidth]{chapter_gnrset/figures/device_gnr.pdf}
+    \caption{
+      \textbf{(a)} Synthesis of liquid-phase processable graphene nanoribbon. Edge functionalization include maleimide groups, responsible for the high dispersion quality in organic solvents (we have tested THF and toluene), and anthracene groups. Synthetic route details can be found in the literature reported in the main text.
+      \textbf{(b)} False-colour scanning electron microscope image of a typical experimental junction. \textbf{(c)} Cartoon of a possible junction geometry, with the ribbon depicted in white (side groups are omitted for clarity purpose). The schematic circuit diagram indicates which terminal are used to apply gate $V_\textrm{G}$ and d.c. bias $V_\textrm{SD}$ voltages}
+    \label{fig:all_transitions}
+  \end{center}
+\end{figure}
+
+
+
+
+
+\co{How the sample was handled}
 The powder was then dissolved in $10.0 \pm 0.2$ mL of toluene. Initially, it was attempted to solubilise \glspl{GNR} by entirely avoiding sonications. In the literature it has been reported that heavy sonication treatements might damage the tube integratity in carbon nanotubes, resulting in poor electrical conductivity and optical properties~\cite{park2002dispersion, huang2012dispersion, rossell2013impact}. Although similar effects can take place in graphene nanoribbons, the following qualitative arguments were taken into account for the sample preparation.
 After having mechanically agitated the solution over a week, black aggregates identifies as \glspl{GNR} oligomers suspended in solution were visible. In order to overcome stacking energies, a mild sonication treatmenet was evalueated to be the best alternative. In talks with our collaborators, it was discussed that a $\sim$1h is required for graphene nanoribbons decorated with aliphatic alkyl chains along the edges. Surprisingly, \glspl{GNR} decorated with maleimide take approximately 10 minutes at 50 \% of relative sonication power to produce an almost homogenous dispersion visible to the naked eye. These enhanced solubility properties are further analysed and discussed over the next chapters.
 
@@ -90,7 +110,7 @@ The results of the measurement protocol are shown in Fig.~\ref{fig:all_sd}. The 
 \end{figure}
 
 
-Gate voltage outside the shown region resulted in strong leakage currents, likely due to substrate breakdown, possibly caused after the wirebonding process. Therefore, we restricted the measurement range between $\SI{-20}{\V}\le V_\textrm{G}\le\SI{+20}{\V}$. Since outside this range the current will be fully dominated by charges across dioxide substrate, and while formally further charge states could be visible outside the experimental window, it is still correct to assign the region at the left of the leftmost diamond as associated with the neutral state of the graphene nanoribbon; from this, it follows that the diamond located at $V_\textrm{G}\approx\SI{-19}{\V}$ is associated with the charge transition $N \rightarrow N+1$ and the rightmost diamond is associated with the $N+6 \rightarrow N+7$ transition.
+Gate voltage outside the shown region resulted in strong leakage currents, likely due to substrate breakdown, possibly caused after the wirebonding process. Therefore, we restricted the measurement range between $\SI{-20}{\V}\le V_\textrm{G}\le\SI{+20}{\V}$. Since outside this range the current will be fully dominated by charges across dioxide substrate, and while formally further charge states could be visible outside the experimental window, it is still correct to assign the region at the left of the leftmost diamond as associated with the neutral state of the graphene nanoribbon; from this, it follows that the diamond located at $V_\textrm{G}\simeq\SI{-19}{\V}$ is associated with the charge transition $N \rightarrow N+1$ and the rightmost diamond is associated with the $N+6 \rightarrow N+7$ transition.
 
 \begin{figure}
   \begin{center}
@@ -180,9 +200,9 @@ Low temperature data allows also to quantify the coupling between the finite \gl
   G = \frac{2e^2}{h}\qty(\frac{1}{\Gamma^\textrm{S}} + \frac{1}{\Gamma^\textrm{D}})^{-1}\frac{\Gamma/2}{(h\Gamma)^2 + \beta^2(V_\textrm{G}^\textrm{max} - V_\textrm{G})^2}
 \end{equation}
 
-Since the \gls{FWHM} is $\Gamma$ and by approximating $\Gamma\approx\Gamma^\textrm{S}=\Gamma^\textrm{D}$, we find the experimental value for the tunnelling coupling being $\overline{\Gamma}\sim 128 \pm \SI{8}{\micro\eV}$, where the average was calculated across all the distinct charge transitions.
+Since the \gls{FWHM} is $\Gamma$ and by approximating $\Gamma\simeq\Gamma^\textrm{S}=\Gamma^\textrm{D}$, we find the experimental value for the tunnelling coupling being $\overline{\Gamma}\sim 128 \pm \SI{8}{\micro\eV}$, where the average was calculated across all the distinct charge transitions.
 
-Given the graphene electrodes have low electrostatic screening, the main contribution to the total capacitance is given by the capacitive coupling of the \gls{MGNR} to the back gate, so we can approximate $C_\textrm{s}\approx C_\textrm{G}$. By using reported values in the literature~\cite{han2010electron} $C_\textrm{G}\approx \SI{700}{\atto\farad}/\mu\textrm{m}^2$, we estimate \mccorrect{$\Delta E < \SI{100}{\meV}$}.
+Given the graphene electrodes have low electrostatic screening, the main contribution to the total capacitance is given by the capacitive coupling of the \gls{MGNR} to the back gate, so we can approximate $C_\textrm{s}\simeq C_\textrm{G}$. By using reported values in the literature~\cite{han2010electron} $C_\textrm{G}\simeq \SI{700}{\atto\farad}/\mu\textrm{m}^2$, we estimate \mccorrect{$\Delta E < \SI{100}{\meV}$}.
 
 The conductance shows a power-law dependence on $T$, as displayed in Fig.~\ref{fig:power_fit_10mv} where $G_\textrm{max}(T)$ is plotted for the distinct transistion charges. The quantities have been transformed into the respective logarithms, such that the parameter estimation for the power-law is transformed into a much simpler linear regression problem.
 
@@ -209,7 +229,7 @@ regression line ($\sigma^2$), plus the term coming from the uncertainty in where
 
 The height of the diamonds reads the bias voltage necessary to add an electron to the ribbon, which defines an addition energy $E_\textrm{add} = e^2/C_\textrm{s} + \Delta E$, where $\Delta E$ is the energy difference between the energy levels. Energy levels are here associated with the quantum states of the ribbon in its quantum dot configuration. Although the length of a \gls{MGNR} is molecularly defined, its quantum dot configuration depends strongly on the coupling with the leads. Therefore, the $\Delta E$ read from a first-principle calculation and the one measured experimentally may differ significantly. An average $\overline{E_\textrm{add}} =  157.43\pm 5.65$ meV was extracted from the heights of all the six suppressed current regions, which is higher than previosuly reported for room-temperature operating single-electron quantum dots in semiconductors~\cite{zhuang1998silicon} and carbon nanotubes~\cite{postma2001carbon}.
 
-Given the graphene electrodes have low electrostatic screening, the main contribution to the total capacitance is given by the capacitive coupling of the \gls{MGNR} to the back gate, so we can approximate $C_\textrm{s}\approx C_\textrm{G}$. By using reported values in the literature~\cite{han2010electron} $C_\textrm{G}\approx \SI{700}{\atto\farad}/\mu\textrm{m}^2$, we estimate.
+Given the graphene electrodes have low electrostatic screening, the main contribution to the total capacitance is given by the capacitive coupling of the \gls{MGNR} to the back gate, so we can approximate $C_\textrm{s}\simeq C_\textrm{G}$. By using reported values in the literature~\cite{han2010electron} $C_\textrm{G}\simeq \SI{700}{\atto\farad}/\mu\textrm{m}^2$, we estimate.
 
 % \begin{figure}[hbtp]
 %   \begin{center}
@@ -243,7 +263,7 @@ The $G_\text{max}$ associated to the resonances for each charge transition are p
 
 Secondly, by increasing the \gls{GOF} criteria, datapoints following a power-law tend accumulate between the 9--185 K region, in agreement to what it has been observed for intramolecular junctions in \gls{SWNT} and \glspl{CNT} ropes~\cite{yao1999carbon, bockrath1999luttinger}. Therefore, we choose to focus our analysis in this temperature range as the most appropriate to validate or confute the power-law model.
 
-A further potential bias in identify correctly the fitting parameter $alpha$ seems to be the temperature range. By considering the ($\SI{1}{\kelvin} < T < \SI{210}{\kelvin}$) there is  $\approx 20$ percent point decrese in the values extracted compared to the  $\SI{1}{\kelvin} < T < \SI{80}{\kelvin}$ range. Table.~\ref{tab:conductance_exponents_temp} summarises this observation.
+A further potential bias in identify correctly the fitting parameter $alpha$ seems to be the temperature range. By considering the ($\SI{1}{\kelvin} < T < \SI{210}{\kelvin}$) there is  $\simeq 20$ percent point decrese in the values extracted compared to the  $\SI{1}{\kelvin} < T < \SI{80}{\kelvin}$ range. Table.~\ref{tab:conductance_exponents_temp} summarises this observation.
 
 \begin{table}
   \caption{\label{tab:conductance_exponents_temp}

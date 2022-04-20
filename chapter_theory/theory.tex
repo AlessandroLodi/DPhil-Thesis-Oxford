@@ -5,15 +5,10 @@
 The lateral confinement of the carriers makes \glspl{GNR} a quasi-1D system. The \textit{quasi} referes to the fact that the electron is confined across two directions.
 This fact became true not just until recently with the advent of bottom-up techiniques, which are capable synthesising atomically-precise \gls{GNR} with width below 5 nm.
 
+In general, quantum transport phenomena takes place on a mesoscopic scale, that is, when dealing with condensed phase systems, in particular (but not exclusively) those of micro-nano dimensions, for which behaviours not present in macroscopic bodies are observed. The different behaviour of mesoscopic phases compared to macroscopic ones liesin the wavelength nature of electrons.
+When the size of the sample $L$ (which can be different for the three directions in space, $L_x, L_y, L_z$) becomes small compared with the characteristic lengths for the motion of electrons, then the conductivity depends on the size $L$.
 
-In general, quantum transport phenomena takes place on a mesoscopic scale, that is, when dealing with condensed phase systems, in particular (but not exclusively) those of micro-nano dimensions,
-for which behaviours not present in macroscopic bodies are observed.
-The different behaviour of mesoscopic phases compared to macroscopic ones liesin the wavelength nature of electrons.
-When the size of the sample $L$ (which can be different for the three directions in space, $L_x, L_y, L_z$) becomes small compared with the characteristic lengths
-for the motion of electrons, then the conductivity depends on the size $L$.
-
-There are three kinds of relevant characteristic lengths: the Fermi wavelength $\lambda_F = h / \sqrt{2m_eE_F} = 2\pi/k_F$, and the coherence length $L_\phi$, which
-is the spatial distance that an electron travels before the phase of its wave function changes of $2\pi$.
+There are three kinds of relevant characteristic lengths: the Fermi wavelength $\lambda_F = h / \sqrt{2m_eE_F} = 2\pi/k_F$, and the coherence length $L_\phi$, which is the spatial distance that an electron travels before the phase of its wave function changes of $2\pi$.
 
 Additionally, two characteristic lengths associated with the mean distance traveled after elastic ($l_\textrm{el}$) and inelastic ($l_\textrm{in}$) collisions are also introduced; for inelastic collision, it is convenient to consider the mean distance before losing an amount of energy $k_BT$.
 
@@ -27,7 +22,7 @@ In comparison, for carrier concentrations $n \sim 10^{11}$ cm$^{-2}$, graphene d
 \co{Transport Spectroscopy in Quantum Dot}
 
 \Glspl{QD} defined through lithography can be seen as a metallic island filled with
-electrons, coupled to one or multiple source, drain and gate electrodes (\mccorrect{Figure}).
+electrons, coupled to one or multiple source, drain and gate electrodes (Fig.~\ref{fig:theory:set_schematic}).
 While source and drain are coupled both capacitively thorugh the island thanks to tunnel junctions, the gate (or multiple
 gates) is just capacitatively coupled.
 
@@ -35,7 +30,7 @@ gates) is just capacitatively coupled.
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_theory/figures/set_schematic.png}
         \caption{Cartoon schematic for a single-electron transistor based on a quantum dot.}
-        \label{fig:theory:excitation_spectrum}
+        \label{fig:theory:set_schematic}
     \end{center}
 \end{figure}
 
@@ -73,8 +68,8 @@ where $E_\mathrm{C} = e^2/C_\textrm{tot}$ is the charging energy.
 
 \subsection{Weak Limit}
 
-The weak coupling regime is defined in the limit where $\Gamma\ll\E_C, E_\textrm{add}(N), k_BT$, and is dominated by Coulomb blockade. The effect shows most clearly in a charge stability diagram, which is obtained by measuring the gate and bias dependence of the current and then plotting it in a two-dimensional map \mccorrect{Figure}. The Coulomb blockade manifests as diamond shaped regions of very low current, so
-called Coulomb diamonds, in which transport is blocked. In these regions the energy cost to add an electron onto the \gls{QD} exceeds the available energy and therefore no current can flow through the \gls{QD} \mccorrect{Figure}.
+The weak coupling regime is defined in the limit where $\Gamma\ll\E_C, E_\textrm{add}(N), k_BT$, and is dominated by Coulomb blockade. The effect shows most clearly in a charge stability diagram, which is obtained by measuring the gate and bias dependence of the current and then plotting it in a two-dimensional map . The Coulomb blockade manifests as diamond shaped regions of very low current, so
+called Coulomb diamonds, in which transport is blocked. In these regions the energy cost to add an electron onto the \gls{QD} exceeds the available energy and therefore no current can flow through the \gls{QD} .
 
 \begin{figure}[hbtp]
     \begin{center}
@@ -87,20 +82,20 @@ called Coulomb diamonds, in which transport is blocked. In these regions the ene
 \end{figure}
 
 The blockade areas are separated by regions of high current, the Sequential Electron Tunnelling (SET) zones, where current flow through the \gls{QD} is allowed via sequential electron tunnelling. Each Coulomb diamond corresponds to a certain number of electrons N occupying the \gls{QD} where the number of electrons changes sequentially between neighbouring diamonds. When looking closely at the SET regions, often lines running parallel to the edges
-of the Coulomb diamonds can be observed. These originate from orbital excited states, spin states or vibrational states, which will be discussed later. These states are able to contribute to the current flow through the \gls{QD} if their energy levels are reached by applying a higher bias voltage \mccorrect{Figure}. Such excited or vibrational states can yield information about the \gls{QD}’s energy spectrum and are especially helpful when attempting to identify specific molecules as each molecule has a distinctive vibrational fingerprint.
+of the Coulomb diamonds can be observed. These originate from orbital excited states, spin states or vibrational states, which will be discussed later. These states are able to contribute to the current flow through the \gls{QD} if their energy levels are reached by applying a higher bias voltage . Such excited or vibrational states can yield information about the \gls{QD}’s energy spectrum and are especially helpful when attempting to identify specific molecules as each molecule has a distinctive vibrational fingerprint.
 
-Furthermore, the height of the Coulomb diamond in the stability diagram is equal to the addition energy of the \gls{QD} or molecule \mccorrect{Figure}.
+Furthermore, the height of the Coulomb diamond in the stability diagram is equal to the addition energy of the \gls{QD} or molecule .
 While it is possible to readily read out the addition energy and the energy of excited states, it is very challenging or almost impossible to infer the charge state of the \gls{QD}, that is the number of electrons on the dot, from the stability diagram. Since the \gls{QD}
 is part of the device and therefore a larger system, the neutral charge state can be deceiving when only considering the dot itself. Assuming the \gls{QD} is at no applied bias and no gate voltage and therefore seemingly in the neutral charge state, it might still be partially charged due to interactions with the junction or background charges in the substrate (cf. Eq.~\ref{ch:theory:eq:total_dot_energy}).
 
-One can correlate the stability diagram or a gate sweep measuring the conductance or current through the quantum dot to the different level alignments of the contacts and the dot orbitals \mccorrect{Figure}. When the electrochemical potential of the source and drain is aligned with an energy level of the dot, transport through it is allowed and results in a current peak in the gate trace. The corresponding transport mechanism is called resonant tunnelling. While the levels are aligned the number of electrons on the dot fluctuates between $N$ or $N+1$ as electrons hop on and off the dot. In between the peaks the electrochemical potentials are not aligned, so there is no resonant tunnelling due to Coulomb blockade, and the number of electrons on the dot is fixed. Additionally, various capacitances between the \gls{QD} and the contacts as well as
+One can correlate the stability diagram or a gate sweep measuring the conductance or current through the quantum dot to the different level alignments of the contacts and the dot orbitals . When the electrochemical potential of the source and drain is aligned with an energy level of the dot, transport through it is allowed and results in a current peak in the gate trace. The corresponding transport mechanism is called resonant tunnelling. While the levels are aligned the number of electrons on the dot fluctuates between $N$ or $N+1$ as electrons hop on and off the dot. In between the peaks the electrochemical potentials are not aligned, so there is no resonant tunnelling due to Coulomb blockade, and the number of electrons on the dot is fixed. Additionally, various capacitances between the \gls{QD} and the contacts as well as
 the gate lever arm (or gate coupling parameter) can be extracted from the slopes of the diamonds as the negative slope and positive slope are equal to $-\abs{e}C_\mathrm{G}/(C - C_\mathrm{S})$ and $\abs{e}C_\mathrm{G}/C_\mathrm{S}$, respectively. Since the gate lever arm is given by $\alpha = C_\mathrm{G}/C$ one can thereby quantify the strength of the gate coupling.
 
 \subsection{Intermediate Limit}
 Lastly, the intermediate coupling regime has attributes of both limits, it still exhibits
 a noticeable Coulomb blockade, but also shows transport within the zero current region.
 The two most noticeable new transport channels available in this regime are elastic and inelastic cotunnelling: these higher-order transport
-mechanisms involve the simultaneous tunnelling of two electrons (\mccorrect{Figure}). Initially, the \gls{QD} is in a state with an unoccupied excited state still below the electrochemical potential of the leads, in contrast to resonant tunnelling where the excited state is between the source and drain electrochemical potential. When the electron tunnels out of the \gls{QD} onto the drain, the \gls{QD} is left in a virtual state and there are two possibilities for the orbit to be refilled. First, the new electron simultaneously tunnelling in from the source lead occupies the ground state again, therefore leaving the \gls{QD} in exactly the same configuration as before. This is called elastic cotunnelling (maybe \mccorrect{Figure?}). If the new electron, however, tunnels into the excited state, the \gls{QD} has changed its energy and the process is called inelastic cotunnelling (\mccorrect{Figure?}). The electron can subsequently relax into the ground state, rendering the \gls{QD} again in the initial configuration. Importantly, for inelastic cotunnelling to take place, a bias larger than the excitation energy of the dot has to be applied and since the \gls{QD} excitation is created at the expense of the bias applied, electron energy is conserved. Overall, both elastic and inelastic cotunnelling lead to conduction in the blocked Coulomb diamond region.
+mechanisms involve the simultaneous tunnelling of two electrons. Initially, the \gls{QD} is in a state with an unoccupied excited state still below the electrochemical potential of the leads, in contrast to resonant tunnelling where the excited state is between the source and drain electrochemical potential. When the electron tunnels out of the \gls{QD} onto the drain, the \gls{QD} is left in a virtual state and there are two possibilities for the orbit to be refilled. First, the new electron simultaneously tunnelling in from the source lead occupies the ground state again, therefore leaving the \gls{QD} in exactly the same configuration as before. This is called elastic cotunnelling. If the new electron, however, tunnels into the excited state, the \gls{QD} has changed its energy and the process is called inelastic cotunnelling. The electron can subsequently relax into the ground state, rendering the \gls{QD} again in the initial configuration. Importantly, for inelastic cotunnelling to take place, a bias larger than the excitation energy of the dot has to be applied and since the \gls{QD} excitation is created at the expense of the bias applied, electron energy is conserved. Overall, both elastic and inelastic cotunnelling lead to conduction in the blocked Coulomb diamond region.
 
 \subsection{Strong Limit}
 In the strong coupling limit $\Gamma\gg\E_C, E_\textrm{add}(N), k_BT$ In this regime quantum dot and lead's states hybridise, the Coulomb blockade is smeared out by quantum fluctuations of the electric charge, and the main transport mechanism is now played by elastic coherent tunnelling. In this limit, the conductance can be approximated as $G\simeq\frac{2e^2}{h}\mathcal{T}(E)$, where $\mathcal{T}(E)$ is the transmission probability for all the conduction channels thorugh the quantum dot evaluated at the Fermi energy. In the case of a single, well-isolated energy level, it is possible to recover the Breit--Wigner model for a single resonance.
@@ -224,9 +219,9 @@ $$
 $$
 The power factor is proportional to the maximum achievable output power density of a thermoelectric device in the linear regime and can therefore be seen as more meaningful than the figure of merit for unlimited or cost-free heat sources (such as geothermal heat and waste heat from car engines). In addition, it tends to be much easier to probe than the figure of merit, which necessitates a thermal conductance measurement
 
-\section{Rate-Equation Model}
+\section{Accounting of Vibrational Coupling: the Rate-Equation Model}
 
-The rate equation model starts from a kinetic description of the lean--molecule junction and assume the overall current flowing through the molecule uniquely determine by how fast an electrons tunnels in and out from a weakly coupled molecular level \cite{seldenthuis2008vibrational, esposito2010self}. A promising extension of this framework attempts to quantify the quantum mechanical effects of the vibrational \gls{DOF} on the electron transfer rates. Here we will adopt the description reported in references \cite{thomas2019understanding} and \cite{sowa2018beyond, sowa2020beyond} where the electronic degrees of freedom interact with an unstructured environment modelled by a superohmic bath having an exponential cut-off:
+The rate equation model starts from a kinetic description of the electrode--molecule junction and assumes the overall current flowing through the molecule uniquely determine by how fast an electrons tunnels in and out from a weakly coupled molecular level \cite{seldenthuis2008vibrational, esposito2010self}. A promising extension of this framework attempts to quantify the quantum mechanical effects of the vibrational \gls{DOF} on the electron transfer rates. Here we will adopt the description reported in references \cite{thomas2019understanding} and \cite{sowa2018beyond, sowa2020beyond} where the electronic degrees of freedom interact with an unstructured environment modelled by a superohmic bath having an exponential cut-off:
 $$
     \mathcal{J}(\omega)=\frac{\lambda}{2}\frac{\omega^3}{\omega_\textrm{c}}e^{-\omega/\omega_\textrm{c}}
 $$
@@ -344,6 +339,11 @@ Firstly, for a system arranged in a linear chain fashion, only collective excita
 All these conditions break down for quantum systems in 1D because the one dimensionality introduces first strong quantum fluctuations that destroys the mean phase of your systems (for example in mean field theories one has $\psi = \abs{\psi} e^{i\phi}$ and you replace the phase $\phi$ with an averaged one).
 
 \subsection{A Zest of the Tomonaga-Luttinger Model}
+
+Several peculiarities encompass one-dimensional systems. As already mentioned, 1D excitations for an interacting fermionic systems are hydrodynamic-like modes--similar to sound waves--which are split into charge- and spin-density waves \cite{giamarchi2016one}. The absence of an efficient charge screening leads to long-range interactions, which cause strong correlations and the break down of an independent particle description. These presence of such strong correlations are the main reason why in one-dimensional systems one is required to compute correlation functions for calculating quantity of interest. From here, the wide employment of Green's functions (propagators).
+
+One consequence of these characteristics is that--very conveniently-- in 1D systems it is often sufficient to conduct an asymptotic analysis for cahracterising your system. In particular, one has to provide the wave velocity $u$ and the interaction parameter $K$ (also called $g$), which is a dimensionless number which controls the decay of all the correlation functions as well as the thermodynamic quantities \cite{cazalilla2011one}.
+
 The first model proposed in 1950 by Tomonaga aimed to describe the multi-fermionic ground state of an interacting Fermi gas and its excitations by treating them as solutions to field equations describing sound waves, which are bosonic \cite{tomonaga1950remarks}. The model was later extended by Luttinger in 1963 in an attempt to include arbitrary interaction strengths and range (short and long) \cite{luttinger1963exactly}. The correct solution was firstly advanced by Mattis and Lieb in 1965 \cite{mattis1994exact} and finalised by a genial intuition from Haldane in 1981 \cite{haldane1981luttinger}.
 
 A central tool required to arrive to Haldane's solution is bosonisation, a mathematical technique which maps the excitation of fermions to bosonic modes of spin-density and charge-density waves and which prerequisite is the possibility of linearise the  single-particle (fermionic) dispersion close to the Fermi level \cite{von1998bosonization}.
@@ -393,8 +393,6 @@ The interaction might then be written as:
 
 As illustrated in Fig.~\ref{fig:theory:excitation_spectrum}, since $k$ and $k-q$ are restricted to be close the two points at $\pm k_F$, there are only two possible value of $q$ depending on the sign of $k$ and $k-q$. When $k$ and $k-q$ have the same sign, $\abs{q}\sim 0$. This corresponds to a scattering term for fermions moving in the same direction and might be interpreted as a \textit{forward scattering}. When $k$ and $k-q$ have opposite sign, $\abs{q}\sim 2k_F$, meaning that in this excitation fermions exchange side (\textit{backward scattering}).
 
-The problem with the term in Eq.~\ref{eq:theory:lutt_int} is being the product between two density operators, when these are expressed in the fermion operator basis, these will expand to be a quartic function of the fermion operators. Problems then arises as it is not trivial to diagonalise a quartic hamiltonian. The genial intuition we were reffering to played by Haldane \cite{haldane1981luttinger} was to map the problem through a change of the basis into the bosonic operator world, where the interaction is reduced to a quadratic form, hence a closed-form solution is attainable. This process will be briefly outlined in the next section when I will derive the tunnelling density of states in case for a fermion tunneling thorugh a Luttinger liquid.
-
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_theory/figures/excitation_spectrum_1D_fermions.pdf}
@@ -403,23 +401,7 @@ The problem with the term in Eq.~\ref{eq:theory:lutt_int} is being the product b
     \end{center}
 \end{figure}
 
-Individual excitations do not exist
-Description of fermionic systems (interacting electrons) in terms of Landau quasiparticles fails
-Main characterstics:
-1) collective excitations: excitations in a 1D interacting fermionic systems are hydrodynamic-like modes, such as sound waves, and are split into charge- and spin- density waves. The mathematical technique which maps the exciations of fermions to bosonic modes of spin-density and/or charge-density waves is called bosonization, and it assumes it is possible to approximate the fermionic single-particle dispersion as a linear function in some coordiante space. These are characterised by a velocity u which, in the non-interacting case, corresponds to the Fermi velocity
-
-
-
-2) quasi-long-range order
-what are they? quasi-long-range order means that there are (quantum) fluctuations in the system even at zero temperatures that prevent the breaking of continuous symmetry, with power-law-decreasing correlation functions
-
-correlation functions for an antiferromagnetic spin chain with anisotropy between the z axis and xy plane.
-
-3) it is essential to consider asymptotic analysis for one dimencional systems. Asymptotic properties are the ones for large distances and/or large time differences. Very conveniently, in 1d world it is often sufficient to provide the velocity u and the interaction parameter K (often called g), which is a dimensionless number which controls the decay of all the correlation functions, as well as the thermodynamic quantities.
-
-4) Fractionalization of excitations: need to review this, havent gotten much
-
-5) Non-local order parameters: if you take the spinon picture should be (?) obvious that there are non-local orders and are typically topological. These orders are notoriously difficult to determine as if they are non-local we usually probe them with local probes (STM, other crap), but there are novel systems which allow us to probe such properties.
+The problem with the term in Eq.~\ref{eq:theory:lutt_int} is being the product between two density operators, when these are expressed in the fermion operator basis, these will expand to be a quartic function of the fermion operators. Problems then arises as it is not trivial to diagonalise a quartic hamiltonian. The genial intuition we were reffering to played by Haldane \cite{haldane1981luttinger} was to map the problem through a change of the basis into the bosonic operator world, where the interaction is reduced to a quadratic form, hence a closed-form solution is attainable. This process will be briefly outlined in the next section when I will derive the tunnelling density of states in case for a fermion tunneling thorugh a Luttinger liquid.
 
 
 

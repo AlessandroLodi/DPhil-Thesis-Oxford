@@ -2,9 +2,30 @@
 
 \minitoc
 
-\section{Room Temperature DC Measurements}
+\section{Room Temperature Overview Setup}
 
-Describe here the probe station setup
+During my thesis, a great effort was dedicated to the study of graphene-based single-molecule transistors when graphene nanoribbons or $\pi$-extended bridges the two leads. Towards this goal and in order to stay within the coherent transport regime, nanometer graphene junctions were routinely prepared. Whilst I have used protocols from the literature, I improved an easy to use python library written on legacy code by Dr.\ Bart Limburg and Dr.\ James Thomas.
+
+\co{Cascade Probe Station}
+Electrical measurements at room temperature are performed on a fully automated Cascade Summit\textsuperscript{TM} 12000 M probe station, fitting three micro-manipulators. Copper beryllium straight probe tip by Lambda photometrics (tip diameter = \SI{25}{\micro\metre}, length = \SI{30}{\milli\metre}) were used for contacting Au (source/drain) pads, Tungesten probes (tip diameter = \SI{10}{\micro\metre}, length = \SI{30}{\milli\metre}) for HfO$_2$ (local) pads. These in fact tends to abdrade the gold pads surface, compromising the electrical contact. Ensuring a good electrical contact can be an issue when an automated program is left running. I therefore opted to work with sixth of a chip instead of the processing an whole chip entirely.
+
+Since I could not upgrade the Cascade software due to licensing, I had to keep the operating system to the its compatible version with the Cascade software (Windows XP). This posed several limitations in improving the system, complicated by the fact that legacy code written for the instrumentation was written with a python 2.7 version leveraging an outdated acquisition framework (QTLab, \cite{qtlab2013}). Nowadays, a more stable and powerful option is the measurement framework QCoDeS, which can be found at the respective GitHub repo.
+
+\begin{figure}[hbtp]
+    \begin{center}
+        \includegraphics[width=\textwidth]{chapter_fabrication/figures/probe_station_setup.pdf}
+        \caption{\textbf{a,} Probe Station setup. In \textbf{b,} the ADwin-Gold II, current amplifier and respective connection for a standard 3T measurement.}
+        \label{fig:exp:hallbar}
+    \end{center}
+\end{figure}
+
+\co{Femto Amplifier}
+Typically, current values for quantum devices are in the range between couple of pA up to hundreds of pA. In order to detect these low current values with acceptable accuracy, a low-noise current amplifier is used to detect current values in the range from sub pA to mA: it has an internal low-pass-filter (LPF) about 10 Hz in order to eliminate wide band noise for low-frequency applications, and at the highest trans-impedance gain settable ($10^{11}$ V/A) it provides a 3 dB bandwidth of 1.1 kHz. If the gain is not setup correctly, the amplifier will go into overload, thereby stopping the flow of additional current. Measurable currents depend on the gain settings: At $10^9$ of gain, the femto passes a maximum of 10 nA (and output 10 V); at a gain of $10^3$, it provides a maximum of 10 mA (and output 10 V).
+
+\co{Adwin-Gold II}
+Fast and accurate operation of measurement data acquisition and automation tasks are done by the DAC, model Adwin-Gold II. The system is equipped with 16 analog inputs, 2 analog outputs, 32 digital inputs / outputs, a maximum output voltage range of $\pm$\SI{10}{\volt} with a 16-bit resolution. The built-in timer has a resolution of 3.3 ns, which are required for ramping back the voltage during the feedback electroburning program. At the beginning of my project I have used mainly backgate device, meaning that the gate voltage was applied through the metallic plate. Since the maximum output voltage from the ADwin is of , a voltage multiplier designed by Dr. Limburg and assembled at the Department of Chemistry in Oxford was used to operate increse the output voltage up to $\pm$\SI{12}{\volt}.
+
+
 
 \section{Hallbar Measurements}
 Devices used for magnetometry were fabricated by Dr. Alex Gee (Fig.\ref{fig:exp:hallbar}).
@@ -21,7 +42,8 @@ Devices used for magnetometry were fabricated by Dr. Alex Gee (Fig.\ref{fig:exp:
 \section{Cryogenic DC Measurements}
 
 \subsection{Temperature-dependent Protocol}
-Dilution refrigerators work very well in the cryogenic temperature range but it is also possible to control the temperature thanks to the heaters. In order to measure reliably up to room temperatuer, however, one must ensures that the temperature drift is ideally slower than the time taken to acquire experimental measurements. Since there is no well-defined experimental procedure for doing so, a workaround which leverages Triton system was found and used in this thesis.
+
+Dilution refrigerators are suited for cryogenic operations although it is possible to operate at higher temperature by working with still and mixing chamber heaters. In order to measure reliably up to room temperatuer, however, one must ensures that the temperature drift is ideally slower than the time taken to acquire experimental measurements. Since there is no well-defined experimental procedure for doing so, a workaround which leverages the Triton system was found in this thesis.
 
 Triton heaters are capable to control the temperature precisely from base temperature ($\sim$ 25 mK) up to 30 K. In order to stabilise the temperature above this range, one has to generate a thermal link between the sample and the environment. First the heaters (mixing chamber and still, see Ch.~\ref{ch:theory}) are switched off: this enables main heat sources to be excluded from exchanging thermal energy with the sample inside the mixing chamber. Being the mixing chamber very well thermally isolated, the temperature will start raising very slowly: to give a reference number, $\sim$24h after the heaters were switched off the temperature rose by only 2 K. The pre-cooling loop is then filled with the He3/He4 mixture, creating a thermal link between the various stages within the dilution refrigerator and the mixing chamber. This results in a faster heating rate, but slow enough to allow to take quick measurements such as $I-V_\textrm{SD}$ and $I-V_\textrm{G}$ traces.
 

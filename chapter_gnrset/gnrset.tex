@@ -148,18 +148,15 @@ how to initially process and test these ideas. The scheme is roughtly the follow
 Remember to also include the part at negative voltage: this assumption you make it that for a single electron transistor strictly speaking what you have at negative polarities
 is also what you have at positive polarities, so no surprises on that side. you then extract a number of signals which number is suited for the statistics say for example 5. I am not sure how to justify at the moment the minimum number of signals i have to extract in order to be statsitically relevant. Then, you slice the signals into subdomain based on the peaks position and amplitude you find at low temperatue, which represents your model (or ground truth). Once you done that, you then count how many times the signal in that portion of the spectrum passes a certain criteria. the easiest option to define such a criteria would be to define a threshold based on some theory, for example i know that a gaussian noise if I'm higher than the variance of its power spectrum thatn I can consider that I signal, everything else would be considere as noise. Once you done then you bin the results for each interval and you look at how many times for each subdomain you have in the traces you have sampled a peak or a valley. if it's a peak you add one to the corresponding bin, if it's zero you simply add nothing. Eventually you reconstruct an histogram which tells you what is the frequency of an event occuring at that particular energy/gate voltage.
 
-\clearpage
-\vspace*{\fill}
-\begin{figure}[htp]
-  \centering
-  \includegraphics[width=\textwidth]{chapter_gnrset/figures/comparison_low_high.png}
-  \caption{
-    \textbf{(a)} Room temperature stability diagram. Black lines are the countour lines of low tremperatures diamonds superimposed at the same gate voltage. Clearly, thermal broadening plays blurs the diamond shape so they may regarded exclusively as a guide to eyes. Green horizontal lines identify gate trace cuts at different gate voltages. The acquisition scan rate for this diagram was 10 MS/s, which enables detection of fast charging events.
-    \textbf{(b)} Traces extracted at different biases. Grey bands overalapped over the individual traces are the Coulomb diamond widths at that respective bias. The number of time one of this band is superimposed with a peak may assign to an actual signal rather than background noise. }
-  \label{fig:comparison_low_high}
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.8\textwidth, height=0.8\textheight]{chapter_gnrset/figures/comparison_rt_traces.pdf}
+    \caption{
+      \textbf{(a)} Room temperature stability diagram. Black lines are the countour lines of low tremperatures diamonds superimposed at the same gate voltage. Clearly, thermal broadening plays blurs the diamond shape so they may regarded exclusively as a guide to eyes. Green horizontal lines identify gate trace cuts at different gate voltages. The acquisition scan rate for this diagram was 10 MS/s, which enables detection of fast charging events.
+      \textbf{(b)} Traces extracted at different biases. Grey bands overalapped over the individual traces are the Coulomb diamond widths at that respective bias. The number of time one of this band is superimposed with a peak may assign to an actual signal rather than background noise. }
+    \label{fig:comparison_low_high}
+  \end{center}
 \end{figure}
-\vspace*{\fill}
-\clearpage
 
 Fig.~\ref{fig:waterfall} depicts a set of $I-V_\textrm{G}$ curves measured on the same sample at different temperatures at different bias voltages. From low temperature data, it possible to estimate the lever arms associated with the various charge states: these quantify by how much in units of meV it is possible to change the chemical potential of the various molecular/quantum dot levels of  by varying the gate potential by a quantity in units of V, $\beta|e| V_\textrm{G}=$ $|e| V_\textrm{SD}$, with $\beta$ being the lever arm as defined $\beta=1 /\left(\left|\alpha_\textrm{+}\right|^{-1}+\left|\alpha_\textrm{-}\right|^{-1}\right)$, from the slopes of the diamond edges~\cite{cuevas2010molecular}; $\alpha_\textrm{-}=-|e| C_\textrm{g} /\left(C-C_\textrm{s}\right)$ and $\alpha_\textrm{+}=|e| C_\textrm{g} / C_\textrm{s}$ are the negative and positive slopes of each diamonds, respectively, and $C_\textrm{s}$ is the total capacitance calcualted according the constant interaction model (see Ch.~\ref{ch:theory}).
 

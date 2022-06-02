@@ -8,7 +8,7 @@ In this thesis, a great effort was dedicated to the study of graphene-based sing
 Towards this goal and in order to stay within the coherent transport regime, nanometer graphene junctions had to be prepared. Whilst I have used protocols from the literature, I improved an easy to use python library written on legacy code by Dr.\ Bart Limburg and Dr.\ James Thomas.
 
 \co{Cascade Probe Station}
-Electrical measurements at room temperature are performed on a fully automated Cascade Summit\textsuperscript{TM} 12000 M probe station, fitting three micro-manipulators. Copper beryllium straight probe tip by Lambda photometrics (tip diameter = \SI{25}{\micro\metre}, length = \SI{30}{\milli\metre}) were used for contacting Au (source/drain) pads, Tungesten probes (tip diameter = \SI{10}{\micro\metre}, length = \SI{30}{\milli\metre}) for HfO$_2$ (local) pads. These in fact tends to abdrade the gold pads surface, compromising the electrical contact. Ensuring a good electrical contact can be an issue when an automated program is left running. I therefore opted to work with sixth of a chip instead of the processing an whole chip entirely.
+Electrical measurements at room temperature are performed on a fully automated Cascade Summit\textsuperscript{TM} 12000 M probe station, fitting three micro-manipulators. Copper beryllium straight probe tip by Lambda photometrics (tip diameter = \SI{25}{\micro\metre}, length = \SI{30}{\milli\metre}) were used for contacting Au (source/drain) pads, Tungesten probes (tip diameter = \SI{10}{\micro\metre}, length = \SI{30}{\milli\metre}) for HfO$_2$ (local) pads. These in fact tends to abdrade the gold pads surface, compromising the electrical contact. Ensuring a good electrical contact can be an issue when an automated program is left running. I therefore opted to work with sixth of a chip instead of working at whole-chip scale.
 
 Since I could not upgrade the Cascade software due to licensing, I had to keep the operating system to the its compatible version with the Cascade software (Windows XP). This posed several limitations in improving the system, complicated by the fact that legacy code written for the instrumentation was written with a python 2.7 version leveraging an outdated acquisition framework (QTLab, \cite{qtlab2013}). Nowadays, a more stable and powerful option would be the measurement framework QCoDeS, which can be found at the respective GitHub repository.
 
@@ -21,16 +21,71 @@ Since I could not upgrade the Cascade software due to licensing, I had to keep t
 \end{figure}
 
 \co{Femto Amplifier}
-Typically, current values for quantum devices are in the range between couple of pA up to hundreds of pA. In order to detect these low current values with acceptable accuracy, a low-noise current amplifier is used to detect current values in the range from sub pA to mA: it has an internal low-pass-filter (LPF) about 10 Hz in order to eliminate wide band noise for low-frequency applications, and at the highest trans-impedance gain settable ($10^{11}$ V/A) it provides a 3 dB bandwidth of 1.1 kHz. If the gain is not setup correctly, the amplifier will go into overload, thereby stopping the flow of additional current. Measurable currents depend on the gain settings: At $10^9$ of gain, the femto passes a maximum of 10 nA (and output 10 V); at a gain of $10^3$, it provides a maximum of 10 mA (and output 10 V).
+Typically, current values for quantum devices are in the pA-nA range. In order to detect such current with acceptable accuracy, a low-noise current amplifier with adjustable gain was used. Filters bandwidth of the amplifier varies according to the gain settings and work exclusively on the pure analog signal: the internal low-pass-filter (LPF) is about 10 Hz in order to eliminate wide band noise for low-frequency applications, and at the highest trans-impedance gain settable ($10^{11}$ V/A) it provides a 3 dB bandwidth of 1.1 kHz. If the gain is not setup correctly, the amplifier will go into overload, thereby stopping the flow of additional current.
 
 \co{Adwin-Gold II}
-Fast and accurate operation of measurement data acquisition and automation tasks are done by the DAC, model Adwin-Gold II. The system is equipped with 16 analog inputs, 2 analog outputs, 32 digital I/O, a maximum output voltage range of $\pm$\SI{10}{\volt} with a 16-bit resolution. The built-in timer has a resolution of 3.3 ns, which are required for ramping back the voltage during the feedback electroburning program. At the beginning of my project I have used mainly backgate device, meaning that the gate voltage was applied through the metallic plate. Since the maximum output voltage from the ADwin is of , a voltage multiplier designed by Dr. Limburg and assembled at the Department of Chemistry in Oxford was used to operate increse the output voltage up to $\pm$\SI{12}{\volt}.
+Fast and accurate operation of measurement data acquisition and automation tasks are done by the DAC, model Adwin-Gold II. The system is equipped with 16 analog inputs, 2 analog outputs, 32 digital I/O, a maximum output voltage range of $\pm$\SI{10}{\volt} with a 16-bit resolution. The built-in timer has a resolution of 3.3 ns, which are required for ramping back the voltage during the feedback electroburning program. The input datastream was sampled with a constant sampling rate of \SI{300}{\mega\hertz\per\second}.
 
-\subsection{Fabrication of Graphene Nanogaps}
+\section{Sample Fabrication}
 
 While carbon chemistry is useful in the formation and manipulation of molecular devices, it also extends to local contaminants and defects. Defects are common in \gls{CVD} graphene, and additional chemical contaminants are introduced during the transfer onto desired substrates and subsequent lithographic patterning into desired shapes. Because of the $sp^2$ covalent network of bonds between carbon atoms, electroburning does not occur through the migration of single atoms as in gold electromigrated junctions \cite{houck2005kondo, hoffmann2008conductance}, but rather through more drastic chemical changes in which the end structure may differ significantly from the initial structure. As a result--in comparison to metallic nanogaps--control over and knowledge of the final atomic structure of graphene nanogaps is poor, and the relationship between this structure and the device's electrical transport properties largely remains unknown.
 
-\subsubsection{Formation Mechanism}
+\subsection{Substrate and Contact Patterning}
+
+All devices have a Si/SiO$_2$ substrate with a \SI{300}{\nano\metre} thick oxide layer. The substrate is purchased as a 3 inches wafer and then cut into \SI{1}{\centi\metre\squared} pieces. As several equipments used in the fabrication process  imposes dimension constraints, the small chip sizes are required.
+
+After dicing the wafer into 1 by 1 cm$^2$ chip pieces, these were firstly sonicated in an Acetone, then transferred into  isopropanol (IPA) for a second sonication step, each lasting 5 minutes. A further 10-minute long step in the oxygen plasma at 100\% power with 25 sccm of gas flow (HPT-100 by Henniker Plasma) was carried out based on the level of contamination addressed via visual inspection. An almost all circumstances this step was deemed necessary.
+
+After thoroughly cleaning the chips, they can be prepared for the next step in the fabrication, Electron Beam Lithography (EBL) patterning, which requires a photosensitive resist Fig.~\ref{fig:exp:chip_fabrication}(Figure 4.1a,b).
+
+\co{this is for graphene patterning to be mention when we were doing that stupid treatment of graphene wet-transferring. To further reduce the number of chip wasted and depending on the perceived contamination of the wafer and the eventual measurement planned the chips are then immersed in a piranha solution (sulfuric acid (H2SO4) and hydrogen peroxide (H2O2) in a 3:1 ratio) for 10 minutes to remove any organic residues}
+
+\begin{figure}[hbtp]
+    \begin{center}
+        \includegraphics[width=\textwidth]{chapter_fabrication/figures/patterning_1.png}
+        \caption{
+            Schematic of Metal Deposition. \textbf{a)} The first photoresist covers the SiO$_2$ substrate. \textbf{b)} A second layer of photoresist is applied. \textbf{c)} Exposure to EBL with secondary electron scattering from the substrate. \textbf{d)} Development of the resist, resulting in an undercut. \textbf{e)} Metal deposition using a thermal evaporator. \textbf{f)} Lift-off aided by the undercut, with the final metal structure remaining on the substrate.}
+        \label{fig:exp:chip_fabrication}
+    \end{center}
+\end{figure}
+
+Spin coating, in which the chip is mounted on a spinning disc via a vacuum chuck, is used to ensure a uniformly coated chip with a constant-height resist layer free of foreign particles or air bubbles. The thickness of the film is determined by the resist composition, evaporation rate, and spinning speed. The thickness is usually proportional to the inverse square root of the spin speed. After pipetting the resist onto the chip, it is spun slowly (at 1000 revolutions per minute) for ten seconds during the ramping stage to spread the resist evenly and remove excess solvent, and then it is spun at 3000 revolutions per minute for 60 seconds to achieve the desired resist thickness. After spinning the resist, the final step in preparing the chips for lithography is to bake it. This is done at a temperature above the resist's glass transition point, in this case 180 °C, so that the resist begins to flow again, ensuring a uniform thickness covering the entire chip. Furthermore, the baking process will evaporate any remaining solvent in the resist. The chip can now be further processed using EBL, or if another layer of resist is required, the photoresist application process can be repeated. Different photoresists are chosen depending on the application and desired patterning procedure, with two main groups of resist used in EBL: positive and negative resist. We use PMMA, a positive resist, when attempting to deposit a metal layer. In a positive resist, the area exposed by the EBL is washed away during development, so this is where the subsequent etching process/metal deposition occurs (see Figure 4.1). The other type of resist used is negative resist, which retains the exposed area and can be used as an etch mask (see Figure 4.2; we will use this resist later to define the graphene pattern).
+
+\subsection{Graphene Preparation and Wet Transferring}
+Given the expertise of past group members, I initially decided to use the wet transferring technique for putting graphene on top of silicon substrates. This procedure, however, led to many challenges for the production of good quality \glspl{GNG}. Firstly, all the recipe produced by previous member showed little or no robustness. An ideal fabrication recipe is such that the fabrication outcome does not largely depend on small variations within the fabrication process. I have tested several recipes and all of them had problems. Here below I detail the steps for the recipe I have optimised in collaboration with Dr\.~John Cully.
+\begin{enumerate}
+    \item A $10\times10 \mathrm{~mm}$ piece of graphene is manually cut from a 6 inch sheet of CVD graphene, purchased from Graphenea, which is backed with copper foil and coated with a thin protective layer of PMMA on top. The layer thickness we found to work best for our application (i.e. less level of graphene surface contamination) was \SI{300}{\nano\metre}
+    \item The graphene pieces are placed into an oxygen plasma cleaner copper side up and etched at $50 \%$ power for 60 s with 25 sccm of oxygen to remove residual backside graphene.
+    \item A $0.4 \mathrm{M}$ solution of ammonium persulfate (APS) in deionised water is prepared in a clean beaker and sonicated to remove any air bubbles.
+    \item The graphene pieces are floated on top of the APS solution copper side down and left overnight for the copper to dissolve.
+    \item $10 \times 10 \mathrm{~mm}$ chips of a pre-patterned doped silicon wafer with a $300 \mathrm{~nm}$ layer of thermal oxide are cleaned by sonicating in acetone, washing in IPA and drying under nitrogen. The chips are patterned with an array of $\sim 700$ electrode pairs, formed of $50 \mathrm{~nm}$ Au evaporated on top of a $5 \mathrm{~nm} C r$ adhesion layer. The electrode pairs are separated by $5 \mu \mathrm{m}$ at the narrowest point, between which the graphene will be patterned (see Annex I).
+    \item The etched graphene pieces are transferred three times to clean beakers of deionised water using a clean glass slide to remove residual APS.
+    \item The graphene is transferred from the water directly onto the pre-patterned chips, using an IPA dip to remove any trapped air bubbles or smooth small creases, and is left to air dry for several hours.
+    \item Chips are baked at $180^{\circ} \mathrm{C}$ for 1 hour to re-flow the protective PMMA layer and remove residual solvents.
+    \item The chips are submerged in acetone and heated to $50^{\circ} \mathrm{C}$ for at least $2 \mathrm{hrs}$ to remove the protective PMMA. The chips are then washed in fresh acetone and IPA and dried with nitrogen.
+\end{enumerate}
+
+In order to create the nanogaps, the graphene must first be patterned into constrictions thin enough to breakdown at low $(<10 \mathrm{~V})$ voltages.
+
+\subsection{Graphene Patterning}
+
+\begin{enumerate}
+
+    \item Each graphene coated chip is loaded into a spin coater and $100 \mu \mathrm{L}$ of Allresist AR-N $7500.18$ (109) negative resist is deposited onto the bare graphene.
+    \item The chip is spun at $5000 \mathrm{rpm}$ for $60 \mathrm{~s}$ in order to achieve a resist thickness of $\sim 3.5 \mu \mathrm{m}$.
+    \item The coated chip is baked at $85^{\circ} \mathrm{C}$ for 60 s to cure the resist.
+    \item The chip is loaded into the cassette of an electron beam lithography (EBL) machine and pumped to high vacuum.
+    \item After the EBL has been calibrated $(110,111)$, constrictions with a minimum width of 100 nm are patterned onto the chip with the electron beam using a $500 \mathrm{pA}$ beam current and a dose of $300 \mu \mathrm{C} \mathrm{cm}{ }^{-2}$.
+    \item Chips are removed from the EBL and developed in a solution of DuPont MF-CD-26 developer for 45 s, removing the unexposed resist, before being washed in deionised water and dried under nitrogen.
+    \item The chips are loaded into an oxygen plasma cleaner and etched at $50 \%$ power, 25 sccm of oxygen for 60 s to remove the exposed graphene.
+    \item The chips are then submerged in Microresist MR-REM 660 at $50^{\circ} \mathrm{C}$ for 2 hours to remove the remaining exposed negative resist.
+    \item The chips are washed in acetone and IPA and dried using nitrogen.
+          The chips should now have clean, patterned graphene constrictions between all pairs of electrodes.
+
+\end{enumerate}
+
+
+\section{Graphene Tunnel Junctions}
 
 \Glspl{GNG} were fabricated using by the feedback-controlled electroburning protocol detailed in literature \cite{lau2014nanoscale, limburg2018anchor}. Once deposited onto the substrates, graphene was bowtie-shaped by \gls{EBL} means. Initially, an entire chip containing 851 devices was electroburned column by column on the automated probe station for 24 hours. Later on, I decided to divide the device into six smaller pieces and run the protocol in each of them independently. There are two reasons for this.
 
@@ -60,7 +115,7 @@ $$
 $$
 Fitting parameters are $I_0$ which is an offset current accounting for possible shifts along the y-axis, $A$ is the contact area of the two electrodes (cross-sectional area), $d$ the gap size and $\Phi_\textrm{b}$ is the potential barrier expressed within a WKB approximation for transmission probability of an electron to tunnel through a an insulating barrier.
 
-\subsubsection{Gate-controlled Electroburning}
+\subsection{Gate-controlled Electroburning}
 
 \begin{figure}[hbtp]
     \begin{center}
@@ -70,9 +125,67 @@ Fitting parameters are $I_0$ which is an offset current accounting for possible 
     \end{center}
 \end{figure}
 
-\subsubsection{Angle-varied Electroburning in Air}
+\subsection{Angle-Varied Electroburning}
 
 \co{The problem of detcting the maximum current value can be thought as a step detection algorithm, that is a procedure to find changes such as jumps, steps, and/or shifts in the mean level of a signal. In that sense, the algorithm I have advanced has the drawbacks that large spikes in the signal caused by frequency pick-up could potentially being detected as the maximum current point even tho there is no coulomb diamond there.}
+
+
+\section{Contacting Graphene Nanoribbons}
+
+\co{Here three methods have been exploited: standard feedback electroburning, gate-dependent electroburning, and litographic patterning of graphene nanogaps}
+
+The process of contacting graphene nanoribbons represents one of the major obstacles a reliable and robust fabrication. Various methodologies have been exploited in the literature. For example, litographic \gls{GNR} can be contacted through standard metal deposition techiniques by covering the substrate with a resist and evaporating metals (Pd, Au). As detailed in Ch.\ref{ch:introduction}, contacting bulk graphene with metals will result in Schottky barriers of various nature, which extend largely depends on the level of natural doping of graphene.
+
+Liquid-processable \glspl{GNR} represents a further development in terms of structural integrity and shape. One of the major hurdles, however, is represented by the placement of such structures on top on a \gls{FET} geometry. In order to favour the binding interactions with the leads, I have decided to employ graphene as electrode material.
+
+The problem of depositing graphene nanoribbons on top of graphene nanogaps could be mapped onto a well-know problem in geometric probability called Buffon's needle problem. Originally fomulated in the eighteen century, the Buffon's needle problem calculates what is the probability that by randomly throwing a needle on length $l$ the needle will cross at least a line of grid of parallel lines of width $d > l$ units apart. Several extension of this problem have been followed in the last century.
+
+Even if the problem assumes no interactions active between the needle and the grid, the problem well capture the essence of our experiment. In the limit where the ration betwenn the needle length and the distance between the parallel lines is greater than 1, i.e. $\lambda = l/d > 1$, the probability that the needle intersects at least one line is given by \cite{uspensky1937introduction}:
+
+\begin{equation}
+    P(\lambda) =
+    \begin{cases}
+        \frac{2\lambda}{\pi}                                                   & \lambda\leq 1 \\
+        \frac{2}{\pi}\qty(\lambda - \sqrt{\lambda^2 - 1} + \sec^{-1}(\lambda)) & \lambda>1     \\
+    \end{cases}
+\end{equation}
+
+\begin{figure}[hbtp]
+    \begin{center}
+        \includegraphics[width=\textwidth]{chapter_fabrication/figures/buffon_probability.pdf}
+        \caption{Probability distribution as a function of the parameter $\lambda$ for a needle tossed onto a grid of equispaced parallel lines. When the needle is short ($\lambda < 1$), the coverage probability increases linearly with the length. When the needle becomes larger than the gap ($\lambda \ge 1$), the probability increases asymptotically to one and is independent of the parameter $\lambda$.}
+        \label{fig:fabrication:buffon_probability}
+    \end{center}
+\end{figure}
+
+Fig.~\ref{fig:fabrication:buffon_probability} illustrates the difference between the regimes. One main assumption of this model is to completely ignore and neglect any kind of interactions between the needles.
+
+In order to map this problem to the real-world scenario where single strand of graphene nanoribbons lay on the electrical contact, one needs to include the interaction experienced by the the ribbon and the environment when are in solution, between the ribbon and the electrical contacts and the intramolecular forces which drive a folding of a single ribbon on itself (buckle-up). In an attempt to obtaine a more realistic picture, I will briefly sketch a model that could be used by experimentalist to derive conclusion on what parameters is best to tune/change in order to obtain the higher probability to get a single \gls{GNR} briding the highest number of device per unit area.
+
+\section{Deposition Process and Related Phenomena}
+
+One of the key point of a device fabrication are the complex interactions establishing as a consequenche of various surface-related phenomena which occur when an object--in our case, graphene nanoribbons--have to be transferred onto specific substrates \cite{nerngchamnong2013role, huskens2004model}. The rich and wide physics \glspl{GNR} have displayed on substrates where are directly growth remains largely un-matched when ribbons are transferred onto electronic devices; therefore, I argue that a more detailed look at the deposition picture is essential for improving device yield and reproducibility. In order to fulfill this purpose, I qualitatevely studied the effect of different depositon techniques when a solution of liquid-processable nanoribbons was dropcasted on top of the substrate. By substrate here I refer to the a chip where gold and graphene pads have been shaped.
+
+\glspl{GNR} were first diluted in an organic apolar solvent before being drop cast onto the substrate. Apolar solvents have been a valid choice against unwanted charge doping effects of graphene sheets. I have preferably used toluene, choloroform and \gls{THF} to this purpose: this were largely based on the suggestion from our collaborators who synthesised the ribbon I have used and by Dr\. Xuelin Yao. I have also attempted to use higher boiling points solvents such as 1-phenyloctane. The logic behind this choice is that the depositon process is largely dependend on the interactions established between the ribbon and the different surfaces on to of the chip. In order to favour the $\pi-\pi^*$ interactions between the graphene leads and a single graphene nanoribbons strand, a thermodynamic equilibrium between the amount of substance $i$ absorbed on the electrode per unit area, $\Gamma_i$, and the substance in the bulk (the ribbon in the solvent) should be favoured compared to kinetic-related processed such as mass transfer by migration and diffusion.
+
+Given the interactions active between absorbed species the most appropriate adsorption isotherm to use is the Frumkin isotherm, in which the energy of the adsorption process depends on the surface coverage. An estimate of these interactions is provided by first-principle calculations where different anchoring groups such as pyrene and hexabenzocoronene were tested \cite{limburg2018anchor}. The reason to study smaller $\pi$-delocalised systems is related to the smaller computational cost one has to face when simualating such complex interactions at DFT level, and the underlying assumption is that the insights we derive from the simulation are exendible in the case of larger $\pi$-delocalised systems such as \glspl{GNR}.
+The interaction between a graphene sheet and a pyrene molecule was estimated to be around \SI{26.3}{\milli\electronvolt}/atom. The large width limit of this value is the binding interaction between two graphene sheets: theoretical estimates pose this value to be between \SIrange{10}{30}{\milli\electronvolt}/atom for a stacking of type $AA$ with an interlayer distance of \SI{3.3}{\angstrom} and about \SIrange{18}{23}{\milli\electronvolt}/atom for a $AB$ stacking with similar graphene-sheet distance \cite{mostaani2015quantum}.
+
+The solvent chlorobenzene (PhCl) was used in this case. As previously stated, the attached alkyl chains significantly improve dispersibility (compared to GNRs without chains). Nonetheless, because GNRs tend to form bundles, they must be sonicated before further processing. The typical sonication parameters were one hour at 50\% power followed by ten minutes at 100\% power 6. The clear, purple colour of a well-sonicated dispersion can be identified (see g. 3.6 (b) inset). If any visible bundles remained, the sonication was repeated for another 30 minutes. Occasionally, a new GNR solution was prepared by diluting a de ned amount of the master solution in 1 ml of PhCl.
+
+It has beeen not possible to perform a more quantitative description through the usage of surface techiniques such as \gls{AFM} or XPS becuase of restrictions put in place due to the Covid-19 pandemic.
+% Why it has been important to try different deposition techiniques
+% How this has been qualitatevely addressed.
+% Apolar solvents used to avoid accidental doping of the \glspl{GNR}
+% Mention also the meniscus guided coating, heard in Klaus Mullen talk.
+% critical speed when the crystals start to elongate in the coeating direction,
+% initiating the orientation of the molecules. reducing the coating speed the domains start to decrease
+% and the molecules tend to elongate better.
+% transport over domains depends on the boundaries of the domains, hence the mobility goes down.
+% dependence of film thickness with the v (dunno what it is, think coating speed).
+
+Why it is important to study the chemistry of interfaces for
+rationalising deposition processes
 
 
 
@@ -94,8 +207,6 @@ In this section I will outlined the distinct components through which I have per
     \end{center}
 \end{figure}
 
-
-
 \subsection{DC Measurements}
 
 \begin{figure}[hbtp]
@@ -109,7 +220,7 @@ In this section I will outlined the distinct components through which I have per
 \end{figure}
 
 
-\subsubsection{Temperature-dependent Protocol}
+\subsection{Temperature-dependent Protocol}
 
 Dilution refrigerators are suited for cryogenic operations although it is possible to operate at higher temperature by working with still and mixing chamber heaters. In order to measure reliably up to room temperatuer, however, one must ensures that the temperature drift is ideally slower than the time taken to acquire experimental measurements. Since there is no well-defined experimental procedure for doing so, a workaround which leverages the Triton system was found in this thesis.
 
@@ -165,7 +276,7 @@ In the last part of my thesis I managed to find a workaround and integrate the l
 
 Firstly, the module it was necessary to wire the DAC module. The standard routing do not couple the iso-amp output (S0) module with the summation module. The design is, however, convenient enough to rewrite by sampling redericting the wire as provided in the scheme. The Lock-in output was thus connected to the delft box S0, whilst fed with the signal coming out from the M0 module. The signal was then locked at the desired frequency and adjusted phase prior to be fed via usb or ethernet into the desktop computer. Experiment routines were easily written and integrated into the existing setup by simply instantiating a lock-in instance and integrating into the superclass station where instance for all the other necessary instruments are initialised and contained.
 
-\subsection{Double Lock-in Measurements: micro-Hall bars and Thermoelectric}
+\subsubsection{Double Lock-in Measurements and Micro-Hall Bar Applications}
 
 Describe here the setup used for the thermoelectric devices and why it needs a dedicated section
 Describe also here from a setup point of view which complications have raised during the setup (direct lines instead of dc lines,
@@ -177,82 +288,29 @@ Devices used for magnetometry were fabricated by Dr. Alex Gee (Fig.~\ref{fig:exp
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_fabrication/figures/hb_sample_center.pdf}
         \caption{
-            Cartoon of Hall sensors. Current flows along the central wires, while the sample sits on one of the two crosses. The sample is placed slightly offset compared to the crossposition as the magnetic field is less shielded by the gold surface. The signals are then measured in parallel by feeding first the voltage drops to two pre-amplifier and later to lock-in amplifiers.}
+            Cartoon of a micro-Hall sensor. Current flows along the central wires, while the sample sits on one of the two crosses. The sample is placed slightly offset compared to the crossposition as the magnetic field is less shielded by the gold surface. The signals are then measured in parallel by feeding first the voltage drops to two pre-amplifier and later to lock-in amplifiers.}
         \label{fig:exp:hallbar}
     \end{center}
 \end{figure}
 
-
-\section{General Fabrication Procedure}
-All devices have a Si/SiO$_2$ substrate with a \SI{300}{\nano\metre} thick oxide layer. The substrate is purchased as a 3 inches wafer and then cut into \SI{1}{\centi\metre\squared} pieces. As several equipments used in the fabrication process  imposes dimension constraints, the small chip sizes are required.
-
-After dicing the wafer into 1 by 1 cm$^2$ chip pieces, these were firstly sonicated in an Acetone, then transferred into  isopropanol (IPA) for a second sonication step, each lasting 5 minutes. A further 10-minute long step in the oxygen plasma at 100\% power with 25 sccm of gas flow (HPT-100 by Henniker Plasma) was carried out based on the level of contamination addressed via visual inspection. An almost all circumstances this step was deemed necessary.
-
-After thoroughly cleaning the chips, they can be prepared for the next step in the fabrication, Electron Beam Lithography (EBL) patterning, which requires a photosensitive resist Fig.~\ref{fig:exp:chip_fabrication}(Figure 4.1a,b).
-
-\co{this is for graphene patterning to be mention when we were doing that stupid treatment of graphene wet-transferring. To further reduce the number of chip wasted and depending on the perceived contamination of the wafer and the eventual measurement planned the chips are then immersed in a piranha solution (sulfuric acid (H2SO4) and hydrogen peroxide (H2O2) in a 3:1 ratio) for 10 minutes to remove any organic residues}
-
 \begin{figure}[hbtp]
     \begin{center}
-        \includegraphics[width=\textwidth]{chapter_fabrication/figures/patterning_1.png}
+        \includegraphics[width=\textwidth]{chapter_fabrication/figures/hb_design.png}
         \caption{
-            Schematic of Metal Deposition. \textbf{a)} The first photoresist covers the SiO$_2$ substrate. \textbf{b)} A second layer of photoresist is applied. \textbf{c)} Exposure to EBL with secondary electron scattering from the substrate. \textbf{d)} Development of the resist, resulting in an undercut. \textbf{e)} Metal deposition using a thermal evaporator. \textbf{f)} Lift-off aided by the undercut, with the final metal structure remaining on the substrate.}
-        \label{fig:exp:chip_fabrication}
+            Cartoon of a micro-Hall sensor. Current flows along the central wires, while the sample sits on one of the two crosses. The sample is placed slightly offset compared to the crossposition as the magnetic field is less shielded by the gold surface. The signals are then measured in parallel by feeding first the voltage drops to two pre-amplifier and later to lock-in amplifiers.}
+        \label{fig:exp:hallbar_design}
     \end{center}
 \end{figure}
-
-Spin coating, in which the chip is mounted on a spinning disc via a vacuum chuck, is used to ensure a uniformly coated chip with a constant-height resist layer free of foreign particles or air bubbles. The thickness of the film is determined by the resist composition, evaporation rate, and spinning speed. The thickness is usually proportional to the inverse square root of the spin speed. After pipetting the resist onto the chip, it is spun slowly (at 1000 revolutions per minute) for ten seconds during the ramping stage to spread the resist evenly and remove excess solvent, and then it is spun at 3000 revolutions per minute for 60 seconds to achieve the desired resist thickness. After spinning the resist, the final step in preparing the chips for lithography is to bake it. This is done at a temperature above the resist's glass transition point, in this case 180 °C, so that the resist begins to flow again, ensuring a uniform thickness covering the entire chip. Furthermore, the baking process will evaporate any remaining solvent in the resist. The chip can now be further processed using EBL, or if another layer of resist is required, the photoresist application process can be repeated. Different photoresists are chosen depending on the application and desired patterning procedure, with two main groups of resist used in EBL: positive and negative resist. We use PMMA, a positive resist, when attempting to deposit a metal layer. In a positive resist, the area exposed by the EBL is washed away during development, so this is where the subsequent etching process/metal deposition occurs (see Figure 4.1). The other type of resist used is negative resist, which retains the exposed area and can be used as an etch mask (see Figure 4.2; we will use this resist later to define the graphene pattern).
-
-
-
-\subsection{Graphene Preparation and Wet Transferring}
-Given the expertise of past group members, I initially decided to use the wet transferring technique for putting graphene on top of silicon substrates. This procedure, however, led to many challenges for the production of good quality \glspl{GNG}. Firstly, all the recipe produced by previous member showed little or no robustness. An ideal fabrication recipe is such that the fabrication outcome does not largely depend on small variations within the fabrication process. I have tested several recipes and all of them had problems. Here below I detail the steps for the recipe I have optimised in collaboration with Dr\.~John Cully.
-\begin{enumerate}
-    \item A $10\times10 \mathrm{~mm}$ piece of graphene is manually cut from a 6 inch sheet of CVD graphene, purchased from Graphenea, which is backed with copper foil and coated with a thin protective layer of PMMA on top. The layer thickness we found to work best for our application (i.e. less level of graphene surface contamination) was \SI{300}{\nano\metre}
-    \item The graphene pieces are placed into an oxygen plasma cleaner copper side up and etched at $50 \%$ power for 60 s with 25 sccm of oxygen to remove residual backside graphene.
-    \item A $0.4 \mathrm{M}$ solution of ammonium persulfate (APS) in deionised water is prepared in a clean beaker and sonicated to remove any air bubbles.
-    \item The graphene pieces are floated on top of the APS solution copper side down and left overnight for the copper to dissolve.
-    \item $10 \times 10 \mathrm{~mm}$ chips of a pre-patterned doped silicon wafer with a $300 \mathrm{~nm}$ layer of thermal oxide are cleaned by sonicating in acetone, washing in IPA and drying under nitrogen. The chips are patterned with an array of $\sim 700$ electrode pairs, formed of $50 \mathrm{~nm}$ Au evaporated on top of a $5 \mathrm{~nm} C r$ adhesion layer. The electrode pairs are separated by $5 \mu \mathrm{m}$ at the narrowest point, between which the graphene will be patterned (see Annex I).
-    \item The etched graphene pieces are transferred three times to clean beakers of deionised water using a clean glass slide to remove residual APS.
-    \item The graphene is transferred from the water directly onto the pre-patterned chips, using an IPA dip to remove any trapped air bubbles or smooth small creases, and is left to air dry for several hours.
-    \item Chips are baked at $180^{\circ} \mathrm{C}$ for 1 hour to re-flow the protective PMMA layer and remove residual solvents.
-    \item The chips are submerged in acetone and heated to $50^{\circ} \mathrm{C}$ for at least $2 \mathrm{hrs}$ to remove the protective PMMA. The chips are then washed in fresh acetone and IPA and dried with nitrogen.
-\end{enumerate}
-
-In order to create the nanogaps, the graphene must first be patterned into constrictions thin enough to breakdown at low $(<10 \mathrm{~V})$ voltages.
-
-
-\section{Contacting Graphene Nanoribbons}
-
-\co{Here three methods have been exploited: standard feedback electroburning, gate-dependent electroburning, and litographic patterning of graphene nanogaps}
-
-The process of contacting graphene nanoribbons represents one of the major obstacles a reliable and robust fabrication. Various methodologies have been exploited in the literature. For example, litographic \gls{GNR} can be contacted through standard metal deposition techiniques by covering the substrate with a resist and evaporating metals (Pd, Au). As detailed in Ch.\ref{ch:introduction}, contacting bulk graphene with metals will result in Schottky barriers of various nature, which extend largely depends on the level of natural doping of graphene.
-
-Liquid-processable \glspl{GNR} represents a further development in terms of structural integrity and shape. One of the major hurdles, however, is represented by the placement of such structures on top on a \gls{FET} geometry. In order to favour the binding interactions with the leads, I have decided to employ graphene as electrode material.
-
-The problem of depositing graphene nanoribbons on top of graphene nanogaps could be mapped onto a well-know problem in geometric probability called Buffon's needle problem. Originally fomulated in the eighteen century, the Buffon's needle problem calculates what is the probability that by randomly throwing a needle on length $l$ the needle will cross at least a line of grid of parallel lines of width $d > l$ units apart. Several extension of this problem have been followed in the last century.
-
-Even if the problem assumes no interactions active between the needle and the grid, the problem well capture the essence of our experiment. In the limit where the ration betwenn the needle length and the distance between the parallel lines is greater than 1, i.e. $\lambda = l/d > 1$, the probability that the needle intersects at least one line is given by \cite{uspensky1937introduction}:
-
-\begin{equation}
-    P(\lambda) =
-    \begin{cases}
-        \frac{2\lambda}{\pi}                                                   & \lambda\leq 1 \\
-        \frac{2}{\pi}\qty(\lambda - \sqrt{\lambda^2 - 1} + \sec^{-1}(\lambda)) & \lambda>1     \\
-    \end{cases}
-\end{equation}
 
 \begin{figure}[hbtp]
     \begin{center}
-        \includegraphics[width=\textwidth]{chapter_fabrication/figures/buffon_probability.pdf}
-        \caption{Probability distribution as a function of the parameter $\lambda$ for a needle tossed onto a grid of equispaced parallel lines. When the needle is short ($\lambda < 1$), the coverage probability increases linearly with the length. When the needle becomes larger than the gap ($\lambda \ge 1$), the probability increases asymptotically to one and is independent of the parameter $\lambda$.}
-        \label{fig:fabrication:buffon_probability}
+        \includegraphics[width=\textwidth]{chapter_fabrication/figures/Mn12_sample2.pdf}
+        \caption{
+            Cartoon of a micro-Hall sensor. Current flows along the central wires, while the sample sits on one of the two crosses. The sample is placed slightly offset compared to the crossposition as the magnetic field is less shielded by the gold surface. The signals are then measured in parallel by feeding first the voltage drops to two pre-amplifier and later to lock-in amplifiers.}
+        \label{fig:exp:hallbar_design}
     \end{center}
 \end{figure}
 
-Fig.~\ref{fig:fabrication:buffon_probability} illustrates the difference between the regimes. One main assumption of this model is to completely ignore and neglect any kind of interactions between the needles.
-
-In order to map this problem to the real-world scenario where single strand of graphene nanoribbons lay on the electrical contact, one needs to include the interaction experienced by the the ribbon and the environment when are in solution, between the ribbon and the electrical contacts and the intramolecular forces which drive a folding of a single ribbon on itself (buckle-up). In an attempt to obtaine a more realistic picture, I will briefly sketch a model that could be used by experimentalist to derive conclusion on what parameters is best to tune/change in order to obtain the higher probability to get a single \gls{GNR} briding the highest number of device per unit area.
 
 
 \section{Sample Fabrication}
@@ -278,28 +336,5 @@ Give proper credit
 The one I made and also made with the help of Alex
 
 
-\section{Deposition Process and Related Phenomena}
 
-One of the key point of a device fabrication are the complex interactions establishing as a consequenche of various surface-related phenomena which occur when an object--in our case, graphene nanoribbons--have to be transferred onto specific substrates \cite{nerngchamnong2013role, huskens2004model}. The rich and wide physics \glspl{GNR} have displayed on substrates where are directly growth remains largely un-matched when ribbons are transferred onto electronic devices; therefore, I argue that a more detailed look at the deposition picture is essential for improving device yield and reproducibility. In order to fulfill this purpose, I qualitatevely studied the effect of different depositon techniques when a solution of liquid-processable nanoribbons was dropcasted on top of the substrate. By substrate here I refer to the a chip where gold and graphene pads have been shaped.
-
-\glspl{GNR} were first diluted in an organic apolar solvent before being drop cast onto the substrate. Apolar solvents have been a valid choice against unwanted charge doping effects of graphene sheets. I have preferably used toluene, choloroform and \gls{THF} to this purpose: this were largely based on the suggestion from our collaborators who synthesised the ribbon I have used and by Dr\. Xuelin Yao. I have also attempted to use higher boiling points solvents such as 1-phenyloctane. The logic behind this choice is that the depositon process is largely dependend on the interactions established between the ribbon and the different surfaces on to of the chip. In order to favour the $\pi-\pi^*$ interactions between the graphene leads and a single graphene nanoribbons strand, a thermodynamic equilibrium between the amount of substance $i$ absorbed on the electrode per unit area, $\Gamma_i$, and the substance in the bulk (the ribbon in the solvent) should be favoured compared to kinetic-related processed such as mass transfer by migration and diffusion.
-
-Given the interactions active between absorbed species the most appropriate adsorption isotherm to use is the Frumkin isotherm, in which the energy of the adsorption process depends on the surface coverage. An estimate of these interactions is provided by first-principle calculations where different anchoring groups such as pyrene and hexabenzocoronene were tested \cite{limburg2018anchor}. The reason to study smaller $\pi$-delocalised systems is related to the smaller computational cost one has to face when simualating such complex interactions at DFT level, and the underlying assumption is that the insights we derive from the simulation are exendible in the case of larger $\pi$-delocalised systems such as \glspl{GNR}.
-The interaction between a graphene sheet and a pyrene molecule was estimated to be around \SI{26.3}{\milli\electronvolt}/atom. The large width limit of this value is the binding interaction between two graphene sheets: theoretical estimates pose this value to be between \SIrange{10}{30}{\milli\electronvolt}/atom for a stacking of type $AA$ with an interlayer distance of \SI{3.3}{\angstrom} and about \SIrange{18}{23}{\milli\electronvolt}/atom for a $AB$ stacking with similar graphene-sheet distance \cite{mostaani2015quantum}.
-
-The solvent chlorobenzene (PhCl) was used in this case. As previously stated, the attached alkyl chains significantly improve dispersibility (compared to GNRs without chains). Nonetheless, because GNRs tend to form bundles, they must be sonicated before further processing. The typical sonication parameters were one hour at 50\% power followed by ten minutes at 100\% power 6. The clear, purple colour of a well-sonicated dispersion can be identified (see g. 3.6 (b) inset). If any visible bundles remained, the sonication was repeated for another 30 minutes. Occasionally, a new GNR solution was prepared by diluting a de ned amount of the master solution in 1 ml of PhCl.
-
-It has beeen not possible to perform a more quantitative description through the usage of surface techiniques such as \gls{AFM} or XPS becuase of restrictions put in place due to the Covid-19 pandemic.
-% Why it has been important to try different deposition techiniques
-% How this has been qualitatevely addressed.
-% Apolar solvents used to avoid accidental doping of the \glspl{GNR}
-% Mention also the meniscus guided coating, heard in Klaus Mullen talk.
-% critical speed when the crystals start to elongate in the coeating direction,
-% initiating the orientation of the molecules. reducing the coating speed the domains start to decrease
-% and the molecules tend to elongate better.
-% transport over domains depends on the boundaries of the domains, hence the mobility goes down.
-% dependence of film thickness with the v (dunno what it is, think coating speed).
-
-Why it is important to study the chemistry of interfaces for
-rationalising deposition processes
 

@@ -264,7 +264,7 @@ The Alazar card, Triton, and IVVI (Delft box modules) drivers are first initiali
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_fabrication/figures/sd_progress.pdf}
-        \caption{Temperature fluctuations acquired during the temperature dependent measurement for the stability diagrams.}
+        \caption{Temperature fluctuations experienced by the cyostat over a 2-days-long stability diagram scan. From the graphs it is evident that these become more important when the temperature surpasses 30 K, which is the threshold beyond which heaters lose control over the cryostat.}
         \label{fig:sd_progress}
     \end{center}
 \end{figure}
@@ -275,6 +275,19 @@ The Alazar card, Triton, and IVVI (Delft box modules) drivers are first initiali
 In the last part of my thesis I managed to find a workaround and integrate the lock-in amplifier to the existing setup. Previous attempt failed due to an impedance mismatch when the output from the delft-box was fed into the alazar card. While this might had beeen resolved in re-calibrating the alazar card, the signal was impossible to detect.
 
 Firstly, the module it was necessary to wire the DAC module. The standard routing do not couple the iso-amp output (S0) module with the summation module. The design is, however, convenient enough to rewrite by sampling redericting the wire as provided in the scheme. The Lock-in output was thus connected to the delft box S0, whilst fed with the signal coming out from the M0 module. The signal was then locked at the desired frequency and adjusted phase prior to be fed via usb or ethernet into the desktop computer. Experiment routines were easily written and integrated into the existing setup by simply instantiating a lock-in instance and integrating into the superclass station where instance for all the other necessary instruments are initialised and contained.
+
+\subsubsection{Integration of Lock-in Amplifier with Delft Box}
+A great deal of information about both the theory and tips of integrating a lock-in with and existing low-noise setup such as the one I have used may be found in the excellent reference \cite{lockin_kavli}. Here I briefly report and comment salient points that I have employed to successfully integrate a standard SR-830 lcok-in with Delft Box. Same concepts were later applied for integrating two Zurich Instruments MFLI amplifier as well.
+
+Although the measured cryogenic setup noisefloor level is a tenth of pA, the intrisic $1/f$ noise represents an instrinsic and important hurdle in any \gls{DC} experiment. As we saw in Sec.~\ref{ch2:derivation_tunneling_DOS}, the central quantity in an electron transport experiment is the tunneling density of states, which is ultimately related to the derivative of the current in a $I-V_\textrm{SD}$ experiment. Numerically retrieving the conductance may introduce noise due to the non-negligible current fluctuations between two measurement points; this picture gets even further complicated if one takes into account possible charge jumps occuring during the acquisition.
+
+The logic behind a lock-in is as surprinsingly simple as clever. The idea is to fed an oscillating voltage $V_\textrm{osc} (f)$ into the pure \gls{DC} signal in order to produce an oscillating current $I_\textrm{tot} (f) = I_\textrm{DC} + I_\textrm{AC} (f)$ and then later to filter out the noise outside a narrow band $f \pm \tau^{-1}$ for a settable integration time $\tau$. As the reference at the top of this sections points out, lock-in conductance measurements can readily introduce errors on the scale of 10 points percent of the total signal if operated with the incorrect parameters settings, wherease \gls{DC} is not susceptible to these complex-space-caused aberrations. Therefore, it is advisable to take extra caution if accurate conductance values are required from your lock-in measurement. More loose conditions might be consider, on the contrary, if features are desired rather than accurate values.
+
+Fridge lines are filter with RC and Cu powder filter, as previously outlined. In this context and at finite frequency $\omega =  2\pi f$ each circuit component response has to be modeled in the complex plane. As long as the capacitors do not draw any current, it is possible to modeled the resistance of the device under test by simplying applying standard circuit theory and realising that as long as the resistance of the circuits are way less than the inverse product of the frequency and the capacitors $R_i \ll 1/(\omega C_k)$ where the subscript $i$ and $k$ denotes the number of resistance and capacitors, which may differ. This principle might be thought as the requirements to work with oscillating voltages way below that the cut-off frequency imposed by the filters, namely:
+
+\begin{equation}
+    f \ll f_\textrm{cutoff} = \frac{1}{2\pi R_i C_k}
+\end{equation}
 
 \subsubsection{Double Lock-in Measurements and Micro-Hall Bar Applications}
 
@@ -313,27 +326,6 @@ Devices used for magnetometry were fabricated by Dr. Alex Gee (Fig.~\ref{fig:exp
 
 
 
-\section{Sample Fabrication}
-
-Here the designs for the different chips that have been used.
-
-
-\subsection{2T Design}
-
-How convenient and 'quick' is the usage of a backgate device.
-List, as usual, pro and cons
-
-\subsection{3T Design}
-
-Why the need to use 3T over 2T
-
-\subsubsection{Local Gates from Waterloo}
-
-Give proper credit
-
-\subsubsection{Interconnected Drain and Gate}
-
-The one I made and also made with the help of Alex
 
 
 

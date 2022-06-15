@@ -93,7 +93,7 @@ For starters, when the probe station is left running unattended for several hour
 
 \begin{figure}[hbtp]
     \begin{center}
-        \includegraphics[width=\textwidth]{chapter_fabrication/figures/simmons.eps}
+        \includegraphics[width=\textwidth]{chapter_fabrication/figures/simmons.pdf}
         \caption{
             Simmons Fit and fit parmaters output.}
         \label{fig:exp:simmons}
@@ -120,7 +120,7 @@ Fitting parameters are $I_0$ which is an offset current accounting for possible 
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_fabrication/figures/feedback_controlled_electroburning.pdf}
-        \caption{Gate-controlled feedback electroburning routine. \textbf{(a)} Block diagram for the program as implemented. \textbf{(b)} Gate trace examples as they are extracted at various stages of the routine. Usually a ~\SI{0.4}{\volt} bias is applied during during the gate trace scan. Top graph reports an average gate trace taken at the end of a first electroburning cycle. The program then reads the maximum of the current (red circle), set the gate output channel of the ADwin to that corresponding potential, and starts a second electroburning protocol. When the distribution of the current data passes the Shapiro--Wilk statistics test (bottom graph), the null-hypothesis of the test is accepted ($H_0 = $ the population of the current data is normally distributed), and the program performs a final stability diagram and save all the data in suitable format.}
+        \caption{Gate-controlled feedback electroburning routine. \textbf{a,} Block diagram for the program as implemented. \textbf{b,} Gate trace examples as they are extracted at various stages of the routine. Usually a ~\SI{0.4}{\volt} bias is applied during during the gate trace scan. Top graph reports an average gate trace taken at the end of a first electroburning cycle. The program then reads the maximum of the current (red circle), set the gate output channel of the ADwin to that corresponding potential, and starts a second electroburning protocol. When the distribution of the current data passes the Shapiro--Wilk statistics test (bottom graph), the null-hypothesis of the test is accepted ($H_0 = $ the population of the current data is normally distributed), and the program performs a final stability diagram and save all the data in suitable format.}
         \label{fig:feedback_controlled_electroburning}
     \end{center}
 \end{figure}
@@ -209,16 +209,6 @@ In this section I will outlined the distinct components through which I have per
 
 \subsection{DC Measurements}
 
-\begin{figure}[hbtp]
-    \begin{center}
-        \includegraphics[width=\textwidth]{chapter_fabrication/figures/dc_lines_chipboard.pdf}
-        \caption{\textbf{a,} Breakout box of DC connections. A second breakout box is used for connections from 26 to 48.
-            \textbf{b,} Chipholder schematic with each connection numbers: pin 11 is used to orientate the chip in the correct direction.
-            \textbf{c,} Frequency test. Powder (Cu) and RC filters set frequency operation limit theoretically up to \SI{10}{\kilo\hertz}. In practice we experimentally observed a statistical significance degradation of the signal already at \SI{5}{\kilo\hertz}.}
-        \label{fig:dc_lines_chipboard}
-    \end{center}
-\end{figure}
-
 
 \subsection{Temperature-dependent Protocol}
 
@@ -274,26 +264,87 @@ The Alazar card, Triton, and IVVI (Delft box modules) drivers are first initiali
 
 In the last part of my thesis I managed to find a workaround and integrate the lock-in amplifier to the existing setup. Previous attempt failed due to an impedance mismatch when the output from the delft-box was fed into the alazar card. While this might had beeen resolved in re-calibrating the alazar card, the signal was impossible to detect.
 
+\begin{figure}[hbtp]
+    \begin{center}
+        \includegraphics[width=\textwidth]{chapter_fabrication/figures/dc_lines_chipboard.pdf}
+        \caption{\textbf{a,} Breakout box of DC connections. A second breakout box is used for connections from 26 to 48.
+            \textbf{b,} Chipholder schematic with each connection numbers: pin 11 is used to orientate the chip in the correct direction.
+            \textbf{c,} Frequency test. Powder (Cu) and RC filters set frequency operation limit theoretically up to \SI{10}{\kilo\hertz}. In practice we experimentally observed a statistical significance degradation of the signal already at \SI{5}{\kilo\hertz}.}
+        \label{fig:dc_lines_chipboard}
+    \end{center}
+\end{figure}
+
 Firstly, the module it was necessary to wire the DAC module. The standard routing do not couple the iso-amp output (S0) module with the summation module. The design is, however, convenient enough to rewrite by sampling redericting the wire as provided in the scheme. The Lock-in output was thus connected to the delft box S0, whilst fed with the signal coming out from the M0 module. The signal was then locked at the desired frequency and adjusted phase prior to be fed via usb or ethernet into the desktop computer. Experiment routines were easily written and integrated into the existing setup by simply instantiating a lock-in instance and integrating into the superclass station where instance for all the other necessary instruments are initialised and contained.
 
 \subsubsection{Integration of Lock-in Amplifier with Delft Box}
-A great deal of information about both the theory and tips of integrating a lock-in with and existing low-noise setup such as the one I have used may be found in the excellent reference \cite{lockin_kavli}. Here I briefly report and comment salient points that I have employed to successfully integrate a standard SR-830 lcok-in with Delft Box. Same concepts were later applied for integrating two Zurich Instruments MFLI amplifier as well.
+A great deal of information about both the theory and tips of integrating a lock-in with and existing low-noise setup such as the one I have used may be found in the excellent reference \cite{lock-in_kavli}. Here I briefly report and comment salient points that I have employed to successfully integrate a standard SR-830 lcok-in with Delft Box. Same concepts were later applied for integrating two Zurich Instruments MFLI amplifier as well.
 
 Although the measured cryogenic setup noisefloor level is a tenth of pA, the intrisic $1/f$ noise represents an instrinsic and important hurdle in any \gls{DC} experiment. As we saw in Sec.~\ref{ch2:derivation_tunneling_DOS}, the central quantity in an electron transport experiment is the tunneling density of states, which is ultimately related to the derivative of the current in a $I-V_\textrm{SD}$ experiment. Numerically retrieving the conductance may introduce noise due to the non-negligible current fluctuations between two measurement points; this picture gets even further complicated if one takes into account possible charge jumps occuring during the acquisition.
 
 The logic behind a lock-in is as surprinsingly simple as clever. The idea is to fed an oscillating voltage $V_\textrm{osc} (f)$ into the pure \gls{DC} signal in order to produce an oscillating current $I_\textrm{tot} (f) = I_\textrm{DC} + I_\textrm{AC} (f)$ and then later to filter out the noise outside a narrow band $f \pm \tau^{-1}$ for a settable integration time $\tau$. As the reference at the top of this sections points out, lock-in conductance measurements can readily introduce errors on the scale of 10 points percent of the total signal if operated with the incorrect parameters settings, wherease \gls{DC} is not susceptible to these complex-space-caused aberrations. Therefore, it is advisable to take extra caution if accurate conductance values are required from your lock-in measurement. More loose conditions might be consider, on the contrary, if features are desired rather than accurate values.
 
-Fridge lines are filter with RC and Cu powder filter, as previously outlined. In this context and at finite frequency $\omega =  2\pi f$ each circuit component response has to be modeled in the complex plane. As long as the capacitors do not draw any current, it is possible to modeled the resistance of the device under test by simplying applying standard circuit theory and realising that as long as the resistance of the circuits are way less than the inverse product of the frequency and the capacitors $R_i \ll 1/(\omega C_k)$ where the subscript $i$ and $k$ denotes the number of resistance and capacitors, which may differ. This principle might be thought as the requirements to work with oscillating voltages way below that the cut-off frequency imposed by the filters, namely:
+\begin{figure}[hbtp]
+    \begin{center}
+        \includegraphics[width=\textwidth]{chapter_fabrication/figures/circuit_diagram_meas_fridge.pdf}
+        \caption{
+            \textbf{a,} An example of circuit diagram of a voltage-biased sample $R_d$ in series with two $RC$ filters and measured by a current-to-voltage (M1b) converter.
+            \textbf{b,} Because the device resistance is finite and the operating frequency is well below the DC lines bandwidth, it is assumed that capacitors' frequency response plays no role.}
+        \label{fig:exp:circuit_diagram_meas_fridge}
+    \end{center}
+\end{figure}
+
+
+Fridge lines are filter with RC and Cu powder filter. At finite frequency $\omega =  2\pi f$, each circuit component response has to be modeled in the complex plane. As long as all the $k$ capacitors active across all the stages within the fridge do not draw any current, i.e.  $R_i \ll 1/(\omega C_k)$ where the subscript $i$ denotes the number of resistance, it is safe to exclude any parasitic components when one attempts to recover the resistance value for the device under test. The fridge bandwidth was tested
+
+This principle might be thought as the requirements to work with oscillating voltages way below that the cut-off frequency imposed by the filters, namely:
 
 \begin{equation}
     f \ll f_\textrm{cutoff} = \frac{1}{2\pi R_i C_k}
 \end{equation}
 
+Fig.~\ref{fig:dc_lines_chipboard}c demonstrates the cut-off frequency set by out setup to be around \SI{1}{\kilo\hertz}, even though the \SI{-3}{\decibel} point lies around one order of magnitude higher. The finite-frequency efficiency and response of the DC lines is, however, not the only factor that one has to take into account when adopting AC techiniques.
+
+\begin{figure}[hbtp]
+    \begin{center}
+        \includegraphics[width=\textwidth]{chapter_fabrication/figures/current_to_voltage_converter.pdf}
+        \caption{}
+        \label{fig:exp:m1b_module}
+    \end{center}
+\end{figure}
+
+Due to its narrow bandwidth of approximately \SI{200}{\kilo\hertz}, the most commonly used M1b current amplifier in the IVVI rack is especially susceptible to lock-in finite-frequency problems. Slower amplifiers require less operating current, so the objective of this amplifier's design is to minimise its back action on the sample. Nonetheless, this constrains the operating frequency to approximately \SI{30}{\kilo\hertz},\footnote[2]{The Zurich Instruments lock-in contains a built-in functionality that allows frequency sweep while monitoring the voltage noise calculated in nV/$\sqrt{\textrm{Hz}}$ for a given lock-in measurement bandwidth.}. When this condition is not met, one must consider only the features of the measurement results and not their exact values.
+
 \subsubsection{Double Lock-in Measurements and Micro-Hall Bar Applications}
 
-Describe here the setup used for the thermoelectric devices and why it needs a dedicated section
-Describe also here from a setup point of view which complications have raised during the setup (direct lines instead of dc lines,
-the need to use nano-D connectors and to design the a new pcb board).
+The ability to fabricate and manipulate the properties of magnetic structures at the mesoscale has not only led to the discovery of several new physical phenomena, but also to the development of a large pool of experimental techniques for studying such structures. In this regard, the micro-probe magnetometry based on the Hall effect is of particular interest. It offers high field sensitivity even when the dimensionality shrinks down to the nanoscale, has excellent operating ranges in terms of temperature and magnetic field, and it is non-invasive.
+
+Recalling that in order to measure the conductivity $\sigma$ of a semiconducting sample, when there are negligible gradients of carrier density, one has to take into account both the electrons concentrations $n$ and mobility $\mu_e$ and the same quantities for holes, namely:
+\begin{equation}
+    \sigma = \abs{e}(n\mu_e + p\mu_h) = \frac{\vec{J}_\textrm{drift}}{\vec{E}}
+\end{equation}
+if---while a current is flowing along the $+x$ direction---a magnetic field is applied along the $+z$ direction, the drifting holes and electrons experience an average force in the same ($-y$) direction, i.e.:
+\begin{align}
+    \vec{F_e} & = +\abs{e}\vec{E}\mu_e B_z \quad\text{for electrons} \\
+    \vec{F_h} & = -\abs{e}\vec{E}\mu_h B_z \quad\text{for holes}
+\end{align}
+Note that because the electron ($\vec{v_e} = \vec{E}\mu_e$) and hole velocities are in the opposite direction, the two forces are in the same direction. When these two forces are unequal, the surfaces along the $\pm y$ of the sample become charged and a potential difference arise between them. The appearence of this voltage is the Hall effect, and was discovered in 1879 by Edwin H.\ Hall.
+
+The transverse electric field $E_y$ builds up until the transverse force due to it becomes equal and opposite to the force due to the magnetic field. When this happens, the stationary condition $eE_y = e v_x B_z$ allows to define the Hall voltage as:
+\begin{equation}
+    V_\textrm{H} = wE_y = v_xB_z = \frac{j_x B_z}{ne}
+\end{equation}
+where $w$ in this case is the width of the semiconducting material, $j_x$ is the component along $x$ of current density and $n$ is the charge carrier density. Considering that $j = I_\textrm{SD}/wd$ where $d$ is the specimen thickness, the expression may be rewritten as:
+\begin{equation}
+    V_\textrm{H} = R_\textrm{H}I_\textrm{SD}B_z \quad \textrm{with}\quad R_\textrm{H} = \frac{E_y}{j_x B_z} = \frac{1}{ned}
+\end{equation}
+From this relation it is clear that by knowing the charge carrier density one could in principle measure the   magnetic field. The minimum magnetic field detectable for a given area is called sensitivity and it is often defined as the ratio between the electrical noise and the Hall voltage.
+
+Due to the pandemic of Covid-19 it has been impossible to find an adequate 2DEG substrate for this project. Nevertheless, I have tried to setup and detect the Hall signal from a Mn$_12$ microcrystals with a mesoscopic Hall made of Au.
+The Hall probe configuration with the simplest geometry is the Hall cross. When a magnetic object is placed close to the active area of the probe, the Hall signal will be proportional to the sum of the external field $B$ and the magnetic stray field that enters the active area from the sample.
+
+\co{Describe also here from a setup point of view which complications have raised during the setup (direct lines instead of dc lines,
+    the need to use nano-D connectors and to design the a new pcb board).}
+
 
 Devices used for magnetometry were fabricated by Dr. Alex Gee (Fig.~\ref{fig:exp:hallbar}).
 
@@ -317,7 +368,7 @@ Devices used for magnetometry were fabricated by Dr. Alex Gee (Fig.~\ref{fig:exp
 
 \begin{figure}[hbtp]
     \begin{center}
-        \includegraphics[width=\textwidth]{chapter_fabrication/figures/Mn12_sample2.pdf}
+        \includegraphics[width=\textwidth]{chapter_fabrication/figures/Mn12_sample2.png}
         \caption{
             Cartoon of a micro-Hall sensor. Current flows along the central wires, while the sample sits on one of the two crosses. The sample is placed slightly offset compared to the crossposition as the magnetic field is less shielded by the gold surface. The signals are then measured in parallel by feeding first the voltage drops to two pre-amplifier and later to lock-in amplifiers.}
         \label{fig:exp:hallbar_design}

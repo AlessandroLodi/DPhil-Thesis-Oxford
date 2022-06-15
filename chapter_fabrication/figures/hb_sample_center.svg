@@ -4,9 +4,9 @@
 <svg
    version="1.1"
    id="svg2"
-   width="640.79999"
-   height="360.79999"
-   viewBox="0 0 640.79998 360.79999"
+   width="599.33099"
+   height="346.33099"
+   viewBox="0 0 599.33099 346.331"
    sodipodi:docname="hb_sample_center.svg"
    inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -267,10 +267,10 @@
     </marker>
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="566.83337 : 214.56792 : 1"
-       inkscape:vp_y="-8.9502767 : -904.58372 : 0"
-       inkscape:vp_z="262.76387 : 453.68763 : 1"
-       inkscape:persp3d-origin="426.15265 : 415.34077 : 1"
+       inkscape:vp_x="566.83337 : 200.09893 : 1"
+       inkscape:vp_y="-8.9502768 : -904.58373 : 0"
+       inkscape:vp_z="262.76387 : 439.21864 : 1"
+       inkscape:persp3d-origin="426.15265 : 400.87178 : 1"
        id="perspective18103" />
     <marker
        style="overflow:visible"
@@ -344,10 +344,10 @@
     </marker>
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="807.80854 : 484.79917 : 1"
-       inkscape:vp_y="-8.9502767 : -904.58372 : 0"
-       inkscape:vp_z="503.73904 : 723.91888 : 1"
-       inkscape:persp3d-origin="667.12782 : 685.57202 : 1"
+       inkscape:vp_x="807.80854 : 470.33018 : 1"
+       inkscape:vp_y="-8.9502768 : -904.58373 : 0"
+       inkscape:vp_z="503.73904 : 709.44989 : 1"
+       inkscape:persp3d-origin="667.12782 : 671.10303 : 1"
        id="perspective18103-0" />
     <marker
        style="overflow:visible"
@@ -15985,6 +15985,20 @@
          height="217.44"
          id="rect18397" />
     </clipPath>
+    <marker
+       style="overflow:visible"
+       id="marker21040-7"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path21038-3" />
+    </marker>
   </defs>
   <sodipodi:namedview
      id="namedview4"
@@ -15997,9 +16011,9 @@
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:zoom="2"
-     inkscape:cx="273.5"
-     inkscape:cy="155.25"
+     inkscape:zoom="1"
+     inkscape:cx="325.5"
+     inkscape:cy="258.5"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="-8"
@@ -16010,7 +16024,7 @@
      inkscape:groupmode="layer"
      inkscape:label="Image"
      id="g8"
-     transform="translate(-148.89723,-17.834777)">
+     transform="translate(-172.73173,-29.669278)">
     <g
        id="g21884">
       <path
@@ -25510,7 +25524,7 @@
              y="431.99234" />
           <text
              xml:space="preserve"
-             style="font-size:10.6667px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';letter-spacing:0px;word-spacing:0px"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px"
              x="210.26483"
              y="446.23386"
              id="text10451"><tspan
@@ -25518,7 +25532,7 @@
                id="tspan10449"
                x="210.26483"
                y="446.23386"
-               style="font-size:10.6667px">MFLI-3241</tspan></text>
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Arial;-inkscape-font-specification:Arial">MFLI-3241</tspan></text>
         </g>
       </g>
       <path
@@ -25534,7 +25548,7 @@
          y="345.95746" />
       <text
          xml:space="preserve"
-         style="font-size:10.906px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';letter-spacing:0px;word-spacing:0px;stroke-width:1.02244"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.906px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;stroke-width:1.02244"
          x="427.65024"
          y="352.92639"
          id="text10451-7"
@@ -25543,30 +25557,26 @@
            id="tspan10449-0"
            x="427.65024"
            y="352.92639"
-           style="font-size:10.906px;stroke-width:1.02244">MFLI-6440</tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.906px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:1.02244">MFLI-6440</tspan></text>
       <text
          xml:space="preserve"
-         style="font-size:27.265px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';letter-spacing:0px;word-spacing:0px;stroke-width:1.02244"
-         x="158.26819"
-         y="49.944916"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;stroke-width:1.02244"
+         x="203.25546"
+         y="59.725456"
          id="text17205"
-         transform="scale(0.97805473,1.0224377)"><tspan
+         transform="scale(0.97805471,1.0224377)"><tspan
            sodipodi:role="line"
            id="tspan17203"
-           x="158.26819"
-           y="49.944916"
-           style="font-size:27.265px;stroke-width:1.02244">Active zones</tspan></text>
+           x="203.25546"
+           y="59.725456"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:1.02244">Active zones</tspan></text>
       <path
-         style="fill:none;stroke:#000000;stroke-width:1.32917;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker21040)"
-         d="m 220.65367,196.16456 46.07845,0.62004"
+         style="fill:none;stroke:#000000;stroke-width:2.331;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker21040)"
+         d="m 277.0083,195.28459 -32.71009,-0.62004"
          id="path22495" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:1.32917;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker21020)"
-         d="m 706.33163,196.47458 h 50.71365"
-         id="path22497" />
       <text
          xml:space="preserve"
-         style="font-size:27.265px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';letter-spacing:0px;word-spacing:0px;stroke-width:1.02244"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;stroke-width:1.02244"
          x="218.88837"
          y="176.41064"
          id="text17205-3"
@@ -25575,7 +25585,33 @@
            id="tspan17203-3"
            x="218.88837"
            y="176.41064"
-           style="font-size:27.265px;stroke-width:1.02244">I</tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:1.02244"><tspan
+             style="font-style:italic;font-size:18.6667px"
+             id="tspan8703">I</tspan><tspan
+             style="font-size:65%;baseline-shift:sub"
+             id="tspan11981">SD</tspan></tspan></text>
+      <g
+         id="g15898"
+         transform="translate(0,14)">
+        <path
+           style="fill:none;stroke:#000000;stroke-width:2.331;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker21040-7)"
+           d="m 487.05165,87.392138 -32.71008,-0.62004"
+           id="path22495-4" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;stroke-width:1.02244"
+           x="472.27695"
+           y="74.020561"
+           id="text17205-3-8"
+           transform="scale(0.97805471,1.0224377)"><tspan
+             sodipodi:role="line"
+             id="tspan17203-3-9"
+             x="472.27695"
+             y="74.020561"
+             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:1.02244">B<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan13297">z</tspan></tspan></text>
+      </g>
       <path
          style="fill:none;stroke:#000000;stroke-width:1.02244px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker20821)"
          d="M 722.42208,63.598032 499.13528,163.99712"
@@ -25583,16 +25619,16 @@
          sodipodi:nodetypes="cc" />
       <text
          xml:space="preserve"
-         style="font-size:27.265px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';letter-spacing:0px;word-spacing:0px;stroke-width:1.02244"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;stroke-width:1.02244"
          x="697.96185"
-         y="48.952682"
+         y="56.777115"
          id="text17205-39"
          transform="scale(0.97805471,1.0224377)"><tspan
            sodipodi:role="line"
            id="tspan17203-4"
            x="697.96185"
-           y="48.952682"
-           style="font-size:27.265px;stroke-width:1.02244">Sample</tspan></text>
+           y="56.777115"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:1.02244">Sample</tspan></text>
       <g
          id="g30559"
          transform="matrix(1,0,0,1.0453788,-10.606602,-105.63818)">

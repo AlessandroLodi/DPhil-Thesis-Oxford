@@ -5,7 +5,7 @@
 \section{Room-Temperature Transport Setup}\label{fabrication:sec:probe_station}
 
 In this thesis, a great effort was dedicated to the study of graphene-based single-molecule transistors when graphene nanoribbons or $\pi$-extended bridges the two leads.
-Towards this goal and in order to stay within the coherent transport regime, nanometer graphene junctions had to be prepared. Whilst I have used protocols from the literature, I improved an easy to use python library written on legacy code by Dr.\ Bart Limburg and Dr.\ James Thomas.
+Towards this goal and in order to stay within the coherent transport regime, nanometer graphene junctions had to be prepared. Whilst I have used protocols from the literature, I improved an easy to use python library written on legacy code by Dr Bart Limburg and Dr James Thomas.
 
 \co{Cascade Probe Station}
 Electrical measurements at room temperature are performed on a fully automated Cascade Summit\textsuperscript{TM} 12000 M probe station, fitting three micro-manipulators. Copper beryllium straight probe tip by Lambda photometrics (tip diameter = \SI{25}{\micro\metre}, length = \SI{30}{\milli\metre}) were used for contacting Au (source/drain) pads, Tungesten probes (tip diameter = \SI{10}{\micro\metre}, length = \SI{30}{\milli\metre}) for HfO$_2$ (local) pads. These in fact tends to abdrade the gold pads surface, compromising the electrical contact. Ensuring a good electrical contact can be an issue when an automated program is left running. I therefore opted to work with sixth of a chip instead of working at whole-chip scale.
@@ -189,7 +189,7 @@ rationalising deposition processes
 
 
 
-\section{Cryogenic-Temperature Transport Setup}
+\section{Cryogenic-Temperature Transport Setup}\label{ch:fabrication:triton_setup}
 
 \co{When devices are wirebonded care must be taken to avoid electron discharge}
 It must be noticed that, due to the small size of the devices, \gls{ESD} precautions must be taken during the bonding and measurement procedures to prevent electrical or mechanical damages.
@@ -249,7 +249,7 @@ Dilution refrigerators are suited for cryogenic operations although it is possib
     \end{algorithmic}
 \end{algorithm}
 
-The Alazar card, Triton, and IVVI (Delft box modules) drivers are first initialised and assigned to global variables which hold their state throughout the program execution. Then several variables are initialised. The precooled variables is a routine implemented directly on top of Triton drivers which allows to set and get command directly on the instruments. While below 1 K the RuO$_2$ thermoter is used, to reliably read the temperature above this temperature one has to switch to the Cernox thermometer, hence I are setting the temperature channel variable to channel 5 within the while loop in case this conditions applies. The program then acquires gate trace and stability diagram measurements. These are functions which have been implemented and improved from scripts written by a former member of the group, Dr.\ Nicola Dotti.
+The Alazar card, Triton, and IVVI (Delft box modules) drivers are first initialised and assigned to global variables which hold their state throughout the program execution. Then several variables are initialised. The precooled variables is a routine implemented directly on top of Triton drivers which allows to set and get command directly on the instruments. While below 1 K the RuO$_2$ thermoter is used, to reliably read the temperature above this temperature one has to switch to the Cernox thermometer, hence I are setting the temperature channel variable to channel 5 within the while loop in case this conditions applies. The program then acquires gate trace and stability diagram measurements. These are functions which have been implemented and improved from scripts written by a former member of the group, Dr Nicola Dotti.
 
 \begin{figure}[hbtp]
     \begin{center}
@@ -348,8 +348,9 @@ The Hall probe configuration with the simplest geometry is the Hall cross. When 
 \co{Describe also here from a setup point of view which complications have raised during the setup (direct lines instead of dc lines,
     the need to use nano-D connectors and to design the a new pcb board).}
 
+As previously observed in Sec~\ref{ch:fabrication:triton_setup}, Cu powders and low-pass filters are used to filter DC lines extensively. Therefore, it is not possible to drive sufficient current through the wire spanning the two hall bars. In addition, when the current flowing through any load is low, the power of the delft box module is significantly reduced. \footnote[2]{If the impedance of the device under test (DUT) is low, the voltage drop across is also low since the current through the resistor is large. This causes the DAC's output voltage to drop dramatically.}.
 
-Devices used for magnetometry were fabricated by Dr. Alex Gee (Fig.~\ref{fig:exp:hallbar}).
+Devices used for magnetometry were fabricated by Dr Alex Gee (Fig.~\ref{fig:exp:hallbar}).
 
 \begin{figure}[hbtp]
     \begin{center}
@@ -372,7 +373,7 @@ Devices used for magnetometry were fabricated by Dr. Alex Gee (Fig.~\ref{fig:exp
 
 \subsection{Test Measurements}
 
-In order to prove the reliability of our apparatus and test its sensitivity, I have performed a few tests by measuring micro-crystals of Mn$_{12}$-acetate synthesised by Dr.\ Dimitris Alexandropoulos. Mn$_{12}$ is a molecular magnets whose magnetic response is well known in the literature.
+In order to prove the reliability of our apparatus and test its sensitivity, I have performed a few tests by measuring micro-crystals of Mn$_{12}$-acetate synthesised by Dr Dimitris Alexandropoulos. Mn$_{12}$ is a molecular magnets whose magnetic response is well known in the literature.
 
 The coercive field of Mn$_{12}$ at cryogenic temperature is about \SI{6}{\tesla}, therefore I had to operate and temperatures higher for checking its magnetic response. In order to minimise chances the magnet would increase the temperature while was swept, I have slow sweep rates ranging from \SIrange{0.83}{1.67}{\milli\tesla\per\second}.
 

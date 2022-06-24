@@ -196,60 +196,17 @@ Close to the Dirac points, the experimental conductivities lie within $\simeq 2-
 
 \subsection{Graphene Transistors}
 
-For transistor applications, a material needs a highly conductive on-state and an off-state where the source-drain current $I_\textrm{SD}$ does not flow. For RFs applications, on the other hand, the full speed operation is obtained by operating in the (drain) current saturation regime.
-Both applications requires a sizeable bandgap.
-Furthermore, the IC scaling trend is often juxtaposed to chip-level issues such as power densities (currently on the order of 1000 W/cm$^2$), heat generation, and chip temperatures reaching levels that will prevent reliable operations.
+The first prototypes of graphene-based \glspl{FET} were made through back-gate contact. In this geometry, tipically the gate is a Si/\ce{SiO2} substrate on top of which graphene (\gls{CVD}, single-layer, epitaxial) is placed thorugh some transfer method (Fig.~\ref{fig:intro:graphene_device}). For transistor applications, a material must have a highly conductive on-state and an off-state in which no source-drain $I_\textrm{SD}$ current flows. For \gls{RF} applications, however, full-speed operation is attained by operating in the (drain) current saturation regime. Both applications demand a variable bandgap. Moreover, the trend of \gls{IC} scaling is frequently contrasted with chip-level concerns such as power densities (now on the order of 1000 W/cm$^2$), heat production, and chip temperatures approaching levels that impede stable operations.
 
-In CMOS logic, the charge carriers are accellerated by the electric field $\CMcal{E}_\textrm{sd}$ between source and drain, thus undergoing five possible sources of scattering: electron--electron scattering, electron--phonon (lattice vibrations),
-material interfaces, imperfections or impurity atoms. The first two are more fundamentals, while the last three are material-related. The most dominant mechanism through which charge carriers lose net energy is by
-scattering with phonons, consequently heating up the lattice via Joule heating. For RF applications, on the other hand, heat is produced by the operational frequency at which the carriers operate.
-Thus, two further requirements are needed: on one hand a good thermal conductivity, but also small heat transfer with the substrate. Clearly trade-offs are here necessary.
+In CMOS logic, charge carriers are driven by the electric field  $\CMcal{E}_\textrm{sd}$ between source and drain, resulting in four potential sources of scattering: electron--electron, electron-phonon (lattice vibrations), material interfaces, and impurity atoms. The first two are more foundational, whereas the last two are connected to the type of interfaces formed between graphene and its support material. The predominant process through which charge carriers lose net energy is scattering with phonons, resulting in Joule heating of the lattice. In \gls{RF} applications, however, the operational frequency at which the carriers run generates heat. Thus, two additional characteristics are necessary: first, a high thermal conductivity, and second, a low heat transfer with the substrate. Here, trade-offs are required.
 
-The 2020 International Roadmap for Devices and Systems - which has replaced since 2017 the International Roadmap for Semiconductors - dedicates ample attention to graphene in its report \textit{Beyond CMOS},
-in which technologies and semiconductor materials to complement and replace Si are considered. The race to scale the channel in a \gls{FET} still motivates a significant effort on introducing high-mobility channel materials,
-since the carrier mobility is an appropriate parameter to address carrier transport even in nanometer \glspl{FET}~\cite{schwierz2010nanometer}.
-In fact, most of the early excitements in using graphene as channel material in a standard FET technology were sparked by considering the outstanding mobility values reported since its discovery.
+The 2020 International Roadmap for Devices and Systems, which followed the 2017 International Roadmap for Semiconductors, places a significant emphasis on graphene in its study \textit{beyond CMOS}, which investigates technologies and semiconductor materials that will supplement and/or replace Si. Since carrier mobility is a well acknowledged characteristic for addressing carrier transport in nanoscale \gls{FET}, the race to scale the channel continues to motivate significant efforts to introduce high-mobility channel materials.
 
-At 290 K, the intrinsic mobility $\mu_e^{\textrm{in}}$ of graphene is exceptionally high. The first data were the one obtained in 2004 on large-area graphene, showing an electron mobility $\mu_e^\textrm{in}\simeq10,000$ cm$^{2}$V$^{-1}$s$^{-1}$~\cite{novoselov2004electric}.
-Further studies have demonstrated mobilities spanning between $\mu^{\text{in}}\sim 3000 - 12000$ cm$^2$ V$^{-1}$s$^{-1}$ for carrier concentrations $n\simeq1 - 0.1 \times 10^{12}$ cm$^{-2}$, with
+Indeed, the majority of the initial interest in adopting graphene as a channel material in standard FET technology was sparked by the extraordinary mobility values reported since its discovery (Tab.~\ref{tlc}). \glspl{FET}~\cite{schwierz2010nanometer}. At \SI{290}{\kelvin}, graphene's intrinsic mobility $\mu_e^{\textrm{in}}$ is extraordinarily high. The experimental data reported in 2004 revealed mobilities close to $\mu_e^\textrm{in}\simeq10,000$ cm$^{2}$V$^{-1}$s$^{-1}$~\cite{novoselov2004electric}.
+Experiments conducted thereafter have showed mobility extending between $\mu^{\text{in}}\sim 3000 - 12000$ cm$^2$ V$^{-1}$s$^{-1}$ for carrier concentrations $n\simeq1 - 0.1 \times 10^{12}$ cm$^{-2}$, with
 low-field field-effect mobility\footnote[2]{This differs from the Drude ($\mu_{\textrm{Drude}}=\sigma/ne$) and Hall ($\mu_\textrm{Hall}=-\sigma_e R_H$) mobilities.} ($\mu = (1/C_{\textrm{g}})(\partial \sigma/\partial V_{\textrm{gs}})$)
 that is constant over a quite wide range of $n$ (yielding in this case $\mu_h\simeq1900$ cm$^2$ V$^{-1}$ s$^{-1}$ and $\mu_e\simeq1800$ cm$^2$ V$^{-1}$ s$^{-1}$ for the low $n$ region)~\cite{Meric2008}.
 
-The mobility is limited by different factors such as scattering by charged impurities or defects and electron-phonon scattering. In very clean and suspended samples (where the underling SiO$_2$ substrate has been etched away) the mean free path $l$ increases by almost two order of magnitude, becoming comparabe to the device size, an indication that the ballistic transport regime is reached %\cite{Bolotin2008, du2008andrei}.
-
-Later in 2008~\cite{bolotin2008ultrahigh} and 2013~\cite{wang2013one}, higher mobility values were reported: $\simeq120,000$ cm$^{2}$V$^{-1}$s$^{-1}$ at 240 K and $\simeq1,000,000$ cm$^{2}$V$^{-1}$s$^{-1}$ at 4 K. The reason for these higher values was attributed to the use of suspended graphene rather
-onto substrate, where surface effects inevitably affect the carrier dynamics. At the same time, results ($\simeq120,000$ cm$^{2}$V$^{-1}$s$^{-1}$) obtained at room temperature with graphene onto a single-layer of hexagonal boron nitride (h-BN)~\cite{dean2010boron} and sandwiched between two hBN layer~\cite{wang2013one} have suggested
-that this flat and inert materials can be act as a excellent passivation film for graphene devices.
-
-One of the figure of merit often taken into account for addressing logic applications for a materials is the ratio between the on-state current and the off-state current. The so called on-off ratio $I_\text{on}/I_\text{off}$ has to be in the range 10${^4}$--10${^7}$. While the $I_\text{on}$ is not directly related to the bandgap $E_g$, it is possible to link the value of $I_\text{off}$ with the $E_g$.
-
-In an metal--semiconductor junction (M/S), the current is built by the majority of the carriers, these being electrons or holes for $n$-type or $p$-type semiconductors. Most of the graphene--semiconductor junctions formed during experiments have typical dopant concentration $N\leq10^{17}$ cm$^{-3}$. The $I-V$ characteristics of M/S junctions with such dopant concentrations are well reproduced by the thermoionic emission theory. If we then exclude other possible conduction mechanisms (standard and thermoionic field emission, generation/recombination, diffusion of electron, injection of holes and leakage current), the $I_\text{off}$ becomes proportional to the barrier the electrons have to overcome from the semiconductor to the metal, namely
-
-\begin{equation}
-    I_\textrm{off}\propto\exp{(e\beta\phi_B)}.
-\end{equation}
-
-
-\begin{figure}[hbtp]
-    \begin{center}
-        \includegraphics[width=\textwidth]{chapter_introduction/figures/graphene_device.pdf}
-        \caption{
-            \textbf{(a, top)} Architectures of the main graphene MOSFETs. Charge carriers can be modulated in a graphene channel (epitaxial, CVD-grown, or multi-layer) connecting two metal contacts by either back-gate or top-gate. SiC substrate have been used for growing in-situ thermally decomposed graphene, which has found successful radiofrequency applications.
-            \textbf{(a, bottom)} In the recent years, several solutions have envisiosed graphene substrate sandwiched between two layers of hexagonal boron nitride. Having a little lattice mismatch (about 1.5\% \cite{giovannetti2007substrate}) with the graphene lattice, relative dielectric constant $\epsilon_{\text{h-BN}}$ of 3-4 and large bandgap (5.9 eV) it is considered nowadays the best insulating gate layer for graphene. Devices based on h-BN-sandwiched graphene have been testbeds for recent groundbreaking results such as unconvential superconductivity \cite{cao2018unconventional} and Stoner ferromagnetism \cite{seiler2021quantum}.
-            \textbf{(b)} Energy-band diagrams of graphene-semiconductor (G/S) contacts in thermal equilibrium, when a forward \textbf{(c)} and reverse \textbf{(d)} bias is applied. Symbols are associated to physical observables as explained in the main text.}
-        \label{fig:intro:graphene_device}
-    \end{center}
-\end{figure}
-
-where $e$ is the electron charge, $\phi_B$ is the Schottky barrier height, and $\beta=k_BT$.
-If we assume that the work function of graphene and the metal are the same, then $\phi_B = E_g/2$, where $E_g$ is the bandgap energy originating from the difference of the work function of grahene and the metal; thus, the on--off ratio can be estimated from the useful proportionality~\cite{kim2011role}:
-
-\begin{equation}\label{eq:bandgap_current_ratio}
-    \frac{I_\textrm{on}}{I_\textrm{off}}\propto\exp{\frac{E_g}{2k_BT}},
-\end{equation}
-
-where the thermal energy $k_BT$ and the bandgap are both expressed in meV.
-While for high frequency applications the on--off ratio is of minor importance, several references in literature report suitable values for CMOS bandgap should fall in a range between 300 and 500 meV~\cite{schwierz2010graphene, reddy2011graphene}.
 
 \begin{table}
     \centering
@@ -268,14 +225,35 @@ While for high frequency applications the on--off ratio is of minor importance, 
         $\kappa$ (\si{\watt\per\metre\per\kelvin})             & 68                             & 150                                  & 60.2 & 46    & 27     & 5000            \T \\
         \bottomrule
     \end{tabular}
-    \caption{Differences between the main semiconductors used in modern digital electronics and graphene.}\label{tlc}
+    \caption{Comparison between graphene with the most common semiconductor electronics materials. The general interest in finding solutions for circumnavigating the absence of bangap in graphene is due to various graphene characteristics, including mobility, carrier velocity at saturation, low electrostatic shielding provided by a very low dielectric constant, and an excellent ability to conduct heat, as shown by thermal conductivity values. The last point is particularly pertinent to the design of graphene=based thermal sink components.}\label{tlc}
 \end{table}
 
-Hysteresis between the forward and reverse sweeps have been reported depending on the sweeping rate and range~\cite{wang2010hysteresis}, and attributed mainly to charge trapping in silanol groups (Si--OH), mediated and assisted by surface-bound \ce{H2O} molecules~\cite{joshi2010intrinsic}.
-Despite the usefulness for its proof-of-concept purposes, back-gate devices suffered from parasitic capacitances, making impossible further integration with other components.
-Alternatives geometries have since then been explored, in order to increase the carriers mobility, to decrease contact resistances and parasitic capacitances, and to avoid Schottky barriers formation between the graphene and the semiconductor.
-Top-gate devices have been the first to chronologically appear in the literature.
-Back then in 2007, Lemme and co workeres used a stack of \ce{SiO2} (20 nm), Ti (10 nm), and Au (100 nm) as top gate for modulating the current inside a large-area graphene channel transistor obtained by the exfoliation method~\cite{lemme2007graphene}.
+Later in 2008~\cite{bolotin2008ultrahigh} and 2013~\cite{wang2013one}, higher mobility values were reported: $\simeq120,000$ cm$^{2}$V$^{-1}$s$^{-1}$ at 240 K and $\simeq1,000,000$ cm$^{2}$V$^{-1}$s$^{-1}$ at 4 K. These higher values were attributed to the use of suspended graphene as opposed to graphene on a substrate, where surface effects inevitably affect carrier dynamics. Moreover, mobilities in the order of $\simeq120,000$ cm$^{2}$V$^{-1}$s$^{-1}$ obtained at room temperature with graphene deposited on a single layer of hexagonal boron nitride~\cite{dean2010boron} and sandwiched between two h-BN layers~\cite{wang2013one} indicate that this flat and inert material can serve as an excellent passivation film for graphene devices.
+
+\co{Ion/Ioff ratio}
+Another figure of merit one has to take into account when designing \glspl{FET} is the $I_\text{on}/I_\text{off}$. On-off ratio is the ratio of the current in the on-state to the off-state current when no gate is applied. A high on-off ratio corresponds to a low leakage current, resulting in an enhanced device performance. Due to the short channel effects, the off-current of a \glspl{MOSFET} increases as the channel length scales down. While the scaling of a graphene-based transistor could be, in principle, be robust against this effect, Klein tunnelling often represents the major hurdle when graphene is employed~\cite{schwierz2013graphene}.
+
+It is worthwhile to consider the physics of the metal-semiconductor junction (M/S) in order to understand the physical origin of this figure of merit. The thermoionic emission theory and the exclusion of other types of conduction mechanisms (thermoionic field emission, generation/recombination, electron diffusion, injection of holes, and leakage current) may reasonably reproduce the $I$--$V_\textrm{SD}$ characteristics of such junction. Within this model, the off current is proportional to the barrier that the electrons must overcome in order to move from the semiconductor to the metal:
+
+\begin{equation}
+    I_\textrm{off}\propto\exp{(e\beta\phi_B)}.
+\end{equation}
+
+where $e$ is the electron charge, $\phi_B$ is the Schottky barrier height, and $\beta=k_BT$. A pictorial representation is given in Fig.~\ref{fig:intro:graphene_device}
+Assuming that the work functions of graphene and the metal are identical, the barrier height simply becomes $\phi_B = E_g/2$, where $E_g$ is the bandgap energy of the semiconductor, and the on-off ratio may be estimated from the simple relation ~\cite{kim2011role}:
+
+\begin{equation}\label{eq:bandgap_current_ratio}
+    \frac{I_\textrm{on}}{I_\textrm{off}}\propto\exp{\frac{E_g}{2k_BT}},
+\end{equation}
+
+where the thermal energy $k_BT$ and the bandgap are both expressed in meV. \Gls{CMOS} bandgap values should fall between 300 and 500, according to a number of scholarly references~\cite{schwierz2010graphene, reddy2011graphene}.
+
+Back-gate devices suffered from parasitic capacitances, making further integration with other components impossible despite their usefulness for proof-of-concept purposes. Alternative geometries have since been investigated to increase carrier mobility, decrease contact resistances and parasitic capacitances, and eliminate the Schottky barrier between graphene and semiconductor.
+
+In 2007, Lemme and co workeres used a stack of \ce{SiO2} (20 nm), Ti (10 nm), and Au (100 nm) as top gate for modulating the current inside a large-area graphene channel transistor obtained by exfoliation method marking the advent of vertical graphene transistors.
+
+In 2007, Lemme and coworkers used a stack of \ce{SiO2} (20 nm), Ti (10 nm), and Au (100 nm) as the top gate for modulating the current inside a large-area graphene channel transistor obtained by the exfoliation method, heralding the introduction of vertical graphene transistors~\cite{lemme2007graphene},.
+
 Whilst the gate characteristics exhibit a similar trend of the characteristics (the top gate reduces the back-gate current modulation, lowering the drain current by one order of magnitude) and the hysteresis, weak current saturation at high drain-source bias have been reported~\cite{moon2009epitaxial}.
 This effect seem due to a partial charge pinning at the contacts at high back-gate voltages~\cite{di2011charge} and carrier drift velocity eventually saturating due to optical-phonon scattering~\cite{meric2008current}. Top-gated graphene \glspl{MOSFET} with CVD and epitaxial graphene have been also made~\cite{kedzierski2008epitaxial, lin2010100}; \ce{SiO2}, \ce{Al2O3}, and \ce{HfO2} have been  used as top-gate dielectric.
 
@@ -295,6 +273,17 @@ The main difficulties arise when attempting to quantify the structure and the qu
 Simpler ways to obtain graphene oxide in solution have been reported~\cite{van2016effect}, but once deposited, graphene oxide needs to be reduced for obtaining pure graphene -- low mobility values (up to, at best, 1000 \si{\square\centi\metre\per\volt\per\second}) caused by defects during the fabrication steps have discouraged further investigations along this direction.
 
 Yet in spite of the very different dc behavior compared to the most used semiconductors in digital electroncis, graphene FETs have reported good performance in terms of high-frequency applications. This comparison is made by measuring each system’s frequency response, its output signal strength when it is given a particular input signal: features such as ballistic transport, linear current-voltage characteristics, high transconductance, and very high ($> 10^8$ \si{\ampere\per\square\centi\metre}) sustainable currents are all ideal features for analog/RF applications~\cite{meric2008rf, meric2008current}.
+
+\begin{figure}[hbtp]
+    \begin{center}
+        \includegraphics[width=\textwidth]{chapter_introduction/figures/graphene_device.pdf}
+        \caption{
+            \textbf{(a, top)} Architectures of the main graphene MOSFETs. Charge carriers can be modulated in a graphene channel (epitaxial, CVD-grown, or multi-layer) connecting two metal contacts by either back-gate or top-gate. SiC substrate have been used for growing in-situ thermally decomposed graphene, which has found successful radiofrequency applications.
+            \textbf{(a, bottom)} In the recent years, several solutions have envisiosed graphene substrate sandwiched between two layers of hexagonal boron nitride. Having a little lattice mismatch (about 1.5\% \cite{giovannetti2007substrate}) with the graphene lattice, relative dielectric constant $\epsilon_{\text{h-BN}}$ of 3-4 and large bandgap (5.9 eV) it is considered nowadays the best insulating gate layer for graphene. Devices based on h-BN-sandwiched graphene have been testbeds for recent groundbreaking results such as unconvential superconductivity \cite{cao2018unconventional} and Stoner ferromagnetism \cite{seiler2021quantum}.
+            \textbf{(b)} Energy-band diagrams of graphene-semiconductor (G/S) contacts in thermal equilibrium, when a forward \textbf{(c)} and reverse \textbf{(d)} bias is applied. Symbols are associated to physical observables as explained in the main text.}
+        \label{fig:intro:graphene_device}
+    \end{center}
+\end{figure}
 
 The primary means of estimating frequency response is through the evaluation of two transistor charactersitic frequencies, namely cutoff $f_\textrm{T}$ and maximum of oscillations $f_\textrm{max}$. The former indicates how quickly a signal can travel from the gate to the drain of the device, and it is usually determined when the small-signal current gain drops to unity, while the latter is measured when the power gain decreseas to unity~\cite{schwierz2010graphene}.
 The frequency response depends inversely on gate length and proportionally to the transconductance, which is loosely proportional to mobility. Thus, reducing the gate length and using higher mobility materials are valid approaches to increase the device operational speed~\cite{schwierz2013graphene}. In this context, many research groups have successfully demonstrated RF capabilities with gapless graphene channels \glspl{MOSFET}.
@@ -783,9 +772,9 @@ Interesting enough, the hole mobilities values (2,443 cm$^{2}$V$^{-1}$s$^{-1}$ f
 
 In order to measure bottom-up \gls{GNR} several strategies can be followed. One can first synthesise the ribbon onto a metallic film and transfer the resulting layer of \glspl{GNR} on top of the target substrate, upon dissolution of the metallic part in acidic solution, through mechanical contact. A more robust method developed by Crommie and co-workers instead used a stack of PMMA/\gls{GNR}/Au/Mica: thanks to the protective role played by the PMMA, the quality of the GNRs was preserved during the transfer. The resulting \glspl{GNRFET} reported $I_\textrm{on}=$ \SI{10}{\pico\ampere}--\SI{1}{\nano\ampere}, resulting in p-type doped in air when contacted with Pd metal contacts, and large hysteresis due to absorbed oxygen, water and PMMA residuals. The narrow ribbon width contributes to have a large bandgap ($E_g\simeq$ \SI{2.5}{\electronvolt}) and a transport dominated by the presence of \gls{SB} originating from the significant difference between the work function of Pd ($\phi^\textrm{Pd}\simeq$ \SIrange{5.2}{5.6}{\electronvolt}) and of \gls{GNR}.
 
-Another possible solution to improve the transistor characteristics is to use high-k dielectrics. The reason to employ such dielectrics is because when scaling down the geometrical dimensions of the transistors the thickness of the oxide cannot be scaled as the other geometrical parameters as this would yield oxide thickness to think that would result in leakage currents through the oxide. This phenomena would potentially also lead of having a field beyond the breakdown field of SiO$_2$. Thus, by increasing the permittivity of the dielectric, in order to obtain the same capacitance that one would have obtained with a thinner silicon dioxide dielectrics one can afford a thicker dielectric.
+Another possible solution to improve the transistor characteristics is to use high-k dielectrics. The reason to employ such dielectrics is because when scaling down the geometrical dimensions of the transistors the thickness of the oxide cannot be scaled as the other geometrical parameters as this would yield oxide thickness to think that would result in leakage currents through the oxide. This phenomena would potentially also lead of having a field beyond the breakdown field of \ce{SiO2}. Thus, by increasing the permittivity of the dielectric, in order to obtain the same capacitance that one would have obtained with a thinner silicon dioxide dielectrics one can afford a thicker dielectric.
 
-Llinas \textit{et al.} measured the output charactersistics of bottom-up 9- and 13-\glspl{AGNR} field-effect transistors made by using two different gate dielectrics \cite{llinas2017short}. They compared the output response obtained when using a standard \SI{50}{\nano\metre}-thick SiO$_2$ (back-gate) and a high-k dielectric (HfO$_2$, \gls{EOT}$\simeq$\SI{1.5}{\nano\metre}, local gate). At room temperature, the latter device reported values $I_\textrm{on}>$ \SI{1}{\micro\ampere} for $V_\textrm{SD}=$\SI{-1}{\volt} when using the narrower ribbon; nine carbon dimer lines are equivalent to a width close to \SI{0.95}{nm}. The excellent gate control over the channel was further demonstrated by an excellent $I_\textrm{on}/I_\textrm{off}\simeq 10^5$ ratio.
+Llinas \textit{et al.} measured the output charactersistics of bottom-up 9- and 13-\glspl{AGNR} field-effect transistors made by using two different gate dielectrics \cite{llinas2017short}. They compared the output response obtained when using a standard \SI{50}{\nano\metre}-thick \ce{SiO2} (back-gate) and a high-k dielectric (HfO$_2$, \gls{EOT}$\simeq$\SI{1.5}{\nano\metre}, local gate). At room temperature, the latter device reported values $I_\textrm{on}>$ \SI{1}{\micro\ampere} for $V_\textrm{SD}=$\SI{-1}{\volt} when using the narrower ribbon; nine carbon dimer lines are equivalent to a width close to \SI{0.95}{nm}. The excellent gate control over the channel was further demonstrated by an excellent $I_\textrm{on}/I_\textrm{off}\simeq 10^5$ ratio.
 
 One of the major hurdle of their device however is the metal contact choice. Even thought the tunneling is enhanced by adopting the high-k dielectric, the junction Au/Pd--GNR will always result in \gls{SB} due to an important difference between the two work functions. The adoption of graphene as the contact material might yield to a complete suppression of \gls{SB}.
 
@@ -803,6 +792,6 @@ A proposal from Hammam \textit{et al.} reports band-to-band tunneling (BTBT) in 
 
 \section{Perspective and Outlook}
 
-Graphene nanoribbons shows physical and chemical properties interesting not only for a technological advancement in those fields where graphene and carbon nanotubes lack in performance, but especially in the rich physics they can unveil. At the current stange, bottom-up graphene nanoribbons have shown remarkable transport and exotic properties, but these have been exclusively studied on synthesis substrate. One of the next main challenge in the nanoribbon field is the attempt to investigate such properties also at the device level. At this stange, these evidences remains very scarces and unclear.
+Graphene nanoribbons exhibit intriguing physical and chemical properties not only for technological advancement in areas where graphene and carbon nanotubes lack performance, but also for the physics they can reveal. At this time, bottom-up graphene nanoribbons have demonstrated remarkable transport and exotic properties, but these have been studied solely on the synthesis substrate. Attempting to investigate these properties at the device level will be one of the next major obstacles in the nanoribbon field. At this time, these evidences are largely unavailable and unclear.
 
-Three roles are envisioned where graphene nanoribbons could techonologically contribute. The first one is the application as sensors. The great deal of studies in different gas atmospheres have proved excellent selectivities and good flexibility, given the possibility to functionalise the edges with different chemical substituents. A second papable field could be the integration in low-power devices, where by reducing required supply voltages one can allow to have ribbons with lower bandgaps hence increased mobilities. A third and more enthusiastic application would see the use their topological properties to build dechorence-tolerant quantum hardware. On a personal note I must say this application would probably have only a scientific curiosity aim.
+There are three roles to which graphene nanoribbons may technologically contribute. The first application is that of sensors. Given the ability to functionalize the edges with a variety of chemical substituents, a large number of studies in various gas atmospheres have demonstrated excellent selectivities and good flexibility. A second papable field could be the integration in low-power devices, where by reducing required supply voltages, ribbons with lower bandgaps and consequently higher mobilities could be produced. A third and more enthusiastic application would be the development of dechorence-tolerant quantum hardware utilising their topological properties.

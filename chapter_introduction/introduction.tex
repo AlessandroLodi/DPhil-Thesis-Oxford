@@ -130,10 +130,10 @@ The third and last case gives the point:
     \begin{center}
         \includegraphics[width=0.95\columnwidth]{chapter_introduction/figures/graphene_lattice.pdf}
         \caption{\label{fig:intro:graphene_lattice}
-            \textbf{(a)} Honeycomb lattice of graphene. Two non-equivalent carbon atoms A and B in the primitive cells (direct space) are denoted in yellow and purple. The set of possible translations are showed by the lattice vectors $\vect{a}{_1},\vect{a}{_2}$ (green arrows).
-            \textbf{(b)} The first Brillouin zone of graphene with vertices \vect{K} (orange) and \vect{K'} (green), and reciprocal-lattice vectors drawn in red.
-            \textbf{(c)} Graphene energy dispersion resulted from Eq.~\ref{eq:graphene_hamiltonian} (in units of nearest neighbor hopping parameter \emph t). The magnification shows one of the Dirac cones, which are located at the \vect{K} and \vect{K'} points, emphasising the linear dispersion relation.
-            \textbf{(d)} Density of states as a function of \emph t, showing pronounced van Hove singularities for $\epsilon\simeq \pm t$. The dashed rectangle indicates the low-energy linear dispersion region which is typically probed in back-gated transport experiments.
+            \textbf{a,} Honeycomb lattice of graphene. Two non-equivalent carbon atoms A and B in the primitive cells (direct space) are denoted in yellow and purple. The set of possible translations are showed by the lattice vectors $\vect{a}{_1},\vect{a}{_2}$ (green arrows).
+            \textbf{b,} The first Brillouin zone of graphene with vertices \vect{K} (orange) and \vect{K'} (green), and reciprocal-lattice vectors drawn in red.
+            \textbf{c,} Graphene energy dispersion resulted from Eq.~\ref{eq:graphene_hamiltonian} (in units of nearest neighbor hopping parameter \emph t). The magnification shows one of the Dirac cones, which are located at the \vect{K} and \vect{K'} points, emphasising the linear dispersion relation.
+            \textbf{d,} Density of states as a function of \emph t, showing pronounced van Hove singularities for $\epsilon\simeq \pm t$. The dashed rectangle indicates the low-energy linear dispersion region which is typically probed in back-gated transport experiments.
             Adapted from~\cite{castroneto2009}.
         }
     \end{center}
@@ -196,17 +196,8 @@ Close to the Dirac points, the experimental conductivities lie within $\simeq 2-
 
 \subsection{Graphene Transistors}
 
-The first prototypes of graphene-based \glspl{FET} were made through back-gate contact. In this geometry, tipically the gate is a Si/\ce{SiO2} substrate on top of which graphene (\gls{CVD}, single-layer, epitaxial) is placed thorugh some transfer method (Fig.~\ref{fig:intro:graphene_device}). For transistor applications, a material must have a highly conductive on-state and an off-state in which no source-drain $I_\textrm{SD}$ current flows. For \gls{RF} applications, however, full-speed operation is attained by operating in the (drain) current saturation regime. Both applications demand a variable bandgap. Moreover, the trend of \gls{IC} scaling is frequently contrasted with chip-level concerns such as power densities (now on the order of 1000 W/cm$^2$), heat production, and chip temperatures approaching levels that impede stable operations.
-
-In CMOS logic, charge carriers are driven by the electric field  $\CMcal{E}_\textrm{sd}$ between source and drain, resulting in four potential sources of scattering: electron--electron, electron-phonon (lattice vibrations), material interfaces, and impurity atoms. The first two are more foundational, whereas the last two are connected to the type of interfaces formed between graphene and its support material. The predominant process through which charge carriers lose net energy is scattering with phonons, resulting in Joule heating of the lattice. In \gls{RF} applications, however, the operational frequency at which the carriers run generates heat. Thus, two additional characteristics are necessary: first, a high thermal conductivity, and second, a low heat transfer with the substrate. Here, trade-offs are required.
-
-The 2020 International Roadmap for Devices and Systems, which followed the 2017 International Roadmap for Semiconductors, places a significant emphasis on graphene in its study \textit{beyond CMOS}, which investigates technologies and semiconductor materials that will supplement and/or replace Si. Since carrier mobility is a well acknowledged characteristic for addressing carrier transport in nanoscale \gls{FET}, the race to scale the channel continues to motivate significant efforts to introduce high-mobility channel materials.
-
-Indeed, the majority of the initial interest in adopting graphene as a channel material in standard FET technology was sparked by the extraordinary mobility values reported since its discovery (Tab.~\ref{tlc}). \glspl{FET}~\cite{schwierz2010nanometer}. At \SI{290}{\kelvin}, graphene's intrinsic mobility $\mu_e^{\textrm{in}}$ is extraordinarily high. The experimental data reported in 2004 revealed mobilities close to $\mu_e^\textrm{in}\simeq10,000$ cm$^{2}$V$^{-1}$s$^{-1}$~\cite{novoselov2004electric}.
-Experiments conducted thereafter have showed mobility extending between $\mu^{\text{in}}\sim 3000 - 12000$ cm$^2$ V$^{-1}$s$^{-1}$ for carrier concentrations $n\simeq1 - 0.1 \times 10^{12}$ cm$^{-2}$, with
-low-field field-effect mobility\footnote[2]{This differs from the Drude ($\mu_{\textrm{Drude}}=\sigma/ne$) and Hall ($\mu_\textrm{Hall}=-\sigma_e R_H$) mobilities.} ($\mu = (1/C_{\textrm{g}})(\partial \sigma/\partial V_{\textrm{gs}})$)
-that is constant over a quite wide range of $n$ (yielding in this case $\mu_h\simeq1900$ cm$^2$ V$^{-1}$ s$^{-1}$ and $\mu_e\simeq1800$ cm$^2$ V$^{-1}$ s$^{-1}$ for the low $n$ region)~\cite{Meric2008}.
-
+%%%%%%%%%%%%%%%%%%%%%% DIGITAL LOGIC
+The 2020 International Roadmap for Devices and Systems, which followed the 2017 International Roadmap for Semiconductors, places a significant emphasis on graphene in its study \textit{beyond CMOS}, which investigates technologies and semiconductor materials that will supplement and/or replace Si (Tab~\ref{tlc}). Since carrier mobility is a well acknowledged characteristic for addressing carrier transport in nanoscale \gls{FET}, the race to scale down transistor density per chip continues to motivate significant efforts to introduce high-mobility channel materials.
 
 \begin{table}
     \centering
@@ -228,142 +219,84 @@ that is constant over a quite wide range of $n$ (yielding in this case $\mu_h\si
     \caption{Comparison between graphene with the most common semiconductor electronics materials. The general interest in finding solutions for circumnavigating the absence of bangap in graphene is due to various graphene characteristics, including mobility, carrier velocity at saturation, low electrostatic shielding provided by a very low dielectric constant, and an excellent ability to conduct heat, as shown by thermal conductivity values. The last point is particularly pertinent to the design of graphene=based thermal sink components.}\label{tlc}
 \end{table}
 
-Later in 2008~\cite{bolotin2008ultrahigh} and 2013~\cite{wang2013one}, higher mobility values were reported: $\simeq120,000$ cm$^{2}$V$^{-1}$s$^{-1}$ at 240 K and $\simeq1,000,000$ cm$^{2}$V$^{-1}$s$^{-1}$ at 4 K. These higher values were attributed to the use of suspended graphene as opposed to graphene on a substrate, where surface effects inevitably affect carrier dynamics. Moreover, mobilities in the order of $\simeq120,000$ cm$^{2}$V$^{-1}$s$^{-1}$ obtained at room temperature with graphene deposited on a single layer of hexagonal boron nitride~\cite{dean2010boron} and sandwiched between two h-BN layers~\cite{wang2013one} indicate that this flat and inert material can serve as an excellent passivation film for graphene devices.
+Initial interest for using graphene as a channel material in CMOS logic may have been fueled by its remarkable mobility~\cite{schwierz2010nanometer}. In a standard CMOS gate, carriers are driven by a longitudinal electric field $\CMcal{E}_\textrm{SD}$ from the the source to the drain, and their motion is often limited by various scattering sources, such as collisions between electrons and vibrational modes of the crystal lattice from which the gate is made. In their first graphene-based \gls{FET} prototype, Novoselov and colleagues measured an impressive intrinsic mobility $\mu_e^{\textrm{in}}$ at \SI{290}{\kelvin} close to $\mu_e^\textrm{in}\simeq10,000$ cm$^{2}$V$^{-1}$s$^{-1}$~\cite{novoselov2004electric} using a single layer of graphene on a Si/\ce{SiO2} substrate serving as a back-gate. These results were explained by first assuming that graphene possesses conical rather than parabolic electron energy bands close to the Fermi energy, with electrons travelling at speeds close to the speed of light and, thus, with negligible effective mass. And second, by recognising that the honeycomb lattice symmetry implies a two-component wave function, which has the practical effect of cancelling direct carrier backscattering. Although it was believed that charged impurities~\cite{hwang2007carrier} or microscopic ripples~\cite{schedin2007detection} scatterings were predominant at low temperatures, it is now widely accepted that the very little electron--phonon scattering contribution even at room temperature is responsible for mobility values $\mu^{\text{in}}\simeq200,000$ cm$^{2}$V$^{-1}$s$^{-1}$~\cite{morozov2008giant}.
 
-\co{Ion/Ioff ratio}
-Another figure of merit one has to take into account when designing \glspl{FET} is the $I_\text{on}/I_\text{off}$. On-off ratio is the ratio of the current in the on-state to the off-state current when no gate is applied. A high on-off ratio corresponds to a low leakage current, resulting in an enhanced device performance. Due to the short channel effects, the off-current of a \glspl{MOSFET} increases as the channel length scales down. While the scaling of a graphene-based transistor could be, in principle, be robust against this effect, Klein tunnelling often represents the major hurdle when graphene is employed~\cite{schwierz2013graphene}.
-
-It is worthwhile to consider the physics of the metal-semiconductor junction (M/S) in order to understand the physical origin of this figure of merit. The thermoionic emission theory and the exclusion of other types of conduction mechanisms (thermoionic field emission, generation/recombination, electron diffusion, injection of holes, and leakage current) may reasonably reproduce the $I$--$V_\textrm{SD}$ characteristics of such junction. Within this model, the off current is proportional to the barrier that the electrons must overcome in order to move from the semiconductor to the metal:
-
-\begin{equation}
-    I_\textrm{off}\propto\exp{(e\beta\phi_B)}.
-\end{equation}
-
-where $e$ is the electron charge, $\phi_B$ is the Schottky barrier height, and $\beta=k_BT$. A pictorial representation is given in Fig.~\ref{fig:intro:graphene_device}
-Assuming that the work functions of graphene and the metal are identical, the barrier height simply becomes $\phi_B = E_g/2$, where $E_g$ is the bandgap energy of the semiconductor, and the on-off ratio may be estimated from the simple relation ~\cite{kim2011role}:
-
-\begin{equation}\label{eq:bandgap_current_ratio}
-    \frac{I_\textrm{on}}{I_\textrm{off}}\propto\exp{\frac{E_g}{2k_BT}},
-\end{equation}
-
-where the thermal energy $k_BT$ and the bandgap are both expressed in meV. \Gls{CMOS} bandgap values should fall between 300 and 500, according to a number of scholarly references~\cite{schwierz2010graphene, reddy2011graphene}.
-
-Back-gate devices suffered from parasitic capacitances, making further integration with other components impossible despite their usefulness for proof-of-concept purposes. Alternative geometries have since been investigated to increase carrier mobility, decrease contact resistances and parasitic capacitances, and eliminate the Schottky barrier between graphene and semiconductor.
-
-In 2007, Lemme and co workeres used a stack of \ce{SiO2} (20 nm), Ti (10 nm), and Au (100 nm) as top gate for modulating the current inside a large-area graphene channel transistor obtained by exfoliation method marking the advent of vertical graphene transistors.
-
-In 2007, Lemme and coworkers used a stack of \ce{SiO2} (20 nm), Ti (10 nm), and Au (100 nm) as the top gate for modulating the current inside a large-area graphene channel transistor obtained by the exfoliation method, heralding the introduction of vertical graphene transistors~\cite{lemme2007graphene},.
-
-Whilst the gate characteristics exhibit a similar trend of the characteristics (the top gate reduces the back-gate current modulation, lowering the drain current by one order of magnitude) and the hysteresis, weak current saturation at high drain-source bias have been reported~\cite{moon2009epitaxial}.
-This effect seem due to a partial charge pinning at the contacts at high back-gate voltages~\cite{di2011charge} and carrier drift velocity eventually saturating due to optical-phonon scattering~\cite{meric2008current}. Top-gated graphene \glspl{MOSFET} with CVD and epitaxial graphene have been also made~\cite{kedzierski2008epitaxial, lin2010100}; \ce{SiO2}, \ce{Al2O3}, and \ce{HfO2} have been  used as top-gate dielectric.
-
-However, despite the improvements obtained with a top gate, most graphene \gls{MOSFET} with large-area graphene channels show on-off switching ratios of less than 10 at room temperature~\cite{schwierz2010graphene}, much too little for complex logic circuits.
-
-In 2012, Mehr \textit{et al}.\ proposed a vertical arrangement of emitter, base, and collector similar to the original vacuum triode, where graphene plays the base role and electrons travel vertically rather than transversely.
-When the device is in the ON state, the electrons tunnel with a Fowler-Nordheim tunnelling mechanism:
-
-\begin{equation}
-    I\propto\qty(\frac{V_\textrm{SD}}{d})^2~\exp{-\frac{\alpha~d}{V_{sd}}},
-\end{equation}
-
-through the emitter--base layer (of thickness $d$); ON/OFF ratios of the order of $10^4$ have been demonstrated using graphene between two h-BN layers~\cite{britnell2012field} and using \ce{WeS2}--graphene~\cite{georgiou2013vertical} heterostructures.
-
-Solution methods have also been explored, in which graphene is dropcasted on top of a semiconducting wafer, and then spin-coated~\cite{liu2010simple}.
-The main difficulties arise when attempting to quantify the structure and the quality of the deposited graphene, and not many methods can guarantee a good dispersion in organic solvents~\cite{sun2011graphene}.
-Simpler ways to obtain graphene oxide in solution have been reported~\cite{van2016effect}, but once deposited, graphene oxide needs to be reduced for obtaining pure graphene -- low mobility values (up to, at best, 1000 \si{\square\centi\metre\per\volt\per\second}) caused by defects during the fabrication steps have discouraged further investigations along this direction.
-
-Yet in spite of the very different dc behavior compared to the most used semiconductors in digital electroncis, graphene FETs have reported good performance in terms of high-frequency applications. This comparison is made by measuring each system’s frequency response, its output signal strength when it is given a particular input signal: features such as ballistic transport, linear current-voltage characteristics, high transconductance, and very high ($> 10^8$ \si{\ampere\per\square\centi\metre}) sustainable currents are all ideal features for analog/RF applications~\cite{meric2008rf, meric2008current}.
+In order to successufully realise a field-effect transistor, however, a suitable material has to be able to switch on and off, as these are mapped onto the two logic levels high-voltage/low-voltage, and been able to perpertuate this states against voltage variation. The figure of merit associated with this requirement is the so called $I_\text{on}/I_\text{off}$. On-off ratio is the ratio of the current in the on-state to the off-state current when no gate is applied. A high on-off ratio corresponds to a low leakage current, resulting in an enhanced device performance. Due to the short channel effects, the off-current of a \glspl{MOSFET} increases as the channel length scales down. While the scaling of a graphene-based transistor could be, in principle, be robust against this effect, Klein tunnelling often represents the major hurdle when graphene is employed~\cite{schwierz2013graphene}.
 
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_introduction/figures/graphene_device.pdf}
         \caption{
-            \textbf{(a, top)} Architectures of the main graphene MOSFETs. Charge carriers can be modulated in a graphene channel (epitaxial, CVD-grown, or multi-layer) connecting two metal contacts by either back-gate or top-gate. SiC substrate have been used for growing in-situ thermally decomposed graphene, which has found successful radiofrequency applications.
-            \textbf{(a, bottom)} In the recent years, several solutions have envisiosed graphene substrate sandwiched between two layers of hexagonal boron nitride. Having a little lattice mismatch (about 1.5\% \cite{giovannetti2007substrate}) with the graphene lattice, relative dielectric constant $\epsilon_{\text{h-BN}}$ of 3-4 and large bandgap (5.9 eV) it is considered nowadays the best insulating gate layer for graphene. Devices based on h-BN-sandwiched graphene have been testbeds for recent groundbreaking results such as unconvential superconductivity \cite{cao2018unconventional} and Stoner ferromagnetism \cite{seiler2021quantum}.
-            \textbf{(b)} Energy-band diagrams of graphene-semiconductor (G/S) contacts in thermal equilibrium, when a forward \textbf{(c)} and reverse \textbf{(d)} bias is applied. Symbols are associated to physical observables as explained in the main text.}
+            \textbf{a (top),} Architectures of the main graphene MOSFETs. Charge carriers can be modulated in a graphene channel (epitaxial, CVD-grown, or multi-layer) connecting two metal contacts by either back-gate or top-gate. SiC substrate have been used for growing in-situ thermally decomposed graphene, which has found successful radiofrequency applications.
+            \textbf{a (bottom),} In recent years, several solutions have envisioned graphene substrate sandwiched between two hexagonal boron nitride layers. Having a slight lattice mismatch (about 1.5\% \cite{giovannetti2007substrate}) relative to graphene, $\epsilon_{\text{h-BN}}\simeq 3-4$ and significant bandgap (5.9 eV), it is considered the best insulating gate layer for graphene nowadays. Devices based on h-BN-sandwiched graphene have been testbeds for recent groundbreaking results such as unconventional superconductivity \cite{cao2018unconventional} and Stoner ferromagnetism \cite{seiler2021quantum}.
+            \textbf{b,} Energy-band diagrams of graphene-semiconductor (G/S) contacts in thermal equilibrium, when a forward \textbf{c,} and reverse \textbf{d,} bias is applied. Symbols are associated to physical observables as explained in the main text.}
         \label{fig:intro:graphene_device}
     \end{center}
 \end{figure}
 
-The primary means of estimating frequency response is through the evaluation of two transistor charactersitic frequencies, namely cutoff $f_\textrm{T}$ and maximum of oscillations $f_\textrm{max}$. The former indicates how quickly a signal can travel from the gate to the drain of the device, and it is usually determined when the small-signal current gain drops to unity, while the latter is measured when the power gain decreseas to unity~\cite{schwierz2010graphene}.
-The frequency response depends inversely on gate length and proportionally to the transconductance, which is loosely proportional to mobility. Thus, reducing the gate length and using higher mobility materials are valid approaches to increase the device operational speed~\cite{schwierz2013graphene}. In this context, many research groups have successfully demonstrated RF capabilities with gapless graphene channels \glspl{MOSFET}.
+Within the thermoionic emission model for the drain current, when graphene is placed on top of a semiconductor structure, the two workfunctions align accordingly based on the doping and carrier concentration levels (see a pictorial representation in Fig.~\ref{fig:intro:graphene_device}). By assuming that the two work functions are identical, the height of the Schottky barrier between graphene and the semiconductor may be written as $\phi_B = E_g/2$, where $E_g$ is the bandgap energy of the semiconductor, and the on-off ratio may be estimated from the simple relation ~\cite{kim2011role}:
 
-The first device with cutoff frequency $f_\textrm{T}$ in the GHz range was reported in late 2008, and was farbicated by exfoliated graphene deposited on top of high-resistivity \ce{Si} substrate, with 30-nm-thick top-gate \ce{HfO2} dielectric and 500 nm of gate length~\cite{meric2008rf}.
-Despite a measured $f_\textrm{T}\simeq 14.7$ GHz, it was argued that large contact resistances and gate length were the main responsible of poor perfomance $f_\textrm{max} < 1$ GHz.
+\begin{equation}\label{eq:bandgap_current_ratio}
+    \frac{I_\textrm{on}}{I_\textrm{off}}\propto\exp{\frac{E_g}{2k_BT}},
+\end{equation}
 
-The following year, Pd/Au contacts and 12-nm-thick \ce{Al2O3} were employed in a 350-nm-gate~\cite{lin2009development}. While the cutoff frequency improved up to $f_\textrm{T}\simeq 50$ GHz, little gains in terms of $f_\textrm{max}$ were obtained of only 2 GHz. In general, limited performance in $f_\textrm{max}$
-represents a major issue as for most RF applications $f_\textrm{T}$ is less important than $f_\textrm{max}$.
+where the thermal energy $k_BT$ and the bandgap are both expressed in meV. Several researchers have seen bandgap values between 300 and 500 meV to yield the ideal rations for \Gls{CMOS} applications~\cite{schwierz2010graphene, reddy2011graphene}.
 
-It was only after two years that an increase of one order of magnitude both in the cutoff and the maximum frequency of oscillation was demosntrated~\cite{lin2010100}. The device was realised with epitaxially-grown on silicon carbide (\ce{SiC}) graphene \gls{MOSFET} having 240 nm of gate length, with Ti/Pd/Au for contacts and 10-nm-thick \ce{HfO2} of insulating layer on top gates. Highest frequency as well as $f_\textrm{T}\simeq 100$ GHz and $f_\textrm{max}\simeq 14$ GHz were measured,
-exceeding any device then present. The authors also argued that since $f_\textrm{max}$ is strongly correlated to device layout and parasitic resistances originating from the metallic contacts, viable ways to improve this parameter would be a partial passivation of the metal contacts and a multi-finger gate layout
+%%%%%%%%%%%%%%%%%%%%%% RFFFFFFFFFFFFFFFFFFFFFFFFFF
+Despite considerable efforts, the metallic nature of graphene has hindered CMOS architectures from reaching an off state with a high resistance, deeming them unsuitable for logic applications. In contrast, graphene-based electronics have found broad use in applications requiring high frequencies. For analogue applications, properties such as ballistic transport, linear current-voltage characteristics, high transconductance, and exceptionally high sustained currents ($> 10^8$ \si{\ampere\per\square\centi\metre}) have proven to be optimal~\cite{meric2008rf, meric2008current}.
 
-These perfomance were soon followed later that year by a 144-nm-length gate device with $f_T \simeq 300$ GHz using mechanically exfoliated graphene and \ce{Co2Si}–\ce{Al2O3} nanowire as self-aligned multi top-gates~\cite{liao2010high}. This result was also corrobated by comparing it with the projected
-value using the relation that links dc transconductance and gate capacitance with the cutoff frequency when total input parasitic capacitance is negligible, namely $f_\textrm{T} = g_\textrm{m}/(2\pi C_\textrm{g})$~\cite{sze2021physics}. The authors did not report the power $G^{1/2}_\textrm{max}$ but only the current $\abs{h_{21}}$ gain, thus hampering an evaluation of $f_\textrm{max}$,
-but in 2012 a similar proposal was advanced by Cheng \textit{et al.}, where Au/Ti/\ce{Al2O3} gate stacks were employed in self-aligned transistors~\cite{cheng2012high}. Despite the improvements reported ($f_\textrm{T}\simeq 427$ GHz for a channel length of 67 nm) respect to CVD graphene transistors with comparable channel length, $f_\textrm{max}$ decresead down to 8 GHz when the length was shrunk down to 46 nm, showing the
-key role played by gate and parasitic resistances at high frequency.
+The assessment of two transistor characteristic frequencies, namely cutoff $f_\textrm{T}$ and maximum of oscillations $f_\textrm{max}$, is the primary tool for determining frequency response. The former indicates how quickly a signal may travel from the gate to the drain of the device and is often measured when the small-signal current gain approaches unity, whilst the latter is the highest possible frequency at which there is a non-vanishing power-gain~\cite{schwierz2010graphene}.
+The frequency response is inversely related to the length of the gate and proportional to the transconductance, which is approximately proportional to mobility\footnote[2]{This is strictly valid is the mobilities are described within the diffusive regime. Carriers are close to ballistic values, then the transconductance is constant.}. Therefore, to achieve a high cut-off frequencies in a transistor, high carrier mobility must be maintained while the channel length is scaled down~\cite{schwierz2013graphene}. In this regard, numerous research groups have shown gapless graphene channel \gls{RF} capabilities.
 
-To further improve the power gain, works on the saturation behavior of short channel graphene transistor were also conducted by IBM in 2012, by using CVD graphene grown on a Cu foil and then transferred on diamond-like and SiC substrates~\cite{wu2012state}. These are appealing because high-quality
-wafers are available, thus making a scale up of graphene arrays relatively straightforward. Since the work function of graphene is $\phi^\textrm{g} = 4.5$ eV and $\phi^\textrm{4H-\ce{SiC}} = 3.7$ eV, this means that $\Delta\phi^\textrm{g--4H-SiC} = 0.8$ eV, thus $n$-doping graphene~\cite{sonde2009electrical}.
-Very cleverly, the authors then used plasma-enhanced CVD silicon nitride as an intrisic p-type gate dielectric, counterbalancing the n-doped graphene channels. Encouraing performance at high speed were not only measured in good cutoff frequencies ($f_\textrm{T}\simeq 350$ GHz), but also in a factor of 2 improvement
-of $f_\textrm{max}$ ($\simeq 40$ GHz).
-To the best of my knowledge, the current graphene transistor power gain record of about 70 GHz was obtained in 2013 by using (000-1) carbon-terminated surface of SiC instead of the (0001) Si one, indicating the contact resistance $R_\textrm{c}$ between Pd/Au contacts and graphene as key responsible for the high $f_\textrm{max}$.
+Late in 2008, it was claimed that the first device with a cutoff frequency in the gigahertz region was farbicated using exfoliated graphene placed on a high-resistivity silicon substrate, with a 30-nm-thick top-gate dielectric made of \ce{HfO2} and a 500-nm-long gate~\cite{meric2008rf}. Despite a reported cutoff frequency of about $f_\textrm{T}\simeq\SI{14.7}{\giga\hertz}$ it was stated that excessive contact resistances and gate length were the primary causes of low ($f_\textrm{max}<\SI{1}{\giga\hertz}$) maximum frequency performance. The following year, Pd/Au contacts and a 12-nm-thick aluminum oxide were implemented in a 350-nm-long graphene gate, and although the cutoff frequency was increased to \SI{50}{\giga\hertz} the maximum frequency was only increased by a small amount to \SI{2}{\giga\hertz}~\cite{lin2009development}. This poor performance was attributed to the organic contaminations on the graphene surface resulting from the use of poly(methyl methacrylate) (PMMA) as a supporting layer during the transfer process, as well as the poor development of gate dielectrics~\cite{jang2014improved}.
 
-While these results have aligned graphene MOSFET with the main solid-state competitors -- such as GaAS pHEMT, InP HEMT and Si MOSFET -- in terms of $f_\textrm{T}$, the perfomance is terms of $f_\textrm{max}$ are off by about one~\cite{tan1990InGaAs, post2006RF} or two orders of magnitude~\cite{lai2007sub}. In literature, one of the often cited fundamental reason
-for this behaviour is the poor drain saturation current in graphene, which ultimately depends on the missing bandgap of the channel. Graphene-derived materials such as nanoribbons and carbon nanotubes MOSFET could then, given their intrisic semiconducting nature, represent a possible solution to this problem.
+After two years, a one-order-of-magnitude rise in the cutoff and the highest frequency of oscillation were demonstrated~\cite{lin2010100}. The device was realised with an epitaxially grown silicon-carbide graphene MOSFET with a \SI{240}{\nano\metre} gate length, Ti/Pd/Au contacts, and hafnium oxide 10 nm thick as top gate. Local gating is frequently preferred as gate-source, and gate-drain capacitances are inversely proportional to the channel length and minimised in this geometric configuration, hence improving the cut-off frequency that can be reached~\cite{liao2012graphene}. In addition to $f_\textrm{T}\simeq\SI{100}{\giga\hertz}$, the highest maximum frequency ever measured was $f_\textrm{max}\simeq\SI{100}{\giga\hertz}$, beyond the capabilities of any technology at the time. The researchers also stated that since maximum oscillation frequency is significantly associated to device layout and parasitic resistances arising from the metallic contacts, partial passivation of the metal contacts and a multi-finger gate layout would be viable strategies to increase this parameter.
+
+Later the same year, a 144-nm-long gate device with $f_\textrm{T}\simeq\SI{300}{\giga\hertz}$ was developed using mechanically exfoliated graphene and \ce{Co2Si}–\ce{Al2O3} nanowire as self-aligned multi top-gates~\cite{liao2010high}. This result was also confirmed by comparing it to the predicted value based on the relationship\footnote[2]{$f_\textrm{T} = g_\textrm{m}/(2\pi C_\textrm{g})$~\cite{sze2021physics}} between dc transconductance, gate capacitance, and the cutoff frequency in the case where total input parasitic capacitance is negligible. The authors did not report the power $G^{1/2}_\textrm{max}$, only the current gain $\abs{h_{21}}$, making it difficult to assess the $f_\textrm{max}$ of the device. A rough estimate might be extracted by looking at the results reported by Cheng and colleagues on a similar device where the gate was realised through a stack of Au/Ti/\ce{Al2O3}~\cite{cheng2012high}. The achieved enhancements in the cutoff frequency response ($f_\textrm{T}\simeq\SI{427}{\giga\hertz}$ for a channel length of 67 nm) compared with CVD graphene-based device with similar gate length were, however, eclipsed by minor improvements to the device's maximum frequency response up to \SI{8}{\giga\hertz} when the gate length was lowered to 46 nm. As for the cutoff frequency, it is vital to minimise all parasitic resistances and capacitance in order to optimise $f_\textrm{max}$. In addition, the output conductance must be decreased in order to obtain the highest feasible operating speeds, which is often accomplished by operating the transistor in the drain current saturation regime.
+
+IBM did also some research on the saturation behavior of short channel graphene transistors leveraging CVD graphene transferred to diamond-like and SiC substrates in an attempt to improve the power gain~\cite{wu2012state}. These are particularly attractive possibilities since the substrates are commercially accessible on high-quality wafers, allowing the scaling up of graphene arrays quite straightforward. Since the work function of graphene ($\phi^\textrm{g} = \SI{4.5}{\electronvolt}$) is greater than that of silicon carbide ($\phi^\textrm{4H-\ce{SiC}} = \SI{3.7}{\electronvolt}$), negative charges accumulate on the graphene side of the contact, leaving graphene n-doped~\cite{sonde2009electrical}. The authors compensated this unwanted doping by using an innovative technique involving plasma-enhanced CVD silicon nitride as an intrinsic p-type gate dielectric. Positive performances at high speed were assessed not only by good cutoff frequencies ($f_\textrm{T}\simeq \SI{350}{\giga\hertz}$), but also by a twofold increase in maximum oscillation frequency $f_\textrm{max}$ $\simeq\SI{40}{\giga\hertz}$. According to my knowledge, the current graphene transistor power gain record of approximately \SI{70}{\giga\hertz} was achieved by using a (000-1) carbon-terminated surface of silicon carbide instead of the conventional (0001) Si, indicating that a low contact resistance between the gold contacts and graphene is the primary factor responsible for the high maximum frequency~\cite{guo2013record}.
+
+
+In terms of cutoff frequencies, the performance of graphene-based devices is comparable to that of the leading solid-state competitors, such as GaAs pHEMT, InP HEMT, and Si MOSFET. However, the performance in terms of maximum frequencies is off by one or two orders of magnitude~\cite{tan1990InGaAs, post2006RF,lai2007sub}. In the scientific literature, one of the most frequently mentioned underlying causes for this behaviour is the poor drain saturation current in graphene, which ultimately depends on the absence of the channel's bandgap. Given their inherent semiconductivity, graphene-derived materials such as nanoribbons and carbon nanotube MOSFET could be a potential answer to this challenge.
+
+
 
 \section{Carbon-Nanotube}
 
-\subsection{Crystal and Band Structure}
+\co{Introduction, to adjust}
+The nanotubes literature is extensive and well documented. In the part that follows, I will attempt to emphasise key factors that, in my opinion, played a significant role in improving the competitiveness of carbon nanotube-based transistors. My objective is to present a very broad overview and direct interested readers to the reported technical literature.
 
-This crystalline form of carbon can be considered as a rolled up sheet of graphene and comes in two major flavours: \gls{SWNT} and \gls{MWNT}.
-\Glspl{CNT} display an electronic bandgap which depends on the chirality and the diameter of the nanotube~\cite{dresselhaus2000carbon}.
-Having defined two unit vectors in the real space, $\vect{a_1}$ and $\vect{a_2}$, a \gls{CNT} can be described by the linear combination of these with integers coefficients ($m$, $n$). Based on the values of $m$ and $n$, \glspl{CNT} can be metallic , quasi-metallic ($m - n$ is a multiple of 3, with $m\cdot n \neq 0$ and $m \neq n$),
-and semiconducting for the majority of the remaining cases -- exceptions due to the curvature (spin--orbit couplings) in small-diameter tubes are also known~\cite{laird2015quantum}.
+In contrast to graphene, \gls{CNT} have an electrical bandgap that varies according to the nanotube's chirality and diameter~\cite{dresselhaus2000carbon}. Any nanotube can be defined in the real space by defining two unit vectors $\vect{a_1}$ and $\vect{a_2}$ and any linear combination of these with integer coefficients, typically labelled $m$ and $n$. Depending on their values, a nanotube may be metallic, quasi-metallic, or semiconducting; to this simplified picture, one may add exceptions induced by the strong curvature (which leads to a certain kind of spin-orbit interactions) when the diameter of the tube is extremely small~\cite{laird2015quantum}.
+
+%new
+As depicted in Fig.~\ref{fig:intro:cnt_structure}, states resulting from quantization in the circumferential direction may or may not pass through one of the $\vect{K}$ points in the first Brillouin zone of graphene. The resulting nanotube will be metallic if they cross a $\vect{K}$ point; else, it will be semiconducting. This feature of the crystal structure was essential for the development of the first prototype \gls{CNTFET}.
+
+1998 saw the discovery of the charge carrier modulation within a nanotube by a gate-induced field from the group of Cees Dekkar~\cite{tans1998room}. These early \glspl{FET} were manufactured using a doped silicon substrate as the gate to regulate the energy bands, with thermally-grown silicon dioxide acting as the dielectric between the nanotube and the substrate, and Au contacts to electrically contacting  the nanotube.
+
+Since then, other transistor designs have been proven and can be classified fundamentally as devices with or without a spacer. The length of the spacer $L_\textrm{spr}$ is the gap between the source/drain metal contacts and the channel. Given that a certain class of nanotube is intrinsically semiconducting, in spacer-less devices the motion of charge carriers is not induced by the electric field $\CMcal{E}_\textrm{SD}$ in the channel, but are instead injected from the contacts. The role of the gate is to lower the thermal barrier in the channel, thereby permitting tunnelling through the \gls{SB} at the source. In this case, the height of the metal's work function $\phi^\textrm{M}$ plays a crucial part in the transistor's performance.
+
+In contrast, \glspl{CNTFET} with spacers are less constrained by injection at the source since the electric field created by the gate between source and drain controls the carriers. It has been demonstrated that a device with spacers is more resistant to ambipolar conduction due to the substantial carrier barrier injection at the drain~\cite{torres2014introduction}; Tab.~\ref{tab: CNFET} provides an overview of gated-spacer (top and bottom) devices.
 
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_introduction/figures/cnt_structure.pdf}
         \caption{
-            \textbf{(a)} Cartoon structure of a chiral (8, 2), an armchair (5, 5), and zigzag (10, 0) nanotube.
-            \textbf{(b)} Graphene Brillouin zone and allowed k-vectors for the (8, 2) and (10, 0) CNTs. A metallic tube include one of the \vect{K} points among the set of allowed k-vectors, as shown in \textbf{(b)}. It is then possible to linearise the energy in the momentum space for low-excitations (close to the Fermi energy). Conversely, the \vect{K} point is not an allowed vector for semiconducting nanotube, and this leads to an energy gap. Inspired by~\cite{torres2014introduction}.}
+            \textbf{a,} Cartoon structure of a chiral (8, 2), an armchair (5, 5), and zigzag (10, 0) nanotube.
+            \textbf{b,} Graphene Brillouin zone and allowed k-vectors for the (8, 2) and (10, 0) CNTs. A metallic tube include one of the \vect{K} points among the set of allowed k-vectors, as shown in \textbf{c,}. It is then possible to linearise the energy in the momentum space for low-excitations (close to the Fermi energy). Conversely, the \vect{K} point is not an allowed vector for semiconducting nanotube, and this leads to an energy gap. Inspired by~\cite{torres2014introduction}.}
         \label{fig:intro:cnt_structure}
     \end{center}
 \end{figure}
 
-Thus, a quantization of the electronic states in the circumferential direction is resulted when the nanotube diameter $d_\textrm{CNT}$ is between 0.8 and 2.5 nm. Each of these substates is called subband
-and are determined by the periodic boundary condition. Having defined a circumferential wave vector $\vect{k_c}$ such that $\vect{k_c}\cdot\vect{c} = k_c\abs{c} = k_c\pi d_\textrm{CNT} = 2\pi\nu$, for $\nu$ integer, it is possible from this relation to draw parallel lines in the first Brillouin zone of graphene.
-If the subband intersect one of the $\vect{K}$ points, than the resulting nanotube will have no energy gap and thus exhibit metallic properties (this condition is realised by having $m = n$ for the coefficients of the chiral vector).
-If none of the subbands pass through $\vect{K}$ then the resulting \gls{CNT} will be semiconducting, having a $E_g$ proportional to the smallest distance between a $\vect{K}$ point and the subband lines:
 
-\begin{equation}
-    E_g = 2\qty(\pdv{E}{k})\frac{k_c}{3}=\frac{2}{3}\hbar v_F\frac{2\pi}{\abs{c}} = \frac{4}{3}\hbar v_F\frac{1}{d_\textrm{CNT}}\simeq\frac{0.7}{d_\textrm{CNT}}
-\end{equation}
+\co{Contacts and $n$-type Nanotubes, to rephrase}
+%new
+Another important issues for nanotube FETs is to control the conduction type of devices: $p$-type transfer characteristics have been reported for the vast majority of tubes. This is partly due to $p$-type of contaminations following the lithograpic process that are involved in the conduction~\cite{nosho2005n} even though $n$-type devices are indispensable for nanotube integrated circuits of low-power dissipation similar to Si complementally metal-oxide-semiconductor devices. Several solutions were advanced for example by doping with element of the first two groups of the periodic table (ions K+, Mg2+, etc) the nanotube channel surface to fabricate $n$-type nanotube FETs~\cite{bockrath2000chemical, zhou2000modulated}. These solutions, however, necessitates of a precise control the doping density per nanotube unit length, which might be problematic. Additionally, ionized impurities are often a source of uncontrolled electron transport due to scattering events with the charge carriers. Moreover, instability in the air, and temperature fluctuations are other factors which have discoureged the chemical doping route.
 
-where $v_F = 8\times10^5$ \si{\meter\per\second} is the Fermi velocity, $E_g$ is expressed in eV, and $d_\textrm{CNT}$ is expressed in nm.
+The operation mechanism of the nanotube FETs has been widely accepted to be satisfactorily explained by Schottky barrier modulation model, in which the gating action is dominated by the Schottky barrier formed at the contact between the nanotube and the source metal~\cite{bachtold2001logic}. Solid-state semiconductors have dangling bonds at the surface, resulting in Fermi level pinning, which means that the variation of the band bending is independent of the work function of the metal, even when it is significant. Since the ideal tube structure has no open bonds, there is no pinning of the metal Fermi level to mid-gap states, which justifies the study of various work functions for improving performance and tuning polarity. Numerous metals have been examined for nanotube interaction. It has been established that palladium ($\phi^\textrm{Pd}\simeq$ \SIrange{5.2}{5.6}{\electronvolt}) creates a nearly perfect $p$-channel contact with the valence band of \gls{CNT}. The reason for this phenomena was explained within the Schottky barrier framework in which the larger work function makes the Schottky barrier high for holes lower, thus reducing the overall contact resistance between the metal and the nanotube~\cite{javey2003ballistic}. This behaviour, however, is not universal as demonstrated by other metals such as platinum ($\phi^\textrm{Pt}\simeq5.65$ eV) which produces weaker contacts despite having a larger work function than Pd due to the physical wetting of the metal on the nanotube~\cite{lim2009contact}.
 
-\subsection{Carbon Nanotube Field-Effect Transistors}
+Taking these reports into account, if we use materials with a small work function as contact electrodes of nanotube FETs, the Schottky barrier height for electrons would be low. In this case, it is expected that electrons are injected from the contact electrode into the nanotube and $n$-type nanotube FETs will be realized without any doping into the nanotube channel. The other problem associated with using low work function metals as contacts is their increased propensity to oxidise. Using metals with a high work function to cap the contact metals is a simple and effective solution for the contact surface's tendency to destabilise in air. High-performance $n$-type devices were demonstrated by using Sc-and Y-contacted \glspl{CNTFET}, delivering high on state currents (250 micro ampere), mobility of 5100 \si{\cm\square\per\V\per\second}, and \gls{DIBL} of 105 \si{\mV\per\V}~\cite{ding2009contacted}. These devices reported an impressive performance for the subthreshold swing (\gls{SS}$\simeq 73$ mV/dec) close to the theoretical limit of 60 mV/dev The subthreshold swing measures the rate at which the gate voltage switches off the transistor. It is the gate-voltage shift necessary to cause a one-order-of-magnitude change in drain current.
 
-\subsubsection{General Operation}
 
-The modulation of a \gls{CNT} channel by a gate-induced field was realised in the 1998 by the group of Cees Dekkar \cite{tans1998room}. These early \glspl{FET} were fabricated
-by using doped silicon substrate as a gate to modulate the energy bands, separated from the nanotube by thermally-grown \ce{SiO2} oxide acting as dielectric.
-For contacting the nanotube, metal conctats were employed.
-
-Since then, a great variaty of \gls{CNTFET} structures and geometries have been demonstrated, and can be essentially classified in devices with or without a spacer.
-where the spacer length $L_\textrm{spr}$ is the distance between the gated channel and the source/drain metal conctacts.
-Given that the nanotubes are intrinsically semiconducting, in spacer-less devices charge carriers are not induced in the channel by the gate-field but are injected from the contacts: the role of the gate is to
-lower the thermal barrier in the channel, thus allowing a tunnelling through the \gls{SB} at the source. In this scenario, a critical role for the \gls{CNTFET} performance is played by the metal work function $\phi^\textrm{M}$.
-
-\glspl{CNTFET} with spacers, on the other hand, are less limited by the injection at the junction source--\gls{CNT}, as they are regulated by the modulating effect played by in the channel as in conventional. Since the carrier barrier
-injection at the drain is large, device with spacers have been proved to be more resistant to ambipolar conduction. In Table \ref{tab:CNFET} an overview of gated-spacer (top and bottom) devices is reported.
-
-\subsubsection{Contacts}
-
-One of the principal issues when study the interface metal--{CNT} is the role played by carbon and metal atoms at the interface.
-Solid-state semiconductors have dagling bonds at the surface, leading to Fermi level pinning, meaning that the variation of the band bending is independent of the work function of the metal, even when this is large.
-Since the ideal structure of \glspl{CNT} has no open bonds, no pinning of the metal Fermi level to mid-gap states occurs, thus legitimating the study of different work functions for maximising performance and tuning polarity.
-Many metals have been studied for contacting \glspl{CNT}. Interestingly, it has been demonstrated that Pd ($\phi^\textrm{Pd}\simeq$ \SIrange{5.2}{5.6}{\electronvolt})
-builds an almost ideal $p$-channel contact to the valence band of \glspl{CNT}. Despite having a larger workfunction ($\phi^\textrm{Pt}\simeq5.65$ eV) than Pd, Pt provides very poor contacts due to the physical wetting of the metal on the nanotube.
 
 \begin{table}[]
 
@@ -426,16 +359,13 @@ builds an almost ideal $p$-channel contact to the valence band of \glspl{CNT}. D
 \newpage
 
 
-\subsubsection{$n$-Type CNTFETs}
-In a $n$-type \glspl{CNTFET} the injection of electrons is favoured over the holes. Given that $\phi^\textrm{CNT}\simeq 4.7$ eV and with an average $E_g\simeq 0.6$ eV, it is possible to configure n-type channel with nanotube
-by either doping the spacer region or by using a metal with lower work function. One of the main drawbakcs of doping is the challenge to keep it under control: instability in air, low consistency, variability to temperature variations,
-are amongst the most frequent sceanrios. The other issue in working with low work function metals as contacts is the high tendency to oxidize. A simple and effective workaround to this is to use high work function metals to cap the contact metals,
-passivating the contact surface tendency to destabilise in air. One example of high performance n-type device was obtained by using Y contacts, achieving an \gls{SS} of 73 mV/dec, mobility of 5100 \si{\cm\square\per\V\per\second}, and \gls{DIBL} of 105 \si{\mV\per\V}~\cite{ding2009contacted}.
+
+
+\subsection{Scaling}
 
 \subsubsection{Scaling}
-While Si technology was for long time questioned whether it could work below 10-nm of channel length, recent impressive techological developements from the industry have proved not only its feasibility
-but also a widestream commercial application (currently modern laptop employ the 5-nm technology). Nevertheless, the interest in Si scalability has been always a crucial starting point for exploring different technologies and materials
-capable of overcoming short-channel effects (threshold voltage roll-off, off-state leakage current, channel length modulation are just a few of the problematics).
+%new
+Si technology's ability to function below 10-nm channel length was questioned for a long time, but recent scientific advances have demonstrated its viability and fostered a plethora of commercial uses (currently, modern laptops employ the 5-nm technology). Nonetheless, Si scalability has always been a significant starting point for investigating methods and materials that might overcome short-channel effects (threshold voltage roll-off, off-state leakage current, and channel length modulation are just a few of the problematics).
 
 \begin{figure}[hbtp]
     \begin{center}
@@ -447,20 +377,36 @@ capable of overcoming short-channel effects (threshold voltage roll-off, off-sta
     \end{center}
 \end{figure}
 
+%new
+In carbon nanotube transistors, the difference between two key lengths for scaling, namely the contact $L_\textrm{c}$ and channel $L_\textrm{ch}$ lengths, is crucial yet often underestimated. Aggressive scaling for the channel length typically results in the loss of control over the band bending across the gate: intuitively, as the channel length is reduced, the electric field created by the source contact will be felt by the charge carriers more and more. The thesis presented here is that carbon nanotubes provide a suitable platform for such scaling due to their ultrathin hollow nature. Alternatively, this could be a double-edged sword. Due to a higher tunnelling probability, the lower effective carrier mass of nanotubes\footnote[2]{$m^*_\textrm{CNT} = (0.228 \pm 0.129)m_0$~\cite{marulanda2008carrier}} may increase the tunnelling current from source to drain; typically, this effect has implications such as an increase in the subthreshold swing and leakage currents in the off state.
 
-In carbon nanotubes transistors a crucial and important--but somehow overlooked--is the difference between two critical lengths for scaling: the contact ($L_\textrm{c}$) and the channel ($L_\textrm{ch}$) lengths.
-Aggressive scaling for the channel length generally leads to lose control of the band bending through the gate: intuitively, by shrinking the channel length the electric field generated by the source contact will be felt more and more
-by the charge carriers. The argument here is that carbon nanotubes offer, however, a good enough platform for such scaling given by the ultrathin hollow structure (recall an effective wall thickness about $d_\textrm{CNT}\simeq0.68$ \si{\angstrom}). On the other hand, this could be a double edge-sword.
-The effetive carrier mass in nanotubes is $m^*_\textrm{CNT} = (0.228 \pm 0.129)m_0$~\cite{marulanda2008carrier}, thus potentially leading to tunnelling current from source to drain: this effect can be appreciate by an increase in the \gls{SS} and the OFF current.
 
-One of the first few systematic study on channel length scaling effects was conducted by Franklin \textit{et al.} in 2010 through a series
-of measurements on nanotubes with relatively small diameters (1.1 nm $<$ d$_\textrm{CNT}$ $<$ 1.3 nm) by using local bottom gates covered
-with 2 nm \gls{EOT} of \ce{HfO2}~\cite{franklin2010length}. A consistent trend was observed when the channel length was scaled down more than two orders of magnitude (from 3 \si{\micro\metre} to 15 nm),
-both in the values of $V_\textrm{th}$ and $SS$ ($-0.5\pm0.2$ V and 90 mV/dec, respectively).
-The authors reported also encouraging figures on the transconductance $g_m$.
+In a $n$-channel (nMOS) FET with threshold voltage , the drain current at a certain $V_\textrm{GS}$ in saturation mode (so when ) is given by:
 
-In a standard \gls{MOSFET}, the transconductance is the change in the drain
-current divided by the amount varied in the gate/source voltage $V_\textrm{GS}$ when the bias voltage ($V_\textrm{SD}$) is kept constant.
+
+Franklin and coworkers conducted one of the earliest systematic studies on channel length scaling effects in 2010 via a series of experiments on nanotubes using hafnium-based oxide-coated local bottom gates~\cite{franklin2010length}. When the channel length was reduced by more than two orders of magnitude (from \SI{3}{\si{\micro\metre}} down to \SI{15}{\si{\nano\metre}}), a consistent trend was found in both the threshold voltage ($V_\textrm{th}\simeq\SI[separate-uncertainty = true]{-0.5(0.2)}{V}$) and subthreshold swing (90 mV/dec) values. The threshold voltage is the gate voltage required to fully invert the semiconductor. It is typically measured by applying a slight drain bias and measuring the drain current as a function of the gate voltage, provided that the drain current is at least one order of magnitude smaller than the gate voltages applied, scaled accordingly by the gate capacitance.
+
+In addition, it was predicted that scaling had little to none effect on the transconductance $g_m$ of the device. The transconductance of a conventional \gls{MOSFET} is the change in drain current divided by the amount that the gate-to-source voltage varies at a constant bias. Typical values lies in the range \qtyrange[range-units = bracket]{1}{30}{\milli\siemens\per\micro\metre} for a small-signal field-effect transistor.
+
+For an $n$-channel MOSFET with a certain threshold voltage, the drain current at a given gate in the saturation regime ($V_\textrm{th} > V_\textrm{GS} - V_\textrm{SD}$) is defined as follows:
+\begin{equation}
+    I_\textrm{SD} = \frac{1}{2}\mu_n C_\textrm{ox}\frac{W}{L}\qty(V_\textrm{GS} - V_\textrm{th})^2, \label{eq:transistor-drain-current}
+\end{equation}
+where $\mu_\textrm{n}$ is the electron mobility, $C_\textrm{ox}$ is the gate oxide capacitance, $W$ and $L$ are the gate width and length, respectively.
+
+It is possible to work out the value of $g_m$ by using the Shichman--Hodges model and by assuming that the threshold voltage $V_\textrm{th}$ is a device constant, such that $V_\textrm{ov} = V_\textrm{GS} - V_\textrm{th}$:
+\begin{equation}
+    g_\textrm{m} = \pdv{I_\text{SD}}{V_\text{GS}} =\frac{2~I_\textrm{SD}}{V_\textrm{ov}},\label{eq:schiman-hodges-model}
+\end{equation}
+This quantity  is the so-called overdrive voltage, which corresponds physically to a value just over the threshold voltage. this quantity is often used in the designing phase of a transistor and as it elegantly links the drain current with a voltage: in fact, by rearranging and identify  one gets:
+
+This quantity $V_\textrm{ov}$ is the so-called overdrive voltage, which physically corresponds to a value just above the threshold voltage, and it is typically defined as $V_\textrm{ov} = V\textrm{GS} - V_\textrm{th}$. This parameter is frequently employed during the design phase of a transistor because it conveniently ties the drain current with the applied bias: in fact, by rearranging Eq.~\ref{eq:transistor-drain-current} and identifying $k_n = \mu_n C_\textrm{ox}\frac{W}{L}$, one obtains:
+\begin{equation}
+    I_\textrm{SD} = \frac{1}{2}k_n V_\textrm{ov}^2 \implies V_\textrm{ov} = \sqrt{\frac{2I_\textrm{SD}}{k_n}}
+\end{equation}
+
+The advantage of this equation is that the relationship written in terms of overdrive voltage rather than threshold voltage holds true for both $n$- and $p$-types of doping. To provide some background, the overdrive voltage for \SI{65}{\nano\metre} technology is commonly set between 70 and \SI{200}{\milli\volt}. Franklin and his colleagues produced transconductance values as high as \SI{40}{\micro\siemens\per\micro\metre} for a \gls{CNTFET} with a channel length of \SI{15}{\nano\metre}, which corresponds to transconductance values between approximately \qtyrange[range-units = bracket]{91}{110}{\milli\siemens\per\micro\metre}, thereby meeting the requirements for compatibility with Si technology.
+
 
 \begin{figure}[hbtp]
     \begin{center}
@@ -470,38 +416,11 @@ current divided by the amount varied in the gate/source voltage $V_\textrm{GS}$ 
     \end{center}
 \end{figure}
 
-Typical values of $g_m$ for a small-signal field effect transistor are between 1 and 30 \si{\milli\siemens\per\micro\metre}.
-In a n-channel (nMOS) FET with threshold voltage $V_\textrm{th}$, the drain current at a certain $V_\textrm{GS}$ in saturation mode (so when $V_\textrm{th} > V_\textrm{GS} - V_\textrm{SD}$) is given by:
 
-\begin{equation}
-    I_\textrm{SD} = \frac{1}{2}\mu_n C_\textrm{ox}\frac{W}{L}\qty(V_\textrm{GS} - V_\textrm{th})^2, \label{eq:transistor-drain-current}
-\end{equation}
-where $\mu_\textrm{n}$ is the electron mobility, $C_\textrm{ox}$ is the gate oxide capacitance, $W$ and $L$ are the gate width and length, respectively.
-It is possible to work out the value of $g_m$ by using the Shichman–Hodges model and assuming that the threshold voltage $V_\textrm{th}$ is a device constant, such that $V_\textrm{ov} = V_\textrm{GS} - V_\textrm{th}$:
+Two years after their initial breakthrough, Franklin and his colleagues shrunk the channel length of a nanotube transistor to less than 10 nanometers~\cite{Franklin2012}. Their technique involved the use of smaller tubes and a reduction of the necessary \gls{EOT} to \SI{0.65}{\nano\metre}. When the gate oxide is excessively thick, even by using local gates, the gate tends to lose control over the flow of carriers in the channel.
+The length of the channel was successfully lowered from 320 to \SI{9}{\nano\metre}. The authors reported on-current with ballistic values for transistors with channel lengths close to \SI{41}{\nano\metre}. By examining the subthreshold swing of 94 mV/dec, one may appreciate the greater control from the gate to the conductive channel, which at the time exceeded any silicon-based device. The author advocated decreasing the nanotube's diameter to reduce the subthreshold swing and off-current with minimum influence on the on-current.
+The process of scaling down a \gls{CNTFET} does not come without any costs, as the contribution of carrier back injections to the drain's conduction band grows as gate length decreases. Typically, this is indicated by a minimum current rise. To avoid this unfavorable impact on the off-state, the nature of the junction contact and its scaling behaviour must be examined.
 
-\begin{equation}
-    g_\textrm{m} = \pdv{I_\text{SD}}{V_\text{GS}} =\frac{2~I_\textrm{SD}}{V_\textrm{ov}},\label{eq:schiman-hodges-model}
-\end{equation}
-
-Here $V_\textrm{ov}$ is the so called \textit{overdrive voltage} and has the physical meaning of being the voltage above the threshold voltage of the \gls{MOSFET}. It is useful in the designing phase of a transistor
-and elegantly links the drain current with a voltage: in fact, by rearranging Eq.~\ref{eq:transistor-drain-current} and identify $k_n = \mu_n C_\textrm{ox}\frac{W}{L}$ one gets:
-
-\begin{equation}
-    I_\textrm{SD} = \frac{1}{2}k_n V_\textrm{ov}^2 \implies V_\textrm{ov} = \sqrt{\frac{2I_\textrm{SD}}{k_n}}
-\end{equation}
-
-The usefulness for this equation is that the relation expressed in terms of overdrive voltage rather thant threshold voltage holds both in the $n$ and in the $p$ case.
-Some reference numbers: $V_\textrm{ov}$ is tipically set at about 70–200 mV for the 65 nm technology node
-(with $I_\textrm{SD} = 1.13$ \si{\milli\ampere\per\micro\metre} of width) with value of $g_\textrm{m}\simeq 11-32$ \si{\milli\siemens\per\micro\metre}.
-In their work, Franklin \textit{et al.} achieved transconductance peak up to 40
-\si{\micro\siemens\per\micro\metre} for a \gls{CNTFET} with 15 nm of channel length,
-corresponding to values of $g_\textrm{m}$ between approximately 91 -- 110 \si{\micro\siemens\per\micro\metre},
-thus meeting the requirements for being compatible with the Si technology.
-
-
-The first \gls{CNTFET} in which $L_\textrm{ch}$ was scaled below 10 nm came two years later, again by Franklin \textit{et al.}~\cite{Franklin2012}.
-By using a CNT with d$_\textrm{CNT}$ $\simeq$ 1.3 nm $\pm$ 0.2 nm and $E_g$ $\simeq$ 0.62 eV $\pm$ 0.1 eV contacted through local bottom gates, they manage to scale down the $L_\text{ch} = 9$ nm
-The \gls{EOT} was reduced to $\simeq$ 0.65 nm to achieve a better electrostatic coupling with the nanotube.
 
 \begin{figure}[hbtp]
     \begin{center}
@@ -517,20 +436,16 @@ carriers into the conduction band from the drain, while the on-current approache
 Impressive switching behaviour, with \gls{SS} about 94 mV/dec, was measured, thus far outperforming any silicon-based of that time.
 based on previous results~\cite{franklin2010length}, the authors claimed the possibility of lowering the \gls{SS} and the off-current at minimal cost to I$\textrm{on}$ by reducing the diameter of the nanotubes.
 
-\subsubsection{Contact Length Scaling}
-MOSFET devices, when shrunk down to the nanoscale, need to consider not only $L_\textrm{ch}$ but also the lenght of the nanotube with the source and drain, $L_\textrm{c}$. The first study to address the impact of contact scaling
-in \glspl{CNTFET} revealed the $L_\textrm{c}$ to be inversely dependent on the channel length. Initial theoretical attempts to describe this trend using dipole theories were started following the results obtained by the group of Hongjie Dai, where they
-showed it is possible to recover a perfect ohmic contact -- thus accessing the ballistic transport regime -- even with a semiconducting nanotube, which were at tha time notorious of suffering several Schottky barriers effects (tunnelling and thermoionic emission).
 
-Further investigations using more sophisticated techiniques such as \gls{DFT} coupled with the \gls{NEGF} were employed to consider not only different contact geometries, but mostly to clarify the role in the chemical bonds formed between the metal to carbon structures,
-or in some combination of metal-/carbon-dependent interfacial charging properties. In particular, Cuniberti and coworkes addressed the chemisorption problem of carbon nanotubes with different electrodic surfaces. Chemisorption consists of the creation of a chemical bond between the atom deposited on a substrate (adatome) and its surface.
-The bonding leads to changes in the local density of states that produce specific alteration of the surface properties. They considered metal surfaces (such as Ni and Ti) inducing a chemical reaction with the carbon structure (chemisorption), elements such as Pd, Pt, Cr and Sc which interact weakly with the nanotube band structure leaving it unchanged, and surfaces which interact strongly through metallization and/or hybridisation of the $\pi$ orbitals of the nanotube (Cu, Au, and Rh).
+\subsection{Contact Length Scaling}
+MOSFET devices, when shrunk down to the nanoscale, need to consider not only $L_\textrm{ch}$ but also the lenght of the nanotube with the source and drain, $L_\textrm{c}$. In particular, computational studies have shown that higher contact transparency is expected when the metal-nanotube coupling is weak~\cite{fediai2015electron, teichert2019improved, fediai2016towards}. Especially for very long contacts, one conclusion which could be drawn from these studies is that in order to achieve high contact transparency one should minimize coupling and maximize the contact length. In the specific case of Pd and Ti contacts, the weaker nanotube-metal coupling in the case of Pd is a good explanation for the superiority of Pd-based nanotube contacts~\cite{liu2017scaling}.
 
+By using the transfer length model, the contact length was estimated to be inversely dependent on the contact resistance between the nanotube and the metallic pads~\cite{purewal2007scaling, franklin2010length}. These experimental observations were initially explained by assuming dipole moments built up at the \gls{CNT}--metal interface~\cite{leonard2000role}. The presence of dipoles might be caused by interface states at the junctions formed by charges which provide a potential that decays within a few nanometers from the junction. A high density of dipole charge translates to a high density of interface states, which is expected to pin the Fermi level. Since in a planar contact, the dipole in a metal-CNT contact is localised in all directions, the overall effect of these interface states is to shift the bands within a few nanometers of the junction, generating a narrow barrier, whilst the energy of the bands deeper within the CNT remain the same as for a contact without interface states~\cite{svensson2011schottky}. One conclusion one may draw from this is that by having a electrical contact which has a work function closer to the the nanotube might protect the metal--nanotube junction to undergo to Fermi level pinning effects caused by surface states.
 
+In addition to considering different contact geometries, more advanced methodologies were applied to clarify the role of the chemical bonds produced between the metal and carbon structures, or some combination of metal-/carbon-dependent interfacial charge characteristics. Cuniberti and coworkers found that the scaling of the contact resistance is mostly driven by diagonal elements of the self-energy matrix through a comprehensive \gls{NEGF} methodology~\cite{fediai2016towards}. The significant fluctuations of these elements for weakly interacting contact metals were not significant for contacts of infinite length, but their work demonstrates they have an important role when the contact length is finite. To quantitatively characterise the contact length scaling, they introduced the concept of an effective contact length, which is defined as a contact length for which the contact resistance is \%5 greater than the infinite contact case and depends solely on the local metal-nanotube coupling rather than the tube diameter~\cite{fediai2015electron}.
 
-Low-ohmic contact scaling trends were found when using weakly and intermediate interacting metallic surfaces, while they envisioned optimal contact length scaling with metals such as Cu and Rh.
-While Rh contacts would be unaffordable at large scale due to manufacturing costs, it is well know that Cu present ill-defined native oxide issues when used under ambient conditions, causing scattering at their surfaces and grain boundaries, thus hampering good electrical contacts with external probes.
-Recently, it has been advanced graphene as interlayer between the metal contact and the nanotube: the idea would be to have a work function closer to the nanotube one in order to avoid the level pinning effects due to gap states and interface contaminations.
+The researchers hypothesised that the most unfavourable length scaling is observed for weakly-interacting metals such as Cr, Pd, and Pt, for which the effective contact length is greater than 100 nm; on the other hand, metals such as Au, Al, and Sc were nearly insensitive to the contact length when this was decreased to 15 to 22 nm. Furthermore, the authors proposed that if the infinite length contact resistance is low, the element of the self-energy matrix must be greater than 30 meV in order to maintain a low resistance of less than 10 nm. This criterion appeared to be met by an unexpected contact material proposed by the authors, Rh, for which they projected a better scaling of the contact resistance in comparison to Au, Pt, and Pd. For long Rh-CNT connections, the scientists examined the contact resistance from Pd and Rh and found little to no difference, indicating that the scaling benefit gained by using Rh may not be worth the expenses if precise control over the nanotube anchoring location is limited. 
+
 
 
 \section{Graphene Nanoribbons}

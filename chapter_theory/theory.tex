@@ -8,13 +8,30 @@ This fact became true not just until recently with the advent of bottom-up techi
 In general, quantum transport phenomena takes place on a mesoscopic scale, that is, when dealing with condensed phase systems, in particular (but not exclusively) those of micro-nano dimensions, for which behaviours not present in macroscopic bodies are observed. The different behaviour of mesoscopic phases compared to macroscopic ones liesin the wavelength nature of electrons.
 When the size of the sample $L$ (which can be different for the three directions in space, $L_x, L_y, L_z$) becomes small compared with the characteristic lengths for the motion of electrons, then the conductivity depends on the size $L$.
 
-There are three kinds of relevant characteristic lengths: the Fermi wavelength $\lambda_F = h / \sqrt{2m_eE_F} = 2\pi/k_F$, and the coherence length $L_\phi$, which is the spatial distance that an electron travels before the phase of its wave function changes of $2\pi$.
+There are three kinds of relevant characteristic lengths: the Fermi wavelength $\lambda_F = h / \sqrt{2m_eE_F} = 2\pi/k_F$, the phase-relaxation length $L_\varphi$, and the mean free path $\ell$.
+
+which is the spatial distance that an electron travels before the phase of its wave function changes of $2\pi$.
 
 Additionally, two characteristic lengths associated with the mean distance traveled after elastic ($l_\textrm{el}$) and inelastic ($l_\textrm{in}$) collisions are also introduced; for inelastic collision, it is convenient to consider the mean distance before losing an amount of energy $k_BT$.
 
-For a metal with carrier concentrations $n \sim 10^{23}$ cm$^{-3}$, $l = 1 - 10$ nm, $\lambda_F = 0.5$ nm, and $L_\phi = 0.5$ \si{\micro\metre}, where $l$ is the mean free path and includes both elastic and inelastic events.
-In comparison, for carrier concentrations $n \sim 10^{11}$ cm$^{-2}$, graphene displays $l = 50$ nm$-3$\footnote[2]{For suspended graphene, $l (\textrm{4 K}) \simeq 100$ nm, while Mayorov et al. $l \simeq 3$ \si{\micro\metre} at 290 K for graphene sandwiched between two hBN crystals~\cite{mayorov2011micrometer}.}
-\si{\micro\metre}, $\lambda_F = 2\sqrt{\pi/n}$ nm, and $L_\phi = 0.5$ \si{\micro\metre}~\cite{torres2013introduction}, while \gls{MWNT}-\glspl{CNT} $n \sim 10^{11}$ cm$^{-2}$, $l = 1$ \si{\micro\metre}, $\lambda_F = 0.74$ nm, and $L_\phi = 100$ nm~\cite{stojetz2005effect}.
+
+% graphene displays $\ell = 50$ nm$-3$\footnote[2]{For suspended graphene, $l (\textrm{4 K}) \simeq 100$ nm, while Mayorov et al. $\ell \simeq 3$ \si{\micro\metre} at 290 K for graphene sandwiched between two hBN crystals~\cite{mayorov2011micrometer}.}
+% \si{\micro\metre}, $\lambda_F = 2\sqrt{\pi/n}$ nm, and $L_\phi = 0.5$ \si{\micro\metre}~\cite{torres2013introduction}, while \gls{MWNT}-\glspl{CNT} $n \sim 10^{11}$ cm$^{-2}$, $l = 1$ \si{\micro\metre}, $\lambda_F = 0.74$ nm, and $L_\phi = 100$ nm~\cite{stojetz2005effect}.
+
+\begin{table}
+    \caption{\label{tab:characteristic_lengths}
+        A selection of parameters relevant in transport phenomena.}
+    \[
+        \begin{array}{lcccc}
+            \hline\textit{Material} & n~(cm^{-3}) & \lambda_F~(\si{\nano\metre}) & \ell~(\si{\nano\metre}) & L_\varphi~(\si{\micro\metre}) \Tsmall         \\
+            \hline
+            \text{Metal}            & 10^{23}     & 0.5                          & 1-10                    & 0.5                                   \Tsmall \\
+            \text{Graphene}         & 10^{11}     & 2\sqrt{\pi/n}                & 50-3000                 & 0.5                                           \\
+            \text{MW-CNT}           & 10^{11}     & 0.74                         & 1000                    & 0.1                                           \\
+            \hline
+        \end{array}
+    \]
+\end{table}
 
 
 \section{Charge Transport In Zero-Dimensional Objects}

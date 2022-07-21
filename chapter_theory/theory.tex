@@ -2,36 +2,47 @@
 
 \minitoc
 
-The lateral confinement of the carriers makes \glspl{GNR} a quasi-1D system. The \textit{quasi} referes to the fact that the electron is confined across two directions.
-This fact became true not just until recently with the advent of bottom-up techiniques, which are capable synthesising atomically-precise \gls{GNR} with width below 5 nm.
+Mesoscopic systems exhibit quantum transport phenomena. There, the sample's size becomes comparable or lower than the characteristic lengths for electron travel, and as a result, physical properties--including conductivity--depend on the specimen's dimensionality.
 
-In general, quantum transport phenomena takes place on a mesoscopic scale, that is, when dealing with condensed phase systems, in particular (but not exclusively) those of micro-nano dimensions, for which behaviours not present in macroscopic bodies are observed. The different behaviour of mesoscopic phases compared to macroscopic ones liesin the wavelength nature of electrons.
-When the size of the sample $L$ (which can be different for the three directions in space, $L_x, L_y, L_z$) becomes small compared with the characteristic lengths for the motion of electrons, then the conductivity depends on the size $L$.
+Typically, three characteristic lengths are investigated in mesoscopic transport experiments. The mean free path $\ell$, the wavelength of Fermi $\lambda_{F}$, and the phase-relaxation length $L_{\varphi}$. The mean free path is the average distance an electron travels prior to being dispersed by a scattering centre; attempts to measure it for graphene nanoribbons are briefly described in Ch~\ref{ch:introduction}. The Fermi wavelength $\lambda_{F}=2 \pi / k_{F}$ is the wavelength of an electron at Fermi energy, whereas the phase-relaxation length is the average distance over which an electron travels before its quantum-mechanical phase becomes randomised.
 
-There are three kinds of relevant characteristic lengths: the Fermi wavelength $\lambda_F = h / \sqrt{2m_eE_F} = 2\pi/k_F$, the phase-relaxation length $L_\varphi$, and the mean free path $\ell$.
+If the scattering of an electron is elastic, for example when the scattering event does not promote any electronic transition between ground and any excited states, the wavefunction experiences only a phase shift after the elastic scattering event, thus staying coherent. Therefore it is only $\ell$ which is changed after a scattering event and not $L_{\varphi}$. On the other hand, if the electron wave loses energy by either exciting core electrons, spins associated with magnetic impurities or phonons, such events are called inelastic and contribute to change both to $L_{\varphi}$ and $\ell$.
 
-which is the spatial distance that an electron travels before the phase of its wave function changes of $2\pi$.
+If the scattering of an electron is \textit{elastic}, such as when the scattering event does not induce any electronic transition between the ground state and any excited states, the wavefunction undergoes essentially a phase shift following the event, remaining coherent. Therefore, an elastic event may only affect $\ell$, leaving $L_{\varphi}$ unchanged. In contrast, if the electron wave loses energy by either excitation of core electrons, spins associated with magnetic impurities, or phonons, both the mean free path and the phase-relaxation length may be affected by such (\textit{inelastic}) scattering events. Tab~\ref{tab:characteristic_lengths} summarises a few of these factors for various materials as a function of carrier concentration $n$.
 
-Additionally, two characteristic lengths associated with the mean distance traveled after elastic ($l_\textrm{el}$) and inelastic ($l_\textrm{in}$) collisions are also introduced; for inelastic collision, it is convenient to consider the mean distance before losing an amount of energy $k_BT$.
-
-
-% graphene displays $\ell = 50$ nm$-3$\footnote[2]{For suspended graphene, $l (\textrm{4 K}) \simeq 100$ nm, while Mayorov et al. $\ell \simeq 3$ \si{\micro\metre} at 290 K for graphene sandwiched between two hBN crystals~\cite{mayorov2011micrometer}.}
-% \si{\micro\metre}, $\lambda_F = 2\sqrt{\pi/n}$ nm, and $L_\phi = 0.5$ \si{\micro\metre}~\cite{torres2013introduction}, while \gls{MWNT}-\glspl{CNT} $n \sim 10^{11}$ cm$^{-2}$, $l = 1$ \si{\micro\metre}, $\lambda_F = 0.74$ nm, and $L_\phi = 100$ nm~\cite{stojetz2005effect}.
 
 \begin{table}
     \caption{\label{tab:characteristic_lengths}
-        A selection of parameters relevant in transport phenomena.}
+        Physical parameters relavant in transport phenomena. See also ~\cite{torres2014introduction, datta1997electronic}}
     \[
         \begin{array}{lcccc}
-            \hline\textit{Material} & n~(cm^{-3}) & \lambda_F~(\si{\nano\metre}) & \ell~(\si{\nano\metre}) & L_\varphi~(\si{\micro\metre}) \Tsmall         \\
+            \hline\textit{Material} & n                   & \lambda_F          & \ell               & L_\varphi \Tsmall                             \\
+            \textit{type}           & (cm^{-3})/[cm^{-2}] & (\si{\nano\metre}) & (\si{\nano\metre}) & (\si{\micro\metre})                           \\
             \hline
-            \text{Metal}            & 10^{23}     & 0.5                          & 1-10                    & 0.5                                   \Tsmall \\
-            \text{Graphene}         & 10^{11}     & 2\sqrt{\pi/n}                & 50-3000                 & 0.5                                           \\
-            \text{MW-CNT}           & 10^{11}     & 0.74                         & 1000                    & 0.1                                           \\
+            \text{Metal}            & 10^{23}             & 0.5                & 1-10               & 0.5                                   \Tsmall \\
+            \text{Graphene}         & [10^{11}]           & 2\sqrt{\pi/n}      & 50-3,000           & 0.5                                           \\
+            \text{SW-CNT}           & [10^{11}]           & 0.74               & 1,000              & 3                                             \\
+            \text{MW-CNT}           & -                   & -                  & 10-40              & 0.1                                           \\
             \hline
         \end{array}
     \]
 \end{table}
+
+
+
+% second part
+
+Because only electrons around the Fermi energy contribute to transport parameters, the mean free path and phase-relaxation length are often scaled by the Fermi velocity, namely:
+$$
+    t_{m}=\frac{L_m}{v_F} , \quad \text { and } \quad t_{\varphi}=\frac{L_\varphi}{v_F},
+$$
+
+The introduced $t_m$ and $t_\varphi$ are, respectively, the momentum relaxation time and phase-relaxation time, and are often are compared to the time it takes one electron to travel the length of the sample. However, these two numbers do not correlate to the period of a single scattering event by the relevant scattering mechanism; rather, they represent the average time for the several collisions that result in significant changes of momentum and phase, respectively. In this context, significant entails, for instance, that the sums of the changes in momentum and phase over time $t_{m}$ and $t_{\varphi}$ reach $\hbar k_{\mathrm{F}}$ and $\pi$, respectively~\cite{dresselhaus1998physical}.
+
+
+% third part
+
+There are several ways through which it is possible to control the various scattering mechanisms. For example it is possible to suppress the magnetic scattering by applying a magnetic field~\cite{mccreary2012magnetic, escalera2018spin}, whilst phonons excitations might be suppressed at low temperature, although it is the electron--phonon interaction which controls the relaxation of an electron by an emitting a phonon~\cite{efetov2010controlling}. The electron--electron interaction is determined by the carrier concentration and the extension of the valence band along the Brilluoin zone~\cite{kotov2012electron}. On top of that, all the frequencies corresponding to the various scattering processes might be changed by controlling the Fermi velocity, often obtained by either varying a gate voltage or by changing the conduction band curvature.
 
 
 \section{Charge Transport In Zero-Dimensional Objects}
@@ -288,7 +299,9 @@ We use this model in Chapter~\ref{ch:solubility} to reproduce the low temperatur
 
 
 \section{Basics of One-dimensional Physics}
-In this section we will very briefly review the Fermi liquid theory and its failure in describing strongly-correlated 1D systems. The topics introduced here will explain the peculiarities in the density of states for a fermionic system and later be used to derive the tunneling density of states in the presence of long-range Coulomb interactions for a one-dimensional chain. These results are central to explain a few experimental results exposed in Chapter \ref{ch:gnrset}. A more exhaustive treatement of the following concepts might be reviewed in \cite{giamarchi2003quantum, cazalilla2011one, giamarchi2016one, bertel2017physics}.
+In this section we will very briefly review the Fermi liquid theory and its failure in describing strongly-correlated 1D systems. As a result of the lateral confinement of the carriers, graphene nanoribbons are indeed a quasi-1D system. The term \textit{quasi} refers to the electron's confinement in two directions, leaving only one \gls{DOF}. Not until the introduction of bottom-up techniques, which are capable of manufacturing atomically-precise ribbon widths below \SI{5}{\nano\metre}, did this become reality.
+
+The topics introduced here will explain the peculiarities in the density of states for a fermionic system and later be used to derive the tunneling density of states in the presence of long-range Coulomb interactions for a one-dimensional chain. These results are central to explain a few experimental results exposed in Chapter \ref{ch:gnrset}. A more exhaustive treatement of the following concepts might be reviewed in \cite{giamarchi2003quantum, cazalilla2011one, giamarchi2016one, bertel2017physics}.
 
 
 \subsection{A Succint Primer of Fermi-Liquid Theory and Its Inadequacies}

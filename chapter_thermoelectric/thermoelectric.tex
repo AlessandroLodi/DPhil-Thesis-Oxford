@@ -41,7 +41,8 @@ Unfortunately these ribbon featured very poor solubility, even after several son
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_thermoelectric/figures/anthracene.pdf}
-        \caption[Band structure for a 4-Cove GNR with and without Anthracene]{\textbf{a,} Band structure and density of states for a 4-Cove GNR--H and \textbf{b,} a 4-Cove GNR--Anthracene calculated with the exchange--correlation functional GGA-PBE.}
+        \caption[DFT Band Structures and DOS of a 4-Cove GNR--H and a GNR--Anthracene]
+        {\textbf{a,} Band structure and density of states for a 4-Cove GNR--H and \textbf{b,} a 4-Cove GNR--Anthracene calculated with the exchange--correlation functional GGA-PBE.}
         \label{fig:chem_doping:base_anthracene}
     \end{center}
 \end{figure}
@@ -51,7 +52,8 @@ Ab-initio calculations were performed by using the \gls{LDA}-CA and the \gls{GGA
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_thermoelectric/figures/drawing.pdf}
-        \caption{Band structure and density of states for graphene nanoribbons decorated with various electron donors or acceptors resulted after applying the GGA approximation for the exchange--correlation energy term.}
+        \caption[DFT Band Structures and DOS of Chemically-Functionalised MGNRs]
+        {Band structure and density of states for graphene nanoribbons decorated with various electron donors or acceptors resulted after applying the GGA approximation for the exchange--correlation energy term.}
         \label{fig:bandstructure_chem_doping}
     \end{center}
 \end{figure}
@@ -105,37 +107,152 @@ In contrast, bottom-up chemical synthesis may provide a viable route to structur
 Furthermore, theoretical calculations have shown that the wave functions for the frontier crystal orbitals are fully delocalized across the ribbon width, in contrast to zigzag-GNRs (with localized states at the ribbon edges), with electronic band gap of cove-edged GNR infinite ribbon settling around 1.70 eV, and mobilities values in the order of thousands \si{\cm\square\per\V\per\second} for both electrons and holes~\cite{Liu2015}.
 
 \co{First Paragraph: Device Fabrication}
-Feedback controlled electroburning is used to produce nanogaps, localised at the bowtie constriction, with widths between 1 - 10 nm. ISD-VSD characteristics are recorded for all devices immediately after nanogap formation and after drop-casting a ~8 microLitre suspension of the porphyrin-graphene nanoribbon hybrids. Suspensions were prepared by sonicating a dry powder of the porphyrin-graphene nanoribbon hybrids in toluene (0.02 mgmL-1) for 60 min. Several cycles of the electroburning protocol were performed, up to three different gate voltages for each device, and each time scanning in gate voltage at fixed bias to check for residual graphene quantum dots. If any are found, the electroburning process is restarted at that gate voltage to clear the residual graphene. For all devices, the resistance limit was set at 2.3 gigaOhm. Devices which show an increase in current post-deposition are selected for wire bonding and further measurements. Transport measurements were performed in an Oxford Instruments Triton 200 dilution refrigerator using low noise DC electronics. All measurements were performed at a temperature of 20 mK. Differential conductance is retrieved by numerical differentiation of the measured current.
+Feedback-controlled electroburning is used to produce nanogaps, localised at the bowtie constriction, with widths between \SIrange{1}{10}{\nano\metre}. $I_\textrm{SD}-V_\textrm{SD}$ characteristics are recorded for all devices immediately after nanogap formation and after drop-casting approximately \SI{8}{\micro\litre} suspension of the \gls{pGNR} hybrids.
+
+Suspensions were prepared by sonicating a dry powder of the \glspl{pGNR} in toluene (\SI{0.02}{\milli\gram\per\milli\litre}) for \SI{60}{\minute}. Several cycles of the electroburning protocol were performed, up to three different gate voltages for each device, and each time scanning in gate voltage at fixed bias to check for residual graphene quantum dots.
+
+If any are found, the electroburning process is restarted at that gate voltage to clear the residual graphene. For all devices, the resistance limit was set at \SI{2.3}{\giga\ohm}. Devices which show an increase in current post-deposition are selected for wire bonding and further measurements. Transport measurements were performed in an Oxford Instruments Triton 200 dilution refrigerator using low noise DC electronics. All measurements were performed at a temperature of 20 mK. Differential conductance is retrieved by numerical differentiation of the measured current.
 
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_thermoelectric/figures/gnr-hybrid_cartoon_sem_fet_set.pdf}
-        \caption[]{Bla bla}
+        \caption[GNR-porphyrin Hybrid Device: Low- and Room-Temperature Comparison]
+        {Bla bla}
+        \label{fig:gnr-hybrid_cartoon_sem_fet}
     \end{center}
 \end{figure}
 
+\co{Second Paragraph: Device 1 Results}
+The full charge-stability diagram of a typical device cooled down to \SI{25}{\milli\kelvin} is shown in Fig.~\ref{fig:gnr-hybrid_cartoon_sem_fet}d. Yellow colours indicate regions of higher differential conductance while darker colours indicate lower regions of differential conductance. At gate voltages below \SI{-1}{\volt} clear signs of Coulomb blockade diamonds are present. Outside this gate voltage range, the level of current is close to the noise limit of the current-to-voltage converter used in our transport setup. In the absence of a discernible repeating pattern, it is possible that the faint diamonds visible at higher gate voltages are caused by spurious charges injected possibly through the gate oxide or surface states.
 
-Furthermore, theoretical calculations have shown that the wave functions for the frontier crystal orbitals are fully delocalized across the ribbon width, in contrast to zigzag-GNRs (with localized states at the ribbon edges), with electronic band gap of cove-edged GNR infinite ribbon settling around 1.70 eV, and mobilities values in the order of thousands \si{\cm\square\per\V\per\second} for both electrons and holes~\cite{Liu2015}.
+\begin{table}
+    \caption{\label{tab:gnr-hybrid_peaks_fitting}
+        Lorentzian fit parameters extracted by fitting a low-bias gate trace. The two peaks are separated by 600 meV in voltage, which could be assigned to the single-electron charge transition $N \leftrightarrow N+1$, where $N$ is the number of electrons on the ribbons which is unknown. Reported errors are fitting errors.}
+    \[
+        \begin{array}{ccc}
+            \hline\textrm{Peak Position}  & \textrm{Lifetime Broadening} & G_\textrm{max}                   \\
+            \textrm{(\si{\electronvolt})} & (\si{\milli\electronvolt})   & (G_0)                            \\
+            \hline
+            -1.64                         & 2.5\pm0.2                    & (4.5\pm0.2)\times10^{-7} \Tsmall \\
+            -1.04                         & 2.8\pm0.2                    & (2.8\pm0.1)\times10^{-7}         \\
+            \hline
+        \end{array}
+    \]
+\end{table}
 
-Furthermore, theoretical calculations have shown that the wave functions for the frontier crystal orbitals are fully delocalized across the ribbon width, in contrast to zigzag-GNRs (with localized states at the ribbon edges), with electronic band gap of cove-edged GNR infinite ribbon settling around 1.70 eV, and mobilities values in the order of thousands \si{\cm\square\per\V\per\second} for both electrons and holes~\cite{Liu2015}.
+From Fig.~\ref{fig:gnr-hybrid_sd_eadd} we can read the addition energies for the different charge states by reading the height of each diamond, within the assumption that only one electron is exchanged for each charge transition. Across all the diamonds, we can extract the gate coupling which measures the effectiveness of the gate voltage to change the chemical potential of the ribbon. We found $\alpha_\textrm{G}\simeq\SI{0.65}{\electronvolt\per\volt}$ averaged across all the measurable charge states, with a slight asymmetric coupling with the drain lead for this particular device.
+
+Furthermore, two peaks at $V_\textrm{G}\simeq\SI{-2.5}{\volt}$ and $V_\textrm{G}\simeq\SI{-1.5}{\volt}$ are closed, so we can extract their lifetime broadening by fitting a low-bias ($V_\textrm{SD}\simeq\SI{2.6}{\milli\volt}$) gate trace with a Breit--Wigner resonance (Tab.~\ref{tab:gnr-hybrid_peaks_fitting}). The tunneling couplings with the graphene leads are one order of magnitude stronger than the majority of tunneling coupling reported for devices fabricated with normal graphene nanoribbons.
 
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_thermoelectric/figures/gnr-hybrid_sd_eadd.pdf}
-        \caption[GNR-Hybrid Stability Diagram and Addition Energies]{\textbf{a,} Low-temperature stability map demonstrating Coulomb blockade and well-defined charge states. \textbf{b,} We extract the addition energies from the diamond height and plot them as a function of the chemical potential felt by the ribbon as a result of the application of a gate voltage, assuming a constant gate coupling of $\alpha_\textrm{G}\simeq\SI{0.65}{\electronvolt\per\volt}$ for all charge states.}
+        \caption[GNR-Hybrid Stability Diagram and Addition Energies]
+        {\textbf{a,} Low-temperature stability map demonstrating Coulomb blockade and well-defined charge states. \textbf{b,} We extract the addition energies from the diamond height and plot them as a function of the chemical potential felt by the ribbon as a result of the application of a gate voltage, assuming a constant gate coupling of $\alpha_\textrm{G}\simeq\SI{0.65}{\electronvolt\per\volt}$ for all charge states.}
+        \label{fig:gnr-hybrid_sd_eadd}
     \end{center}
 \end{figure}
 
+
+
+\co{Third Paragraph: Determination of pGNR Length}
+
+A possible explanation for the observed values for the tunneling coupling might be the different length of the \gls{pGNR} compared to the bottom-up ribbons studied in in the last two chapters. Since the thickness of the \ce{HfO2} oxide on top of the gate is approximately \SI{10}{\nano\metre}, we had to experimentally measure the capacitance of the the oxide in order to extract a more accurate value.
+
+A parameter needed to determine the length of \glspl{pGNR} is the relative permittivity of the gate oxide. Because of the ultra-thin nature of the oxide used in these devices, it is not possible to rely on the bulk value for \ce{HfO2} and it must be experimentally determined~\cite{robertson2004high}.
+This was achieved by microfabricating capacitors on the devices using the following approach. A chip is selected from the same wafer used to fabricate devices 1, 2 and 3. The substrate is \ce{O2}-plasma etched to remove the \gls{CVD} graphene layer and prepare the surface for lithography (20 minutes, 25 sccm and 100 percent power). An array of top electrodes is patterned using electron-beam lithography, metal deposition and lift-off. The design consists of overlapping top electrode of varying areas with the gate contact pad separated by the ALD-deposited HfO2 dielectric layer as shown in Figure 7. A small region is removed from the top electrode allowing a W probe to make contact through the oxide and electrically contact the bottom electrode.
+
+An Andeen--Hagerling 2550A ultra-precision capacitance bridge is used to measure the capacitance between the top electrode and the bottom-gate electrode. The measurement is carried out at room temperature in a probe station. The stray capacitance of the probe station and experimental wiring is measured and is found to be insignificant when compared to the values obtained from the microfabricated capacitors. The excitation voltage applied by the bridge is limited to \SI{1}{\volt} RMS to reduce the risk of dielectric breakdown. $\epsilon_r$ is thus determined by:
+
+\begin{equation}
+    \epsilon_r = \frac{Cd}{\epsilon_0 A},
+\end{equation}
+
+where $d = \SI{10}{\nano\metre}$ is the oxide thickness, $\epsilon_0$ is the permittivity of free space, and $A$ is overlapping area of the top and bottom electrode measured using microscopy. The obtained values are shown in Table 1. An average value of $\epsilon_r = 15.41$ is used in all length calculations.
+
 \begin{table}
-    \caption{\label{tab:bandgaps}
-        Lorentzian fit parameters extracted by fitting a low-bias gate trace. The two peaks are separated by 600 meV in voltage, which could be assigned to the single-electron charge transition N/N+1, where N is the number of electrons on the ribbons which is unknown. Reported errors are fitting errors.}
+    \caption{\label{tab:measured_capacitance}
+        Measured values of electrode area, capacitance and $\epsilon_r$  for several capacitors. These are consistent across various randomly selected points onto a single chip. Errors for $\epsilon_r$ were found to be at the third decimal place.}
+    \[
+        \begin{array}{cccc}
+            \hline\textrm{Device} & \textrm{Electrode Area}     & \textrm{Measured Capacitance} & \epsilon_r           \\
+            \textrm{name}         & (\si{\micro\metre\squared}) & (\si{\pico\farad})            &                      \\
+            \hline
+            \textrm{A}1           & 7455                        & 101.1\pm1.0                   & 15.3\pm0.02  \Tsmall \\
+            \textrm{A}2           & 4542                        & 62.4\pm0.6                    & 15.51\pm0.02         \\
+            \textrm{C}3           & 2402                        & 32.5\pm0.3                    & 15.26\pm0.02         \\
+            \textrm{E}1           & 7438                        & 100.6\pm1.0                   & 15.3\pm0.02          \\
+            \textrm{I}1           & 7433                        & 103.3\pm1.0                   & 15.7\pm0.02          \\
+            \hline
+        \end{array}
+    \]
+\end{table}
+
+
+\co{Middle Part: FET Behaviour}
+
+This section presents several devices with \gls{FET} characteristics. All measurements were taken in ambient conditions with a semi-automated, 3-probe system Cascade Microtech Summit 12000 as described in Ch.~\ref{ch:fabrication}. \ce{CuBe} probes with tip diameters of \SI{30}{\micro\metre} were used to contact the source and drain \ce{Au} pads, while \ce{W} probes with tip diameters of \SI{10}{\micro\metre} were used for the gate probe. Figure 8 shows an example of a device a we obtained.
+
+The device exhibits p-type doping and the on-state channel conductance $G$ normalised by the width of the \gls{GNR} ($w_\textrm{GNR} = \SI{1.2}{\nano\metre}$) increases from \SI{0.05}{\siemens\per\milli\metre} at $V_\textrm{SD} = \SI{0.1}{\volt}$ to \SI{0.1}{\siemens\per\milli\metre} when $V_\textrm{SD}$ is increased to \SI{0.5}{\volt}; the on-state conductivity $\sigma = GL/w_\textrm{GNR} = \SI{3.73}{\micro\siemens}$ for a channel length $L\simeq\SI{40}{\nano\metre}$ (the length of the channel is estimated by averaging the transport data of multiple devices at low temperature).
+
+The device was switched off when the gate voltage $V_\textrm{G}$ was larger than \SI{0.5}{\volt} and had good $I\textrm{on}/\textrm{off}\simeq 10^3$ as the source--drain voltage was set to \SI{0.1}{\volt}. Off-state conductance was estimated around $G_\textrm{off}\simeq\SI{6}{\pico\siemens\per\nano\metre}$ at $V_\textrm{SD}=\SI{0.1}{\volt}$ and increasing as the $V_\textrm{SD}$ was increased, despite exhibiting consistent switching behaviour of about $SS\simeq\SI{400}{\milli\electronvolt}$~dec$^{-1}$ and indicating good gate control over the conduction channel.
+
+On top of that, almost no hysteresis was measured under ambient conditions. The hydrophobic nature of the sandwich established by the ribbon and graphene leads considerably minimises the undesired hysteresis in the transfer characteristics of the transistors, which is caused by the presence of water close to the GNR--dielectric contact (gate-voltage sweep rate was \SI{44}{\milli\volt\per\second}), and outperforming early carbon nanotube FET~\cite{weitz2007high}.
+
+\begin{figure}[hbtp]
+    \begin{center}
+        \includegraphics[width=\textwidth]{chapter_thermoelectric/figures/gnr-hybrid_FET_c1_f2.pdf}
+        \caption[GNR-Hybrid Field-Effect Transistors at Room Temperature]
+        {\textbf{a,} bla \textbf{b,} bla}
+        \label{fig:gnr-hybrid_FET_c1_f2}
+    \end{center}
+\end{figure}
+
+While the on-state current is not directly related to the bandgap energy $E_g$, the off-state current strongly depends on $E_g$~\cite{kim2011role}. Assuming the synthesised \gls{pGNR} is an intrinsic semiconductor and its band structure has a mid-gap alignment with the source--drain contacts, the smallest (off-state) current will occur when both the conduction and valence bands are flat. If transport is controlled by thermal carrier emission, the on--off ratio will depend exponentially on the temperature. It is then possible to give an estimate of $E_g$ for a devices, which in case of device c1 is
+
+\begin{equation}
+    2k_BT\log{\qty{\frac{I_\textrm{on}}{I_\textrm{off}}}=E_g\simeq\SI{327}{\milli\electronvolt}},
+    \label{eq:on_off_ratio_bandgap}
+\end{equation}
+
+Since it is typically difficult to establish the threshold voltage in transfer characteristics without ambiguity, conventional \glspl{FET} are frequently compared using the so-called field-effect mobility. This is device-specific rather than material-specific, and includes effects such as contact resistances and surface effects~\cite{durkop2004extraordinary}. We have estimated both the linear and the saturation \gls{FET} mobilities for several devices.
+
+The conduction channel is pinched off when $V_\textrm{SD} = V_\textrm{G} - V_\textrm{Th}$, where $V_\textrm{Th}$ is the threshold voltage at which the device switches on. In this condition, the current cannot increase substantially anymore and saturates to a value $I_\textrm{SD,sat}$ identifiable as a plateau by either plotting the semi-logarithmic plot of  transfer characteristics or by simply visualising the output characteristics. If channel-shortening effects caused by the depletion region at the drain are neglected, the saturation current can be obtained by substituting $V_\textrm{SD}$ with $V_\textrm{G} - V_\textrm{Th}$, and within the gradual-channel approximation the drain–saturation current may be written as~\cite{zaumseil2007electron}
+
+\begin{equation}
+    I_\textrm{SD,sat} = \frac{w_\textrm{GNR}}{2L}\mu_\textrm{sat}C_\textrm{G}(V_\textrm{G}-V_\textrm{Th})^2,
+\end{equation}
+%
+where $C_\textrm{G}$ is the gate capacitance per unit area. From the capacitance measurements detailed above we extract a $C_\textrm{G}=\SI{1.4e-2}{\farad\per\metre\squared}$. We estimate a saturation mobility (also called field-effect mobility) for this particular device to be \SI{0.8}{\centi\metre\squared\per\volt\per\second}. We further estimate the field-effect mobility in the linear regime ($V_\textrm{G}\gg V_\textrm{SD}$) by extracting the gradient of $I_\textrm{SD}$ versus $V_\textrm{G}$ at constant $V_\textrm{SD}=\SI{0.1}{\volt}$
+
+\begin{equation}
+    \mu_\textrm{lin} = \pdv{I_\textrm{SD}}{V_\textrm{G}}\frac{L}{w_\textrm{GNR}C_\textrm{G}V_\textrm{SD}}=\frac{g_mL^2}{C_\textrm{GS}V_\textrm{SD}}.
+\end{equation}
+
+We remark that the capacitance values $C_\textrm{G}$ and $C_\textrm{GS}$: the former represents the capacitance between the nanoribbon segment that spans across the gate and the gate itself. Therefore, we have estimated that the capacitance per unit area for a ribbon of $L\simeq\SI{40}{\nano\metre}$ and $w_\textrm{GNR}=\SI{1.2}{\nano\metre}$ placed on top of a gate of thickness $d\simeq\SI{10}{\nano\metre}$ is
+
+\begin{equation}
+    C_\textrm{GS} = \frac{\epsilon_0\epsilon_rA}{d}=\SI{0.7}{\atto\farad},
+\end{equation}
+%
+For device c1 we estimate a linear \gls{FET} mobility $\mu_\textrm{lin}\simeq\SI{4}{\centi\metre\squared\per\volt\per\second}$.
+
+Device f2 in Fig.~\ref{fig:gnr-hybrid_FET_c1_f2} reproduces qualitatively a similar behaviour. In comparison with device c1, this device exhibits $I_\textrm{on}/I_\textrm{off}\simeq 10^2$, which then would correspond to a $E_g\simeq\SI{220}{\milli\electronvolt}$ by using Eq.~\ref{eq:on_off_ratio_bandgap}. The peculiarity of this device is that a current saturation limit is reached only at $V_\textrm{SD}=\SI{0.8}{\volt}$, with a $\Delta V_\textrm{gap}\simeq\SI{3}{\volt}$, and the off-state current tends to increase with increasing bias. The gate has good control ($SS\simeq\SI{400}{\milli\electronvolt}$~dec$^{-1}$) over the conductive channel at small biases, and excellent control $SS\simeq\SI{160}{\milli\electronvolt}$~dec$^{-1}$ at $V_\textrm{SD}=\SI{0.8}{\volt}$, which is amongst the highest values measured across our devices. Furthermore, the on-state channel conductance $G$ normalised by the channel width reaches values as high as \SI{0.2}{\siemens\per\milli\metre} and on-state conductivity $\sigma\simeq\SI{6}{\micro\siemens}$. We report slightly higher values for the mobility of this device as we extracted $\mu_\textrm{sat}=\SI{3.5}{\centi\metre\squared\per\volt\per\second}$ and $\mu_\textrm{lin}=\SI{16}{\centi\metre\squared\per\volt\per\second}$.
+
+In Table 3, we present the linear and saturation mobilities for a variety of devices. Since our pGNR has molecularly defined edges, we explain these values by assuming that the effective mobility decreases as the ribbon width approaches sub-5 nm. The linear-mobility values correlate well with those expected by theoretical estimation~\cite{geng2017graphene}, but the saturation-mobility values have not yet been found. At room temperature, the effective mobilities are predicted to be limited by acoustic phonons. Nonetheless, if the surface-impurity density is large, this may become the major scattering mechanism, and values in the range of \SIrange{10}{1000}{\centi\metre\squared\per\volt\per\second} are expected~\cite{fang2008mobility}, which is consistent with the values we measured.
+
+\begin{table}
+    \caption{\label{tab:extracted_mobilities}
+        Linear and saturation mobilities extracted from the transfer characteristics of several devices.}
     \[
         \begin{array}{ccc}
-            \hline\textrm{Peak Position}  & \textrm{Lifetime Broadening} & G_\textrm{max}/G_0                                                                       \\
-            \textrm{(\si{\electronvolt})} & (\si{\milli\electronvolt})   &                                                                                          \\
-            \hline
-            -1.63                         & 2.6                          & \SI[separate-uncertainty = true]{4.5(0.2)e-7}                                   \Tsmall  \\
-            -1.04                         & 2.8                          & 1                                                                                \Tsmall \\
+            \hline \text { Device } & \mu_{\operatorname{lin}}                        & \mu_{\text{sat}}                                      \\
+            \textrm{name}           & (\si{\centi\metre\squared\per\volt\per\second}) & (\si{\centi\metre\squared\per\volt\per\second})       \\
+            \hline \text { E5 }     & 5                                               & 1                                             \Tsmall \\
+            \text { C1 }            & 4                                               & 0.8                                                   \\
+            \text { F2 }            & 16                                              & 3.5                                                   \\
+            \text { C6 }            & 39                                              & 4                                                     \\
+            \text { C4 }            & 11                                              & 4.3                                                   \\
             \hline
         \end{array}
     \]

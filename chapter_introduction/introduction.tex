@@ -142,7 +142,7 @@ The third and last case gives the point:
 
 
 \co{Electronic Band Structure}
-Within the second quantization formalism ($\hbar = 1$ units), the tight-binding hamiltonian may be written as:
+Within the second quantization formalism ($\hbar = 1$ units), the tight-binding Hamiltonian may be written as:
 \begin{equation}\label{eq:graphene_hamiltonian}
     \mathcal{H}_\textrm{TB} = -t\sum_{\langle ij\rangle,~\sigma}\qty(a^\dagger_{\sigma,i}b_{\sigma,j} + \textrm{H.c.}) - t' \sum_{\langle\langle ij\rangle\rangle,\sigma}\qty(a^\dagger_{\sigma,i}a_{\sigma,j}+b^\dagger_{\sigma,i}b_{\sigma,j}+ \textrm{H.c.}),
 \end{equation}
@@ -151,7 +151,7 @@ The notation $\langle ij\rangle$ means the sum runs over pairs of electrons whic
 The two operators $a^\dagger_{i,\sigma}$ ($a_{i,\sigma}$) and $b^\dagger_{i,\sigma}$ ($b_{i,\sigma}$) creates (annihilates) an electron with spin $\sigma$ ($\sigma=~\uparrow,\downarrow$) for atoms on sublattice A and B, respectively.
 The value of $t$ which reproduces best experimental results is $t\simeq2.8$ \si{\electronvolt}, and quantifies the nearest-neighbour hopping energy; similarly, $t'$ denotes the next nearest-neighbour hopping energy.
 
-By diagonalising this hamiltonian it is possible to work out the energy dispersion of graphene, which reads:
+By diagonalising this Hamiltonian it is possible to work out the energy dispersion of graphene, which reads:
 
 \begin{equation}\label{intro:sec:graphene:eq:energy_bands}
     E_{\pm}(\vect{k}) = \epsilon_p - t'f(\vect{k}) \pm t\sqrt{3 + f(\vect{k})},
@@ -235,7 +235,7 @@ In order to successufully realise a field-effect transistor, however, a suitable
     \end{center}
 \end{figure}
 
-Within the thermoionic emission model for the drain current, when graphene is placed on top of a semiconductor structure, the two workfunctions align accordingly based on the doping and carrier concentration levels (see a pictorial representation in Fig.~\ref{fig:intro:graphene_device}). By assuming that the two work functions are identical, the height of the Schottky barrier between graphene and the semiconductor may be written as $\phi_B = E_g/2$, where $E_g$ is the bandgap energy of the semiconductor, and the on-off ratio may be estimated from the simple relation ~\cite{kim2011role}:
+Within the thermoionic emission model for the drain current, when graphene is placed on top of a semiconductor structure, the two work functions align accordingly based on the doping and carrier concentration levels (see a pictorial representation in Fig.~\ref{fig:intro:graphene_device}). By assuming that the two work functions are identical, the height of the Schottky barrier between graphene and the semiconductor may be written as $\phi_B = E_g/2$, where $E_g$ is the bandgap energy of the semiconductor, and the on-off ratio may be estimated from the simple relation ~\cite{kim2011role}:
 
 \begin{equation}\label{eq:bandgap_current_ratio}
     \frac{I_\textrm{on}}{I_\textrm{off}}\propto\exp{\frac{E_g}{2k_BT}},
@@ -542,7 +542,7 @@ Similary to carbon nanotubes, graphene nanoribbons can have chiral edges. Typica
     \theta = \arcsin\sqrt{\frac{3}{4}\qty(\frac{m^2}{n^2+nm+m^2}\qty)}
 \end{equation}
 where the nanoribbon's edge orientation is determined by translation vector $(n,m)$ of the graphene lattice. Zigzag and armchair are characterised by $\theta=0^\circ$ and $\theta=30^\circ$, respectively, while chiral edges have $\theta$ in the range between.
-Steven Louie and co workers employed a mean-field Hubbard hamiltonian for modelling the \gls{GNR} dispersion relation, assuming the on-site Coulomb repulsion $U$ comparable to the hopping integral $t$ between two adjacent sites ($U/t \sim 1$):
+Steven Louie and co workers employed a mean-field Hubbard Hamiltonian for modelling the \gls{GNR} dispersion relation, assuming the on-site Coulomb repulsion $U$ comparable to the hopping integral $t$ between two adjacent sites ($U/t \sim 1$):
 
 \begin{equation}\label{eq:gnr_chiral_hubbard_hamiltonian}
     \begin{split}
@@ -551,7 +551,7 @@ Steven Louie and co workers employed a mean-field Hubbard hamiltonian for modell
     \end{split}
 \end{equation}
 
-whereby the second summation is performed on spin-polarized densities $n_{i\sigma} = a^\dagger_{i\sigma}a_{i\sigma}$. This hamiltonian preserves electron-hole symmetry, which means that the density of states is symmetric with respect to the Fermi level.
+whereby the second summation is performed on spin-polarized densities $n_{i\sigma} = a^\dagger_{i\sigma}a_{i\sigma}$. This Hamiltonian preserves electron-hole symmetry, which means that the density of states is symmetric with respect to the Fermi level.
 
 \begin{figure}
     \begin{center}
@@ -703,7 +703,7 @@ Using high-k dielectrics is another viable method for enhancing the properties o
 
 Llinas and colleagues investigated the output characteristics of \glspl{GNRFET} with widths of nine and thirteen atoms that were fabricated using two distinct gate dielectrics~\cite{llinas2017short}. They compared the output response of a typical \SI{50}{\nano\metre}-thick back-gated silicon dioxide substrate to that of a high-$\kappa$ dielectric local gate (\ce{HfO2}, \gls{EOT}$ \simeq $\SI{1.5}{\nano\metre}). For the latter device at room temperature, current densities $I_\textrm{on}>\SI{1}{\micro\ampere}$ measured at $V_\textrm{SD}=$\SI{-1}{\volt} with the narrower ribbon were amongst the highest ever reported, combined with an excellent $I_\textrm{on}/I_\textrm{off}\simeq 10^5$.
 
-The authors--thanks to a temperature-dependent experiment-- however noted that Schottky barriers generated at the contacts again dominated transport. While the high-$\kappa$ dielectric lowers the carrier tunneling, the Au/Pd--\gls{GNR} junction leads to the formation of Schottky junctions partly due to the mismatch between the work functions of the metal and the ribbon. In order to lessen the mismatch and prevent the Schottky-dominated transport regime, adopting graphene as a contacting material could be one feasible approach~\cite{braun2021optimized, el2020controlled}.
+Through a temperature-dependent experiment, however, the authors noted that Schottky barriers generated at the contacts again dominated transport. While the high-$\kappa$ dielectric lowers the carrier tunneling, the Au/Pd--\gls{GNR} junction leads to the formation of Schottky junctions partly due to the mismatch between the work functions of the metal and the ribbon. In order to lessen the mismatch and prevent the Schottky-dominated transport regime, adopting graphene as a contacting material could be one feasible approach~\cite{braun2021optimized, el2020controlled}.
 
 \section{Concluding Remarks}
 

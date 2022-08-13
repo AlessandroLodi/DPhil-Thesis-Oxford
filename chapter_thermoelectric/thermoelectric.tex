@@ -162,20 +162,20 @@ A possible explanation for the observed values for the tunneling coupling might 
 A parameter needed to determine the length of \glspl{pGNR} is the relative permittivity of the gate oxide. Because of the ultra-thin nature of the oxide used in these devices, it is not possible to rely on the bulk value for \ce{HfO2} and it must be experimentally determined~\cite{robertson2004high}.
 This was achieved by microfabricating capacitors on the devices using the following approach. A chip is selected from the same wafer used to fabricate devices 1, 2 and 3. The substrate is \ce{O2}-plasma etched to remove the \gls{CVD} graphene layer and prepare the surface for lithography (20 minutes, 25 sccm and 100 percent power). An array of top electrodes is patterned using electron-beam lithography, metal deposition and lift-off. The design consists of overlapping top electrode of varying areas with the gate contact pad separated by the ALD-deposited HfO2 dielectric layer as shown in Figure 7. A small region is removed from the top electrode allowing a W probe to make contact through the oxide and electrically contact the bottom electrode.
 
-An Andeen--Hagerling 2550A ultra-precision capacitance bridge is used to measure the capacitance between the top electrode and the bottom-gate electrode. The measurement is carried out at room temperature in a probe station. The stray capacitance of the probe station and experimental wiring is measured and is found to be insignificant when compared to the values obtained from the microfabricated capacitors. The excitation voltage applied by the bridge is limited to \SI{1}{\volt} RMS to reduce the risk of dielectric breakdown. $\epsilon_r$ is thus determined by:
+An Andeen--Hagerling 2550A ultra-precision capacitance bridge is used to measure the capacitance between the top electrode and the bottom-gate electrode. The measurement is carried out at room temperature in a probe station. The stray capacitance of the probe station and experimental wiring is measured and is found to be insignificant when compared to the values obtained from the microfabricated capacitors. The excitation voltage applied by the bridge is limited to \SI{1}{\volt} RMS to reduce the risk of dielectric breakdown. $\varepsilon_r$ is thus determined by:
 
 \begin{equation}
-    \epsilon_r = \frac{Cd}{\epsilon_0 A},
+    \varepsilon_r = \frac{Cd}{\varepsilon_0 A},
 \end{equation}
 
-where $d = \SI{10}{\nano\metre}$ is the oxide thickness, $\epsilon_0$ is the permittivity of free space, and $A$ is overlapping area of the top and bottom electrode measured using microscopy. The obtained values are shown in Table 1. An average value of $\epsilon_r = 15.41$ is used in all length calculations.
+where $d = \SI{10}{\nano\metre}$ is the oxide thickness, $\varepsilon_0$ is the permittivity of free space, and $A$ is overlapping area of the top and bottom electrode measured using microscopy. The obtained values are shown in Table 1. An average value of $\varepsilon_r = 15.41$ is used in all length calculations.
 
 \begin{table}
     \caption{\label{tab:measured_capacitance}
-        Measured values of electrode area, capacitance and $\epsilon_r$  for several capacitors. These are consistent across various randomly selected points onto a single chip. Errors for $\epsilon_r$ were found to be at the third decimal place.}
+        Measured values of electrode area, capacitance and $\varepsilon_r$  for several capacitors. These are consistent across various randomly selected points onto a single chip. Errors for $\varepsilon_r$ were found to be at the third decimal place.}
     \[
         \begin{array}{cccc}
-            \hline\textrm{Device} & \textrm{Electrode Area}     & \textrm{Measured Capacitance} & \epsilon_r           \\
+            \hline\textrm{Device} & \textrm{Electrode Area}     & \textrm{Measured Capacitance} & \varepsilon_r        \\
             \textrm{name}         & (\si{\micro\metre\squared}) & (\si{\pico\farad})            &                      \\
             \hline
             \textrm{A}1           & 7455                        & 101.1\pm1.0                   & 15.3\pm0.02  \Tsmall \\
@@ -232,7 +232,7 @@ where $C_\textrm{G}$ is the gate capacitance per unit area. From the capacitance
 We remark that the capacitance values $C_\textrm{G}$ and $C_\textrm{GS}$: the former represents the capacitance between the nanoribbon segment that spans across the gate and the gate itself. Therefore, we have estimated that the capacitance per unit area for a ribbon of $L\simeq\SI{40}{\nano\metre}$ and $w_\textrm{GNR}=\SI{1.2}{\nano\metre}$ placed on top of a gate of thickness $d\simeq\SI{10}{\nano\metre}$ is
 
 \begin{equation}
-    C_\textrm{GS} = \frac{\epsilon_0\epsilon_rA}{d}=\SI{0.7}{\atto\farad},
+    C_\textrm{GS} = \frac{\varepsilon_0\varepsilon_rA}{d}=\SI{0.7}{\atto\farad},
 \end{equation}
 %
 For device c1 we estimate a linear \gls{FET} mobility $\mu_\textrm{lin}\simeq\SI{4}{\centi\metre\squared\per\volt\per\second}$.

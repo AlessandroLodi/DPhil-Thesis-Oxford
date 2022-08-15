@@ -1,0 +1,82 @@
+% \begin{savequote}[8cm]
+% \textlatin{Cor animalium, fundamentum e\longs t vitæ, princeps omnium, Microco\longs mi Sol, a quo omnis vegetatio dependet, vigor omnis \& robur emanat.}
+
+% The heart of animals is the foundation of their life, the sovereign of everything within them, the sun of their microcosm, that upon which all growth depends, from which all power proceeds.
+%   \qauthor{--- William Harvey \cite{harvey_exercitatio_1628}}
+% \end{savequote}
+
+\chapter{\label{appendix:sommerfeld}Sommerfeld Expansion}
+
+\minitoc
+
+Let us consider the following integral:
+\begin{equation}\label{app-1:eq:sommerfeld_integral}
+  I=\int\limits_{-\infty}^{\infty} h(E) f_{0}(E) \text{d} E,
+\end{equation}
+where $h(E)$ is a regular function, that it is continous and differentiable
+at any order with respect to $E$, and it is null for $E\longrightarrow -\infty$, whereas:
+$$
+  f_0(E) = \frac{1}{1+e^{ E - \mu/k_BT}},
+$$
+is the Fermi-Dirac distribution.
+
+
+\section{Low-temperature Limit}
+\label{sec:anatomy}
+
+We demonstrate that, at low temperatures, it is possible to obtain an analytical expression for the integral Eq.~\ref{app-1:eq:sommerfeld_integral} which reads:
+
+\begin{equation}
+  I=\int\limits_{-\infty}^{\mu} h(E) \text{d}E+\frac{\pi^{2}}{6}\left(k_{B} T\right)^{2}\left[h^{\prime}(E)\right]_{\mu}+\frac{7 \pi^{4}}{360}\left(k_{B} T\right)^{4}\left[h^{\prime \prime \prime}(E)\right]_{\mu}+\ldots
+\end{equation}
+
+For low-temperature here I mean those which satisfy the condition $T \ll T_F$, where $T_F = E_F/k_B$ is the Fermi temperature for an electron gas.
+Let us define:
+
+$$
+  g(E) = \int\limits_{-\infty}^{E}h(E)\text{d}E.
+$$
+
+Through an integration per parts, Eq.~\ref{app-1:eq:sommerfeld_integral}
+becomes:
+
+\begin{align}
+  I & =\int_{-\infty}^{\infty} h(E) f_{0}(E) \text{d} E=\left[g(E) f_{0}(E)\right]_{-\infty}^{\infty}-\int_{-\infty}^{\infty} g(E) \frac{\partial f_{0}(E)}{\partial E} \text{d} E, \nonumber \\
+    & =\int_{-\infty}^{\infty} g(E)\left(-\frac{\partial f_{0}(E)}{\partial E}\right) \text{d}E,
+\end{align}
+
+being the first term null as $g(E) = 0 $ for $E\longrightarrow -\infty$ and $f_0 = 0$ for $E\longrightarrow\infty$. At low temperatures the function $-\pdv{f_0}{E}$ has appreciable values only near $\mu$. It is possible to devolop a series expansion of $g(E)$ around $\mu$:
+\begin{equation}
+  g(E)=g(\mu)+\sum_{n=1}^{\infty}\left[\frac{(E-\mu)^{n}}{n !}\right]\left[\frac{d^{n} g(E)}{d E^{n}}\right]_{\mu}
+\end{equation}
+
+This allow us to write the integral Eq.~\ref{app-1:eq:sommerfeld_integral} as:
+
+\begin{align}
+  I & =g(\mu)+\sum_{n=1}^{\infty} \int_{-\infty}^{\infty} \frac{(E-\mu)^{n}}{n !}\left[\frac{d^{n} g(E)}{d E^{n}}\right]_{\mu}\left(-\frac{\partial f_{0}(E)}{\partial E}\right) d E \nonumber,     \\
+    & =g(\mu)+\sum_{n=1}^{\infty} \int_{-\infty}^{\infty} \frac{(E-\mu)^{2 n}}{(2 n) !}\left[\frac{d^{2 n-1} g(E)}{d E^{2 n-1}}\right]_{\mu}\left(-\frac{\partial f_{0}(E)}{\partial E}\right) d E.
+\end{align}
+
+where we killed the odd terms in the series as these are integrals of odd functions (note that $\pdv{f_0(E)}{E}$ is an even function with respect to E)
+
+By using the change of variable $x = \frac{E-\mu}{k_BT}$, the integral can be written as:
+
+\begin{align}
+  I       & =g(\mu)+\sum_{n=1}^{\infty} c_{2 n}\left(k_{B} T\right)^{2 n}\left[\frac{d^{2 n-1} h(E)}{d E^{2 n-1}}\right]_{\mu}                            \\
+  c_{2 n} & =\frac{1}{(2 n) !} \int_{-\infty}^{\infty} x^{2 n}\left[-\frac{d}{d x} \frac{1}{e^{x}+1}\right] d x \label{app-1:eq:coefficients_sommerfeld},
+\end{align}
+
+Computing the coefficients is done throught the integration per parts: by using the following relation:
+\begin{equation}
+  \int\limits_{0}^{\infty} x^{n-1} \frac{1}{e^{x+1}} d x=\left(1-2^{1-n}\right) \Gamma(n) \zeta(n),
+\end{equation}
+it is possible to work out a closed form for the coefficients, namely:
+
+\begin{align}
+  c_{2 n} & =\frac{1}{(2 n) !}\left[-\left[x^{2 n} \frac{1}{e^{x}+1}\right]_{-\infty}^{\infty}+2 n \int_{-\infty}^{\infty} x^{2 n-1} \frac{1}{e^{x}+1} d x\right]\nonumber \\ &=\frac{1}{(2 n) !}\left[0+4 n\left(1-2^{1-2 n}\right) \Gamma(2 n) \zeta(2 n)\right]
+\end{align}
+
+and we obtain
+$$
+  \Gamma(n+1)=n ! \quad \zeta(2)=\frac{1 \pi^{2}}{6} \quad \zeta(4)=\frac{\pi^{4}}{90}
+$$

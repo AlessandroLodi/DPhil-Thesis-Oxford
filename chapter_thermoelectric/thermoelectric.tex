@@ -74,29 +74,32 @@ Interestingly, despite the fact that both the bromine and chlorine substitutions
 
 % explain the doping shift from normal n for the Cl and Br to p for methoxy
 
-
-
 \begin{table}
     \caption{\label{tab:bandgaps}
         Calculated bandgaps using different exchange--correlation implementations.}
     \[
-        \begin{array}{lcc}
-            \hline\textit{Edge}        & \textrm{LDA-CA}      & \textrm{GGA-PBE}                                 \\
-            \textit{functionalisation} & (\si{\electronvolt}) & (\si{\electronvolt})                             \\
+        \begin{array}{lcccc}
+            \hline\textit{Edge}        & \textrm{LDA-CA}      & \textrm{GGA-PBE}     & \Delta E_g \textrm{(CA)} & \Delta E_g \textrm{(PBE)}             \\
+            \textit{functionalisation} & (\si{\electronvolt}) & (\si{\electronvolt}) & (\%)                     & (\%)                                  \\
             \hline
-            \text{--H}                 & 1.58                 & 1.55                                     \Tsmall \\
-            \text{--Anthracene}        & 1.56                 & 1.54                                             \\
-            \text{--Br}                & -                    & 1.55                                             \\
-            \text{--Cl}                & 1.45                 & 1.44                                             \\
-            \text{--OMe}               & 1.32                 & 1.30                                             \\
+            \text{--H}                 & 1.57                 & 1.55                 & -                        & -                             \Tsmall \\
+            \text{--Anthracene}        & 1.55                 & 1.54                 & -0.96                    & -0.77                                 \\
+            \text{--Br}                & -                    & 1.55                 & -                        & -0.04                                 \\
+            \text{--Cl}                & 1.45                 & 1.44                 & -7.62                    & -6.77                                 \\
+            \text{--OMe}               & 1.31                 & 1.3                  & -16.21                   & -16.1                                 \\
+            \text{--CH3}               & 1.56                 & 1.55                 & -0.44                    & -0.25                                 \\
+            \text{--CN}                & 1.58                 & 1.56                 & +0.62                    & +0.74                                 \\
+            \text{--NH2}               & 1.36                 & 1.35                 & -13.03                   & -12.9                                 \\
+            \text{--COOH}              & 1.55                 & 1.53                 & -0.84                    & -0.98                                 \\
+            \text{--NO2}               & 1.47                 & 1.47                 & -6                       & -5.24                                 \\
+            \text{--OH}                & 1.47                 & 1.46                 & -5.82                    & -5.82                                 \\
             \hline
         \end{array}
     \]
 \end{table}
 
 
-
-\section{Embedding Porphyrin Structures in MGNR.}\label{gnr-hybrid:sec:measure}
+\section{Embedding Porphyrin Structures in MGNR}\label{gnr-hybrid:sec:measure}
 
 The idea of using chemical functionalisations to induce a preferential doping in carbon nanostructures is not new.
 Several proposals have indeed demonstrated the possibility to tune the conductance of ropes~\cite{bockrath2000chemical} and individual~\cite{ zhou2000modulated, ewels2005nitrogen} carbon nanotubes by introducing dopants

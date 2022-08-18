@@ -6,7 +6,7 @@
    version="1.1"
    id="svg2188"
    sodipodi:docname="gnr_canvas.svg"
-   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -107,40 +107,33 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1009"
+     inkscape:window-width="2482"
+     inkscape:window-height="1411"
      id="namedview2190"
      showgrid="false"
-     inkscape:zoom="0.78000001"
-     inkscape:cx="32.051281"
-     inkscape:cy="435.2564"
-     inkscape:window-x="371"
-     inkscape:window-y="1432"
+     inkscape:zoom="1.1030866"
+     inkscape:cx="392.98819"
+     inkscape:cy="460.07268"
+     inkscape:window-x="69"
+     inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer2"
      inkscape:document-rotation="0"
      units="in"
      inkscape:pagecheckerboard="0"
-     inkscape:document-units="in" />
+     inkscape:document-units="in"
+     inkscape:showpageshadow="0"
+     inkscape:deskcolor="#d1d1d1" />
   <g
      inkscape:groupmode="layer"
      id="layer1"
      inkscape:label="Layer 1"
-     transform="translate(-3208.4799,-2727.6591)">
-    <rect
-       style="opacity:0.511222;fill:#ffffff;fill-opacity:1;stroke:#080305;stroke-width:0.0943236;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect73697"
-       width="537.50568"
-       height="872.24194"
-       x="3208.5271"
-       y="2727.7063" />
-  </g>
+     transform="translate(-3208.4799,-2727.6591)" />
   <g
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Layer 2"
-     transform="translate(-3208.4799,-2727.6591)"
-     sodipodi:insensitive="true">
+     transform="translate(-3208.4799,-2727.6591)">
     <g
        id="g6558"
        transform="matrix(0.35649107,0,0,0.36065623,3342.4876,3452.4081)">
@@ -1487,18 +1480,18 @@
          id="tspan49354"
          x="3266.1597"
          y="2928.1702"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';stroke-width:0.103039">zigzag</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.103039;font-size:16.000001px">zigzag</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:19.7835px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.103039"
-       x="3426.9077"
+       x="3435.9731"
        y="2926.7939"
        id="text49356-3"><tspan
          sodipodi:role="line"
          id="tspan49354-9"
-         x="3426.9077"
+         x="3435.9731"
          y="2926.7939"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';stroke-width:0.103039">armchair</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.103039">armchair</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:19.7835px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.103039"
@@ -1509,7 +1502,7 @@
          id="tspan49354-2"
          x="3623.1228"
          y="2926.7939"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';stroke-width:0.103039">cove</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.103039;font-size:16.000001px">cove</tspan></text>
     <g
        id="g3711"
        transform="matrix(0,-0.3649265,0.35433115,0,2862.4832,3206.4871)">
@@ -3756,36 +3749,36 @@
     <text
        xml:space="preserve"
        style="font-size:19.809px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.103172"
-       x="3272.2385"
+       x="3273.8472"
        y="3216.3293"
        id="text49356-3-0"><tspan
          sodipodi:role="line"
          id="tspan49354-9-8"
-         x="3272.2385"
+         x="3273.8472"
          y="3216.3293"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';stroke-width:0.103172">fjord</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.103172">fjord</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:19.809px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.103172"
-       x="3441.2122"
+       x="3448.6216"
        y="3214.8328"
        id="text49356-3-01"><tspan
          sodipodi:role="line"
          id="tspan49354-9-6"
-         x="3441.2122"
+         x="3448.6216"
          y="3214.8328"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';stroke-width:0.103172">chiral</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.103172">chiral</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:19.809px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.103172"
-       x="3599.0583"
+       x="3605.615"
        y="3207.3503"
        id="text49356-3-9"><tspan
          sodipodi:role="line"
          id="tspan49354-9-0"
-         x="3599.0583"
+         x="3605.615"
          y="3207.3503"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';stroke-width:0.103172">saw-tooth</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.103172">saw-tooth</tspan></text>
     <g
        id="g6183"
        transform="matrix(0.23838088,0,0,0.24116608,3127.2022,3129.4359)">
@@ -6633,35 +6626,35 @@
     <text
        xml:space="preserve"
        style="font-size:18.8358px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.0981025"
-       x="3276.4783"
+       x="3275.4722"
        y="3467.1282"
        id="text49356-3-1"><tspan
          sodipodi:role="line"
          id="tspan49354-9-9"
-         x="3276.4783"
+         x="3275.4722"
          y="3467.1282"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';stroke-width:0.0981025">gulf</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.0981025">gulf</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:18.8358px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.0981025"
-       x="3428.2747"
+       x="3439.2661"
        y="3467.8403"
        id="text49356-3-7"><tspan
          sodipodi:role="line"
          id="tspan49354-9-05"
-         x="3428.2747"
+         x="3439.2661"
          y="3467.8403"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';stroke-width:0.0981025">chevron</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.0981025">chevron</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:18.8358px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.0981025"
-       x="3581.6028"
+       x="3589.7673"
        y="3464.9941"
        id="text49356-3-05"><tspan
          sodipodi:role="line"
          id="tspan49354-9-4"
-         x="3581.6028"
+         x="3589.7673"
          y="3464.9941"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';stroke-width:0.0981025">heterojunction</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.0981025">heterojunction</tspan></text>
   </g>
 </svg>

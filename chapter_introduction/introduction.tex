@@ -126,7 +126,8 @@ The third and last case gives the point:
 \begin{equation}
     M \equiv\pm\qty(0, \pm~\frac{2\pi}{3a})
 \end{equation}
-
+%
+ciao sono alessandro
 \begin{figure}
     \begin{center}
         \includegraphics[width=0.95\columnwidth]{chapter_introduction/figures/graphene_lattice.pdf}
@@ -139,10 +140,30 @@ The third and last case gives the point:
         }
     \end{center}
 \end{figure}
+ciao sono alessandro
+% \begin{figure}[hbtp]
+%     \begin{center}
+%         \includegraphics[width=\textwidth]{chapter_introduction/figures/graphene_lattice.pdf}
+%         \caption[Honeycomb Lattice, Dirac Cones, and Graphene Dispersion]
+%         {\textbf{a,} Honeycomb lattice of graphene. Two non-equivalent carbon atoms A and B in the primitive cells (direct space) are denoted in yellow and purple. The set of possible translations are showed by the lattice vectors $\vect{a}{_1},\vect{a}{_2}$ (green arrows).
+%             \textbf{b,} The first Brillouin zone of graphene with vertices \vect{K} (orange) and \vect{K'} (green), and reciprocal-lattice vectors drawn in red.
+%             \textbf{c,} Graphene energy dispersion resulted from Eq.~\ref{eq:graphene_hamiltonian} (in units of nearest neighbor hopping parameter \emph t). The magnification shows one of the Dirac cones, which are located at the \vect{K} and \vect{K'} points, emphasising the linear dispersion relation.
+%             \textbf{d,} Density of states as a function of \emph t, showing pronounced van Hove singularities for $\epsilon\simeq \pm t$. The dashed rectangle indicates the low-energy linear dispersion region which is typically probed in back-gated transport experiments.
+%             Adapted from~\cite{castroneto2009}.}
+%         \label{fig:intro:graphene_lattice}
+%     \end{center}
+% \end{figure}
 
+% \begin{figure}[hbtp]
+%     \begin{center}
+%         \includegraphics[width=\textwidth]{chapter_introduction/figures/graphene_lattice.pdf}
+%         \caption[Diocane]
+%         {bla bla bla}
+%         \label{fig:intro:graphene_lattice}
+%     \end{center}
+% \end{figure}
 
-\co{Electronic Band Structure}
-Within the second quantization formalism ($\hbar = 1$ units), the tight-binding Hamiltonian may be written as:
+Within the second quantization formalism ($\hbar = 1$ units), the tight-binding Hamiltonian may be written as
 \begin{equation}\label{eq:graphene_hamiltonian}
     \mathcal{H}_\textrm{TB} = -t\sum_{\langle ij\rangle,~\sigma}\qty(a^\dagger_{\sigma,i}b_{\sigma,j} + \textrm{H.c.}) - t' \sum_{\langle\langle ij\rangle\rangle,\sigma}\qty(a^\dagger_{\sigma,i}a_{\sigma,j}+b^\dagger_{\sigma,i}b_{\sigma,j}+ \textrm{H.c.}),
 \end{equation}
@@ -243,7 +264,7 @@ Within the thermoionic emission model for the drain current, when graphene is pl
 
 where the thermal energy $k_BT$ and the bandgap are both expressed in meV. Several researchers have seen bandgap values between 300 and 500 meV to yield the ideal rations for \Gls{CMOS} applications~\cite{schwierz2010graphene, reddy2011graphene}.
 
-%%%%%%%%%%%%%%%%%%%%%% RFFFFFFFFFFFFFFFFFFFFFFFFFF
+
 Despite considerable efforts, the metallic nature of graphene has hindered CMOS architectures from reaching an off state with a high resistance, deeming them unsuitable for logic applications. In contrast, graphene-based electronics have found broad use in applications requiring high frequencies. For analogue applications, properties such as ballistic transport, linear current-voltage characteristics, high transconductance, and exceptionally high sustained currents ($> 10^8$ \si{\ampere\per\square\centi\metre}) have proven to be optimal~\cite{meric2008rf, meric2008current}.
 
 The assessment of two transistor characteristic frequencies, namely cutoff $f_\textrm{T}$ and maximum of oscillations $f_\textrm{max}$, is the primary tool for determining frequency response. The former indicates how quickly a signal may travel from the gate to the drain of the device and is often measured when the small-signal current gain approaches unity, whilst the latter is the highest possible frequency at which there is a non-vanishing power-gain~\cite{schwierz2010graphene}.
@@ -523,7 +544,7 @@ When the width of the ribbon falls below \SI{10}{\nano\metre}, however, substant
     \begin{center}
         \includegraphics[width=0.95\textwidth]{chapter_introduction/figures/gnr_canvas.pdf}
         \centering{}
-        \caption{
+        \caption[MGNR Edge Structure Canvas]{
             Different geometries and edge structures of graphene nanoribbons.
             \label{fig:intro:gnr-canvas}}
     \end{center}
@@ -539,7 +560,7 @@ A few years later, the chiral \gls{DOS} for the electronic states at the ribbon 
 
 Similary to carbon nanotubes, graphene nanoribbons can have chiral edges. Typically, chirality may be described by a chiral angle $\theta$ which may be defined as:
 \begin{equation}
-    \theta = \arcsin\sqrt{\frac{3}{4}\qty(\frac{m^2}{n^2+nm+m^2}\qty)}
+    \theta = \arcsin\sqrt{\frac{3}{4}\qty(\frac{m^2}{n^2+nm+m^2})}
 \end{equation}
 where the nanoribbon's edge orientation is determined by translation vector $(n,m)$ of the graphene lattice. Zigzag and armchair are characterised by $\theta=0^\circ$ and $\theta=30^\circ$, respectively, while chiral edges have $\theta$ in the range between.
 Steven Louie and co workers employed a mean-field Hubbard Hamiltonian for modelling the \gls{GNR} dispersion relation, assuming the on-site Coulomb repulsion $U$ comparable to the hopping integral $t$ between two adjacent sites ($U/t \sim 1$):

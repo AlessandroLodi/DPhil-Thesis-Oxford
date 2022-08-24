@@ -26,9 +26,9 @@ Secondly, the ribbon's aromatic backbone is $\simeq$\SI{1.1}{\nano\metre} wide. 
 \begin{figure}[hbtp]
   \begin{center}
     \includegraphics[width=\textwidth]{chapter_gnrset/figures/device_gnr.pdf}
-    \caption{
-      \textbf{(a)} Synthesis of liquid-phase processable graphene nanoribbon. Edge functionalization include maleimide groups, responsible for the high dispersion quality in organic solvents (we have tested THF and toluene), and anthracene groups. Synthetic route details can be found in the literature reported in the main text.
-      \textbf{(b)} False-colour scanning electron microscope image of a typical experimental junction. \textbf{(c)} Cartoon of a possible junction geometry, with the ribbon depicted in white (side groups are omitted for clarity purpose). The schematic circuit diagram indicates which terminal are used to apply gate $V_\textrm{G}$ and d.c. bias $V_\textrm{SD}$ voltages}
+    \caption[Synthesis and Schematic of a Liquid-Soluble MGNR]{
+      \textbf{(a,)} Synthesis of liquid-phase processable graphene nanoribbon. Edge functionalization include maleimide groups, responsible for the high dispersion quality in organic solvents (we have tested THF and toluene), and anthracene groups. Synthetic route details can be found in the literature reported in the main text.
+      \textbf{(b,)} False-colour scanning electron microscope image of a typical experimental junction. \textbf{(c)} Cartoon of a possible junction geometry, with the ribbon depicted in white (side groups are omitted for clarity purpose). The schematic circuit diagram indicates which terminal are used to apply gate $V_\textrm{G}$ and d.c. bias $V_\textrm{SD}$ voltages}
     \label{fig:device_gnr}
   \end{center}
 \end{figure}
@@ -77,20 +77,13 @@ After these considerations and the one exponsed in Ch.~\ref{ch:fabrication}, we 
 % Half these junctions display field effect transistor performance (FET), with various levels of doping: while both n and p doping are observable immediately after deposition, all devices progressively shift to p-doping upon exposure to ambient conditions, as for other carbon nanomaterials . Ambipolar FET behaviour allows observing the MGNR gap and both the electron and hole-doped regions (Fig.1f). The conductance values (~10-4 G0, with G0 = 2e2/h ~7.75 x 104 nS) indicate weak graphene/MGNR contacts. The ON-state currents ISD≈1 nA and the subthreshold swing are comparable to those of non-molecular nanoribbons
 
 \section{Electrical Transport Measurements}\label{gnrset:sec:measure}
-The results of the measurement protocol are shown in Fig.~\ref{fig:all_sd}. The stability diagram map reveals six Coulomb diamonds regions clearly distinguishable up to, at least, 180 K within the experimental gate voltage range. At sufficiently low energies or temperatures, then, a finite graphene nanoribbons behaves like a quantum dot, similar to what has been observed for carbon nanotubes~\cite{bockrath1997single, nygaard2000kondo,buitelaar2002multiwall, postma2001carbon, liang2002shell, guinea2005many}.
+The stability diagram map reveals six Coulomb diamonds regions clearly distinguishable up to, at least, 180 K within the experimental gate voltage range. At sufficiently low energies or temperatures, then, a finite graphene nanoribbons behaves like a quantum dot, similar to what has been observed for carbon nanotubes~\cite{bockrath1997single, nygaard2000kondo,buitelaar2002multiwall, postma2001carbon, liang2002shell, guinea2005many}.
 
-% \begin{figure}
-%   \begin{center}
-%     \includegraphics[width=0.95\columnwidth]{chapter_gnrset/figures/all_sd.png}
-%     \caption{Temperature dependence evolution of the stability diagram map for a single-electron MGNR. Bias and voltage ranges have been limited to the plotted experimental range in order to preserve the stability of the device even at hight temperature. Degeneracy points do not close at low temperature, an effect which we attribute to the presence of Franck-Condon blockade phenomena~\cite{burzuri2014franck}.}
-%     \label{fig:all_sd}
-%   \end{center}
-% \end{figure}
 
 \begin{figure}[hbtp]
   \begin{center}
     \includegraphics[width=\textwidth]{chapter_gnrset/figures/sd_base_30K.pdf}
-    \caption{
+    \caption[Temperature-Dependent Stability Diagram for a MGNR ($T=\SIrange{0.025}{30}{\kelvin}$)]{
       Temperature dependence evolution of the stability diagram map for a single-electron MGNR. Bias and voltage ranges have been limited to the plotted experimental range in order to preserve the stability of the device even at hight temperature. Degeneracy points do not close at low temperature, an effect which we attribute to the presence of Franck-Condon blockade phenomena~\cite{burzuri2014franck}.}
     \label{fig:sd_base_30K}
   \end{center}
@@ -99,7 +92,7 @@ The results of the measurement protocol are shown in Fig.~\ref{fig:all_sd}. The 
 \begin{figure}[hbtp]
   \begin{center}
     \includegraphics[width=\textwidth]{chapter_gnrset/figures/sd_60K_270K.pdf}
-    \caption{
+    \caption[Temperature-Dependent Stability Diagram for a MGNR ($T=\SIrange{60}{270}{\kelvin}$)]{
       Temperature dependence evolution of the stability diagram map for a single-electron MGNR. Bias and voltage ranges have been limited to the plotted experimental range in order to preserve the stability of the device even at hight temperature. Degeneracy points do not close at low temperature, an effect which we attribute to the presence of Franck-Condon blockade phenomena~\cite{burzuri2014franck}.}
     \label{fig:sd_60K_270K}
   \end{center}
@@ -111,11 +104,7 @@ Gate voltage outside the shown region resulted in strong leakage currents, likel
 \begin{figure}
   \begin{center}
     \includegraphics[width=0.99\columnwidth]{chapter_gnrset/figures/waterfall_complete3.pdf}
-    \caption{Temperature dependence of the conductance resonance measured at different bias voltages.
-      \textbf{(a, b)} Resonance levels probed when applied a polarity of 10 mV.}
-    \textbf{(c, d)} Energy levels involved in the tunnelling process at 30 mV.
-    \textbf{(e, f)} Gate traces taken at 0.1 V.
-    Interestingly, the peaks are subject to a shift towards the left for temperature below 100 K, for then being shifted towards the right.
+    \caption[Temperature-Dependet of Differently Biased Gate Traces]{\textbf{(a, b)} Resonance levels probed when applied a polarity of 10 mV. \textbf{(c, d)} Energy levels involved in the tunnelling process at 30 mV. \textbf{(e, f)} Gate traces taken at 0.1 V. Interestingly, the peaks are subject to a shift towards the left for temperature below 100 K, for then being shifted towards the right.}
     \label{fig:waterfall}
   \end{center}
 \end{figure}
@@ -147,8 +136,8 @@ is also what you have at positive polarities, so no surprises on that side. you 
 \begin{figure}
   \begin{center}
     \includegraphics[width=0.8\textwidth, height=0.8\textheight]{chapter_gnrset/figures/comparison_rt_traces.png}
-    \caption{
-      \textbf{(a)} Room temperature stability diagram. Black lines are the countour lines of low tremperatures diamonds superimposed at the same gate voltage. Clearly, thermal broadening plays blurs the diamond shape so they may regarded exclusively as a guide to eyes. Green horizontal lines identify gate trace cuts at different gate voltages. The acquisition scan rate for this diagram was 10 MS/s, which enables detection of fast charging events.
+    \caption[Room-Temperature Fast-Scanned Stability Diagram and Gate Traces]{
+      \textbf{(a)} Room temperature stability diagram. White lines are the countour lines of low tremperatures diamonds superimposed at the same gate voltage. Clearly, thermal broadening plays blurs the diamond shape so they may regarded exclusively as a guide to eyes. Green horizontal lines identify gate trace cuts at different gate voltages. The acquisition scan rate for this diagram was 10 MS/s, which enables detection of fast charging events.
       \textbf{(b)} Traces extracted at different biases. Grey bands overalapped over the individual traces are the Coulomb diamond widths at that respective bias. The number of time one of this band is superimposed with a peak may assign to an actual signal rather than background noise. }
     \label{fig:comparison_low_high}
   \end{center}
@@ -181,7 +170,7 @@ We find a non linear increase in $\beta$ for the diamonds at negative gate volta
 \begin{figure}
   \begin{center}
     \includegraphics[width=\textwidth]{chapter_gnrset/figures/trace_powerfit_10mv.pdf}
-    \caption{Power-law temperature dependence of the maximum conductance measured by applying 10 mv of bias, demonstrating an accordance with the Tomonaga-Luttinger liquid model. Top most frame show the peak height $G_\textrm{max}(T)$ for the conductance peak of the charge transition $N \rightarrow N+1$, following a power-law function with exponent $0.14 \pm 0.10$. Errors are estimated as outlined in the main text. Dashed lines are the 95\% prediction limits calculated as outlined in the main text. Blue bands represents the 95\% confidence interval estimated using the bootstrap method under the assumption that fitting errors are normally distributed.}
+    \caption[Low-Bias Temperature-Dependent Conductance]{Power-law temperature dependence of the maximum conductance measured by applying 10 mv of bias, demonstrating an accordance with the Tomonaga-Luttinger liquid model. Top most frame show the peak height $G_\textrm{max}(T)$ for the conductance peak of the charge transition $N \rightarrow N+1$, following a power-law function with exponent $0.14 \pm 0.10$. Errors are estimated as outlined in the main text. Dashed lines are the 95\% prediction limits calculated as outlined in the main text. Blue bands represents the 95\% confidence interval estimated using the bootstrap method under the assumption that fitting errors are normally distributed.}
     \label{fig:power_fit_10mv}
   \end{center}
 \end{figure}
@@ -211,7 +200,7 @@ regression line ($\sigma^2$), plus the term coming from the uncertainty in where
 \begin{figure}[hbtp]
   \begin{center}
     \includegraphics[width=\textwidth]{chapter_gnrset/figures/zbgt_peak_height_alphas.pdf}
-    \caption{
+    \caption[Temperature Evolution of Zero-Bias Conductance]{
       \textbf{(a)} Power-law fits zero-bias peak height $G_\textrm{max}$ as the temperature is increased. Error bands are calculated according to the formula $\delta[\log(G_\text{max})] = 0.434~\sigma_{G_\text{max}}/G_\text{max}$, where $\sigma_{G_\text{max}}$ is the error from fitting the data with a thermally-broaded model for the resonance.
       \textbf{(b)} Power-law exponents plotted for the various charge
       transitions, demonstrating a certain degree of accordance with the Tomonaga-Luttinger liquid model. Darker and lighter blue regions draw the 1$\sigma$ and the 2$\sigma$ confidence interval, respectively. Experimental comparison with the literature as discussed in the main text are reported on the right.}
@@ -223,14 +212,6 @@ regression line ($\sigma^2$), plus the term coming from the uncertainty in where
 The height of the diamonds reads the bias voltage necessary to add an electron to the ribbon, which defines an addition energy $E_\textrm{add} = e^2/C_\textrm{s} + \Delta E$, where $\Delta E$ is the energy difference between the energy levels. Energy levels are here associated with the quantum states of the ribbon in its quantum dot configuration. Although the length of a \gls{MGNR} is molecularly defined, its quantum dot configuration depends strongly on the coupling with the leads. Therefore, the $\Delta E$ read from a first-principle calculation and the one measured experimentally may differ significantly. An average $\overline{E_\textrm{add}} =  157.43\pm 5.65$ meV was extracted from the heights of all the six suppressed current regions, which is higher than previosuly reported for room-temperature operating single-electron quantum dots in semiconductors~\cite{zhuang1998silicon} and carbon nanotubes~\cite{postma2001carbon}.
 
 Given the graphene electrodes have low electrostatic screening, the main contribution to the total capacitance is given by the capacitive coupling of the \gls{MGNR} to the back gate, so we can approximate $C_\textrm{s}\simeq C_\textrm{G}$. By using reported values in the literature~\cite{han2010electron} $C_\textrm{G}\simeq \SI{700}{\atto\farad}/\mu\textrm{m}^2$, we estimate.
-
-% \begin{figure}[hbtp]
-%   \begin{center}
-%     \includegraphics[width=\textwidth]{chapter_gnrset/figures/alphas.pdf}
-%     \caption{Power-law exponents for close to zero-bias conductance resonances plotted against the observable charge transitions, demonstrating an accordance with the Tomonaga-Luttinger liquid model. D.}
-%     \label{fig:alphas}
-%   \end{center}
-% \end{figure}
 
 \begin{table}
   \caption{\label{tab:conductance_exponents_all}
@@ -260,23 +241,28 @@ A further potential bias in identify correctly the fitting parameter $alpha$ see
 
 \begin{table}
   \caption{\label{tab:conductance_exponents_temp}
-    Power-law exponents conductance $G^*$ over a wide range of temperatures. Errors are here standard errors.}
+    Power-law exponents for the conductance $G$ and integrated conductance $G^*$ across two different temperature ranges. Errors on the single charge transition are standard fitting errors, whereas error on the averages are estimated through error propagation formula.}
   \[
-    \begin{array}{lccc}
-      \hline \text{Charge Transition} & 1-210 K       & 1-72 K                & \\
+    \begin{array}{cccc}
+      \hline \textrm{Charge} & G\sim T^\alpha                            & G\sim T^\alpha                           & G^*\sim T^\xi \Tsmall                                        \\
+      \textrm{Transition}    & (\SI{1}{\kelvin} < T < \SI{205}{\kelvin}) & (\SI{1}{\kelvin} < T < \SI{72}{\kelvin}) & (\SI{1}{\kelvin} < T < \SI{72}{\kelvin})                     \\
       \hline
-      \alpha(N+1)                     & 0.43 \pm 0.07 & 0.51 \pm 0.06 \Tsmall   \\
-      \alpha(N+2)                     & 0.60 \pm 0.11 & 0.66 \pm 0.12           \\
-      \alpha(N+3)                     & 0.46 \pm 0.06 & 0.54 \pm 0.03           \\
-      \alpha(N+4)                     & 0.60 \pm 0.12 & 0.86 \pm 0.15           \\
-      \alpha(N+5)                     & 0.57 \pm 0.09 & 0.65 \pm 0.12           \\
-      \alpha(N+6)                     & 0.56 \pm 0.13 & 0.82 \pm 0.07           \\
-      \alpha(N+7)                     & 0.33 \pm 0.08 & 0.45 \pm 0.09           \\
-      \overline\alpha                 & 0.51 \pm 0.04 & 0.64 \pm 0.06\Tsmall    \\
+      N\leftrightarrow N+1   & 0.31 \pm 0.11                             & 0.51 \pm 0.06                            & 1.56 \pm 0.2                                        \Tsmall  \\
+      N+1\leftrightarrow N+2 & 0.54 \pm 0.09                             & 0.65 \pm 0.08                            & 1.76 \pm 0.2                                                 \\
+      N+2\leftrightarrow N+3 & 0.32 \pm 0.12                             & 0.54 \pm 0.03                            & 1.65 \pm 0.1                                                 \\
+      N+3\leftrightarrow N+4 & 0.60 \pm 0.11                             & 0.62 \pm 0.07                            & 1.43 \pm 0.3                                                 \\
+      N+4\leftrightarrow N+5 & 0.57 \pm 0.08                             & 0.65 \pm 0.12                            & 1.35 \pm 0.2                                                 \\
+      N+5\leftrightarrow N+6 & 0.57 \pm 0.13                             & 0.83 \pm 0.06                            & 1.61 \pm 0.2                                                 \\
+      N+6\leftrightarrow N+7 & 0.36 \pm 0.2                              & 0.45 \pm 0.09                            & 1.36 \pm 0.3                                                 \\
+      \textrm{Mean}          & 0.47 \pm 0.02                             & 0.64 \pm 0.01                            & 1.53 \pm 0.05                                        \Tsmall \\
       \hline
     \end{array}
   \]
 \end{table}
+
+
+
+
 % [0.19, 0.38, 0.1, 0.48, 0.38, 0.22, 0.29], % tstudent_err_alpha_temp_1_80K
 % [0.19, 0.31, 0.17, 0.33, 0.25, 0.36, 0.22], % tstudent_err_alpha_temp_1_210K
 
@@ -287,7 +273,7 @@ Experimental points seems to deviate systematically at low ($T < \SI{1}{\kelvin}
 \begin{figure}[hbtp]
   \begin{center}
     \includegraphics[width=\textwidth]{chapter_gnrset/figures/zbgt_int_cond_power_law_h.pdf}
-    \caption{Zero-bias conductance as a function of temperature for the charge transition $N+4\rightarrow N+5$. Solid lines: experimental fits to the model for the low-energy excitations as a function of temperature $G_\text{max}(T)/\cosh^2[(2\text{arccosh}(\sqrt2)V_\textrm{G})/w(T)]$~\cite{beenakker1991theory, postma2001carbon}. The inset shows the peak width $w$ versus $T$, which displays a linear behavior $w(T) = \SI[separate-uncertainty = true]{1.6(0.4)e-1}{} + T\SI[separate-uncertainty = true]{7.5(1)e-2}{}$. \textbf{(bottom-left)} Integrated conductance $G^*$ temperature trends, offset along the y direction for clarity. \textbf{(bottom-right)} Power-law exponents $\alpha$ for each charge transition. Circles and thin diamonds have used to represent the fitting parametr estimated through a simple power-law and the Siegel estimator, respectively. Error bars represent fitting errors.}
+    \caption[Zero-Bias Temperature Evolution of The Integrated Conductance]{Zero-bias conductance as a function of temperature for the charge transition $N+4\rightarrow N+5$. Solid lines: experimental fits to the model for the low-energy excitations as a function of temperature $G_\text{max}(T)/\cosh^2[(2\text{arccosh}(\sqrt2)V_\textrm{G})/w(T)]$~\cite{beenakker1991theory, postma2001carbon}. The inset shows the peak width $w$ versus $T$, which displays a linear behavior $w(T) = \SI[separate-uncertainty = true]{1.6(0.4)e-1}{} + T\SI[separate-uncertainty = true]{7.5(1)e-2}{}$. \textbf{(bottom-left)} Integrated conductance $G^*$ temperature trends, offset along the y direction for clarity. \textbf{(bottom-right)} Power-law exponents $\alpha$ for each charge transition. Circles and thin diamonds have used to represent the fitting parametr estimated through a simple power-law and the Siegel estimator, respectively. Error bars represent fitting errors.}
     \label{fig:zbgt_integrated_G_pk5_fit_all}
   \end{center}
 \end{figure}

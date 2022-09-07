@@ -7,7 +7,7 @@
    viewBox="0 0 145.02267 79.305992"
    version="1.1"
    id="svg26700"
-   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    sodipodi:docname="single_level_model.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -23,15 +23,17 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="2.1417558"
-     inkscape:cx="368.38934"
-     inkscape:cy="229.0177"
-     inkscape:window-width="1920"
-     inkscape:window-height="1009"
-     inkscape:window-x="-8"
+     inkscape:zoom="1.5144501"
+     inkscape:cx="236.38944"
+     inkscape:cy="139.98481"
+     inkscape:window-width="1842"
+     inkscape:window-height="1057"
+     inkscape:window-x="70"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g7467" />
+     inkscape:current-layer="g73492-1-8-3"
+     inkscape:showpageshadow="0"
+     inkscape:deskcolor="#505050" />
   <defs
      id="defs26697" />
   <g
@@ -123,16 +125,16 @@
              style="fill:none;fill-opacity:1;stroke:#ee978a;stroke-width:1.00063;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
             <path
                d="M 0,0 0.44,1.963 2.1570001,3.01 -2.4890001,4.0619998 Z"
-               style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ee978a;stroke-width:1.00063;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+               style="fill:#ee978a;fill-opacity:1;fill-rule:nonzero;stroke:#ee978a;stroke-width:1.00063;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                id="path2696-8-9-8" />
           </g>
           <g
              id="g2698-1-8-3"
              transform="translate(182.2543,655.23389)"
-             style="fill:none;fill-opacity:1;stroke:#ee978a;stroke-width:1.00063;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+             style="fill:#ee978a;fill-opacity:1;stroke:#ee978a;stroke-width:1.00063;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
             <path
                d="M 0,0 -1.656,1.143 -3.6270001,0.74400001 -0.93199998,4.6719999 Z"
-               style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ee978a;stroke-width:1.00063;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+               style="fill:#ee978a;fill-opacity:1;fill-rule:nonzero;stroke:#ee978a;stroke-width:1.00063;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                id="path2700-1-9-2" />
           </g>
         </g>
@@ -156,19 +158,19 @@
             <g
                id="g2694-4-9-6-3"
                transform="translate(154.03529,641.54303)"
-               style="fill:none;fill-opacity:1;stroke:#ee978a;stroke-width:1.00063;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+               style="fill:#ee978a;fill-opacity:1;stroke:#ee978a;stroke-width:1.00063;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
               <path
                  d="M 0,0 0.44,1.963 2.1570001,3.01 -2.4890001,4.0619998 Z"
-                 style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ee978a;stroke-width:1.00063;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                 style="fill:#ee978a;fill-opacity:1;fill-rule:nonzero;stroke:#ee978a;stroke-width:1.00063;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                  id="path2696-8-9-8-3" />
             </g>
             <g
                id="g2698-1-8-3-2"
                transform="translate(182.2543,655.23389)"
-               style="fill:none;fill-opacity:1;stroke:#ee978a;stroke-width:1.00063;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+               style="fill:#ee978a;fill-opacity:1;stroke:#ee978a;stroke-width:1.00063;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
               <path
                  d="M 0,0 -1.656,1.143 -3.6270001,0.74400001 -0.93199998,4.6719999 Z"
-                 style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ee978a;stroke-width:1.00063;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                 style="fill:#ee978a;fill-opacity:1;fill-rule:nonzero;stroke:#ee978a;stroke-width:1.00063;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                  id="path2700-1-9-2-6" />
             </g>
           </g>
@@ -185,7 +187,7 @@
              x="30.531839"
              y="94.465744"
              id="tspan1510-8-6-3"
-             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Italic';stroke-width:0.335698">Γ</tspan></text>
+             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke-width:0.335698">Γ</tspan></text>
         <path
            d="m 32.76148,95.285905 v -3.23948"
            style="fill:none;stroke:#231f20;stroke-width:0.167849;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -220,36 +222,34 @@
         </g>
         <text
            xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.34988px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';fill:#231f20;fill-opacity:1;stroke-width:0.251773"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.34988px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;fill:#231f20;fill-opacity:1;stroke-width:0.251773"
            x="50.130062"
            y="89.86937"
            id="text19753-9-5"><tspan
              sodipodi:role="line"
              id="tspan19751-2-0"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.34988px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';fill:#231f20;fill-opacity:1;stroke-width:0.251773"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.34988px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke-width:0.251773"
              x="50.130062"
              y="89.86937"><tspan
-               style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Medium Italic'"
-               id="tspan18057">ε<tspan
-   style="font-style:normal;font-size:65%;baseline-shift:sub"
-   id="tspan20603">0</tspan></tspan><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.52742px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';baseline-shift:sub;stroke-width:0.251773"
-               id="tspan75147-5" /></tspan></text>
+               style="font-style:italic"
+               id="tspan1020">ε</tspan><tspan
+               style="font-size:65%;baseline-shift:sub"
+               id="tspan1022">0</tspan></tspan></text>
         <text
            xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.34988px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';fill:#231f20;fill-opacity:1;stroke-width:0.251773"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.34988px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;fill:#231f20;fill-opacity:1;stroke-width:0.251773"
            x="76.191055"
            y="86.466171"
            id="text51824-0-9"><tspan
              sodipodi:role="line"
              id="tspan51822-1-7"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.34988px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';fill:#231f20;fill-opacity:1;stroke-width:0.251773"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.34988px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke-width:0.251773"
              x="76.191055"
              y="86.466171"><tspan
-               style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Medium Italic'"
-               id="tspan33529">μ</tspan><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.52742px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';baseline-shift:sub;fill:#231f20;fill-opacity:1;stroke-width:0.251773"
-               id="tspan62910-3">D</tspan></tspan></text>
+               style="font-style:italic"
+               id="tspan1024">μ</tspan><tspan
+               style="font-size:65%;baseline-shift:sub"
+               id="tspan1028">D</tspan></tspan></text>
         <g
            id="g2660-9-5"
            transform="matrix(0.35277777,0,0,-0.35277777,39.74998,93.326375)">
@@ -266,9 +266,11 @@
              x="28.438948"
              y="74.593857"
              id="tspan1510-8-6-3-6"
-             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Italic';stroke-width:0.335698">Γ<tspan
-   style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:65%;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Medium';baseline-shift:sub"
-   id="tspan23117">L</tspan></tspan></text>
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;fill:#030202;fill-opacity:1;stroke-width:0.335698"><tspan
+               style="font-style:italic"
+               id="tspan1010">Γ</tspan><tspan
+               style="font-size:65%;baseline-shift:sub"
+               id="tspan1008">L</tspan></tspan></text>
         <text
            style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.34988px;font-family:'Minion Pro';-inkscape-font-specification:MinionPro-It2;writing-mode:lr-tb;fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.335698"
            id="text1512-0-8-8-6-6"
@@ -277,24 +279,26 @@
              x="55.397934"
              y="74.263138"
              id="tspan1510-8-6-3-6-4"
-             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Italic';stroke-width:0.335698">Γ<tspan
-   style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:65%;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Medium';baseline-shift:sub"
-   id="tspan25647">R</tspan></tspan></text>
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke-width:0.335698"><tspan
+               style="font-style:italic"
+               id="tspan1012">Γ</tspan><tspan
+               style="font-size:65%;baseline-shift:sub"
+               id="tspan1014">R</tspan></tspan></text>
         <text
            xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.34988px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';fill:#231f20;fill-opacity:1;stroke-width:0.251773"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.34988px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;fill:#231f20;fill-opacity:1;stroke-width:0.251773"
            x="7.2870588"
            y="86.448792"
            id="text51824-0-9-0"><tspan
              id="tspan51822-1-7-3"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.34988px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';fill:#231f20;fill-opacity:1;stroke-width:0.251773"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.34988px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke-width:0.251773"
              x="7.2870588"
              y="86.448792"
              sodipodi:role="line"><tspan
-               style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Medium Italic'"
-               id="tspan30317">μ</tspan><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.52742px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';baseline-shift:sub;fill:#231f20;fill-opacity:1;stroke-width:0.251773"
-               id="tspan62910-3-9">S</tspan></tspan></text>
+               style="font-style:italic"
+               id="tspan1018">μ</tspan><tspan
+               style="font-size:65%;baseline-shift:sub"
+               id="tspan1016">S</tspan></tspan></text>
       </g>
       <rect
          style="opacity:0.436853;fill:#7d376c;fill-opacity:0.983294;stroke:#f26522;stroke-width:0.0461834"

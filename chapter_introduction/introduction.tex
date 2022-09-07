@@ -226,7 +226,7 @@ Klein tunnelling in the setting of graphene p--n junction results from the absen
         \includegraphics[width=\textwidth]{chapter_introduction/figures/graphene_device.pdf}
         \caption[Graphene Device Architectures and Operating Schematic]{
             \textbf{a (top),} Architectures of the main graphene MOSFETs. Charge carriers can be modulated in a graphene channel (epitaxial, CVD-grown, or multi-layer) connecting two metal contacts by either back-gate or top-gate. SiC substrate have been used for growing in-situ thermally decomposed graphene, which has found successful radiofrequency applications.
-            \textbf{a (bottom),} In recent years, several solutions have envisioned graphene substrate sandwiched between two hexagonal boron nitride layers. Having a slight lattice mismatch (about 1.5\% \cite{giovannetti2007substrate}) relative to graphene, $\epsilon_{\text{h-BN}}\simeq 3-4$ and significant bandgap (5.9 eV), it is considered the best insulating gate layer for graphene nowadays. Devices based on h-BN-sandwiched graphene have been testbeds for recent groundbreaking results such as unconventional superconductivity \cite{cao2018unconventional} and Stoner ferromagnetism \cite{seiler2021quantum}.
+            \textbf{a (bottom),} In recent years, several solutions have envisioned graphene substrate sandwiched between two \gls{hBN} layers. Having a slight lattice mismatch (about 1.5\% \cite{giovannetti2007substrate}) relative to graphene, $\epsilon_{\text{h-BN}}\simeq 3-4$ and significant bandgap (5.9 eV), it is considered the best insulating gate layer for graphene nowadays. Devices based on h-BN-sandwiched graphene have been testbeds for recent groundbreaking results such as unconventional superconductivity \cite{cao2018unconventional} and Stoner ferromagnetism \cite{seiler2021quantum}.
             \textbf{b,} Energy-band diagrams of graphene-semiconductor (G/S) contacts in thermal equilibrium, when a forward \textbf{c,} and reverse \textbf{d,} bias is applied. Symbols are associated to physical observables as explained in the main text.}
         \label{fig:intro:graphene_device}
     \end{center}
@@ -629,8 +629,7 @@ According to Eq.~\ref{ch1:eq:mfp_edge_backscattering}, an increase in width and/
 
 \begin{table}
     \caption{\label{tab:gnr_fet} Comparison amongst different \gls{FET} realised with graphene nanoribbon as conducting channel. Top and bottom.}
-    \noindent\makebox[\textwidth]
-    {%
+    \resizebox{\columnwidth}{!}{%
         \begin{tabular}{c*{6}{c}}
             \toprule
                                  & \multicolumn{3}{c}{Structural Parameter} & \multicolumn{2}{c}{Device Parameter}\T\B                                                                                                             \\
@@ -665,10 +664,8 @@ According to Eq.~\ref{ch1:eq:mfp_edge_backscattering}, an increase in width and/
 
 
             \bottomrule
-        \end{tabular}
+        \end{tabular}%
     }
-
-
 \end{table}
 \FloatBarrier
 

@@ -193,19 +193,23 @@ The electrical conductance is then retrieved by taking the derivative of the cur
 Several computational scheme may be used to compute the set of transmission eigenvalues for a given molecular hamiltonian, ranging from simple tight-binding to non-equilibrium Green's functions. The interested reader is referred to the specific literature~\cite{cuevas2010molecular}.
 
 
-\section{Accounting the Vibrational Degree of Freedoms: the Rate-Equation Model}
+\section{Accounting the Vibrational Degree of Freedoms: the Rate-Equation Model}\label{ch:theory:sec:vibrations}
 
 The rate equation model starts from a kinetic description of the electrode--molecule junction and assumes the overall current flowing through the molecule uniquely determine by how fast an electrons tunnels in and out from a weakly coupled molecular level \cite{seldenthuis2008vibrational, esposito2010self}. A promising extension of this framework attempts to quantify the quantum mechanical effects of the vibrational \gls{DOF} on the electron transfer rates. Here we will adopt the description reported in references \cite{thomas2019understanding} and \cite{sowa2018beyond, sowa2020beyond} where the electronic degrees of freedom interact with an unstructured environment modelled by a superohmic bath having an exponential cut-off:
-$$
-    \mathcal{J}(\omega)=\frac{\lambda}{2}\frac{\omega^3}{\omega_\textrm{c}}e^{-\omega/\omega_\textrm{c}}
-$$
+
+\begin{equation}
+    \mathcal{J}(\omega)=\frac{\lambda}{2}\frac{\omega^3}{\omega_\textrm{c}}e^{-\omega/\omega_\textrm{c}},
+    \label{eq:initial_vibration_equation}
+\end{equation}
+%
 where $\lambda$ is the reorganization energy as defined from the Marcus model for electron transfer in solution and $\omega_\textrm{c}$ is a cut-off frequency.
 
 The current through the junction can be written as
-$$
+\begin{equation}
     I=|e| \frac{\gamma_\text{ox}^\text{S} \gamma_{\text {red}}^\text{D}-\gamma_{\text {red}}^\text{S} \gamma_\text{ox}^\text{D}}{\gamma_{\text {red}}^\text{S}+\gamma_{\text {red}}^\text{D}+\gamma_{ox}^\text{S}+\gamma_{ox}^\text{D}},
-$$
+\end{equation}
 %
+
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_theory/figures/single_level_model.pdf}
@@ -213,8 +217,7 @@ $$
         \label{fig:theory:single_level_model}
     \end{center}
 \end{figure}
-
-
+%
 where $\gamma_{\text{red/ox}}^\text{S/D}$ are the electron-transfer rates at each electrode corresponding to a reduction or an oxidation. If one consider the charge transition from $N$ to the $N+1$ charge state, the electron rates are given as follows:
 
 \begin{align}
@@ -222,21 +225,24 @@ where $\gamma_{\text{red/ox}}^\text{S/D}$ are the electron-transfer rates at eac
     \gamma_\text{ox}^\text{S,D}    & =\frac{\Gamma_\text{S,D}}{\hbar} \int\left[1-f_\text{S,D}(\epsilon)\right]~k_\text{ox}(\epsilon) d \epsilon,
 \end{align}
 
-where $\Gamma_\text{S,D}$ is the electronic coupling between molecule and the electrodes having Fermi-Dirac distributions $f_\text{S,D}(\epsilon)$.
-
-The density of states for the reduced and oxidized might be written as:
-$$
+where $\Gamma_\text{S,D}$ is the electronic coupling between molecule and the electrodes having Fermi-Dirac distributions $f_\text{S,D}(\epsilon)$. The density of states for the reduced and oxidized might be written as:
+\begin{equation}
     k_{\text{red/ox}}(\epsilon)=\frac{1}{\pi} \operatorname{Re} \int_{0}^{\infty} e^{\sigma i(\epsilon-\epsilon_0) t / \hbar} e^{-t / \tau} B(t) d t,
-$$
+    \label{eq:redox_dos}
+\end{equation}
+%
 where $\sigma=1(-1)$ for reduction (oxidation) process, $\epsilon_0$ is the molecular energy level, $\tau=2 \hbar /\left(\Gamma_\textrm{S}+\Gamma_\textrm{D}\right)$ is the lifetime of the molecular electronic state. The term written as $B(t)$ is the phononic correlation function $t$:
-$$
+
+\begin{equation}
     B(t)=e^{D_{q}(t)} \cdot e^{D_{\textrm{bath}}(t)},
-$$
+\end{equation}
+%
 Here we have written the phononic correlation function $B(t)$ as the product between a single-mode term and a mean-field contribution given by the environment. The two terms might be expressed as follows \cite{todd1994electron}:
 
 \begin{align}
     D_{q}(t)         & = \left(\frac{g_{q}}{\omega_{q}}\right)\left[\left(\cos \omega_{q} t-1\right) \cdot \operatorname{coth}\left(\frac{\omega_{q}}{2 k_{B} T}\right)-i \sin \left(\omega_{q} t\right)\right], \\
     D_\text{bath}(t) & = \int \frac{J(\omega)}{\omega^{2}}\left[(\cos \omega t-1) \cdot \operatorname{coth}\left(\frac{\omega}{2 k_{B} T}\right)-i \sin (\omega t)\right] d\omega,
+    \label{eq:final_vibration_equation}
 \end{align}
 
 where $D_{q}$ is the single-mode contribution and $D_\text{bath}$ is the contribution from the superohmic bath. $g_{q}$ is the electron-vibration coupling strength, $\omega$ is the vibron frequency and the spectral density, $J(\omega)$, of the phonon bath with reorganisation energy, $\lambda$, and cut-off frequency, $\omega_{c}$, is

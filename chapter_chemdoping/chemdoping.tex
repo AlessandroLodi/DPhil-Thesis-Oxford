@@ -1,24 +1,196 @@
-\chapter{\label{ch:solubility} Role of Vibrations in Steric-Hindrance-Functionalized Graphene Nanoribbons}
+\chapter{\label{ch:solubility} Vibrational Effects in Graphene Nanoribbons}
 
 \minitoc
 
 \section{Introduction}\label{solubility:sec:intro}
 
-A brief intro on how why it is important to study this
+Molecular graphene nanoribbons~\cite{jiao2010facile,li2008chemically, wang2011graphene, narita2015bottom} can be chemically synthesised with a degree of edge and topological control significantly superior~\cite{nguyen2017atomically,llinas2017short} to what can be accomplished with top-down nanofabrication~\cite{jarillo2004electron, cai2010atomically, narita2014synthesis, jiao2009narrow}.
+
+Since spin coherence times up to \si{\micro\second} have been measured~\cite{slota2018magnetic,lombardi2019quantum}, circumstances seems now ideal for using single \glspl{MGNR} to exploit spin and topological phenomena for quantum applications, but only devices with sharp features, where all the quantum states can be accessed properly, may be used for quantum experiments.
+
+Because of the strong $\pi-\pi$ interactions between their large conjugated $sp^2$-carbon planes, \glspl{MGNR} can easily aggregate in the solid state and in solution, making the integration of \glspl{MGNR} into electronic nanodevices challenging. For improving liquid-phase \gls{MGNR} dispersion, both physical techniques (i.e., sonication exfoliation~\cite{wang2008room}) and chemical treatment with a strong acid~\cite{shekhirev2017interfacial} have been used. These approaches, however, have limited dispersion effects and, often, \glspl{MGNR} clusters persist.
+
+To date, two basic techniques for producing liquid-phase-dispersible \glspl{MGNR} have been proposed. The first approach involves the addition of alkyl substituents along the edges. For example, dodecyl-decorated \glspl{MGNR} with lateral widths of \SIrange{0.7}{1.1}{\nano\metre} and lengths of more than \SI{200}{\nano\metre} are often the go to choice~\cite{narita2014synthesis}, but strong sonications are unfortunately still necessary, which may be detrimental to the honeycomb lattice, as carbon nanotubes have indicated in the past~\cite{ham2005explanation, vaisman2006role}.
+
+The other approach involves the addition of bulky 3D groups at the periphery of the \glspl{MGNR}. The dimensions of these substituents are typically greater than the graphite interlayer distance $\simeq\SI{0.34}{\nano\metre}$, hence they should dramatically disrupt the $\pi-\pi$ interactions, and aid the dispersion of individual ribbons in the liquid phase. A little shaking or very mild sonication in common organic solvents such as THF, dichloromethane, and toluene is reported to yield homogeneous dispersions~\cite{huang2018intrinsic}.
+
+In this chapter, we will attempt to demonstrate that attaching 3D substituents with a high degree of steric hindrance along the ribbon edges can improve the solubility of graphene nanoribbons in common apolar solvents.
 
 \section{Coulomb-blockade Spectroscopy}\label{solubility:sec:transport}
 
-How the sample it has been prepared (lot of crossreference with previous chapters)
-Explained why the scarsity of characterisation checks i
-s intrinsically scarse in molecular electronics.
+To test the idea that bulky 3D groups increase the degree of \glspl{MGNR} de-bundling in solution, we tested two nanoribbons carrying two different edge functionalisations. The first was decorated with dodecyl alkyl (\gls{MGNR}\textbf{1}), while in the second  malimide groups were used (\gls{MGNR}\textbf{2}) (Fig.~\ref{fig:exp:old_gnr_new_gnr}). Furthermore, to investigate possible differences at the device performance level, we connected these ribbons to two device architectures.
 
-\section{Analysis of the Franck-Condon Blockade Conductance}\label{solubility:sec:fc}
+The gate is provided by either an n-doped \ce{Si}/\ce{SiO2} backgate wafer ($t_\textrm{ox}\simeq\SI{300}{\nano\metre}$) or a local \ce{Pd} electrode etched into undoped \ce{Si} and covered by \ce{HfO2} ($t_\textrm{ox}\simeq\SI{10}{\nano\metre}$) (Fig.~\ref{fig:exp:old_gnr_new_gnr}a,b). As mentioned in the Ch.\ref{ch:fabrication}, \glspl{MGNR} are added by drop casting from solutions, with a yield of about 5 devices out of 100 electroburned gaps, and the existence of a nanoribbon connecting the two leads is identified as a sharp increase of the conductance $G=\partial I_{\mathrm{SD}} / \partial V_{\mathrm{SD}}$ from $G<\SI{1}{\nano\siemens}$ to $\simeq \SI{100}{\nano\siemens}$.
 
-What DFT and NEGF have been used and for what.
-Explain how the calculations have initially suggested the comparison between the base case and the methoxy groups,
-as they have the largest badgap distance.
+\begin{figure}[hbtp]
+    \begin{center}
+        \includegraphics[width=\textwidth]{chapter_chemdoping/figures/old_gnr_new_gnr.png}
+        \caption[Enhancement of Quantum Transport Features by using Bulky Groups]{
+            \textbf{a,} The device geometries utilised are illustrated in the diagram: an MGNR (side groups are not shown for clarity) bridges two graphene leads coupled to Au pads. The gate is either an n-doped Si wafer with a 300 nm \ce{SiO2} insulating layer on top or a Pd electrode buried in undoped Si with a $\simeq\SI{10}{\nano\metre}$-thick \ce{HfO2} layer on top (bottom).
+            \textbf{b,} False-color scanning electron microscopy images of two typical devices for the two geometries.
+            \textbf{c,} The source--drain current against bias and gate voltages are shown in stability diagrams for three devices derived with \gls{GNR}1.
+            \textbf{d,} Stability diagrams for three \gls{GNR}2 devices, displaying the source--drain conductance in units of the conductance quantum $G_0$. All measurements are done below $T=\SI{500}{\milli\kelvin}$, and diamonds are labelled with regard to an arbitrary number of electrons, $N$, whenever possible.
+        }
+        \label{fig:exp:old_gnr_new_gnr}
+    \end{center}
+\end{figure}
+%
+According to the operating mechanism of \glspl{SET} outlined in Ch.~\ref{ch:theory}, electrons tunnel through a single channel, whose potential is regulated by $V_\textrm{G}$ whose role is to align the \gls{MGNR} levels in resonance with the leads. Because of Coulomb repulsion, an electron already present in the conduction channel would prevent the flow of additional electrons, thus suppressing the device conductance.
+
+The high degree of bundling expected for \gls{MGNR}\textbf{1} made it impossible to produce \glspl{SET} with only one ribbon bridging the nanogap, and the typical stability diagram shows a large region of suppressed conductance (Fig.~\ref{fig:exp:old_gnr_new_gnr}c), corresponding to the bandgap of semiconducting \glspl{MGNR}, followed by multiple overlapping Coulomb diamonds of varying sizes. From the height of the diamonds, and knowing the ribbon width and length~\cite{shylau2009capacitance}, some of the most discernible diamonds yield $l_\textrm{MGNR} \simeq$ 28, 90, 40, 17, 108, 60, 50, and \SI{38}{\nano\metre}, and no sharp features inside the diamonds could be distinguished.
+
+
+In contrast, \glspl{SET} produced with \gls{MGNR}\textbf{2} exhibit very clean conduction characteristics and a level of detail equivalent to ultra-clean CNTs (Fig.~\ref{fig:exp:old_gnr_new_gnr}d). The diamonds are distinctly periodic, have identical slopes and diameters, and well-defined edges, indicating that each device has a single nanoribbon. Parallel to the Coulomb edges, the excited states are observable as intense, conductance lines running parallel to the diamonds. The high contact-impedances observed are likely influenced by contact lengths limited by the MGNR length~\cite{grosse2011nanoscale}, which is less than the transfer length\footnote[2]{The transfer length is the distance over which a fraction equal to $1-e^{-1}$ of the total current is \textit{transferred} from the contact metal to the semiconducting channel ($e$ is the Euler's number), and it is frequently used as a metric for quantifying the coupling between electrical contacts and conduction channel (small transfer lengths result in greater couplings, and, consequently, lower contact resistances)~\cite{saraswat2021materials}.}.
+
+A zoom-in to one of the diamonds highlights the exceptional cleanliness of the features and a full spectroscopy of the conducting element: the edges of the diamonds are suppressed, and a series of multiple excited states can be clearly observed (Fig.~\ref{fig:exp:sd_fc_fit_lorezFit}a), with a $\hbar\omega_v=\SI[separate-uncertainty = true]{7.5(0.1)}{\milli\electronvolt}$ feature common to all devices. The suppression of the edge conductance is gradually lifted on increasing T (Fig.~\ref{fig:exp:sd_fc_fit_lorezFit}d). Similar to the Franck--Condon principle in molecular spectroscopy, electron--vibron coupling will suppress transport for low-lying vibronic states, because electrons are most likely to be transmitted when changes in the positions of the nuclei are minimal.
+
+\section{Analysis of the Franck--Condon Conductance Blockade}\label{solubility:sec:fc}
+
+We shall now attempt to explain the suppression of conductance lines parallel to diamond edges within the Franck--Condon blockade framework.
+
+
+\begin{figure}[hbtp]
+    \begin{center}
+        \includegraphics[width=\textwidth]{chapter_chemdoping/figures/sd_fc_fit_lorezFit.pdf}
+        \caption[Franck--Condon Bloackade in MGNR]{
+            \textbf{a,} Detail of vibrational state suppression in the differential conductance $G$, in units of quantum conductance $G_0$ versus $V_\textrm{SD}$ and $V_\textrm{G}$. Arrows indicate the excited states, which we assign to vibrational given the equal spacing between them. $T=\SI{20}{\milli\kelvin}$.
+            \textbf{b,} The Frank--Condon blockade in the transport properties of nanodevices is depicted schematically, with the equilibrium coordinates for two adjacent charge states (green and blue) represented horizontally. Strong vibronic coupling suppresses ground-to-ground transitions exponentially, whereas ground-to-excited-state transitions become viable at higher bias.
+            \textbf{c,} Blockade peaks as a function of the chemical potential $\mu$ as experimentally observed (blue line) and as expected by Frank--Condon theory for maxima (orange) and minima (yellow). Poisson histogram for the vibrational quanta (puple) is superimposed.
+            \textbf{d,} Lifting of the Frank--Condon blockade for a transmission channel upon increasing the temperature from \SI{25}{\milli\kelvin} (blue) to \SI{1}{\kelvin} (red), together with Lorentzian fits to the data (solid lines).
+        }
+        \label{fig:exp:sd_fc_fit_lorezFit}
+    \end{center}
+\end{figure}
+
+
+According to standard electronic absorption theory, the spectrum resulting from the excitation with wavelenths within the vibrational region is a progression of absorption peaks rising separated by multiples of the vibrational quanta, and with the intensity lines of the spectrum that follows a Poisson distribution~\cite{karabunarliev2000rigorous}. The amplitude of each peak in the vibrational progression is governed by the Franck--Condon factors, which are defined as transition probabilities according to standard quantum theory between the vibrational states of two different electronic states (ground and excited states) over many vibrational modes.
+
+If we assign the excitation of vibrational states to equispaced parallel conductance lines within a Coulomb diamond, we might be able to link the Franck--Condon factor to the \gls{DC} conductance maxima. Thus, by extracting and averaging within a certain bias window parallel lines to the Coulomb edges, we find that the conductance peaks follows a progression
+
+Franck-Condon theory describes the coupling between electrons and vibrons, i.e. how the addition of an electron changes the electronic wave function and produces a shift in the equilibrium coordinate of the vibronic oscillator. If the electron-vibron coupling, $\gamma$, is large it can suppress charge transport through low-lying vibronic MGNR states (Fig.6.2a). Furthermore, Franck-Condon theory predicts that the peak conductance of the vibronic transitions, $G_n^{\max }$, follows the sequence,
+$$
+    G_n^{\max }=\frac{\gamma^n}{n !} e^{-\gamma},
+$$
+where $n$ is the vibron quantum number, $\gamma$ quantifies the electron--vibron coupling, and the standard deviation is known analytically $\sigma_\textrm{Poisson} = \sqrt{\gamma}$. Fig.~\ref{fig:exp:sd_fc_fit_lorezFit}c shows the progression of the vibronic peaks, which arise when an electron tunnels through a molecular orbital and simultaneously excites a molecular vibrations~\cite{van2013suppression}. A hint of Franck-Condon suppression apparent from Figure $6.2 \mathrm{~b}$ where an increase in $T$ from $25 \mathrm{mK}$ to $0.5 \mathrm{~K}$ is followed by an increase in $G$. A further increase to $1 \mathrm{~K}$ decreases $G$ due to significant temperature broadening. The same figure was used to deduct the coupling energy
+
+\section{Simulation of the Stability Diagram}\label{solubility:sec:simulation}
+
+We shall now try to validate our conclusions exposed in the previous section about the possibility of having a Franck--Condon suppression of the conductance by reproducing the experimental observation with a simulated model. We shall use, to this end, the model exposed in Sec.~\ref{ch:theory:sec:vibrations}.
+
+
+\begin{figure}[hbtp]
+    \begin{center}
+        \includegraphics[width=\textwidth]{chapter_chemdoping/figures/sd_experimental_theory.pdf}
+        \caption[Single-Mode and Phonon Bath Models for MGNR Vibrations]{
+            Maps of the conductance for the same transition as in , plotted on identical colour scale. \textbf{a,} Experimental conductance map for the same charge transition of Fig.~\ref{fig:exp:sd_fc_fit_lorezFit}a. \textbf{b,} Simulated conductance using Eq.~\ref{eq:initial_vibration_equation}--\ref{eq:final_vibration_equation} and the parameters from Tab.~\ref{tab:simulated_stability_diagram}. \textbf{c,} Calculated phonon-bath (right axis) and single-mode (left axis) spectrum densities. \textbf{d,} Density of molecular states $k_\textrm{red}$ as a function of the chemical potentail for the corresponding Fermi--Dirac distribution $\varepsilon$ (Eq.~\ref{eq:redox_dos}). Integrals were evaluated using the Simpson's rule as implatemented in Numpy.
+        }
+        \label{fig:exp:sd_experimental_theory}
+    \end{center}
+\end{figure}
+%
+We assume that the molecular energy level, $\mu=C_\textrm{S} V_\textrm{SD}-C_\textrm{G} V_\textrm{G}$, shifts with both bias and gate voltages. The calculated conductance $G$ (Tab.~\ref{tab:simulated_stability_diagram} reports the simulation parameters) is plotted as a function of $V_\textrm{SD}$ and $V_\textrm{G}$, and is displayed next to an experimental stability diagram in Fig.~\ref{fig:exp:sd_experimental_theory}. The calculated and experimental stability diagrams match each other well. Importantly, the calculated diagram shows that the single-mode--environment model reproduces the main features of our experimental data, i.e. conductance lines equally spaced by $E_v\simeq\SI{7}{\milli\electronvolt}$, a significant contribution from the phonon bath and conductance asymmetry with bias. The calculated stability diagram contains additional conductance sidebands in the blocked regions that are not present in the experimental diagram.
+
+Using the rate-equation model discussed in Section 2.4.1 for a single-phonon mode $\hbar \omega_q=\SI{7}{\milli\electronvolt}$ and a superohmic phonon bath, we calculated a SD (Fig. 6.4). Using Eq.~\ref{eq:initial_vibration_equation}--\ref{eq:final_vibration_equation} we reproduced our experimental data by using the set of parameters reported in Table 6.1. The calculated SD exhibit the same regularly spaced conductance peaks as observed experimentally. These result from the strongly coupled single-mode that generates multiple peaks in the DOS at low energies (Fig. 6.4c, d). At higher bias the background conductance increases due to the coupling with an increasing number of phonon modes in the bath. Moreover, the strong $V_\textrm{SD}$ asymmetry is caused by $\Gamma_D \gg \Gamma_S$ and may be caused by larger overlap between the MGNR and the drain than the source lead. The model does not take into account the slanted conductance lines originating from the leads and does therefore not reproduce these.
+
+\begin{table}
+    \caption{\label{tab:simulated_stability_diagram}
+        Simulation parameter for the vibrational electron transport model}
+    \resizebox{\columnwidth}{!}{%
+        \begin{tabular}{ccccccccc}
+            \hline $T$           & $\hbar\omega_\textrm{q}$   & $\hbar\omega_\textrm{c}$   & $\hbar g_\textrm{q}$       & $\lambda$                  & $\Gamma_\textrm{S}$        & $\Gamma_\textrm{D}$        & $C_\textrm{S}$      & $C_\textrm{G}$                         \\
+            (\si{\milli\kelvin}) & (\si{\milli\electronvolt}) & (\si{\milli\electronvolt}) & (\si{\milli\electronvolt}) & (\si{\milli\electronvolt}) & (\si{\milli\electronvolt}) & (\si{\milli\electronvolt}) & (\si{\femto\farad}) & (\si{\femto\farad})                    \\
+            \hline
+            25                   & 7                          & 8.5                        & 20                         & 150                        & \SI{1.2e-3}{}              & 0.5                        & 0.54                & \SI{2.25e-2}{}                 \Tsmall \\
+            \hline
+        \end{tabular}%
+    }
+\end{table}
+
+All vibrons at frequencies $\omega_v$ and the associated electron--vibration coupling strengths $g_v$ might be included into a quantum-mechanical description of the electron-transfer rates through the \gls{MGNR} \gls{DOS}~\cite{thomas2019understanding}. The outer-sphere background, produced by the weak coupling of the MGNR with the substrate, can also be included by adding a super-Ohmic spectral density with an exponential cut-off~\cite{gehring2017distinguishing}. The data agreed extremely well with the simulation, and the entire current map was faithfully reproduced (Fig.~\ref{fig:exp:sd_experimental_theory}). Since the observed vibrational frequency $\omega_v$ and the associated quantization energy $E_v=\hbar \omega_v$ are much higher than the modes of a \SI{300}{\nano\metre}-long vibrating \gls{CNT}, indicating coupling to different vibrations. The electronic states of the \gls{MGNR} are largely edge-localised~\cite{savin2016localized}, and can overlap and couple with the edge vibrational modes.
+
+\section{Role of the Bulky Groups: \textit{Ab-Initio} and Statistical Analysis}
+
+Since the edge structure of the MGNR is constructed through bottom-up synthesis, we deem appropriate to calculate from \textit{ab-initio} the vibrational properties of a simplified \gls{MGNR} structure in an attempt to elucidate the origin of the Franck--Condon blockade and the nature of the vibrational mode we identified through the conductance measurements.
+
+DFT calculations were performed using the GGA--PBE functional as implemented in the Siesta package~\cite{soler2002siesta,garcia2020siesta}. To simplify the geometry, alkyl chains were removed and replaced with hydrogen atoms and anthracene groups (Fig.~\ref{fig:exp:phonon_mode_comparison}). Sufficient vacuum distance is added along the non-periodic directions to avoid unwanted interactions. Numerical atomic pseudopotential was used together with an energy cut-off of \SI{400}{\unit{Ry}}. $20\times 1\times 1$ Monkhorst--Pack grid along the three Cartesian directions. The structure was optimized until the maximum force on the atoms was less than \SI{0.01}{\electronvolt\per\angstrom}.
+
+
+\begin{figure}[hbtp]
+    \begin{center}
+        \includegraphics[width=\textwidth]{chapter_chemdoping/figures/Phonon_Mode_Comparison.png}
+        \caption[Phonon Dispersion MGNR: The Role of Anthracene Groups]{
+            \textbf{a,}
+            \textbf{b,}
+            \textbf{c,}
+            \textbf{d,}
+            \textbf{e,}
+            \textbf{f,}
+        }
+        \label{fig:exp:phonon_mode_comparison}
+    \end{center}
+\end{figure}
+
+For the phonon calculations, a k-mesh grid was chosen to be $20\times 1\times 1$ and energy cut-off was set to \SI{400}{\unit{Ry}}. The dispersion relation is calculated with a supercell size of $3\times 1\times 1$, where 3 represents 3 unit cells along the periodic direction. Atomic displacements of the $\Gamma$ phonon mode are visualised with XCrySDen software.
+
+\begin{figure}[hbtp]
+    \begin{center}
+        \includegraphics[width=\textwidth]{chapter_chemdoping/figures/p_test.pdf}
+        \caption[MGNR--Malimide Statistics: A p-Value Argument]{
+            $p$-value as a function of the likelihood of obtaining a \gls{SET} (probability, for short) when using \gls{MGNR}\textbf{2}. The numerical figures represent the number of observed \glspl{SET} relative to the overall number of devices cooled down in the fridge. The $p$-value decreases by more than an order of magnitude as the number of observed \glspl{SET} increases by 2 units.
+        }
+        \label{fig:exp:p_test}
+    \end{center}
+\end{figure}
+
+
+The phonon calculation for MGNR without and with side groups is shown in Fig.~\ref{fig:exp:phonon_mode_comparison}. After the side group is introduced, several new phonon modes emerge, and the majority of them are confined at the side group, with a tiny fraction being modes assigned to the MGNR backbone. Nonetheless, we can see from the dispersion relation that the phonon mode at $\hbar\omega_v=\SI{7.50}{\milli\electronvolt}$ is robust even after the introduction of the anthracene groups. At the $\Gamma$ point, one mode is lowered from \SI{7.86}{\milli\electronvolt} to \SI{7.48}{\milli\electronvolt}, matching even more closely the experimental value (Sec.~\ref{solubility:sec:fc}). By leveraging the visualization tool, we infer that this phonon mode may be responsible for the MGNR backbone bending, and the bending amplitude is quenched when the side group acts as an anchor for the cove edges. Furthermore, we note that the displacement of core-backbone atoms remains approximately constant, whereas  cove-edge atoms become more rigid. Based on this qualitative observation, we can anticipate that bending will be primarily confined to the backbone centre if the entire side group structure is taken into account.
+
+
+\co{SET formation probability argument}
+Despite being rigorous, our analysis may still be fraught. In fact, although DFT is widely accepted as the de facto method for calculating molecular and physical properties in a reasonable amount of time, yet problems often occur if accurate estimates are needed. Since our system comprehends not only the ribbon itself, but also the graphene leads, question may still arise whether the malimide groups actually promotes solubility, thus increasing the chances to have clean \glspl{SET}. In an attempt to answer this question, we shall follow a very intuitive yet powerful idea from standard statistics.
+
+In order to exclude the possibility that the observed number of \glspl{SET} produced in Fig.~\ref{fig:exp:old_gnr_new_gnr} are produced merely by chance, we shall use statistics to test if out of the total number of devices produced the \gls{SET} formation probabilities when MGNR1 and MGNR2 are generated from the same statistical process (null hypothesis, $H_0$). If the $p$-value is lower than 0.05 we can safely reject $H_0$, meaning that the \gls{SET} formation probability is different when MGNR2 is used instead of MGNR1.
+
+A binomial test is then used to determine the $p$-value of obtaining 0/10 \glspl{SET} using MGNR1
+Junction formation probabilities (JFP), i.e., how many devices show a molecular feature from the total number of devices, reported in recent literature range from 2\% to 24\%.[5, 8-11, 13-15] A comparison of the influence of the anchors on JFPs has not been possible based on these works as the central molecular unit, and the method for identifying a molecular device, vary from study to study. The charge transport properties of compounds 1--6 have been studied in order to address the following key questions: i) What is the influence of the anchor group on the JFP, and which anchor group gives the highest JFP? ii) How does the strength of the coupling, $\Gamma$, change with the anchor groups?
+
+ntuitively, this result is significant, but a statistical analysis is required in order to exclude the possibility that the observed results are produced merely by chance. Therefore, a statistical test to compare results between two sets of data was used. This test provides us with a p-value for the null hypothesis: “All sets of data originate from the same statistical process”. If this p-value is lower than 0.05, we may discard the null hypothesis
+
+
+\section{Discussion and Literature Comparison}
+
+When compared to gamma values reported for suspended CNTs grown in-situ, our findings are lower for some but higher for others (Tab.~\ref{tab:electron_vibron_couplings}). Given that our system is in close contact with the substrate and nevertheless exhibits high gamma compared to suspended systems, the idea of high electron--vibron coupling in graphene nanoribbons appears plausible. Furthermore, our gamma is comparable to that seen in \ce{C140}-containing molecular junctions but substantially greater than that observed in \ce{C60}-containing junctions. We can speculate that low-energy modes in the substrate's phonon bath can aid transport at the diamond edges, masking the true magnitude of the Franck--Condon effect. As a result, decoupling the GNR from the substrate environment via suspension should result in gamma values greater than for nanotubes, closer to theoretical limits.
+
+\begin{table}
+    \caption{\label{tab:electron_vibron_couplings}
+        Electron--vibron coupling has been described in the literature for a variety of devices.}
+    \begin{center}
+        \begin{tabular}{ccc}
+            \hline Material               & $\gamma$     & Reference                                          \\
+            type                          &              &                                                    \\
+            \hline
+            \ce{C60}                      & $\ll$ 1      & \cite{park2000nanomechanical}              \Tsmall \\
+            CNT                           & 0.5--1.1     & \cite{sapmaz2006tunneling}                         \\
+            \ce{C140}                     & $\simeq 1.4$ & \cite{pasupathy2005vibration}                      \\
+            MGNR                          & $1.4\pm0.2$  & This work                                          \\
+            \ce{C60} (graphene junctions) & 3            & \cite{lau2016redox}                                \\
+            CNT                           & 3.3          & \cite{leturcq2009franck}                           \\
+            \ce{Fe4} SMM                  & 4.2          & \cite{burzuri2014franck}                           \\
+            \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+
+As we saw in the introduction, the electrical and vibrational properties of nanotubes are heavily dependent on their chirality, length, and radius, which are difficult to manage and vary greatly between devices. GNR characteristics, on the other hand, may be planned and engineered with molecular accuracy, allowing for the production of enormous numbers of identical devices. The biggest challenge at the moment is producing GNRs of similar lengths since the energy of longitudinal modes that link with electronic states at low temperatures is substantially dependent on GNR length. Solving this problem would allow for more research into Franck-Condon suppression in a wide range of GNR devices, as well as a better knowledge of electron-vibron coupling in GNRs.
+
+First-principles simulations have suggested the existence of edge-localized nonlinear modes in armchair ribbons with energies ranging from 6.8 to 8.7 meV, which would encompass our experimental observations and DFT computations. Based on some findings, the electronic wave function in GNRs is edge-localised and can overlap and couple with the edge-localised vibrational states. Edge-vibrons couple to the electronic edge state considerably stronger than other vibrons, which may explain why the conductance intensity of the vibrational state at 7 meV is greater than that of lower-lying vibrons. This could also explain why MGNR has a higher vibrational quantum than a 65-nm-long suspended nanotube (1meV).
+
+
+
 
 \section{Concluding Remarks}\label{solubility:sec:summary}
 
 
 \section{Project Overview}
+\glspl{MGNR}\textbf{1} were supplied by the group of Akimitsu Narita, whereas \glspl{MGNR}\textbf{2} were synthesised in Dresden by the group of Xinliang Feng. The Franck--Condon analysis was undertaken by Dr Simen Sopp (see also~\cite{sopp2021phd}), whereas I acquired temperature data and conducted the corresponding analysis. Fanmiao Kong was responsible for the phonon calculations. Dr Alex Gee supported me in fabricating the devices when I was compelled to stay out of the lab for more than a month owing to covid-19 infection and subsequent health issues that necessitated medical care.

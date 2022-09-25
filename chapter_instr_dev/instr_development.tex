@@ -41,7 +41,7 @@ Dilution refrigerators are suited for cryogenic operations although it is possib
     \end{algorithmic}
 \end{algorithm}
 
-The Alazar card, Triton, and IVVI (Delft box modules) drivers are first initialised and assigned to global variables which hold their state throughout the program execution. Then several variables are initialised. The precooled variables is a routine implemented directly on top of Triton drivers which allows to set and get command directly on the instruments. While below 1 K the RuO$_2$ thermoter is used, to reliably read the temperature above this temperature one has to switch to the Cernox thermometer, hence I are setting the temperature channel variable to channel 5 within the while loop in case this conditions applies. The program then acquires gate trace and stability diagram measurements. These are functions which have been implemented and improved from scripts written by a former member of the group, Dr Nicola Dotti.
+The Alazar card, Triton, and IVVI (Delft box modules) drivers are initialised and assigned global variables that maintain their state during the execution of the application. Afterwards, multiple variables are initialised. The precooled variables are a Triton driver-implemented process that enables direct instrument command setting and retrieval. While below \SI{1}{\kelvin}, the \ce{RuO2} thermometer is employed, but instead to accurately read temperatures over \SI{1}{\kelvin}, the Cernox thermometer must be used; hence, the temperature channel variable is set to channel 5 within the while loop if this condition is met. The application then acquires measurements of the gate trace and stability diagram.
 
 % \begin{figure}[hbtp]
 %     \begin{center}
@@ -158,8 +158,6 @@ where $w$ in this case is the width of the semiconducting material, $j_x$ is the
 \end{equation}
 %
 The quantity $R_\textrm{H}$ is known as Hall resistance and can be regarded by all means to the magnetic sensistivity of a particular probe. Clearly, the higher this values is the smaller field variation could be in principle detected. To be more specific, the minimum detectable magnetic field for a given area is the Hall voltage net of the electrical noise present when the circuit is closed. The noise is predominantly given by a Josephson and resistive (telegraph) noise.
-
-the sensitivity of the device is the voltage net of thermal and electrical noise present in a closed circuit.
 
 Due to the pandemic of Covid-19 it has been impossible to find an adequate 2DEG substrate for this project. Nevertheless, I have tried to setup and detect the Hall signal from a Mn$_12$ microcrystals with a mesoscopic Hall made of Au.
 The Hall probe configuration with the simplest geometry is the Hall cross. When a magnetic object is placed close to the active area of the probe, the Hall signal will be proportional to the sum of the external field $B$ and the magnetic stray field that enters the active area from the sample.

@@ -51,9 +51,9 @@ with $a\simeq\SI{1.42}{\angstrom}$ the carbon--carbon bond length.
 Each atom belonging to one sublattice, called sublattice A, has three nearest neighbours belonging to the other sublattice, called sublattice B. With respect to one atom chosen from sublattice A as origin, the position of these first three neighbours in real space are given by:
 %
 \begin{equation}\label{eq:graphene_first_neighbours}
-    \vect{\delta}{_1} = \frac{a}{2}(1, \sqrt{3}),~
-    \vect{\delta}{_2} = \frac{a}{2}(1, -\sqrt{3}),~
-    \vect{\delta}{_3} = -a(1,0),
+    \vect{\updelta}{_1} = \frac{a}{2}(1, \sqrt{3}),~
+    \vect{\updelta}{_2} = \frac{a}{2}(1, -\sqrt{3}),~
+    \vect{\updelta}{_3} = -a(1,0),
 \end{equation}
 %
 while the reciprocal-lattice vectors may be written as:
@@ -334,13 +334,13 @@ The role of the gate is to lower the energy barrier between the metal and the se
     \small
     \begin{tabular}{ccccccccc}
         \toprule
-        \textit{Contact}  & $I_\textrm{on}$     & $I_\textrm{off}$     & $I_\textrm{on}/I_\textrm{off}$ & $g_\textrm{mt}$       & $SS$     & \\
-        \textit{type}     & (A)                 & (A)                  &                                & (\si{\micro\siemens}) & (mV/dec) & \\
+        \textit{Contact}  & $I_\textrm{on}$ & $I_\textrm{off}$ & $I_\textrm{on}/I_\textrm{off}$ & $g_\textrm{mt}$       & $SS$     & \\
+        \textit{type}     & (A)             & (A)              &                                & (\si{\micro\siemens}) & (mV/dec) & \\
         \midrule
-        Ohmic             & 1.41$\times10^{-5}$ & 4.06$\times10^{-10}$ & 3.4$\times10^{4}$              & 29                    & 99.6       \\\T
-        Partial S/D-doped & 1.50$\times10^{-5}$ & 2.33$\times10^{-8}$  & 6.4$\times10^{2}$              & 63.6                  & 93.1       \\\T
-        Schottky-Barrier  & 3.26$\times10^{-6}$ & 2.31$\times10^{-8}$  & 1.41$\times10^{2}$             & 19.6                  & 109.8      \\\T
-        Tunnel            & 5.53$\times10^{-6}$ & 1.16$\times10^{-8}$  & 4.76$\times10^{2}$             & 13                    & 107.9      \\
+        Ohmic             & \SI{1.41e-5}    & \SI{4.06e-10}    & \SI{3.4e4}                     & 29                    & 99.6       \\\T
+        Partial S/D-doped & \SI{1.50e-5}    & \SI{2.33e-8}     & \SI{6.4e2}                     & 63.6                  & 93.1       \\\T
+        Schottky-Barrier  & \SI{3.26e-6}    & \SI{2.31e-8}     & \SI{1.41e2}                    & 19.6                  & 109.8      \\\T
+        Tunnel            & \SI{5.53e-6}    & \SI{1.16e-8}     & \SI{4.76e2}                    & 13                    & 107.9      \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -352,7 +352,7 @@ For example, it has been shown that metals with high work functions, such as Pd 
 
 Often, however, metals with low work functions and good wettability have a strong tendency to oxidise, especially in air. A possible workaround is to cap all-around low work function contacts with metals having high work functions, such as Sc and Y~\cite{ding2009contacted}: the \glspl{CNTFET} produced with such contacts reported high on-state currents ($I_\textrm{on}\simeq\SI{250}{\micro\ampere}$), mobilities $\mu\ge\SI{500}{\cm\square\per\V\per\second}$, and \gls{DIBL} up to \SI{105}{\si{\mV\per\V}}, together with excellent switching behaviour $SS\simeq\SI{73}{\milli\volt}$~dec$^{-1}$~\cite{ding2009contacted,peng2019carbon}.
 
-The subthreshold swing $SS$ measures the rate at which the gate voltage switches on the transistor, and it is a metric that quantifies the control the gate has on the conductive channel. Furthermore, it is often indirectly linked to heat dissipation, which, as we have mentioned in Sec.~\ref{intro:sec:motivation}, is one the primary obstacles to miniaturising \gls{CMOS} technology. Since the carriers are thermally injected, it is challenging to reduce the operating voltage while at the same time improving CPU operational speed and maintaining a low off-state power dissipation. Since the off-state power is proportional to the off-state current, $P_\textrm{off} = RI^2_\textrm{off}$, the objective is to lower the off-state current without sacrificing on-state output current. The process of thermally injecting charge carriers imposes a limit, called Boltzmann limit, on the subthreshold slope which for the is approximately $2.3 k_\textrm{B}T/q\simeq\SI{60}{\milli\volt}$~dec$^{-1}$ at room temperature.
+The subthreshold swing $SS$ measures the rate at which the gate voltage switches on the transistor, and it is a metric that quantifies the control the gate has on the conductive channel. Furthermore, it is often indirectly linked to heat dissipation, which, as we have mentioned in Sec.~\ref{intro:sec:motivation}, is one the primary obstacles to miniaturising \gls{CMOS} technology. Since the carriers are thermally injected, it is challenging to reduce the operating voltage while at the same time improving CPU operational speed and maintaining a low off-state power dissipation. Since the off-state power is scales quadratically with the off-state current $P_\textrm{off} = RI^2_\textrm{off}$, the objective is to lower the $I_\textrm{off}$ without sacrificing $I_\textrm{on}$. The process of thermally injecting charge carriers imposes a limit, called Boltzmann limit, on the subthreshold slope which for the is approximately $2.3 k_\textrm{B}T/q\simeq\SI{60}{\milli\volt}$~dec$^{-1}$ at room temperature.
 
 One of the most promising approaches to overcoming the Boltzmann limit uses a different source--carrier injection mechanism based on Zener tunneling rather than thermal means. If the transmission probability does not depend on the energy gap between the metal and the nanotube work functions, but instead depends on the interband tunneling, the output current is temperature-independent. Several researchers have proposed both \gls{CNT}- and \gls{GNR}-based transistors with this operating mechanism~\cite{ionescu2011tunnel, hammam2018sub, hwang2019room}.
 
@@ -368,21 +368,22 @@ Whether Si could operate at channel lengths below \SI{10}{\nano\metre} was a que
 
 \begin{figure}[hbtp]
     \begin{center}
-        \includegraphics[width=\textwidth]{chapter_introduction/figures/cnt_device_1.pdf}
+        \includegraphics[width=\textwidth]{chapter_introduction/figures/scaling_channel_length.pdf}
         \caption[High-$\kappa$ Carbon Nanotube Field-Effect Transistors]{
-            \textbf{a}, Lanthanum oxide is a high-$\kappa$ dielectric that is thermally stable when placed in contact with Si. With these devices it has been possible to reach subthreshold swing close to the theoretical limit of $SS=\SI{60}{\milli\volt}$~dec$^{-1}$~\cite{franklin2013consistently}.
-            \textbf{b}, Silicon dioxide back-gated architecture. In the more traditional version of these devices, ambipolar features are often present due to the conduction through both electrons and holes. The off current exhibits a strong dependence from the source--drain bias as, when it is lowered, $I_\textrm{off}$ increases exponentially and the corresponding gate voltage shifts to more negative values\cite{lin2005high}.}
+            \textbf{a}, Schematic of the set of transistors used by \citeauthor{franklin2010length}. Cleverly, a single \gls{CNT} was used with $L_\textrm{ch}$ ranging from $\SI{1}{\micro\metre}$ downo to $\SI{15}{\nano\metre}$.
+            \textbf{b}, False-coloured SEM image.
+            \textbf{c}, Output $I_\textrm{SD}$--$V_\textrm{SD}$ characteristics, demonstrating improvement in the on-state current when $L_\textrm{ch}$ is scaled from $\SI{3}{\micro\metre}$ down to $\SI{15}{\nano\metre}$.
+            \textbf{d}, Subthreshold $I_\textrm{SD}$--$V_\textrm{G}$ transfer curves, showing the consistency of $V_\textrm{Th}$ and $SS$ when $L_\textrm{ch}$ is reduced by more than two orders of magnitude. Adapted from~\cite{franklin2010length}.
+        }
         \label{fig:intro:cnt_device_1}
     \end{center}
 \end{figure}
 
 In \glspl{CNTFET}, two are the main device parameters that can be scaled down: the contact length $L_\textrm{c}$ and the channel length $L_\textrm{ch}$. Aggressive $L_\textrm{ch}$ scaling typically reduces the gate control over the channel, hence the ability of the electric field generated through the gate to bend the silicon band structure. Intuitively, as the channel length is reduced, the electric field created by the source contact will be felt by the charge carriers more and more. \Glspl{CNT} may provide a suitable platform for such scaling because of their ultrathin, hollow nature. This could be, however, a double-edged sword. Since the electron effective mass is smaller\footnote[2]{$m^*_\textrm{CNT} = (0.228 \pm 0.129)m_0$~\cite{marulanda2008carrier}} compared to that of silicon, the tunneling probability may be large enough to increase drastically the source--drain current. From a device performance point of view, this often means an increase in the $SS$ and high $I_\textrm{off}$.
 
-\Citeauthor{franklin2010length} conducted one of the earliest systematic studies on channel-length scaling effects in 2010, through a series of experiments on \glspl{CNT}~\cite{franklin2010length}. When the channel length was reduced by more than two orders of magnitude (from \SI{3}{\si{\micro\metre}} down to \SI{15}{\si{\nano\metre}}), a consistent trend was found in both the threshold voltage ($V_\textrm{Th}\simeq\SI[separate-uncertainty = true]{-0.5(0.2)}{V}$) and subthreshold swing ($SS\simeq\SI{90}{\milli\volt}$~dec$^{-1}$).
+\Citeauthor{franklin2010length} conducted one of the earliest systematic studies on $L_\textrm{ch}$ scaling, through a series of experiments on \glspl{CNT}~\cite{franklin2010length}. When the channel length was reduced by more than two orders of magnitude (from \SI{3}{\si{\micro\metre}} down to \SI{15}{\si{\nano\metre}}), a consistent trend was found in both the threshold voltage ($V_\textrm{Th}\simeq\SI[separate-uncertainty = true]{-0.5(0.2)}{V}$) and subthreshold swing ($SS\simeq\SI{90}{\milli\volt}$~dec$^{-1}$). The threshold voltage is the gate voltage required to fully invert the semiconductor. It is typically measured by applying a small $V_\textrm{SD$ and measuring the $I_\textrm{SD}$ as a function of $V_\textrm{G}$, provided that the drain current is at least one order of magnitude smaller than the applied gate voltage, scaled accordingly by the gate capacitance.
 
-The threshold voltage is the gate voltage required to fully invert the semiconductor. It is typically measured by applying a slight drain bias and measuring the drain current as a function of the gate voltage, provided that the drain current is at least one order of magnitude smaller than the gate voltages applied, scaled accordingly by the gate capacitance.
-
-In addition, at that time part of the scientific community believed that scaling had little to no effect on the transconductance $g_m$ of the device~\cite{avouris2003carbon,javey2009carbon, anantram2006physics}. The transconductance of a conventional \gls{MOSFET} is the change in drain current divided by the amount that the gate-to-source voltage varies at a constant bias. Typical values lies in the range \qtyrange[range-units = bracket]{1}{30}{\milli\siemens\per\micro\metre} for a small-signal field-effect transistor.
+In addition, at that time part of the scientific community believed that $L_\textrm{ch}$ had little to no effect on the transconductance $g_\textrm{m}$ of the device~\cite{avouris2003carbon,javey2009carbon, anantram2006physics}. In a standard \gls{MOSFET}, $g_\textrm{m} = \partial{I_\textrm{SD}}/\partial{V_\textrm{G}}$ measured at a constant bias. Typical values lies in the range \qtyrange[range-units = bracket]{1}{30}{\milli\siemens\per\micro\metre} for a small-signal field-effect transistor~\cite{sze2021physics}.
 
 For an n-channel \glspl{MOSFET} with a certain threshold voltage, the drain current at a given gate in the saturation regime ($V_\textrm{Th} > V_\textrm{G} - V_\textrm{SD}$) is defined:
 %
@@ -416,7 +417,7 @@ The advantage of this equation is that the relationship written in terms of $V_\
 \end{figure}
 
 
-Two years after their initial breakthrough, Franklin and his colleagues shrank the channel length of a \gls{CNTFET} to less than 10 nanometers~\cite{Franklin2012}. Their technique involved the use of smaller tubes and a reduction of the necessary \gls{EOT} to \SI{0.65}{\nano\metre}. Even by adopting a local gate, if the gate oxide is excessively thick the gate tends to lose control over the flow of carriers in the channel~\cite{sze2021physics}.
+Two years after their breakthrough, \Citeauthor{Franklin2012} shrank the channel length of a \gls{CNTFET} to less than 10 nanometers~\cite{Franklin2012} (Fig.~\ref{fig:intro:cnt_device_2}). Their technique involved the use of smaller tubes and a reduction of the necessary \gls{EOT} to \SI{0.65}{\nano\metre}. Even by adopting a local gate, if the gate oxide is excessively thick the gate tends to lose control over the flow of carriers in the channel~\cite{sze2021physics}.
 The length of the channel was successfully lowered from 320 to \SI{9}{\nano\metre}. The authors reported an on-current with values closer the the ballistic limit for transistors with channel lengths close to \SI{41}{\nano\metre}~\cite{franklin2010length}.
 
 By examining the subthreshold swing $SS\simeq\SI{94}{\milli\volt}$~dec$^{-1}$, we can appreciate the greater control from the gate to the conductive channel, which at the time, exceeded that of any Si-based device. \citeauthor{franklin2010length} advocated for decreasing the \gls{CNT} diameter to reduce the subthreshold swing and off-current with minimum effect to the on-current.
@@ -426,8 +427,10 @@ The process of scaling down a \gls{CNTFET}, however, does not come without any c
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_introduction/figures/cnt_device_3.pdf}
-        \caption[Channel Length Scaling in Carbon Nanotube Field-Effect Transistors]{
-            Subthreshold (off-state) and output (on-state) characteristics for a 9-nm-long channel CNTFET. Despite the low effective carrier mass there is no loss of gate control over the transport carriers. Adapted from~\cite{Franklin2012}}
+        \caption[Channel Length Scaling in Carbon Nanotube Field-Effect Transistors]
+        {
+            Subthreshold (off-state) and output (on-state) characteristics for a 9-nm-long channel CNTFET. Despite the low effective carrier mass there is no loss of gate control over the transport carriers. Adapted from~\cite{Franklin2012}
+        }
         \label{fig:intro:cnt_device_3}
     \end{center}
 \end{figure}

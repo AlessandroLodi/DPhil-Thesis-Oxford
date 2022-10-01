@@ -9,7 +9,6 @@ Typically, three characteristic lengths are investigated in mesoscopic transport
 \section{Why an Exchange of Energy Matters}\label{ch:theory:sec:energy_exchange}
 If the scattering of an electron is \textit{elastic}, such as when the scattering event does not induce any electronic transition between the ground state and any excited states, the wavefunction undergoes essentially a phase shift following the event, remaining coherent. Therefore, an elastic event may only affect $\ell$, leaving $L_{\varphi}$ unchanged. In contrast, if the electron wave loses energy by either excitation of core electrons, spins associated with magnetic impurities, or phonons, both the mean free path and the phase-relaxation length may be affected by such (\textit{inelastic}) scattering events. Tab~\ref{tab:characteristic_lengths} summarises a few of these factors for various materials as a function of carrier concentration $n$.
 
-
 \begin{table}
     \caption{\label{tab:characteristic_lengths}
         Physical parameters relevant in transport phenomena. See also ~\cite{torres2014introduction, datta1997electronic}}
@@ -27,12 +26,11 @@ If the scattering of an electron is \textit{elastic}, such as when the scatterin
     \]
 \end{table}
 
-
 Because only electrons around the Fermi energy $E_F$ affects the transport properties, the mean free path and phase-relaxation length are often scaled by the Fermi velocity
 
-$$
+\begin{equation}
     t_{m}=\frac{L_m}{v_F} , \quad \text { and } \quad t_{\varphi}=\frac{L_\varphi}{v_F},
-$$
+\end{equation}
 %
 The introduced $t_m$ and $t_\varphi$ are, respectively, the momentum relaxation time and phase-relaxation time, and are often are compared to the time it takes one electron to travel the length of the sample. However, these two numbers do not correlate to the period of a single scattering event by the relevant scattering mechanism; rather, they represent the average time for the several collisions that result in significant changes of momentum and phase, respectively. In this context, significant entails, for instance, that the sums of the changes in momentum and phase over time $t_{m}$ and $t_{\varphi}$ reach $\hbar k_{\mathrm{F}}$ and $\pi$, respectively~\cite{dresselhaus1998physical}.
 
@@ -62,13 +60,13 @@ An analogous platform where the density of state approaches the Dirac delta func
 One way to describe this system is through the constant interaction model, which allows to derive important electrical transport
 information within the \textit{orthodox} Coulomb framework~\cite{zimmerli1992noise}. Within this model the Coulomb interactions
 both between electrons on the dot and between the dot and the leads, are described by a single capacitance $C$ which stays constant and it is given by the total sum of the individual capacitances between the dot with its terminals
-
+%
 \begin{equation}\label{ch:theory:eq:capacitance_interaction_model}
     C = \sum_{i=1}^\textrm{terminals} C_i,
 \end{equation}
 %
 where $i$ runs over all the terminals coupled to the central island. Secondly, the total Hamiltonian may be modelled as a sum of single-particle Hamiltonians, meaning that the total energy of the system can be expressed as a sum of single-particle energies $\Delta\epsilon$ which corresponds to the individual, non-interacting energy levels. Under these assumptions, the total dot energy given for a quantum dot in a three-terminal device with $N$ electrons becomes
-
+%
 \begin{equation}\label{ch:theory:eq:total_dot_energy}
     U(N) = \sum_{i}^NE_i + \frac{[e(N-N_0) + C_\mathrm{S}V_\mathrm{S} + C_\mathrm{D}V_\mathrm{D} + C_\mathrm{G}V_\mathrm{G}]^{2}}{2C},
 \end{equation}
@@ -125,13 +123,12 @@ The rate equation model starts from a kinetic description of the electrode--mole
 \end{equation}
 %
 where $\lambda$ is the reorganization energy as defined from the Marcus model for electron transfer in solution and $\omega_\textrm{c}$ is a cut-off frequency.
-
+%
 The current through the junction can be written as
 \begin{equation}
     I=|e| \frac{\gamma_\text{ox}^\text{S} \gamma_{\text {red}}^\text{D}-\gamma_{\text {red}}^\text{S} \gamma_\text{ox}^\text{D}}{\gamma_{\text {red}}^\text{S}+\gamma_{\text {red}}^\text{D}+\gamma_{ox}^\text{S}+\gamma_{ox}^\text{D}},
 \end{equation}
 %
-
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_theory/figures/single_level_model.pdf}
@@ -151,19 +148,20 @@ where $\gamma_{\text{red/ox}}^\text{S/D}$ are the electron-transfer rates at eac
 \end{align}
 
 where $\Gamma_\text{S,D}$ is the electronic coupling between molecule and the electrodes having Fermi-Dirac distributions $f_\text{S,D}(\epsilon)$. The density of states for the reduced and oxidized might be written as:
+%
 \begin{equation}
     k_{\text{red/ox}}(\epsilon)=\frac{1}{\pi} \operatorname{Re} \int_{0}^{\infty} e^{\sigma i(\epsilon-\epsilon_0) t / \hbar} e^{-t / \tau} B(t) d t,
     \label{eq:redox_dos}
 \end{equation}
 %
 where $\sigma=1(-1)$ for reduction (oxidation) process, $\epsilon_0$ is the molecular energy level, $\tau=2 \hbar /\left(\Gamma_\textrm{S}+\Gamma_\textrm{D}\right)$ is the lifetime of the molecular electronic state. The term written as $B(t)$ is the phononic correlation function $t$:
-
+%
 \begin{equation}
     B(t)=e^{D_{q}(t)} \cdot e^{D_{\textrm{bath}}(t)},
 \end{equation}
 %
 Here we have written the phononic correlation function $B(t)$ as the product between a single-mode term and a mean-field contribution given by the environment. The two terms might be expressed as follows \cite{todd1994electron}:
-
+%
 \begin{align}
     D_{q}(t)         & = \left(\frac{g_{q}}{\omega_{q}}\right)\left[\left(\cos \omega_{q} t-1\right) \cdot \operatorname{coth}\left(\frac{\omega_{q}}{2 k_{B} T}\right)-i \sin \left(\omega_{q} t\right)\right], \\
     D_\text{bath}(t) & = \int \frac{J(\omega)}{\omega^{2}}\left[(\cos \omega t-1) \cdot \operatorname{coth}\left(\frac{\omega}{2 k_{B} T}\right)-i \sin (\omega t)\right] d\omega,
@@ -193,7 +191,7 @@ The Fermi liquid theory was advanced by Lev Landau in 1956 as a phenomenological
 \end{figure}
 
 The ground state of a non-interacting gas may be fully captured following standard statistical mechanics. In this framework, of a great importance in calculating macroscopic quantities is the gas momentum distribution function $n^0_{\vec{k}}$, which depends on the wave number $\vec{k}$. More generally, the ground state depends also from the spin occupation number $\sigma$ but we will drop the spin subscript for the moment. For a fermionic gas, the zero-temperature limit $n^0_{\vec{k}}$ is the well-known step function which equals to:
-
+%
 \begin{equation}
     n^0_{\vec{k}} =
     \begin{cases}
@@ -201,42 +199,47 @@ The ground state of a non-interacting gas may be fully captured following standa
         0 & k > k_F  \\
     \end{cases}
 \end{equation}
-
+%
 At finite temperature, the momentum distribution function coincides with the Fermi--Dirac distribution for metals and with the Bose--Einstein distribution for bosons. The energy of a free particle follows the well-known parabolic dispersion, $\epsilon_{\vec{k}} = \hbar k^2/m$, and the total (multi-electron) energy change caused by an excitation might be expressed as a functional of the energy deviation from the ground state energy $E_0$:
+%
 \begin{equation}
     \delta E[\delta n] = E[n] - E_0 = \sum_{\vec{k}}\epsilon_{\vec{k}}~\delta n_{\vec{k}}
 \end{equation}
-
+%
 Thus the single-particle energy might be written as a functional derivative of the total energy with respect to the total number of particles with a specific $\vec{k}$ vector:
+%
 \begin{equation}
     \epsilon(\vec{k}) = \frac{\delta E[n]}{\delta n_{\vec{k}}}
 \end{equation}
-
+%
 An elementary excitation can therefore be thought as the process of adding/removing a particle to/from the ground state and an arbitrary excitated state may consist of a number of such particle-hole pairs. Close to the Fermi surface, $\vec{k} = k_F$, the energy dispersion is sufficiently linear enough to apply a Taylor series expansion:
-
+%
 \begin{equation}
     \epsilon_{\vec{k}} = \epsilon_F + \upsilon_F\hbar(k - k_F) + \mathcal{O}((k-k_F)^2)
 \end{equation}
-
+%
 where $\upsilon_F=\grad_{\vec{k}}\epsilon|_{\vec{k}=k_F}$ is the Fermi velocity. Landau's intuition was assuming that the low-lying eigenstates of the non-interacting Fermi gas continuously evolve into eigenstates of the multi-body (real) system as the interaction is adiabatically switched on. This process leads to the recovery of an individual excitation description, called quasiparticle, which is the starting point of the Fermi-liquid theory. Pictorially, a quasiparticle can be visualised as a fermion surrounded by a cloud of disturbance arises due to interaction with other particles. As a consequence, the mass is replaced by to effective mass $m^*=\hbar k_F/\upsilon$ that captures the strenght of the interaction cloud with the single particle.
 
 Therefore, the quasiparticle dispersion may be written as:
-
+%
 \begin{equation}
     \epsilon_{\vec{k}} = \epsilon_F + \upsilon\hbar(k - k_F) + \mathcal{O}((k-k_F)^2)
 \end{equation}
-
+%
 In order to quantify the quasiparticle excitation energies, the energy functional has to be expanded to the second order throught a Taylor series expansion as I did before:
-
+%
 \begin{equation}
     \delta E[\delta n] = \sum_{\vec{k}} \epsilon_{\vec{k}}~\delta n_{\vec{k}} + \frac{1}{2V} \sum_{\vec{k}} f({\vec{k}}, {\vec{k'}})~\delta n_{\vec{k}} \delta n_{\vec{k'}}
 \end{equation}
-
+%
 where the intesive quantity:
+%
 \begin{equation}
     \frac{f ({\vec{k}}, {\vec{k'}})}{V} = \frac{\delta^2 E[n]}{\delta_{\vec{k}} \delta_{\vec{k'}}}
 \end{equation}
+%
 is known as Landau function and quantifies the interaction strength between quasiparticles. The energy of a quasiparticles can be Similarly defined as
+%
 \begin{equation}
     \tilde{\epsilon}_{\vec{k}} = \frac{\delta E[\delta n ]}{\delta n_{\vec{k}}} = \epsilon_{\vec{k}} + \frac{1}{V}\sum_{\vec{k'}} f({\vec{k}},{\vec{k'}})\delta_{\vec{k'}}
 \end{equation}.
@@ -288,19 +291,19 @@ where we have dropped the arrow notation for the wave vector as we are now deali
 Since states in the $R$ branch have positive velocities they are sometimes called \textit{right movers}; conversely, states in the left branch are referred as \textit{left movers}.
 
 The interaction term is where the fun begins. In order to write it down, we shall first introduce a central quantity when one deals with one-dimensional systems. Because the system is subject to quantum fluctuations, even in the zero-temperature limit \cite{giamarchi2006strong}, the physics of the system will be governed by those processes which are close to the Fermi surface. Low-energy processes might be well captured by introducing the density operator\footnote[1]{A technicality here. Since the model includes all the negative states, the density operator as it has been written in Eq.~\ref{eq:theory:density_op} is infinite as the number of fermions is infinite. One has to introduce the \textit{normal ordering} of operators, meaning that what matters are deviations in the density with respect to the density of the ground state.}:
-
+%
 \begin{equation}
     \rho^\dagger(q) = \sum_k c^\dagger_{k+q, r}c_{k,r}
     \label{eq:theory:density_op}
 \end{equation}
-
+%
 The interaction might then be written as:
-
+%
 \begin{equation}
     \mathcal{H}_\textrm{int}=\frac{1}{2V}\sum_{k,k',q}V(q)c^\dagger_{k+q}c^\dagger_{k'-q}c_{k'}c_{k}
     \label{eq:theory:lutt_int}
 \end{equation}
-
+%
 As illustrated in Fig.~\ref{fig:theory:excitation_spectrum}, since $k$ and $k-q$ are restricted to be close the two points at $\pm k_F$, there are only two possible value of $q$ depending on the sign of $k$ and $k-q$. When $k$ and $k-q$ have the same sign, $\abs{q}\sim 0$. This corresponds to a scattering term for fermions moving in the same direction and might be interpreted as a \textit{forward scattering}. When $k$ and $k-q$ have opposite sign, $\abs{q}\sim 2k_F$, meaning that in this excitation fermions exchange side (\textit{backward scattering}).
 
 \begin{figure}[hbtp]
@@ -331,17 +334,17 @@ The tunneling density of states may be written as
 where $\psi_{e}(t)$ is the time-dependent fermionic operator (field), $\omega$ is an energy scale, and the brackets indicate the propagator (Green's function) as instroduced in Sec.~\ref{ch:theory:sec:one_dim_physics_intro}. The mapping between fermionic and bosonic operators takes place through bosonization~\cite{von1998bosonization}, which allows us to write bare fermionic operators in terms of bosonic fields.
 We then may write the bosonized form of the fermionic operator as
 %
-$$
+\begin{equation}
     \psi_{e} = \psi_{L}+\psi_{R},
-$$
+\end{equation}
 %
 where $\psi_{L/R}$ are the left/right fermionic operators for left-moving and right-moving carriers\footnote[1]{This argument, as will be explained later, assumes that chirality symmetry is respected. As a result, applying a strong magnetic field that may cause chiral-symmetry breaking may compel this entire argument to be adjusted. See~\cite{roy2014chiral}.}, which may be written in terms of a bosonic operator $e^{-i \varphi_{L/R}}$ normalized by the inter-particle spacing $a$ when particles are confined along a 1D chain
 $\psi_{L / R}=e^{-i \varphi_{L / R}}/\sqrt{a}.$
 
 In order to diagonalise the Luttinger liquid Hamiltonian, it may be convenient to introduce the following fields
-$$
+\begin{equation}
     \phi_{\pm}=\frac{1}{\sqrt{2}} g^{\mp\frac{1}{2}}\left(\varphi_{L} \mp \varphi_{R}\right)
-$$
+\end{equation}
 %
 where $g>0$ (for free electrons $g=1$) is a dimensionless parameter which quantifies the electron--electron interactions in a 1D quantum wire. These fields have also the peculiarity to be canonically conjugated to the displacement field $\theta(x)$ which derivative models the electron density fluctuations:
 %
@@ -352,20 +355,20 @@ where $g>0$ (for free electrons $g=1$) is a dimensionless parameter which quanti
 where $n_0$ is the average density. This expression is obtained by considering that if $\theta(a)- \theta(0)= -\pi$, then only one extra electron is between two particles separated by a distance $a$.
 
 The two fermionic fields thus reads
-$$
+\begin{equation}
     \begin{aligned}
          & \psi_{L}=\frac{1}{\sqrt{a}} e^{-\frac{i}{\sqrt{2}}\left(\frac{1}{\sqrt{g}} \phi_{-}+\sqrt{g} \phi_{+}\right)}, \\
          & \psi_{R}=\frac{1}{\sqrt{a}} e^{-\frac{i}{\sqrt{2}}\left(\frac{1}{\sqrt{g}} \phi_{-}-\sqrt{g} \phi_{+}\right)},
     \end{aligned}
-$$
+\end{equation}
 %
 while the fermionic propagator may be written as
-$$
+\begin{equation}
     \begin{aligned}
         \left\langle\psi_{e}(t) \psi_{e}^+(0)\right\rangle= & \left\langle\psi_{L}(t) \psi_{L}(0)\right\rangle+\left\langle\psi_{R}(t) \psi_{R}(0)\right\rangle \\
         =                                                   & \left\langle\psi_{L}(t) \psi_{L}(0)\right\rangle+ \text{h.c.}
     \end{aligned}
-$$
+\end{equation}
 %
 where $\textrm{h.c.}$ represents the Hermitian conjugate terms in the propagator formula. Cross terms such as $\left\langle\psi_{L}^{\dagger} \psi_{R}\right\rangle$ cancel each other since chirality for this kind of ribbon is conserved. For the remaining terms the sum can be opened such as
 %
@@ -376,9 +379,9 @@ where $\textrm{h.c.}$ represents the Hermitian conjugate terms in the propagator
 %
 By using the Baker--Campbell--Hausdorff identity, which is valid for exponential operators and is obeyed by free bosonic fields
 %
-$$
+\begin{equation}
     \left\langle e^{B_{1}} e^{B_{2}}\right\rangle=e^{\frac{1}{2}}\left\langle B_{1}^{2}+2 B_{1} B_{2}+B_{2}^{2}\right\rangle
-$$
+\end{equation}
 %
 and time-translational symmetry, we obtain
 %
@@ -405,12 +408,12 @@ and by combining the two terms, the fermionic propagator reads:
 %
 Incorporating this expression into the TDOS yields:
 %
-$$
+\begin{equation}
     \begin{aligned}
         \rho_{\operatorname{dos}}(\omega) & =\int_{-\infty}^{\infty} \frac{d t}{2 \pi} e^{i \omega t}\left\langle\psi_{e}(t) \psi_{e}^{\dagger}(0)\right\rangle                    \\
                                           & =\frac{1}{2 \pi a} \int_{-\infty}^{\infty} d t e^{i \omega t}\left(1+\frac{i\upsilon_Ft}{a}\right)^{-\frac{1}{2}\left(g+g^{-1}\right)}
     \end{aligned}
-$$
+\end{equation}
 %
 Since we are interested in the low-energy behavior of the TDOS, we look at the limit for which $\omega\rightarrow0$, which in the time-domain corresponds to look at the behavior for $t\rightarrow\infty$:
 

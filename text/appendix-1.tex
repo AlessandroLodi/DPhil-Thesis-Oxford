@@ -1,36 +1,30 @@
-% \begin{savequote}[8cm]
-% \textlatin{Cor animalium, fundamentum e\longs t vitæ, princeps omnium, Microco\longs mi Sol, a quo omnis vegetatio dependet, vigor omnis \& robur emanat.}
-
-% The heart of animals is the foundation of their life, the sovereign of everything within them, the sun of their microcosm, that upon which all growth depends, from which all power proceeds.
-%   \qauthor{--- William Harvey \cite{harvey_exercitatio_1628}}
-% \end{savequote}
-
 \chapter{\label{appendix:spinvalve}Tb--Dy Molecular Spin Valve}
 
 \minitoc
 
 \section{Introduction}\label{sec:spinvalve:introduction}
 
-Typically a spin valve is a trilayered device in which a paramagnetic material (also called \textit{spacer}) of interest is sandwiched between two ferromagnetic (FM) electrodes of different
-coercitivities, so they may be independetly controlled by just one magnetic field. One of the FM acts as a \textit{spin injector}, meaning that, if an electrical bias is applied, spins from a population $P_0$ are injected from the quasi-Fermi level into the paramagnet. The second paramagnet is called \textit{spin detector} and owns its name to the fact that it provides unequal spin-up and
-spin-down DOS at the Fermi level, thus preferentially transmitting spins of one particular orientation. Overall this would result in a low device resistance when the magnetization of the two magnets are parallel but when their alignement is antiparallel the resistance would be high\footnote[1]{This argument is strictly valid in case the distance between the two magnets is smaller than the spin-diffusion length $\lambda_s\sim \log{(\frac{P}{P_0})}^{-1}$, and P depends of the spacer length.}.
+Typically a spin valve is a trilayered device in which a paramagnetic material (also called \textit{spacer}) of interest is sandwiched between two ferromagnetic (FM) electrodes of different coercitivities, so they may be independetly controlled by just one magnetic field.
+
+One of the FM acts as a \textit{spin injector}, meaning that, if an electrical bias is applied, spins from a population $P_0$ are injected from the quasi-Fermi level into the paramagnet. The second paramagnet is called \textit{spin detector} and owns its name to the fact that it provides unequal spin-up and
+spin-down DOS at the Fermi level, thus preferentially transmitting spins of one particular orientation.
+Overall this would result in a low device resistance when the magnetization of the two magnets are parallel but when their alignement is antiparallel the resistance would be high\footnote[1]{This argument is strictly valid in case the distance between the two magnets is smaller than the spin-diffusion length $\lambda_s\sim \log{(\frac{P}{P_0})}^{-1}$, and P depends of the spacer length.}.
 
 A couple of years back it has been envisioned to mimick the same device but entirely with a supramolecular structure. One of the first proposal discussed the possibility to control preferentially spin currents when these where injected through porphyrins adsorbed on a single CNT~\cite{urdampilleta2011supramolecular}.
 
 \begin{figure}[hbtp]
-  \begin{center}
-    \includegraphics[width=\textwidth]{text/spinvalve_mol_tb_opt.pdf}
-    \caption[Tb--Dy Spin Valve: Molecular Structure and Tight-Binding-Optimised Geometry]
-    {\textbf{a,} Molecular structure of the Tb--Dy porphyrin. In blue and white are highlighted the rare-earth metal centres. R = --\ce{C12H25}; Ar = 3,5-bis(trihexylsilyl)phenyl.
-      \textbf{b,} Tight-binding optimised geometry. The --R groups have been discarded to simplify the geometry, and since they do not impact any electronic or magnetic properties. The total number of atoms for this structure is $N=405$ atoms. Reference system referes to the orientations of the 3D vector magnet in the dilution refrigerator.}
-    \label{fig:spinvalve_structure_geom_optimised}
-  \end{center}
+    \begin{center}
+        \includegraphics[width=\textwidth]{text/spinvalve_mol_tb_opt.pdf}
+        \caption[Tb--Dy Spin Valve: Molecular Structure and Tight-Binding-Optimised Geometry]
+        {\textbf{a,} Molecular structure of the Tb--Dy porphyrin. In blue and white are highlighted the rare-earth metal centres. R = --\ce{C12H25}; Ar = 3,5-bis(trihexylsilyl)phenyl.
+            \textbf{b,} Tight-binding optimised geometry. The --R groups have been discarded to simplify the geometry, and since they do not impact any electronic or magnetic properties. The total number of atoms for this structure is $N=405$ atoms. Reference system referes to the orientations of the 3D vector magnet in the dilution refrigerator.}
+        \label{fig:spinvalve_structure_geom_optimised}
+    \end{center}
 \end{figure}
 
 The aim of the project is to observe magnetoresistance for a double-porphyrin supramolecular comples, thus demonstrating spin valve capabilities. This requires, first, to establish if the device conductance is suppressed for at certain field value. Since it was not possible to study the individual building blocks of the double porphyrin,  we atttempted to study the entire molecule.
 
 \section{Experimental and Computational Methods}\label{sec:spinvalve:methods}
-All measurements were carried out at cryogenic temperatures. The sample was dissolved in toluene and presented eccellent solubility even without shaking. The solution was kept in the fridge for almost an year and MALDI performed at intervals of $\sim$4 months confirmed the structure stability even when kept in solution in the fridge. Solution of $\sim$\SI{8}{\micro\litre} were dropcasted on top of graphene tunnel junctions as already outline in the preceeding chapters, and transport properties performed in the Oxford Triton 200 Dilution Refrigerator.
 
 Before attempting any transport experiments we carried out an explorative \textit{in-silico} analysis to characterise the magnetic properties of the double porphyrin. To this end, a first important step was to define the type of functional to use. In this respect, \gls{LDA} and \gls{GGA} functionals are concave and locals/semi-locals, meaning that the charge density is calculated locally, and so they notoriously tend to describe the electron density for locally respected to the true (unknown) functional. This often leads to an underestimate of the ionization potential and to an overestimate of the electron affinity. This weakness of local functionals is of paramount importance to address especially in strongly-correlated system such as this one, where the presence of $f-$electrons in a delocalised matrix imposes to heavily correct the systematic error generated by local functionals otherwise resulting in inversions when the spinorbitals are filled.
 
@@ -43,11 +37,13 @@ Fig.~\ref{fig:spinvalve_structure_DFT_optimised} shows the structure of the doub
 \section{Results}
 
 \subsection{Computational}\label{sec:spinvalve:computational}
-
+All measurements were carried out at cryogenic temperatures. The sample was dissolved in toluene and presented eccellent solubility even without shaking. The solution was kept in the fridge for almost an year and MALDI performed at intervals of $\sim$4 months confirmed the structure stability even when kept in solution in the fridge. Solution of $\sim$\SI{8}{\micro\litre} were dropcasted on top of graphene tunnel junctions as already outline in the preceeding chapters, and transport properties performed in the Oxford Triton 200 Dilution Refrigerator.
 
 Since the energy differences involved between the FM and the AFM configuration are presumably small, one has to first heavily optimise the geometry so there is a very small error on the bonding forces. Unfortunately a crystal structure of this molecule was not available at the time when this project was carried out. A strong polar implicit solvent (acetonitrile, \ce{MeCN}) was employed in order to avoid any buckling up of the supramolecular structure.
 
 The problem with this system is twofold: on the one hand you want to go and see presumably small energy differences due to the spins of the different pieces of the molecules first the geometry has to be optimised in a pushy way, so there has to be a very small error on the bonding forces. After that you have to do the FM count first, then flip the magnetisation f orbitals to one side and see the energy difference with the AFM structure. And you want to see this both when the anchor molecules are flat and when they are tilted. So in total one account with four cases.
+
+The challenge with this system is twofold: on the one hand, energy differences due to the spins of the different sections of the molecules will be very small, and on the other hand, the geometry must be optimised so there is minimal inaccuracy in the bonding forces. Then, an FM estimation must be performed before flipping the magnetisation of the $f-$orbitals and comparing the energy difference with the AFM structure. There are a total of four scenarios to examine, as calculations must be conducted both when the anchor molecules are flat and when they are inclined.
 
 The three rare-earth--oxygen bonds provided by the tripodal (Kl{\"a}ui) ligand are not collinear with the nitrogens belonging to the porphyrinic ring and so they force the porphyrin ring to undergo into a structural distortion.
 
@@ -56,12 +52,12 @@ The structure seems to indicate it preferentially orientates the two aryl rings 
 %This result was carried out by employing a 128 GB-big node  machine with 8 runs of 48h long each.
 
 \begin{figure}[hbtp]
-  \begin{center}
-    \includegraphics[width=\textwidth]{text/dft_geom_broken.pdf}
-    \caption[Tb--Dy Spin Valve: DFT-Optimised Geometry]
-    {Tb--Dy structure when optimsed at the DFT level. Simulation protocol is detailed in the main text. While the DyP seems to remain intact, the TbP present several critical breaking points in the structure.}
-    \label{fig:spinvalve_structure_DFT_optimised}
-  \end{center}
+    \begin{center}
+        \includegraphics[width=\textwidth]{text/dft_geom_broken.pdf}
+        \caption[Tb--Dy Spin Valve: DFT-Optimised Geometry]
+        {Tb--Dy structure when optimsed at the DFT level. Simulation protocol is detailed in the main text. While the DyP seems to remain intact, the TbP present several critical breaking points in the structure.}
+        \label{fig:spinvalve_structure_DFT_optimised}
+    \end{center}
 \end{figure}
 
 
@@ -71,15 +67,56 @@ The calculation was interrupted as the structure started to break down. Fig.~\re
 
 
 \begin{figure}[hbtp]
-  \begin{center}
-    \includegraphics[width=\textwidth]{text/spinvalve_functioning.pdf}
-    \caption[Tb--Dy Spin valve: Functioning Mechanism]
-    {\textbf{a,} When $B=0$, the Pauli exclusion principles guarantees that a spin-down polarised current may travel across the whole structure resulting in overall low resistance (high $G$). \textbf{b,} When $B\neq0$, paired spins act as spin blockade and no spin-polarised current can flow across both metals due to the Pauli principle. Indicated are the respective energy splitting amongst the magnetic level for each rare-earth when a magnetic field lifts the degeneracy between spin-up and spin-down states.}
-    \label{fig:spinvalve_mechanism}
-  \end{center}
+    \begin{center}
+        \includegraphics[width=\textwidth]{text/spinvalve_functioning.pdf}
+        \caption[Tb--Dy Spin valve: Functioning Mechanism]
+        {\textbf{a,} When $B=0$, the Pauli exclusion principles guarantees that a spin-down polarised current may travel across the whole structure resulting in overall low resistance (high $G$). \textbf{b,} When $B\neq0$, paired spins act as spin blockade and no spin-polarised current can flow across both metals due to the Pauli principle. Indicated are the respective energy splitting amongst the magnetic level for each rare-earth when a magnetic field lifts the degeneracy between spin-up and spin-down states.}
+        \label{fig:spinvalve_mechanism}
+    \end{center}
 \end{figure}
 
-\subsection{Electronic Transport}\label{sec:spinvalve:transport}
+\subsection{Coulomb-Blockade Spectroscopy}
+
+\begin{figure}[hbtp]
+    \begin{center}
+        \includegraphics[width=\textwidth]{text/-2.23V_diamond.pdf}
+        \caption[Tb--Dy Spin Valve: Field-Sweep Analysis of the Coulomb Diamond at \SI{-2.23}{\volt}]
+        {
+            \textbf{a,} bla
+            \textbf{b,} bla
+        }
+        \label{fig:-3V_diamond_field_sweep}
+    \end{center}
+\end{figure}
+
+We first measured the diamond close zero gate.
+
+\begin{figure}[hbtp]
+    \begin{center}
+        \includegraphics[width=\textwidth]{text/-2V_diamond_field_sweep.pdf}
+        \caption[Tb--Dy Spin Valve: Field-Sweep Analysis of the Coulomb Diamond at \SI{-2}{\volt}]
+        {
+            \textbf{a,} bla
+            \textbf{b,} bla
+        }
+        \label{fig:-2V_diamond_field_sweep}
+    \end{center}
+\end{figure}
+
+We then pushed more forward to study the diamond at -3V. We could unfortunately have not been able to finish the measurements as the device was jumping a lot during the gate and bias scans, possibly due to charge trapped into the \ce{HfOx} substrate.
+
+\begin{figure}[hbtp]
+    \begin{center}
+        \includegraphics[width=\textwidth]{text/-3V_diamond_field_sweep.pdf}
+        \caption[Tb--Dy Spin Valve: Field-Sweep Analysis of the Coulomb Diamond at \SI{-3}{\volt}]
+        {
+            \textbf{a,} bla
+            \textbf{b,} bla
+        }
+        \label{fig:-3V_diamond_field_sweep}
+    \end{center}
+\end{figure}
+
 
 \section{Concluding Remarks}
 
@@ -95,6 +132,5 @@ a clear splitting when the magnetic field is swept up to \SI{1}{\tesla} along th
 
 \section{Project Overview}
 
-The Tb--Dy double porphyrin discussed in this project was designed and synthesised by
-Dr.\ Keith Andrews and prof.\ Harry Anderson. I thank Dr.\ Giuseppe Mattioli from ISM-CNR for insightful suggestions on how to setup the DFT calculations and Dr.\ Alex Gee for the preparation of the graphene tunnel junctions.
+The Tb--Dy double porphyrin discussed in this project was designed and synthesised by Dr Keith Andrews and prof.\ Harry Anderson.
 

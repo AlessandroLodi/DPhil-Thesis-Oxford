@@ -75,7 +75,7 @@
 
 %%%%% THESIS / TITLE PAGE INFORMATION
 % Everybody needs to complete the following:
-\title{Electron Transport In Molecular Nanostructures}
+\title{Electron Transport in Molecular Nanostructures}
 \author{Alessandro Lodi}
 \college{Trinity College}
 
@@ -123,6 +123,7 @@
 %%%%% CHOOSE YOUR LINE SPACING HERE
 % This is the official option.  Use it for your submission copy and library copy:
 \setlength{\textbaselineskip}{22pt plus2pt}
+\setlength{\parindent}{\textbaselineskip}
 % This is closer spacing (about 1.5-spaced) that you might prefer for your personal copies:
 %\setlength{\textbaselineskip}{18pt plus2pt minus1pt}
 
@@ -163,21 +164,21 @@
 
 
     %%%%% DEDICATION -- If you'd like one, un-comment the following.
-    %\begin{dedication}
-    %This thesis is dedicated to\\
-    %someone\\
-    %for some special reason\\
-    %\end{dedication}
+    % \begin{dedication}
+    %     \textit{
+    %         To my parents, for their unconditional love and support,\\
+    %         and to Cecilia, because she chooses me for the Sunday night pizza.}\\
+    % \end{dedication}
 
     %%%%% ACKNOWLEDGEMENTS -- Nothing to do here except comment out if you don't want it.
     % \begin{acknowledgements}
-    %  	\input{text/acknowledgements}
+    %     \input{text/acknowledgements}
     % \end{acknowledgements}
 
     %%%%% ABSTRACT -- Nothing to do here except comment out if you don't want it.
-    % \begin{abstract}
-    % 	\input{text/abstract}
-    % \end{abstract}
+    \begin{abstract}
+        \input{text/abstract}
+    \end{abstract}
 
     %%%%% MINI TABLES
     % This lays the groundwork for per-chapter, mini tables of contents.  Comment the following line
@@ -225,12 +226,11 @@
 \setcounter{mtc}{2}
 \include{chapter_introduction/introduction}
 \include{chapter_theory/theory}
-%\include{chapter_instrumentations/instrumentations}
 \include{chapter_fabrication/fabrication}
-\include{chapter_instr_dev/instr_development.tex}
+\include{chapter_instr_dev/instr_development}
 \include{chapter_gnrset/gnrset}
-\include{chapter_chemdoping/chemdoping}
-\include{chapter_thermoelectric/thermoelectric}
+\include{chapter_solubility/solubility}
+\include{chapter_doping/doping}
 %\include{chapter_spinvalve/spinvalve}
 \include{chapter_summary/summary}
 
@@ -242,14 +242,15 @@
 % Add or remove any appendices you'd like here:
 \include{text/appendix-1}
 \include{text/appendix-2}
+\include{text/appendix-3}
 
 %%%%% REFERENCES
 
 % JEM: Quote for the top of references (just like a chapter quote if you're using them).  Comment to skip.
-\begin{savequote}[8cm]
-    The first kind of intellectual and artistic personality belongs to the hedgehogs, the second to the foxes \dots
-    \qauthor{--- Sir Isaiah Berlin \cite{berlin_hedgehog_2013}}
-\end{savequote}
+% \begin{savequote}[8cm]
+%     The first kind of intellectual and artistic personality belongs to the hedgehogs, the second to the foxes \dots
+%     \qauthor{--- Sir Isaiah Berlin \cite{berlin_hedgehog_2013}}
+% \end{savequote}
 
 \setlength{\baselineskip}{0pt} % JEM: Single-space References
 
@@ -261,6 +262,6 @@
 
 
 % Note
-% Sometimes fucking latex decided to give up on you. Sometimes the biblio does not compile.
+% Sometimes latex will decide to give up on you. Sometimes the biblio does not compile.
 % You should use this
 % https://tex.stackexchange.com/questions/579291/biber-exiting-with-error-code-2-but-no-error-messages 

@@ -2,11 +2,11 @@
 
 \minitoc
 
-Mesoscopic systems exhibit quantum transport phenomena. There, the sample's size becomes comparable or lower than the characteristic lengths for electron travelling, and, as a result, physical properties such as the electrical conductivity depend on the specimen's dimensionality.
+Mesoscopic systems exhibit quantum transport phenomena. There, the sample size becomes comparable or lower than the characteristic lengths for electron travelling, and, as a result, physical properties such as the electrical conductivity depend on the specimen dimensionality.
 
 Typically, three characteristic lengths are investigated in mesoscopic transport experiments. The mean free path $\ell$, the wavelength of Fermi $\lambda_{F}$, and the phase-relaxation length $L_{\varphi}$. The mean free path is the average distance an electron travels prior to being dispersed by a scattering centre; attempts to measure it for graphene nanoribbons are briefly described in Ch~\ref{ch:introduction}. The Fermi wavelength $\lambda_{F}=2 \pi / k_{F}$ is the wavelength of an electron at Fermi energy $E_F$, whereas the phase-relaxation length is the average distance over which an electron travels before its quantum-mechanical phase becomes randomised.
 
-\section{Why an Exchange of Energy Matters}
+\section{Why an Exchange of Energy Matters}\label{ch:theory:sec:energy_exchange}
 If the scattering of an electron is \textit{elastic}, such as when the scattering event does not induce any electronic transition between the ground state and any excited states, the wavefunction undergoes essentially a phase shift following the event, remaining coherent. Therefore, an elastic event may only affect $\ell$, leaving $L_{\varphi}$ unchanged. In contrast, if the electron wave loses energy by either excitation of core electrons, spins associated with magnetic impurities, or phonons, both the mean free path and the phase-relaxation length may be affected by such (\textit{inelastic}) scattering events. Tab~\ref{tab:characteristic_lengths} summarises a few of these factors for various materials as a function of carrier concentration $n$.
 
 
@@ -36,11 +36,7 @@ $$
 %
 The introduced $t_m$ and $t_\varphi$ are, respectively, the momentum relaxation time and phase-relaxation time, and are often are compared to the time it takes one electron to travel the length of the sample. However, these two numbers do not correlate to the period of a single scattering event by the relevant scattering mechanism; rather, they represent the average time for the several collisions that result in significant changes of momentum and phase, respectively. In this context, significant entails, for instance, that the sums of the changes in momentum and phase over time $t_{m}$ and $t_{\varphi}$ reach $\hbar k_{\mathrm{F}}$ and $\pi$, respectively~\cite{dresselhaus1998physical}.
 
-
-% third part
-
 There are several ways through which it is possible to control the various scattering mechanisms. For example it is possible to suppress the magnetic scattering by applying a magnetic field~\cite{mccreary2012magnetic, escalera2018spin}, whilst phonons excitations might be suppressed at low temperature, although it is the electron--phonon interaction which controls the relaxation of an electron by an emitting a phonon~\cite{efetov2010controlling}. The electron--electron interaction is determined by the carrier concentration and the extension of the valence band along the Brilluoin zone~\cite{kotov2012electron}. On top of that, all the frequencies corresponding to the various scattering processes might be changed by controlling the Fermi velocity, often obtained by either varying a gate voltage or by changing the conduction band curvature.
-
 
 \section{Electronic Transport Regimes}
 
@@ -51,20 +47,20 @@ An analogous platform where the density of state approaches the Dirac delta func
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_theory/figures/set_schematic.png}
-        \caption[Schematic of a Quantum-Dot-Based Single-Electron Transistor]
-        {Cartoon schematic for a single-electron transistor based on a quantum dot.}
+        \caption[Single-Electron Transistor and its Equivalent Circuit]
+        {
+            \textbf{a,} Cartoon schematic for single-electron transistors based on quantum dots.
+            \textbf{b,} Equivalent circuit. Each tunnel barrier is represented by a RC
+            circuit and electrons tunnel from the source to the quantum dot (QD) and then to the drain.
+            $\Gamma_{S,D}$ are the tunneling rates.
+
+        }
         \label{fig:theory:set_schematic}
     \end{center}
 \end{figure}
 
-% Figure $2.1 \mathrm{~b}$ shows a diagram which indicates the combinations of bias voltage, $V$, and gate voltage, $V_{\mathrm{g}}$, for which the requirements in Equation (2.1) are met. In the orange parts of the diagram SET transport can occur, whereas in the blue regions the requirements in Equation (2.1) are not met and electron transport is suppressed by Coulomb blockade. The diamond-shaped Coulomb-blockaded regions are known as Coulomb diamonds. In every Coulomb diamond the charge of the nano-object is stable at a different value - as indicated by the numbers $N-1, N$ and $N+1$ which label the different charge states. In experiments, we refer to these types of $\left(V_{\mathrm{g}}, V\right)$ maps as stability diagrams.
-
-% Excited states of the nano-object can be identified as slanted lines in the SET region of a stability diagram, as indicated by the slanted dashed lines in Figure 2.1b. In the regions above these lines (or for negative $V$ beneath these lines), SET transport not only occurs between the ground states of neighboring charge states, but also involves excited states. For example, the slanted dashed lines on the left in Figure 2.1b correspond to the onset of the process $|N-1\rangle \rightarrow\left|N_{\mathrm{ex}}\right\rangle \rightarrow|N-1\rangle$, where $\left|N_{\mathrm{ex}}\right\rangle$ is an excited state. The current can be enhanced or suppressed by introducing this additional transport channel, depending on the rate at which the process occurs [1] - slow SET excitations can suppress the current, which results in lines of negative differential conductance (NDC), as observed e.g. in the experimental data presented in Figure 4.la.
-
-% Equation (2.1) is typically the only requirement of interest for SET transport through a nano-object. In special cases however, additional requirements become relevant such
-
 One way to describe this system is through the constant interaction model, which allows to derive important electrical transport
-information within the \textit{orthodox} Coulomb framework. Within this model the Coulomb interactions
+information within the \textit{orthodox} Coulomb framework~\cite{zimmerli1992noise}. Within this model the Coulomb interactions
 both between electrons on the dot and between the dot and the leads, are described by a single capacitance $C$ which stays constant and it is given by the total sum of the individual capacitances between the dot with its terminals
 
 \begin{equation}\label{ch:theory:eq:capacitance_interaction_model}
@@ -90,19 +86,14 @@ where $E_\mathrm{C} = e^2/C$ is the charging energy. In the simplest case as the
 
 The criteria that has to be satistifed in order to operate in a weak coupling regime is that the lifetime broadening of a molecular state has to be the smallest energy scale in place, i.e. $\Gamma\ll\E_C, E_\textrm{add}(N), k_BT$. This condition is often realised in an electrical break junctions such as the ones used in this thesis.
 
-In this regime, Coulomb blockade (Fig.~\ref{fig:theory:cb}) and single-electron (sequential) tunnelling prevails. This transport mechanism involves two tunneling steps. Firstly, an electron tunnels from one electrode into the dot (or vice versa), thereby changing the overall charge of the dot, e.g. from $|N\rangle$ to $|N+1\rangle$; during this event the spin also changs by $\pm 1 / 2$. Subsequently, the electron tunnels from the molecule to the second reservoir. We can write this sequence of SET events as
+In this regime, Coulomb blockade (Fig.~\ref{fig:theory:cb}) and single-electron (sequential) tunneling prevails. This transport mechanism typically involves two steps. In the first step, an electron tunnels from one electrode into the molecule: this process is often captured by the notation $N\leftrightarrow N+1$, where the double-ended arrow refers to the possibility of having also an electron going from the dot back to the first electrode. During this event, the spin also changes by $\Delta S = \pm 1 / 2$. In the second step, the electron tunnels from the molecule to the second reservoir. A necessary and sufficient condition for this charge transfer to take place is that the energy levels of the two leads $E_{F,1}$ and $E_{F,2}$ have, at least, an energy equal to the electrochemical potential of the molecule $\mu_N$.
 
-\begin{equation}\label{ch:theory:eq:sequential_tunnelling}
-    |N\rangle \leftrightarrow|N+1\rangle \leftrightarrow|N\rangle
-\end{equation}
-%
-This process is only allowed when the electrochemical potential (or Fermi level) of the first electrode $E_{\mathrm{F} 1}$ is higher than the electrochemical potential of the nano-object $\mu_{\mathrm{N}}$ and the Fermi level of the second electrode $E_{\mathrm{F} 2}$ is lower than $\mu_{\mathrm{N}}$. The reverse process is also possible, hence the double-ended arrow in Eq.~\ref{ch:theory:eq:sequential_tunnelling}.
 
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=0.95\textwidth]{chapter_theory/figures/coulomb_blockade.pdf}
         \caption[Coulomb Diamond Diagram]
-        {\textbf{a,} Coulomb blockade schematic. Charge is fixed in grey regions. This is also represented by (d) and (e) where the quantum dot energy level either lies outside the $V_\textrm{SD}$ window or is doubly-occupied, respectively. Electron tunnelling through the dot is allowed within the white regions, and all the possible cases are detailed (a--c and f-g).
+        {\textbf{a,} Coulomb blockade schematic. Charge is fixed in grey regions. This is also represented by (d) and (e) where the quantum dot energy level either lies outside the $V_\textrm{SD}$ window or is doubly-occupied, respectively. Electron tunneling through the dot is allowed within the white regions, and all the possible cases are detailed (a--c and f-g).
             \textbf{b, left} Ground and excited state separeted in energy by the Zeeman interaction. Conductance step may occur
             when $e\lvert V_\textrm{SD}\rvert=\Delta E_\textrm{Zeeman}$ in the blockade region.
             \textbf{b, right} Two different charge states. Degeneracy between spin up and spin down is lifted by the external magnetic field $B$.
@@ -111,91 +102,22 @@ This process is only allowed when the electrochemical potential (or Fermi level)
     \end{center}
 \end{figure}
 
-By either applying a bias $eV_\textrm{SD} = E_F (1) - E_F (2)$ over the two electrodes or tuning $\mu_N$ thorugh a gate electrode is possible to switch on this regime.
-Electron transport in the SET regime is schematically depicted in Fig.~\ref{fig:theory:cb}a, which shows an electrochemical potential scheme with two electron reservoirs filled up to their Fermi levels, $E_F (1)$ and $E_F (2)$. The schematic also shows SET events where one electron tunnels from one of the electrode into the dot depending whether the bias polarity is positive or negative. These kind of way to visualise the current (or the conductance) as a function of gate and bias voltages is called \textit{charge stability diagram}. The Coulomb blockade (grey regions) are characterised by very low current levels, and are often reffered to as Coulomb diamonds. In these regions transport is blocked becuase the energy cost to add an electron onto the \gls{QD} exceeds the available energy.
+By either applying a bias $eV_\textrm{SD} = E_{F,1} - E_{F,2}$ between the two electrodes or by tuning $\mu_N$ thorugh a gate electrode, it is possible to switch on and off this regime (Fig.~\ref{fig:theory:cb}a). The resulting device conductance may be visualised by plotting it as a function of the gate and bias voltages (\textit{charge stability diagram}). The Coulomb blockade (grey regions) are characterised by very low current levels, and are reffered to as Coulomb diamonds. In these regions transport is blocked because the energy cost to add an electron onto the molecule exceeds the available energy.
 
-Lines running parallel to diamond edges originate from orbital, spin, or vibrational excited states. These contribute to the current flow through the dot whenever their corresponding energy levels are included in the bias window. The investigation of such states often provide importnat information about the dot energy spectrum, and are particularly useful when attempting to identify specific molecules, as often these have a unique and distinctive vibrational fingerprint.
+Parallel lines to diamond edges result from orbital, spin, or vibrational excited states. When the corresponding energy levels are included in the bias window, they contribute to the current flowing through the dot. The analysis of such states provides important information about the energy spectrum, and is especially relevant when attempting to identify individual compounds, as these often have a unique and characteristic vibrational fingerprint.
 
-% Furthermore, the height of the Coulomb diamond in the stability diagram is equal to the addition energy of the \gls{QD} or molecule .
-% While it is possible to readily read out the addition energy and the energy of excited states, it is very challenging or almost impossible to infer the charge state of the \gls{QD}, that is the number of electrons on the dot, from the stability diagram. Since the \gls{QD}
-% is part of the device and therefore a larger system, the neutral charge state can be deceiving when only considering the dot itself. Assuming the \gls{QD} is at no applied bias and no gate voltage and therefore seemingly in the neutral charge state, it might still be partially charged due to interactions with the junction or background charges in the substrate (cf. Eq.~\ref{ch:theory:eq:total_dot_energy}).
-
-\co{This part below address one common thing which is the definition of lever arm and shit like that.
-    Might worthwhile to consider moving all the technical bullcraps here instead of being left to the single chapter.}
-% One can correlate the stability diagram or a gate sweep measuring the conductance or current through the quantum dot to the different level alignments of the contacts and the dot orbitals . When the electrochemical potential of the source and drain is aligned with an energy level of the dot, transport through it is allowed and results in a current peak in the gate trace. The corresponding transport mechanism is called resonant tunnelling. While the levels are aligned the number of electrons on the dot fluctuates between $N$ or $N+1$ as electrons hop on and off the dot. In between the peaks the electrochemical potentials are not aligned, so there is no resonant tunnelling due to Coulomb blockade, and the number of electrons on the dot is fixed. Additionally, various capacitances between the \gls{QD} and the contacts as well as
-% the gate lever arm (or gate coupling parameter) can be extracted from the slopes of the diamonds as the negative slope and positive slope are equal to $-\abs{e}C_\mathrm{G}/(C - C_\mathrm{S})$ and $\abs{e}C_\mathrm{G}/C_\mathrm{S}$, respectively. Since the gate lever arm is given by $\alpha = C_\mathrm{G}/C$ one can thereby quantify the strength of the gate coupling.
 
 \subsection{Strong Limit}\label{ch:theory:sec:strong_limit}
-When the lifetime broadening of a molecuar/dot state is greater than all the other energy scales at play, i.e. $\Gamma\gg\E_C, E_\textrm{add}(N), k_BT$, a strong hybridisation between lead and dot state occurs, resulting in a suppression of Coulomb blockade by the quantum fluctuations of the electric charge. In this context the dominant transport mechanism is elastic coherent tunnelling, and the electrical conductance may be approximated as $G\simeq\frac{2e^2}{h}\mathcal{T}(E)$, where we have indicated with $\mathcal{T}(E)$ the transmission probability for all the available conduction channels thorugh the quantum dot, evaluated at the Fermi energy.
+When the lifetime broadening of a molecuar/dot state is greater than all the other energy scales at play, i.e. $\Gamma\gg\E_C, E_\textrm{add}(N), k_BT$, a strong hybridisation between lead and dot state occurs, resulting in a suppression of Coulomb blockade by the quantum fluctuations of the electric charge. In this context the dominant transport mechanism is elastic coherent tunneling, and the electrical conductance may be approximated as $G\simeq\frac{2e^2}{h}\mathcal{T}(E)$, where we have indicated with $\mathcal{T}(E)$ the transmission probability for all the available conduction channels thorugh the quantum dot, evaluated at the Fermi energy.
 
 \subsection{Intermediate Limit}\label{ch:theory:sec:intermediate_limit}
-Lastly, the intermediate coupling regime has attributes of both limits, it still exhibits
-a noticeable Coulomb blockade, but also shows transport within the zero current region.
-The two most noticeable new transport channels available in this regime are elastic and inelastic cotunnelling: these higher-order transport
-mechanisms involve the simultaneous tunnelling of two electrons. Initially, the \gls{QD} is in a state with an unoccupied excited state still below the electrochemical potential of the leads, in contrast to resonant tunnelling where the excited state is between the source and drain electrochemical potential. When the electron tunnels out of the \gls{QD} onto the drain, the \gls{QD} is left in a virtual state and there are two possibilities for the orbit to be refilled. First, the new electron simultaneously tunnelling in from the source lead occupies the ground state again, therefore leaving the \gls{QD} in exactly the same configuration as before. This is called elastic cotunnelling. If the new electron, however, tunnels into the excited state, the \gls{QD} has changed its energy and the process is called inelastic cotunnelling. The electron can subsequently relax into the ground state, rendering the \gls{QD} again in the initial configuration. Importantly, for inelastic cotunnelling to take place, a bias larger than the excitation energy of the dot has to be applied and since the \gls{QD} excitation is created at the expense of the bias applied, electron energy is conserved. Overall, both elastic and inelastic cotunnelling lead to conduction in the blocked Coulomb diamond region.
+Finally, the intermediate coupling regime combines characteristics of both weak and strong regime: it retains a noticeable Coulomb blockade, while also exhibiting transport within the zero conductance region. The two most common transport mechanisms of the intermediate coupling regime are elastic and inelastic cotunneling. When compared to sequential single-electron tunneling, these are higher-order transport mechanisms that involve the tunneling of two electrons at the same time. In the first step, the molecular potential of the molecule lies lower in energy than the electrochemical potentials of both leads. When the electron tunnels from the molecule to the drain, and a molecular virtual state is within the bias window, two possible scenarios are possible. In the first scenario, a new electron tunnels from the source electrode to the molecular ground state while simultaneously the electron in the molecular ground state tunnels to the drain electrode. This process, does not involve any energy exchange and is therefore called \textit{elastic cotunneling} (Sec.~\ref{ch:theory:sec:energy_exchange}); experimental signatures are horizontal lines in the zero-conductance region touching a slanted diamond line on the Coulomb edge~\cite{gaudenzi2017transport}. In the second scenario, an electron tunnels into molecular virtual state positioned at an energy $\delta$ away from the Fermy energy in the electrodes, and, as we saw in Sec.\ref{ch:theory:sec:energy_exchange}, results in an exchange of the total energy (\textit{inelastic cotunneling}).
 
-
-No clear dominance from one of the energy scale is present in this transport regime. As we have outlined in Sec.~\ref{ch:theory:eq:sequential_tunnelling}, charge transport is largely suppressed outside the single-electron tunnelling regions. There are instances, however, where an electron from one lead might still be able to reach the other lead through a process called \gls{COT}.
-
-Outside of the SET regime, i.e., where the requirements in Equation (2.1) are not met, SET events are forbidden and charge transport is largely suppressed (see blue regions in Figure 2.1b). Electrons from one electrode can still reach the other electrode via the nanoobject through a process known as cotunneling (COT). In the simplest form of COT, two electrons are involved in a single COT event. We consider the case where $\mu_{\mathrm{N}}<E_{\mathrm{F} 1}, E_{\mathrm{F} 2}$, such that an electron from the nano-object cannot tunnel to the electrodes by an SET event. We refer to the difference between $\mu_{\mathrm{N}}$ and $E_{\mathrm{F} 1}$ (or $E_{\mathrm{F} 2}$ ) as $\varepsilon$. In the case of cotunneling, an electron can tunnel into the electrodes, as long as another electron tunnels back into the nano-object within a very short time. Energy conservation is briefly violated in this process, which is quantum-mechanically allowed within a timescale $\sim h / \varepsilon$. A COT event is schematically depicted in Figure 2.1c in which (1.) an electron tunnels from the nano-object to electrode 2 and (2.) an electron from electrode 1 tunnels to the nano-object. In the depicted case, the energy of the initial and the final state is the same and this process is therefore called elastic COT.
-
-If the energy of the initial state is different than the energy of the final state, one speaks of inelastic COT. Examples of inelastic COT include transitions to excited spin states and excited vibrational states. These inelastic processes only contribute to transport when the bias voltage exceeds the energy difference between the initial and final state. Accordingly, in a transport measurement a step in the $\mathrm{d} I / \mathrm{d} V$ can be expected at the bias voltage corresponding to this excitation energy. The position at which the $\mathrm{d} I / \mathrm{d} V$ step occurs is indicated by the horizontal dashed lines in the COT region of Figure 2.1b. From the COT $\mathrm{d} I / \mathrm{d} V$ excitation steps one can extract information about the spin- and vibrational excitations in a system. In the case of spin excitations, the only allowed transitions are given by the COT spin-selection rules [1]:
-$$
-    \Delta S=0, \pm 1 \text { and } \Delta m=0, \pm 1,
-$$
-in which $\Delta S$ and $\Delta m$ are the differences in the total spin and the magnet quantum numbers, respectively, between the initial and the final state. This requirement for COT follows from the fact that only two spin-1/2 particles - the two electrons - are involved in the COT process.
-
-
-\section{Landauer Theory}\label{ch:theory:sec:landauer_theory}
-In order to make predictions about the electronic and thermoelectric properties of QDs, a good model for electronic transport in mesoscopic to molecular-scale devices is necessary. In the limit of predominantly SET and assuming coherent transport, extending the Landauer formalism (originally a model for electrical conduction) towards thermoelectric effects has proven successful and is widely used. The Landauer formalism is a concept formulated in 1947 by Rolf Landauer that models conduction as transmission. The basic assumption is that two electron reservoirs are connected by a scatterer (QD island for the transport measurements presented here) through which electron transport is possible. The transport is then determined by the probability of electrons moving from one reservoir to the other
-through the scatterer. This probability is always between 0 and 1, which means there
-is an upper limit on conductance.
-
-Employing the Landauer approach, the current through such a structure can be
-written as:
-\begin{equation}
-    I = \frac{2e}{h} \int\limits_{-\infty}^{+\infty}\mathcal{T}(\epsilon)[f_\textrm{L}(E) - f_\textrm{R}(E)]\text{d}\epsilon,
-\end{equation}
-where $\mathcal{T}$ is the transmission probability of an electron with single-particle energy $\epsilon$ to move across the source and drain leads. The Fermi-Dirac statistics
-$f_\textrm{FD}(\epsilon, T) = \frac{1}{1+e^{\epsilon_i - \mu/k_BT}} $ details the average number of fermions (electrons in our case) in a single-particle state $i$ with energy $\epsilon_i$ in thermodynamic equilibrium at temperature $T$. Therefore, it is used to quantify how many electrons from the source leads have a certain energy to be able to cross the molecular junction: this event, as everything in quantum mechanics, is detailed by the amplitude of the transmission probability $\mathcal{T}(\epsilon)$.
-
-One can calculate the number of electrons in a crystal by multiplying the density of
-states $N(\epsilon)$ with the FD distribution and summing up this product for all energies:
-\begin{equation}
-    n = \int\limits_0^{\infty}f_\textrm{FD}(\epsilon)N(\epsilon)\text{d}\epsilon,
-\end{equation}
-
-The density of states $N(\epsilon)$ denotes the number of electron states per unit of energy and volume and differs for different materials.
-In such a system the chemical potential is defined as the amount of energy needed
-to add an additional electron to the system and naturally this quantity has an
-inherent temperature dependence as the energy of the system changes with $T$. An
-approximation for the chemical potential as a function of temperature and energy
-has been developed using the Sommerfeld expansion (cf. Appendix~\ref{appendix:sommerfeld}): since we are interested in low-temperature properties, we will consider only terms up to the second order of Eq.~\ref{app-1:eq:coefficients_sommerfeld}:
-\begin{equation}
-    \mu \simeq \epsilon_{F}-\left.\frac{\pi^{2}}{6}\left(k_{B} T\right)^{2} \frac{1}{N\left(\epsilon_{F}\right)} \frac{\partial N(\epsilon)}{\partial \epsilon}\right|_{\epsilon=\epsilon_{F}}
-\end{equation}
-As is evident from this equation, the chemical potential decreases as the temperature
-rises, resulting in a potential gradient whenever a temperature gradient is applied.
-Any difference in $T$ will therefore lead to a flow of electrons as the cost of adding
-another electron to the hot side would be lower than adding it to the cold side. This
-results in the build-up of a thermoelectric voltage in an open circuit.
-
-By multiplying this probability with the elementary charge $e$ gives the current for one energy level with a factor of two added due to spin degeneracy. After adding all of these possible transport channels together, which is done by taking the integral over all energies, and accounting for
-dimension normalization via the Planck constant $h$ it is possible to calculate the total current $I$ across the junction.
-
-The electrical conductance is then retrieved by taking the derivative of the current:
-
-\begin{align}
-    G & = -\frac{2e}{h} \int\limits_{-\infty}^{+\infty}\mathcal{T}(\epsilon)\pdv{f(T, \epsilon)}{\epsilon}\text{d}\epsilon,\nonumber \\
-      & = - G_0 \int\limits_{-\infty}^{+\infty}\mathcal{T}(\epsilon)\pdv{f(T, \epsilon)}{\epsilon}\text{d}\epsilon,
-\end{align}
-
-Several computational scheme may be used to compute the set of transmission eigenvalues for a given molecular hamiltonian, ranging from simple tight-binding to non-equilibrium Green's functions. The interested reader is referred to the specific literature~\cite{cuevas2010molecular}.
-
+In the case of cotunneling, an electron tunnels into one of the leads as long as another electron tunnels back into the molecule within a short time. This process briefly violates energy conversation, which is quantum-mechanically allowed within a timescale $\tau_\textrm{COT}\sim\hbar/\delta$~\cite{averin1990virtual}. Cotunneling currents are often tiny and difficult to detect, but the effect has been used in quantum dot spectroscopy to explore cotunneling-mediated transport in single quantum dots~\cite{schleser2005cotunneling} or spin effects in double quantum dots~\cite{liu2005pauli}.
 
 \section{Accounting the Vibrational Degree of Freedoms: the Rate-Equation Model}\label{ch:theory:sec:vibrations}
 
-The rate equation model starts from a kinetic description of the electrode--molecule junction and assumes the overall current flowing through the molecule uniquely determine by how fast an electrons tunnels in and out from a weakly coupled molecular level \cite{seldenthuis2008vibrational, esposito2010self}. A promising extension of this framework attempts to quantify the quantum mechanical effects of the vibrational \gls{DOF} on the electron transfer rates. Here we will adopt the description reported in references \cite{thomas2019understanding} and \cite{sowa2018beyond, sowa2020beyond} where the electronic degrees of freedom interact with an unstructured environment modelled by a superohmic bath having an exponential cut-off:
+The rate equation model starts from a kinetic description of the electrode--molecule junction and assumes the overall current flowing through the molecule uniquely determine by how fast an electrons tunnels in and out from a weakly coupled molecular level~\cite{seldenthuis2008vibrational, esposito2010self}. A promising extension of this framework attempts to quantify the quantum mechanical effects of the vibrational \gls{DOF} on the electron transfer rates. Here we will adopt the description reported in references~\cite{thomas2019understanding} and~\cite{sowa2018beyond, sowa2020beyond} where the electronic degrees of freedom interact with an unstructured environment modelled by a superohmic bath having an exponential cut-off:
 
 \begin{equation}
     \mathcal{J}(\omega)=\frac{\lambda}{2}\frac{\omega^3}{\omega_\textrm{c}}e^{-\omega/\omega_\textrm{c}},
@@ -213,7 +135,10 @@ The current through the junction can be written as
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_theory/figures/single_level_model.pdf}
-        \caption[Schematic of a Single-Level Tunnelling-Transport Mechanism]{Schematic for a single-level transport model. The single-particle states having energy $\epsilon_0$ and lifetime $\Gamma$ is the closest to the Fermi level of source $\mu_\textrm{S}$ and drain $\mu_\textrm{D}$, and solely contributes to the total current flowing across the junction. $\Gamma_\textrm{L}$ and $\Gamma_\textrm{R}$ are the tunnelling coupling with the left and right electrode, respectively.}
+        \caption[Schematic of a Single-Level tunneling-Transport Mechanism]
+        {
+            Schematic for a single-level transport model. The single-particle states having energy $\epsilon_0$ and lifetime $\Gamma$ is the closest to the Fermi level of source $\mu_\textrm{S}$ and drain $\mu_\textrm{D}$, and solely contributes to the total current flowing across the junction. $\Gamma_\textrm{L}$ and $\Gamma_\textrm{R}$ are the tunneling coupling with the left and right electrode, respectively.
+        }
         \label{fig:theory:single_level_model}
     \end{center}
 \end{figure}
@@ -251,12 +176,12 @@ We use this model in Chapter~\ref{ch:solubility} to reproduce the low temperatur
 
 
 \section{Basics of One-dimensional Physics}\label{ch:theory:sec:one_dim_physics_intro}
-In this section we will very briefly review the Fermi liquid theory and its failure in describing strongly-correlated 1D systems. As a result of the lateral confinement of the carriers, graphene nanoribbons are indeed a quasi-1D system. The term \textit{quasi} refers to the electron's confinement in two directions, leaving only one \gls{DOF}. Not until the introduction of bottom-up techniques, which are capable of manufacturing atomically-precise ribbon widths below \SI{5}{\nano\metre}, did this become reality.
+In this section we will very briefly review the Fermi liquid theory and its failure in describing strongly-correlated 1D systems. As a result of the lateral confinement of the carriers, graphene nanoribbons are indeed a quasi-1D system. The term \textit{quasi} refers to the electron confinement in two directions, leaving only one \gls{DOF}. Not until the introduction of bottom-up techniques, which are capable of manufacturing atomically-precise ribbon widths below \SI{5}{\nano\metre}, did this become reality.
 
 The topics introduced here will explain the peculiarities in the density of states for a fermionic system and later be used to derive the tunneling density of states in the presence of long-range Coulomb interactions for a one-dimensional chain. These results are central to explain a few experimental results exposed in Chapter \ref{ch:gnrset}. A more exhaustive treatement of the following concepts might be reviewed in \cite{giamarchi2003quantum, cazalilla2011one, giamarchi2016one, bertel2017physics}.
 
 
-\subsection{A Succint Primer of Fermi-Liquid Theory and Its Inadequacies}
+\subsection{A Succinct Primer of Fermi-Liquid Theory and Its Inadequacies}
 The Fermi liquid theory was advanced by Lev Landau in 1956 as a phenomenological theory to decribe the low-temperature limit behaviour of liquid $^3$He heat capacity, which is surprisingly similar the ideal gas one. Since then, the theory has been used and extend also to capture many-body effects in fermionic systems, such as conducting electrons.
 
 \begin{figure}[hbtp]
@@ -322,42 +247,43 @@ Firstly, for a system arranged in a linear chain fashion, only collective excita
 
 All these conditions break down for quantum systems in 1D because the one dimensionality introduces first strong quantum fluctuations that destroys the mean phase of your systems (for example in mean field theories one has $\psi = \abs{\psi} e^{i\phi}$ and you replace the phase $\phi$ with an averaged one).
 
-\subsection{Introduction to the Tomonaga-Luttinger Model}\label{ch2:derivation_tunneling_DOS}
+\subsection{Introduction to the Tomonaga--Luttinger Model}\label{ch2:derivation_tunneling_DOS}
 
-Several peculiarities encompass one-dimensional systems. As already mentioned, 1D excitations for an interacting fermionic systems are hydrodynamic-like modes--similar to sound waves--which are split into charge- and spin-density waves \cite{giamarchi2016one}. The absence of an efficient charge screening leads to long-range interactions, which cause strong correlations and the break down of an independent particle description. These presence of such strong correlations are the main reason why in one-dimensional systems one is required to compute correlation functions for calculating quantity of interest. From here, the wide employment of Green's functions (propagators).
+Several peculiarities encompass one-dimensional systems. As already mentioned, 1D excitations for an interacting fermionic systems are hydrodynamic-like modes which are similar to sound waves, and that are split into charge- and spin-density waves \cite{giamarchi2016one}. The absence of an efficient charge screening leads to long-range interactions, which cause strong correlations and the break down of an independent-particle description. These presence of such strong correlations are the main reason why in one-dimensional systems it is required to compute correlation functions for calculating any quantity of interest. From here, the wide employment of Green's functions (propagators).
 
-One consequence of these characteristics is that--very conveniently-- in 1D systems it is often sufficient to conduct an asymptotic analysis for cahracterising your system. In particular, one has to provide the wave velocity $u$ and the interaction parameter $K$ (also called $g$), which is a dimensionless number which controls the decay of all the correlation functions as well as the thermodynamic quantities \cite{cazalilla2011one}.
+One consequence of 1D-system peculiarities is that, conveniently, it is often sufficient to conduct an asymptotic analysis for capturing any physical insights on your system. In particular, one has to provide the wave velocity $u$ and the interaction parameter $K$ (also called $g$), which is a dimensionless number that controls the decay of all the correlation functions, as well as the thermodynamic quantities~\cite{cazalilla2011one}.
 
 The first model proposed in 1950 by Tomonaga aimed to describe the multi-fermionic ground state of an interacting Fermi gas and its excitations by treating them as solutions to field equations describing sound waves, which are bosonic \cite{tomonaga1950remarks}. The model was later extended by Luttinger in 1963 in an attempt to include arbitrary interaction strengths and range (short and long) \cite{luttinger1963exactly}. The correct solution was firstly advanced by Mattis and Lieb in 1965 \cite{mattis1994exact} and finalised by a genial intuition from Haldane in 1981 \cite{haldane1981luttinger}.
 
 A central tool required to arrive to Haldane's solution is bosonisation, a mathematical technique which maps the excitation of fermions to bosonic modes of spin-density and charge-density waves and which prerequisite is the possibility of linearise the  single-particle (fermionic) dispersion close to the Fermi level \cite{von1998bosonization}.
 
 This linear approximation is pushed to the extreme in the TLL model, meaning that fermions occupy the linearised energy spectrum all the way down to $-\infty$ on the energy scale (also called Dirac sea, Fig.~\ref{fig:theory:TLL}). In order to apply this assumption, the density of states has to be constant. Broadly speaking, TLL hamiltonian might be written as the sum between a kinetic and an interaction contribution:
-
-$$
-    \mathcal{H}_\textrm{TLL} = \mathcal{H}_0 + \mathcal{H}_\textrm{int}
-$$
-
+%
+\begin{equation}
+    \mathcal{H}_\textrm{TLL} = \mathcal{H}_0 + \mathcal{H}_\textrm{int}.
+\end{equation}
+%
 Using the second quantisation formalism, the kinetic part may be written as \cite{giamarchi2003quantum}:
-$$
+%
+\begin{equation}
     \mathcal{H}_0 = \sum_{k; r = R,L} \upsilon_F(\epsilon_r k - k_F)c^\dagger_{k, r} c_{k, r}
-$$
-
+\end{equation}
+%
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_theory/figures/TLL_model.pdf}
-        \caption[Schematic of The Tomonaga--Luttinger Liquid Model]{The Tomonaga-Luttinger-liquid (TLL) model. \textbf{(a)} Free electron parabolic dispersion (black solid curve) and the linearisation carried out according to the TLL model for excitations close the Fermi level (pink and blue dashed lines). \textbf{(b)} The linear dispersion used in the TLL model. Pink and blue solid lines correspond, to left-(L) and right (R)-moving electrons, respectively. Shaded area shows the Dirac sea below the Fermi energy. Figure adapted from \cite{jin2020measurement}.}
+        \caption[Schematic of The Tomonaga--Luttinger Liquid Model]{The Tomonaga--Luttinger-liquid (TLL) model. \textbf{(a)} Free electron parabolic dispersion (black solid curve) and the linearisation carried out according to the TLL model for excitations close the Fermi level (pink and blue dashed lines). \textbf{(b)} The linear dispersion used in the TLL model. Pink and blue solid lines correspond, to left-(L) and right (R)-moving electrons, respectively. Shaded area shows the Dirac sea below the Fermi energy. Figure adapted from \cite{jin2020measurement}.}
         \label{fig:theory:TLL}
     \end{center}
 \end{figure}
 
 where we have dropped the arrow notation for the wave vector as we are now dealing only with one dimension. Nothing fancy here: $c^\dagger_{k,r} (c_{k,r})$ is the creation (annihilation) operator acting in corresponding Fock space. Because the Fermi surface in 1D consists of just two points at $k=\pm k_F$, we can distinguish states in the right branch ($\epsilon_R=+1$) from those in the left ($\epsilon_L=-1$) branch. The corresponding dispersion relations are:
-
-\begin{align*}
+%
+\begin{align}
     \epsilon_{k, R} & = \epsilon_0 + \hbar \upsilon_F k   \\
     \epsilon_{k, L} & = \epsilon_0 - \hbar \upsilon_F k   \\
     \epsilon_{0}    & = \epsilon_F + \hbar \upsilon_F k_F
-\end{align*}
+\end{align}
 %
 Since states in the $R$ branch have positive velocities they are sometimes called \textit{right movers}; conversely, states in the left branch are referred as \textit{left movers}.
 
@@ -385,7 +311,7 @@ As illustrated in Fig.~\ref{fig:theory:excitation_spectrum}, since $k$ and $k-q$
     \end{center}
 \end{figure}
 
-The problem with the term in Eq.~\ref{eq:theory:lutt_int} is being the product between two density operators, when these are expressed in the fermion operator basis, these will expand to be a quartic function of the fermion operators. Problems then arises as it is not trivial to diagonalise a quartic hamiltonian. The genial intuition we were reffering to played by Haldane \cite{haldane1981luttinger} was to map the problem through a change of the basis into the bosonic operator world, where the interaction is reduced to a quadratic form, hence a closed-form solution is attainable. This process will be briefly outlined in the next section when I will derive the tunnelling density of states in case for a fermion tunneling thorugh a Luttinger liquid.
+The problem with the term in Eq.~\ref{eq:theory:lutt_int} is being the product between two density operators, when these are expressed in the fermion operator basis, these will expand to be a quartic function of the fermion operators. Problems then arises as it is not trivial to diagonalise a quartic hamiltonian. The genial intuition we were reffering to played by Haldane \cite{haldane1981luttinger} was to map the problem through a change of the basis into the bosonic operator world, where the interaction is reduced to a quadratic form, hence a closed-form solution is attainable. This process will be briefly outlined in the next section when I will derive the tunneling density of states in case for a fermion tunneling thorugh a Luttinger liquid.
 
 
 

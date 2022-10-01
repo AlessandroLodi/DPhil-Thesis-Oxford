@@ -1,14 +1,17 @@
 \chapter{\label{ch:instrumentation_development}Instrumentation Development}
 
-The instrumentation exposed in the preceeding chapter was based on work already done by past members of my group. In this chapter, I detail further improvements and setup I have, partially or completely, achieved during my thesis. In this regard, I will firstly outline the measurement protocol I have implemented in the cryogenic setup for reliable measurements even outside the working temperature range of the cryostat heaters. Secondly, I will outline the setup and tests of micro Hall sensors used for magnetometry measurements.
+The instrumentation described in the previous chapter was based on the work of former members of my team. In this chapter, I describe the further enhancements and setup I have partially or entirely accomplished during the course of my thesis. In this regard, I will first describe the measuring technique I implemented in the cryogenic setup to ensure accurate results even beyond the cryostat heaters' operating temperature range. Second, I will describe the installation and testing of micro Hall sensors utilised in magnetometry measurements.
 
 \section{Temperature-dependent Protocol}\co{to revise}
 
-Dilution refrigerators are suited for cryogenic operations although it is possible to operate at higher temperature by working with still and mixing chamber heaters. In order to measure reliably up to room temperatuer, however, one must ensures that the temperature drift is ideally slower than the time taken to acquire experimental measurements. Since there is no well-defined experimental procedure for doing so, a workaround which leverages the Triton system was found in this thesis.
+Dilution refrigerators are suited for cryogenic operations although it is possible to operate at higher temperature by working with still and mixing chamber heaters. In order to measure reliably up to room temperatuer, however, one must ensures that the temperature drift is ideally slower than the time taken to acquire experimental measurements. Since there is no well-defined experimental procedure for doing so, a workaround which leverages the Triton system was used.
 
-% Triton heaters are capable to control the temperature precisely from base temperature ($\sim$ 25 mK) up to 30 K. In order to stabilise the temperature above this range, one has to generate a thermal link between the sample and the environment. First the heaters (mixing chamber and still, see Ch.~\ref{ch:theory}) are switched off: this enables main heat sources to be excluded from exchanging thermal energy with the sample inside the mixing chamber. Being the mixing chamber very well thermally isolated, the temperature will start raising very slowly: to give a reference number, $\sim$24h after the heaters were switched off the temperature rose by only 2 K. The pre-cooling loop is then filled with the He3/He4 mixture, creating a thermal link between the various stages within the dilution refrigerator and the mixing chamber. This results in a faster heating rate, but slow enough to allow to take quick measurements such as $I-V_\textrm{SD}$ and $I-V_\textrm{G}$ traces.
+Triton heaters are able to precisely control temperatures from the base temperature up to \SI{30}{\kelvin}. To stabilise the temperature above this range, one must establish a thermal connection between the sample and the surrounding environment. The mixing chamber and still heaters are turned off initially. This process prevents the primary heat sources from exchanging thermal energy with the sample inside the mixing chamber.
 
-% While these kind of measurements measure the current flowing through the device (after the voltage to current conversion that occurs inside the Delft box, see Ch.~\ref{ch:theory}), it is generally reccommended to acquire also the conductance. In absence of a lock-in apparatus, a possible workaround is to measure the current at various bias voltages and different gate voltage and differentiate numerically the current to obtain the conductance. In order to stabilise the temperature and remove the thermal link between the mixing chamber and the various refrigerator stages, the pre-cooling loop in then emptied, leaving the sample thermally isolated. The whole procedure was then automated in a python python script measurements, which algorithm is detailed in Alg.~\ref{alg:cap}.
+Due to the mixing chamber's excellent thermal isolation, the temperature will begin to rise extremely slowly: 24 hours after the heaters were turned off, the temperature rose from \SI{30}{\kelvin} to \SI{32}{\kelvin} by only \SI{2}{\kelvin}. The pre-cooling loop is subsequently filled with the \ce{He3}/\ce{He4} mixture, establishing a thermal connection between the dilution refrigerator's various phases and the mixing chamber. This causes a quicker heating rate, but one that is still slow enough to permit measurements such as bias and gate traces.
+
+The Alazar card, Triton, and IVVI (Delft box modules) drivers are initialised and assigned global variables that maintain their state during the execution of the application. Afterwards, multiple variables are initialised. The precooled variables are a Triton driver-implemented process that enables direct instrument command setting and retrieval. While below \SI{1}{\kelvin}, the \ce{RuO2} thermometer is employed, but instead to accurately read temperatures over \SI{1}{\kelvin}, the Cernox thermometer must be used; hence, the temperature channel variable is set to channel 5 within the while loop if this condition is met. The application then acquires measurements of the gate trace and stability diagram. The algorithm designed and implemented in Python language is detailed in Alg.~\ref{alg:cap}
+
 \clearpage
 \begin{algorithm}[H]
     \caption{Triton High Temperature Measurement}\label{alg:cap}
@@ -41,35 +44,17 @@ Dilution refrigerators are suited for cryogenic operations although it is possib
     \end{algorithmic}
 \end{algorithm}
 
-The Alazar card, Triton, and IVVI (Delft box modules) drivers are initialised and assigned global variables that maintain their state during the execution of the application. Afterwards, multiple variables are initialised. The precooled variables are a Triton driver-implemented process that enables direct instrument command setting and retrieval. While below \SI{1}{\kelvin}, the \ce{RuO2} thermometer is employed, but instead to accurately read temperatures over \SI{1}{\kelvin}, the Cernox thermometer must be used; hence, the temperature channel variable is set to channel 5 within the while loop if this condition is met. The application then acquires measurements of the gate trace and stability diagram.
-
-% \begin{figure}[hbtp]
-%     \begin{center}
-%         \includegraphics[width=\textwidth]{chapter_fabrication/figures/sd_progress.pdf}
-%         \caption{Temperature fluctuations experienced by the cyostat over a 2-days-long stability diagram scan. From the graphs it is evident that these become more important when the temperature surpasses 30 K, which is the threshold beyond which heaters lose control over the cryostat.}
-%         \label{fig:sd_progress}
-%     \end{center}
-% \end{figure}
-
 
 \section{AC Measurements}
 
-In the last part of my thesis I managed to find a workaround and integrate the lock-in amplifier to the existing setup. Previous attempt failed due to an impedance mismatch when the output from the delft-box was fed into the alazar card. While this might had beeen resolved in re-calibrating the alazar card, the signal was impossible to detect.
+Although the measured cryogenic setup noisefloor level is a tenth of pA, the intrisic $1/f$ noise represents an instrinsic and important hurdle in any \gls{DC} experiment. As we saw in Sec.~\ref{ch2:derivation_tunneling_DOS}, the central quantity in an electron transport experiment is the tunneling density of states, which is ultimately related to the derivative of the current in a $I-V_\textrm{SD}$ experiment. Numerically retrieving the conductance may introduce noise due to the non-negligible current fluctuations between two measurement points; this picture gets even further complicated if one takes into account possible charge jumps occuring during the acquisition.
 
-\begin{figure}[hbtp]
-    \begin{center}
-        \includegraphics[width=\textwidth]{chapter_fabrication/figures/dc_lines_chipboard.pdf}
-        \caption[Breakout Box Connection, Chipholder Schematic, and DC Lines Frequency Test]{\textbf{a,} Breakout box of DC connections. A second breakout box is used for connections from 26 to 48.
-            \textbf{b,} Chipholder schematic with each connection numbers: pin 11 is used to orientate the chip in the correct direction.
-            \textbf{c,} Frequency test. Powder (Cu) and RC filters set frequency operation limit theoretically up to \SI{10}{\kilo\hertz}. In practice we experimentally observed a statistical significance degradation of the signal already at \SI{5}{\kilo\hertz}.}
-        \label{fig:dc_lines_chipboard}
-    \end{center}
-\end{figure}
+A great deal of information about both the theory and tips of integrating a lock-in with and existing low-noise setup such as the one I have used may be found in reference~\cite{lock-in_kavli}. Here I briefly report and comment salient points that I have employed to successfully integrate a standard SR-830 lock-in with Delft Box. Same concepts were later applied for integrating two Zurich Instruments lock-in amplifiers as well.
 
-Firstly, the module it was necessary to wire the DAC module. The standard routing do not couple the iso-amp output (S0) module with the summation module. The design is, however, convenient enough to rewrite by sampling redericting the wire as provided in the scheme. The Lock-in output was thus connected to the delft box S0, whilst fed with the signal coming out from the M0 module. The signal was then locked at the desired frequency and adjusted phase prior to be fed via usb or ethernet into the desktop computer. Experiment routines were easily written and integrated into the existing setup by simply instantiating a lock-in instance and integrating into the superclass station where instance for all the other necessary instruments are initialised and contained.
 
 \subsection{Integration of Lock-in Amplifier with Delft Box}
-A great deal of information about both the theory and tips of integrating a lock-in with and existing low-noise setup such as the one I have used may be found in the excellent reference \cite{lock-in_kavli}. Here I briefly report and comment salient points that I have employed to successfully integrate a standard SR-830 lcok-in with Delft Box. Same concepts were later applied for integrating two Zurich Instruments MFLI amplifier as well.
+
+It was necessary to first wire the DAC module. The iso-amp output (S0) module is not coupled with the summing module by default. The lock-in output was later linked to the S0 Delft box and fed with the signal from the M0 module. The signal was then locked at the proper frequency and phase-adjusted before being supplied to the desktop computer via usb or ethernet cable. Experiment routines were implemented into the existing setup by instantiating a lock-in instance and integrating it into the superclass station, which contains instances for all the other required instruments.
 
 \begin{figure}[hbtp]
     \begin{center}
@@ -81,7 +66,7 @@ A great deal of information about both the theory and tips of integrating a lock
     \end{center}
 \end{figure}
 
-Although the measured cryogenic setup noisefloor level is a tenth of pA, the intrisic $1/f$ noise represents an instrinsic and important hurdle in any \gls{DC} experiment. As we saw in Sec.~\ref{ch2:derivation_tunneling_DOS}, the central quantity in an electron transport experiment is the tunneling density of states, which is ultimately related to the derivative of the current in a $I-V_\textrm{SD}$ experiment. Numerically retrieving the conductance may introduce noise due to the non-negligible current fluctuations between two measurement points; this picture gets even further complicated if one takes into account possible charge jumps occuring during the acquisition.
+
 
 \begin{figure}[hbtp]
     \begin{center}
@@ -91,9 +76,7 @@ Although the measured cryogenic setup noisefloor level is a tenth of pA, the int
     \end{center}
 \end{figure}
 
-
-
-The logic behind a lock-in is as surprinsingly simple as clever. The idea is to fed an oscillating voltage $V_\textrm{osc} (f)$ into the pure \gls{DC} signal in order to produce an oscillating current $I_\textrm{tot} (f) = I_\textrm{DC} + I_\textrm{AC} (f)$ and then later to filter out the noise outside a narrow band $f \pm \tau^{-1}$ for a settable integration time $\tau$ (Fig.~\ref{fig:exp:lockin}). As the reference at the top of this sections points out, lock-in conductance measurements can readily introduce errors on the scale of 10 points percent of the total signal if operated with the incorrect parameters settings, wherease \gls{DC} is not susceptible to these complex-space-caused aberrations. Therefore, it is advisable to take extra caution if accurate conductance values are required from your lock-in measurement. More loose conditions might be consider, on the contrary, if features are desired rather than accurate values.
+With a lock-in detection scheme, an oscillating voltage $V_\textrm{osc} (f)$ is superimposed to a \gls{DC} signal in order to produce an oscillating current $I_\textrm{tot} (f) = I_\textrm{DC} + I_\textrm{AC} (f)$. The $1/f$ noise is suppressed outside a narrow band $f \pm \tau^{-1}$ for a settable integration time $\tau$ (Fig.~\ref{fig:exp:lockin}). lock-in conductance measurements can readily introduce errors on the scale of 10 points percent of the total signal if operated with the incorrect parameters settings, wherease \gls{DC} is not susceptible to these complex-space-caused aberrations. Therefore, it is advisable to take extra caution if accurate conductance values are required from your lock-in measurement. More loose conditions might be consider, on the contrary, if features are desired rather than accurate values.
 
 \begin{figure}[hbtp]
     \begin{center}
@@ -115,7 +98,6 @@ This principle might be thought as the requirements to work with oscillating vol
 \end{equation}
 %
 Fig.~\ref{fig:dc_lines_chipboard}c demonstrates the cut-off frequency set by out setup to be around \SI{1}{\kilo\hertz}, even though the \SI{-3}{\decibel} point lies around one order of magnitude higher. The finite-frequency efficiency and response of the DC lines is, however, not the only factor that one has to take into account when adopting AC techiniques.
-
 
 Due to its narrow bandwidth of approximately \SI{200}{\kilo\hertz}, the most commonly used M1b current amplifier in the IVVI rack is especially susceptible to lock-in finite-frequency problems. Slower amplifiers require less operating current, so the objective of this amplifier's design is to minimise its back action on the sample. Nonetheless, this constrains the operating frequency to approximately \SI{30}{\kilo\hertz}\footnote[2]{The Zurich Instruments lock-in contains a built-in functionality that allows frequency sweep while monitoring the voltage noise calculated in nV/$\sqrt{\textrm{Hz}}$ for a given lock-in measurement bandwidth.}. When this condition is not met, one must consider only the features of the measurement results and not their exact values.
 
@@ -165,7 +147,7 @@ The Hall probe configuration with the simplest geometry is the Hall cross. When 
 \subsection{Fabrication and Experimental Setup}
 \co{Describe also here from a setup point of view which complications have raised during the setup (direct lines instead of dc lines,the need to use nano-D connectors and to design the a new pcb board).}
 
-As previously observed in Sec~\ref{ch:fabrication:triton_setup}, Cu powders and low-pass filters are used to filter DC lines extensively. Therefore, it is not possible to drive sufficient current through the wire spanning the two hall bars. In addition, when the current flowing through any load is low, the power of the delft box module is significantly reduced\footnote[2]{If the impedance of the device under test (DUT) is low, the voltage drop across is also low since the current through the resistor is large. This causes the DAC's output voltage to drop dramatically.}.
+As previously observed in Sec~\ref{ch:fabrication:triton_setup}, Cu powders and low-pass filters are used to filter DC lines extensively. Therefore, it is not possible to drive sufficient current through the wire spanning the two hall bars. In addition, when the current flowing through any load is low, the power of the Delft box module is significantly reduced\footnote[2]{If the impedance of the device under test (DUT) is low, the voltage drop across is also low since the current through the resistor is large. This causes the DAC's output voltage to drop dramatically.}.
 
 Devices used for magnetometry were fabricated by Dr Alex Gee (Fig.~\ref{fig:exp:hallbar}).
 
@@ -195,7 +177,7 @@ The probe was then cleaned, and used to pick up a Mn$_{12}$ crystal with the rig
 
 In order to maximise the dipolar field generated by the sample, the crystal should be perfectly oriented along the central gold pads. The difficulty of aligning the crystal in the desired direction is one of the weaknesses of our approach. Adjusting it by rotating the probe chuck is a viable alternative, but care has to be taken in not damaging the electrical connections. Another source of problem is that often the crystal break upon touching the substrate. Although monemer of Mn$_{12}$ should be relatively robust against the forces at play in this scenario, breaks might result as due to grains of crystals attached to each other.
 
-\subsection{Current Measurement Test of the Hall Effect}
+\subsection{Current and Anisotropy Tests}
 
 The first test I did was to make sure that the Hall effect was present at varying measurement bias.
 From Eq.~\refeq{eq:hall_coeff} the Hall voltage $V_\textrm{H}$ is proportional to the current and the magnetic field and inversly proportional to the carrier density $n$ of the conductor.
@@ -209,14 +191,6 @@ As shown in Fig.~\ref{fig:exp:hallbar_test_current}, I have used only one lockin
     \end{center}
 \end{figure}
 
-% comment: to calculate the Hall coeff I did the following
-% first I looked at the number it was generated from the formula from candini's thesis
-% i then used that value and plug it into a converter to estimate the correspondent Gauss
-% saw the result was around 6e-6 which is a factor off about the 1e-7 ohm/G reported in this thesis.
-% so I plugged in my probe thickness and did the same taking into account that one factor off and 
-%found the final result.
-
-\subsection{Anisotropy Test}
 
 \begin{figure}[hbtp]
     \begin{center}
@@ -234,6 +208,8 @@ As shown in Fig.~\ref{fig:exp:hallbar_test_current}, I have used only one lockin
         \label{fig:exp:hallbar_design}
     \end{center}
 \end{figure}
+
+
 
 \section{Graphene Hall Bars}
 
@@ -324,4 +300,4 @@ The form of the signal is qualitatively close to what would be expected from the
 The perfomance of our \gls{GHB} resulted to be too low in order to detect a single-molecule magnet hysteresis signal. Improvements might be achieved by using encapsulated exfoliated graphene between \gls{hBN} layers.
 
 \section{Project Overview}
-I thanks Dr Alex Gee for his help and expertise substrate fabrication and instrumentation setup.
+I thank Dr Alex Gee for his help and expertise in substrate fabrication.

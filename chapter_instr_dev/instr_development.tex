@@ -53,8 +53,18 @@ A great deal of information about the theory and tips of integrating a lock-in a
 
 \subsection{Integration of Lock-in Amplifier with High-Sensitivity Electronics}
 
-With a lock-in detection scheme, an oscillating voltage $V_\textrm{osc} (f)$ is superimposed to a \gls{DC} signal in order to produce an oscillating current $I_\textrm{tot} (f) = I_\textrm{DC} + I_\textrm{AC} (f)$. The $1/f$ noise is suppressed outside a narrow band $f \pm \tau^{-1}$, where $\tau$ is the integration time (Fig.~\ref{fig:exp:lockin}). Compared with \gls{DC}, \gls{AC} conductance measurements can introduce errors on the scale of 10 points percent of the total signal, because the technique is susceptible to aberrations caused by in the complex domain. Therefore, it is advisable to take extra caution if accurate conductance values are required. More loosen conditions can be considered, on the contrary, if qualitative features are desired, rather than accurate values.
+With a lock-in detection scheme, an oscillating voltage $V_\textrm{osc} (f)$ is superimposed to a \gls{DC} signal in order to produce an oscillating current $I_\textrm{tot} (f) = I_\textrm{DC} + I_\textrm{AC} (f)$. The $1/f$ noise is suppressed outside a narrow band $f \pm \tau^{-1}$, where $\tau$ is the integration time. Compared with \gls{DC}, \gls{AC} conductance measurements can introduce errors on the scale of 10 points percent of the total signal, because the technique is susceptible to aberrations originating in the complex domain. Therefore, it is advisable to take extra caution if accurate conductance values are required. More loosen conditions can be considered, on the contrary, if qualitative features are desired, rather than accurate values.
 
+Fridge lines are filter with RC and Cu powder filter. At finite frequency $\omega =  2\pi f$, each circuit component response has to be modeled in the complex plane. As long as all the $k$ capacitors active across all the stages within the fridge do not draw any current, i.e.  $R_i \ll 1/(\omega C_k)$ where the subscript $i$ denotes the number of resistance, it is safe to exclude any parasitic components when one attempts to recover the resistance value for the device under test.
+
+This general rule might be thought as the requirement to work with oscillating voltages way below that the cut-off frequency imposed by the filters, namely:
+%
+\begin{equation}
+    f \ll f_\textrm{cutoff} = \frac{1}{2\pi R_i C_k}
+\end{equation}
+%
+As we have discussed previosuly (Fig.~\ref{fig:dc_lines_chipboard}c in Ch.~\ref{ch:fabrication}), the cut-off frequency set by our setup is around \SI{1}{\kilo\hertz}, even though the \SI{-3}{\decibel} point lies around one order of magnitude higher. The finite-frequency efficiency and response of the DC lines is, however, not the only factor that one has to take into account when adopting AC techiniques.
+%
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_fabrication/figures/circuit_diagram_meas_fridge.pdf}
@@ -65,16 +75,8 @@ With a lock-in detection scheme, an oscillating voltage $V_\textrm{osc} (f)$ is 
     \end{center}
 \end{figure}
 
-Fridge lines are filter with RC and Cu powder filter. At finite frequency $\omega =  2\pi f$, each circuit component response has to be modeled in the complex plane. As long as all the $k$ capacitors active across all the stages within the fridge do not draw any current, i.e.  $R_i \ll 1/(\omega C_k)$ where the subscript $i$ denotes the number of resistance, it is safe to exclude any parasitic components when one attempts to recover the resistance value for the device under test.
+Because of its narrow bandwidth of approximately \SI{200}{\kilo\hertz}, the low-noise current amplifier used in our setup (Fig.~\ref{fig:exp:circuit_diagram_meas_fridge}) is especially susceptible to lock-in finite-frequency problems as well: the design objective is to minimise the operating current, hence reducing risk of back-action into sample. Nonetheless, this constrains the operating frequency to approximately \SI{30}{\kilo\hertz}\footnote[2]{The Zurich Instruments lock-in contains a built-in functionality that allows frequency sweep while monitoring the voltage noise calculated in \si{\nano\volt\per\Hz\tothe{0.5}} for a given lock-in measurement bandwidth.}. When this condition is not met, one must consider only the features of the measurement results and not their exact values.
 
-This principle might be thought as the requirements to work with oscillating voltages way below that the cut-off frequency imposed by the filters, namely:
-%
-\begin{equation}
-    f \ll f_\textrm{cutoff} = \frac{1}{2\pi R_i C_k}
-\end{equation}
-%
-Fig.~\ref{fig:dc_lines_chipboard}c demonstrates the cut-off frequency set by out setup to be around \SI{1}{\kilo\hertz}, even though the \SI{-3}{\decibel} point lies around one order of magnitude higher. The finite-frequency efficiency and response of the DC lines is, however, not the only factor that one has to take into account when adopting AC techiniques.
-%
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_fabrication/figures/lock-in_measurement_setup.pdf}
@@ -83,7 +85,7 @@ Fig.~\ref{fig:dc_lines_chipboard}c demonstrates the cut-off frequency set by out
     \end{center}
 \end{figure}
 
-Due to its narrow bandwidth of approximately \SI{200}{\kilo\hertz}, the most commonly used M1b current amplifier in the IVVI rack is especially susceptible to lock-in finite-frequency problems. Slower amplifiers require less operating current, so the objective of this amplifier's design is to minimise its back action on the sample. Nonetheless, this constrains the operating frequency to approximately \SI{30}{\kilo\hertz}\footnote[2]{The Zurich Instruments lock-in contains a built-in functionality that allows frequency sweep while monitoring the voltage noise calculated in \si{\nano\volt\per\Hz\tothe{0.5}} for a given lock-in measurement bandwidth.}. When this condition is not met, one must consider only the features of the measurement results and not their exact values.
+In our setup {Fig.~\ref{fig:exp:lockin}}, the isolated-amplifier input module is not coupled with the \gls{DAC} by default. Thus, after having backwired that, the lock-in output is fed into the isolated amplifier of our electronics and and then fed to the sample. The signal was then locked at the proper frequency and phase-adjusted before being supplied to the desktop computer via usb or ethernet cable.
 
 \begin{figure}[hbtp]
     \begin{center}
@@ -95,13 +97,11 @@ Due to its narrow bandwidth of approximately \SI{200}{\kilo\hertz}, the most com
     \end{center}
 \end{figure}
 
-
-The isolated-amplifier input module is not coupled with the \gls{DAC} by default. Thus, after having backwired that, the lock-in output is fed into the isolated amplifier of our electronics and and then fed to the sample. The signal was then locked at the proper frequency and phase-adjusted before being supplied to the desktop computer via usb or ethernet cable. Experiment routines were implemented into the existing setup by instantiating a lock-in instance and integrating it into the superclass station, which contains instances for all the other required instruments. In Fig.~\ref{fig:exp:dc_vs_ac} we compare the charge stability maps of the same device acquired in \gls{DC} (top) and using the lock-in (bottom) using equivalent integration times.
-
+Experiment routines were implemented into the existing setup by instantiating a lock-in instance and integrating it into the superclass station, which contains instances for all the other required instruments. In Fig.~\ref{fig:exp:dc_vs_ac} we compare the charge stability maps of the same device acquired in \gls{DC} (top) and using the lock-in (bottom) using equivalent integration times.
 
 \section{Micro-Hall Devices}
 
-The ability to fabricate and manipulate the properties of magnetic structures at the mesoscale has not only led to the discovery of several new physical phenomena, but also to the development of a large pool of experimental techniques for studying such structures. In this regard, the micro-probe magnetometry based on the Hall effect is of particular interest. It offers high field sensitivity even when the dimensionality shrinks down to the nanoscale, has excellent operating ranges in terms of temperature and magnetic field, and it is non-invasive.
+The ability to fabricate, control, and manipulate the properties of magnetic structures~\cite{coronado2020molecular} has not only led to the discovery of several new physical phenomena~\cite{coronado2010coexistence, bogani2008molecular, cervetti2016classical}, but also to the development of a large pool of experimental techniques for studying such structures~\cite{tang2011characteristics, collomb2019nanoscale}. In this regard, micro-probe magnetometry based on the Hall effect is of particular interest. It offers high-field sensitivity even when the dimensionality shrinks down to the nanoscale, has excellent operating ranges in terms of temperature and magnetic field, and it is non-invasive.
 
 \subsection{Technical Background}
 In order to measure the conductivity $\sigma$ of a semiconducting sample in presence of negligible gradients of carrier densities, one has to take into account both the electrons concentrations $n$ and mobility $\mu_e$ and the same quantities for holes, namely:
@@ -140,15 +140,6 @@ The quantity $R_\textrm{H}$ is known as Hall resistance and can be regarded by a
 Due to the pandemic of Covid-19 it has been impossible to find an adequate 2DEG substrate for this project. Nevertheless, I have tried to setup and detect the Hall signal from a Mn$_12$ microcrystals with a mesoscopic Hall made of Au.
 The Hall probe configuration with the simplest geometry is the Hall cross. When a magnetic object is placed close to the active area of the probe, the Hall signal will be proportional to the sum of the external field $B$ and the magnetic stray field that enters the active area from the sample.
 
-\subsection{Fabrication and Experimental Setup}
-\co{Describe also here from a setup point of view which complications have raised during the setup (direct lines instead of dc lines,the need to use nano-D connectors and to design the a new pcb board).}
-
-As previously observed in Sec~\ref{ch:fabrication:triton_setup}, Cu powders and low-pass filters are used to filter DC lines extensively. Therefore, it is not possible to drive sufficient current through the wire spanning the two hall bars. In addition, when the current flowing through any load is low, the power of our electronics module is significantly reduced\footnote[2]{If the impedance of the device under test (DUT) is low, the voltage drop across is also low since the current through the resistor is large. This causes the DAC's output voltage to drop dramatically.}.
-
-Devices used for magnetometry were fabricated by Dr Alex Gee (Fig.~\ref{fig:exp:hallbar}).
-
-
-
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_fabrication/figures/hb_design.png}
@@ -165,7 +156,7 @@ In order to prove the reliability of our apparatus and test its sensitivity, I h
 
 The coercive field of Mn$_{12}$ at cryogenic temperature is about \SI{6}{\tesla}, therefore I had to operate and temperatures higher for checking its magnetic response. In order to minimise chances the magnet would increase the temperature while was swept, I have slow sweep rates ranging from \SIrange{0.83}{1.67}{\milli\tesla\per\second}.
 
-We used SiO$_2$ as substrate where Hall devices with different spacing between the two crosses were used, ranging from \SI{10}{\micro\metre} to \SI{50}{\micro\metre}. The deposition and the correct orientation of the crystals reavealed to be not a negligible challenge and so we choose to use crystal approximately of \SI{50}{\micro\metre}.
+We used SiO$_2$ as substrate where Hall devices with different spacing between the two crosses were used, ranging from \SI{10}{\micro\metre} to \SI{50}{\micro\metre} (Fig.~\ref{fig:exp:hallbar}). The deposition and the correct orientation of the crystals reavealed to be not a negligible challenge and so we choose to use crystal approximately of \SI{50}{\micro\metre}.
 
 The transfer process was as follos. We first spread the Mn$_{12}$ crystals on top of a filter paper in order to remove big chunck of crystals. In particular, molecular monemers present a needle-shape whereas dimers comes in a bulky-ball shape form. We then deposited a few of these crystals on top of a bare silicon substrate, where we also deposited a thin film of high-vacuum grease. We then lowered one of the probe in the probe station setup as described in Sec.~\ref{fabrication:sec:probe_station} thanks to the micropositioner. Tungesten probes with a nominal diameter of \SI{10}{\micro\metre} worked best for this purpose. We then gently deposited the grease within the two crosses paying attention specifically to not to damage the electrical connections.
 
@@ -187,6 +178,7 @@ As shown in Fig.~\ref{fig:exp:hallbar_test_current}, I have used only one lockin
     \end{center}
 \end{figure}
 
+As previously observed in Sec~\ref{ch:fabrication:triton_setup}, Cu powders and low-pass filters are used to filter DC lines extensively. Therefore, it is not possible to drive sufficient current through the wire spanning the two hall bars. In addition, when the current flowing through any load is low, the power of our electronics module is significantly reduced\footnote[2]{If the impedance of the device under test (DUT) is low, the voltage drop across is also low since the current through the resistor is large. This causes the DAC's output voltage to drop dramatically.}.
 
 \begin{figure}[hbtp]
     \begin{center}

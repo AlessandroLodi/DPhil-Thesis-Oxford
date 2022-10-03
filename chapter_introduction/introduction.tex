@@ -25,7 +25,7 @@ The search for new materials for integrated electronics is not only related to i
         \includegraphics[width=\textwidth]{chapter_introduction/figures/moore.pdf}
         \caption[Moore's Law for Microprocessors]
         {
-            The arc of Moore's law over fifty years of microprocessor development. While the number of transistors have doubled about every two years, the same cannot be said for other key figures. In particular, clock frequency and power dissipated have plateaued out since 2003. The release in 2005 by Intel of the first dual-core processor (Pentium D), and the ability to perform hyper-threading have sparked reserach into the number of logical cores per CPU. This is the ability of a single core to carry out two or more processes simultaneously. Since then, the increase in multi-threading performance compared with stagnating single-thread performance has been one of the main driving factors for multi-core processors in modern laptops. Data collected by K.\ Rupp, figure inspired by a talk given by Nvidia.
+            The arc of Moore's law over fifty years of microprocessor development. While the number of transistors have doubled about every two years, the same cannot be said for other key figures. In particular, clock frequency and power dissipated have plateaued out since 2003. The release in 2005 by Intel of the first dual-core processor (Pentium D), and the ability to perform hyper-threading have sparked reserach into the number of logical cores per CPU. This is the ability of a single core to carry out two or more processes simultaneously. Since then, the increase in multi-threading performance compared with stagnating single-thread performance has been one of the main driving factors for multi-core processors in modern laptops. Data collected by K.\ Rupp. Adapted from a talk given by Nvidia.
         }
         \label{fig:intro:moore_law}
     \end{center}
@@ -63,56 +63,42 @@ while the reciprocal-lattice vectors may be written as:
     \vect{b}{_2} = \frac{2\pi}{3a}(1, -\sqrt{3}).
 \end{equation}
 %
-In order to define the vertices of the Brillouin zone, one has to apply the Bragg condition:
+% In order to define the vertices of the Brillouin zone, one has to apply the Bragg condition:
 %
-\begin{equation}\label{eq:Bragg}
-    2\vect{k}\cdot\vect{G} = 0,
-\end{equation}
+% \begin{equation}\label{eq:Bragg}
+%     2\vect{k}\cdot\vect{G} = 0,
+% \end{equation}
+% %
+% where
+% %
+% \begin{equation}
+%     \vect{G} = n\vect{b}_1 + m\vect{b}_2.
+% \end{equation}
+% %
+% The first amongst these vertices are:
+% %
+% \begin{align*}
+%     n & = \pm 1, & m & =0,     & \vect{G} & =\pm\vect{b}_1,              \\
+%     n & = 0,     & m & =\pm 1, & \vect{G} & =\pm\vect{b}_2,              \\
+%     n & = \pm 1, & m & =\pm 1, & \vect{G} & =\pm(\vect{b}_1+\vect{b}_2),
+% \end{align*}
+% %
+% and all these vectors have the same length $\abs{\vect{G}} = \frac{4\pi}{3a}$. By applying the Bragg condition in the first of the three cases we obtain
+% %
+% \begin{equation}
+%     \sqrt{3}k_{x} + k_{y} = \mp~\frac{4\pi}{3a},
+% \end{equation}
+% %
+whereas the Brillouin point are:
 %
-where
+\begin{align}\label{eq:K_point_components}
+    \vect{K}  & \equiv\mp~\frac{2\pi}{3a}\qty(\frac{1}{\sqrt{3}}, 1),  \\
+    \vect{K'} & \equiv\pm~\frac{2\pi}{3a}\qty(\frac{1}{\sqrt{3}}, -1), \\
+    \vect{M}  & \equiv\pm\qty(0, \pm~\frac{2\pi}{3a}).
+\end{align}
 %
-\begin{equation}
-    \vect{G} = n\vect{b}_1 + m\vect{b}_2.
-\end{equation}
-%
-The first amongst these vertices are:
-%
-\begin{align*}
-    n & = \pm 1, & m & =0,     & \vect{G} & =\pm\vect{b}_1,              \\
-    n & = 0,     & m & =\pm 1, & \vect{G} & =\pm\vect{b}_2,              \\
-    n & = \pm 1, & m & =\pm 1, & \vect{G} & =\pm(\vect{b}_1+\vect{b}_2),
-\end{align*}
-%
-and all these vectors have the same length $\abs{\vect{G}} = \frac{4\pi}{3a}$. By applying the Bragg condition in the first of the three cases we obtain
-%
-\begin{equation}
-    \sqrt{3}k_{x} + k_{y} = \mp~\frac{4\pi}{3a},
-\end{equation}
-%
-which condition is satisfied by the Brillouin zone points
-%
-\begin{equation}\label{eq:K_point_components}
-    \vect{K} \equiv\mp~\frac{2\pi}{3a}\qty(\frac{1}{\sqrt{3}}, 1).
-\end{equation}
-%
-The second case leads to
-%
-\begin{equation}
-    \mp(\sqrt{3}k_{x} - k_{y}) = \frac{4\pi}{3a},
-\end{equation}
-%
-which corresponds to the points
-%
-\begin{equation}
-    \vect{K'} \equiv\pm~\frac{2\pi}{3a}\qty(\frac{1}{\sqrt{3}}, -1)
-\end{equation}
-%
-The third and last case gives the points
-%
-\begin{equation}
-    \vect{M} \equiv\pm\qty(0, \pm~\frac{2\pi}{3a}).
-\end{equation}
-%
+Based on the experimental evidence collected in the last 20 years, the model that best describe the properties of graphene is the Wallace model of the band structure, which dates back to 1947, and qualifies graphene as a semimetal with a linear dispersion of the electronic excitations close to the Fermi energy~\cite{wallace1947band}.
+
 \begin{figure}
     \begin{center}
         \includegraphics[width=0.95\columnwidth]{chapter_introduction/figures/graphene_lattice.pdf}
@@ -127,16 +113,14 @@ The third and last case gives the points
         \label{fig:intro:graphene_lattice}
     \end{center}
 \end{figure}
-%
-Based on the experimental evidence collected in the last 20 years, the model that best describe the properties of graphene is the Wallace model of the band structure, which dates back to 1947, and qualifies graphene as a semimetal with a linear dispersion of the electronic excitations close to the Fermi energy~\cite{wallace1947band}. Within the second-quantization formalism (with $\hbar = 1$), the tight-binding Hamiltonian may be written as
+
+Within the second-quantization formalism (with $\hbar = 1$), the tight-binding Hamiltonian may be written as
 %
 \begin{equation}\label{eq:graphene_hamiltonian}
     \mathcal{H}_\textrm{TB} = -t\sum_{\langle ij\rangle,\sigma}\qty(a^\dagger_{\sigma,i}b_{\sigma,j} + \textrm{h.c.}) - t' \sum_{\langle\langle ij\rangle\rangle,\sigma}\qty(a^\dagger_{\sigma,i}a_{\sigma,j}+b^\dagger_{\sigma,i}b_{\sigma,j}+ \textrm{h.c.}),
 \end{equation}
 %
-The notation $\langle ij\rangle$ means the sum runs over pairs of electrons that are nearest neighbours; similarly, the notation $\langle\langle ij\rangle\rangle$ specifies a summation over the next-nearest neighbours.
-
-The two operators $a^\dagger_{i,\sigma}$ ($a_{i,\sigma}$) and $b^\dagger_{i,\sigma}$ ($b_{i,\sigma}$) create (annihilate) an electron with spin $\sigma=~\uparrow,\downarrow$ for atoms on sublattices A and B, respectively. The value of $t$ that best reproduces the experimental evidence is $t\simeq2.8$ \si{\electronvolt}~\cite{castroneto2009}, and quantifies the nearest-neighbour hopping energy; similarly, $t'$ denotes the next-nearest-neighbour hopping energy, and the experimental estimate is $t'\simeq\SI{0.1}{\electronvolt}$~\cite{deacon2007cyclotron}.
+The notation $\langle ij\rangle$ means the sum runs over pairs of electrons that are nearest neighbours; similarly, the notation $\langle\langle ij\rangle\rangle$ specifies a summation over the next-nearest neighbours. The two operators $a^\dagger_{i,\sigma}$ ($a_{i,\sigma}$) and $b^\dagger_{i,\sigma}$ ($b_{i,\sigma}$) create (annihilate) an electron with spin $\sigma=~\uparrow,\downarrow$ for atoms on sublattices A and B, respectively. The value of $t$ that best reproduces the experimental evidence is $t\simeq2.8$ \si{\electronvolt}~\cite{castroneto2009}, and quantifies the nearest-neighbour hopping energy; similarly, $t'$ denotes the next-nearest-neighbour hopping energy, and the experimental estimate is $t'\simeq\SI{0.1}{\electronvolt}$~\cite{deacon2007cyclotron}.
 
 By diagonalising the Hamiltonian in Eq.~\ref{eq:graphene_hamiltonian}, it is possible to work out the energy dispersion of graphene,
 %
@@ -158,13 +142,13 @@ When examining the trend close to the \vect{K} and \vect{K$'$} points, the pecul
     E_{\pm}(\vect{q}) = \epsilon_p \pm \frac{3at}{2}\abs{\vect{q}},
 \end{equation}
 %
-This remarkable result tells us that the dispersion close to the Fermi level is linear in \vect{q}. For intrinsic graphene at $T= \SI{0}{\kelvin}$, $E_\textrm{F} = \epsilon_p$. The Fermi velocity is defined by the usual relation $v_F = \frac{1}{\hbar}\qty(\dv{E}{\vect{k}})$, and in graphene $v_F\simeq1\times 10^6~\textrm{ms}^{-1}$~\cite{wallace1947band}. An important consequence of this result is that while for a two-dimensional electron gas the \gls{DOS} is constant, the \gls{DOS} in graphene close to the Fermi level is:
+This remarkable result tells us that the dispersion close to the Fermi level is linear in \vect{q}. The Fermi velocity is defined by the usual relation $v_F = \frac{1}{\hbar}\qty(\dv{E}{\vect{k}})$, and in graphene $v_F\simeq1\times 10^6~\textrm{ms}^{-1}$~\cite{wallace1947band}. An important consequence of this result is that while for a two-dimensional electron gas the \gls{DOS} is constant, the \gls{DOS} in graphene close to the Fermi level is:
 %
 \begin{equation}\label{eq:grafene:density_of_states}
     \rho(E)=\frac{2A_\textrm{cell}}{\pi}\frac{\abs{E}}{v_F^2}.
 \end{equation}
 %
-This linear dependency of the electronic states density on the absolute value of the energy has important consequences on the particle velocity $c^* = v_F = 3ta/2\hbar$, which is constant and similar to the speed of light $E = pc = c^*\hbar\abs{\vect{k} - \vect{K}}$~\cite{wolf2014graphene}. This similarity has led to the definition of \textit{massless fermions} for electrons near the Fermi energy of graphene~\cite{novoselov2004electric}. Furthermore, for charge-neutral graphene, the \gls{DOS} displays two Van Hove singularities at $\rho(\omega_\textrm{VH}) = \pm\SI{1}{\electronvolt}$~\cite{bena2005quasiparticle}. This behaviour is rather different to the conventional case of electrons in 2D metals, where they have energy dispersion $\epsilon=\hbar^2 q^2 / 2 m^*$ in terms of the band mass $m^*$, and where one obtains a constant density of states $\rho^\textrm{2D}(\epsilon)=g m^* / 2 \pi \hbar^2$.
+This linear dependency of the electronic states density on the absolute value of the energy has important consequences on the particle velocity $c^* = v_F = 3ta/2\hbar$, which is constant and similar to the speed of light $E = pc = c^*\hbar\abs{\vect{k} - \vect{K}}$~\cite{wolf2014graphene}. This similarity has led to the definition of \textit{massless fermions} for electrons near the Fermi energy of graphene~\cite{novoselov2004electric}. Furthermore, for undoped graphene, the \gls{DOS} displays two Van Hove singularities at $\rho(\omega_\textrm{VH}) = \pm\SI{1}{\electronvolt}$~\cite{bena2005quasiparticle}. This behaviour is rather different to the conventional case of electrons in 2D metals, where they have energy dispersion $\epsilon=\hbar^2 q^2 / 2 m^*$ in terms of the band mass $m^*$, and where one obtains a constant density of states $\rho^\textrm{2D}(\epsilon)=g m^* / 2 \pi \hbar^2$.
 
 Finally, the graphene conductivity may be computed semiclassically using the Einstein--Smoluchowski relation\footnote[2]{$D = k_\textrm{B}T/\eta = \mu k_\textrm{B}T$, where $k_\textrm{B}T$ is the thermal energy of a flow of semiclassical charge carriers that experience an average friction coefficient $\eta$ when diffusing in a medium with coefficient $D$.} and the \gls{DOS}~\cite{bolotin2008temperature}:
 %
@@ -172,7 +156,7 @@ Finally, the graphene conductivity may be computed semiclassically using the Ein
     \sigma_{\textrm{sc}}=e^{2} \rho v \ell_{\mathrm{el}},
 \end{equation}
 %
-where $v$ is the carrier velocity, $\ell_{\mathrm{el}}$ the elastic mean free path (see Ch.~\ref{ch:theory}), and $e$ the elementary charge. From Eq.~\ref{ch1:eq:semiclassical_conductivity} and the charge density $n$, one can calculate the charge mobility, which at zero temperature reads:
+where $v$ is the carrier velocity, $\ell_{\mathrm{el}}$ the elastic mean free path (see Ch.~\ref{ch:theory}), and $e$ the elementary charge. From Eq.~\ref{ch1:eq:semiclassical_conductivity} and by knowing the charge density $n$, one can calculate the charge mobility, which at $T=\SI{0 }{\kelvin}$ reads:
 %
 \begin{equation}
     \mu(E)=\frac{\sigma_\mathrm{sc}}{e n}.
@@ -220,7 +204,7 @@ Initial interest for using graphene as a channel material in \gls{CMOS} logic ma
 %
 These results were explained by: (1) an assumption that graphene has electrons with negligible effective mass close to the Fermi energy, and (2) a lack of direct carrier backscattering because of graphene's lattice symmetry~\cite{wolf2014graphene}. Although some believed scatterings due to charged impurities~\cite{hwang2007carrier} or microscopic ripples~\cite{schedin2007detection} to be predominant at low temperatures, weak electron--phonon scattering even at room temperature is considered to be responsible for the extrordinary mobility $\mu^{\text{in}}\simeq\SI{200000}{\centi\metre\squared\per\volt\per\second}$ reported from graphene sandwiched between two \gls{hBN} layers~\cite{morozov2008giant} (Fig.~\ref{fig:intro:graphene_device}). Having a slight lattice mismatch (about 1.5\%~\cite{giovannetti2007substrate}) relative to graphene, $\varepsilon_{\text{hBN}}\simeq$\numrange{3}{4}, and significant bandgap (\SI{5.9}{\electronvolt}), \gls{hBN} is considered the best insulating to encapsulate graphene, and indeed hBN-sandwiched graphene devices have been recently used for groundbreaking results such as unconventional superconductivity in bilayer graphene~\cite{cao2018unconventional} and Stoner ferromagnetism~\cite{seiler2021quantum}.
 
-The high mobility alone is, however, insufficient. As we have mentioned earlier, one of the main motivations for engineering graphene-based transistors is that, because of the absence of electron backscattering, they should be robust against increases in off-state current when the \gls{CMOS} channel is scaled down~\cite{schwierz2013graphene,young2009quantum,katsnelson2006chiral}. Furthermore, the device conductance must be regulated by the gate voltage $V_textrm{G}$, and has to be robust against any voltage fluctuations. The figure of merit associated with last requirement is the so-called $I_\text{on}/I_\text{off}$. The on--off ratio quantifies the ability of any circuit component in electrical contact with the transistor to distinguish between the transistor's on and off states. A high on--off ratio corresponds, typically, to a low leakage current.
+The high mobility alone is, however, insufficient. As we have mentioned earlier, one of the main motivations for engineering graphene-based transistors is that, because of the absence of electron backscattering, they should be robust against increases in off-state current when the \gls{CMOS} channel is scaled down~\cite{schwierz2013graphene,young2009quantum,katsnelson2006chiral}. Furthermore, the device conductance must be regulated by the gate voltage $V_textrm{G}$, and has to be robust against any voltage fluctuations. The figure of merit associated with last requirement is the so-called $I_\text{on}/I_\text{off}$. The on--off ratio quantifies the ability of any circuit component in electrical contact with the transistor to distinguish between the transistor's on and off-states. A high on--off ratio corresponds, typically, to a low leakage current.
 
 \begin{figure}[hbtp]
     \begin{center}
@@ -241,7 +225,7 @@ It is possible to estimate the on--off ratio of a device using the thermoionic-e
 %
 where $k_\textrm{B}T$ is the thermal energy. Some researchers suggest that bandgap values of \SIrange{0.3}{0.5}{\electronvolt} are ideal for \gls{CMOS} applications~\cite{schwierz2010graphene, reddy2011graphene}.
 
-Despite considerable efforts, researchers have been hindered by the metallic nature of graphene from producing \gls{CMOS} architectures with high-resistance off states, and have therefore deemed it unsuitable for logic applications. In contrast, graphene-based electronics are broadly useful in applications requiring high frequencies. For analogue applications, properties such as ballistic transport, linear current--voltage characteristics, high transconductance, and exceptionally high sustained currents ($> 10^8$ \si{\ampere\per\square\centi\metre}) have proven to be ideal~\cite{meric2008rf, meric2008current}.
+Despite considerable efforts, researchers have been hindered by the metallic nature of graphene from producing \gls{CMOS} architectures with high-resistance off-states, and have therefore deemed it unsuitable for logic applications. In contrast, graphene-based electronics are broadly useful in applications requiring high frequencies. For analogue applications, properties such as ballistic transport, linear current--voltage characteristics, high transconductance, and exceptionally high sustained currents ($> 10^8$ \si{\ampere\per\square\centi\metre}) have proven to be ideal~\cite{meric2008rf, meric2008current}.
 
 \subsection{High-Frequency Applications}
 
@@ -343,11 +327,9 @@ The role of the gate is to lower the energy barrier between the metal and the se
         Tunnel            & \num{5.5e-6}  & \num{1.2e-8}   & \num{4.8e2}                & 13                    & 108        \\
         \bottomrule
     \end{tabular}
-
-
 \end{table}
 
-There is another reason to study how different work functions affect the transistor performance. Solid-state semiconductors have dangling bonds at the surface resulting in Fermi-level pinning, which means that the variation of the band bending is independent of the metal work function even when large~\cite{sankey1984si}. Since, ideally, the \gls{CNT} structure has no open bonds, the Fermi level of the metal will not be pinned to mid-gap states~\cite{bachtold2001logic, svensson2009dependence}. For example, it has been shown that metals with high work functions, such as Pd ($\phi^\textrm{Pd}\simeq$ \SIrange{5.2}{5.6}{\electronvolt}), yields p-type behavior with high on-state current for large-enough \gls{CNT} diameter $d_\textrm{CNT}\ge\SI{2}{\nano\metre}$~\cite{leonard2000role}, and that the \gls{SB} height is inversely proportional to $d_\textrm{CNT}$~\cite{svensson2009dependence}. The reason for this observation was explained within the \gls{SB} framework, i.e.\ large work functions prevent the minority carriers to hop over the barrier back into the channel, resulting in low leakage current. Metals with large work functions are, however, more strongly associated with large contact resistances when their wettability is poor~\cite{lim2009contact}, suggesting mentals with good wettability such as Ti and Cr as ideal for low contact resistances.
+There is another reason to study how different work functions affect the transistor performance. Solid-state semiconductors have dangling bonds at the surface resulting in Fermi-level pinning, which means that the variation of the band bending is independent of the metal work function even when large~\cite{sankey1984si}. Since, ideally, the \gls{CNT} structure has no open bonds, the Fermi level of the metal will not be pinned to mid-gap states~\cite{bachtold2001logic, svensson2009dependence}. For example, it has been shown that metals with high work functions, such as Pd ($\phi^\textrm{Pd}\simeq$ \SIrange{5.2}{5.6}{\electronvolt}), yields p-type behavior with high on state current for large-enough \gls{CNT} diameter $d_\textrm{CNT}\ge\SI{2}{\nano\metre}$~\cite{leonard2000role}, and that the \gls{SB} height is inversely proportional to $d_\textrm{CNT}$~\cite{svensson2009dependence}. The reason for this observation was explained within the \gls{SB} framework, i.e.\ large work functions prevent the minority carriers to hop over the barrier back into the channel, resulting in low leakage current. Metals with large work functions are, however, more strongly associated with large contact resistances when their wettability is poor~\cite{lim2009contact}, suggesting mentals with good wettability such as Ti and Cr as ideal for low contact resistances.
 
 Often, however, metals with low work functions and good wettability have a strong tendency to oxidise, especially in air. A possible workaround is to cap low work function contacts all-around with metals having high work functions, such as Sc and Y~\cite{ding2009contacted}: the \glspl{CNTFET} produced with such contacts reported high on-state currents ($I_\textrm{on}\simeq\SI{250}{\micro\ampere}$), mobilities $\mu\ge\SI{500}{\cm\square\per\V\per\second}$, and \gls{DIBL} up to \SI{105}{\si{\mV\per\V}}, together with excellent switching behaviour $SS\simeq\SI{73}{\milli\volt}$~dec$^{-1}$~\cite{ding2009contacted,peng2019carbon}.
 
@@ -405,7 +387,8 @@ Two years after their findings, \Citeauthor{Franklin2012} shrank the channel len
         \includegraphics[width=\textwidth]{chapter_introduction/figures/cnt_device_3.pdf}
         \caption[Channel Length Scaling in Carbon Nanotube Field-Effect Transistors]
         {
-            Subthreshold (off-state) and output (on-state) characteristics for a 9-nm-long channel CNTFET. Despite the low effective carrier mass there is no loss of gate control over the transport carriers. Adapted from~\cite{Franklin2012}
+            \textbf{top}, Visualisation of all-around gate and hollow \gls{CNT} structures
+            \textbf{bottom left}, Subthreshold (off-state) and, \textbf{bottom right} output (on-state) characteristics for a $L_\textrm{ch}\simeq\SI{9}{\nano\metre}$ demonstrates that the gate does not loose control over the channel. Adapted from~\cite{Franklin2012}.
         }
         \label{fig:intro:cnt_device_3}
     \end{center}
@@ -424,263 +407,157 @@ A large density of dipole charges should then translates into a large density of
 
 More sophisticated computational methods have also been used attempting at clarify the nature (and the role) of the chemical bonds produced when the \gls{CNT} interacts with the electrode crystal structure. By applying \gls{NEGF} numerical schemes, \citeauthor{fediai2016towards} suggested that the most unfavourable length scaling should be observed for weakly-interacting metals such as Cr, Pd, Pt, and, on the other hand, metals such as Au, Al, and Sc could be nearly insensitive to the scaling of $L_\textrm{c}$ when it is decreased down to $\approx\SIrange{15}{20}{\nano\metre}$~\cite{fediai2016towards}. Furthermore, the authors proposed a numerical criterion through which they projected a better contact resistance scaling for Rh in comparison to Au, Pt, and Pd. However they also simulated the metal--junction long limit and suggested that differences in the $R_\textrm{c}$ resulted by adopting Pd instead of Rh were neglibile, suggesting that the better scaling for the Rh--\gls{CNT} junctions may be not worth the cost of the material.
 
-\section{Graphene Nanoribbons}
-
-As mentioned earlier, one of the primary failures of large-scale graphene-based \gls{MOSFET} in digital electronics is the lack of an energy gap in graphene band structure (Sec.~\ref{intro:sec:graphene}), which would allow the device to remain in an off state without any leakage current when the applied potential is low or zero~\cite{schwierz2010graphene, schwierz2013graphene}. Since they are semiconducting, \glspl{GNR} have been also investigated for digital and nanoelectric applications. These require two well-defined voltage states and the ability to rapidly flip between the two states while maintaining a low leakage current in the off state.
-
-
-The confinement of large-area graphene carriers within a 1D channel creates an electronic bandgap dependent on the channel width and length~\cite{Han2007}. Early theoretical calculations have in fact shown that when the ribbon width approached the widhts around 2-3 nm, the resulting bandgap becomes closer to those of Ge or InN. By further reducing down the width (1-2), this should technically approach bandgaps closer to those of Si or GaAs~\cite{barone2006electronic}.
-In fact, early theoretical studies have demonstrated that when the ribbon width approaches widths of \qtyrange[range-units = bracket]{3}{4}{\nano\metre}, the resulting bandgap approaches those of Ge and InN. By further lowering the width to \qtyrange[range-units = bracket]{3}{4}{\nano\metre} range, this should theoretically approach the bandgaps of Si or GaAs~\cite{barone2006electronic}.
+% Schematic energy levels in the same quantum dot potential for two limits of dispersion and confinement
+% discussed in the text. Electron correlations are not consired. Superimposed on the level diagram are wave function envelopes for several electron shells. Mode index is indicated for the first three shells. (b) Sequence of Coulomb blockade peaks measured in a quantum dot of length
 
 
-Fig.~\ref{fig:intro:gnr-bandgap_schwierz} shows various ribbon widths and their corresponding bandgaps, as reported by theoretical and experimental studies. Moreover, this graph illustrates the paucity of ribbons with suitable widths when optimal bandgap range for \gls{CMOS} applications is considered to be in the \qtyrange[range-units = bracket]{0.1}{1}{\electronvolt} range~\cite{geng2017graphene, schwierz2013graphene}. One of the key reasons for the scarcity of appropriate \glspl{GNR} is that the bottom-up process for the synthesis of graphene ribbons was still in its infancy at the time this graph was created.
+\section{Single-Electron Conduction}
 
-\begin{figure}
+At cryogenic temperatures, the smearing of $k_\textrm{B}T$ makes a number of quantum phenomena observables. Examples of such are the conductance blockage due to strong Coulomb interactions~\cite{Averin1986}, interference effects~\cite{stojetz2005effect}, periodic shell-filling signatures related to the tunneling through energy levels~\cite{sapmaz2005electronic}, and Kondo effects originated from the hybridisation of \gls{CNT} spin states with the continuum of states in the metallic leads~\cite{jarillo2005orbital}. Because the energy scales for such quantum effects typically increase with decreasing the system size $L$ (see also Ch.~\ref{ch:theory}), a great deal of these effects have been experimentally observed in \glspl{CNT}.
+
+\begin{figure}[hbtp]
     \begin{center}
-        \includegraphics[width=0.95\textwidth]{chapter_introduction/figures/bandgap_GNRwidth.pdf}
-        \caption[Correlation Between Bandgap Energy and Graphene Nanoribbon Width]{
-            Bandgap versus nanoribbon width as reported both in experimental~\cite{Han2007, Kim2009, Li2008, Chen2007} and theoretical works~\cite{Yang2007, Evaldsson2008}. ac stands for \textit{armchair}, while zz for \textit{zigzag}. See main text. Adapted from~\cite{schwierz2013graphene}.
-            \label{fig:intro:gnr-bandgap_schwierz}}
+        \includegraphics[width=\textwidth]{chapter_introduction/figures/cnt_set.pdf}
+        \caption[Carbon Nanotube Single-Electron Transistors]
+        {
+            \textbf{a}, \Gls{QD} device schematic. A \gls{CNT} is contacted by source and drain electrodes and capacitively coupled to a gate. The current $I_\textrm{SD}$ through the device is measured as a function of $V_\textrm{SD}$ and $V_\textrm{G}$. Through $V_\textrm{G}$, one may control the number of electrons $N$ on the island and tune the dot energy levels.
+            \textbf{b}, \Gls{QD} energy levels schematic (electron--electron interactions are ignored). Electronic wave function envelopes $\psi(k)$ are superimposed on the level
+            diagram for several electron shells. With $\nu$ we indicate the mode index for the first three shells. Adapted from~\cite{laird2015quantum}.
+            \textbf{c}, Coulomb blockade peaks sequence measured in \gls{QD} whose length
+            is $L\simeq\SI{750}{nm}$. Peaks corresponding to three successive shells are colored to illustrate the connection to different wave functions. Although the four electrons
+            that fill each shell occupy states of similar energy, an extra energy
+            $\delta$ is needed to populate a higher shell, leading to fourfold periodic peak spacing. Adapted from~\cite{sapmaz2005electronic}.
+            \textbf{d}, Experimental device that confirmed the fourfold periodicity. White diamonds are regions where the $I_\textrm{SD}$ is suppressed because of Coulomb blockade. Adapted from~\cite{leturcq2009franck}.
+        }
+        \label{fig:intro:cnt_set}
     \end{center}
 \end{figure}
 
-
-The \textit{bottom-up} methodology is a technique for synthesising graphene ribbons in which the ribbon structure is created from molecular precursors reacting using reaction patterns commonly inherited from polymer chemistry and pericyclic reactions. Pioneered by two seminal papers by Hongjie Dai~\cite{li2008chemically} and Klaus M{\"u}llen~\cite{cai2010atomically}, it is now deemed the ideal technique to produce high-quality graphene nanoribbons.
-
-With these class of techniques, hundred nanometer-long ribbons with widths less than \SI{5}{\nano\metre} have been synthesised~\cite{narita2015bottom}, which may be appropriate for interconnection applications requiring high current density to be maintained without causing voltage drop. Secondly, important nano-and- optoelectronics properties such as electronic bandgap, charge-carrier mobility, and optical absorption have become tunable by either varying \glspl{GNR} chemical structures or by introducing opportune decorations along the ribbon edges~\cite{Liu2015, hu2018bandgap}. Fig.\ref{fig:intro:gnr-canvas} gives a glimpse on the vast variety of edge structures generated by bottom-up techniques, suggesting the effectiveness and versatility of this approach over early \textit{top-down} approaches. These were typically accomplished by either patterning ribbons through lithography with \gls{EBL}~\cite{RN345, Han2007} or by longitudinal unzipping of single-walled nanotubes~\cite{kosynkin2009longitudinal}, or by cutting graphene sheets with metallic nanoparticles~\cite{RN346}. These methods, however, frequently produced wide widths and uncontrollable structural defects~\cite{han2010electron, Evaldsson2008}. Finally, bottom-up technology has made it possible to synthetically control the kind of defects injected into the carbon lattice, and this technological superiority is considered by many to be a substantial advantage compared to graphene and carbon nanotubes~\cite{lombardi2021synthetic,lombardi2019quantum}.
-
-\subsection{Crystal and Band Structure}
-Armchair and zigzag ribbons were historically the first two edge structures studied. The variation in the edge connectivity has a significant impact on the respective band structure. In general, the energy spectrum of a \gls{GNR} with length $L$ and width $w_\text{GNR}$ may be approximately written as:
-%
-\begin{equation}
-    E_{n,m} = \pm\hbar v_F^*~\sqrt{\qty(\frac{n\pi}{L})^2 + \qty(\frac{m\pi}{w_\text{gnr}})^2}
-    \label{eq:gnr_energy}
-\end{equation}
-%
-where $v_F^*$ is the group velocity for an energy band indexed by the pair of quantum numbers $n,m$~\cite{baringhaus2014exceptional}.
-
-Steven Louie's group was one of the first to characterise the electrical properties of armchair ribbon based on the number of carbon dimer lines $N$ across the ribbon width using \gls{TB} calculations~\cite{son2006energy}. The authors of this seminal study discovered that when $N$ is a multiple of three of an integer $p$, the resulting ribbons feature large bandgaps that scale inversely with the width of the ribbon\footnote[2]{The $E_g \propto 1/w_\text{gnr}$ relation holds when $15~\text{nm} \le w_\text{gnr} \le 90~\text{nm}$~\cite{yang2007quasiparticle}} (Tab.~\ref{tab:agnr-tb}), even in the case the criterion $N=3p+1$ is met, this trend persists qualitatively. In contrast, $N=3p+2$ indicated that the ribbon family would be metallic.~\cite{nakada1996edge}.
-
-\begin{table}
-    \caption{\label{tab:agnr-tb}
-        Prediction of AGNRs electronic properties based on TB.}
-    \[
-        \begin{array}{lccc}
-            \hline N & \text{Type}           & E_g~\text{(eV)}                   & \\
-            \hline
-            3p       & \text{Semiconductors} & 0.1-2.5                   \Tsmall   \\
-            3p+1     & \text{Semiconductors} & 0.1-2.5                             \\
-            3p+2     & \text{Metallic}       & 0                                   \\
-            \hline
-        \end{array}
-    \]
-\end{table}
+The platform most commonly used in quantum transport experiments is an electronic device made by \gls{CNT} embedding a \gls{QD} (Fig.~\ref{fig:intro:cnt_set}a). The exact position of the \gls{QD} inside \gls{CNT} has been object of scientific debate, but it is now considered to be the nanotube portion between the large \gls{SB} barriers arising at the metal--\gls{CNT} junctions, where electrons can be trapped by the electric fields induced by local gates located beneath the tube~\cite{laird2015quantum}. A \gls{QD} (or, more generally, a \gls{SET}) can be realised if the contact resistances at the junctions source--\gls{QD} and \gls{QD}--drain exceed a certain limit, i.e.\ $R_\textrm{c}\ge\SI{26}{\kilo\ohm}$~\cite{likharev1999single}; when the contacts are such opaque they are tipically called \textit{tunneling barriers}, given that the only transport mechanism through which current can flow thorugh the \gls{QD} is quantum tunneling. \Gls{CNT} energy levels can then be studied by measuring the $I_\textrm{SD}$ through such \glspl{QD} as a function of $V_\textrm{SD}$, $V_\textrm{G}$, and other parameters such as magnetic field $B$, temperature $T$, etc.
 
 
-When the width of the ribbon falls below \SI{10}{\nano\metre}, however, electron--electron interactions lead to correction terms for the self-energy that have been satisfactorily captured by many-body theories~\cite{yang2007quasiparticle}; Tab.\ref{tab:agnr-gw} summarises the estimates for these corrective terms. A few years later, STM tests on surface-synthesised 5-atom wide AGNRs supported these predictions, reporting bandgaps of $\simeq\SI{100}{\milli\electronvolt}$~\cite{kimouche2015ultra, de2016substrate, carbonell2018electronic}. \Citeauthor{kimouche2015ultra} findings also shed some light on the implication that finite-size effects must be considered when determining the scaling behaviour of the energy gap with ribbon length. The authors determined the orbital energies with respect to the Fermi level by measuring the differential conductance for ribbons of various lengths.
+\subsection{Carbon Nanotube Quantum Dots}
 
-As anticipated, the gap between the \gls{HOMO} and \gls{LUMO} rapidly reduces as ribbon length increases. What they also report in their work is that while the energy gap scales quadratically with ribbon length $E_g \propto 1/L^2$, the energy spacing between electronic states that belong to the same band scales inversely with ribbon length $E_g \propto 1/L$, as predicted by modelling the behaviour of these states using energy states of graphene with linear dispersion. In addition, between 4- and 5-monomer long ribbons, the \gls{HOMO} level passes the Fermi level, causing the ribbon to become positively charged. There is no rapid change in the orbital energies due to the ribbons' charge, indicating that the charging energy is negligible and may be disregarded~\cite{swart2011single}.
-
-\begin{table}
-    \caption{\label{tab:agnr-gw}
-        Prediction of AGNRs electronic properties based on the Green's function formalism within the \textit{GW} approximation.}
-    \[
-        \begin{array}{lccc}
-            \hline N & \text{Type}           & E_g~\text{(eV)}           & \\
-            \hline
-            3p       & \text{Semiconductors} & 2.5-5.5           \Tsmall   \\
-            3p+1     & \text{Semiconductors} & 0.1-2.5                     \\
-            3p+2     & \text{Semiconductors} & 1-2                         \\
-            \hline
-        \end{array}
-    \]
-\end{table}
+We will take a deeper look in Ch.~\ref{ch:theory} about theoretical technicalities, here we will limit ourselfs to briefly overview the energy scales involved in quantum transport experiments. The energy required to add a single electron to the \gls{QD}, $e^2 / 2 C$, where $C$ is the dot capacitance, must be greater than the thermal energy $k_{\mathrm{B}}T$. Given that total capacitance values are $C\sim\SI{1e-18}{\farad}$ and energy scales $E_{\mathrm{C}}, \Delta$ up to the meV range, single-electron charging effects are manifested as Coulombd bloackade (Fig.~\ref{fig:intro:cnt_set}d) which allow full mapping of discrete charge states and, for high-quality devices, excited states and exotic multibody interactions~\cite{hanson2007spins, laird2015quantum}.
 
 
-\begin{figure}
+\co{Franck--Condon}
+
+Since the introduction of tunneling barriers add a longitudinal confinement, the impact that the \gls{CNT} mechanical motion have on the electronic transport has been studied both theoretically and experimentally. Particularly interesting were the experimental evidences collected by \cite{leturcq2009franck} on suspended \gls{CNT} by using a slightly modified architecture compared to the one reported in Fig.~\ref{fig:intro:cnt_set}a. The \gls{QD} was precisely embedded between the source and the drain by using a second, top gate combined with a standard \ce{Si}/\ce{SiO2} backgate.
+
+\begin{figure}[hbtp]
     \begin{center}
-        \includegraphics[width=0.95\textwidth]{chapter_introduction/figures/gnr_canvas.pdf}
-        \centering{}
-        \caption[MGNR Edge Structure Canvas]{
-            Different geometries and edge structures of graphene nanoribbons.
-            \label{fig:intro:gnr-canvas}}
+        \includegraphics[width=\textwidth]{chapter_introduction/figures/cnt_FC.pdf}
+        \caption[Carbon Nanotube Single-Electron Transistors]
+        {
+            \textbf{a}, Experimental and theoretical zoom into a part of \gls{CNT} Coulomb diamonds, showing the suppression of the low-bias conductance. In order to reproduce the experimental evidence, \citeauthor{leturcq2009franck} used a value for the electron--vibron coupling $\gamma=3.3$.
+            \textbf{b}, Differential conductance measured at $V_\textrm{TG}=\SI{0.068}{\volt}$ (top) and $V_\textrm{TG}=\SI{0.157}{\volt}$ (bottom). Solid lines are fits of the conductance maxima using the Franck--Condon progression. \textbf{top}, $g=3.5$ (negative bias voltage, green squares) and $g=5.0$ (positive bias voltage, red circles). Deviations from the progression were explained by the researchers as due to electronic excited states within the $V_\textrm{SD}$ window. \textbf{bottom},  $g=3.0$ (green squares) and $g=4.5$ (red circles). Adapted from~\cite{leturcq2009franck}.
+        }
+        \label{fig:intro:cnt_FC}
     \end{center}
 \end{figure}
 
+The exceptional quality of the samples allowed the researchers the unambiguous observation of several features, such as (1) excited vibronic states as lines running paralles to the edges of the Coulomb diamonds, (2) the appearance of absorption sideband peaks within the Coulomb blockaded regions when $T$ was increased, and (3) an aggressive suppression of the current at the edge of the diamonds. Since the current at the edges was suppressed by an amount comparable with the current magnitude for the excited vibronic states, the researchers hypothesised the Franck--Condon conductance blockade~\cite{koch2005franck, koch2006theory}.
 
-Z\glspl{GNR} electronic properties are qualitatively and quantitatively distinct from those of AGNR. In order to define the unit cell of a ZGNR, $2\times4=8$ atoms per unit cell are required, as opposed to $4\times3+2=14$ atoms for an AGNR (Fig.~\ref{fig:intro:gnr-canvas}). The positions of the two non-equivalent atoms in the unit cell and the translation symmetry of the lattice give rise to a $2_1$ screw axis along the width direction. Most notably, the presence of glide planes and screw axes in nonsymmorphic space groups\footnote[3]{Nonsymmorphic groups are space groups that are not uniquely defined by the lattice translations' repeating of a point-group motif. Te and $\alpha$-quartz are examples of nonsymmorphic groups.}, which include also the wave vector group, causes energy bands to converge along certain high symmetry points and axes in the Brillouin zone~\cite{dresselhaus2007group}. This \textit{flat band} region is positioned at wave vectors $2\pi/3 \le k \le \pi$, and the electronic states in this region have been interpreted as localised states along the zigzag edge by looking at charge distribution maps~\cite{wakabayashi2010electronic}. In one-dimensional systems, these electronic states are known as \textit{edge states}, and their contribution to the entire wavefunction becomes minimal when their widths approach the micrometre range, other than exhibiting an exponential decay of their \gls{DOS} with distance from the ribbon centre~\cite{kobayashi2006edge,son2006energy}.
+\subsection{Luttinger-Liquid}
 
-When the wave vector is between $\left[-\frac{\pi}{d_z}, -\frac{2\pi}{3d_z}\right]$ and $\left[\frac{2\pi}{3d_z}, \frac{\pi}{d_z}\right]$, where $d_z$ is the unit cell distance, a bandgap is opened in the band structure (Fig.~\ref{fig:intro:zgnr_bandgap_edge_state_delocalisation}\textbf{c}). It has been proved by spin-polarized ab-initio calculations that two distinct magnetic orderings are distinguishable in the ground state: a ferromagnetic ($\uparrow\uparrow$, FM) configuration for spins aligned along a single edge and an antiferromagnetic ($\downarrow\downarrow$, AFM) condition for spins belonging to two distinct edges~\cite{son2006half}. \textit{Half metallicity} is the property of experiencing the phase transition from an AFM configuration (semiconducting) to an FM state (metallic), and it has been established that this property should be theoretically accessible if a transverse electric field is applied to the ribbon extension plane~\cite{son2006half, dutta2009intrinsic}.
+In interacting 1D systems such as \gls{CNT}, the electrons behaviour cannot be captured within the Fermi liquid theory, but by Luttinger-liquid models~\cite{egger1997effective, egger1999luttinger,kane1997coulomb}. In these models, spin and charge excitations are described as bosonic modes, are separable, and propagate at different velocities. Furthermore, the electron--electron interaction leads to a \gls{TDOS} suppression and interaction-dependent power laws for transport quantities.
+The experimental evidence of such interactions was revealed through a series of remarkable experiments first on individual \gls{CNT} bundle (also called \textit{rope}), i.e.\ multiples tubes closely packed together and later on single \gls{CNT}.
 
-Similary to carbon nanotubes, graphene nanoribbons can have chiral edges. Typically, chirality may be described by a chiral angle $\theta$ which may be defined as:
-%
-\begin{equation}
-    \theta = \arcsin\sqrt{\frac{3}{4}\qty(\frac{m^2}{n^2+nm+m^2})}
-\end{equation}
-%
-where the nanoribbon edge orientation is determined by translation vector $(n,m)$ of the graphene lattice. Zigzag and armchair are characterised by $\theta=0^\circ$ and $\theta=30^\circ$, respectively, while chiral edges have $\theta$ in the range between.
-Steven Louie and coworkers employed a mean-field Hubbard Hamiltonian for modelling the \gls{GNR} dispersion relation, assuming the on-site Coulomb repulsion $U$ comparable to the hopping integral $t$ between two adjacent sites ($U/t \sim 1$):
-%
-\begin{equation}\label{eq:gnr_chiral_hubbard_hamiltonian}
-    \begin{split}
-        \mathcal{H}_{\textrm{MF}} = &- t\sum_{\langle ij\rangle,~\sigma}\qty(a^\dagger_{\sigma,i}a_{\sigma,j} + \textrm{H.c.}) \\
-        &+ U\sum_{i}\qty(n_{i\uparrow}\langle n_{i\downarrow}\rangle + \langle n_{i\uparrow}\rangle n_{i\downarrow} - \langle n_{i\uparrow}\rangle \langle n_{i\downarrow}\rangle),
-    \end{split}
-\end{equation}
-%
-whereby the second summation is performed on spin-polarized densities $n_{i\sigma} = a^\dagger_{i\sigma}a_{i\sigma}$. This Hamiltonian preserves electron--hole symmetry, which means that the density of states is symmetric with respect to the Fermi level.
-
-\subsection{Edge States}
-A few years later, the chiral \gls{DOS} for the electronic states at the ribbon edges had to be incorporated into the interpretation of the previous mentioned localised states and the exotic features that followed these~\cite{yazyev2011theory}. Chirality is a remarkable phenomenon that arises when the charge carriers' time-reversal symmetry is broken, and it is possible to discriminate between carrier wavefunctions evolving in time with a clockwise phase and those evolving with a counterclockwise phase. In the molecular domain, geometrical chirality refers to any molecule belonging to a symmetry group without improper rotations, i.e. the spatial symmetry is such that the rotamer cannot be superimposed on its mirror image~\cite{lazzeretti2017chiral}.
-
-\begin{figure}
+\begin{figure}[hbtp]
     \begin{center}
-        \includegraphics[width=0.95\textwidth]{chapter_introduction/figures/zgnr_bandgap_edge_state_delocalisation.pdf}
-        \caption[Edge State in ZigZag Graphene Nanoribbons]{
-            \textbf{a}, Contour plot representing the difference between spin-polarised \textit{ab-initio} \gls{DOS} of a 12-ZGNR. The high density of $\rho_{\alpha}(r)$ red lines ($\rho_{\beta}(r)$, blue line) to the left backbone edge demonstrates the delocalisation of edge states.
-            \textbf{b}, Direct bandgap $\Delta^{0}_{z}$ and the energy splitting $\Delta^{1}_{z}$ as a function of the width $w_z$ of the ribbon. For $N_z \ge 8$, the fit is shown as a solid line, whereas dotted lines are just visual guides.
-            \textbf{c}, Band structure for the same ribbon plotted as a function of the normalised wave vector. Adapted from~\cite{son2006energy}.
-            \label{fig:intro:zgnr_bandgap_edge_state_delocalisation}}
+        \includegraphics[width=\textwidth]{chapter_introduction/figures/bocrath_LL.png}
+        \caption[Luttinger-Liquid in Ropes of Carbon Nanotubes]
+        {
+            \textbf{a}, Bulk-contacted and \textbf{b}, end-contacted nanotube ropes, showing raw data (solid line) and data scaled by the temperature dependence expected from the Coulomb blockade model (dashed line).
+            \textbf{c}, Two-terminal temperature-dependent conductance for metallic bulk-contacted ropes. Adapted from~\cite{bockrath1999luttinger}.
+        }
+        \label{fig:intro:bocrath_LL}
     \end{center}
 \end{figure}
 
-The experimental evidence was accurately characterised by the wavefunction solutions of the associated eigenvalue problem, which predicted two pairs of peaks divided in the \gls{DOS} and linked to two distinct magnetic orderings. One peak split was caused by the AFM correlation between opposite edges, whereas the second, greater peak split was caused by FM ordering along a single edge (Fig.~\ref{fig:intro:zgnr_bandgap_edge_state_delocalisation}). The energy difference between the two magnetic orderings was estimated to be in the order of tens of meV per edge atom and to decrease as the ribbon width increases, eventually becoming negligible when the width is significantly larger than the exponential decay length of spin-polarized states~\cite{lee2005magnetic}. In theory, it should then be possible to probe this energy difference by either study the tunnelling density of states or by using high-frequency resonance techniques.
+One of such experiments, for instance, was performed by \citeauthor{bockrath1999luttinger} on carbon nanotubes ropes contacted either from the top (end-contact) or from below (contacting the tube along its bulk)~\cite{bockrath1999luttinger}. In both cases, researchers found a power-law scaling of the conductance measured at zero bias as the temperature was increased, i.e.\ $G(T) \sim T^\alpha$. The phenomenological interpretation of the exponent $\alpha$ the author gave was that, depending on the fabrication details, the power law exponent may change. In particular, they reported an $\alpha_{\text{end}}\simeq 0.6$, whereas in the case of bulk contact the suppression of the \gls{TDOS} is weaker, setting an $\alpha_{\text{bulk}}\simeq 0.3$. Comparing these values with the expected electron--electron interaction predicted by the theory yielded a $g\simeq 0.28$.
 
-Although the experimental evidence for the edge states\footnote[2]{The peculiarities of these edge states is that they are instrinsically magnetic} of zigzag and chiral \glspl{GNR} still remains elusive, \citeauthor{slota2018magnetic} have demonstrated, using electron-spin resonance techniques, that magnetic edge states can be induced in cove \glspl{GNR}. Stable nitroxyl radicals were used as spin injectors and attached along the edges, allowing to separate the magnetic edge fingerprint from the signal of the radical. In addition, their study shown that the edge state has longer coherence times than the majority of $\pi$-extended organic systems, even at room temperature and in powder, which makes graphene nanoribbons particularly interesting for spintronics applications.
+The Luttinger parameter, $g$, which characterizes the strength and sign of the electron interaction, can be related to readily measured nanotube parameters $E_{\mathrm{C}}$, the charging energy, and $\Delta$ the mean orbital level spacing by $g=\left(1+2 E_{\mathrm{C}} / \Delta\right)^{-1 / 2}$.
 
-\subsection{Graphene Nanoribbons Field-Effect Transistors}
-
-One of the first \gls{GNRFET} fabricated using bottom-up \gls{GNR} was developed back in 2008 by the group of Honjie Dai~\cite{wang2008room}. The ribbon was synthesised through sonochemistry methods, which are not used anymore, and deposited on a \ce{Si}/\ce{SiO2} substrate, with electrical contacts realised in Pd. As previously discussed, its large work function should reduce the Schottky barrier height for the injection of minority carriers. The authors examined the impact of ribbon widths as small as $w_\textrm{GNR}\simeq$ \SI[multi-part-units = single]{2.0(5)}{\nano\metre} on the device performance, while the ribbon lengths were kept roughly constant $l_\textrm{GNR}\simeq\SI{236}{\nano\metre}$.
-\begin{figure}
+\begin{figure}[hbtp]
     \begin{center}
-        \includegraphics[width=0.95\textwidth]{chapter_introduction/figures/agnr_bandgap_tb_dft.eps}
-        \centering{}
-        \caption[Experimental Correlation Between Bandgap Energy and Ribbon Width]{\label{fig:intro:han2007_EgvsW}
-            \textbf{a}, Bandgaps $\Delta_a$ calculated at \gls{TB} level for three families of AGNRs as a function of the \gls{GNR} width $w_\textrm{GNR}$~\cite{son2006energy}.
-            \textbf{b}, Same as in \textbf{a}, but using \gls{DFT}.
-            \textbf{c}, Experimental bandgaps measured for lithographic nanoribbons as a function of $w_\textrm{GNR}$. Contrary to early predictions, \Citeauthor{Han2007} investigated various crystallographic orientations for the ribbon and found no dependence on the direction.
-            \textbf{d}, As expected, larger \glspl{GNR} conduct more than narrow ones. Squares are values measure at \SI{300}{\kelvin} whereas triangle corresponds to \SI{1.6}{\kelvin}.
-            The insets show the conductivity (upper) and the inactive GNR width (lower) obtained from the linear fit of the conductance with the temperature. Adapted from~\cite{Han2007}.}
+        \includegraphics[width=\textwidth]{chapter_introduction/figures/cnt_postma.pdf}
+        \caption[Luttinger-Liquid in Ropes of Carbon Nanotubes]
+        {
+            \textbf{a}, Oscillations in $G$ at \SI{260}{\kelvin}, showing Coulomb bloackade. (Inset) Differential conductance map. Blue regions represents low conductance, red regions high conductance. The authors did not report the colorbar.
+            \textbf{b}, Temperature-dependent conductance $G$ (right axis) and integrated conductance $G^*$ (left axis) reveal a power law scaling for the tunneling through the nanotube, explained within the Luttinger-liquid framework. (Inset) At low temperature, the peak width $w$ correlates linearly with $T$. Adapted from~\cite{postma2001carbon}.
+        }
+        \label{fig:intro:cnt_postma}
     \end{center}
 \end{figure}
 
-Despite a few remarkable transistor key numbers such as $I_\textrm{on}\simeq\SI{2000}{\micro\ampere\per\micro\metre}$, $I_\textrm{on}/I_\textrm{off}\simeq 10^6$, $SS\simeq\SI{210}{\milli\volt}$~dec$^{-1}$, and $g_\textrm{m} = 900$ \si{\micro\siemens\per\micro\metre}, reduced carrier mobilities $\mu\simeq$ \SIrange{50}{200}{\centi\metre\squared\per\volt\per\second} were measured for narrower ribbons. These results led the researchers to two conclusions. First, narrower \glspl{GNR} result in higher bandgaps, leading to lower mobilities as for solid-state semiconductors~\cite{peter2010fundamentals}. Second, the authors suggested that edge effects dominate carrier transport in narrow ribbons. \Citeauthor{wang2008room} proposed a phenomenological model in which edges, defects, and phonons were regarded as independent factors in order to quantify the contribution of edges to the overall carrier mean free path $\ell$~\cite{wang2008room}:
-%
-\begin{equation}
-    \frac{1}{\ell} = \frac{1}{\ell_\textrm{edge}} + \frac{1}{\ell_\textrm{phonon}} + \frac{1}{\ell_\textrm{defect}}
-\end{equation}
-%
-From the definition of mean free path (see also Sec.~\ref{ch:theory:sec:energy_exchange}), the likelihood $P$ of a scattering event to happen may be phenomenologically conceived as the inverse of the average time between two consecutive collisions:
-%
-\begin{equation}\label{ch1:eq:mfp_edge}
-    \ell_\textrm{edge} = \frac{k_\parallel w_\textrm{gnr}}{P k_\perp}
-\end{equation}
-%
-As we saw in the previous section, when $w_\textrm{GNR}<\SI{20}{\nano\metre}$, it is possible to approximate the ribbon energy gap as inversely proportional to the ribbon width, provided electron--electron correlations are neglected~\cite{stampfer2008tunable}:
-%
-\begin{equation}\label{ch1:eq:bandgap_width}
-    E_g\simeq\frac{\hbar v_F}{w_\textrm{gnr}}
-\end{equation}
-%
-By inserting Eq.~\ref{ch1:eq:bandgap_width} and the dispersion relation $E_k$ one into Eq.~\ref{ch1:eq:mfp_edge}, an expression for the dependence on the width of the mean free path may be written as:
-%
-\begin{equation}\label{ch1:eq:mfp_edge_backscattering}
-    \ell_\textrm{edge} = \frac{w}{P}\sqrt{\qty(1 + \frac{E_k}{E_g})^2 - 1}
-\end{equation}
-%
-According to Eq.~\ref{ch1:eq:mfp_edge_backscattering}, both a wider width and well-defined edges should improve the mean free path. These hypotheses were experimentally confirmed by higher mobilities when \glspl{GNR} as wide as \SI{10}{\nano\metre} were measured~\cite{wang2008room, geng2017graphene}.
-
-\FloatBarrier
-
-\begin{table}
-    \caption{\label{tab:gnr_fet} Comparison amongst different \gls{FET} realised with graphene nanoribbon as conducting channel. Top and bottom.}
-    \resizebox{\columnwidth}{!}{%
-        \begin{tabular}{c*{6}{c}}
-            \toprule
-                                 & \multicolumn{3}{c}{Structural Parameter} & \multicolumn{2}{c}{Device Parameter}\T\B                                                                                                             \\
-            \cmidrule(lr){2-4} \cmidrule(lr){5-6}
-            \textit{Fabrication} & Edge                                     & Width                                    & $E_g$                      & $I_\textrm{on}/I_\textrm{off}$                  & Mobility \T                \\
-            \textit{Approach}    & Structure                                & (nm)                                     & (meV)                      &                                                 & (cm$^{2}$V$^{-1}$s$^{-1}$) \\
-            \midrule
-            Top-Down             & ---                                      & 5                                        & 145                        & 47; $10^5$~(5.4 K) \supercite{sun2015lateral}   & --- \Tsmall                \\
-                                 & ---                                      & 5                                        & 489.4 $\pm$ 19.0           & $> 10^4$ (290 K)\supercite{chen2017oriented}    & --- \Tsmall                \\
-                                 & ---                                      & 15                                       & 120 $\pm$ 23               & --- \supercite{chen2017oriented}                & --- \Tsmall                \\
-                                 & Mixed                                    & 10                                       & 140                        & $10^5$~(4 K) \supercite{hwang2015graphene}      & --- \Tsmall                \\
-                                 & ---                                      & 12                                       & 100                        & 10; $10^6$~(4 K) \supercite{hwang2012transport} & --- \Tsmall                \\
-                                 & ---                                      & sub-10                                   & 200                        & --- \supercite{hwang2019room}$^\ddag$           & --- \Tsmall                \\
-                                 & ---                                      & 10 -- 20                                 & 10 -- 15                   & 4.5; 10~(20 K) \supercite{jiao2010facile}       & --- \Tsmall                \\
-                                 & Closed                                   & 2.8                                      & 494                        & $10^5$                                          & 2443$_{\mu_h}$ \Tsmall     \\
-                                 & Closed\supercite{chen2021sub}            & 9.9                                      & 891/[w$_\textrm{gnr}-1.0$] & $<10^2$                                         & 3776$_{\mu_h}$ \Tsmall     \\
-                                 & ---                                      & 100 -- 400                               & 18 -- 1                    & 20 -- 3.5 \supercite{bang2018effect}            & --- \T                     \\
-            Bottom-up            & Cove                                     & 0.69 -- 1.13                             & 1,880                      & $>^\dag10^{10}$                                 & \T                         \\
-                                 & AGNR                                     & 0.95                                     & 2,100                      & $^\dag10^5$                                     & \Tsmall                    \\
-                                 & Chevron                                  & 1.73                                     & 3,100 $\pm$ 400            & ---                                             & \Tsmall                    \\
-                                 & ---                                      & 2                                        & ---                        & $> 10^6$                                        & \Tsmall                    \\
-                                 & AGNR                                     & 0.63                                     & 1,690 $\pm$ 100            & $> ^\dag10^10$                                  & \Tsmall                    \\
-                                 & AGNR                                     & 0.95                                     & 1,690 $\pm$ 70             & ---                                             & \Tsmall                    \\
-                                 & AGNR                                     & 1.27                                     & 1,130 $\pm$ 50             & $^\dag10^9$                                     & \Tsmall                    \\
-                                 & AGNR                                     & 1.37                                     & 1,600 $\pm$ 400            & ---                                             & \Tsmall                    \\
-                                 & AGNR                                     & 1.58                                     & 1,030 $\pm$ 40             & $^\dag10^8$                                     & \Tsmall                    \\
-                                 & AGNR                                     & 5 -- 9                                   & $\leq$ 400                 & $10^5-10^6$                                     & \Tsmall                    \\
-                                 & ZGNR                                     & 6                                        & 1,400                      & ---                                             & \Tsmall                    \\
-            Epitaxial            & ---                                      & 900                                      & ---                        & ---                                             & \T                         \\
-                                 & AGNR                                     & 2 -- 40                                  & $> 500$                    & ---                                             & \Tsmall                    \\
-                                 & ---                                      & 40                                       & ---                        & 10; $> 25$~(4 K)                                & \Tsmall                    \\
+Further experimental evidences, however, demonstrated that the interpretation of the tunneling exponent may be not that trivial.  Postma et al. measured the conductance of electrons tunneling inside a carbon nanotubes QD where the tunneling barriers were introduced by mechanically bending the nanotube with an AFM tip. Since the \gls{QD} was not end-contacted they explained the conductance-suppression exponent as the result of a tunneling event from a Tomonaga--Luttinger liquid (the nanotube) into a Luttinger island (the quantum dot hosted inside the tube). In this case, the conductance was strongly suppressed, reporting an $\alpha_{\text {bulk }} \sim 0.64$, and rationalised by strong electron--electron interactions $g\sim0.23$ as expected from theory~\cite{egger1999luttinger}. This observation was hypothesised to be the consequence of a different kind of tunneling mechanism called \textit{correlated sequential tunneling}~\cite{thorwart2002correlated}. Briefly, in this mechanism the once the electron tunnel on the \gls{QD} it does not immediately tunnels onto the drain but there is a dephasing due to interaction with plasmon modes.
 
 
-            \bottomrule
-        \end{tabular}%
-    }
-\end{table}
-\FloatBarrier
-
-\co{Energy Band-gap Engieering}
-The theoretically predicted relationship between ribbon width and energy gap was confirmed experimentally in 2007 by Philip Kim's team (Fig.~\ref{fig:intro:han2007_EgvsW}) and shed lights on the difference between a true energy gap and the transport gap typically measured in an electron transport experiment~\cite{Han2007,han2010electron}.
-
-The experiments they perfomed suggested that edge disorders may produce charge localisations, and this effect becomes greater as the ribbon length increases~\cite{areshkin2007ballistic, martin2009transport, chen2007graphene}. This hypothesis was later confirmed by a detailed analysis conducted by the group of Manchester, which demonstrated that the electron--electron interactions  cannot be neglected when the ribbon width is reduced below \SI{5}{\nano\metre} and that the conductance was suppressed due to Coulomb blockade, which also explained the deviation of larger energy gaps for small ribbons compared to theoretical studies~\cite{martin2009transport, ponomarenko2008chaotic}.
-
-In an attempt to empirically resolve this conundrum, Kim's group suggests that the explanation may be found in a combination between those works. Hopping charge transfer mechanism through localised states of comparable size to the ribbon width would result in a transport gap as opposed to a true energy gap~\cite{han2010electron}. The empirically measured bandgap, i.e. the gate voltage region $\Delta V_\text{G}$ where conductance is suppressed, may then be related to the single-particle energy gap via~\cite{castroneto2009}:
-%
-\begin{equation}
-    E_g = \hbar v_F\sqrt{2\pi C_\textrm{G} \Delta V_\text{G}/\abs{e}}
-\end{equation}
-%
-where $C_\textrm{G}$ is the capacitive coupling between the ribbon and the gate.
-
-In addition, \Citeauthor{han2010electron} measured the temperature dependence of the conductance and reported a strong suppression of the conductance minimum $G_\textrm{min}$, which suggests a thermally-activated process involved in the formation of the energy barrier between the valence and conduction bands, contrary to what would have exhibited according to the Coulomb blockade theory~\cite{beenakker1991theory}. Even with different ribbon widths, the scientists discovered a linear scaling of the conductance $G = \sigma(w_\textrm{GNR} - w_0)/L$ when this was normalised across an active transport region $(w_\textrm{GNR} - w_0)$, being $\sigma\simeq \SI{1.7}{\milli\siemens}$ the sheet conductivity. Comparing similar trends reported for \gls{SB}-restricted junctions led to the conclusion that the graphene nanoribbons-metal connection may have been limited by the formation of a Schottky barrier that dominates the charge injection~\cite{DiBartolomeo2016}.
 
 
-Utilizing pure carbon nanotubes and compressing them under high pressure to make graphene nanoribbons has recently yielded excellent device performance~\cite{chen2021sub}. The nanotube samples were loaded and sealed in a sample chamber positioned in the centre of a pre-indented tungsten gasket, which was then compressed between two diamond anvils from ambient pressure to \SI{22.8}{\giga\pascal} while the structural evolution was monitored by in-situ Raman spectroscopy through the diamond window. The authors observed a resonant radial breathing mode peak at 116 cm$^{-1}$, corresponding to a nanotube with a diameter  $\simeq\SI{2.1}{\nano\metre}$, dropping in peak intensity as the pressure climbed, and finally becoming practically invisible when the pressure surpassed 5.5 GPa. The peak position shift and absence of the radial breathing mode was attributed to an irreversible structural transition in nanotubes that occurs at high pressure and affects their sub-band energy gaps.
-
-The authors found a remarkable on/off ratio of approximately four orders of magnitude at extremely low bias. This was criticised by the scientific community, as ratios in this range for such modest biases have only previously been reported for carbon nanotube transistors and never for graphene nanoribbon devices (Tab.~\ref{tab:gnr_fet}). In addition to this criticism, the authors said that they did not observe any radial-breathing-like mode. Previous research on seven- and nine-atom-wide armchair GNRs generated by on-surface synthesis indeed revealed a low-frequency radial-breathing-like mode in the Raman spectra using 532 and 785 nm excitation lasers, respectively.~\cite{talirz2017surface}.
-
-The device they fabricated was a standard back-gated silicon dioxide type of the device which showed p-type on state conductivity of about:
-%
-\begin{equation}
-    \sigma = \frac{G_\textrm{sd}L_\textrm{ch}}{w_\textrm{gnr}} = 7.42~\text{mS}
-\end{equation}
-%
-for a channel of width of ($w_\textrm{gnr}\simeq \SI{2.8}{\nano\metre}$). They further test the relationship between the carrier mobilities for increasingly wider ribbon widths up to 10 nm. The experiments reported hole mobilities\footnote[2]{Calculated according to standard FET theory $\mu = \frac{g_\textrm{m}L_\textrm{ch}}{C_\textrm{G}V_\textrm{SD}}$~\cite{sze2021physics}} of about $\mu\simeq$ \SI{2,443}{\centi\metre\squared\per\volt\per\second} for the \SI{2.8}{\nano\metre} wide and $\simeq$ \SI{3.776}{\centi\metre\squared\per\volt\per\second} for the \SI{10}{\nano\metre} wide, which are currently among the highest values observed, despite possible uncontrolled scattering events of the carriers with the non-spherical bulb-like ends cross at the two sides.
 
 
-\co{Bottom-up GNRFET}
 
-Another issue in creating reproducible devices is transferring ribbon onto a substrate to measure its electrical characteristics. Because stamping methods that rely on mechanical contact of the ribbon growth and transfer substrate frequently result in poor-performing or irreproducible \glspl{GNRFET}~\cite{cai2010atomically}, Michael Crommie's group developed a robust transfer employing a stack of PMMA/\gls{GNR}/Au/Mica~\cite{Bennett2013}. Poly-methyl methacrylate (PMMA) was first spun-cast onto \glspl{GNR} and baked to generate a PMMA/GNR/Au/Mica stack, which was then floated on concentrated HF (40\%), causing the mica substrate to delaminate from the Au growth layer. The leftover PMMA/GNR/Au film stack was then rinsed twice in water before being put to Au etchant. Finally, the PMMA/GNR film was washed and drawn onto a silicon substrate before being baked to eliminate any remaining water. Finally, acetone was used to remove PMMA, leaving GNRs on an insulating surface.
 
-At $V_\textrm{SD}=\SI{1}{\volt}$, the resultant transistor displayed gate-modulated conductance with on-currents ranging from tens of pA to a few nA. The authors reported that the electrical transport was mostly dominated by a significant Schottky barrier $\phi_\textrm{B}\simeq\SI{1.25}{\electronvolt}$, which was caused by adopting a much narrower ribbon with a wider bandgap. They also reported that, despite the fact that the contact between the ribbons and Pd must have been only a few to perhaps ten nanometers long, they were able to measure $I_\textrm{on}/I_\textrm{off}\simeq 10^3$ at $V_\textrm{SD} = \SI{1}{V}$, even if experiment on nanotube transistors have demonstrated resistance increases as contact length is reduced past the electron mean free path\footnote[2]{In graphene and \glspl{CNT} this value is often referenced at $\ell\simeq\SI{200}{\metre}$~\cite{xia2011origins, franklin2010length}. See also Sec.~\ref{intro:sec:cnt}}. The off-state leakage was attributed to the holes tunneling through the drain barrier, and therefore being largely temperature independent but strongly sensitive on the bias, as larger ones will significantly shrink the width of the Schottky barrier.
 
-The authors also suggested several points to ameliorate their device criticalities. Lowering the contact work function would reduce the source conduction band barrier height and correspondingly increase the drain valence band barrier, resulting in both improved on- and off-state performance. Further improvement in band alignment should also arise through the use of wider GNRs with bandgaps around $\simeq \SI{1.4}{\electronvolt}$, as lower effective mass and Schottky barriers are expected for smaller bandgaps. Lastly, the researchers envisioned that longer \glspl{GNR}~\cite{wang2017precision} might also reduce the contact resistance by increasing $L_\textrm{c}$.
+% An exciting area opened by this work is the possibility to combine the spin degree of freedom with mechanical and optical degrees in clean, suspended nanotubes.
+% There has already been progress in engineering quantized phonons in nanotubes and studying their interactions with the charge on quantum dots (Benyamini et al.,
+% 2014; Huttel et al., 2009; Lassagne et al., 2009; Sapmaz
+% et al., 2005a; Sazonova et al., 2004; Steele et al., 2009a).
+% Evidence for the discreteness of longitudinal stretching
+% phonon modes, comes from Frank-Condon blockade in
+% suspended nanotubes (Leturcq et al., 2009x`'; Sapmaz et al.,
+% 2005a), discussed theoretically by (Flensberg, 2006; Mariani and von Oppen, 2009; Sapmaz et al., 2003). By
+% tuning the discrete phonon modes away from resonance
+% with qubit splittings, long qubit lifetimes may be achievable. On the other hand, when the qubit splitting is
+% nearly resonant with a discrete phonon mode, coherent energy exchange should be possible between them,
+% in a solid-state analog of cavity quantum electrodynamics (P´alyi et al., 2012). Strong spin-phonon coupling in
+% suspended nanotubes may also enable enhanced sensing
+% of nanotube motion (Ohm et al., 2012).
 
-The authors also proposed a certain number of measures to mitigate the device shortcomings. Reducing the contact work function ($\phi^\textrm{Pd}\simeq$ \SIrange{5.2}{5.6}{\electronvolt}) would decrease the barrier height of the source conduction band and increase the barrier height of the drain valence band, resulting in enhanced on- and off-state performance. As effective mass and Schottky barriers are projected to be lower for smaller bandgaps, the usage of wider GNRs with bandgaps $E_g \simeq \SI{1.4}{\electronvolt}$ could also result in a further enhancement of band alignment. In conclusion, the researchers hypothesised that longer GNRs could also lower contact resistance by increasing $L_\textrm{c}$.
 
-Using high-k dielectrics is another viable method for enhancing the properties of transistors. The usage of such dielectrics is necessitated by the fact that, when scaling down the geometrical dimensions of transistors, the oxide thickness cannot be scaled in the same manner as the other geometrical parameters, as this would result in leakage currents through the oxide. This phenomenon could also result in a field that exceeds the breakdown field of silicon dioxide. By raising the permittivity of the dielectric, one can afford a thicker dielectric while still achieving the same capacitance as with a thinner silicon dioxide dielectric.
 
-Llinas and colleagues investigated the output characteristics of \glspl{GNRFET} with widths of nine and thirteen atoms that were fabricated using two distinct gate dielectrics~\cite{llinas2017short}. They compared the output response of a typical \SI{50}{\nano\metre}-thick back-gated silicon dioxide substrate to that of a high-$\kappa$ dielectric local gate (\ce{HfO2}, \gls{EOT}$ \simeq $\SI{1.5}{\nano\metre}). For the latter device at room temperature, current densities $I_\textrm{on}>\SI{1}{\micro\ampere}$ measured at $V_\textrm{SD}=$\SI{-1}{\volt} with the narrower ribbon were amongst the highest ever reported, combined with an excellent $I_\textrm{on}/I_\textrm{off}\simeq 10^5$.
 
-Through a temperature-dependent experiment, however, the authors noted that Schottky barriers generated at the contacts again dominated transport. While the high-$\kappa$ dielectric lowers the carrier tunneling, the Au/Pd--\gls{GNR} junction leads to the formation of Schottky junctions partly due to the mismatch between the work functions of the metal and the ribbon. In order to lessen the mismatch and prevent the Schottky-dominated transport regime, adopting graphene as a contacting material could be one feasible approach~\cite{braun2021optimized, el2020controlled}.
 
-\section{Concluding Remarks}
 
-Graphene nanoribbons exhibit intriguing physical and chemical properties not only for technological advancement in areas where graphene and carbon nanotubes lack performance, but also for the physics they can reveal. At this time, bottom-up graphene nanoribbons have demonstrated remarkable transport and exotic properties, but these have been studied solely on the synthesis substrate. Attempting to investigate these properties at the device level will be one of the next major obstacles in the nanoribbon field. At this time, these evidences are largely unavailable and unclear.
+\section{Concluding Remarks and Thesis Outlook}
 
-There are three roles to which graphene nanoribbons may technologically contribute. The first application is that of sensors. Given the ability to functionalise the edges with a variety of chemical substituents, a large number of studies in various gas atmospheres have demonstrated excellent selectivities and good flexibility. A second possible field could be the integration in low-power devices, where by reducing required supply voltages, ribbons with lower bandgaps and consequently higher mobilities could be employed. A third and more enthusiastic application would be the development of decoherence-tolerant quantum hardware utilising their topological properties.
+% Graphene nanoribbons exhibit intriguing physical and chemical properties not only for technological advancement in areas where graphene and carbon nanotubes lack performance, but also for the physics they can reveal. At this time, bottom-up graphene nanoribbons have demonstrated remarkable transport and exotic properties, but these have been studied solely on the synthesis substrate. Attempting to investigate these properties at the device level will be one of the next major obstacles in the nanoribbon field. At this time, these evidences are largely unavailable and unclear.
+
+% There are three roles to which graphene nanoribbons may technologically contribute. The first application is that of sensors. Given the ability to functionalise the edges with a variety of chemical substituents, a large number of studies in various gas atmospheres have demonstrated excellent selectivities and good flexibility. A second possible field could be the integration in low-power devices, where by reducing required supply voltages, ribbons with lower bandgaps and consequently higher mobilities could be employed. A third and more enthusiastic application would be the development of decoherence-tolerant quantum hardware utilising their topological properties.
+
+From the discussion developed in this chapter it is evident that while the electronic properties of carbon nanotubes have been explored in detail, and their possible usage in
+quantum systems has been defined, there is still no clarity about the role of vibrational states and the consequences that large length/width ratio may have on \glspl{GNR}. In addition, whereas carbon nanotubes have demonstrated disappointingly short spin-coherence times, graphene nanoribbons exhibit edge-states coherence times of up to \si{\micro\second} at room temperature. As a result, interest in their potential applications in quantum devices has tremendously grown.
+
+In the following, we provide an outline for the thesis structure. The purpose of this work is to tackle current challenges when using \glspl{MGNR} for transport experiments, and in particular  try to answer to the unanswered question on how to engineer competitive \gls{GNR}-based electronic devices.
+We begin with a general theoretical introduction of \glspl{GNR}, based on their crystal structure and electronic properties. We then discuss mesoscopic scale systems and their properties, and we will give a more in depth overview of the main transport regime when a nanoscopic system is contacted in a \gls{SET} fashion.
+
+We will then introduce the peculiar physics of 1D systems, why they are different from other dimensionality, and why they are relevant in the study of \gls{MGNR} electronic properties. We will then introduce the fabrication methods we have used to engineer and optimise \gls{GNR}-based devices, followed by a discussion of the experimental techniques we have used to acquire the experimental data. In this respect, we will explain both \gls{DC} and \gls{AC} setup. We will also include the fabrication and the testing part of micro-Hall sensors made with Au and graphene that could be used in the future to measure anisotropy of \gls{GNR} functionalised with \gls{SMM}.
+
+Three main projects are then presented in detail. We begin with the investigation of the temperature-dependent of the tunneling conductance through a single \gls{GNR}. This is the first of its kind study ever reported, and we shall critically discuss how these results can be collocated in the current literature, followed by why these results are relevant for several possible technological advancements. We then progress to study a particular strategy we have found to produce ultra-clean \gls{GNRSET}, allowing the first investigation of the effects of the coupling between quantized vibrational modes (vibrons) and electronic degrees of freedom in molecular \gls{GNR} quantum dots. Finally, we conclude by investigating two possible strategies for controlling the injection of dopants into \gls{MGNR}, i.e.\ by chemical functionalisation along the edges and by insertion of porphyrin rings carrying transition-metal ions inside the \gls{GNR} backbone.
+
+
+
+% In interacting 1D systems such as CNT, the electrons behaviour cannot be captured within the Fermi liquid theory, but by Luttinger-liquid models. In this models, spin and charge excitations are described as bosonic modes, are separable, and propagate at different velocities. Furthermore, the electron--electron interactions lead to suppression of the \gls{TDOS} and interaction-dependent power laws for transport quantities.
+% The presence of these interactions was tackled through a series of remarkable experiments first on carbon nanotubes ropes, i.e.\ multiples tubes closely packed together and later on single-walled carbon nanotubes.
+
+% One of such experiments, for instance, was performed by Bockrath et al. [83] on carbon nanotubes ropes contacted either from the top (end-contact) or from below (contacting the tube along its bulk). In both cases, researchers found a power-law scaling of the conductance measured at zero bias as the temperature was increased, i.e.\ $G(T) \propto T^\alpha$. The phenomenological interpretation of the exponent $\alpha$ the author gave was that, depending on the fabrication details, the power law exponent may change. In particular, they reported an $\alpha_{\text {end }} \sim 0.6$, whereas in the case of bulk contact the suppression of the \gls{TDOS} is stronger, setting an $\alpha_{\text {bulk }} \sim 0.3$. Comparing these values with the expected electron--electron interaction predicted by the theory yielded a $g\sim0.28$.
+
+% The Luttinger parameter, $g$, which characterizes the strength and sign of the electron interaction, can be related to readily measured nanotube parameters $E_{\mathrm{C}}$, the charging energy, and $\Delta$ the mean orbital level spacing by $g=\left(1+2 E_{\mathrm{C}} / \Delta\right)^{-1 / 2}$. 
+
+% Further experimental evidences, however, demonstrated that the interpretation of the tunneling exponent may be not that trivial.  Postma et al. measured the conductance of electrons tunneling inside a carbon nanotubes QD where the tunneling barriers were introduced by mechanically bending the nanotube with an AFM tip. Since the \gls{QD} was not end-contacted they explained the conductance-suppression exponent as the result of a tunneling event from a Tomonaga--Luttinger liquid (the nanotube) into a Luttinger island (the quantum dot hosted inside the tube). In this case, however, although a higher electron--electron interaction was expected $g\sim0.23$ from the theory, the conductance was only mildly suppressed, reporting an $\alpha_{\text {bulk }} \sim 0.64$. This observation was hypothesised to be the consequence of a different kind of tunneling mechanism called \textit{correlated sequential tunneling}. Briefly, in this mechanism the once the electron tunnel on the \gls{QD} it does not immediately tunnels onto the drain but there is a dephasing due to interaction with plasmon modes.
+
+
+
+% This device remarkably showed clear single-electron transistor behaviour up to 260 K, whereas a few later Cui et al. produce a working single-electron transistor at room temperature by local modification of thin CNT bundles.
+
+% Room-temperature operating \gls{SET} are appealing devices not only because can be used in low-power applications but also are useful for the readout of pulsed-gate experiments and qubits. 
+
+% In one dimension,The Fermi surface is not abrupt, even at zero temperature, and various power-law dependencies are expected in transport. This state is referred to as a Luttinger liquid $[81,82]$. Nanotubes are a nearly ideal realization of interacting electrons or holes in one dimension, and so provide an excellent testing ground for theoretical predictions of the behavior of Luttinger liquids, particularly in transport.
+
+% Power-law scaling of the conductance $G=\mathrm{d} I / \mathrm{d} V_{\mathrm{Sd}}$ with temperature $T$ and source-drain bias $V_{\mathrm{Sd}}$, distinctive features of transport through a Luttinger liquid, has been observed in nanotubes in several experiments $[8,42, 83, 84].
+
+
+

@@ -2,38 +2,21 @@
 
 \minitoc
 \section{Introduction}
-In this thesis, a substantial amount of effort was devoted to the investigation of graphene-based \glspl{SET} when bottom-up graphene nanoribbons and extended delocalized molecules connect the two leads. To do this and remain within the coherent transport regime (Ch.~\ref{ch:theory}), electrodes separated by only a few nanometres are necessary, as well as cryogenic temperature measurements.
+In this thesis, a substantial amount of effort was devoted to the investigation of graphene-based \glspl{SET}, where bottom-up graphene nanoribbons (\glspl{MGNR}) are essentially extended delocalized molecules connecting the two leads. To do this, electrodes separated by only a few nanometres are necessary, as well as \si{\milli\kelvin} temperatures and extremly high sensistivity in the electronic measurement.
 
-In this chapter, I will describe the room temperature setup we used to fabricate \glspl{GTJ}, the development of a new feedback electroburning protocol that increases the chances of having quantum-dot-free \glspl{GTJ}, a few ideas for improving the deposition process, and a brief overview of the cryogenic setup and the electronic apparatus for performing \gls{DC} measurements.
+In this chapter, I will describe the room temperature setup we used to fabricate \glspl{GTJ}, the development of a new feedback electroburning protocol that increases the chances of having quantum-dot-free \glspl{GTJ}, ideas for improving the deposition process, and a brief overview of the cryogenic setup and the electronic apparatus for performing \gls{DC} measurements.
 
-\section{Room-Temperature Transport Setup}\label{fabrication:sec:probe_station}
+\section{Sample Nanofabrication}
 
-\begin{figure}[hbtp]
-    \begin{center}
-        \includegraphics[width=\textwidth]{chapter_fabrication/figures/probe_station_setup.pdf}
-        \caption[Room-Temperature Setup: Probe Station]{\textbf{a,} Probe Station setup. In \textbf{b,} the ADwin-Gold II, current amplifier and respective connection for a standard 3T measurement.}
-        \label{fig:exp:probe_station_setup}
-    \end{center}
-\end{figure}
+An ideal fabrication recipe is one in which small changes in the fabrication process have no substantial effect on the fabrication outcome. A robust fabrication recipe was achieved for the metallic contacts and a satisfactory electron-beam exposure protocol for the graphene leads.
 
-\co{Cascade Probe Station}
-Electrical measurements at room temperature are performed on a fully automated Cascade Summit\textsuperscript{TM} 12000 M probe station, fitting three micro-manipulators (Fig.~\ref{fig:exp:probe_station_setup}a). To ensure good electrical contacts, Copper beryllium probes by Lambda photometrics (tip diameter = \SI{25}{\micro\metre}, length = \SI{30}{\milli\metre}) were used for contacting Au (source/drain) pads, Tungesten (tip diameter = \SI{10}{\micro\metre}, length = \SI{30}{\milli\metre}) for HfO$_2$ (local) pads.
-
-\co{Femto Amplifier}
-Typically, currents flowing through a quantum device are within the $\si{\pico\ampere-\nano\ampere}$ range. To detect signals with enough accuracy, a Femto DLPCA-200 low-noise current amplifier with adjustable gain was used to convert currents to voltages (Fig.~\ref{fig:exp:probe_station_setup}b). The bandwidth of the amplifier filters varies based on the gain settings and operates solely on the pure analogue signal: the internal low-pass-filter (LPF) is approximately \SI{10}{\hertz} to eliminate wide band noise for low-frequency applications, and at the highest trans-impedance gain settable of $\SI{1e11}{\volt\per\ampere}$ guarantees a \SI{3}{\decibel} bandwidth of \SI{1.1}{\kilo\hertz}. If the gain is not set correctly, the amplifier will overload, and block the passage of more current.
-
-\co{Adwin-Gold II}
-Through an Adwin-Gold II (Fig.~\ref{fig:exp:probe_station_setup}b), voltages are applied and read. The system is equipped with 16 analogue inputs, 2 analogue outputs, 32 digital I/O, and a maximum output voltage range of $\pm\SI{10}{\volt}$ with a 16-bit resolution. During the feedback electroburning programme, a timer with a resolution of \SI{3.3}{\nano\second} is necessary for ramping back the voltage at the beginning of each burning cycle. The incoming data stream was sampled at a constant rate of \SI{300}{\mega\hertz\per\second}.
-
-\section{Sample Fabrication}
-
-An ideal fabrication recipe is one in which small changes in the fabrication process have no substantial effect on the fabrication outcome. Metal pads (Cr \SI{5}{\nano\metre}/ Au \SI{65}{\nano\metre}) were fabricated via standard lithography means (Fig.~\ref{fig:exp:chip_fabrication}). Graphene leads, on the other hand, were fabricated through a modified wet transfer~\cite{suk2011transfer} recipe here below detailed.
+Metal pads (Cr \SI{5}{\nano\metre}/ Au \SI{65}{\nano\metre}) were fabricated via standard lithography means (Fig.~\ref{fig:exp:chip_fabrication}). Graphene leads, on the other hand, were fabricated through a modified wet transfer recipe~\cite{suk2011transfer} here below detailed.
 
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_fabrication/figures/patterning_1.png}
         \caption[Schematic of Electrode Patterning]{
-            Schematic of Metal Deposition. \textbf{a)} The first photoresist covers the SiO$_2$ substrate. \textbf{b)} A second layer of photoresist is applied. \textbf{c)} Exposure to EBL with secondary electron scattering from the substrate. \textbf{d)} Development of the resist, resulting in an undercut. \textbf{e)} Metal deposition using a thermal evaporator. \textbf{f)} Lift-off aided by the undercut, with the final metal structure remaining on the substrate.}
+            Schematic of Metal Deposition. \textbf{a}, The first photoresist covers the \ce{SiO2} substrate. \textbf{b}, A second layer of photoresist is applied. \textbf{c}, Exposure to electron-beam lithography with secondary electron scattering from the substrate highlighted. \textbf{d}, Development of the resist, resulting in an undercut. \textbf{e}, Metal deposition using a thermal evaporator. \textbf{f}, Lift-off aided by the undercut, with the final metal structure remaining on the substrate.}
         \label{fig:exp:chip_fabrication}
     \end{center}
 \end{figure}
@@ -52,9 +35,7 @@ An ideal fabrication recipe is one in which small changes in the fabrication pro
     \item The chips are submerged in acetone and heated to \SI{180}{\degreeCelsius} for at least 2 hours to remove the protective PMMA. The chips are then washed in fresh acetone and IPA and dried with nitrogen.
 \end{enumerate}
 %
-One of the recipe biggest flaws was the unreliability of graphene wet transfer. Bubbles trapped beneath the water meniscus frequently cause ripples on the graphene surface, compromising the electroburning process~\cite{ullah2021graphene}. In essence, ripples increase electrical current densities, which leads to increased Joule heating. This frequently resulted in abrupt current drops during the electroburning cyle, and making the \glspl{GTJ} unsuitable for further transport experiment.
-
-To minimise these situations, we later opted to outsource graphene transfers at the wafer size to Graphenea. This enhanced graphene quality and electroburning yields significantly.
+One of the recipe biggest flaws was the unreliability of graphene wet transfer~\cite{chen2016progress}. Bubbles trapped beneath the water meniscus frequently cause ripples on the graphene surface, compromising the electroburning process~\cite{ullah2021graphene}. In essence, ripples localise current-density increases, which lead to strong Joule heating increments in the graphene lattice. When this happens, we frequently observed an abrupt drop voltage drop beween the leads during the electroburning cyle (Sec.~\ref{ch:fabrication:graphene_tunnel_junctions}), and the resulting \glspl{GTJ} were often unsuitable for further transport experiments. To minimise these incoveniences, we later opted to outsource graphene transfers at the wafer size to Graphenea. This significantly enhanced graphene quality and electroburning yields.
 
 \subsection{Graphene Patterning}
 
@@ -73,6 +54,25 @@ Once the \ce{Si}/\ce{SiO2} substrates were prepared, graphene was deposited onto
 
 \end{enumerate}
 
+\section{Room-Temperature Transport Setup}\label{fabrication:sec:probe_station}
+
+\begin{figure}[hbtp]
+    \begin{center}
+        \includegraphics[width=\textwidth]{chapter_fabrication/figures/probe_station_setup.pdf}
+        \caption[Room-Temperature Setup: Probe Station]{\textbf{a}, Probe Station setup. In \textbf{b}, the ADwin-Gold II, current amplifier and respective connection for a standard 3T measurement.}
+        \label{fig:exp:probe_station_setup}
+    \end{center}
+\end{figure}
+
+\co{Cascade Probe Station}
+Electrical measurements at room temperature are performed on a fully automated Cascade Summit\textsuperscript{TM} 12000 M probe station, fitting three micro-manipulators (Fig.~\ref{fig:exp:probe_station_setup}a). To ensure good electrical contacts, Copper beryllium probes by Lambda photometrics (tip diameter = \SI{25}{\micro\metre}, length = \SI{30}{\milli\metre}) were used for contacting Au (source/drain) pads, Tungesten (tip diameter = \SI{10}{\micro\metre}, length = \SI{30}{\milli\metre}) for HfO$_2$ (local) pads. Thanks to this automation system, we are able to address approximately $800$ devices per chip.
+
+\co{Femto Amplifier}
+Typically, currents flowing through a quantum device are within the $\si{\pico\ampere-\nano\ampere}$ range. To detect signals with enough accuracy, a Femto DLPCA-200 low-noise current amplifier with adjustable gain was used to convert currents to voltages (Fig.~\ref{fig:exp:probe_station_setup}b). The bandwidth of the amplifier filters varies based on the gain settings and operates solely on the pure analogue signal: the internal low-pass-filter (LPF) is approximately \SI{10}{\hertz} to eliminate wide band noise for low-frequency applications, and at the highest trans-impedance gain settable of $\SI{1e11}{\volt\per\ampere}$ guarantees a \SI{3}{\decibel} bandwidth of \SI{1.1}{\kilo\hertz}. If the gain is not set correctly, the amplifier will overload, and block the passage of more current.
+
+\co{Adwin-Gold II}
+Through an Adwin-Gold II (Fig.~\ref{fig:exp:probe_station_setup}b), voltages are applied and read. The system is equipped with 16 analogue inputs, 2 analogue outputs, 32 digital I/O, and a maximum output voltage range of $\pm\SI{10}{\volt}$ with a 16-bit resolution. During the feedback electroburning programme, a timer with a resolution of \SI{3.3}{\nano\second} is necessary for ramping back the voltage at the beginning of each burning cycle. The incoming data stream was sampled at a constant rate of \SI{300}{\mega\hertz\per\second}.
+
 
 \section{Graphene Tunnel Junctions}\label{ch:fabrication:graphene_tunnel_junctions}
 
@@ -82,10 +82,10 @@ Due to the $sp^2$ covalent network of bonds between carbon atoms, electroburning
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_fabrication/figures/simmons.pdf}
         \caption[Graphene Tunnel Junctions: The Simmons Model]{
-            \textbf{a,} Typical \gls{GTJ} measured at zero gate at the end of the electroburning.
-            \textbf{b,} Source drain current $I_\textrm{SD}$ pre (blue) and post (purple) depositing a solution of \glspl{GNR}.
-            \textbf{c,} Histrogram of the nanogap size resulting by fitting $I_\textrm{SD}$ with the Simmons model as explained in the main text.
-            \textbf{d,} A Poisson distribution-like histogram of the energy barrier fitting parameter. }
+            \textbf{a}, Typical \gls{GTJ} measured at zero gate at the end of the electroburning.
+            \textbf{b}, Source drain current $I_\textrm{SD}$ pre (blue) and post (purple) depositing a solution of \glspl{GNR}.
+            \textbf{c}, Histrogram of the nanogap size resulting by fitting $I_\textrm{SD}$ with the Simmons model as explained in the main text.
+            \textbf{d}, A Poisson distribution-like histogram of the energy barrier fitting parameter. }
         \label{fig:exp:simmons}
     \end{center}
 \end{figure}
@@ -110,26 +110,39 @@ Fig.~\ref{fig:exp:simmons}c,d shows the histograms for gap widths, which has mea
 
 \subsection{Gate-controlled Electroburning}
 
-When molecules are deposited on graphene leads, the tunnel coupling resulting from the anchoring to the honeycomb lattice frequently results in systems with a weak coupling regime (see Ch.~\ref{ch:theory}). This indicates that Coulomb blockade characteristics can (and typically are) seen at gate voltages other than zero. This is problematic because these characteristics, which originate from contaminations formed during electroburning, can frequently obscure molecular features. To mitigate this problem, a novel electroburning procedure was created.
-
-The computational flowchart that was subsequently implemented within the Python measurement framework QTlab~\cite{qtlab2013} is seen in Fig.\ref{fig:feedback_controlled_electroburning}. Essentially, the protocol runs a first electroburning cycle and then determines if the probability distribution of the source--drain current values recorded via a gate trace at a fixed bias differs from a Gaussian distribution.
+When molecules are deposited on graphene leads, the tunnel coupling resulting from the anchoring to the honeycomb lattice frequently results in systems with in the weak-coupling regime (see Ch.~\ref{ch:theory}). This indicates that Coulomb blockade characteristics can (and typically are) seen at gate voltages other than zero. This is problematic because these features, which originate from contaminations formed during electroburning, can obscure molecular ones. To mitigate this problem, a novel electroburning procedure was created.
 
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_fabrication/figures/feedback_controlled_electroburning.pdf}
-        \caption[Gate-Controlled Feedback Electroburning Algorithm]{Gate-controlled feedback electroburning routine. \textbf{a,} Block diagram for the program as implemented. \textbf{b,} Gate trace examples as they are extracted at various stages of the routine. Usually a ~\SI{0.4}{\volt} bias is applied during during the gate trace scan. Top graph reports an average gate trace taken at the end of a first electroburning cycle. The program then reads the maximum of the current (red circle), set the gate output channel of the ADwin to that corresponding potential, and starts a second electroburning protocol. When the distribution of the current data passes the Shapiro--Wilk statistics test (bottom graph), the null-hypothesis of the test is accepted ($H_0 = $ the population of the current data is normally distributed), and the program performs a final stability diagram and save all the data in suitable format.}
+        \caption[Gate-Controlled Feedback Electroburning Algorithm]{Gate-controlled feedback electroburning routine. \textbf{a}, Block diagram for the program as implemented. \textbf{b}, Gate trace examples as they are extracted at various stages of the routine. Usually a ~\SI{0.4}{\volt} bias is applied during during the gate trace scan. Top graph reports an average gate trace taken at the end of a first electroburning cycle. The program then reads the maximum of the current (red circle), set the gate output channel of the ADwin to that corresponding potential, and starts a second electroburning protocol. When the distribution of the current data passes the Shapiro--Wilk statistics test (bottom graph), the null-hypothesis of the test is accepted ($H_0 = $ the population of the current data is normally distributed), and the program performs a final stability diagram and save all the data in suitable format.}
         \label{fig:feedback_controlled_electroburning}
     \end{center}
 \end{figure}
 %
+The computational flowchart that was subsequently implemented within the Python measurement framework QTlab~\cite{qtlab2013} is seen in Fig.\ref{fig:feedback_controlled_electroburning}. Essentially, the protocol runs a first electroburning cycle and then determines if the probability distribution of the source--drain current values recorded via a gate trace at a fixed bias differs from a Gaussian distribution.
+
 The null-hypothesis is evaluated using the Shapiro--Wilk test, and is rejected if the p-value is $p\leq 0.05$: in this case, there is a 95\% chance that the source--drain current values do not follow a normal distribution, hence there must be a residual quantum dot at finite gate voltage. Visual inspection typically supports this conclusion by observing the progressive disappearing of current peaks in a gate trace (Fig.~\ref{fig:feedback_controlled_electroburning}). Subsequently, the gate is automatically set to the maximum current value in the gate trace, and a second electroburning cycle begins. The loop is performed a predefined number of times, which is often set to 3. By leveraging this experimental \gls{GTJ} fabrication protocol the percentage of clean junctions increased up to 52\%--66\%.
+
+\begin{table}
+    \caption{\label{tab:gate_controlled_eburn}
+        Comparison between tradition and gate-controlled electroburning.}
+    \begin{tabular}{ccc}
+        \hline Device               & Normal Electroburning & Gate-Controlled Electroburning \\
+        \hline
+        \Tsmall Spurious \glspl{QD} & 85                    & 43                             \\
+        Clean                       & 15                    & 57                             \\
+        \hline\Tsmall
+        Yield                       & 15\%                  & 57\%                           \\\Tsmall
+    \end{tabular}
+\end{table}
 
 Despite the fact that this procedure has increased the overall yield of clean junctions, several refinements are still possible. A future improvements of this approach should accommodate for situations in which significant signal spikes induced by frequency pickup could be identified as the maximum current point even though there is no coulomb diamond present. For instance, to distinguish the current steps from the background noise, an iterative median filter might be applied to the data to filter away transient spikes in the conductance while keeping even modest conductance steps caused by charging effects. After normalising the data, it is possible to separate the relevant steps from the background noise by evaluating the null-hypothesis for a normality test and counting only if the heights of the related conductance steps exceed a predetermined threshold.
 
 
 \section{Contacting Graphene Nanoribbons}
 
-The problem of connecting graphene nanoribbons or any molecular adduct to a pair of electrodes is one of the greatest challenges to the development of reliable and robust electronics. As described in Ch.~\ref{ch:introduction}, when graphene is contacted with metals, the large difference between the two work functions would produce finite Schottky barriers and the metal--graphene interface.
+The problem of connecting \glspl{GNR}, or any molecular adduct, to a pair of electrodes is one of the greatest challenges to the development of reliable and robust electronics. As described in Ch.~\ref{ch:introduction}, when graphene is contacted with metals, the large difference between the two work functions would produce huge Schottky barriers at the metal--graphene interface.
 
 Liquid-processable \glspl{GNR} offer a step forward in terms of structural integrity and edge shape. One of the major hurdles to the usage of ribbons in solutions is the positioning of such structures on top of a device. When a drop of solution, even if poorly concentrated, is deposited on a chip, a number of competing events occur.
 
@@ -158,11 +171,11 @@ When $\lambda$ is smaller than zero (Fig.~\ref{fig:fabrication:buffon_probabilit
 
 \section{Deposition Process and Related Phenomena}\label{ch:fabrication:sec:deposition_process}
 
-One of the key point of a device fabrication are the complex interactions establishing as a consequence of various surface-related phenomena which occur when a molecular adduct has to be transferred onto specific substrates~\cite{nerngchamnong2013role, huskens2004model}. The rich and wide physics \glspl{GNR} have displayed on substrates where are directly growth remains largely un-matched when ribbons are transferred onto electronic devices; therefore, I argue that a more detailed look at the deposition picture is essential for improving device yield and reproducibility. In order to fulfill this purpose, I qualitatevely studied the effect of different depositon techniques when a solution of liquid-processable nanoribbons was dropcasted on top of the substrate. By substrate here I refer to the a chip where gold and graphene pads have been shaped.
+One of the key point of device fabrication are the complex interactions which occur when a molecular adduct has to be transferred onto specific substrates~\cite{nerngchamnong2013role, huskens2004model}. The rich and wide physics \glspl{GNR} have displayed on substrates where are directly growth remains largely un-matched when ribbons are transferred onto electronic devices; therefore, I argue that a more detailed look at the deposition picture is essential for improving device yield and reproducibility. In order to fulfill this purpose, I qualitatevely studied the effect of different depositon techniques when a solution of liquid-processable nanoribbons was dropcasted on top of the substrate. By substrate here I refer to the a chip where gold and graphene pads have been shaped.
 
 \glspl{GNR} were first diluted in an organic apolar solvent before being dropcasted onto the substrate. Apolar solvents have been a valid choice in order to prevent unwanted charge-doping effects of graphene sheets. I have preferably used toluene, choloroform and \gls{THF} to this purpose: this were largely based on suggestions from our collaborators who synthesised the \glspl{GNR} I have used and by Dr Xuelin Yao. I have also attempted to use higher boiling points solvents such as 1-phenyloctane. The logic behind this choice is that the depositon process is largely dependend on the interactions established between the ribbon and the different surfaces on to of the chip.
 
-In order to favour the $\pi-\pi^*$ interactions between the graphene leads and a single \gls{GNR} strand, a thermodynamic equilibrium between the amount of substance $i$ absorbed on the electrode per unit area, $\Gamma_i$, and in the bulk (the ribbon in the solvent) should be favoured compared to kinetic-related processes such as mass transfer by migration and diffusion.
+In order to favour $\pi$--$\pi^*$ interactions between the graphene leads and a single \gls{GNR} strand, a thermodynamic equilibrium between the amount of substance $i$ absorbed on the electrode per unit area, $\Gamma_i$, and in the bulk (the ribbon in the solvent) should be favoured compared to kinetic-related processes, such as mass transfer by migration and diffusion.
 
 An estimate of these interactions is provided by first-principle calculations where different anchoring groups such as pyrene and hexabenzocoronene were tested~\cite{limburg2018anchor}. Approximately, the interaction between a graphene sheet and a pyrene molecule was calculated to be \SI{26.3}{\milli\electronvolt}/atom. The large-width limit for the binding interaction between two graphene sheet reports ranges within this estimate: \SIrange{10}{30}{\milli\electronvolt}/atom for a stacking of type $AA$ with an interlayer distance of \SI{3.3}{\angstrom}, and \SIrange{18}{23}{\milli\electronvolt}/atom for $AB$-type stacking~\cite{mostaani2015quantum}.
 
@@ -171,22 +184,20 @@ An estimate of these interactions is provided by first-principle calculations wh
         \includegraphics[width=0.95\textwidth]{chapter_fabrication/figures/dry_cycling.pdf}
         \caption[Dry-Cycling Deposition Method]
         {
-            \textbf{a,} Cartoon of the dry-cycling process. After a short period of incubation (\SI{10}{\second}), the substrate is removed, dried, and reintroduced into the CNT solution. This process is repeated for at least 10 times.
-            \textbf{b,} Comparison of deposition rates for baseline incubation (single-cycle deposition) and dry-cycling incubation. This corresponds to a 1.5-fold increase in linear density and a $>1,000$-fold increase in speed in comparison to the baseline incubation. Error bars indicate the 97.5\% confidence interval.
-            \textbf{c,} Cartoon of \gls{ACE}. A low-concentrated \gls{GNR} solution is deposited onto the substrate which is incubated in a solvent-rich environment. As the solvent evaporates, \glspl{GNR} solution increases.
-            \textbf{d,} Comparison of the linear density attained during \gls{ACE} incubation versus the initial incubation. After $\simeq1$h, \gls{ACE} achieves a 2.5-fold increase in density relative to the initial incubation at the same CNT stock concentration. Error bars depict the 97.5\% confidence interval. Adapted from~\cite{bishop2020fabrication}.
+            \textbf{a}, Cartoon of the dry-cycling process. After a short period of incubation (\SI{10}{\second}), the substrate is removed, dried, and reintroduced into the CNT solution. This process is repeated for at least 10 times.
+            \textbf{b}, Comparison of deposition rates for baseline incubation (single-cycle deposition) and dry-cycling incubation. This corresponds to a 1.5-fold increase in linear density and a $>1,000$-fold increase in speed in comparison to the baseline incubation. Error bars indicate the 97.5\% confidence interval.
+            \textbf{c}, Cartoon of \gls{ACE}. A low-concentrated \gls{GNR} solution is deposited onto the substrate which is incubated in a solvent-rich environment. As the solvent evaporates, \glspl{GNR} solution increases.
+            \textbf{d}, Comparison of the linear density attained during \gls{ACE} incubation versus the initial incubation. After $\simeq1$h, \gls{ACE} achieves a 2.5-fold increase in density relative to the initial incubation at the same CNT stock concentration. Error bars depict the 97.5\% confidence interval. Adapted from~\cite{bishop2020fabrication}.
         }
         \label{fig:farbication:dry-cycling}
     \end{center}
 \end{figure}
 %
-The deposition strategy we adopted to fabricate \glspl{GNRFET} was inherited from the \gls{CNT} literature and is known as \textit{dry-cycling} incubation~\cite{bishop2020fabrication}. The technique leverages the Frumkin isotherm to limit the \gls{GNR} desorption in favour of a faster deposition rate. The substrate is submerged in a \gls{GNR} solution and incubated for \SI{10}{\second} seconds, leveraging the fast, linear deposition regime outlined in Fig.~\ref{fig:fabrication:buffon_probability}. After removing it from the solution, it is washed with IPA and gently blowdry with nitrogen.
-
-This \textit{single-cycle} incubation is repeated several times. Fig.~\ref{fig:farbication:dry-cycling}b shows the \gls{CNT} linear density together with control samples, and put in evidence the higher surface coverage ($\simeq \SI{45}{\unit{CNT\per\micro\metre}}$ after \SI{150}{\second}).
+The deposition strategy we adopted to fabricate \glspl{GNRFET} was inherited from the \gls{CNT} literature and is known as \textit{dry-cycling} incubation~\cite{bishop2020fabrication}. The technique leverages the Frumkin isotherm to limit the \gls{GNR} desorption in favour of a faster deposition rate. The substrate is submerged in a \gls{GNR} solution and incubated for \SI{10}{\second} seconds, leveraging the fast, linear deposition regime outlined in Fig.~\ref{fig:fabrication:buffon_probability}. After removing it from the solution, it is washed with IPA and gently blowdry with nitrogen. This \textit{single-cycle} incubation is repeated several times. Fig.~\ref{fig:farbication:dry-cycling}b shows the \gls{CNT} linear density together with control samples, and put in evidence the higher surface coverage ($\simeq \SI{45}{\unit{CNT\per\micro\metre}}$ after \SI{150}{\second}).
 
 In addition to slowing the desorption rate, increasing the rate of adsorption is complementary to the dry-cycling method. In order to achieve this, and according to the chemical equilibrium principle, evaporation of the solvent would be slowed down when this evaporates in a gas-phase-rich atmosphere. With this method, also known as \gls{ACE} (Fig.~\ref{fig:farbication:dry-cycling}c,d), the solvent evaporates graduallty from the solution over time, increasing the concentration of \glspl{GNR} above the initial concentration. Importantly, the rate of solvent evaporation is crucial for uniformity because sliding during rapid droplet evaporation generates \textit{coffee ring} effect, resulting in non-uniform deposition throughout the substrate~\cite{deegan1997capillary}.
 
-In chapters \ref{ch:gnrset} and \ref{ch:solubility}, transport spectroscopy at milliKelvin temperatures reveals that an improved \glspl{GNR} solubility is paramount for studying their fundamental physiochemical properties when integrated in a working electronic device. This enhancement has to be sought in the bulky  (maleimide) functionalisation introduced thorough a Diels--Alder reaction. This may be schematically written as
+In chapters \ref{ch:gnrset} and \ref{ch:solubility}, transport spectroscopy at \si{\milli\kelvin} temperatures reveals that an improved \glspl{GNR} solubility is paramount for studying their fundamental physiochemical properties when integrated in a working electronic device. This enhancement has to be sought in the bulky  (maleimide) functionalisation introduced thorough a Diels--Alder reaction. This may be schematically written as
 
 \begin{equation}
     \label{eq:absorption}
@@ -199,46 +210,60 @@ As a result, we had to employ solvents with lower boiling points for an optimal 
 
 \section{Cryogenic-Temperature DC Transport Setup}\label{ch:fabrication:triton_setup}
 
-Transport experiments at milliKelvin temperatures were performed in a Triton 200 Oxford Instrument dilution refrigerator equipped with a 3D vector rotate magnet (VRM). The schematic of the instrumentation is outlined in Fig.~\ref{fig:triton_schematic}. The operation principles can be found in the dedicated manual provided by the Oxford Instruments.
+Transport experiments at \si{\milli\kelvin} temperatures were performed in a Triton 200 Oxford Instrument dilution refrigerator equipped with a 3D vector rotate magnet (VRM). The schematic of the instrumentation is outlined in Fig.~\ref{fig:triton_schematic}. The operation principles can be found in the dedicated manual provided by the Oxford Instruments.
 
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_fabrication/figures/triton_schematic.pdf}
-        \caption[Millikelvin Setup: $^3$He/$^4$He Dilution Refrigerator]{The Triton 200 schematics. The pulse-tube cooler is shown in orange, the pre-cool circuit in red, and the dilution circuit in blue. The different plates and their temperatures are also shown. The magnet (violet) is heated by the PT2 plate. Adapted from the Triton User Manual, courtesy of Oxford Instruments.}
+        \caption[\si{\milli\kelvin} Setup: $^3$He/$^4$He Dilution Refrigerator]{The Triton 200 schematics. The pulse-tube cooler is shown in orange, the pre-cool circuit in red, and the dilution circuit in blue. The different plates and their temperatures are also shown. The magnet (violet) is heated by the PT2 plate. Adapted from the Triton User Manual, courtesy of Oxford Instruments.}
         \label{fig:triton_schematic}
     \end{center}
 \end{figure}
 
-The \gls{DC} electronic system makes use of a low-noise home-made equipment (Delft Box), which is controlled using the Python interface QTlab (Fig.~\ref{fig:fabrication:dc_setup}).
+The \gls{DC} electronic system makes use of a low-noise home-made equipment, which is controlled using the Python interface QTlab (Fig.~\ref{fig:fabrication:dc_setup}).
 
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=0.95\textwidth]{chapter_fabrication/figures/DC_setup.pdf}
         \caption[DC Electronics Setup, Digitizer Calibration Curve, and Current-to-Voltage Converter]
         {
-            \textbf{a,} Schematic view of the DC electronics setup used in cryogenic transport. The low-pass filters before the DUT encompass RC with cutoff frequencies $f_\textrm{T}$ between \SIrange{5}{11e3}{\Hz}, Cu powder ($f_\textrm{T}\simeq\SI{100}{\kilo\hertz}$), and LC filters.
-            \textbf{b,} The Alazar card four channels have been calibrated against known voltages output from an oscilloscpe (scope for short).
+            \textbf{a}, Schematic view of the DC electronics setup used in cryogenic transport. The low-pass filters before the DUT encompass RC with cutoff frequencies $f_\textrm{T}$ between \SIrange{5}{11e3}{\Hz}, Cu powder ($f_\textrm{T}\simeq\SI{100}{\kilo\hertz}$), and LC filters.
+            \textbf{b}, The Alazar card four channels have been calibrated against known voltages output from an oscilloscpe (scope for short).
             \textbf{c,top}  Current-to-voltage simplified schematic and its equivalent circuit \textbf{c,bottom}. For the M1b adopted in our setup, a manual dial allows changing $Z_g$ between \SIrange{1}{1e3}{\mega\ohm}.
         }
         \label{fig:fabrication:dc_setup}
     \end{center}
 \end{figure}
 %
-Digital values from a desktop computer are sent into an optical signal generator, which produces a serial input for the \gls{DAC}, which generates and reads voltages (bias $V_\textrm{SD}$ and $V_\textrm{G}$). The four accessible \glspl{DAC} each have a 16-bit resolution and can read/write voltages between $\pm\SI{2}{\volt}$. Higher voltages are managed by using a high-impedance voltage source. The entire unit is battery-powered to provide complete isolation from the main source of electronic noise, and the switch box connected to the Delft box provides simple switching between different devices (Fig.~\ref{fig:dc_lines_chipboard}).
+Digital values from a desktop computer are sent into an optical signal generator, which produces a serial input for the \gls{DAC}, which generates and reads voltages (bias $V_\textrm{SD}$ and $V_\textrm{G}$). The four accessible \glspl{DAC} each have a 16-bit resolution and can read/write voltages between $\pm\SI{2}{\volt}$. Higher voltages are managed by using a high-impedance voltage source. The entire unit is battery-powered to provide complete isolation from the main source of electronic noise, and the switch box provides simple switching between different devices, as well as protection agains \gls{ESD} that can permanently damage the sample (Fig.~\ref{fig:dc_lines_chipboard}).
 
-Input signals from the switch board are routed through the internal circuitry of the Delft box before entering the fride. After passing through a series of low-pass filters, the current is cooled by two sapphire heat sinks on the PT2 plate and two on the MC plate. An RC filter, a meandering-line copper powder filter, three LC filters, and another RC filter are included. The input signals are then routed to the sample through a 48-wire NanoD connection. The sample chip is wire-bonded to a 48-pin chip holder (Fig.~\ref{fig:dc_lines_chipboard}b), which is mounted on a home-made printed circuit board.
+% \begin{figure}[hbtp]
+%     \begin{center}
+%         \includegraphics[width=\textwidth]{chapter_fabrication/figures/triton_schematic_dc_wiring.pdf}
+%         \caption[Electronic Setup at mK]
+%         {
+%             bla
+%         }
+%         \label{fig:dc_vertical}
+%     \end{center}
+% \end{figure}
+
+Input signals from the switch board are routed through the measurement electronics before entering the fride. After passing through a series of low-pass filters (Fig.~\ref{fig:dc_vertical}), the current is cooled by two sapphire heat sinks on the PT2 plate and two on the MC plate. An RC filter, a meandering-line copper powder filter, three LC filters, and another RC filter are included. The input signals are then routed to the sample through a 48-wire NanoD connection. The sample chip is wire-bonded to a 48-pin chip holder (Fig.~\ref{fig:dc_lines_chipboard}b), which is mounted on a home-made printed circuit board.
 
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_fabrication/figures/dc_lines_chipboard.pdf}
-        \caption[Breakout Box Connection, Chipholder Schematic, and DC Lines Frequency Test]{\textbf{a,} Breakout box of DC connections. A second breakout box is used for connections from 26 to 48.
-            \textbf{b,} Chipholder schematic with each connection numbers: pin 11 is used to orientate the chip in the correct direction.
-            \textbf{c,} Frequency test. Powder (Cu) and RC filters set frequency operation limit theoretically up to \SI{10}{\kilo\hertz}. In practice we experimentally observed a statistical significance degradation of the signal already at \SI{5}{\kilo\hertz}.}
+        \caption[Breakout Box Connection, Chipholder Schematic, and DC Lines Frequency Test]
+        {
+            \textbf{a}, Breakout box of DC connections. A second breakout box is used for connections from 26 to 48.
+            \textbf{b}, Chipholder schematic with each connection numbers: pin 11 is used to orientate the chip in the correct direction.
+            \textbf{c}, Frequency test. Powder (Cu) and RC filters set frequency operation limit theoretically up to \SI{10}{\kilo\hertz}. In practice we experimentally observed a statistical significance degradation of the signal already at \SI{5}{\kilo\hertz}.
+        }
         \label{fig:dc_lines_chipboard}
     \end{center}
 \end{figure}
 
-The DUT source--drain current travels in reverse order via the specified components until it reaches the current amplifier (Fig.~\ref{fig:fabrication:dc_setup}), which can amplify and monitor currents with noisefloors as low as \SI{5}{\femto\ampere\per\Hz\tothe{0.5}} (at \SI{1}{\giga\volt\per\ampere}). The amplified output is then supplied into the Alazar data acquisition board via a coax wire, with the sampling rate set to 100 MS$^-1$ throughout the most portion of our experiment. The QTLab interface specifies an integration time $t_{\textrm{int}}$ during which the Alazar card samples the source--drain current before computing and storing the average.
+The DUT source--drain current travels in reverse order via the specified components until it reaches the current amplifier (Fig.~\ref{fig:fabrication:dc_setup}), which can amplify and monitor currents with noisefloors as low as \SI{5}{\femto\ampere\per\Hz\tothe{0.5}} (at \SI{1}{\giga\volt\per\ampere}). The amplified output is then supplied into an Alazar data acquisition board (model ATS9440) via a coax wire, with the sampling rate set to 100 MS$^-1$ throughout the most portion of our experiment. The QTLab interface specifies an integration time $t_{\textrm{int}}$ during which the Alazar card samples the source--drain current before computing and storing the average.
 
 It is necessary to emphasize that the voltages read by the Alazar card are inaccurate. This is likely due to the input impedance setting, which causes the voltage to drop. To overcome this, a calibration curve (Fig.~\ref{fig:fabrication:dc_setup}b) was constructed by measuring known voltages with both the Alazar card and an oscilloscpe. All the numerical data presented in this thesis have been rescaled by using analogous calibration curves.
 

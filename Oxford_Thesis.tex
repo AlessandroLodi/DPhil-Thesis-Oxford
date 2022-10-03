@@ -115,6 +115,8 @@
 % https://tex.stackexchange.com/questions/361019/unicode-error-in-inputenc-package
 \DeclareUnicodeCharacter{2212}{-}
 \DeclareMathOperator\arccosh{arccosh}
+\DeclareSIUnit\bar{bar}
+
 %%%%% THE ACTUAL DOCUMENT STARTS HERE
 \begin{document}
 
@@ -225,8 +227,9 @@
 % \printinunitsof{in}\prntlen{\textheight}
 
 \setcounter{mtc}{2}
+\include{chapter_preintro/preintro}
 \include{chapter_introduction/introduction}
-\include{chapter_theory/theory}
+% \include{chapter_theory/theory}
 \include{chapter_fabrication/fabrication}
 \include{chapter_instr_dev/instr_development}
 \include{chapter_gnrset/gnrset}

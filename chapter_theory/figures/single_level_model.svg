@@ -23,15 +23,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.5144501"
-     inkscape:cx="236.38944"
-     inkscape:cy="139.98481"
-     inkscape:window-width="1842"
-     inkscape:window-height="1057"
-     inkscape:window-x="70"
-     inkscape:window-y="-8"
+     inkscape:zoom="2.1417559"
+     inkscape:cx="193.06589"
+     inkscape:cy="38.986703"
+     inkscape:window-width="2462"
+     inkscape:window-height="1411"
+     inkscape:window-x="89"
+     inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g73492-1-8-3"
+     inkscape:current-layer="g7467"
      inkscape:showpageshadow="0"
      inkscape:deskcolor="#505050" />
   <defs
@@ -187,7 +187,7 @@
              x="30.531839"
              y="94.465744"
              id="tspan1510-8-6-3"
-             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke-width:0.335698">Γ</tspan></text>
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke-width:0.335698">Γ</tspan></text>
         <path
            d="m 32.76148,95.285905 v -3.23948"
            style="fill:none;stroke:#231f20;stroke-width:0.167849;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -266,11 +266,9 @@
              x="28.438948"
              y="74.593857"
              id="tspan1510-8-6-3-6"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;fill:#030202;fill-opacity:1;stroke-width:0.335698"><tspan
-               style="font-style:italic"
-               id="tspan1010">Γ</tspan><tspan
-               style="font-size:65%;baseline-shift:sub"
-               id="tspan1008">L</tspan></tspan></text>
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;fill:#030202;fill-opacity:1;stroke-width:0.335698">Γ<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan1008">L</tspan></tspan></text>
         <text
            style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.34988px;font-family:'Minion Pro';-inkscape-font-specification:MinionPro-It2;writing-mode:lr-tb;fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.335698"
            id="text1512-0-8-8-6-6"
@@ -279,11 +277,9 @@
              x="55.397934"
              y="74.263138"
              id="tspan1510-8-6-3-6-4"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke-width:0.335698"><tspan
-               style="font-style:italic"
-               id="tspan1012">Γ</tspan><tspan
-               style="font-size:65%;baseline-shift:sub"
-               id="tspan1014">R</tspan></tspan></text>
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke-width:0.335698">Γ<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan1014">R</tspan></tspan></text>
         <text
            xml:space="preserve"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.34988px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;fill:#231f20;fill-opacity:1;stroke-width:0.251773"

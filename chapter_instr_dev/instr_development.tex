@@ -56,7 +56,17 @@ A great deal of information about the theory and tips of integrating a lock-in a
 
 With a lock-in detection scheme, an oscillating voltage $V_\textrm{osc} (f)$ is superimposed to a \gls{DC} signal in order to produce an oscillating current $I_\textrm{tot} (f) = I_\textrm{DC} + I_\textrm{AC} (f)$. The $1/f$ noise is suppressed outside a narrow band $f \pm \tau^{-1}$, where $\tau$ is the integration time. The lock-in frequency $f$ must also not sit at a harmonic of the square wave of the main grid as this will also give an incorrect resistance value.
 Tipically, to check a suitable lock in frequency, it is reccommended to run a power noise spectrum check over the entire frequency domain one intend to explore.
-
+%
+\begin{figure}[hbtp]
+    \begin{center}
+        \includegraphics[width=\textwidth]{chapter_fabrication/figures/circuit_diagram_meas_fridge.pdf}
+        \caption[Circuit Schematic of a Voltage-Biased Sample Thorough the Breakout Box]{
+            \textbf{a}, An example of circuit diagram of a voltage-biased sample $R_d$ in series with two $RC$ filters and measured by a current-to-voltage (M1b) converter.
+            \textbf{b}, Because the device resistance is finite and the operating frequency is well below the DC lines bandwidth, it is assumed that capacitors' frequency response plays no role. Adapted from~\cite{lock-in_kavli}.}
+        \label{fig:exp:circuit_diagram_meas_fridge}
+    \end{center}
+\end{figure}
+%
 Compared with \gls{DC}, \gls{AC} conductance measurements can introduce errors on the scale of 10 points percent of the total signal, because the technique is susceptible to aberrations originating in the complex domain. Therefore, it is advisable to take extra caution if accurate conductance values are required. More loosen conditions can be considered, on the contrary, if qualitative features are desired, rather than accurate values.
 
 Fridge lines are filter with RC and Cu powder filter. At finite frequency $\omega =  2\pi f$, each circuit component response has to be modeled in the complex plane. As long as all the $k$ capacitors active across all the stages within the fridge do not draw any current, i.e.  $R_i \ll 1/(\omega C_k)$ where the subscript $i$ denotes the number of resistance, it is safe to exclude any parasitic components when one attempts to recover the resistance value for the device under test.
@@ -69,15 +79,7 @@ This general rule might be thought as the requirement to work with oscillating v
 %
 As we have discussed previosuly (Fig.~\ref{fig:dc_lines_chipboard}c in Ch.~\ref{ch:fabrication}), the cut-off frequency set by our setup is around \SI{1}{\kilo\hertz}, even though the \SI{-3}{\decibel} point lies around one order of magnitude higher. The finite-frequency efficiency and response of the DC lines is, however, not the only factor that one has to take into account when adopting AC techiniques.
 %
-\begin{figure}[hbtp]
-    \begin{center}
-        \includegraphics[width=\textwidth]{chapter_fabrication/figures/circuit_diagram_meas_fridge.pdf}
-        \caption[Circuit Schematic of a Voltage-Biased Sample Thorough the Breakout Box]{
-            \textbf{a}, An example of circuit diagram of a voltage-biased sample $R_d$ in series with two $RC$ filters and measured by a current-to-voltage (M1b) converter.
-            \textbf{b}, Because the device resistance is finite and the operating frequency is well below the DC lines bandwidth, it is assumed that capacitors' frequency response plays no role. Adapted from~\cite{lock-in_kavli}.}
-        \label{fig:exp:circuit_diagram_meas_fridge}
-    \end{center}
-\end{figure}
+
 
 Because of its narrow bandwidth of approximately \SI{200}{\kilo\hertz}, the low-noise current amplifier used in our setup (Fig.~\ref{fig:exp:circuit_diagram_meas_fridge}) is especially susceptible to lock-in finite-frequency problems as well: the design objective is to minimise the operating current, hence reducing risk of back-action into sample. Nonetheless, this constrains the operating frequency to approximately \SI{30}{\kilo\hertz}\footnote[2]{The Zurich Instruments lock-in contains a built-in functionality that allows frequency sweep while monitoring the voltage noise calculated in \si{\nano\volt\per\Hz\tothe{0.5}} for a given lock-in measurement bandwidth.}. When this condition is not met, one must consider only the features of the measurement results and not their exact values.
 
@@ -103,6 +105,7 @@ In our setup {Fig.~\ref{fig:exp:lockin}}, the isolated-amplifier input module is
 
 Experiment routines were implemented into the existing setup by instantiating a lock-in instance and integrating it into the superclass station, which contains instances for all the other required instruments. In Fig.~\ref{fig:exp:dc_vs_ac} we compare the charge stability maps of the same device acquired in \gls{DC} (top) and using the lock-in (bottom) using equivalent integration times.
 
+\newpage
 \section{Micro-Hall Devices}\label{ch:instr_dev:sec:hall_bar}
 
 The ability to fabricate, control, and manipulate the properties of magnetic structures~\cite{coronado2020molecular} has not only led to the discovery of several new physical phenomena~\cite{coronado2010coexistence, bogani2008molecular, cervetti2016classical}, but also to the development of a large pool of experimental techniques for studying such structures~\cite{tang2011characteristics, collomb2019nanoscale}. In this regard, micro-probe magnetometry based on the Hall effect is of particular interest. It offers high-field sensitivity even when the dimensionality shrinks down to the nanoscale, has excellent operating ranges in terms of temperature and magnetic field, and it is non-invasive.
@@ -241,7 +244,7 @@ The fabrication procedure begins with the removal of PMMA in acetone overnight, 
 
 Then, graphene was encapsulated in AlO$\textrm{x}$ \SI{100}{nm} via ALD with \ce{H2O} pre-treatment to promote nucleation. The chip was then put within a chip carrier. Backgate was secured by scraping the Si backside and using Ag paste for mechanical and electrical device mounting. High gate voltages up to $\pm\SI{50}{\volt}$ were guaranteed by a bipolar high voltage source module wired to the \gls{DAC}.
 
-\subsection{Measurement Tests}
+\subsection{Test Measurements}
 
 Fig.~\ref{fig:exp:hb_empty_1kHz_response_Mn12_crystal} shows the \gls{GHB} schematic and its electrical response when the gate voltage is swept, demonstrating graphene typical ambipolar field-effect-transistor behaviour. Hysteresis was observed both at \SI{50}{\kelvin} and \SI{2}{\kelvin} by repeatdly sweeping $V_\textrm{G}$ and observing a shift in the Dirac point between forward and backward sweep; we believe hysteresis is due to  the presence of water molecules adsorbed onto the graphene. A saturated solution of \ce{Mn12} is prepared (\SI{100}{\milli\gram} dissolved in \SI{1}{\milli\litre} in acetonitrile). \SI{5}{\micro\litre} are drop cast onto the Hall bar with all the lines grounded, and the solution is allowed to evaporate before loading the sample into the dilution fridge.
 

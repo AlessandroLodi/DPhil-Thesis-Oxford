@@ -237,16 +237,16 @@ The \gls{DC} electronic system makes use of a low-noise home-made equipment, whi
 %
 Digital values from a desktop computer are sent into an optical signal generator, which produces a serial input for the \gls{DAC}, which generates and reads voltages (bias $V_\textrm{SD}$ and $V_\textrm{G}$). The four accessible \glspl{DAC} each have a 16-bit resolution and can read/write voltages between $\pm\SI{2}{\volt}$. Higher voltages are managed by using a high-impedance voltage source. The entire unit is battery-powered to provide complete isolation from the main source of electronic noise, and the switch box provides simple switching between different devices, as well as protection agains \gls{ESD} that can permanently damage the sample (Fig.~\ref{fig:dc_lines_chipboard}).
 
-\begin{figure}[hbtp]
-    \begin{center}
-        \includegraphics[width=\textwidth]{chapter_fabrication/figures/triton_schematic_dc_wiring.pdf}
-        \caption[Electronic Setup at mK]
-        {
-            Schematic view of the DC electronics setup for mK transport spectroscopy. From~\cite{sopp2021phd}
-        }
-        \label{fig:dc_vertical}
-    \end{center}
-\end{figure}
+% \begin{figure}[hbtp]
+%     \begin{center}
+%         \includegraphics[width=\textwidth]{chapter_fabrication/figures/triton_schematic_dc_wiring.pdf}
+%         \caption[Electronic Setup at mK]
+%         {
+%             Schematic view of the DC electronics setup for mK transport spectroscopy. From~\cite{sopp2021phd}
+%         }
+%         \label{fig:dc_vertical}
+%     \end{center}
+% \end{figure}
 
 Input signals from the switch board are routed through the measurement electronics before entering the fride. After passing through a series of low-pass filters (Fig.~\ref{fig:dc_vertical}), the current is cooled by two sapphire heat sinks on the PT2 plate and two on the MC plate. An RC filter, a meandering-line copper powder filter, three LC filters, and another RC filter are included. The input signals are then routed to the sample through a 48-wire NanoD connection. The sample chip is wire-bonded to a 48-pin chip holder (Fig.~\ref{fig:dc_lines_chipboard}b), which is mounted on a home-made printed circuit board.
 

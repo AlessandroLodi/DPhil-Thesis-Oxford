@@ -23,15 +23,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="2"
-     inkscape:cx="324.75"
-     inkscape:cy="222.25"
+     inkscape:zoom="5.6568542"
+     inkscape:cx="233.78718"
+     inkscape:cy="416.75106"
      inkscape:window-width="2462"
      inkscape:window-height="1411"
-     inkscape:window-x="2649"
+     inkscape:window-x="89"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g922"
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:showpageshadow="0"
@@ -407,7 +407,7 @@
        xml:space="preserve"
        transform="scale(0.26458333)"
        id="text183080"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect183082)" />
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect183082);display:inline" />
     <g
        id="g922"
        transform="matrix(0.78162173,0,0,0.78162173,1.2239632,3.4612674)"
@@ -762,7 +762,7 @@
    style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.596943"
    id="tspan36405">V</tspan><tspan
    style="font-size:65%;baseline-shift:sub;stroke-width:0.596943"
-   id="tspan816">G</tspan> (arb.un.)</tspan></text>
+   id="tspan816">G</tspan> (arb. un.)</tspan></text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;stroke-width:0.596943"
@@ -844,7 +844,7 @@
    style="font-style:italic;stroke-width:0.596943"
    id="tspan810">V</tspan><tspan
    style="font-size:65%;baseline-shift:sub;stroke-width:0.596943"
-   id="tspan822">SD</tspan> (arb.un.)</tspan></text>
+   id="tspan822">SD</tspan> (arb. un.)</tspan></text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;stroke-width:0.596943"
@@ -1211,7 +1211,7 @@
    style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.43829px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.329919"
    id="tspan137894">E</tspan><tspan
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.23489px;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:sub;stroke-width:0.329919"
-   id="tspan176536">z</tspan></tspan></text>
+   id="tspan176536">Zeeman</tspan></tspan></text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.12593px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;stroke-width:0.329919"
@@ -1305,7 +1305,7 @@
    style="font-style:italic;stroke-width:0.329917"
    id="tspan916">V</tspan><tspan
    style="font-size:65%;baseline-shift:sub;stroke-width:0.329917"
-   id="tspan922">G</tspan> (arb.un.)</tspan></text>
+   id="tspan922">G</tspan> (arb. un.)</tspan></text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;stroke-width:0.329917"
@@ -1387,7 +1387,7 @@
    style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.329917"
    id="tspan36405-1-7">V</tspan><tspan
    style="font-size:3.21028px;baseline-shift:sub;stroke-width:0.329917"
-   id="tspan832">SD</tspan> (arb.un.)</tspan></text>
+   id="tspan832">SD</tspan> (arb. un.)</tspan></text>
       <path
          style="fill:none;stroke:#9511a1;stroke-width:0.59354;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.59354, 1.18708;stroke-dashoffset:0;stroke-opacity:1"
          d="m 54.924834,170.31546 4.704902,4.70491"

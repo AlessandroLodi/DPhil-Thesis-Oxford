@@ -59,8 +59,6 @@ In addition to this, the DFT simulations suggests that the aromatic structure of
 
 Interestingly, despite the fact that both the bromine and chlorine substitutions share electrons with the ribbon preferentially via $\sigma$-bond, GNR--Cl exhibits a more pronounced bandgap contraction (Tab.~\ref{tab:bandgaps}) and a decrease in effective mass $m^*$ at the $\Gamma$ point of the conduction band. The same holds true for the case of methoxy substitution. As the effective mobility $\mu_\textrm{eff}$ of charge carriers is proportional to the inverse of their effective mass, a decrease in the effective mass of the charge carriers may be advantageous for their transport, possibly resulting in better device performance. On the other hand, no appreciable deviation from the base case is observed for the ribbon functionalized with Br groups, which could be explained by a lower electronegativity and consequently a lower ability to induce charge rearrangement of the ribbon frontier orbitals.
 
-
-
 % explain the doping shift from normal n for the Cl and Br to p for methoxy
 
 \begin{table}
@@ -114,8 +112,6 @@ In an attempt to quantify the effctiveness of the chemical functionalization, we
 We evaluated performance metrics after the introduction of the methoxy groups, namely the on-state conductance $G_\textrm{on}$ (Fig.~\ref{fig:methoxy_fet_stat_1}d) and the subthreshold swing $SS$ (Fig.~\ref{fig:methoxy_SS_slope}).
 Because surface techniques like as \gls{AFM} could not be used, we estimated the number of graphene nanoribbons in the conduction channel as follows. Since graphene nanogaps produced through electroburning are $d\simeq\SI{5}{\nano\metre}$, and the ribbons width is $w_\textrm{GNR}=\SI{1.12}{\nano\metre}$ (Fig.~\ref{fig:chem_doping:base_ribbon_length_distribution}) we estimate that the channel width $W_\textrm{ch}$ contains about 5 nanoribbons, thus $W_\textrm{ch}\simeq\SI{5}{\unit{GNR\per\nano\metre}}$. This number is supported also by similar estimates from Monte Carlo and STM~\cite{llinas2017short,lin2022scaling, de2016substrate}. The on-state conductance $G_\textrm{on} = G_\textrm{sat}/(w_\textrm{GNR}W_\textrm{ch})=\SI{0.03}{\siemens\per\milli\metre}$ and conductivity $\sigma=Gl_\textrm{GNR}/w_\textrm{GNR}=\SI{1.4}{\micro\siemens}$ is orders of magnitude lower compared to values from carbon nanotubes ($\sim\SI{500}{\micro\ampere\per\micro\metre}$), excluding for this ribbon wiring applications.
 
-
-
 To quantify the concentrations of chemically-induced charge carries control over the number of functional groups along is necessary, but unfortunately our colleagues could not achieved it yet. Furthermore, one interesting hypothesis to test would be to check if there is an edge-selectivity of the process, for example by adding chemical decorations on ribbons of varying width, and look for a width-dependent response: intuitively, narrower ribbons should yield an increased response, being the number of edge sites relative to ribbon basal plane sites higher.
 
 \begin{figure}[hbtp]
@@ -133,8 +129,6 @@ At room temperature, we see no fast switching behaviour (Fig.~\ref{fig:methoxy_S
 
 We would want to point out, however, that the conductive channel in our devices is poorly defined, as we do not have exact control over the structural arrangement of the nanoribbons on top of the leads due to dropcasting. The addition of 3D bulky groups that suppress the $\pi$--$\pi$ interactions between individual ribbons (see also Ch.~\ref{ch:solubility}) might further increase the performance of transistors like these. Future research should compare the device performance of GNR--OME with and without maleimide groups.
 
-
-
 \section{Substitutional Doping Through Heteroatoms Embedding in Graphene Nanoribbons Lattice}\label{gnr-hybrid:sec:measure}
 
 The idea of using chemical functionalisations to induce a preferential doping in carbon nanostructures is not new.
@@ -150,7 +144,7 @@ In contrast, bottom-up chemical synthesis may provide a viable route to structur
         {
             \textbf{a,} Cartoon of the device schematic and the electrical wiring.
             \textbf{b,} False-scale SEM image of a device sample, hihglighting the Au pads, \ce{HfO2} gate, graphene leads, and the electrical connections for biasing the device.
-            \textbf{c,} Room-temperature \gls{FET} response of a device under different biases. The device present a bandgap in the positive region of $V_\textrm{G}$, demonstrating p-doping effect. The estimated $E_g\simeq\SI{2}{\electronvolt}$ is in line with what we expect from optical absorption measurements.
+            \textbf{c,} Room-temperature \gls{FET} response of a device under different biases. Upon increasing $V_\textrm{G}$, a drastically reduced conductance is measured, demonstrating p-doping effect. The estimated $E_g\simeq\SI{2}{\electronvolt}$ is in line with what we expect from optical absorption measurements.
             \textbf{d,} Clear demonstration of \gls{SET} behaviour for \gls{pGNR} when these objects are cooled down at cryogenic ($T=\SI{20}{\milli\kelvin}$) temperatures. The possibility of discriminating n-doping from p-doping at RT makes the mapping of the various charge states more easy.
         }
         \label{fig:gnr-hybrid_cartoon_sem_fet}
@@ -308,14 +302,48 @@ In Table 3, we present the linear and saturation mobilities for a variety of dev
     \]
 \end{table}
 
+\begin{figure}[hbtp]
+    \begin{center}
+        \includegraphics[width=\textwidth]{text/b11_c4.pdf}
+        \caption[MGNR--Ni Hybrid: Additional FETs (device b11, c4)]
+        {
+            \textbf{left,} \gls{FET} characteristics:  $I_\textrm{on}/I_\textrm{off}\simeq 10^2$ at $V_\textrm{SD}=\SI{0.1}{\volt}$, ambipolar behaviour at  $V_\textrm{SD}=\SI{0.5}{\volt}$, $SS\simeq\SI{430}{\milli\volt}$~dec$^{-1}$ at $V_\textrm{SD}=\SI{0.5}{\volt}$.
+
+            \textbf{right,} \gls{FET} characteristics:  $I_\textrm{on}/I_\textrm{off}\simeq 10^2$ at $V_\textrm{SD}=\SI{0.3}{\volt}$, small hysteresis present in the $V_\textrm{SD}=\SI{0.3}{\volt}$ transfer characteristics, $SS\simeq\SI{435}{\milli\volt}$~dec$^{-1}$ at $V_\textrm{SD}=\SI{0.3}{\volt}$ for the forward sweep, degrades down to $SS\simeq\SI{870}{\milli\volt}$~dec$^{-1}$ for the backward sweep, $\mu_\textrm{lin}=\SI{11}{\centi\metre\squared\per\volt\per\second}$, $\mu_\textrm{sat}=\SI{4.3}{\centi\metre\squared\per\volt\per\second}$
+        }
+    \end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[hbtp]
+    \begin{center}
+        \includegraphics[width=\textwidth]{text/c6_c30.pdf}
+        \caption[MGNR--Ni Hybrid: Additional FETs (device c6, c30)]
+        {
+            \textbf{left,} \gls{FET} characteristics:  $I_\textrm{on}/I_\textrm{off}\simeq 10^2$ at $V_\textrm{SD}=\SI{0.3}{\volt}$, small hysteresis present in the $V_\textrm{SD}=\SI{0.3}{\volt}$ transfer characteristics, gap is a negative gates (slight n-doping), $SS\simeq\SI{860}{\milli\volt}$~dec$^{-1}$ at $V_\textrm{SD}=\SI{0.5}{\volt}$ for the forward sweep, degrades down to $SS\simeq\SI{925}{\milli\volt}$~dec$^{-1}$ for the backward sweep, $\mu_\textrm{lin}=\SI{39}{\centi\metre\squared\per\volt\per\second}$, $\mu_\textrm{sat}=\SI{4}{\centi\metre\squared\per\volt\per\second}$.
+            \textbf{right,} \gls{FET} characteristics:  $I_\textrm{on}/I_\textrm{off}\simeq 10^2$ at $V_\textrm{SD}=\SI{0.1}{\volt}$, $SS\simeq\SI{157}{\milli\volt}$~dec$^{-1}$ at $V_\textrm{SD}=\SI{0.6}{\volt}$, estimated channel length $L_\textrm{ch}\simeq\SI{40}{\nano\metre}$, $\mu_\textrm{lin}=\SI{28}{\centi\metre\squared\per\volt\per\second}$, $\mu_\textrm{sat}=\SI{6}{\centi\metre\squared\per\volt\per\second}$
+        }
+    \end{center}
+\end{figure}
+
 
 \section{Discussion}\label{gnr-hybrid:sec:summary}
 
-The role of chemical-induced doping in \glspl{GNRFET} is still an open problem. We have seen in Sec.~\ref{ch:doping:sec:methoxy} that methoxy functionalisations could be responsible in the doping observed through the shift of the CNP. Unfortunately, the shift of the CNP is a controversial debate, and often contaminations have produced the same effect. Furthermore, we could not test other graphene nanoribbons with different functionals groups. Two next steps would then be necessary for elucidating if there is a real doping effect at the device level. Firstly, groups subtracting electron density from the nanoribbons should be used. Following discussion with our collaborators it appears that this task is not easy to solve as attaching n-type of functionalisations are extremely challenging becuase of the lower edge reactivity to Diels--Alder polimerization reactions. Secondly, our measurements should be repeated in vacuum. in fact, repeated measurements in air have demonstrated to naturally p-doped graphene substrates.
+We attempted two things in this chapter. To begin, in order to investigate the feasibility of doping in graphene nanoribbons, we simulated the engineering of the electronic band structure using \gls{DFT}, when various chemical functionalisations, acting both as donors and acceptors of electrons, are inserted along the lateral edges onto the ribbon.
 
-Since the attachment along the edges of n-type dopants seems within the reach we have demonstrated in Sec.~\ref{gnr-hybrid:sec:measure} that a viable alternatiuv
-As we have seen in
+The energy shifts produced by the insertion of dopant atoms appear to have a weak effect on the bandgap at the level of accuracy we simulated. We did not examine how the bandgap shrinkage can be influenced by increasing the ribbon width while maintaining the chemical group, and as such, we encourage further research in the future. For decreasing ribbon widths, we expect to detect negligible impacts of the dopant atom, although out predictions could be skewed by progressively high many-body correlations taking over. In particular, by considering a $\Delta E_g\simeq\SI{300}{\milli\electronvolt}$, which is roughly the variation observed in Tab.~\ref{tab:bandgaps} for the methoxy groups, I expect that doping effect should become visible widths as large as $\simeq\SI{30}{\nano\metre}$.
+
+The role of chemically-induced doping in \glspl{GNRFET} is still an open problem. We have seen in Sec.~\ref{ch:doping:sec:methoxy} that methoxy functionalisations could be responsible for the doping observed through the shift of the CNP. However, the bare shift of the CNP is a controversial, and often molecules adsorbed onto the surface or contaminations left from the photoresists can induce shift too.
+In order to have a more strong experimental evidence these measurements should be repeated in controlled atmospheres, such as vacuum and nitrogen.
+
+The  Furthermore, we could not test other graphene nanoribbons with different functionals groups. Two next steps would then be necessary for elucidating if there is a real doping effect at the device level. Firstly, groups subtracting electron density from the nanoribbons should be used. Following discussion with our collaborators it appears that this task is not easy to solve as attaching n-type of functionalisations are extremely challenging becuase of the lower edge reactivity to Diels--Alder polimerization reactions. Secondly, our measurements should be repeated in vacuum. in fact, repeated measurements in air have demonstrated to naturally p-doped graphene substrates.
 
 
-\section{Summary}
+\section{Outlook and Perspectives}\label{gnr-hybrid:sec:summary}
+
+The difficulty of carrying out edge-doping is addressed by measuring another class of very promising emerging materials, i.e.\ \glspl{pGNR}, where the dopant atoms is introduced thorugh a porphyrin directly into the honeycomb lattice of the \gls{MGNR}. The motivations come from the fact that (1) fused porphyrin oligomers (also called \textit{tape}) have displayed an increase in the conductance for longer tapes, an observation rationalised with the bandgap shrinkage~\cite{leary2018bias}, and (2) that magnetic porphyrins attached to\glspl{GNR} are able to retain their magnetic fingerprint~\cite{he2017fusing}, not compromising those topological states intensively sought-after for the creation of robust molecular qubits. The results are encouraging: the porphyrin embedded in the \gls{MGNR} topology results in \gls{FET} where both n and p-doping can be induced, fast switching behaviour can be observed, and field-effect mobilities are in line with what expected from \glspl{FET} at ambient condition.
+
+
+\section{Project Overview}
 \Glspl{pGNR} were provided by Dr Qiang Chen and prof.\ Harry Anderson. Fanmiao Kong assisted me in configuring the electronic computations on the ARC supercomputing centre, which we thank for its cooperation and assistance in troubleshooting issues when jobs were not running.

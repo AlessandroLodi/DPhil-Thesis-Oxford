@@ -345,18 +345,194 @@ As previously pointed out, in order to keep the off-current low, not only the ch
 \subsection{Contact-Length Scaling}
 When \glspl{MOSFET} are shrank down to the nanoscale, one must consider also the effect played by the overlap of the \gls{CNT} with source and drain. Numerical investigations of this phenomenon have suggested that high contact transparencies might result when the metal--\gls{CNT} coupling is weak, meaning the electronic states of the tube are, more or less, unchanged after the formation of the lead--\gls{CNT} junctions~\cite{fediai2015electron, teichert2019improved, fediai2016towards}. Especially for long contacts ($L_\textrm{c}\simeq\SI{30}{\nano\metre}$), one suggestion advanced by these studies was that in order to achieve high contact transparencies one should minimize coupling while maximising the overlap region, and that the junction Pd--\gls{CNT} might leads to quasi-Ohmic contacts~\cite{liu2017scaling}.
 
-By using the transfer length\footnote[2]{The transfer length is the distance over which a fraction equal to $1-e^{-1}$ of the total current is \textit{transferred} from the contact metal to the semiconducting channel ($e$ is the Euler's number), and it is frequently used as a metric for quantifying the coupling between electrical contacts and conduction channel (small transfer lengths result in greater couplings, and, consequently, lower contact resistances)~\cite{saraswat2021materials}.} model, experiments performed on small-diameter ($d_\textrm{CNT}\simeq\SI{1.5}{\nano\metre}$) \glspl{CNT} highlighted inverse scaling of the contact length with the resistance between the nanotube and the electrodes, i.e.\ $L_\textrm{c}\propto1/R_\textrm{c}$~\cite{purewal2007scaling, franklin2010length}. These observations were rationalised by considering dipole moments building up at the metal--\gls{CNT} interface~\cite{leonard2000role}, which are likely caused by interface states at the junction
+By using the transfer length\footnote[2]{The transfer length is the distance over which a fraction equal to $1-\exp{-1}$ of the total current is \textit{transferred} from the contact metal to the semiconducting channel ($e$ is the Euler's number), and it is frequently used as a metric for quantifying the coupling between electrical contacts and conduction channel (small transfer lengths result in greater couplings, and, consequently, lower contact resistances)~\cite{saraswat2021materials}.} model, experiments performed on small-diameter ($d_\textrm{CNT}\simeq\SI{1.5}{\nano\metre}$) \glspl{CNT} highlighted inverse scaling of the contact length with the resistance between the nanotube and the electrodes, i.e.\ $L_\textrm{c}\propto1/R_\textrm{c}$~\cite{purewal2007scaling, franklin2010length}. These observations were rationalised by considering dipole moments building up at the metal--\gls{CNT} interface~\cite{leonard2000role}, which are likely caused by interface states at the junction
 
 A large density of dipole charges should then translates into a large density of interface states, which could pin the Fermi level. Since in a planar contact, the dipole in a metal--\gls{CNT} contact is localised in all directions, the consequence of having interface states is that the \gls{CNT} energy bands might be shifted away from the junction, inducing the formation of a narrow barrier responsible for the increased contact resistance~\cite{svensson2011schottky}. Therefore, in order to limit the band shift from the junction, electrical contact with work functions close in value to the \gls{CNT} one might protect reduce the Fermi-level pinning caused by surface states.
 
 More sophisticated computational methods have also been used attempting at clarify the nature (and the role) of the chemical bonds produced when the \gls{CNT} interacts with the electrode crystal structure. By applying \gls{NEGF} numerical schemes, \citeauthor{fediai2016towards} suggested that the most unfavourable length scaling should be observed for weakly-interacting metals such as Cr, Pd, Pt, and, on the other hand, metals such as Au, Al, and Sc could be nearly insensitive to the scaling of $L_\textrm{c}$ when it is decreased down to $\approx\SIrange{15}{20}{\nano\metre}$~\cite{fediai2016towards}. Furthermore, the authors proposed a numerical criterion through which they projected a better contact resistance scaling for Rh in comparison to Au, Pt, and Pd. However they also simulated the metal--junction long limit and suggested that differences in the $R_\textrm{c}$ resulted by adopting Pd instead of Rh were neglibile, suggesting that the better scaling for the Rh--\gls{CNT} junctions may be not worth the cost of the material.
 
-% Schematic energy levels in the same quantum dot potential for two limits of dispersion and confinement
-% discussed in the text. Electron correlations are not consired. Superimposed on the level diagram are wave function envelopes for several electron shells. Mode index is indicated for the first three shells. (b) Sequence of Coulomb blockade peaks measured in a quantum dot of length
+\section{Single-Electron Conduction}\label{ch:intro:sec:single_electron_conduction}
 
+When only one single \gls{CNT} is connected between source an drain, interesting phenomena arise. $E_{\mathrm{C}}$ is tipically of the order of a few $\mathrm{meV}$, and is set by the capacitance of the device. Approximating the capacitance per unit length from the formula for a coaxial cable $C / L=2 \pi \kappa \varepsilon_0 \ln (2 h / r)$, where $\kappa \sim 2.5$ is the average of the dielectric constants of $\mathrm{SiO}_2$ and vacuum, $h$ the tube to backgate distance, and $r \sim 1 \mathrm{~nm}$ the tube radius, we find a capacitance per unit length, $C / L \sim 19 \mathrm{aF} / \mu \mathrm{m}$, and a charging energy, $E_{\mathrm{C}} \sim 8 \mathrm{meV} / \mu \mathrm{m}$, for a 1- $\mu \mathrm{m}$ gate oxide (a fairly standard value for thermally oxidized wafers).
 
-\section{Single-Electron Conduction}
+The zero-dimensional energy-level spacing, $\Delta$, may also be calculated for a carbon nanotube quantum dot of length $L$. In addition to the quantization of transverse momentum along the circumferential direction, the finite extent of a carbon-nanotube quantum dot leads to the quantization of momentum along the tube axis as $\Delta k=\pi / L$. Linearity of the bands near the Fermi level suggests that one may write
+$$
+    \Delta=\frac{h v_{\mathrm{F}} \Delta k}{2 \times 2}
+$$
+with Fermi velocity $v_{\mathrm{F}}=8.1 \times 10^5 \mathrm{~m} / \mathrm{s}$, which gives $\Delta \sim 0.4 \mathrm{meV} / \mu \mathrm{m}$. The factors of two account for the band and spin degeneracy of the 1D subbands, and should be included when these degeneracies are lifted.
 
+\subsection{Energy Scales and characteristic Lengths}\label{ch:theory:sec:energy_exchange}
+Mesoscopic systems exhibit quantum transport phenomena. There, the sample size becomes comparable or lower than the characteristic scales for travelling electrons, and as a result, physical properties such as the electrical conductivity depend on the specimen dimensionality.
+
+Typically, three characteristic lengths are investigated in mesoscopic transport experiments. The mean free path $\ell$, the Fermi wavelength $\lambda_{F}$, and the phase-relaxation length $L_{\varphi}$: the first, $\ell$, is the average distance an electron travels prior to being dispersed by a scattering centre, wherease $\lambda_{F}=2 \pi / k_{F}$ is the wavelength of an electron at the Fermi energy $E_\textrm{F}$. Finally, $L_{\varphi}$ is the average distance over which an electron travels before its quantum-mechanical phase is randomised.
+
+When the scattering of an electron is \textit{elastic}, e.g.\ when there are no electronic transitions between the ground state and any excited states occuring becuase of the scattering event, the wavefunction essentially undergoes a phase shift following the event, and remains coherent. Elastic scattering, therefore, affects only $\ell$ and $L_{\varphi}$ is unchanged.
+
+In contrast, when the electronic wavefunction loses energy because of (1) electronic transitions, (2) spins associated with magnetic impurities or (3) phonons, both the $\ell$ and $L_{\varphi}$ may be affected (\textit{inelastic} scattering). Tab~\ref{tab:characteristic_lengths} summarises a few of these factors for various materials as a function of carrier concentration $n$.
+
+\begin{table}
+    \caption{\label{tab:characteristic_lengths}
+        Physical parameters relevant in transport phenomena. See also ~\cite{torres2014introduction, datta1997electronic}}
+    \[
+        \begin{array}{lcccc}
+            \hline\textit{Material} & n                                     & \lambda_\textrm{F} & \ell               & L_\varphi \Tsmall                             \\
+            \textit{type}           & (\textrm{cm}^{-3})/[\textrm{cm}^{-2}] & (\si{\nano\metre}) & (\si{\nano\metre}) & (\si{\micro\metre})                           \\
+            \hline
+            \text{Metal}            & \num{1e23}                            & 0.5                & 1-10               & 0.5                                   \Tsmall \\
+            \text{Graphene}         & \num{1e11}                            & 2\sqrt{\pi/n}      & 50-$3000$          & 0.5                                           \\
+            \text{SW-CNT}           & \num{1e11}                            & 0.74               & $1000$             & 3                                             \\
+            \text{MW-CNT}           & -                                     & -                  & 10-40              & 0.1                                           \\
+            \hline
+        \end{array}
+    \]
+\end{table}
+
+Because only electrons around the Fermi energy $E_\textrm{F}$ affects the transport properties, both  $\ell$ and $L_{\varphi}$ are often scaled by the Fermi velocity:
+%
+\begin{equation}
+    t_{m}=\frac{L_m}{v_\textrm{F}}  \quad \text { and } \quad t_{\varphi}=\frac{L_\varphi}{v_\textrm{F}}.
+\end{equation}
+%
+The $t_m$ and $t_\varphi$ are the momentum relaxation time and the phase-relaxation time, respectively, and are often compared to the time takes one electron take to travel through the whole length of the sample~\cite{dresselhaus1998physical}.
+
+Several are the possible sources of scattering in a transport experiment. For example, by applying a magnetic field it is possible to induce or suppress pure-spin currents by localised magnetic moments in graphene ~\cite{mccreary2012magnetic, escalera2018spin}, whereas phonons excitations are typically suppressed by decreasing the thermal energy $k_\textrm{B}T$~\cite{efetov2010controlling}. We will use a few of these concepts to give a phenomenological explanation for a few of the experiments we have performed, more specifically in Ch.~\ref{ch:gnrset}
+
+\subsection{Electronic-Transport Regimes}\label{ch:theory:sec:electronic_transport_regimes}
+
+In charge-transport experiments, molecules are typically a few nanometers in size, orders of magnitude smaller than what any common manipulation tools could handle. Since the system is confined in 3D, the \gls{DOS} approaches the Dirac delta distribution $\rho_{0\textrm{D}}\sim\delta(E)$. An analogous platform where the density of state approaches the Dirac delta functions are \glspl{QD} embedded in \gls{SET}, historically fabricated through lithography means on metallic substrate. In these devices, source and drain are electrically contactd to the central island, whereas one or more gates are just capacitatively coupled (Fig.~\ref{fig:theory:set_schematic}).
+
+\begin{figure}[hbtp]
+    \begin{center}
+        \includegraphics[width=\textwidth]{chapter_theory/figures/set_schematic.png}
+        \caption[Single-Electron Transistor and its Equivalent Circuit]
+        {
+            \textbf{a}, Schematic for a \gls{SET} based on a \gls{QD}.
+            \textbf{b}, Equivalent circuit. Each tunnel barrier is represented by an RC
+            circuit, and electrons tunnel from the source to the \gls{QD} and then to the drain.
+        }
+        \label{fig:theory:set_schematic}
+    \end{center}
+\end{figure}
+
+System such this one can be satisfactorily described by the constant interaction model~\cite{zimmerli1992noise}: Coulomb interactions between source--dot and dot--drain are described by a single capacitance $C$, which is assumed to be constant and given by the sum of the individual capacitances between the dot with any terminal $i$ in the circuit:
+%
+\begin{equation}\label{ch:theory:eq:capacitance_interaction_model}
+    C = \sum_{i=1}^\textrm{terminals} C_i,
+\end{equation}
+%
+The total Hamiltonian is also assumed to be modelled as a sum of single-particle Hamiltonians, meaning that the total energy of the system can be expressed as a sum of single-particle energies $\Delta\varepsilon$ corresponding to the individual, non-interacting energy levels of the \gls{QD}~\cite{laird2015quantum}.
+
+For a three-terminal device with $N$ electrons, the \gls{QD} energy becomes:
+%
+\begin{equation}\label{ch:theory:eq:total_dot_energy}
+    U(N) = \sum_{i=1}^NE_i + \frac{[e(N-N_0) + C_\mathrm{S}V_\mathrm{S} + C_\mathrm{D}V_\mathrm{D} + C_\mathrm{G}V_\mathrm{G}]^{2}}{2C},
+\end{equation}
+%
+where $eN_0$ is the charge present on the \gls{QD} when $V_\textrm{SD}=V_\textrm{G}=0$, and may be because of background charges in the substrate. The chemical potential, central parameter to evaluate whether a current can flow through a dot, is the minimum energy required to add an extra electron to the dot, may be expressed as:
+%
+\begin{align}
+    \mu_\textrm{dot}(N) & = E_\textrm{dot}(N) - E_\mathrm{dot}(N-1), \notag                                                                                                                                       \\
+                        & = \left(N-N_{0}-\frac{1}{2}\right) E_{\mathrm{C}}-\frac{E_{\mathrm{C}}}{e}\left(C_{\mathrm{S}} V_{\mathrm{S}}+C_{\mathrm{D}} V_{\mathrm{D}}+C_{\mathrm{G}} V_{\mathrm{G}}\right)+E_{N},
+\end{align}
+%
+where $E_\mathrm{C} = e^2/C$ is the charging energy. In the simplest case as the one above, the overall transport regime is determined by the interplay between $E_C$, $\Delta\varepsilon$, the thermal energy $k_\textrm{B}T$, and how strongly coupled is the \gls{QD} to the metallic contacts, quantified by the  lifetime broadening $\Gamma$. In the following, I will briefly outline the different transport regimes at the nanoscale based on the relative magnitude of these energy scales.
+
+\subsubsection{Weak-Coupling Regime}\label{ch:theory:sec:weak_limit}
+In order to operate in the weak-coupling regime, the smallest energy scale in place must be the molecular-state lifetime broadening, i.e. $\Gamma\ll\E_C, E_\textrm{add}(N), k_\textrm{B}T$, and this condition is often realised in electrical break junctions such as the ones used in this thesis~\cite{gehring2019single}.
+
+In this regime, Coulomb blockade (Fig.~\ref{fig:theory:cb}) and single-electron (sequential) tunneling prevails. This transport mechanism typically involves two steps. In the first step, an electron tunnels from one electrode into the molecule: this process is often captured by the notation $N\leftrightarrow N+1$, where the double-ended arrow refers to the possibility of having an electron tunneling back into the first electrode. Overall, the total-spin change is $\Delta S = \pm 1 / 2$. In the second step, the electron tunnels from the molecule to the second reservoir.
+
+A necessary, and sufficient, condition for the charge transfer to take place is that the energy levels of the two leads $E_{F,{1,2}}$ and $E_{F,2}$ have, at least, an energy equal to the electrochemical potential of the molecule $\mu_N$. This condition is often met by either applying a bias $eV_\textrm{SD} = E_{F,1} - E_{F,2}$ between the leads or by tuning $\mu_N$ thorugh a gate electrode, thus allowing or blocking the current flow (Fig.~\ref{fig:theory:cb}a).
+%
+\begin{figure}[hbtp]
+    \begin{center}
+        \includegraphics[width=0.95\textwidth]{chapter_theory/figures/coulomb_blockade.pdf}
+        \caption[Coulomb Diamond Diagram]
+        {
+            \textbf{a}, Stability charge map. Within the grey regions, the charge is fixed at $N$ (d) or $N+1$ (e), which leads to Coulomb blockade. In the white area, electron tunneling occurs in and out of the \gls{QD}. The blue and orange line are observed if instead of the current $I_\textrm{SD}$ one measure the differential conductance $dI/dV_\textrm{SD}$, e.g. through a lock-in amplifier (See Ch.~\ref{ch:instrumentation_development})
+            \textbf{b left} Ground and excited state split induce by the Zeeman interaction. Conductance step may occur when $e\lvert V_\textrm{SD}\rvert=\Delta E_\textrm{Zeeman}$ in the blockade region~\cite{gaudenzi2017transport}.
+            \textbf{b, right} Two different charge states. Degeneracy between spin up and spin down is lifted by the external magnetic field $B$. Adapted from \cite{thiele2015read}.
+        }
+        \label{fig:theory:cb}
+    \end{center}
+\end{figure}
+%
+The resulting device conductance may be visualised by plotting it as a function of the gate and bias voltages (\textit{charge stability diagram}). The Coulomb blockade (grey regions) are characterised by noisefloor level of currents, and are referred to as Coulomb diamonds: in these regions transport is blocked because the energy cost to add an electron onto the \gls{QD} exceeds the available energy.
+
+\subsubsection{Strong-Limit Regime}\label{ch:theory:sec:strong_limit}
+In this regime, $\Gamma$ is greatest energy scale at play, i.e. $\Gamma\gg\E_C, E_\textrm{add}(N), k_\textrm{B}T$, leading to a strong hybridisation \gls{QD} states with those of the leads. Coulomb blockade is suppressed by quantum fluctuations of the electric charge, and the dominant transport mechanism is elastic coherent tunneling. This mechanism is particurarly appealing because and the electrical conductance $G$ can be well described by the Landauer formula $G\simeq\frac{2\exp2}{h}\mathcal{T}(E)$, where $\mathcal{T}(E)$ is the transmission probability thorugh the dot for all the available conduction channels, and is often use as a starting point of many numerical routines~\cite{soler2002siesta}.
+
+As pointed out in~\cite{gehring2019single}, the crossover between the weak- and strong- coupling remains largely unstudied, and only a few experiments have been performed to probe this intermediate regime. Examples in the literature include the crossover induced by the high-energy vibrational modes (e.g. streching) in mechanical break junctions~\cite{frisenda2016transition} and the one induced at high temperature whitin the inverted Marcus region, cause by nuclear tunneling~\cite{sowa2018beyond}.
+
+\subsubsection{Intermediate Case}\label{ch:theory:sec:intermediate_limit}
+When there is no energy scale which dominates over the others, a combination of the weak-coupling and strong-coupling regimes occurs. \Gls{QD} retains a noticeable Coulomb blockade, while also exhibiting transport within the zero-conductance region. The two most common transport mechanisms of the intermediate coupling regime are elastic and inelastic cotunneling. Compared to sequential single-electron tunneling, these are higher-order transport mechanisms that involve the tunneling of two electrons at the same time.
+
+In the first step, the \gls{QD} chemical potential lies lower in energy than the electrochemical potentials of both leads. When an electron tunnels from the source into the drain through the \gls{QD}, and a virtual state lies within the bias window, two are the main possible scenarios. Another electron may tunnel from the source to \gls{QD}, while simultaneously an electron leave the dot and tunnels into the drain. This process, does not involve any energy exchange and is therefore called \textit{elastic cotunneling} (Sec.~\ref{ch:theory:sec:energy_exchange}); experimental signatures are horizontal lines in the zero-conductance region touching a slanted diamond line on the Coulomb edge~\cite{gaudenzi2017transport}. In the second scenario, an electron tunnels into the virtual state positioned at an energy $\delta$ away from $E_\textrm{F}$ in the electrodes, and, as we saw in Sec.\ref{ch:theory:sec:energy_exchange}, results in an exchange of the total energy (\textit{inelastic cotunneling}).
+
+In the case of cotunneling, an electron tunnels into one of the leads as long as another electron tunnels back into the dot within a short time. This process briefly violates energy conversation, which is quantum-mechanically allowed within a timescale $\tau_\textrm{COT}\sim\hbar/\delta$~\cite{averin1990virtual}. Cotunneling currents are often tiny and difficult to detect, but their features have been used in quantum dot spectroscopy to explore cotunneling-mediated transport in single quantum dots~\cite{schleser2005cotunneling} or spin effects in double quantum dots~\cite{liu2005pauli}.
+
+\subsubsection{Accounting for the Vibrational Degrees of Freedom: the Rate-Equation Model}\label{ch:theory:sec:vibrations}
+
+\begin{figure}[hbtp]
+    \begin{center}
+        \includegraphics[width=\textwidth]{chapter_theory/figures/single_level_model.pdf}
+        \caption[Schematic of a Single-Level tunneling-Transport Mechanism]
+        {
+            Schematic for a single-level transport model. The single-particle state with energy $\varepsilon_0$ and lifetime $\Gamma$ contributes to the total current flowing across the junction. $\Gamma_\textrm{L}$ and $\Gamma_\textrm{R}$ are the tunneling coupling with the left and right electrode, respectively.
+        }
+        \label{fig:theory:single_level_model}
+    \end{center}
+\end{figure}
+
+The inclusion of vibrational \gls{DOF} within the picture drawn so far is not a trivial task. In the recent years, the rate-equation model have become widely used for modeling, through the use of a kinetic description of the electrode--dot junction, the scenarios where an electron can also use \gls{QD} vibrational states~\cite{thomas2019understanding, sowa2020beyond} (Fig.~\ref{fig:theory:single_level_model}). One of the most important assumption the model makes is that the total current is uniquely determine by how fast an electrons tunnels in and out in the weak-coupling regime~\cite{seldenthuis2008vibrational, esposito2010self}.
+
+Here we will adopt the description reported in references where the electronic degrees of freedom interact with an unstructured environment modelled by a superohmic bath having an exponential cut-off:
+
+\begin{equation}
+    \mathcal{J}(\omega)=\frac{\lambda}{2}\frac{\omega^3}{\omega_\textrm{c}}\exp{-\omega/\omega_\textrm{c}},
+    \label{eq:initial_vibration_equation}
+\end{equation}
+%
+where $\lambda$ is the reorganisation energy as defined by the Marcus model~\cite{sowa2018beyond} for an electron transfer in solution, and $\omega_\textrm{c}$ is a cut-off frequency.
+%
+The kinetic description allows us to write the total current as:
+\begin{equation}
+    I=|e| \frac{\gamma_\text{ox}^\text{S} \gamma_{\text {red}}^\text{D}-\gamma_{\text {red}}^\text{S} \gamma_\text{ox}^\text{D}}{\gamma_{\text {red}}^\text{S}+\gamma_{\text {red}}^\text{D}+\gamma_{ox}^\text{S}+\gamma_{ox}^\text{D}},
+\end{equation}
+%
+where $\gamma_{\text{red/ox}}^\text{S/D}$ are the electron-transfer rates at each electrode and corresponds to a reduction or an oxidation, respectively. When the charge transition from $N$ to the $N+1$ is considered, the electron-transfer rates are given by:
+%
+\begin{align}
+    \gamma_{\text{red}}^\text{S,D} & = 2 \frac{\Gamma_\text{S,D}}{\hbar} \int f_\text{S,D}(\epsilon) ~k_\text{red}(\epsilon) \textrm{d}\epsilon,  \\
+    \gamma_\text{ox}^\text{S,D}    & =\frac{\Gamma_\text{S,D}}{\hbar} \int\left[1-f_\text{S,D}(\epsilon)\right]~k_\text{ox}(\epsilon) d \epsilon,
+\end{align}
+%
+where $\Gamma_\text{S,D}$, as we have already seen, is the coupling between the \gls{QD} and the electrodes, which have a Fermi--Dirac distributions $f_\text{S,D}(\epsilon)$. The \gls{DOS} for the reduced and oxidized can be written as:
+%
+\begin{equation}
+    k_{\text{red/ox}}(\epsilon)=\frac{1}{\pi} \operatorname{Re} \int_{0}^{\infty} \exp{\sigma i(\varepsilon-\varepsilon_0) t / \hbar} \exp{-t / \tau} B(t) d t,
+    \label{eq:redox_dos}
+\end{equation}
+%
+where $\sigma=1(-1)$ for reduction (oxidation) process, $\varepsilon_0$ is the dot energy level and which corresponding state (assuming non-degenerate) has lifetime $\tau=2 \hbar /\left(\Gamma_\textrm{S}+\Gamma_\textrm{D}\right)$.
+
+The term $B(t)$ is the phononic correlation function used to model the vibrational \glspl{DOF} and may be written as the product between a single-mode term $D_q (t)$ and a mean-field contribution $D_\textrm{bath}(t)$ given by the environment:
+%
+\begin{equation}
+    B(t)=\exp{D_{q}(t)} \cdot \exp{D_{\textrm{bath}}(t)},
+\end{equation}
+%
+and the two terms can be expressed as~\cite{todd1994electron}:
+%
+\begin{align}
+    D_{q}(t)         & = \left(\frac{g_{q}}{\omega_{q}}\right)\left[\left(\cos \omega_{q} t-1\right) \cdot \operatorname{coth}\left(\frac{\omega_{q}}{2 k_{B} T}\right)-i \sin \left(\omega_{q} t\right)\right], \\
+    D_\text{bath}(t) & = \int \frac{J(\omega)}{\omega^{2}}\left[(\cos \omega t-1) \cdot \operatorname{coth}\left(\frac{\omega}{2 k_{B} T}\right)-i \sin (\omega t)\right] d\omega,
+    \label{eq:final_vibration_equation}
+\end{align}
+%
+where $g_{q}$ is the electron--vibration coupling, $\omega$ is the vibronic frequency, $J(\omega)$ the phonon-bath spectral density associated to a reorganisation energy $\lambda$. We will use this model in Chapter~\ref{ch:solubility} to reproduce the low temperature transport features of a molecular graphene nanoribbon with a strong electron--vibron coupling.
+
+\subsection{Experimental Evidences}
 At cryogenic temperatures, the smearing of $k_\textrm{B}T$ makes a number of quantum phenomena observables. Examples of such are the conductance blockage due to strong Coulomb interactions~\cite{Averin1986}, interference effects~\cite{stojetz2005effect}, periodic shell-filling signatures related to the tunneling through energy levels~\cite{sapmaz2005electronic}, and Kondo effects originated from the hybridisation of \gls{CNT} spin states with the continuum of states in the metallic leads~\cite{jarillo2005orbital}. Because the energy scales for such quantum effects typically increase with decreasing the system size $L$ (see also Sec.~\ref{ch:theory:sec:energy_exchange}), a great deal of these effects have been experimentally observed in \glspl{CNT}.
 
 \begin{figure}[hbtp]
@@ -377,179 +553,7 @@ At cryogenic temperatures, the smearing of $k_\textrm{B}T$ makes a number of qua
     \end{center}
 \end{figure}
 
-The platform most commonly used in quantum transport experiments is an electronic device made by \gls{CNT} embedding a \gls{QD} (Fig.~\ref{fig:intro:cnt_set}a). The exact position of the \gls{QD} inside \gls{CNT} has been object of scientific debate, but it is now considered to be the nanotube portion between the large \gls{SB} barriers arising at the metal--\gls{CNT} junctions, where electrons can be trapped by the electric fields induced by local gates located beneath the tube~\cite{laird2015quantum}. A \gls{QD} (or, more generally, a \gls{SET}) can be realised if the contact resistances at the junctions source--\gls{QD} and \gls{QD}--drain exceed a certain limit, i.e.\ $R_\textrm{c}\ge\SI{26}{\kilo\ohm}$~\cite{likharev1999single}; when the contacts are such opaque they are tipically called \textit{tunneling barriers}, given that the only transport mechanism through which current can flow thorugh the \gls{QD} is quantum tunneling. \Gls{CNT} energy levels can then be studied by measuring the $I_\textrm{SD}$ through such \glspl{QD} as a function of $V_\textrm{SD}$, $V_\textrm{G}$, and other parameters such as magnetic field $B$, temperature $T$, etc.
-
-\subsection{Energy Scales and characteristic Lengths}\label{ch:theory:sec:energy_exchange}
-Mesoscopic systems exhibit quantum transport phenomena. There, the sample size becomes comparable or lower than the characteristic lengths for electron travelling, and, as a result, physical properties such as the electrical conductivity depend on the specimen dimensionality.
-
-Typically, three characteristic lengths are investigated in mesoscopic transport experiments. The mean free path $\ell$, the wavelength of Fermi $\lambda_{F}$, and the phase-relaxation length $L_{\varphi}$. The mean free path is the average distance an electron travels prior to being dispersed by a scattering centre; attempts to measure it for graphene nanoribbons are briefly described in Ch~\ref{ch:introduction}. The Fermi wavelength $\lambda_{F}=2 \pi / k_{F}$ is the wavelength of an electron at Fermi energy $E_\textrm{F}$, whereas the phase-relaxation length is the average distance over which an electron travels before its quantum-mechanical phase becomes randomised.
-
-If the scattering of an electron is \textit{elastic}, such as when the scattering event does not induce any electronic transition between the ground state and any excited states, the wavefunction undergoes essentially a phase shift following the event, remaining coherent. Therefore, an elastic event may only affect $\ell$, leaving $L_{\varphi}$ unchanged. In contrast, if the electron wave loses energy by either excitation of core electrons, spins associated with magnetic impurities, or phonons, both the mean free path and the phase-relaxation length may be affected by such (\textit{inelastic}) scattering events. Tab~\ref{tab:characteristic_lengths} summarises a few of these factors for various materials as a function of carrier concentration $n$.
-
-\begin{table}
-    \caption{\label{tab:characteristic_lengths}
-        Physical parameters relevant in transport phenomena. See also ~\cite{torres2014introduction, datta1997electronic}}
-    \[
-        \begin{array}{lcccc}
-            \hline\textit{Material} & n                                     & \lambda_\textrm{F} & \ell               & L_\varphi \Tsmall                             \\
-            \textit{type}           & (\textrm{cm}^{-3})/[\textrm{cm}^{-2}] & (\si{\nano\metre}) & (\si{\nano\metre}) & (\si{\micro\metre})                           \\
-            \hline
-            \text{Metal}            & 10^{23}                               & 0.5                & 1-10               & 0.5                                   \Tsmall \\
-            \text{Graphene}         & [10^{11}]                             & 2\sqrt{\pi/n}      & 50-3,000           & 0.5                                           \\
-            \text{SW-CNT}           & [10^{11}]                             & 0.74               & 1,000              & 3                                             \\
-            \text{MW-CNT}           & -                                     & -                  & 10-40              & 0.1                                           \\
-            \hline
-        \end{array}
-    \]
-\end{table}
-
-Because only electrons around the Fermi energy $E_\textrm{F}$ affects the transport properties, the mean free path and phase-relaxation length are often scaled by the Fermi velocity
-
-\begin{equation}
-    t_{m}=\frac{L_m}{v_\textrm{F}} , \quad \text { and } \quad t_{\varphi}=\frac{L_\varphi}{v_\textrm{F}},
-\end{equation}
-%
-The introduced $t_m$ and $t_\varphi$ are, respectively, the momentum relaxation time and phase-relaxation time, and are often are compared to the time it takes one electron to travel the length of the sample. However, these two numbers do not correlate to the period of a single scattering event by the relevant scattering mechanism; rather, they represent the average time for the several collisions that result in significant changes of momentum and phase, respectively. In this context, significant entails, for instance, that the sums of the changes in momentum and phase over time $t_{m}$ and $t_{\varphi}$ reach $\hbar k_{\mathrm{F}}$ and $\pi$, respectively~\cite{dresselhaus1998physical}.
-
-There are several ways through which it is possible to control the various scattering mechanisms. For example it is possible to suppress the magnetic scattering by applying a magnetic field~\cite{mccreary2012magnetic, escalera2018spin}, whilst phonons excitations might be suppressed at low temperature, although it is the electron--phonon interaction which controls the relaxation of an electron by an emitting a phonon~\cite{efetov2010controlling}. The electron--electron interaction is determined by the carrier concentration and the extension of the valence band along the Brilluoin zone~\cite{kotov2012electron}. On top of that, all the frequencies corresponding to the various scattering processes might be changed by controlling the Fermi velocity, often obtained by either varying a gate voltage or by changing the conduction band curvature.
-
-\subsection{Electronic-Transport Regimes}\label{ch:theory:sec:electronic_transport_regimes}
-
-In charge-transport experiments, molecules are typically a few nanometer in size, orders of magnitude smaller than what tweezers or other common manipulation tools can handle. Since the number of lateral confinements imposed on these system is three dimensional, the corresponding \gls{DOS} approaches the Dirac delta distribution $\rho_{0\textrm{D}}\sim\delta(E)$.
-
-An analogous platform where the density of state approaches the Dirac delta functions are \glspl{QD}, historically fabricated on a metallic substrate through lithography means (Fig.~\ref{fig:theory:set_schematic}), and capable of hosting electrons. For these platforms, a wide breadth of theoretical and experimental evideces have been accumulated since the 1980, with application ranging from the nanoelectronics to quantum computing. While source and drain are electrically contactd to the central island, one or more gates are just capacitatively coupled.
-
-\begin{figure}[hbtp]
-    \begin{center}
-        \includegraphics[width=\textwidth]{chapter_theory/figures/set_schematic.png}
-        \caption[Single-Electron Transistor and its Equivalent Circuit]
-        {
-            \textbf{a}, Cartoon for a \gls{SET} based on quantum dots.
-            \textbf{b}, Equivalent circuit. Each tunnel barrier is represented by a RC
-            circuit and electrons tunnel from the source to the quantum dot (QD) and then to the drain.
-            $\Gamma_{S,D}$ are the tunneling rates.
-
-        }
-        \label{fig:theory:set_schematic}
-    \end{center}
-\end{figure}
-
-One way to describe this system is through the constant interaction model, which allows to derive important electrical transport
-information within the \textit{orthodox} Coulomb framework~\cite{zimmerli1992noise}. Within this model the Coulomb interactions
-both between electrons on the dot and between the dot and the leads, are described by a single capacitance $C$ which stays constant and it is given by the total sum of the individual capacitances between the dot with its terminals
-%
-\begin{equation}\label{ch:theory:eq:capacitance_interaction_model}
-    C = \sum_{i=1}^\textrm{terminals} C_i,
-\end{equation}
-%
-where $i$ runs over all the terminals coupled to the central island. Secondly, the total Hamiltonian may be modelled as a sum of single-particle Hamiltonians, meaning that the total energy of the system can be expressed as a sum of single-particle energies $\Delta\epsilon$ which corresponds to the individual, non-interacting energy levels. Under these assumptions, the total dot energy given for a quantum dot in a three-terminal device with $N$ electrons becomes
-%
-\begin{equation}\label{ch:theory:eq:total_dot_energy}
-    U(N) = \sum_{i}^NE_i + \frac{[e(N-N_0) + C_\mathrm{S}V_\mathrm{S} + C_\mathrm{D}V_\mathrm{D} + C_\mathrm{G}V_\mathrm{G}]^{2}}{2C},
-\end{equation}
-%
-where $eN_0$ is the charge present on the dot when $V_\textrm{SD}=V_\textrm{G}=0$ due to positive background charges in the substrate. One of the central quantity to evaluate whether the current can flow through the dot is the chemical potential, which is the minimum energy required to add an extra electron to the dot, and may be expressed as
-
-\begin{align}
-    \mu_\textrm{dot}(N) & = E_\textrm{dot}(N) - E_\mathrm{dot}(N-1), \notag                                                                                                                                       \\
-                        & = \left(N-N_{0}-\frac{1}{2}\right) E_{\mathrm{C}}-\frac{E_{\mathrm{C}}}{e}\left(C_{\mathrm{S}} V_{\mathrm{S}}+C_{\mathrm{D}} V_{\mathrm{D}}+C_{\mathrm{G}} V_{\mathrm{G}}\right)+E_{N},
-\end{align}
-%
-where $E_\mathrm{C} = e^2/C$ is the charging energy. In the simplest case as the one describe, it is the interplay between this energy, the single-particle level spacing $\Delta\epsilon$, the coupling $\Gamma$ between the leads and the dot, and the thermal energy $k_\textrm{B}T$ that determine the overall transport regime. In what follows, I will briefly outlined the different transport regimes at the nanoscale based on the relative magnitude of these energy scales.
-
-\subsubsection{Weak-Coupling Regime}\label{ch:theory:sec:weak_limit}
-
-The criteria that has to be satistifed in order to operate in a weak coupling regime is that the lifetime broadening of a molecular state has to be the smallest energy scale in place, i.e. $\Gamma\ll\E_C, E_\textrm{add}(N), k_\textrm{B}T$. This condition is often realised in an electrical break junctions such as the ones used in this thesis.
-
-In this regime, Coulomb blockade (Fig.~\ref{fig:theory:cb}) and single-electron (sequential) tunneling prevails. This transport mechanism typically involves two steps. In the first step, an electron tunnels from one electrode into the molecule: this process is often captured by the notation $N\leftrightarrow N+1$, where the double-ended arrow refers to the possibility of having also an electron going from the dot back to the first electrode. During this event, the spin also changes by $\Delta S = \pm 1 / 2$. In the second step, the electron tunnels from the molecule to the second reservoir. A necessary and sufficient condition for this charge transfer to take place is that the energy levels of the two leads $E_{F,1}$ and $E_{F,2}$ have, at least, an energy equal to the electrochemical potential of the molecule $\mu_N$.
-
-
-\begin{figure}[hbtp]
-    \begin{center}
-        \includegraphics[width=0.95\textwidth]{chapter_theory/figures/coulomb_blockade.pdf}
-        \caption[Coulomb Diamond Diagram]
-        {\textbf{a}, Coulomb blockade scheme. Charge is fixed in grey regions. This is also represented by (d) and (e) where the quantum dot energy level either lies outside the $V_\textrm{SD}$ window or is doubly-occupied, respectively. Electron tunneling through the dot is allowed within the white regions, and all the possible cases are detailed (a--c and f-g).
-            \textbf{b left} Ground and excited state separeted in energy by the Zeeman interaction. Conductance step may occur
-            when $e\lvert V_\textrm{SD}\rvert=\Delta E_\textrm{Zeeman}$ in the blockade region.
-            \textbf{b, right} Two different charge states. Degeneracy between spin up and spin down is lifted by the external magnetic field $B$.
-        }
-        \label{fig:theory:cb}
-    \end{center}
-\end{figure}
-
-By either applying a bias $eV_\textrm{SD} = E_{F,1} - E_{F,2}$ between the two electrodes or by tuning $\mu_N$ thorugh a gate electrode, it is possible to switch on and off this regime (Fig.~\ref{fig:theory:cb}a). The resulting device conductance may be visualised by plotting it as a function of the gate and bias voltages (\textit{charge stability diagram}). The Coulomb blockade (grey regions) are characterised by very low current levels, and are reffered to as Coulomb diamonds. In these regions transport is blocked because the energy cost to add an electron onto the molecule exceeds the available energy.
-
-\subsubsection{Strong Limit}\label{ch:theory:sec:strong_limit}
-When the lifetime broadening of a molecuar/dot state is greater than all the other energy scales at play, i.e. $\Gamma\gg\E_C, E_\textrm{add}(N), k_\textrm{B}T$, a strong hybridisation between lead and dot state occurs, resulting in a suppression of Coulomb blockade by the quantum fluctuations of the electric charge. In this context the dominant transport mechanism is elastic coherent tunneling, and the electrical conductance may be approximated as $G\simeq\frac{2e^2}{h}\mathcal{T}(E)$, where we have indicated with $\mathcal{T}(E)$ the transmission probability for all the available conduction channels thorugh the quantum dot, evaluated at the Fermi energy.
-
-\subsubsection{Intermediate Limit}\label{ch:theory:sec:intermediate_limit}
-Finally, the intermediate coupling regime combines characteristics of both weak and strong regime: it retains a noticeable Coulomb blockade, while also exhibiting transport within the zero conductance region. The two most common transport mechanisms of the intermediate coupling regime are elastic and inelastic cotunneling. When compared to sequential single-electron tunneling, these are higher-order transport mechanisms that involve the tunneling of two electrons at the same time. In the first step, the molecular potential of the molecule lies lower in energy than the electrochemical potentials of both leads. When the electron tunnels from the molecule to the drain, and a molecular virtual state is within the bias window, two possible scenarios are possible. In the first scenario, a new electron tunnels from the source electrode to the molecular ground state while simultaneously the electron in the molecular ground state tunnels to the drain electrode. This process, does not involve any energy exchange and is therefore called \textit{elastic cotunneling} (Sec.~\ref{ch:theory:sec:energy_exchange}); experimental signatures are horizontal lines in the zero-conductance region touching a slanted diamond line on the Coulomb edge~\cite{gaudenzi2017transport}. In the second scenario, an electron tunnels into molecular virtual state positioned at an energy $\delta$ away from the Fermy energy in the electrodes, and, as we saw in Sec.\ref{ch:theory:sec:energy_exchange}, results in an exchange of the total energy (\textit{inelastic cotunneling}).
-
-In the case of cotunneling, an electron tunnels into one of the leads as long as another electron tunnels back into the molecule within a short time. This process briefly violates energy conversation, which is quantum-mechanically allowed within a timescale $\tau_\textrm{COT}\sim\hbar/\delta$~\cite{averin1990virtual}. Cotunneling currents are often tiny and difficult to detect, but the effect has been used in quantum dot spectroscopy to explore cotunneling-mediated transport in single quantum dots~\cite{schleser2005cotunneling} or spin effects in double quantum dots~\cite{liu2005pauli}.
-
-\subsubsection{Accounting the Vibrational Degree of Freedoms: the Rate-Equation Model}\label{ch:theory:sec:vibrations}
-
-The rate equation model starts from a kinetic description of the electrode--molecule junction and assumes the overall current flowing through the molecule uniquely determine by how fast an electrons tunnels in and out from a weakly coupled molecular level~\cite{seldenthuis2008vibrational, esposito2010self}. A promising extension of this framework attempts to quantify the quantum mechanical effects of the vibrational \gls{DOF} on the electron transfer rates. Here we will adopt the description reported in references~\cite{thomas2019understanding} and~\cite{sowa2018beyond, sowa2020beyond} where the electronic degrees of freedom interact with an unstructured environment modelled by a superohmic bath having an exponential cut-off:
-
-\begin{equation}
-    \mathcal{J}(\omega)=\frac{\lambda}{2}\frac{\omega^3}{\omega_\textrm{c}}e^{-\omega/\omega_\textrm{c}},
-    \label{eq:initial_vibration_equation}
-\end{equation}
-%
-where $\lambda$ is the reorganization energy as defined from the Marcus model for electron transfer in solution and $\omega_\textrm{c}$ is a cut-off frequency.
-%
-The current through the junction can be written as
-\begin{equation}
-    I=|e| \frac{\gamma_\text{ox}^\text{S} \gamma_{\text {red}}^\text{D}-\gamma_{\text {red}}^\text{S} \gamma_\text{ox}^\text{D}}{\gamma_{\text {red}}^\text{S}+\gamma_{\text {red}}^\text{D}+\gamma_{ox}^\text{S}+\gamma_{ox}^\text{D}},
-\end{equation}
-%
-\begin{figure}[hbtp]
-    \begin{center}
-        \includegraphics[width=\textwidth]{chapter_theory/figures/single_level_model.pdf}
-        \caption[Schematic of a Single-Level tunneling-Transport Mechanism]
-        {
-            Schematic for a single-level transport model. The single-particle states having energy $\epsilon_0$ and lifetime $\Gamma$ is the closest to the Fermi level of source $\mu_\textrm{S}$ and drain $\mu_\textrm{D}$, and solely contributes to the total current flowing across the junction. $\Gamma_\textrm{L}$ and $\Gamma_\textrm{R}$ are the tunneling coupling with the left and right electrode, respectively.
-        }
-        \label{fig:theory:single_level_model}
-    \end{center}
-\end{figure}
-%
-where $\gamma_{\text{red/ox}}^\text{S/D}$ are the electron-transfer rates at each electrode corresponding to a reduction or an oxidation. If one consider the charge transition from $N$ to the $N+1$ charge state, the electron rates are given as follows:
-%
-\begin{align}
-    \gamma_{\text{red}}^\text{S,D} & = 2 \frac{\Gamma_\text{S,D}}{\hbar} \int f_\text{S,D}(\epsilon) ~k_\text{red}(\epsilon) d \epsilon,          \\
-    \gamma_\text{ox}^\text{S,D}    & =\frac{\Gamma_\text{S,D}}{\hbar} \int\left[1-f_\text{S,D}(\epsilon)\right]~k_\text{ox}(\epsilon) d \epsilon,
-\end{align}
-%
-where $\Gamma_\text{S,D}$ is the electronic coupling between molecule and the electrodes having Fermi-Dirac distributions $f_\text{S,D}(\epsilon)$. The density of states for the reduced and oxidized might be written as:
-%
-\begin{equation}
-    k_{\text{red/ox}}(\epsilon)=\frac{1}{\pi} \operatorname{Re} \int_{0}^{\infty} e^{\sigma i(\epsilon-\epsilon_0) t / \hbar} e^{-t / \tau} B(t) d t,
-    \label{eq:redox_dos}
-\end{equation}
-%
-where $\sigma=1(-1)$ for reduction (oxidation) process, $\epsilon_0$ is the molecular energy level, $\tau=2 \hbar /\left(\Gamma_\textrm{S}+\Gamma_\textrm{D}\right)$ is the lifetime of the molecular electronic state. The term $B(t)$ is the phononic correlation function
-%
-\begin{equation}
-    B(t)=e^{D_{q}(t)} \cdot e^{D_{\textrm{bath}}(t)},
-\end{equation}
-%
-written as the product between a single-mode term $D_q$ and a mean-field contribution given by the environment. The two terms might be expressed as follows~\cite{todd1994electron}:
-%
-\begin{align}
-    D_{q}(t)         & = \left(\frac{g_{q}}{\omega_{q}}\right)\left[\left(\cos \omega_{q} t-1\right) \cdot \operatorname{coth}\left(\frac{\omega_{q}}{2 k_{B} T}\right)-i \sin \left(\omega_{q} t\right)\right], \\
-    D_\text{bath}(t) & = \int \frac{J(\omega)}{\omega^{2}}\left[(\cos \omega t-1) \cdot \operatorname{coth}\left(\frac{\omega}{2 k_{B} T}\right)-i \sin (\omega t)\right] d\omega,
-    \label{eq:final_vibration_equation}
-\end{align}
-%
-where $g_{q}$ is the electron--vibration coupling strength, $\omega$ is the vibron frequency, $J(\omega)$ the spectral density of the phonon bath with reorganisation energy $\lambda$. We will use this model in Chapter~\ref{ch:solubility} to reproduce the low temperature transport features of a molecular graphene nanoribbon with a strong electron--vibron coupling.
-
-\subsection{Experimental Evidences}
-
-\subsubsection{Carbon-Nanotube Quantum Dots}
-
-As we have seen in Sec.~\ref{ch:theory:sec:electronic_transport_regimes}, the energy required to add a single electron to the \gls{QD}, $e^2 / 2 C$, where $C$ is the dot capacitance, must be greater than the thermal energy $k_{\mathrm{B}}T$. Given that total capacitance values are $C\sim\SI{1e-18}{\farad}$ and energy scales $E_{\mathrm{C}}, \Delta$ up to the meV range, single-electron charging effects are manifested as Coulombd bloackade (Fig.~\ref{fig:intro:cnt_set}d) which allow full mapping of discrete charge states and, for high-quality devices, excited states and exotic multibody interactions~\cite{hanson2007spins, laird2015quantum}.
-
+The platform most commonly used in quantum transport experiments is an electronic device made by \gls{CNT} embedding a \gls{QD} (Fig.~\ref{fig:intro:cnt_set}a). The exact position of the \gls{QD} inside \gls{CNT} has been object of scientific debate, but it is now considered to be the nanotube portion between the large \gls{SB} barriers arising at the metal--\gls{CNT} junctions, where electrons can be trapped by the electric fields induced by local gates located beneath the tube~\cite{laird2015quantum}. A \gls{QD} (or, more generally, a \gls{SET}) can be realised if the contact resistances at the junctions source--\gls{QD} and \gls{QD}--drain exceed a certain limit, i.e.\ $R_\textrm{c}\ge\SI{26}{\kilo\ohm}$~\cite{likharev1999single}; such opaque contacts are often called \textit{tunneling barriers}, given that the main transport mechanism through which current can flow is quantum tunneling. In this settings, the \gls{CNT} energy levels can then be studied by measuring the $I_\textrm{SD}$ through as a function of $V_\textrm{SD}$, $V_\textrm{G}$, and other parameters such as magnetic field $B$, temperature $T$, etc.
 
 \co{Franck--Condon}
 
@@ -560,7 +564,7 @@ Since the introduction of tunneling barriers add a longitudinal confinement, the
         \includegraphics[width=\textwidth]{chapter_introduction/figures/cnt_FC.pdf}
         \caption[Carbon Nanotube Single-Electron Transistors]
         {
-            \textbf{a}, Experimental and theoretical zoom into a part of \gls{CNT} Coulomb diamonds, showing the suppression of the low-bias conductance. In order to reproduce the experimental evidence, \citeauthor{leturcq2009franck} used a value for the electron--vibron coupling $\gamma=3.3$.
+            \textbf{a}, Experimental and theoretical zoom into a part of \gls{CNT} Coulomb diamonds, showing the suppression of the low-bias conductance. In order to reproduce the experimental evidence, \citeauthor{leturcq2009franck} used $\gamma=3.3$ for the electron--vibron coupling.
             \textbf{b}, Differential conductance measured at $V_\textrm{TG}=\SI{0.068}{\volt}$ (top) and $V_\textrm{TG}=\SI{0.157}{\volt}$ (bottom). Solid lines are fits of the conductance maxima using the Franck--Condon progression. \textbf{top}, $g=3.5$ (negative bias voltage, green squares) and $g=5.0$ (positive bias voltage, red circles). Deviations from the progression were explained by the researchers as due to electronic excited states within the $V_\textrm{SD}$ window. \textbf{bottom},  $g=3.0$ (green squares) and $g=4.5$ (red circles). Adapted from~\cite{leturcq2009franck}.
         }
         \label{fig:intro:cnt_FC}
@@ -569,90 +573,91 @@ Since the introduction of tunneling barriers add a longitudinal confinement, the
 
 The exceptional quality of the samples allowed the researchers the unambiguous observation of several features, such as (1) excited vibronic states as lines running paralles to the edges of the Coulomb diamonds, (2) the appearance of absorption sideband peaks within the Coulomb blockaded regions when $T$ was increased, and (3) an aggressive suppression of the current at the edge of the diamonds. Since the current at the edges was suppressed by an amount comparable with the current magnitude for the excited vibronic states, the researchers hypothesised the Franck--Condon conductance blockade~\cite{koch2005franck, koch2006theory}.
 
-\section{Basics of One-dimensional Physics}\label{ch:theory:sec:one_dim_physics_intro}
-In this section we will very briefly review the Fermi liquid theory and its failure in describing strongly-correlated 1D systems. As a result of the lateral confinement of the carriers, graphene nanoribbons are indeed a quasi-1D system. The term \textit{quasi} refers to the electron confinement in two directions, leaving only one \gls{DOF}. Not until the introduction of bottom-up techniques, which are capable of manufacturing atomically-precise ribbon widths below \SI{5}{\nano\metre}, did this become reality.
+On top of the study of the role of vibrational \glspl{DOF}, \glspl{CNT} have been proven an invaluable platform for shading some light on important 1D-physics problems. In the next section, we will provide an brief theoretical overview on the physics of 1D systems followed by some of the most significant experimental evidences
 
-The topics introduced here will explain the peculiarities in the density of states for a fermionic system and later be used to derive the tunneling density of states in the presence of long-range Coulomb interactions for a one-dimensional chain. These results are central to explain a few experimental results exposed in Chapter \ref{ch:gnrset}. A more exhaustive treatement of the following concepts might be reviewed in~\cite{giamarchi2003quantum, cazalilla2011one, giamarchi2016one, bertel2017physics}.
+\section{Basics of One-dimensional Physics}\label{ch:theory:sec:one_dim_physics_intro}
+In this section, we will very briefly review some of the concepts related to the Fermi liquid theory and its failure in describing 1D systems. As a result of the lateral confinement of the charge carriers, \glspl{GNR} are indeed a quasi-1D system. The \textit{quasi} refers to the fact that not until the recently-developed bottom-up techniques~\cite{wang2008room, narita2014synthesis, Liu2015} the fabrication of atomically-precise \glspl{MGNR} has become possible.
+
+The topics introduced here draw the peculiarities in the \gls{DOS} for 1D fermionic systems and the role of long-range Coulomb interactions within them. We believe these concepts are highly relevant in order to provide an explanation to the experimental evidences exposed in Chapter~\ref{ch:gnrset}. A more exhaustive treatment of the following concepts are reviewed in~\cite{giamarchi2003quantum, cazalilla2011one, giamarchi2016one, bertel2017physics}.
 
 
 \subsection{A Succinct Primer of Fermi-Liquid Theory}
-The Fermi liquid theory was advanced by Lev Landau in 1956 as a phenomenological theory to decribe the low-temperature limit behaviour of liquid $^3$He heat capacity, which is surprisingly similar the ideal gas one. Since then, the theory has been used and extend also to capture many-body effects in fermionic systems, such as conducting electrons.
+The Fermi liquid theory was advanced by Lev Landau in 1956 as a phenomenological explanation to decribe the low-temperature behaviour of the heat capacity of liquid $^3$He, which is surprisingly similar to that of the ideal gas one. Since then, the theory has been used and extended to describe electrons in metallic systems.
 
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_theory/figures/1d_chain.pdf}
-        \caption[Schematic of a One-Dimensional System]{Cartoon representing a 1D electron system. The density of the system is defined as the number of particles $N$ in confined in a 1D box of length $L$, i.e. $\rho=N/L=1/a$, where $a$ is the inter-particle spacing.}
+        \caption[Schematic of a One-Dimensional System]
+        {
+            Pictorial representation of a 1D electron system. The density of the system is defined as the number of atoms $N$ confined in a 1D box of length $L$, i.e. $\rho=N/L=1/a$, where $a$ is the spacing between two atoms.
+        }
         \label{fig:theory:1d_chain}
     \end{center}
 \end{figure}
 
-The ground state of a non-interacting gas may be fully captured following standard statistical mechanics. In this framework, of a great importance in calculating macroscopic quantities is the gas momentum distribution function $n^0_{\vec{k}}$, which depends on the wave number $\vec{k}$. More generally, the ground state depends also on the spin occupation number $\sigma$, but we will drop the spin subscript for the moment. For a fermionic gas, the zero-temperature limit $n^0_{\vec{k}}$ is the well-known step function which equals to:
+The ground state of a non-interacting gas can be fully captured by statistical mechanics. In this framework, a key quantity for calculating macroscopic quantities is the momentum-distribution function for a gas $n^0_{\vec{k}}$, which depends on the wavevector $\vec{k}$. More generally, the ground state also depends on the spin occupation number $\sigma$, but we will drop the spin subscript for the moment. The zero-temperature limit of a fermionic gas $n^0_{\vec{k}}$ is the well-known step function, which equals to:
 %
 \begin{equation}
-    n^0_{\vec{k}} =
+    n^0_{\vect{k}} =
     \begin{cases}
-        1 & k\le k_\textrm{F} \\
-        0 & k > k_\textrm{F}  \\
+        1 & k\le k_\textrm{F}, \\
+        0 & k > k_\textrm{F}.  \\
     \end{cases}
 \end{equation}
 %
-At finite temperature, the momentum distribution function coincides with the Fermi--Dirac distribution for metals and with the Bose--Einstein distribution for bosons. The energy of a free particle follows the well-known parabolic dispersion, $\epsilon_{\vec{k}} = \hbar k^2/m$, and the total (multi-electron) energy change caused by an excitation might be expressed as a functional of the energy deviation from the ground state energy $E_0$:
+At finite temperatures, the momentum-distribution function coincides with the well known Fermi--Dirac distribution. The energy of a free particle follows the well-known parabolic dispersion, $\epsilon_{\vec{k}} = \hbar k^2/m$, and the total-energy change of the fermionic gas $\delta E$ caused by an arbitrary excitation may be expressed as a functional of the energy deviation from the ground-state energy $E_0$:
 %
 \begin{equation}
     \delta E[\delta n] = E[n] - E_0 = \sum_{\vec{k}}\epsilon_{\vec{k}}~\delta n_{\vec{k}}
 \end{equation}
 %
-Thus the single-particle energy might be written as a functional derivative of the total energy with respect to the total number of particles with a specific $\vec{k}$ vector:
+The single-particle energy can then be written as a functional derivative of the total-energy change caused by a variation of the number of gas particles within a specified $\vec{k}$ vector:
 %
 \begin{equation}
     \epsilon(\vec{k}) = \frac{\delta E[n]}{\delta n_{\vec{k}}}
 \end{equation}
 %
-An elementary excitation can therefore be thought as the process of adding/removing a particle to/from the ground state and an arbitrary excitated state may consist of a number of such particle-hole pairs. Close to the Fermi surface, $\vec{k} = k_\textrm{F}$, the energy dispersion is sufficiently linear enough to apply a Taylor series expansion:
+In general, an elementary excitation can be thought as the process of adding (or removing) a particle to (from) the ground state and an arbitrary-excitated state. Close to the Fermi surface, $\vec{k} = k_\textrm{F}$, the energy dispersion is sufficiently linear for applying a Taylor-series expansion:
 %
 \begin{equation}
-    \epsilon_{\vec{k}} = \epsilon_\textrm{F} + \upsilon_\textrm{F}\hbar(k - k_\textrm{F}) + \mathcal{O}((k-k_\textrm{F})^2)
+    \epsilon_{\vec{k}} = \epsilon_\textrm{F} + \upsilon_\textrm{F}\hbar(\vect{k} - k_\textrm{F}) + \mathcal{O}((\vect{k}-k_\textrm{F})^2)
 \end{equation}
 %
-where $\upsilon_\textrm{F}=\grad_{\vec{k}}\epsilon|_{\vec{k}=k_\textrm{F}}$ is the Fermi velocity. Landau's intuition was assuming that low-lying eigenstates of the non-interacting Fermi gas continuously evolve into eigenstates of the multi-body (real) system as the interaction is adiabatically switched on. This process leads to the recovery of an individual excitation description, called \textit{quasiparticle}, which is the starting point of the Fermi-liquid theory. Pictorially, a quasiparticle can be visualised as a fermion surrounded by a cloud of disturbance arises due to interaction with other particles. As a consequence, the mass is replaced by to effective mass $m^*=\hbar k_\textrm{F}/\upsilon$ that captures the strenght of the interaction cloud with the single particle and the, as we will se in a moment, the decay of the interaction strength; for the non interacting case, all correlation functions decay as $\sim1/x^2$, where $x$ is the system dimensionality~\cite{giamarchi2003quantum}.
+where $\upsilon_\textrm{F}=\grad_{\vec{k}}\epsilon|_{\vec{k}=k_\textrm{F}}$ is the Fermi velocity. Landau's assumption was that low-lying eigenstates of the non-interacting Fermi gas continuously evolve into the eigenstates of the (real) multi-body system as the interaction is adiabatically switched on. This construction allows one to recovery individual excitations, called \textit{quasiparticles}, that are the starting point of the Fermi-liquid theory.
 
-Therefore, the quasiparticle dispersion may be written as:
-%
-\begin{equation}
-    \epsilon_{\vec{k}} = \epsilon_\textrm{F} + \upsilon\hbar(k - k_\textrm{F}) + \mathcal{O}((k-k_\textrm{F})^2)
-\end{equation}
-%
-In order to quantify the quasiparticle excitation energies, we may expande the energy functional with a Taylor's series up to the second order:
+Pictorially, a quasiparticle can be visualised as a fermion surrounded by a cloud of disturbance arising from the interactions with other particles. The Fermi-liquid theory predicts that this interaction decay as $\sim1/\vec{r}^2$, where with $\vec{r}$ we denote the three spatial coordinates~\cite{giamarchi2003quantum}. The mass is also rescaled to an effective mass $m^*=\hbar k_\textrm{F}/\upsilon$ which value is determined by the interaction strength.
+
+In order to quantify the quasiparticle-excitation energies, we can expand the energy functional with a Taylor's series up to the second order:
 %
 \begin{equation}
     \delta E[\delta n] = \sum_{\vec{k}} \epsilon_{\vec{k}}~\delta n_{\vec{k}} + \frac{1}{2V} \sum_{\vec{k}} f({\vec{k}}, {\vec{k'}})~\delta n_{\vec{k}} \delta n_{\vec{k'}},
 \end{equation}
 %
-where the intesive quantity:
+where the quantity:
 %
 \begin{equation}
     \frac{f ({\vec{k}}, {\vec{k'}})}{V} = \frac{\delta^2 E[n]}{\delta_{\vec{k}} \delta_{\vec{k'}}},
 \end{equation}
 %
-is known as Landau function and quantifies the interaction strength between quasiparticles. The energy of a quasiparticles can be similarly defined as:
+is known as Landau the function, which quantifies the interaction strength between quasiparticles. In a similarr fashion, quasiparticle energies can defined as:
 %
 \begin{equation}
     \tilde{\epsilon}_{\vec{k}} = \frac{\delta E[\delta n ]}{\delta n_{\vec{k}}} = \epsilon_{\vec{k}} + \frac{1}{V}\sum_{\vec{k'}} f({\vec{k}},{\vec{k'}})\delta_{\vec{k'}}.
 \end{equation}.
+%
+Why does the Fermi liquid theory fail to capture 1D systems? Essentially, that is because the Landau function is treated by mean-field approximation, but a mean-field-kind description breaks down in 1D~\cite{giamarchi2003quantum}. This is caused by several reasons.
 
-Why does the Fermi liquid theory fail to capture 1D systems? Essentially because the Landau function is treated by means of a mean-field approximation and a mean-field-kind description breaks down in 1D~\cite{giamarchi2003quantum}. This is caused by several reasons.
-
-Firstly, for a system arranged in a linear chain fashion, only collective excitations exist. Pictorially, one might covince herself by thinking of an electron which starts to oscillate around its equilibrium position. Due to the strong electron--electron interactions, the motion is fastly trasmitted all along the chain, resulting in a collective excitation. Secondly, in high dimensions we have seen that even if the particles interact with each other one can still recover an individual excitation description, where the interaction results in the concept of quasiparticles. In the next section we will take a look at how all these issues have been rationalised in 1D through the study of the Tomonaga--Luttinger model.
+Firstly, for a system arranged in a linear chain fashion, only collective excitations exist. Pictorially, one might covince themselves by thinking of an electron which oscillates around its equilibrium position. Due to strong electron--electron interactions, the motion is fastly trasmitted all along the chain, resulting in a collective excitation. Secondly, in high dimensions we have seen that even if the particles interact with each other one can still recover an individual excitation description, where the interactions result in the concept of quasiparticles. In the next section we will take a look at how all these issues have been rationalised in 1D by studying the Tomonaga--Luttinger model.
 
 \subsection{Introduction to the Tomonaga--Luttinger Model}\label{ch2:derivation_tunneling_DOS}
 
-As we have seen, 1D excitations for an interacting fermionic systems may be adequately described as hydrodynamic-like modes which are similar to sound waves, and that are split into charge- and spin-density waves~\cite{giamarchi2016one}. The absence of an efficient charge screening leads to long-range interactions, which cause strong correlations and the breakdown of an independent-particle description. These correlations are the main reason for the necessity of computing correlation functions for calculating any quantity of interest in 1D systems, hence the wide employment of Green's function methods (propagators).
+The absence of efficient charge screening in 1D results in the presece of long-range interactions, which cause strong correlations and the breakdown of an independent-particle description. These correlations are the main reason for the necessity of computing correlation functions for calculating any quantity of interest, hence the wide employment of Green's function methods (propagators).
 
-One consequence of this uniqueness is that, conveniently, it is often sufficient to conduct an asymptotic analysis for capturing the physical insights of 1D systems. In particular, one has to provide the wave velocity $u$ and the interaction parameter $K$ (also called $g$), a dimensionless number that controls the decay of all the correlation functions, as well as the thermodynamic quantities~\cite{cazalilla2011one}.
+One consequence of this uniqueness is that, conveniently, it is often sufficient to conduct an asymptotic analysis for capturing the physical insights about a 1D system. In particular, one has to provide two parameters: the wave velocity $u$ and the interaction streght $K$ (also called $g$), a dimensionless number that controls the decay of all the correlation functions, as well as the thermodynamic quantities~\cite{cazalilla2011one}.
 
-The first model proposed in 1950 by Tomonaga aimed to describe the multi-fermionic ground state of an interacting Fermi gas and its excitations by treating them the solutions to field equations as sound waves~\cite{tomonaga1950remarks}. The model was later extended by Luttinger in 1963 in an attempt to include interaction of arbitrary strengths~\cite{luttinger1963exactly}. The correct solution was firstly advanced by Mattis and Lieb in 1965~\cite{mattis1994exact} and finalised by a genial intuition from Haldane in 1981~\cite{haldane1981luttinger}.
+The first model proposed in 1950 by Tomonaga aimed to describe the ground state of an interacting Fermi gas, and its excitations, as sound waves to field equations~\cite{tomonaga1950remarks}. The model was later extended by Luttinger in 1963 in an attempt to include interaction of arbitrary strengths~\cite{luttinger1963exactly}. The correct solution was firstly advanced by Mattis and Lieb in 1965~\cite{mattis1994exact} and finalised by a genius intuition from Haldane in 1981~\cite{haldane1981luttinger}.
 
-A central tool required to arrive to Haldane's solution is bosonisation, a mathematical technique which maps the excitation of fermions to bosonic modes of spin-density and charge-density waves and which prerequisite is the possibility of linearise the  single-particle (fermionic) dispersion close to the Fermi level~\cite{von1998bosonization}. This linear approximation is pushed to the extreme in the TLL model, meaning that fermions occupy the linearised energy spectrum all the way down to $-\infty$ on the energy scale (also called Dirac sea, Fig.~\ref{fig:theory:TLL}). In order to apply this assumption, the density of states has to be constant. Broadly speaking, TLL hamiltonian might be written as the sum between kinetic and interaction contributions:
+A key techniques required to arrive to Haldane's solution is bosonisation, a mathematical tool which maps fermionic excitations to bosonic modes of spin-density and charge-density waves, and which prerequisite is the possibility of linearise the energy dispersion close to the Fermi level~\cite{von1998bosonization}. This linear approximation is subjected to a more stringent requirement in the \gls{TLL} model, meaning that fermions occupy the linearised energy spectrum all the way down to $-\infty$ on the energy scale (also called Dirac sea, Fig.~\ref{fig:theory:TLL}). In order to apply this assumption, clearly the density of states has to be constant. The \gls{TLL} Hamiltonian might be written as the sum between kinetic and interaction contributions:
 %
 \begin{equation}
     \mathcal{H}_\textrm{TLL} = \mathcal{H}_0 + \mathcal{H}_\textrm{int}.
@@ -664,17 +669,17 @@ Using the second quantisation formalism, the kinetic part may be written as~\cit
     \mathcal{H}_0 = \sum_{k; r = R,L} \upsilon_\textrm{F}(\epsilon_r k - k_\textrm{F})c^\dagger_{k, r} c_{k, r},
 \end{equation}
 %
-where we have dropped the arrow notation for the wavevector as we are now dealing only with one dimension. Nothing fancy here: $c^\dagger_{k,r} (c_{k,r})$ is the creation (annihilation) operator acting in corresponding Fock space.
+where we have dropped the arrow notation for the wavevector as we are now dealing only with one dimension. Here, $c^\dagger_{k,r} (c_{k,r})$ is the creation (annihilation) operator acting in corresponding Fock space.
 %
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_theory/figures/TLL_model.pdf}
-        \caption[Schematic of The Tomonaga--Luttinger Liquid Model]{The Tomonaga--Luttinger-liquid (TLL) model. \textbf{(a)} Free electron parabolic dispersion (black solid curve) and the linearisation carried out according to the TLL model for excitations close the Fermi level (pink and blue dashed lines). \textbf{(b)} The linear dispersion used in the TLL model. Pink and blue solid lines correspond, to left-(L) and right (R)-moving electrons, respectively. Shaded area shows the Dirac sea below the Fermi energy. Figure adapted from~\cite{jin2020measurement}.}
+        \caption[Schematic of The Tomonaga--Luttinger Liquid Model]{The Tomonaga--Luttinger-liquid (\gls{TLL}) model. \textbf{a}, Free electron parabolic dispersion (black solid curve) and the linearisation carried out according to the \gls{TLL} model for excitations close the Fermi level (pink and blue dashed lines). \textbf{b}, The linear dispersion used in the \gls{TLL} model. Pink and blue solid lines correspond, to left-(L) and right (R)-moving electrons, respectively. Shaded area shows the Dirac sea below the Fermi energy. Figure adapted from~\cite{jin2020measurement}.}
         \label{fig:theory:TLL}
     \end{center}
 \end{figure}
 %
-Because the Fermi surface in 1D consists of just two points at $k=\pm k_\textrm{F}$, we can distinguish states in the right branch ($\epsilon_R=+1$) from those in the left ($\epsilon_L=-1$) branch, and the corresponding dispersion relations are:
+Because the Fermi surface in 1D consists of just two points at $k=\pm k_\textrm{F}$, we can distinguish states in the right branch ($\epsilon_R=+1$) from those in the left branch ($\epsilon_L=-1$), and the corresponding dispersion relations are:
 %
 \begin{align}
     \epsilon_{k, R} & = \epsilon_0 + \hbar \upsilon_\textrm{F} k                     \\
@@ -684,137 +689,143 @@ Because the Fermi surface in 1D consists of just two points at $k=\pm k_\textrm{
 %
 Since states in the $\epsilon_R=+1$ branch have positive velocities they are also referred to as \textit{right movers}; conversely, states in the left branch are referred as \textit{left movers}.
 
-The interaction term is where the fun begins. In order to write it down, we shall first introduce a central quantity when one deals with 1D. Because the system is subject to quantum fluctuations, even at zero-temperature processes close to the Fermi surface will drive the system response~\cite{giamarchi2006strong}. Low-energy processes might be well captured by introducing the density operator\footnote[4]{A technicality here. Since the model includes all the negative states, the density operator as it has been written in Eq.~\ref{eq:theory:density_op} is infinite as the number of fermions is infinite. One has to introduce the \textit{normal ordering} of operators, meaning that what matters are deviations in the density with respect to the density of the ground state~\cite{von1998bosonization}.}:
+In order to write the interaction term down, we shall first introduce a key quantity which is the \textit{density operator}. Because the system is subject to quantum fluctuations, even at zero-temperature, low-energy processes, i.e. close to the Fermi surface, will drive the total system response~\cite{giamarchi2006strong}. These processes are well described by the density operator\footnote[4]{A technicality here. Since the model includes all of the negative states, the density operator as in Eq.~\ref{eq:theory:density_op} is infinite and the number of fermions too. One has to introduce the \textit{normal ordering} of operators, meaning that what matters are deviations in the density with respect to the ground-state density~\cite{von1998bosonization}.}:
 %
 \begin{equation}
     \rho^\dagger(q) = \sum_k c^\dagger_{k+q, r}c_{k,r},
     \label{eq:theory:density_op}
 \end{equation}
 %
-and the interaction may be written as:
+and the interaction term can be expressed as:
 %
 \begin{equation}
     \mathcal{H}_\textrm{int}=\frac{1}{2V}\sum_{k,k',q}V(q)c^\dagger_{k+q}c^\dagger_{k'-q}c_{k'}c_{k},
     \label{eq:theory:lutt_int}
 \end{equation}
 %
-As illustrated in Fig.~\ref{fig:theory:excitation_spectrum}, since $k$ and $k-q$ are restricted to be close the two points at $\pm k_\textrm{F}$, there are only two possible value of $q$ depending on the sign of $k$ and $k-q$. When $k$ and $k-q$ have the same sign, $\abs{q}\sim 0$. This corresponds to a scattering term for fermions moving in the same direction and might be interpreted as a \textit{forward scattering}. When $k$ and $k-q$ have opposite sign, $\abs{q}\sim 2k_\textrm{F}$, meaning that in this excitation fermions exchange side (\textit{backward scattering}).
-
+As illustrated in Fig.~\ref{fig:theory:excitation_spectrum}, $k$ and $k-q$ are restricted to be close the two points at $\pm k_\textrm{F}$, therefore there are only two possible values of $q$ depending on the sign of $k$ and $k-q$. When $k$ and $k-q$ have the same sign, $\abs{q}\sim 0$. This corresponds to a scattering term for fermions moving in the same direction and is interpreted as a \textit{forward scattering}. When $k$ and $k-q$ have opposite sign, $\abs{q}\sim 2k_\textrm{F}$, meaning that fermions exchange sides (\textit{backward scattering}).
+%
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_theory/figures/excitation_spectrum_1D_fermions.pdf}
-        \caption[Low-Energy Quasiparticles Excitations in One-Dimensional Systems]{Excitation Spectrum for 1D fermions. \textbf{(a)} In one dimension, the Fermi surface constits of only two points, corresponding to wavevector $\pm k_\textrm{F}$. Low-energy single-particle excitations such asforward (pink) and backward (blue) scattering for small momentum . The $q\sim0$ component switches on particle-hole excitations on the same branch, whereas the $q\sim 2k_\textrm{F}$ carries a particle across the two sides of the Fermi surface. Black dots are filled (occupied) states, holes are empty circles. \textbf{(b)} Particle--hole excitation spectrum. Accessible energies are the one shaded in grey, whereas the forbidden regions indicated by the white gaps are unique to the 1D nature of these systems and find no correspondece to higher dimensions. The position of the spectral edges, separating accessible from forbidden regions, are marked by a solid black curve. Experimental observations of the magnetic response for certain classes of solid-state materials (Heisenberg antiferromagnetic chains such as KCuF$_3$) through inelastic neutron scattering have confirmed these regions~\cite{lake2005quantum, mourigal2013fractional}. Adapted from~\cite{vianez2021semiconductor}.}
+        \caption[Low-Energy Quasiparticles Excitations in One-Dimensional Systems]
+        {
+            \textbf{a}, The Fermi surface consists of only two points, corresponding to wavevector $\pm k_\textrm{F}$. Low-energy single-particle excitations such asforward (pink) and backward (blue) scattering for small momentum. The $q\sim 0$ component switches on particle-hole excitations on the same branch, whereas the $q\sim 2k_\textrm{F}$ carries a particle across the two sides of the Fermi surface. Black dots are filled (occupied) states, holes are empty circles.
+            \textbf{b}, Particle--hole excitation spectrum. Accessible energies are the one shaded in grey, whereas the forbidden regions indicated by the white gaps are unique to the 1D nature of these systems and find no correspondece in higher dimensions. The position of the spectral edges, separating accessible from forbidden regions, are marked by a solid-black curve. Experimental observations of the magnetic response for certain classes of solid-state materials (Heisenberg antiferromagnetic chains such as KCuF$_3$) through inelastic neutron scattering have confirmed these regions~\cite{lake2005quantum, mourigal2013fractional}. Adapted from~\cite{vianez2021semiconductor}.
+        }
         \label{fig:theory:excitation_spectrum}
     \end{center}
 \end{figure}
-
-The problem with the term in Eq.~\ref{eq:theory:lutt_int} is that it is the product between two density operators. When these are expressed in the fermion operator basis, they will expand to be a quartic function of the fermion operators, and problems then arise becuase is all but trivial to diagonalise a quartic Hamiltonian. Haldane's intuition~\cite{haldane1981luttinger} was to map the problem, through a change of the basis, into the bosonic-operator domain, where the interaction is reduced to a quadratic form, so that a closed-form solution is attainable. This process will be briefly outlined in the next section when I will derive the tunneling density of states in case for a fermion tunneling through a Luttinger liquid.
-
-
-\subsection{Derivation of the Tunneling Density of States}
-
-Here, we will briefly sketch the derivation of the \gls{TDOS} for a Luttinger liquid~\cite{egger1997effective, egger1999luttinger, kane1997coulomb}. We will use the second quantization formalism, in which both the wavefunctions and the operators are expressed as operators (more generally, fields) acting in the Fock space. This formalism greatly simplifies the description of multi-electron interacting systems in situations where single-particle interactions fail to capture all the features. The short and medium correlations between different parts of the system, well captured by the Green's function (propagator) between operators associated with a certain observable between different time frames, are central to this formalism.
+%
+A problem with Eq.~\ref{eq:theory:lutt_int} can be found in the product between the two density operators. When these are expressed in the fermion operator basis, these will expand to be a quartic function of the fermion operators. Consequently it is not trivial to diagonalise such quartic Hamiltonian. Haldane's intuition~\cite{haldane1981luttinger} was to map the problem, through a change of the basis, into the bosonic-operator domain, where the interaction is reduced to a quadratic form, so that a closed-form solution is attainable. This process will be briefly outlined in the next section when I will derive the tunneling density of states in case for a fermion tunneling through a Luttinger liquid.
 
 
-The \gls{TDOS} may be written as
-%
-\begin{equation}
-    \rho_{\operatorname{dos}}(\omega)=\int_{-\infty}^{\infty} \frac{d t}{2 \pi} e^{i \omega t}\left\langle\psi_{e}(t) \psi_{e}^\dagger(0)\right\rangle,
-\end{equation}
-%
-where $\psi_{e}(t)$ is the time-dependent fermionic operator (field), $\omega$ is an energy scale, and the brackets indicate the propagator (Green's function) as introduced in Sec.~\ref{ch:theory:sec:one_dim_physics_intro}. The mapping between fermionic and bosonic operators takes place through bosonization~\cite{von1998bosonization}, which allows writing fermionic operators in terms of bosonic fields.
-We then may write the bosonized form of the fermionic operator as:
-%
-\begin{equation}
-    \psi_{e} = \psi_{L}+\psi_{R},
-\end{equation}
-%
-where $\psi_{L/R}$ are the left/right fermionic operators for left-moving and right-moving carriers\footnote[1]{This argument, as will be explained later, assumes that chirality symmetry is respected. As a result, applying a strong magnetic field that may cause chiral-symmetry breaking compel this argument to be adjusted~\cite{roy2014chiral}.}, which may be written in terms of a bosonic operator $e^{-i \varphi_{L/R}}$ normalized by the inter-particle spacing $a$ when particles are confined along a 1D chain
-$\psi_{L / R}=e^{-i \varphi_{L / R}}/\sqrt{a}.$
+% \subsection{Derivation of the Tunneling Density of States}
 
-In order to diagonalise the Luttinger liquid Hamiltonian, it may be convenient to introduce the following fields:
-\begin{equation}
-    \phi_{\pm}=\frac{1}{\sqrt{2}} g^{\mp\frac{1}{2}}\left(\varphi_{L} \mp \varphi_{R}\right),
-\end{equation}
-%
-where $g>0$ (for free electrons $g=1$) is a dimensionless parameter which quantifies the electron--electron interactions in a 1D quantum wire. These fields have also the peculiarity to be canonically conjugated to the displacement field $\theta(x)$ which derivative models the electron density fluctuations:
-%
-\begin{equation}
-    \delta n(x) = n(x) - n_0 = =\frac{\partial_x \theta(x)}{\pi},
-\end{equation}
-%
-where $n_0$ is the average density. This expression is obtained by considering that if $\theta(a)- \theta(0)= -\pi$, then only one extra electron is between two particles separated by a distance $a$.
+% Here, we will briefly sketch the derivation of the \gls{TDOS} for a Luttinger liquid~\cite{egger1997effective, egger1999luttinger, kane1997coulomb}. We will use the second quantization formalism, in which both the wavefunctions and the operators are expressed as operators (more generally, fields) acting in the Fock space. This formalism greatly simplifies the description of multi-electron interacting systems in situations where single-particle interactions fail to capture all the features. The short and medium correlations between different parts of the system, well captured by the Green's function (propagator) between operators associated with a certain observable between different time frames, are central to this formalism.
 
-The two fermionic fields thus read:
-\begin{equation}
-    \begin{aligned}
-         & \psi_{L}=\frac{1}{\sqrt{a}} e^{-\frac{i}{\sqrt{2}}\left(\frac{1}{\sqrt{g}} \phi_{-}+\sqrt{g} \phi_{+}\right)}, \\
-         & \psi_{R}=\frac{1}{\sqrt{a}} e^{-\frac{i}{\sqrt{2}}\left(\frac{1}{\sqrt{g}} \phi_{-}-\sqrt{g} \phi_{+}\right)},
-    \end{aligned}
-\end{equation}
-%
-while the fermionic propagator may be written as
-\begin{equation}
-    \begin{aligned}
-        \left\langle\psi_{e}(t) \psi_{e}^+(0)\right\rangle= & \left\langle\psi_{L}(t) \psi_{L}(0)\right\rangle+\left\langle\psi_{R}(t) \psi_{R}(0)\right\rangle \\
-        =                                                   & \left\langle\psi_{L}(t) \psi_{L}(0)\right\rangle+ \text{h.c.}
-    \end{aligned}
-\end{equation}
-%
-where $\textrm{h.c.}$ represents the Hermitian conjugate terms in the propagator formula. Cross terms such as $\left\langle\psi_{L}^{\dagger} \psi_{R}\right\rangle$ cancel each other since we assume chirality is conserved. For the remaining terms the sum can be opened such as:
-%
-\begin{align}
-    \left\langle\psi_{L}^{\dagger}(t) \psi_{L}(0)\right\rangle & = \frac{1}{a}\left\langle e^{\frac{i}{\sqrt{2}}(\frac{1}{\sqrt{g}}\phi_{-}(t) \sqrt{g}\phi_{+}(t))} e^{\frac{i}{\sqrt{2}}(\frac{1}{\sqrt{g}}\phi_{-}(0) \sqrt{g}\phi_{+}(0))}\right\rangle,                          \\
-                                                               & = \frac{1}{a}\left\langle e^{\frac{i}{\sqrt{2g}}\phi_{-}(t)} e^{\frac{-i}{\sqrt{2g}}\phi_{-}(0)}\right\rangle\times\left\langle e^{\frac{i}{\sqrt{2g}}\phi_{+}(t)} e^{\frac{-i}{\sqrt{2g}}\phi_{+}(0)}\right\rangle,
-\end{align}
-%
-By using the Baker--Campbell--Hausdorff identity, which is valid for exponential operators and is obeyed by free bosonic fields
-%
-\begin{equation}
-    \left\langle e^{B_{1}} e^{B_{2}}\right\rangle=e^{\frac{1}{2}}\left\langle B_{1}^{2}+2 B_{1} B_{2}+B_{2}^{2}\right\rangle,
-\end{equation}
-%
-and time-translational symmetry, we obtain:
-%
-\begin{align*}
-    \left\langle e^{\frac{i}{\sqrt{2g}} \phi_{-}(t)} e^{-\frac{i}{\sqrt{2g}} \phi_{-}(0)}\right\rangle
-     & = e^{\frac{1}{2g}\left\langle \phi_{-}(t)\phi_{-}(0)-\phi_{-}(0) \phi_{-}(0)\right\rangle} \\
-     & = \left(1+\frac{i\upsilon_{F}t}{a} \right)^{-\frac{1}{2 g}}
-\end{align*}
-%
-where we introduce the Fermi velocity $v_\textrm{F}$ and used the relation
-\begin{equation}
-    \left\langle\phi_{-}(t)\phi_{-}(0)\right\rangle = -\ln(1+\frac{i\upsilon_{F}t}{a})
-\end{equation}
-%
-Similarly
-\begin{equation}
-    \left\langle e^{i\sqrt{\frac{g}{2}} \phi_{+}(t)} e^{-i\sqrt{\frac{g}{2}}\phi_{+}(0)}\right\rangle = (1+i\upsilon_{F}t/a)^{-\frac{g}{2}}
-\end{equation}
-%
-and by combining the two terms, the fermionic propagator reads:
-\begin{equation}
-    \left\langle\psi_{e}(t)\psi_{e}(0)\right\rangle = \frac{1}{a}(1+\frac{i\upsilon_\textrm{F}t}{a})^{\frac{1}{2}(g+g^{-1})}
-\end{equation}
-%
-Incorporating this expression into the TDOS yields:
-%
-\begin{equation}
-    \begin{aligned}
-        \rho_{\operatorname{dos}}(\omega) & =\int_{-\infty}^{\infty} \frac{\textrm{d t}}{2 \pi} e^{i \omega t}\left\langle\psi_{e}(t) \psi_{e}^{\dagger}(0)\right\rangle                             \\
-                                          & =\frac{1}{2 \pi a} \int_{-\infty}^{\infty} \textrm{d t} e^{i \omega t}\left(1+\frac{i\upsilon_\textrm{F}t}{a}\right)^{-\frac{1}{2}\left(g+g^{-1}\right)}
-    \end{aligned}
-\end{equation}
-%
-Since we are interested in the low-energy behavior of the TDOS, we look at the limit for which $\omega\rightarrow0$, which in the time-domain corresponds to look at the behavior for $t\rightarrow\infty$:
 
-\begin{align}\label{eq:luttinger_exponent}
-    \begin{split}
-        \rho_{\operatorname{dos}}(\omega) & \sim \int_{-\infty}^{\infty}\textrm{d t} \frac{e^{i\omega t }}{t^{1/2(g+g^{-1})}} \\
-        & \sim \omega^{\frac{1}{2}(g + g^{-1})-1}= \omega^{\alpha}
-    \end{split}
-\end{align}
+% The \gls{TDOS} may be written as
+% %
+% \begin{equation}
+%     \rho_{\operatorname{dos}}(\omega)=\int_{-\infty}^{\infty} \frac{d t}{2 \pi} \exp{i \omega t}\left\langle\psi_{e}(t) \psi_{e}^\dagger(0)\right\rangle,
+% \end{equation}
+% %
+% where $\psi_{e}(t)$ is the time-dependent fermionic operator (field), $\omega$ is an energy scale, and the brackets indicate the propagator (Green's function) as introduced in Sec.~\ref{ch:theory:sec:one_dim_physics_intro}. The mapping between fermionic and bosonic operators takes place through bosonization~\cite{von1998bosonization}, which allows writing fermionic operators in terms of bosonic fields.
+% We then may write the bosonised form of the fermionic operator as:
+% %
+% \begin{equation}
+%     \psi_{e} = \psi_{L}+\psi_{R},
+% \end{equation}
+% %
+% where $\psi_{L/R}$ are the left/right fermionic operators for left-moving and right-moving carriers\footnote[1]{This argument, as will be explained later, assumes that chirality symmetry is respected. As a result, applying a strong magnetic field that could cause chiral-symmetry breaking compel this argument to be adjusted~\cite{roy2014chiral}.}, which may be written in terms of a bosonic operator $\exp{-i \varphi_{L/R}}$ normalized by the inter-particle spacing $a$ when particles are confined along a 1D chain
+% $\psi_{L / R}=\exp{-i \varphi_{L / R}}/\sqrt{a}.$
 
+% In order to diagonalise the \gls{TLL} Hamiltonian, it may be convenient to introduce the following fields:
+% \begin{equation}
+%     \phi_{\pm}=\frac{1}{\sqrt{2}} g^{\mp\frac{1}{2}}\left(\varphi_{L} \mp \varphi_{R}\right),
+% \end{equation}
+% %
+% where $g>0$ (for free electrons $g=1$) is a dimensionless parameter which quantifies the electron--electron interactions in a 1D quantum wire. These fields are canonically conjugated to the displacement field $\theta(x)$, whose derivative models the electron-density fluctuations:
+% %
+% \begin{equation}
+%     \delta n(x) = n(x) - n_0 = \frac{\partial_x \theta(x)}{\pi},
+% \end{equation}
+% %
+% where $n_0$ is the average density. This expression is obtained by considering that if $\theta(a)- \theta(0)= -\pi$, then there is only one extra electron between two particles separated by a distance $a$.
+
+% The two fermionic fields thus read:
+% \begin{equation}
+%     \begin{aligned}
+%          & \psi_{L}=\frac{1}{\sqrt{a}} \exp{-\frac{i}{\sqrt{2}}\left(\frac{1}{\sqrt{g}} \phi_{-}+\sqrt{g} \phi_{+}\right)}, \\
+%          & \psi_{R}=\frac{1}{\sqrt{a}} \exp{-\frac{i}{\sqrt{2}}\left(\frac{1}{\sqrt{g}} \phi_{-}-\sqrt{g} \phi_{+}\right)},
+%     \end{aligned}
+% \end{equation}
+% %
+% while the fermionic propagator may be written as
+% \begin{equation}
+%     \begin{aligned}
+%         \left\langle\psi_{e}(t) \psi_{e}^+(0)\right\rangle= & \left\langle\psi_{L}(t) \psi_{L}(0)\right\rangle+\left\langle\psi_{R}(t) \psi_{R}(0)\right\rangle \\
+%         =                                                   & \left\langle\psi_{L}(t) \psi_{L}(0)\right\rangle+ \text{h.c.}
+%     \end{aligned}
+% \end{equation}
+% %
+% where $\textrm{h.c.}$ represents the Hermitian conjugate terms in the propagator formula. Cross terms such as $\left\langle\psi_{L}^{\dagger} \psi_{R}\right\rangle$ cancel each other since we assume chirality is conserved. For the remaining terms the sum can be opened such as:
+% %
+% \begin{align}
+%     \left\langle\psi_{L}^{\dagger}(t) \psi_{L}(0)\right\rangle & = \frac{1}{a}\left\langle \exp{\frac{i}{\sqrt{2}}(\frac{1}{\sqrt{g}}\phi_{-}(t) \sqrt{g}\phi_{+}(t))} \exp{\frac{i}{\sqrt{2}}(\frac{1}{\sqrt{g}}\phi_{-}(0) \sqrt{g}\phi_{+}(0))}\right\rangle,                              \\
+%                                                                & = \frac{1}{a}\left\langle \exp{\frac{i}{\sqrt{2g}}\phi_{-}(t)} \exp{\frac{-i}{\sqrt{2g}}\phi_{-}(0)}\right\rangle\times\left\langle \exp{\frac{i}{\sqrt{2g}}\phi_{+}(t)} \exp{\frac{-i}{\sqrt{2g}}\phi_{+}(0)}\right\rangle,
+% \end{align}
+% %
+% By using the Baker--Campbell--Hausdorff identity, which is valid for exponential operators and is obeyed by free bosonic fields
+% %
+% \begin{equation}
+%     \left\langle \exp{B_{1}} \exp{B_{2}}\right\rangle=\exp{\frac{1}{2}}\left\langle B_{1}^{2}+2 B_{1} B_{2}+B_{2}^{2}\right\rangle,
+% \end{equation}
+% %
+% and time-translational symmetry, we obtain:
+% %
+% \begin{align*}
+%     \left\langle \exp{\frac{i}{\sqrt{2g}} \phi_{-}(t)} \exp{-\frac{i}{\sqrt{2g}} \phi_{-}(0)}\right\rangle
+%      & = \exp{\frac{1}{2g}\left\langle \phi_{-}(t)\phi_{-}(0)-\phi_{-}(0) \phi_{-}(0)\right\rangle} \\
+%      & = \left(1+\frac{i\upsilon_{F}t}{a} \right)^{-\frac{1}{2 g}}
+% \end{align*}
+% %
+% where we introduce the Fermi velocity $v_\textrm{F}$ and used the relation
+% \begin{equation}
+%     \left\langle\phi_{-}(t)\phi_{-}(0)\right\rangle = -\ln(1+\frac{i\upsilon_{F}t}{a})
+% \end{equation}
+% %
+% Similarly
+% \begin{equation}
+%     \left\langle \exp{i\sqrt{\frac{g}{2}} \phi_{+}(t)} \exp{-i\sqrt{\frac{g}{2}}\phi_{+}(0)}\right\rangle = (1+i\upsilon_{F}t/a)^{-\frac{g}{2}}
+% \end{equation}
+% %
+% and by combining the two terms, the fermionic propagator reads:
+% \begin{equation}
+%     \left\langle\psi_{e}(t)\psi_{e}(0)\right\rangle = \frac{1}{a}(1+\frac{i\upsilon_\textrm{F}t}{a})^{\frac{1}{2}(g+g^{-1})}
+% \end{equation}
+% %
+% Incorporating this expression into the TDOS yields:
+% %
+% \begin{equation}
+%     \begin{aligned}
+%         \rho_{\operatorname{dos}}(\omega) & =\int_{-\infty}^{\infty} \frac{\textrm{dt}}{2 \pi} \exp{i \omega t}\left\langle\psi_{e}(t) \psi_{e}^{\dagger}(0)\right\rangle                             \\
+%                                           & =\frac{1}{2 \pi a} \int_{-\infty}^{\infty} \textrm{dt} \exp{i \omega t}\left(1+\frac{i\upsilon_\textrm{F}t}{a}\right)^{-\frac{1}{2}\left(g+g^{-1}\right)}
+%     \end{aligned}
+% \end{equation}
+% %
+% Since we are interested in the low-energy behavior of the TDOS, we look at the limit for which $\omega\rightarrow0$, which in the time-domain corresponds to look at the behavior for $t\rightarrow\infty$:
+
+% \begin{align}\label{eq:luttinger_exponent}
+%     \begin{split}
+%         \rho_{\operatorname{dos}}(\omega) & \sim \int_{-\infty}^{\infty}\textrm{dt} \frac{\exp{i\omega t }}{t^{1/2(g+g^{-1})}} \\
+%         & \sim \omega^{\frac{1}{2}(g + g^{-1})-1}= \omega^{\alpha}
+%     \end{split}
+% \end{align}
+
+For the process associated with a tunneling event into the bulk of a \gls{CNT} the exponent of Eq.~\ref{eq:luttinger_exponent} is expected to be $\alpha\simeq 0.4$~\cite{kane1997coulomb}. As we have seen in Ch.~\ref{ch:introduction}, this exponent can be phenomenologically interpreted as the strength of the electron--electron interactions, which lead to a suppression of the conductance when an excess of energy (thermal or electric) is pumped into the system.
+The approach detailed in this chapter is, as we have mentioned, applicable to any 1D. As such, it should be possible to describe \glspl{GNR}, and in particular \glspl{MGNR}, within this framework, especially in the $l_\textrm{GNR}\gg w_\textrm{GNR}$ limit. Furthermore, in \glspl{MGNR}, the graphene band structure allows us to label both the valley and the spin degree of freedoms, amounting to a total four-fold degeneracy of the band structure: this should lead to a \gls{TDOS} whose tunneling exponent into one of the \gls{MGNR} ends is $\alpha\simeq\frac{1}{4}(g^{-1}-1)$~\cite{mattsson1997properties, fabrizio1995interacting}. In Ch.~\ref{ch:gnrset} we will outiline the experiment we have setup in order to confirm this theoretical estimate.
 
 
 \subsection{Experimental Evidence: Luttinger Liquid in Carbon Nanotubes}
@@ -851,33 +862,6 @@ The Luttinger parameter, $g$, which characterizes the strength and sign of the e
 \end{figure}
 
 Further experimental evidences, however, demonstrated that the interpretation of the tunneling exponent may be not that trivial.  Postma et al. measured the conductance of electrons tunneling inside a carbon nanotubes QD where the tunneling barriers were introduced by mechanically bending the nanotube with an AFM tip. Since the \gls{QD} was not end-contacted they explained the conductance-suppression exponent as the result of a tunneling event from a Tomonaga--Luttinger liquid (the nanotube) into a Luttinger island (the quantum dot hosted inside the tube). In this case, the conductance was strongly suppressed, reporting an $\alpha_{\text {bulk }} \sim 0.64$, and rationalised by strong electron--electron interactions $g\sim0.23$ as expected from theory~\cite{egger1999luttinger}. This observation was hypothesised to be the consequence of a different kind of tunneling mechanism called \textit{correlated sequential tunneling}~\cite{thorwart2002correlated}. Briefly, in this mechanism the once the electron tunnel on the \gls{QD} it does not immediately tunnels onto the drain but there is a dephasing due to interaction with plasmon modes.
-
-\subsection{Concluding Remarks}
-
-For the process associated with a tunneling event into the bulk of a \gls{CNT} the exponent of Eq.~\ref{eq:luttinger_exponent} is expected to be $\alpha\simeq 0.4$~\cite{kane1997coulomb}. As we have seen in Ch.~\ref{ch:introduction}, this exponent can be phenomenologically interpreted as the strength of the electron--electron interactions, which lead to a suppression of the conductance when an excess of energy (thermal or electric) is pumped into the system.
-The approach detailed in this chapter is, as we have mentioned, applicable to any 1D. As such, it should be possible to describe \glspl{GNR}, and in particular \glspl{MGNR}, within this framework, especially in the $l_\textrm{GNR}\gg w_\textrm{GNR}$ limit. Furthermore, in \glspl{MGNR}, the graphene band structure allows us to label both the valley and the spin degree of freedoms, amounting to a total four-fold degeneracy of the band structure: this should lead to a \gls{TDOS} whose tunneling exponent into one of the \gls{MGNR} ends is $\alpha\simeq\frac{1}{4}(g^{-1}-1)$~\cite{mattsson1997properties, fabrizio1995interacting}. In Ch.~\ref{ch:gnrset} we will outiline the experiment we have setup in order to confirm this theoretical estimate.
-
-
-
-
-
-
-
-
-% An exciting area opened by this work is the possibility to combine the spin degree of freedom with mechanical and optical degrees in clean, suspended nanotubes.
-% There has already been progress in engineering quantized phonons in nanotubes and studying their interactions with the charge on quantum dots (Benyamini et al.,
-% 2014; Huttel et al., 2009; Lassagne et al., 2009; Sapmaz
-% et al., 2005a; Sazonova et al., 2004; Steele et al., 2009a).
-% Evidence for the discreteness of longitudinal stretching
-% phonon modes, comes from Frank-Condon blockade in
-% suspended nanotubes (Leturcq et al., 2009x`'; Sapmaz et al.,
-% 2005a), discussed theoretically by (Flensberg, 2006; Mariani and von Oppen, 2009; Sapmaz et al., 2003). By
-% tuning the discrete phonon modes away from resonance
-% with qubit splittings, long qubit lifetimes may be achievable. On the other hand, when the qubit splitting is
-% nearly resonant with a discrete phonon mode, coherent energy exchange should be possible between them,
-% in a solid-state analog of cavity quantum electrodynamics (P´alyi et al., 2012). Strong spin-phonon coupling in
-% suspended nanotubes may also enable enhanced sensing
-% of nanotube motion (Ohm et al., 2012).
 
 
 

@@ -77,60 +77,59 @@ The calculation was interrupted as the structure started to break down. Fig.~\re
 
 \subsection{Coulomb-Blockade Spectroscopy}
 
+We report here the transport measurements we have acquired for the Dy--Tb double porphyrin. Albeit we intensly ($\sim 6$ months) searched for reproducible features, we did not manage to complete the full set of measurements planned due to (1) irreproducible features and (2) jumping during gate and bias scans, especially when a magnetic field was applied, and possibly due to charge trapped into the \ce{HfOx} substrate.
+
+Although it is not clear at this stage why these devices lacked in reproducibility, one possibility could be due to the overall conformation of the structure. \Gls{TB}-level optimisation suggests that the two biphenyl units prefer to stay rotate \SI{90}{\degree} each other, causing the complete rotation of the TbP part. Although anchoring groups were omitted in our optimisation, we bieleve that this effect might result in worsen $\pi$--$\pi$ interactions established between the anchoring groups and the graphene leads. Different linking groups between the two porphyrin units could then lead to improved reproducibilities.
+
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{text/-2.23V_diamond.pdf}
         \caption[Tb--Dy Spin Valve: Field-Sweep Analysis of the Coulomb Diamond at \SI{-2.23}{\volt}]
         {
-            \textbf{a,} bla
-            \textbf{b,} bla
+            \textbf{a}, Zero-field stability diagram. Excited states inside the diamond are visible, as well as negative differential conductance at positive bias.
+            \textbf{b}, The same diamond when $\SI{1}{\tesla}$ is applied transversal to the porphyrin plane. Differential conductance are still present at postive bias, and we also observe an in increase in the conductance of the left diamond-edge (brighter line). Although it might be possible to observe Pauli Spin blockade.
+            \textbf{c}, Magnetic-field evolution of the bias curves in the same gate voltage range as (a). The peak close to zero bias split $B_\perp\gtrapprox\SI{0.5}{\tesla}$
+            \textbf{d}, By assuming the splitting is cause by the Zeeman splitting we estimate a $g$ factor of $\simeq\si[separate-uncertainty = true]{1.88(0.14)}$
         }
-        \label{fig:-3V_diamond_field_sweep}
+        \label{fig:--2.23V_diamond}
     \end{center}
 \end{figure}
-
-We first measured the diamond close zero gate.
-
+\newpage
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{text/-2V_diamond_field_sweep.pdf}
         \caption[Tb--Dy Spin Valve: Field-Sweep Analysis of the Coulomb Diamond at \SI{-2}{\volt}]
         {
-            \textbf{a,} bla
-            \textbf{b,} bla
+            \textbf{a,} Diamond for a different device at \SI{-2}{\volt}
+            \textbf{b,} We measured the current at very low bias ($V_\textrm{SD}=\SI{1}{\milli\volt}$) as a function of the perpendicualar field $B_\perp$ and observed reproducible regions of current suppressed when the field was swept both in forward an backward direction.
         }
         \label{fig:-2V_diamond_field_sweep}
     \end{center}
 \end{figure}
-
-We then pushed more forward to study the diamond at -3V. We could unfortunately have not been able to finish the measurements as the device was jumping a lot during the gate and bias scans, possibly due to charge trapped into the \ce{HfOx} substrate.
-
+\newpage
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{text/-3V_diamond_field_sweep.pdf}
         \caption[Tb--Dy Spin Valve: Field-Sweep Analysis of the Coulomb Diamond at \SI{-3}{\volt}]
         {
-            \textbf{a,} bla
-            \textbf{b,} bla
+            \textbf{a,} Time trace of the current at fixed bias ($V_\textrm{SD}=\SI{3}{\milli\volt}$). Arrow indicate the occurance of a charge jump during the acquisition which prevent further investigations.
+            \textbf{b,} Current evolution as a function of the transversal field and the gate demonstrating non-reproducible charge jumps when the field sweep was inverted.
         }
         \label{fig:-3V_diamond_field_sweep}
     \end{center}
 \end{figure}
 
-
 \section{Concluding Remarks}
 
-In this chapter we briefly commented the results obtained with DFT and electron transport on Tb--Dy double porphyrin.
+In this chapter we briefly commented the results obtained with \gls{DFT} and electron transport on a Tb--Dy double porphyrin.
 Due to time limitations we were not able to finish the project, and therefore we cannot present a conclusive outlook. However, we discuss here current problems and future steps.
 
-From a computational perspective, the main factor is the unknown crystal structure, which has forced us to start from a too unoptimised input geometry which have broken during the self-consistent field cycles. From an experimental perspective, the lack of reproducible results might be explained by considering that the preferential orientation of the anchoring group in the ground state seems to be the one with the two aryl units perpendicular to each other, resulting in one of the porhyrin unit to be completely tilted, thus preventing a good anchoring with the graphene leads.
+The key difficulty from a computational standpoint is the unknown crystal structure, which forced us to start with an unoptimised-input geometry that broke during the self-consistent-field cycles. The lack of reproducible-experimental results may be explained by considering that the preferential orientation of the anchoring group in the ground state appears to have the two linking aryl groups perpendicular to each other, resulting in one porhyrin unit completely tilted and preventing a good anchoring with the graphene leads.
 
-While we are still unable to interpret the spectra and to determine whether or not this molecule display a spin valve behaviour, the raw data show
-a clear splitting when the magnetic field is swept up to \SI{1}{\tesla} along the axis coming out from the molecule (y direction).  Intuitively, this might be explained by the Zeeman interaction $\mathcal{H}_Z = -\vec{\mu}\cdot\vec{B}$ which couples the Dy magnetic moment with magnetic field. No zero-field splitting of these states are observed which might hint the absence of exchange interactions~\cite{pei2022exchange}. Additional information about the energy difference between the FM and the AFM configurations might be obtained by modelling the problem with an Hubbard model as recently performed for simular porphyrin systems~\cite{thomas2021charge}.
-
+While we are still unable to interpret the spectra and to determine whether or not this molecule display a spin-valve behaviour, one device displayed peak splitting when the field was swept up to \SI{1}{\tesla} along the direction perpendicular to the molecule extension plane.  Intuitively, this might be explained by the Zeeman interaction $\mathcal{H}_Z = -\vec{\mu}\cdot\vec{B}$ which couples the Dy magnetic moment with magnetic field. No zero-field splitting of these states are observed which might hint the absence of exchange interactions~\cite{pei2022exchange}. Additional information about the energy difference between the FM and the AFM configurations might be obtained by modelling the problem with an Hubbard model as recently performed for simular porphyrin systems~\cite{thomas2021charge}.
 
 
 \section{Project Overview}
 
-The Tb--Dy double porphyrin discussed in this project was designed and synthesised by Dr Keith Andrews and prof.\ Harry Anderson.
+The Tb--Dy double porphyrin discussed in this project was designed and synthesised by Dr Keith Andrews and prof.\ Harry Anderson. I thanked each of them, as well as Dr Alex Gee, for the several devices we measured together and independetly.
 

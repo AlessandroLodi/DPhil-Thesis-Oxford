@@ -25,15 +25,15 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.3266287"
-     inkscape:cx="206.91547"
-     inkscape:cy="433.80638"
+     inkscape:zoom="3.7522726"
+     inkscape:cx="141.11448"
+     inkscape:cy="260.24229"
      inkscape:window-width="2462"
      inkscape:window-height="1411"
      inkscape:window-x="89"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g82865" />
+     inkscape:current-layer="g79174" />
   <defs
      id="defs83534">
     <linearGradient
@@ -331,6 +331,48 @@
            x="595.55597"
            y="-455.75543"
            transform="rotate(90)" />
+        <text
+           xml:space="preserve"
+           style="font-size:7.82305px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.58673"
+           x="425.30252"
+           y="-599.12622"
+           id="text15381-3-8"
+           transform="scale(1,-1)"><tspan
+             sodipodi:role="line"
+             id="tspan15379-9-8"
+             x="426.38928"
+             y="-599.12622"
+             style="font-style:italic;font-size:7.82305px;stroke-width:0.58673">V<tspan
+   style="font-style:normal;font-size:65%;baseline-shift:sub;stroke-width:0.58673"
+   id="tspan15385-3-1">SD</tspan> </tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:7.82305px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.58673"
+           x="401.79651"
+           y="-599.28259"
+           id="text15381-3"
+           transform="scale(1,-1)"><tspan
+             sodipodi:role="line"
+             id="tspan15379-9"
+             x="402.88327"
+             y="-599.28259"
+             style="font-style:italic;font-size:7.82305px;stroke-width:0.58673">V<tspan
+   style="font-style:normal;font-size:65%;baseline-shift:sub;stroke-width:0.58673"
+   id="tspan15385-3">G</tspan> </tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:7.82305px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.58673"
+           x="374.58878"
+           y="-599.4389"
+           id="text15381-1"
+           transform="scale(1,-1)"><tspan
+             sodipodi:role="line"
+             id="tspan15379-6"
+             x="375.67554"
+             y="-599.4389"
+             style="font-style:italic;font-size:7.82305px;stroke-width:0.58673">I<tspan
+   style="font-style:normal;font-size:65%;baseline-shift:sub;stroke-width:0.58673"
+   id="tspan15385-7">SD</tspan> </tspan></text>
         <rect
            style="opacity:0.504425;fill:url(#linearGradient15778);fill-opacity:1;stroke:none;stroke-width:0.586734;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            id="rect15760"
@@ -399,11 +441,11 @@
            transform="scale(1,-1)" />
         <g
            id="g79174"
-           transform="translate(-124.51044,-22.77634)"
-           style="stroke-width:0.782301">
+           transform="matrix(0.99318029,0,0,1,-120.62641,-22.77634)"
+           style="stroke-width:0.784982">
           <text
              xml:space="preserve"
-             style="font-size:8.00002px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.58673"
+             style="font-size:8.00002px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.588741"
              x="555.62579"
              y="-701.25177"
              id="text13302"
@@ -412,9 +454,9 @@
                id="tspan13300"
                x="555.62579"
                y="-701.25177"
-               style="stroke-width:0.58673">DAC 1</tspan></text>
+               style="stroke-width:0.588741">DAC 1</tspan></text>
           <rect
-             style="fill:none;stroke:#000000;stroke-width:0.58673;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             style="fill:none;stroke:#000000;stroke-width:0.588741;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
              id="rect13310"
              width="28.660717"
              height="14.732143"
@@ -440,9 +482,9 @@
           <rect
              style="fill:none;stroke:#000000;stroke-width:0.206986;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
              id="rect13312"
-             width="10.110864"
+             width="9.9729576"
              height="5.1971726"
-             x="42.793011"
+             x="42.930916"
              y="26.629404" />
         </g>
         <g
@@ -528,20 +570,6 @@
            d="m 430.00902,498.87232 h 15.94123 v 56.7962 h -16.88967"
            id="path14405"
            sodipodi:nodetypes="cccc" />
-        <text
-           xml:space="preserve"
-           style="font-size:6.00001px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.58673"
-           x="450.40149"
-           y="-522.07178"
-           id="text14497"
-           transform="scale(1,-1)"><tspan
-             sodipodi:role="line"
-             id="tspan14495"
-             x="450.40149"
-             y="-522.07178"
-             style="font-style:italic;stroke-width:0.58673">I<tspan
-   style="font-size:3.90001px;baseline-shift:sub;stroke-width:0.58673"
-   id="tspan14499">d</tspan></tspan></text>
         <g
            id="g13414"
            transform="matrix(2.8346458,0,0,-2.8346458,131.43153,568.97202)"
@@ -695,57 +723,36 @@
         <text
            xml:space="preserve"
            style="font-size:8.00002px;line-height:0;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.58673"
-           x="439.52917"
-           y="-658.27283"
+           x="-655.15015"
+           y="-431.3089"
            id="text13771"
-           transform="scale(1,-1)"><tspan
-             sodipodi:role="line"
-             id="tspan13769"
-             x="439.52917"
-             y="-658.27283"
-             style="font-size:6.00001px;line-height:1;stroke-width:0.58673"><tspan
-   style="font-style:italic;stroke-width:0.58673"
-   id="tspan13969">V</tspan><tspan
-   style="font-style:italic;font-size:3.90001px;baseline-shift:sub;stroke-width:0.58673"
-   id="tspan13961">sd</tspan> =</tspan><tspan
+           transform="matrix(0,-1,-1,0,0,0)"><tspan
              style="font-size:6.00001px;line-height:1;stroke-width:0.58673"
              sodipodi:role="line"
              id="tspan13777"
-             x="439.52917"
-             y="-652.27283">± 0.2 V</tspan></text>
+             x="-655.15015"
+             y="-431.3089"><tspan
+   style="font-style:italic"
+   id="tspan842">V</tspan><tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan844">SD</tspan> = ± 0.2 V</tspan></text>
         <path
            style="fill:none;stroke:#000000;stroke-width:0.586734px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker13819)"
-           d="m 445.46862,680.75821 h 9.55775 v -57.74698 h -22.89944"
+           d="m 445.02635,680.75821 h 10.00002 v -57.74698 h -22.89944"
            id="path13809"
            sodipodi:nodetypes="cccc" />
         <text
            xml:space="preserve"
-           style="font-size:8.00002px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.58673"
-           x="478.40057"
-           y="-650.67865"
+           style="font-size:6.25844px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.58673"
+           x="-652.40717"
+           y="-459.0415"
            id="text13871"
-           transform="scale(1,-1)"><tspan
+           transform="matrix(0,-1,-1,0,0,0)"><tspan
              sodipodi:role="line"
              id="tspan13869"
-             x="478.40057"
-             y="-650.67865"
-             style="font-size:6.00001px;stroke-width:0.58673">Voltage divider</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-size:8.00002px;line-height:0;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.58673"
-           x="478.63623"
-           y="-645.06927"
-           id="text13771-6"
-           transform="scale(1,-1)"><tspan
-             style="font-size:6.00001px;line-height:1;stroke-width:0.58673"
-             sodipodi:role="line"
-             id="tspan13777-0"
-             x="478.63623"
-             y="-645.06927"><tspan
-   style="font-style:italic;stroke-width:0.58673"
-   id="tspan13965">V</tspan><tspan
-   style="font-style:normal;font-size:3.90001px;baseline-shift:sub;stroke-width:0.58673"
-   id="tspan13959">SD</tspan> = ± 20 mV</tspan></text>
+             x="-652.40717"
+             y="-459.0415"
+             style="font-size:6.25844px;stroke-width:0.58673">Settable Voltage divider</tspan></text>
         <path
            style="fill:url(#linearGradient15792);fill-opacity:1;stroke:#787878;stroke-width:0.58673px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            d="M 466.36205,595.18096 H 354.64595"
@@ -764,48 +771,6 @@
            inkscape:connector-type="polyline"
            inkscape:connector-curvature="0"
            sodipodi:nodetypes="cc" />
-        <text
-           xml:space="preserve"
-           style="font-size:8.00002px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.58673"
-           x="423.51196"
-           y="-599.42468"
-           id="text14371"
-           transform="scale(1,-1)"><tspan
-             sodipodi:role="line"
-             id="tspan14369"
-             x="423.51196"
-             y="-599.42468"
-             style="font-style:italic;font-size:6.00001px;stroke-width:0.58673">V<tspan
-   style="font-style:normal;font-size:65%;baseline-shift:sub;stroke-width:0.58673"
-   id="tspan80364">SD</tspan></tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-size:8.00002px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.58673"
-           x="403.56061"
-           y="-521.8598"
-           id="text14391"
-           transform="scale(1,-1)"><tspan
-             sodipodi:role="line"
-             id="tspan14389"
-             x="403.56061"
-             y="-521.8598"
-             style="font-style:italic;font-size:6.00001px;stroke-width:0.58673">V<tspan
-   style="font-size:3.90001px;baseline-shift:sub;stroke-width:0.58673"
-   id="tspan14387">g</tspan></tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-size:8.00002px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.58673"
-           x="423.51196"
-           y="-521.47797"
-           id="text14397"
-           transform="scale(1,-1)"><tspan
-             sodipodi:role="line"
-             id="tspan14395"
-             x="423.51196"
-             y="-521.47797"
-             style="font-style:italic;font-size:6.00001px;stroke-width:0.58673">V<tspan
-   style="font-size:3.90001px;baseline-shift:sub;stroke-width:0.58673"
-   id="tspan14393">sd</tspan></tspan></text>
         <g
            id="g14523"
            transform="matrix(2.8346458,0,0,-2.8346458,162.12888,696.66133)"
@@ -848,20 +813,18 @@
            inkscape:connector-curvature="0" />
         <text
            xml:space="preserve"
-           style="font-size:6.00001px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.58673"
+           style="font-size:7.82305px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.58673"
            x="356.81442"
            y="-700.302"
            id="text15381"
            transform="scale(1,-1)"><tspan
              sodipodi:role="line"
              id="tspan15379"
-             x="357.64792"
+             x="357.90118"
              y="-700.302"
-             style="font-style:italic;stroke-width:0.58673">I<tspan
-   style="font-style:normal;font-size:3.90001px;baseline-shift:sub;stroke-width:0.58673"
-   id="tspan15385">SD</tspan> <tspan
-   style="font-style:normal;stroke-width:0.58673"
-   id="tspan15461" /></tspan></text>
+             style="font-style:italic;font-size:7.82305px;stroke-width:0.58673">I<tspan
+   style="font-style:normal;font-size:65%;baseline-shift:sub;stroke-width:0.58673"
+   id="tspan15385">SD</tspan> </tspan></text>
         <path
            style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.58673px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker15486)"
            d="m 367.42737,753.86114 v 45.93778"
@@ -871,24 +834,24 @@
            sodipodi:nodetypes="cc" />
         <text
            xml:space="preserve"
-           style="font-size:6.00001px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.58673"
-           x="780.08429"
-           y="339.51788"
+           style="font-size:7.82305px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.58673"
+           x="780.09113"
+           y="339.52475"
            id="text15674"
            transform="matrix(0,1,1,0,0,0)"><tspan
              sodipodi:role="line"
-             x="780.91779"
-             y="339.51788"
-             style="stroke-width:0.58673"
+             x="781.17792"
+             y="339.52475"
+             style="font-size:7.82305px;stroke-width:0.58673"
              id="tspan15692"><tspan
-   style="font-style:italic;stroke-width:0.58673"
+   style="font-style:italic;font-size:7.82305px;stroke-width:0.58673"
    id="tspan15696">Ī</tspan><tspan
-   id="tspan79178"
-   style="font-style:normal;font-size:3.90001px;baseline-shift:sub;stroke-width:0.58673">SD</tspan> = avg(100MS/s·<tspan
-   style="font-style:italic;stroke-width:0.58673"
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan657">SD</tspan> = avg(100MS/s·<tspan
+   style="font-style:italic;font-size:7.82305px;stroke-width:0.58673"
    id="tspan15676">t</tspan><tspan
-   style="font-size:3.90001px;baseline-shift:sub;stroke-width:0.58673"
-   id="tspan15680">int</tspan>) </tspan></text>
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan661">int</tspan>) </tspan></text>
         <path
            style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.58673px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker13531-3)"
            d="M 418.62687,610.64025 V 585.23736"
@@ -934,23 +897,7 @@
            sodipodi:nodetypes="cccc" />
         <text
            xml:space="preserve"
-           style="font-size:6.00001px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.58673"
-           x="375.79062"
-           y="-646.76141"
-           id="text15381-9"
-           transform="scale(1,-1)"><tspan
-             sodipodi:role="line"
-             id="tspan15379-9"
-             x="376.62411"
-             y="-646.76141"
-             style="font-style:italic;stroke-width:0.58673">I<tspan
-   style="font-style:normal;font-size:3.90001px;baseline-shift:sub;stroke-width:0.58673"
-   id="tspan15385-0">SD</tspan> <tspan
-   style="font-style:normal;stroke-width:0.58673"
-   id="tspan15461-4" /></tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-size:6px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.58673"
+           style="font-size:6.25844px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.58673"
            x="-657.66791"
            y="-403.93231"
            id="text13871-4"
@@ -959,37 +906,63 @@
              id="tspan13869-4"
              x="-657.66791"
              y="-403.93231"
-             style="font-size:6px;stroke-width:0.58673">Amplifier</tspan></text>
+             style="font-size:6.25844px;stroke-width:0.58673">Amplifier</tspan></text>
         <text
            xml:space="preserve"
-           style="font-size:8.00002px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.58673"
-           x="402.50281"
-           y="-599.80933"
-           id="text14371-8"
+           style="font-size:7.82305px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.58673"
+           x="375.83972"
+           y="-644.78516"
+           id="text15381-9"
            transform="scale(1,-1)"><tspan
              sodipodi:role="line"
-             id="tspan14369-1"
-             x="402.50281"
-             y="-599.80933"
-             style="font-style:italic;font-size:6.00001px;stroke-width:0.58673">V<tspan
+             id="tspan15379-3"
+             x="376.92648"
+             y="-644.78516"
+             style="font-style:italic;font-size:7.82305px;stroke-width:0.58673">I<tspan
    style="font-style:normal;font-size:65%;baseline-shift:sub;stroke-width:0.58673"
-   id="tspan80364-2">G</tspan></tspan></text>
+   id="tspan15385-6">SD</tspan> </tspan></text>
         <text
            xml:space="preserve"
-           style="font-size:6.00001px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.58673"
-           x="373.6376"
-           y="-600.89496"
-           id="text15381-9-1"
+           style="font-size:7.82305px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.58673"
+           x="452.4592"
+           y="-523.60132"
+           id="text15381-9-3"
+           transform="scale(1,-1)"><tspan
+             sodipodi:role="line"
+             id="tspan15379-3-5"
+             x="453.54596"
+             y="-523.60132"
+             style="font-style:italic;font-size:7.82305px;stroke-width:0.58673">I<tspan
+   style="font-style:normal;font-size:65%;baseline-shift:sub;stroke-width:0.58673"
+   id="tspan15385-6-6">SD</tspan> </tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:7.82305px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.58673"
+           x="403.72397"
+           y="-519.22308"
+           id="text15381-3-9"
            transform="scale(1,-1)"><tspan
              sodipodi:role="line"
              id="tspan15379-9-4"
-             x="374.4711"
-             y="-600.89496"
-             style="font-style:italic;stroke-width:0.58673">I<tspan
-   style="font-style:normal;font-size:3.90001px;baseline-shift:sub;stroke-width:0.58673"
-   id="tspan15385-0-5">SD</tspan> <tspan
-   style="font-style:normal;stroke-width:0.58673"
-   id="tspan15461-4-0" /></tspan></text>
+             x="404.81073"
+             y="-519.22308"
+             style="font-style:italic;font-size:7.82305px;stroke-width:0.58673">V<tspan
+   style="font-style:normal;font-size:65%;baseline-shift:sub;stroke-width:0.58673"
+   id="tspan15385-3-4">G</tspan> </tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:7.82305px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.58673"
+           x="425.30252"
+           y="-519.22308"
+           id="text15381-3-8-0"
+           transform="scale(1,-1)"><tspan
+             sodipodi:role="line"
+             id="tspan15379-9-8-6"
+             x="426.38928"
+             y="-519.22308"
+             style="font-style:italic;font-size:7.82305px;stroke-width:0.58673">V<tspan
+   style="font-style:normal;font-size:65%;baseline-shift:sub;stroke-width:0.58673"
+   id="tspan15385-3-1-0">SD</tspan> </tspan></text>
       </g>
     </g>
   </g>

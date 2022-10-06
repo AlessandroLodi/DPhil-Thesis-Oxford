@@ -49,13 +49,6 @@ The software application we implemented initialises the Alazar, Triton, and the 
 \section{AC Measurements}\label{ch:instr_dev:sec:lockin}
 
 Although the measured cryogenic setup noisefloor level is a tenth of pA, the intrisic $1/f$ noise represents an instrinsic and important hurdle in any \gls{DC} experiment. As we saw in Sec.~\ref{ch2:derivation_tunneling_DOS}, the central quantity in an electron transport experiment is the tunneling density of states, which is ultimately related to the derivative of the current in a $I_\textrm{SD}$--$V_\textrm{SD}$ experiment. Numerically retrieving the two-terminal conductance may introduce noise due to current fluctuations; this picture gets even further complicated in our devices, where abrupt shifts in the stability diagrams are likely to happen becuase of charge jumps that occurs during the acquisition.
-
-A great deal of information about the theory and tips of integrating a lock-in amplifier with low-noise electronic equipments can be found here~\cite{lock-in_kavli} and in the setup developed here~\cite{harding2019phd}. Here I briefly report and comment salient points that I have employed to successfully integrate a standard SR-830 lock-in with our electronics. Same concepts were later applied for integrating two Zurich Instruments lock-in amplifiers as well.
-
-\subsection{Integration of Lock-in Amplifier with High-Sensitivity Electronics}
-
-With a lock-in detection scheme, an oscillating voltage $V_\textrm{osc} (f)$ is superimposed to a \gls{DC} signal in order to produce an oscillating current $I_\textrm{tot} (f) = I_\textrm{DC} + I_\textrm{AC} (f)$. The $1/f$ noise is suppressed outside a narrow band $f \pm \tau^{-1}$, where $\tau$ is the integration time. The lock-in frequency $f$ must also not sit at a harmonic of the square wave of the main grid as this will also give an incorrect resistance value.
-Tipically, to check a suitable lock in frequency, it is reccommended to run a power noise spectrum check over the entire frequency domain one intend to explore.
 %
 \begin{figure}[hbtp]
     \begin{center}
@@ -67,8 +60,23 @@ Tipically, to check a suitable lock in frequency, it is reccommended to run a po
     \end{center}
 \end{figure}
 %
-Compared with \gls{DC}, \gls{AC} conductance measurements can introduce errors on the scale of 10 points percent of the total signal, because the technique is susceptible to aberrations originating in the complex domain. Therefore, it is advisable to take extra caution if accurate conductance values are required. More loosen conditions can be considered, on the contrary, if qualitative features are desired, rather than accurate values.
+A great deal of information about the theory and tips of integrating a lock-in amplifier with low-noise electronic equipments can be found here~\cite{lock-in_kavli} and in the setup developed here~\cite{harding2019phd}. Here I briefly report and comment salient points that I have employed to successfully integrate a standard SR-830 lock-in with our electronics. Same concepts were later applied for integrating two Zurich Instruments lock-in amplifiers as well.
 
+\subsection{Integration of Lock-in Amplifier with High-Sensitivity Electronics}
+
+With a lock-in detection scheme, an oscillating voltage $V_\textrm{osc} (f)$ is superimposed to a \gls{DC} signal in order to produce an oscillating current $I_\textrm{tot} (f) = I_\textrm{DC} + I_\textrm{AC} (f)$. The $1/f$ noise is suppressed outside a narrow band $f \pm \tau^{-1}$, where $\tau$ is the integration time. The lock-in frequency $f$ must also not sit at a harmonic of the square wave of the main grid as this will also give an incorrect resistance value.
+Tipically, to check a suitable lock in frequency, it is reccommended to run a power noise spectrum check over the entire frequency domain one intend to explore.
+
+Compared with \gls{DC}, \gls{AC} conductance measurements can introduce errors on the scale of 10 points percent of the total signal, because the technique is susceptible to aberrations originating in the complex domain. Therefore, it is advisable to take extra caution if accurate conductance values are required. More loosen conditions can be considered, on the contrary, if qualitative features are desired, rather than accurate values.
+%
+\begin{figure}[hbtp]
+    \begin{center}
+        \includegraphics[width=\textwidth]{chapter_fabrication/figures/lock-in_measurement_setup.pdf}
+        \caption[AC Electronics Setup]{\Gls{AC} electronics setup. The oscillating signal is superimposed on a \gls{DC}-only signal originating from the DAC and sent into the S3b voltage/current source module through the iso-amplifier input. Note that a 0.01 factor is introduced by the S3b control input to allow the superposition of a frequency-modulated signal on top of a dc-sweep.~\cite{schouten}.}
+        \label{fig:exp:lockin}
+    \end{center}
+\end{figure}
+%
 Fridge lines are filter with RC and Cu powder filter. At finite frequency $\omega =  2\pi f$, each circuit component response has to be modeled in the complex plane. As long as all the $k$ capacitors active across all the stages within the fridge do not draw any current, i.e.  $R_i \ll 1/(\omega C_k)$ where the subscript $i$ denotes the number of resistance, it is safe to exclude any parasitic components when one attempts to recover the resistance value for the device under test.
 
 This general rule might be thought as the requirement to work with oscillating voltages way below that the cut-off frequency imposed by the filters, namely:
@@ -79,20 +87,6 @@ This general rule might be thought as the requirement to work with oscillating v
 %
 As we have discussed previosuly (Fig.~\ref{fig:dc_lines_chipboard}c in Ch.~\ref{ch:fabrication}), the cut-off frequency set by our setup is around \SI{1}{\kilo\hertz}, even though the \SI{-3}{\decibel} point lies around one order of magnitude higher. The finite-frequency efficiency and response of the DC lines is, however, not the only factor that one has to take into account when adopting AC techiniques.
 %
-
-
-Because of its narrow bandwidth of approximately \SI{200}{\kilo\hertz}, the low-noise current amplifier used in our setup (Fig.~\ref{fig:exp:circuit_diagram_meas_fridge}) is especially susceptible to lock-in finite-frequency problems as well: the design objective is to minimise the operating current, hence reducing risk of back-action into sample. Nonetheless, this constrains the operating frequency to approximately \SI{30}{\kilo\hertz}\footnote[2]{The Zurich Instruments lock-in contains a built-in functionality that allows frequency sweep while monitoring the voltage noise calculated in \si{\nano\volt\per\Hz\tothe{0.5}} for a given lock-in measurement bandwidth.}. When this condition is not met, one must consider only the features of the measurement results and not their exact values.
-
-\begin{figure}[hbtp]
-    \begin{center}
-        \includegraphics[width=\textwidth]{chapter_fabrication/figures/lock-in_measurement_setup.pdf}
-        \caption[AC Electronics Setup]{\Gls{AC} electronics setup. The oscillating signal is superimposed on a \gls{DC}-only signal originating from the DAC and sent into the S3b voltage/current source module through the iso-amplifier input. Note that a 0.01 factor is introduced by the S3b control input to allow the superposition of a frequency-modulated signal on top of a dc-sweep.~\cite{schouten}.}
-        \label{fig:exp:lockin}
-    \end{center}
-\end{figure}
-
-In our setup {Fig.~\ref{fig:exp:lockin}}, the isolated-amplifier input module is not coupled with the \gls{DAC} by default. Thus, after having backwired that, the lock-in output is fed into the isolated amplifier of our electronics and and then fed to the sample. The signal was then locked at the proper frequency and phase-adjusted before being supplied to the desktop computer via usb or ethernet cable.
-
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_instr_dev/figures/dc_vs_lockin.pdf}
@@ -102,26 +96,33 @@ In our setup {Fig.~\ref{fig:exp:lockin}}, the isolated-amplifier input module is
         \label{fig:exp:dc_vs_ac}
     \end{center}
 \end{figure}
+%
+Because of its narrow bandwidth of approximately \SI{200}{\kilo\hertz}, the low-noise current amplifier used in our setup (Fig.~\ref{fig:exp:circuit_diagram_meas_fridge}) is especially susceptible to lock-in finite-frequency problems as well: the design objective is to minimise the operating current, hence reducing risk of back-action into sample. Nonetheless, this constrains the operating frequency to approximately \SI{30}{\kilo\hertz}\footnote[2]{The Zurich Instruments lock-in contains a built-in functionality that allows frequency sweep while monitoring the voltage noise calculated in \si{\nano\volt\per\Hz\tothe{0.5}} for a given lock-in measurement bandwidth.}. When this condition is not met, one must consider only the features of the measurement results and not their exact values.
+
+In our setup {Fig.~\ref{fig:exp:lockin}}, the isolated-amplifier input module is not coupled with the \gls{DAC} by default. Thus, after having backwired that, the lock-in output is fed into the isolated amplifier of our electronics and and then fed to the sample. The signal was then locked at the proper frequency and phase-adjusted before being supplied to the desktop computer via usb or ethernet cable.
 
 Experiment routines were implemented into the existing setup by instantiating a lock-in instance and integrating it into the superclass station, which contains instances for all the other required instruments. In Fig.~\ref{fig:exp:dc_vs_ac} we compare the charge stability maps of the same device acquired in \gls{DC} (top) and using the lock-in (bottom) using equivalent integration times.
 
-\newpage
 \section{Micro-Hall Devices}\label{ch:instr_dev:sec:hall_bar}
 
 The ability to fabricate, control, and manipulate the properties of magnetic structures~\cite{coronado2020molecular} has not only led to the discovery of several new physical phenomena~\cite{coronado2010coexistence, bogani2008molecular, cervetti2016classical}, but also to the development of a large pool of experimental techniques for studying such structures~\cite{tang2011characteristics, collomb2019nanoscale}. In this regard, micro-probe magnetometry based on the Hall effect is of particular interest. It offers high-field sensitivity even when the dimensionality shrinks down to the nanoscale, has excellent operating ranges in terms of temperature and magnetic field, and it is non-invasive.
 
 \subsection{Technical Background}
 In order to measure the conductivity $\sigma$ of a semiconducting sample in presence of negligible gradients of carrier densities, one has to take into account both the electrons concentrations $n$ and mobility $\mu_e$ and the same quantities for holes, namely:
+%
 \begin{equation}
     \sigma = \abs{e}(n\mu_e + p\mu_h) = \frac{\vec{J}_\textrm{drift}}{\vec{E}}.
 \end{equation}
-For a sample on a plane, if a magnetic field $B$ is applied along the $+z$ direction, while current is flowing along the $+x$ direction, charge carriers will experience an average force in the ($-y$) direction, i.e.:
+%
+For a sample on a plane, if a magnetic field $B$ is applied along the $+z$ direction, while current is flowing along the $+x$ direction, charge carriers will experience an average force in the ($-y$) direction, i.e.\:
+%
 \begin{align}
     \vec{F_e} & = +\abs{e}\vec{E}\mu_e B_z \quad\text{for electrons}, \\
     \vec{F_h} & = -\abs{e}\vec{E}\mu_h B_z \quad\text{for holes}
 \end{align}
+%
 Because electron ($\vec{v_e} = \vec{E}\mu_e$) and hole velocities are in opposite directions, the two forces are in the same direction. When these are unequal, the surfaces along the $\pm y$ of the sample become charged and a potential difference arise between them. The appearence of this voltage is the Hall effect, and was discovered in 1879 by Edwin H.\ Hall.
-
+%
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_fabrication/figures/hb_sample_center.pdf}
@@ -130,23 +131,22 @@ Because electron ($\vec{v_e} = \vec{E}\mu_e$) and hole velocities are in opposit
         \label{fig:exp:hallbar}
     \end{center}
 \end{figure}
-
+%
 The transverse electric field $E_y$ builds up until the transverse force due to it becomes equal and opposite to the force due to the magnetic field. When this happens, the stationary condition $eE_y = e v_x B_z$ allows to define the Hall voltage as:
+%
 \begin{equation}
     V_\textrm{H} = wE_y = v_xB_z = \frac{j_x B_z}{ne}
 \end{equation}
+%
 where $w$ in this case is the width of the semiconducting material, $j_x$ is the component along $x$ of current density and $n$ is the charge carrier density. Considering that $j = I_\textrm{SD}/wd$ where $d$ is the specimen thickness, the expression may be rewritten as:
-
+%
 \begin{equation}
     V_\textrm{H} = R_\textrm{H}I_\textrm{SD}B_z \quad \textrm{with}\quad R_\textrm{H} = \frac{E_y}{j_x B_z} = \frac{1}{ned}
     \label{eq:hall_coeff}
 \end{equation}
 %
 The quantity $R_\textrm{H}$ is known as Hall resistance and can be regarded by all means to the magnetic sensistivity of a particular probe. Clearly, the higher this values is the smaller field variation could be in principle detected. To be more specific, the minimum detectable magnetic field for a given area is the Hall voltage net of the electrical noise present when the circuit is closed. The noise is predominantly given by Josephson and resistive (telegraph) noise.
-
-Due to the pandemic of Covid-19 it has been impossible to find an adequate 2DEG substrate for this project. Nevertheless, I have tried to setup and detect the Hall signal from a Mn$_12$ microcrystals with a mesoscopic Hall made of Au.
-The Hall probe configuration with the simplest geometry is the Hall cross. When a magnetic object is placed close to the active area of the probe, the Hall signal will be proportional to the sum of the external field $B$ and the magnetic stray field that enters the active area from the sample.
-
+%
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_fabrication/figures/hb_design.png}
@@ -155,24 +155,19 @@ The Hall probe configuration with the simplest geometry is the Hall cross. When 
         \label{fig:exp:hallbar_design}
     \end{center}
 \end{figure}
+%
+Due to the pandemic of Covid-19 it has been impossible to find an adequate 2DEG substrate for this project. Nevertheless, I have tried to setup and detect the Hall signal from a Mn$_12$ microcrystals with a mesoscopic Hall made of Au.
+The Hall probe configuration with the simplest geometry is the Hall cross. When a magnetic object is placed close to the active area of the probe, the Hall signal will be proportional to the sum of the external field $B$ and the magnetic stray field that enters the active area from the sample.
 
 
 \subsection{Test Measurements}
 
-In order to prove the reliability of our apparatus and test its sensitivity, I have performed a few tests by measuring micro-crystals of Mn$_{12}$-acetate synthesised by Dr Dimitris Alexandropoulos. Mn$_{12}$ is a molecular magnets whose magnetic response is well known in the literature.
+In order to prove the reliability of our apparatus and test its sensitivity, I have performed a few tests by measuring micro-crystals of Mn$_{12}$-acetate synthesised by Dr Dimitris Alexandropoulos. Mn$_{12}$ is a molecular magnets whose magnetic response is well known in the literature. The coercive field of Mn$_{12}$ at cryogenic temperature is about \SI{6}{\tesla}, therefore I had to operate and temperatures higher for checking its magnetic response. In order to minimise chances the magnet would increase the temperature while was swept, I have slow sweep rates ranging from \SIrange{0.83}{1.67}{\milli\tesla\per\second}.
 
-The coercive field of Mn$_{12}$ at cryogenic temperature is about \SI{6}{\tesla}, therefore I had to operate and temperatures higher for checking its magnetic response. In order to minimise chances the magnet would increase the temperature while was swept, I have slow sweep rates ranging from \SIrange{0.83}{1.67}{\milli\tesla\per\second}.
+We used SiO$_2$ as substrate where Hall devices with different spacing between the two crosses were used, ranging from \SI{10}{\micro\metre} to \SI{50}{\micro\metre} (Fig.~\ref{fig:exp:hallbar}). The deposition and the correct orientation of the crystals reavealed to be not a negligible challenge and so we choose to use crystal approximately of \SI{50}{\micro\metre}. The transfer process was as follows.
 
-We used SiO$_2$ as substrate where Hall devices with different spacing between the two crosses were used, ranging from \SI{10}{\micro\metre} to \SI{50}{\micro\metre} (Fig.~\ref{fig:exp:hallbar}). The deposition and the correct orientation of the crystals reavealed to be not a negligible challenge and so we choose to use crystal approximately of \SI{50}{\micro\metre}.
-
-The transfer process was as follos. We first spread the Mn$_{12}$ crystals on top of a filter paper in order to remove big chunck of crystals. In particular, molecular monemers present a needle-shape whereas dimers comes in a bulky-ball shape form. We then deposited a few of these crystals on top of a bare silicon substrate, where we also deposited a thin film of high-vacuum grease. We then lowered one of the probe in the probe station setup as described in Sec.~\ref{fabrication:sec:probe_station} thanks to the micropositioner. Tungesten probes with a nominal diameter of \SI{10}{\micro\metre} worked best for this purpose. We then gently deposited the grease within the two crosses paying attention specifically to not to damage the electrical connections.
-
-The probe was then cleaned, and used to pick up a Mn$_{12}$ crystal with the right lateral dimension, which was then gently lowered on top on the Hall bar device.
-
-In order to maximise the dipolar field generated by the sample, the crystal should be perfectly oriented along the central gold pads. The difficulty of aligning the crystal in the desired direction is one of the weaknesses of our approach. Adjusting it by rotating the probe chuck is a viable alternative, but care has to be taken in not damaging the electrical connections. Another source of problem is that often the crystal break upon touching the substrate. Although monemer of Mn$_{12}$ should be relatively robust against the forces at play in this scenario, breaks might result as due to grains of crystals attached to each other.
-
-The first test we did was to make sure that the Hall effect was present at varying measurement bias. From Eq.~\refeq{eq:hall_coeff}, the Hall voltage $V_\textrm{H}$ is proportional to the current and the magnetic field and inversly proportional to the carrier density $n$ of the conductor. The first test used only one lockin amplifier since only we were only intersted in the voltage built up across just one cross. Fig.~\ref{fig:exp:hallbar_test_current} demonstrates that $V_\textrm{H}$ is proportional to the current driven through the hall bar. In principle, this means that by increasing the current should lead to higher sensistivity. We report a Hall coefficient of approximately $R_\textrm{H}\simeq\SI{1e-6}{\ohm}$G$^{-1}$, which is expected for a micro-sensor made by gold and having thickness $d\simeq\SI{1}{\micro\metre}$
-
+We first spread the Mn$_{12}$ crystals on top of a filter paper in order to remove big chunck of crystals. In particular, molecular monemers present a needle-shape whereas dimers comes in a bulky-ball shape form. We then deposited a few of these crystals on top of a bare silicon substrate, where we also deposited a thin film of high-vacuum grease. We then lowered one of the probe in the probe station setup as described in Sec.~\ref{fabrication:sec:probe_station} thanks to the micropositioner. Tungesten probes with a nominal diameter of \SI{10}{\micro\metre} worked best for this purpose. We then gently deposited the grease within the two crosses paying attention specifically to not to damage the electrical connections.
+%
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=0.9\textwidth]{chapter_fabrication/figures/hall_bar_current_test2.pdf}
@@ -183,9 +178,13 @@ The first test we did was to make sure that the Hall effect was present at varyi
         \label{fig:exp:hallbar_test_current}
     \end{center}
 \end{figure}
+%
+The probe was then cleaned, and used to pick up a Mn$_{12}$ crystal with the right lateral dimension, which was then gently lowered on top on the Hall bar device. In order to maximise the dipolar field generated by the sample, the crystal should be perfectly oriented along the central gold pads. The difficulty of aligning the crystal in the desired direction is one of the weaknesses of our approach. Adjusting it by rotating the probe chuck is a viable alternative, but care has to be taken in not damaging the electrical connections. Another source of problem is that often the crystal break upon touching the substrate. Although monemer of Mn$_{12}$ should be relatively robust against the forces at play in this scenario, breaks might result as due to grains of crystals attached to each other.
+
+The first test we did was to make sure that the Hall effect was present at varying measurement bias. From Eq.~\refeq{eq:hall_coeff}, the Hall voltage $V_\textrm{H}$ is proportional to the current and the magnetic field and inversly proportional to the carrier density $n$ of the conductor. The first test used only one lockin amplifier since only we were only intersted in the voltage built up across just one cross. Fig.~\ref{fig:exp:hallbar_test_current} demonstrates that $V_\textrm{H}$ is proportional to the current driven through the hall bar. In principle, this means that by increasing the current should lead to higher sensistivity. We report a Hall coefficient of approximately $R_\textrm{H}\simeq\SI{1e-6}{\ohm}$G$^{-1}$, which is expected for a micro-sensor made by gold and having thickness $d\simeq\SI{1}{\micro\metre}$
 
 Once this test was completed, we mounted a $\ce{Mn12}$ crystal on the Hall-bar as previously outlined and measured the direction of maximum anisotropy at $T=\SI{2}{\kelvin}$ (Fig.~\ref{fig:exp:hallbar_anisotropy}). We recorder the voltage difference between the voltage drops at the two crosses $\Delta_{\textrm{cross1}-\textrm{cross2}}$ while the field was rotated of $\theta=\SI{360}{\degree}$ in the the $xy$ and $zy$ planes. In both cases, the maximum voltage drop difference was found along the same ($y$) direction, suggesting that only voltage drop detected was the one from the \textit{standard} Hall effect and not from the dipolar field generated by our sample.
-
+%
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=0.8\textwidth]{chapter_fabrication/figures/anisotropy_device.pdf}
@@ -197,13 +196,13 @@ Once this test was completed, we mounted a $\ce{Mn12}$ crystal on the Hall-bar a
         \label{fig:exp:hallbar_anisotropy}
     \end{center}
 \end{figure}
-
+%
 We further confirmed this hypothesis by measuring the voltage drop across the crosses in the transverse ($y$) and parallel ($z$) current directions independetly (Fig.~\ref{fig:exp:Mn12_sample2}). The response along $y$ is the classical Hall voltage, whereas along $z$ a well-know magnetotransport effect for Au film takes place. The quadratically dependence we observe for $V_\textrm{H}$ means that the resistivity will depend linearly from $B^2$, as expected by the Kohler's rule~\cite{huffman1981magnetoresistance, dugdale1995electrical}.
-
+%
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_fabrication/figures/Mn12_sample2.png}
-        \caption[Hall Probe Magnetometry of \ce{Mn12}-ac Micro-Crystals]
+        \caption[Hall-Probe Magnetometry of \ce{Mn12}-ac Micro-Crystals]
         {
             \textbf{a}, Optical lithography of a Au-based Hall-bar, placed on top of just one cross.
             \textbf{b}, Hall signal response as a function of the out-of-plane ($y$-direction) $B$ field, demonstrating Hall effect.
@@ -212,7 +211,7 @@ We further confirmed this hypothesis by measuring the voltage drop across the cr
         \label{fig:exp:Mn12_sample2}
     \end{center}
 \end{figure}
-
+%
 Since the minimum detectable field $B_\textrm{min}$ is inversely proportional to the current $B_\textrm{min}\propto 1/I_\textrm{SD}$ (Fig.~\ref{fig:exp:hallbar_test_current}), and since it is was not possible to drive high-enough currents\footnote[2]{Additionally, since the device resistance is extremely low, the voltage drop across it will be low too since the current through the wire is large. The result output voltage at the \gls{DAC} to drop dramatically.} through the Hall-bar with because of the Cu-powder and low-pass filters used in the DC lines, we concluded that, despite the successful fabrication and measurement setup, the presence of magnetic scattering in the gold substrate is dominant, preventing the detection of any signal from the crystal with this device.
 
 The past decades have seen the emergence of graphene-Hall-sensor applications~\cite{collomb2021frontiers,collomb2019nanoscale}. Low-carrier densities and high mobilities should lead to remarkably high magnetic sensitivities and low electric noise. We therefore attempted to investigate the magnetic signal from \ce{Mn12} with a \gls{GHB}; we detail the process in the next section.
@@ -228,20 +227,22 @@ Another suitable material for Hall probe is graphene. Thanks to its outstanding 
 
 \Gls{GHB} devices were fabricated by lithography means, reusing a typical two-terminal transistor architecture on \SI{300}{\nano\metre} \ce{SiO2} with n-doped Si as backgate and \gls{CVD}-transferred graphene from Graphenea.
 The fabrication procedure begins with the removal of PMMA in acetone overnight, followed by a rinse in IPA and ebam exposure of negative resist ARN7500 at \SI{300}{\micro\coulomb\per\centi\metre\squared}. Etching was completed in oxygen plasma for 15 minutes, followed by 5 minutes of NMP, 30 minutes of acetone, a wash in IPA, and drying with a \ce{N2} gun to remove the resist completely.
-
+%
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_instr_dev/figures/hb_empty_1kHz_response_Mn12_crystal.pdf}
-        \caption[Hall Probe Magnetometry of \ce{Mn12}-ac Micro-Crystals]{
+        \caption[AC-GHB response of \ce{Mn12}-ac Micro-Crystals]
+        {
             \textbf{a}, \Gls{GHB} after \gls{EBL} showing the electrical connections. DL are direct lines.
             \textbf{b}, Gate response demonstrating the ambipolar behaviour typical of graphene.
             \textbf{c}, \SI{1}{\kilo\hertz}-frequency response after dropcasting a saturared solution of \ce{Mn12}.
             \textbf{d}, Hall bar signal as a function of the field along the $y$ direction at various gates.
-            \textbf{e}, The CNP shifts towards more positive gates as the field is increased, suggesting non-negligible magnetoresistivity present in our sample.}
+            \textbf{e}, The CNP shifts towards more positive gates as the field is increased, suggesting non-negligible magnetoresistivity present in our sample.
+        }
         \label{fig:exp:hb_empty_1kHz_response_Mn12_crystal}
     \end{center}
 \end{figure}
-
+%
 Then, graphene was encapsulated in AlO$\textrm{x}$ \SI{100}{nm} via ALD with \ce{H2O} pre-treatment to promote nucleation. The chip was then put within a chip carrier. Backgate was secured by scraping the Si backside and using Ag paste for mechanical and electrical device mounting. High gate voltages up to $\pm\SI{50}{\volt}$ were guaranteed by a bipolar high voltage source module wired to the \gls{DAC}.
 
 \subsection{Test Measurements}
@@ -252,20 +253,22 @@ The \SI{1}{\kilo\hertz}-frequency response is shown in Fig.~\ref{fig:exp:hb_empt
 
 \co{Explain why the preamp gave problems in the lockin measurement}
 One possible explanantion for the non-observation of the \ce{Mn12} hysteresis loop could lie in the preamplifier filters response to a frequency-varying signal. In this scenario, the frequency component from the lock-in output might be too fast for the filters, causing a delay in the quadrature component of the sigal, thus resulting in a delay of the reponse (Fig.~\ref{fig:exp:histogram_noise_hall_coeff_signal}b). However, we adjusted the frequency accordingly but found no qualitative differences compared with the graph Fig.~\ref{fig:exp:hb_empty_1kHz_response_Mn12_crystal}c.
-
+%
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_instr_dev/figures/noise_hall_bar_signal.pdf}
-        \caption[Hall Probe Magnetometry of \ce{Mn12}-ac Micro-Crystals]{
+        \caption[DC-GHB response of \ce{Mn12}-ac Micro-Crystals]
+        {
             \textbf{a}, Histogram of Hall signals for an empty \gls{GHB}.
             \textbf{b}, Noise power spectral densities with (purple) and without (yellow) band pass filters on the SR560 set to \SI{10}{\hertz} and \SI{300}{Hz}. Roll off was set to 6 dB/Oct and lock-in excitation to $V_\textrm{pk}=\SI{0.5}{\volt}$.
             \textbf{c}, Hall coefficient estimated from a purely DC measurement.
             \textbf{d}, \ce{Mn12} crystal orientation with respect to the field directions, with a possible easy axis direction estimated.
-            \textbf{e}, Temperature dependence of the Hall voltage when the field is applied along the easy axis direction.}
+            \textbf{e}, Temperature dependence of the Hall voltage when the field is applied along the easy axis direction.
+        }
         \label{fig:exp:histogram_noise_hall_coeff_signal}
     \end{center}
 \end{figure}
-
+%
 In an attempt to circumvent this issue, we sought the Hall signal with a DC measurement. Firstly it is paramount to maximise the device's sensitivity while preserving acceptable linearity between carrier density and Hall response. A few studies suggest that this criterion is satisfied in graphene when the operating gate voltage is placed near to, but not exactly at, the Dirac point, whilst others claim that the charge neutrality point is optimal to this end~\cite{song2019operation, collomb2019nanoscale, collomb2021frontiers}.
 
 It is necessary to emphasize that the voltages read by the Alazar card are inaccurate (see Fig.~\ref{fig:fabrication:dc_setup} in Ch.~\ref{ch:fabrication}). This is likely due to the input impedance setting, which causes the voltage to drop at the digitiser input. To overcome this, a calibration curves were periodically constructed by measuring known voltages with both the Alazar card and a standard digital oscilloscpi. We used a Keithey 2450 as a constant current source. The compliance limit of \SI{25}{\volt} restricted us to a maximum of \SI{50}{\micro\ampere} despite the fact that a higher current should have led to a greater sensitivity.
@@ -273,7 +276,7 @@ It is necessary to emphasize that the voltages read by the Alazar card are inacc
 We first mesured the Hall voltage of the empty \gls{GHB} at $T=\SI{2}{\kelvin}$. We estimate an Hall coefficient of $R_\textrm{H} = \SI[separate-uncertainty = true]{733(1.3)}{\ohm\per\tesla}$ when the gate voltage was set $V_\textrm{G}=\SI{20}{\volt}$ close to the Dirac cone, and an increment up to $R_\textrm{H} = \SI[separate-uncertainty = true]{824(1.8)}{\ohm\per\tesla}$ when the voltage was set exactly at the CNP ($V_\textrm{D}=\SI{13}{\volt}$). These values are in line with similar devices reported in literature~\cite{collomb2021frontiers}. In order to estimate the minimum detectable field, we recorded a time series of the Hall voltage (Fig.~\ref{fig:exp:histogram_noise_hall_coeff_signal}a) and measured the mean ($V_\textrm{H}=\SI{0.38}{\milli\volt}$) and peak-to-peak value ($V_\textrm{pk}\simeq\SI{130}{\milli\volt}$) and multiplied this value for the Hall coefficient. An estimate of about $B_\textrm{min}\simeq\SI{16}{\milli\tesla}$ confirms the possibility of using our \gls{GHB} for magnetometry measurements.
 
 The placement of the crystal atop a device such this one is challenging. To transfer Graphene from graphenea wafer to our substrate, a protective layer must be employed: tipically this protection in realsed by any AlO$_\textrm{x}$ layer. For the sample we report the measurments, we estimate the angle between the z direction and crystal ease axis to be $\theta\simeq\SI{60}{\degree}$. Therefore, we swept the field in this direction and recorded the Hall voltage generated by the sample.
-
+%
 \begin{table}
     \caption{\label{tab:graphene_Hall_probes}
         Operating parameters and performance of a few graphene-based micro-Hall magnetometers. A more complete overview can be found in~\cite{collomb2021frontiers}/}
@@ -307,8 +310,7 @@ molecular compounds at very low T.
 
 In this chapter we have discussed the development of a measurement protocol which has enabled us to push the electrical measurements up to room temperature. Further experiments that we believe  will be possible to perform with this protocol could be phase-diagram exploration, where the two-terminal conductance $G$ is monitored as function of $T$ and $B$. This experiment could shed some light on quantum phase driven by strong correlations in carbon nanostructures~\cite{paschen2021quantum, kim2017tunable, yankowitz2019tuning, kotov2012electron}. The protocol can be directly integrated with the lock-in setup we have outlined in Sec.~\ref{ch:instr_dev:sec:lockin}, which enables not only an unprecedent level of details, but also to measure fundamental quantifies, such as the differential conductance, which were previosuly extracted from noisier numerical procedures. We fabricated and tested micro-Hall sensors made with gold and graphene.
 
-This platform represents a step forward compared to cantilever torque magnetometry as, compared to it, it is less difficult to calibrate the $B$ at the
-nanoscale. Although we have not been able to measure the hysteresis cycle of a \ce{Mn12} crystal, we believe the following improvements are possible. Firstly, we believe it will be difficult to work with Au-based Hall-bars as the magnetoresistance effect from the gold atoms at high fields will overcome any, weaker signal generate by the sample. We believe graphene should be encapsulated in two layers of \gls{hBN} in order to preserve its electrical conductivity at best and to try with larger Hall-bar widths. In fact, the driving current in the bar was often limited by the output voltage, which in turn depends on the \gls{GHB} width. Moreover, improving the kind and the geometry of contacting the metallic lead will also help to reduce the high \gls{SB} formed at the metal--graphene junctions.
+This platform represents a step forward compared to cantilever torque magnetometry as, compared to it, it is less difficult to calibrate the $B$ at the nanoscale. Although we have not been able to measure the hysteresis cycle of a \ce{Mn12} crystal, we believe the following improvements are possible. Firstly, we believe it will be difficult to work with Au-based Hall-bars as the magnetoresistance effect from the gold atoms at high fields will overcome any, weaker signal generate by the sample. We believe graphene should be encapsulated in two layers of \gls{hBN} in order to preserve its electrical conductivity at best and to try with larger Hall-bar widths. In fact, the driving current in the bar was often limited by the output voltage, which in turn depends on the \gls{GHB} width. Moreover, improving the kind and the geometry of contacting the metallic lead will also help to reduce the high \gls{SB} formed at the metal--graphene junctions.
 
 \section{Project Overview}
 I thank Dr Alex Gee for his help and expertise in substrate fabrication, as well as his enthusiasm in all things electronic.

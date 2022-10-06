@@ -36,7 +36,7 @@
 % generating a PDF to send to the printer!
 
 % This adds a "DRAFT" footer to every normal page.  (The first page of each chapter is not a "normal" page.)
-\fancyfoot[C]{\emph{DRAFT Printed on \today}}  
+% \fancyfoot[C]{\emph{DRAFT Printed on \today}}  
 
 % This highlights (in blue) corrections marked with (for words) \mccorrect{blah} or (for whole
 % paragraphs) \begin{mccorrection} . . . \end{mccorrection}.  This can be useful for sending a PDF of
@@ -172,15 +172,15 @@
     %         and to Cecilia, because she chooses me for the Sunday night pizza.}\\
     % \end{dedication}
 
-    %%%%% ACKNOWLEDGEMENTS -- Nothing to do here except comment out if you don't want it.
-    % \begin{acknowledgements}
-    %     \input{text/acknowledgements}
-    % \end{acknowledgements}
-
     %%%%% ABSTRACT -- Nothing to do here except comment out if you don't want it.
     \begin{abstract}
         \input{text/abstract}
     \end{abstract}
+
+    %%%%% ACKNOWLEDGEMENTS -- Nothing to do here except comment out if you don't want it.
+    \begin{acknowledgements}
+        \input{text/acknowledgements}
+    \end{acknowledgements}
 
     %%%%% MINI TABLES
     % This lays the groundwork for per-chapter, mini tables of contents.  Comment the following line

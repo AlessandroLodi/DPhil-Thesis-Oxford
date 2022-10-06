@@ -4,10 +4,10 @@
 
 \section{Introduction}\label{ch:gnrset:sec:intro}
 
-Manipulating individual charges in nanostructured devices is of paramount importance for quantum technologies, and a fundamental step towards improved logic processing units and sensors. One of the possible fundamental building blocks are \glspl{SET} (Ch.~\ref{ch:theory}), in which the current can be tuned by adding electrons one-by-one to a nanoscopic element. Electrons would then flow only when quantized charged levels are shifted into the energy window of the applied bias $V_\textrm{SD}$, for example by applying a gate voltage $V_\textrm{G}$, and this results in periodic regions of blocked conductance (Fig.~\ref{fig:device_gnr}a,b)~\cite{stampfer2008tunable}.
+Manipulating individual charges in nanostructured devices is of paramount importance for quantum technologies, and a fundamental step towards improved logic processing units and sensors. One of the possible fundamental building blocks are \glspl{SET} (Sec.~\ref{ch:theory:sec:electronic_transport_regimes}), in which the current can be tuned by adding electrons one-by-one to a nanoscopic element. Electrons would then flow only when quantized charged levels are shifted into the energy window of the applied bias $V_\textrm{SD}$, for example by applying a gate voltage $V_\textrm{G}$, and this results in periodic regions of blocked conductance (Fig.~\ref{fig:device_gnr}a,b)~\cite{stampfer2008tunable}.
 
-One of the major hurdles of the \gls{SET} technology is that its operability is often limited to cryogenic temperatures, while quantum transport at \gls{RT} is necessary for many practical applications. To operate at RT, \glspl{SET} need to simultaneously display a very low self-capacitance, $C$, charging energies ($E_C$) larger than the thermal energy ($k_B T$), and high tunneling barriers that allow confining electrons on the nanoscale element.
-
+One of the major hurdles of the \gls{SET} technology is that its operability is often limited to cryogenic temperatures, while quantum transport at \gls{RT} is necessary for many practical applications. To operate at RT, \glspl{SET} need to simultaneously display a very low self-capacitance, $C$, charging energies ($E_C$) larger than the thermal energy ($k_\textrm{B} T$), and high tunneling barriers that allow confining electrons on the nanoscale element.
+%
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_gnrset/figures/Fig1.png}
@@ -22,13 +22,13 @@ One of the major hurdles of the \gls{SET} technology is that its operability is 
         \label{fig:device_gnr}
     \end{center}
 \end{figure}
-
+%
 Carbon materials are a particularly appealing platform that have seen multiple scientific and technological breakthroughs, such as superconductivity~\cite{cao2018unconventional}, spin localization~\cite{lombardi2019quantum} and manipulation~\cite{tong2022pauli}. Furthermore, \glspl{CNT} can display \gls{SET} behaviour up to \gls{RT} and have already been used to create low-power processing units~\cite{shulaker2013carbon}. On the other hand, their poly-dispersity still constitutes a major barrier to their large-scale integration.
 
 \Glspl{MGNR}~\cite{jiao2010facile,li2008chemically, wang2011graphene, narita2015bottom} provide in this scenario unique opportunities since they can be chemically synthesised with a degree of edge and topological control far superior to what has been achieved with top-down nanofabrication~\cite{jarillo2004electron, cai2010atomically, narita2014synthesis, jiao2009narrow}.
 Most importantly, they display topologically non-trivial electronic quantum phases~\cite{groning2018engineering, rizzo2018topological}, and offer edge magnetism~\cite{slota2018magnetic} and long spin-coherence times at RT~\cite{lombardi2021synthetic}. The missing ingredient to electrically control and read these topological and coherent spin states at high temperatures, if possible, is the observation of high-temperature \gls{SET} behaviour in \glspl{MGNR}.
 
-This possibility seems within reach. Liquid-processable chemical strategies have recently opened up the path to ultra-clean single-MGNR devices directly created from solution~\cite{huang2018intrinsic,niu2019synthetic} (Ch.~\ref{ch:solubility}). Single-\gls{MGNR} devices, because of their extremely-high length/width ratio, should display self-capacitances of $\simeq\SI{1e-18}{\farad}$\footnote[2]{Because graphene electrodes have little electrostatic screening, the capacitive coupling of the ribbom to the back gate contributes the most to the overall capacitance.}, thus being operable at bias voltages $V_\textrm{SD}<\SI{100}{\milli\volt}$, while the extreme lateral electronic confinement should afford $E_C \gg k_B T$. \Glspl{MGNR} would thus offer excellent persective platforms for \glspl{SET} at \gls{RT}, but the evolution of their electronic behaviour with $T$, and the underlying phsyics, is still unknown.
+This possibility seems within reach. Liquid-processable chemical strategies have recently opened up the path to ultra-clean single-MGNR devices directly created from solution~\cite{huang2018intrinsic,niu2019synthetic} (Ch.~\ref{ch:solubility}). Single-\gls{MGNR} devices, because of their extremely-high length/width ratio, should display self-capacitances of $\simeq\SI{1e-18}{\farad}$\footnote[2]{Because graphene electrodes have little electrostatic screening, the capacitive coupling of the ribbom to the back gate contributes the most to the overall capacitance.}, thus being operable at bias voltages $V_\textrm{SD}<\SI{100}{\milli\volt}$, while the extreme lateral electronic confinement should afford $E_C \gg k_\textrm{B} T$. \Glspl{MGNR} would thus offer excellent persective platforms for \glspl{SET} at \gls{RT}, but the evolution of their electronic behaviour with $T$, and the underlying phsyics, is still unknown.
 
 This chapter describes, to the best of my knowledge, the first realisation of a \gls{SET} built with \glspl{MGNR} at \gls{RT}. We shall explore the conduction regimes as $T$ is increased from cryogenic to \gls{RT} by using a variety of source--drain and gate voltages in a two-terminal back-gated device. The measurements were conducted using the apparatus described in Ch.~\ref{ch:fabrication} and Ch.~\ref{ch:instrumentation_development}.
 
@@ -43,7 +43,7 @@ The nanodevices were fabricated as described in Ch.~\ref{ch:fabrication} (Fig.~\
 \section{Temperature-Dependent Coulomb-Blockade Spectroscopy}\label{ch:gnrset:sec:coulomb_spectroscopy}
 
 We explore the electronic behaviour by measuring the two-terminal conductance $G$ as a function of $V_\mathrm{SD}$ and $V_{\mathrm{G}}$, from \SI{25}{\milli\kelvin} to \gls{RT} (Fig.~\ref{fig:sd_base_30K} and \ref{fig:sd_60K_270K}). Seven charge transitions are visible within the experimentally accessible $V_\mathrm{G}$ range  (Fig.~\ref{fig:sd_base_30K} and \ref{fig:sd_60K_270K}), and they remain clearly distinguishable upon increasing $T$, with a periodic peak spacing of $\Delta V_{\mathrm{G}} \simeq\SI{4}{\volt}$. We assign the leftmost diamond having $N$ electrons in the ground state with the charge transition $N \leftrightarrow N+1$, and the rightmost diamond as the $N+6 \leftrightarrow N+7$ transition, so we assume the ribbon is n-doped.
-
+%
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_gnrset/figures/sd_base_30K.pdf}
@@ -54,18 +54,18 @@ We explore the electronic behaviour by measuring the two-terminal conductance $G
         \label{fig:sd_base_30K}
     \end{center}
 \end{figure}
-
+%
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_gnrset/figures/sd_60K_270K.pdf}
         \caption[Temperature-Dependent Stability Diagram for a MGNR ($T=\SIrange{60}{270}{\kelvin}$)]
         {
-            Stability diagrams of the DC conductance $G$ in units of the conductance quantum $G_0$ at high temperatures. Since the Coulomb charging energy $E_C$ as well as the energy separation $\delta E$ between consecutive quantum energy levels exceed $k_BT$ at \gls{RT} ($\simeq\SI{25}{\milli\electronvolt}$), single-electron tunneling in the \gls{MGNR} device is still observable at \SI{270}{\kelvin}.
+            Stability diagrams of the DC conductance $G$ in units of the conductance quantum $G_0$ at high temperatures. Since the Coulomb charging energy $E_C$ as well as the energy separation $\delta E$ between consecutive quantum energy levels exceed $k_\textrm{B}T$ at \gls{RT} ($\simeq\SI{25}{\milli\electronvolt}$), single-electron tunneling in the \gls{MGNR} device is still observable at \SI{270}{\kelvin}.
         }
         \label{fig:sd_60K_270K}
     \end{center}
 \end{figure}
-
+%
 \begin{figure}
     \begin{center}
         \includegraphics[width=0.99\columnwidth]{chapter_gnrset/figures/waterfall_complete3.pdf}
@@ -73,7 +73,7 @@ We explore the electronic behaviour by measuring the two-terminal conductance $G
         \label{fig:waterfall}
     \end{center}
 \end{figure}
-
+%
 \begin{table}
     \caption{\label{tab:lever_arm_Eadd}
         Lever arms and addition energies extracted from the Coulomb diamonds slopes and heights for the different charge transitions. The addition energies reported here are obtained by averaging the height read both at positive and negative polarities.}
@@ -94,6 +94,7 @@ We explore the electronic behaviour by measuring the two-terminal conductance $G
         \end{array}
     \]
 \end{table}
+%
 The periodicity and cleanliness of the Coulomb oscillations excludes that electron transport occurs through multiple quantum dots in series, formed by intraribbon defects, such as edge roughness~\cite{mucciolo2009conductance, stampfer2009energy} and aromatic-core defects~\cite{lombardi2019quantum}. For each transition, it is possible to extract the gate coupling $\beta$ (also knwon as \textit{lever arm}) and the addition energy $E_\textrm{add}$ from the Coulomb diamond heights (Tab.~\ref{tab:lever_arm_Eadd}).
 
 We observe a nonlinear increase in $\beta$ for diamonds at negative gate voltages, peaking at the greatest values for diamonds at zero gate voltage and then decreasing practically linearly as we move towards more positive gate voltages, with a mean value of $\overline{\beta}=\SI[separate-uncertainty = true]{25(4)}{\milli\electronvolt\per\volt}$. This symmetric and non-linear gate dependence could be caused by electrostatic forces in the dioxide substrate~\cite{svensson2013nonlinear}.
@@ -102,16 +103,17 @@ Similarly, the charge-state addition enegies lie between $149$ and \SI{168}{\mil
 
 Remarkably, Coulomb peaks show comparable heights indicating an equal participation of the same number of levels within the bias window (Fig.~\ref{fig:waterfall}). In a \gls{MGNR} of length $l_\textrm{GNR}$, confinement produces an energy spacing given by $\delta_n=\pi \hbar v_F^* l^{-1}_\textrm{GNR}$~\cite{wakabayashi2010electronic}, while, for a rectangular-shaped \gls{MGNR} $E_C=\frac{e^2}{C}=\frac{e^2 \ln (4 d / w)}{2 \pi \varepsilon_0 \varepsilon_r l_\textrm{GNR}}$, where $e$ is the electron charge, $d$ is the ribbon--gate distance, $w$ is the ribbon width, and $\varepsilon_0$ and $\varepsilon_r$ are the dielectric permittivities of vacuum and \ce{SiO2}, respectively~\cite{shylau2009capacitance}.
 
-From $E_\mathrm{add}=\delta_n+2E_C$, we thus extract $l_\textrm{GNR}=58 \pm 6 \mathrm{~nm}$\footnote[2]{For a ribbon with $w_\textrm{GNR}\simeq\SI{1.12}{\nano\metre}$ and $l_\textrm{GNR}\simeq\SI{56}{\nano\metre}$ the $E_{0,1}/k_B\simeq\SI{37}{\milli\electronvolt}$, hence we include the single-particle level spacing contribution in $E_\textrm{add}$}.
+From $E_\mathrm{add}=\delta_n+2E_C$, we thus extract $l_\textrm{GNR}=58 \pm 6 \mathrm{~nm}$\footnote[2]{For a ribbon with $w_\textrm{GNR}\simeq\SI{1.12}{\nano\metre}$ and $l_\textrm{GNR}\simeq\SI{56}{\nano\metre}$ the $E_{0,1}/k_\textrm{B}\simeq\SI{37}{\milli\electronvolt}$, hence we include the single-particle level spacing contribution in $E_\textrm{add}$}.
 
 \section{Analysis of the Low-Bias Conductance}
 
-At $T=\SI{25}{\milli\kelvin}$ analysis of the low-bias ($V_\textrm{SD}=\SI{1}{\milli\volt}$) conductance peaks allows us to extract the graphene--MGNR coupling  $\Gamma=\SI{180}{\micro\electronvolt}$ by fitting with a Breit--Wigner model $G(\mu)=\frac{\Gamma / 2 \pi}{\left(\mu-\mu_N\right)^2+(\Gamma / 2)^2}$ the resonances. In the model, $\mu$ is the chemical potential and $\mu_N$ is the chemical potential of the $N^{\text {th}}$-\gls{MGNR} state. This energy scale identifies a first conduction regime at $T_C<\Gamma / k_B \sim 2 \mathrm{~K}$, and plot of the conductance peak maximum $G_{\max}$ against $T$ on a double logarithmic scale indeed shows that the behaviour changes drastically around $T_C$ (Fig.~\ref{fig:zero-bias_conductance_fit_power_law}c).
-
+At $T=\SI{25}{\milli\kelvin}$ analysis of the low-bias ($V_\textrm{SD}=\SI{1}{\milli\volt}$) conductance peaks allows us to extract the graphene--MGNR coupling  $\Gamma=\SI{180}{\micro\electronvolt}$ by fitting with a Breit--Wigner model $G(\mu)=\frac{\Gamma / 2 \pi}{\left(\mu-\mu_N\right)^2+(\Gamma / 2)^2}$ the resonances. In the model, $\mu$ is the chemical potential and $\mu_N$ is the chemical potential of the $N^{\text {th}}$-\gls{MGNR} state. This energy scale identifies a first conduction regime at $T_C<\Gamma / k_\textrm{B} \sim 2 \mathrm{~K}$, and plot of the conductance peak maximum $G_{\max}$ against $T$ on a double logarithmic scale indeed shows that the behaviour changes drastically around $T_C$ (Fig.~\ref{fig:zero-bias_conductance_fit_power_law}c).
+%
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_gnrset/figures/Fig3Final.pdf}
-        \caption[Temperature Evolution of Zero-Bias Conductance]{
+        \caption[Temperature Evolution of Zero-Bias Conductance]
+        {
             \textbf{a,} Comparison of low-bias traces acquired at $V_\textrm{SD}=\SI{1}{\milli\volt}$ for various $T$.
             \textbf{b,} Typical evolution of a $G$ vs.\ $V_\textrm{G}$ peak, shown here for the $N+5\leftrightarrow N+6$ transition acquired at $V_\textrm{SD}=\SI{1}{\milli\volt}$, with solid lines fits to the data (see text).
             \textbf{c,} Bilogaritmic plot of the evolution of the peak height $G_\textrm{max}$ vs.\ T for all transitions (colour bar), and fits to the data. Shaded areas highlight different regimes.
@@ -120,31 +122,31 @@ At $T=\SI{25}{\milli\kelvin}$ analysis of the low-bias ($V_\textrm{SD}=\SI{1}{\m
         \label{fig:zero-bias_conductance_fit_power_law}
     \end{center}
 \end{figure}
-
+%
 At temperatures greater than $T_C$, we reproduce the low-energy excitations with a thermally-broaded model~\cite{beenakker1991theory, postma2001carbon}:
-
+%
 \begin{equation}
     G(T)\sim \frac{G_\text{max}(T)}{\cosh^2[\frac{2\text{arccosh}(\sqrt2)V_\textrm{G}}{w(T)}]},
 \end{equation}
 %
 being $G_\textrm{max}$, $V_\textrm{G}$, and $w(T)$ the fitting parameters representing peak height, position and \gls{FWHM}, respectively. Fit results for the peak height are reported in Tab.~\ref{tab:conductance_exponents_temp}. Moreover, the thermal broadening of the peaks follows a linear $T$-dependence (Fig.~\ref{fig:peak_width_p5}), and we extract from the best-fit model $w_\textrm{peak}=\SI[separate-uncertainty = true]{1.7(0.3)e-1}{} + T\SI[separate-uncertainty = true]{1.1(0.1)e-2}{}$.
-
+%
 \begin{figure}[hbtp]
     \begin{center}
-        \includegraphics[width=\textwidth]{chapter_gnrset/figures/peak_width_p5.pdf}
-        \caption[Temperature Evolution of Zero-Bias Conductance]{
+        \includegraphics[width=0.9\textwidth]{chapter_gnrset/figures/peak_width_p5.pdf}
+        \caption[Linear Dependence of the Peak Width with the Temperature]{
             Peak width for the transistion $N+4\leftrightarrow N+5$.
         }
         \label{fig:peak_width_p5}
     \end{center}
 \end{figure}
-
-For $T<T_C$, the only transport mechanism is pure Coulomb blockade, modulated by the strong spin-phonon coupling present in \glspl{MGNR}, which leads to Franck--Condon blockade (Ch.~\ref{ch:solubility}). In this region, $G$ is essentially constant, and this indicates that the \gls{MGNR} states are independent on $\phi$, as thermally-activated transport with law $G(T) \propto e^{-\phi / k_B T}$ would otherwise be observed~\cite{sols2007coulomb}.
+%
+For $T<T_C$, the only transport mechanism is pure Coulomb blockade, modulated by the strong spin-phonon coupling present in \glspl{MGNR}, which leads to Franck--Condon blockade (Ch.~\ref{ch:solubility}). In this region, $G$ is essentially constant, and this indicates that the \gls{MGNR} states are independent on $\phi$, as thermally-activated transport with law $G(T) \propto e^{-\phi / k_\textrm{B} T}$ would otherwise be observed~\cite{sols2007coulomb}.
 
 For $T>T_C$, up to \SI{180}{\kelvin}, the conductance follows a power-law behaviour $G_\textrm{max} \sim T^{\alpha}$, and the extracted exponents show values between $\alpha=0.50 \pm 0.06$ and $\alpha=0.83 \pm 0.06$ for all $N$ states (Fig.~\ref{fig:zero-bias_conductance_fit_power_law}c,d and Tab.~\ref{tab:conductance_exponents_temp}). This power-law behaviour of the \gls{TDOS} might be associated with the formation of \gls{TLL}~\cite{egger1997effective,egger1999luttinger, kane1997coulomb} in MGNRs, showing that correlated one-dimensional electronic states may be produced by electron--electron interactions.
 
 Comparison of exponent values for \glspl{MGNR} with those of single nanotube~\cite{yao1999carbon} and ropes of bundled \glspl{CNT}~\cite{bockrath1999luttinger} shows excellent agreement only with \glspl{SET} based on single \glspl{CNT}. The extracted average $\alpha=0.63 \pm 0.08$ is in excellent agreement with the theoretical value for electron tunnels coherently at the ends of a \gls{TLL} thorugh correlated sequential tunneling~\cite{postma2001carbon,thorwart2002correlated}, $\alpha=0.68$, and not into its bulk ($\alpha=0.23$), as expected from the device geometry.
-
+%
 \begin{table}
     \caption{\label{tab:conductance_exponents_temp}
         Power-law exponents for the conductance $G$ and integrated conductance $G^*$ across two different temperature ranges. Errors on the single charge transition are standard fitting errors, whereas error on the averages are estimated through error propagation formula.}
@@ -165,14 +167,14 @@ Comparison of exponent values for \glspl{MGNR} with those of single nanotube~\ci
         \end{array}
     \]
 \end{table}
-
+%
 The \gls{TLL} phase allows exploring electron--electron interaction strength through the Luttinger parameter $g$, which is $g=1$ for the non-interacting case and $\ll 1$ for strong repulsive interactions (Sec.~\ref{ch2:derivation_tunneling_DOS}). Given the four-fold degeneracy of the graphene band structure, it is possible to recover the expression for the tunneling exponent of four conducting modes at Fermi energy $E_F$~\cite{bockrath1999luttinger}, as $g=(4 \alpha+1)^{-1}=0.28 \pm 0.04$, or from the expression $g=\left(1+2 E_C / \delta\right)^{-1 / 2}=0.41 \pm 0.08$~\cite{egger1997effective, egger1999luttinger}.
 
 These values are well below $g=1$, confirming the importance of finite long-range Coulomb interactions in \glspl{MGNR}, but are interestingly weaker than those active in \glspl{CNT}. This might be explained with the hypothesis that electron--electron interactions depend significantly on the curvature radius of the conjugated carbon sheet~\cite{laird2015quantum,kane1997coulomb}.
 
 
 \section{Temperature-Dependent Integrated Conductance}
-
+%
 \begin{figure}[hbtp]
     \begin{center}
         \includegraphics[width=\textwidth]{chapter_gnrset/figures/zbgt_int_cond_power_law_h_alfa_only.pdf}
@@ -183,15 +185,21 @@ These values are well below $g=1$, confirming the importance of finite long-rang
         \label{fig:integrated_conductance}
     \end{center}
 \end{figure}
-
+%
 Because peak broadening can obscure features and alter the power-law dependence, we also analyzed the integrated conductance, $G^*$ (Fig.~\ref{fig:integrated_conductance}). A power law, $G^* \propto T^{\xi}$ is observed, where $\xi=\alpha+1$ in the case of end-tunneling~\cite{thorwart2002correlated,postma2001carbon}. The extracted $\xi=1.5 \pm 0.1$ is in overall agreement with the values extracted from originating from $G_\textrm{max}$, which also confirms a more screened interaction picture for \glspl{MGNR}~\cite{sols2007coulomb}.
 
-\Glspl{MGNR} could display \gls{TLL} only as long as electrons can tunnel coherently from one end to another via a single MGNR state, so that the whole MGNR acts as a single electronic structure. This condition is fulfilled when the electron thermal length $L_T = v_F/k_BT$ is larger than the MGNR geometric length $l_\textrm{GNR}$, with deviations from the TLL behaviour expected when $L_T \ll l_\textrm{GNR}$. This regime crossover is indeed observed above $T=\SI{180}{\kelvin}$ (Fig.~\ref{fig:zero-bias_conductance_fit_power_law}c), for which $L_T<\SI{43}{\nano\metre}<l_\textrm{GNR}$, using $v_F\simeq\SI{1.6e5}{\metre\per\second}$ for the group velocity.
+\Glspl{MGNR} could display \gls{TLL} only as long as electrons can tunnel coherently from one end to another via a single MGNR state, so that the whole MGNR acts as a single electronic structure. This condition is fulfilled when the electron thermal length $L_T = v_F/k_\textrm{B}T$ is larger than the MGNR geometric length $l_\textrm{GNR}$, with deviations from the TLL behaviour expected when $L_T \ll l_\textrm{GNR}$. This regime crossover is indeed observed above $T=\SI{180}{\kelvin}$ (Fig.~\ref{fig:zero-bias_conductance_fit_power_law}c), for which $L_T<\SI{43}{\nano\metre}<l_\textrm{GNR}$, using $v_F\simeq\SI{1.6e5}{\metre\per\second}$ for the group velocity.
 
 Beyond \SI{180}{\kelvin}, flexural phonons dominate the electronic behaviour by introducing phonon scattering~\cite{mariani2008flexural, lindsay2010flexural}, and are responsible for a rapid increase of $g$, which approaches the non-interacting limit above \SI{240}{\kelvin}.
 
 \section{Discussion}\label{gnrset:sec:summary}
-Using the temperature protocol developed in Ch.~\ref{ch:instrumentation_development}, we have presented the first experimental evidence of a molecular \gls{SET} that can work up to room temperature based on a molecularly-defined graphene nanoribbons. The charging energy $E_C$ overcomes the thermal fluctuations even at $T=\SI{290}{\kelvin}$, leading to the observation of Coulomb oscillations. We then revelead three major transport regimes for low-energy excitations. At cryogenic temperatures, Coulomb-oscillation heights are essentially invariant, and we believe this is due to Coulomb blockade. Power-law scaling in $T$ are found from \SI{1}{\kelvin} to approximately \SI{80}{\kelvin}, while Coulomb-oscillation widths are proportional to $T$. Similar scalings have been reported in the literature, and explained with the presence of finite-range Coulomb interactions in 1D systems. Because we do not observe an exponential decay of the conductance $G\sim T^{-\beta\phi}$, even when plotted against the reciprocal of the temperature (not shown), we exclude thermally-activated transport~\cite{sols2007coulomb}, supported by the evidence that Coulomb diamonds are closed at low ($T\simeq\SI{20}{\milli\kelvin}$) temperatures. From the diamond height, we estimate the device single-particle level spacing $\delta_n\simeq\SI{38}{\milli\electronvolt}$, which is in overall agreement with a single-electron transistor defined in a metallic \gls{CNT} by two kinks which are separated by approximately \SI{25}{\nano\metre}~\cite{Postma2001}. We interpret the power-law scaling as the tunneling through a Luttinger liquid weakly coupled to a Luttinger island. Plasmon-mode excitations following the tunneling event might rationalise the different power-law exponents reported for each charge transistion. We estimate the tunneling exponent from $\alpha_\textrm{end}=2R/R_Q$~\cite{bachtold2001suppression}, where $R$ is the impedance of a transmission line associated to plasmon oscillations and $R_Q$ is the resistance quantum. For our device $R\simeq\SI{8}{\kilo\ohm}$, leads to an $\alpha_\textrm{end}\simeq0.61$, in extremely well agreement with our the average scaling exponent reported in Tab.~\ref{tab:conductance_exponents_temp}. Since the Coulomb-oscillation widths increase linearly with $T$, we measured the integrated conductance $G^*$, and observed a power-law scaling $G\sim T^{\alpha+1}$, in agreement with theoretical predictions~\cite{thorwart2002correlated}. We were then able to clarify the tunneling mechanism involved in the process, which we interpreted within the correlated-sequential-tuneling framework through a Tomonaga--Luttinger liquid within a weakly-coupled \gls{MGNR}. Graphene flexural phonons, as well as plasmon excited levels, start to become important from $T>\SI{80}{\kelvin}$, introducing two main scattering channels that dominate the electron transport, leading to a deviation from the power-law scaling. These results are in overall agreement with a non-linear dispersion of the low-energy excitations, in contrast to metallic carbon nanotubes.
+Using the temperature protocol developed in Ch.~\ref{ch:instrumentation_development}, we have presented the first experimental evidence of a molecular \gls{SET} that can work up to room temperature based on a molecularly-defined graphene nanoribbons. The charging energy $E_C$ overcomes the thermal fluctuations even at $T=\SI{290}{\kelvin}$, leading to the observation of Coulomb oscillations.
+
+We then revelead three major transport regimes for the low-energy excitations. At cryogenic temperatures, Coulomb-oscillation heights are essentially invariant, and we believe this is due to Coulomb blockade. Power-law scaling in $T$ are found from \SI{1}{\kelvin} to approximately \SI{80}{\kelvin}, while Coulomb-oscillation widths are proportional to $T$. Similar scalings have been reported in the literature, and explained with the presence of finite-range Coulomb interactions in 1D systems. Because we do not observe an exponential decay of the conductance $G\sim T^{-\beta\phi}$, even when plotted against the reciprocal of the temperature (not shown), we exclude thermally-activated transport~\cite{sols2007coulomb}, supported by the evidence that Coulomb diamonds are closed at low ($T\simeq\SI{20}{\milli\kelvin}$) temperatures.
+
+From the diamond height, we estimate the device single-particle level spacing $\delta_n\simeq\SI{38}{\milli\electronvolt}$, which is in overall agreement with a single-electron transistor defined in a metallic \gls{CNT} by two kinks which are separated by approximately \SI{25}{\nano\metre}~\cite{Postma2001}. We interpret the power-law scaling as the tunneling through a Luttinger liquid weakly coupled to a Luttinger island. Plasmon-mode excitations following the tunneling event might rationalise the different power-law exponents reported for each charge transistion. We estimate the tunneling exponent from $\alpha_\textrm{end}=2R/R_Q$~\cite{bachtold2001suppression}, where $R$ is the impedance of a transmission line associated to plasmon oscillations and $R_Q$ is the resistance quantum. For our device $R\simeq\SI{7}{\kilo\ohm}$, leads to an $\alpha_\textrm{end}\simeq0.5$, in good agreement with the average scaling exponent reported in Tab.~\ref{tab:conductance_exponents_temp}.
+
+Since the Coulomb-oscillation widths increase linearly with $T$, we measured the integrated conductance $G^*$, and observed a power-law scaling $G\sim T^{\alpha+1}$, in agreement with theoretical predictions~\cite{thorwart2002correlated}. We were then able to clarify the tunneling mechanism involved in the process, which we interpreted within the correlated-sequential-tuneling framework through a Tomonaga--Luttinger liquid within a weakly-coupled \gls{MGNR}. Graphene flexural phonons, as well as plasmon excitations, start to become important from $T>\SI{80}{\kelvin}$, introducing two main scattering channels that dominate the electron transport, leading to a deviation from the power-law scaling. These results are in overall agreement with a non-linear dispersion of the low-energy excitations, in contrast to metallic carbon nanotubes.
 
 
 \section{Outlook and Perspectives}

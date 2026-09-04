@@ -218,3 +218,19 @@ TSWLatexianTemp*
 
 # expex forward references with \gathertags
 *-tags.tex
+
+## Project build outputs:
+/Oxford_Thesis.pdf
+/Oxford_Thesis_Part*.pdf
+/Oxford_Thesis.mtc
+/thesis_token_*.txt
+
+## Python and Jupyter:
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+## Local editor and operating-system files:
+.DS_Store
+.idea/
+.vscode/
